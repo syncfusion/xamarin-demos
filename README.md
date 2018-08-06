@@ -32,6 +32,11 @@ Syncfusion has no liability for any damage or consequence that may arise by the 
 
 If you download the samples using the "Download ZIP" option then please follow the instructions below
 
+**Notes:**
+
+* Before you unzip the archive, right-click it, select Properties, and then select Unblock.
+* Be sure to unzip the entire archive, and not just individual samples. The samples all depend on the SharedContent folder in the archive.
+
 **To use the Syncfusion Xamarin samples, Syncfusion license key should be registered in samples. Refer [this](https://www.syncfusion.com/kb/9002) link for more information.**
 
 
