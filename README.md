@@ -30,16 +30,9 @@ Syncfusion has no liability for any damage or consequence that may arise by the 
 
 ## <a name="using-the-samples"></a>Using the samples ##
 
-The easiest way to use these samples without using Git is to download the zip file containing the current version (using the following link or by clicking the "Download ZIP" button on the repo page). You can then unzip the entire archive and use the samples.
-
-   [Download the samples ZIP](../../archive/master.zip)
-
-   **Notes:** 
-   * Before you unzip the archive, right-click it, select **Properties**, and then select **Unblock**.
-   * Be sure to unzip the entire archive, and not just individual samples. The samples all depend on the SharedContent folder in the archive.  
+If you download the samples using the "Download ZIP" option then please follow the instructions below
 
 **To use the Syncfusion Xamarin samples, Syncfusion license key should be registered in samples. Refer [this](https://www.syncfusion.com/kb/9002) link for more information.**
-
 
 
 **Reminder:** If you unzip individual samples, they will not build due to references to other portions of the ZIP file that were not unzipped. You must unzip the entire archive if you intend to build the samples.
