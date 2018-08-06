@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+   <Compile Include="$(MSBuildThisFileDirectory)\Renderer\Renderer.cs" >
+		<Link>Renderer\Renderer.cs</Link>
+	</Compile>
+	
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\Segmented.ttf" >
+		<Link>Assets\Segmented.ttf</Link>
+	</AndroidAsset>
+	
+	<AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\SegmentIcon.ttf" >
+		<Link>Assets\SegmentIcon.ttf</Link>
+	</AndroidAsset>
+	
+	<AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\switch.ttf" >
+		<Link>Assets\switch.ttf</Link>
+	</AndroidAsset>
+	
+	<AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\Segoe_MDL2_Assets.ttf" >
+		<Link>Assets\Segoe_MDL2_Assets.ttf</Link>
+	</AndroidAsset>
+  </ItemGroup>
+ 
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\angry.png" >
+		<Link>Resources\drawable\angry.png</Link>
+	</AndroidResource>
+	
+	<AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\cancelsearch.png" >
+		<Link>Resources\drawable\cancelsearch.png</Link>
+	</AndroidResource>
+	
+	<AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\cat.png" >
+		<Link>Resources\drawable\cat.png</Link>
+	</AndroidResource>
+	
+	<AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ellana.png" >
+		<Link>Resources\drawable\ellana.png</Link>
+	</AndroidResource>
+	
+	<AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\flower.jpeg" >
+		<Link>Resources\drawable\flower.jpeg</Link>
+	</AndroidResource>
+	
+	<AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\heart.png" >
+		<Link>Resources\drawable\heart.png</Link>
+	</AndroidResource>
+	
+	<AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\laugh.png" >
+		<Link>Resources\drawable\laugh.png</Link>
+	</AndroidResource>
+	
+	<AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\like.png" >
+		<Link>Resources\drawable\like.png</Link>
+	</AndroidResource>
+	
+	<AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\likes.png" >
+		<Link>Resources\drawable\likes.png</Link>
+	</AndroidResource>
+	
+	<AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\love.png" >
+		<Link>Resources\drawable\love.png</Link>
+	</AndroidResource>
+	
+	<AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\sad.png" >
+		<Link>Resources\drawable\sad.png</Link>
+	</AndroidResource>
+	
+	<AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\wow.png" >
+		<Link>Resources\drawable\wow.png</Link>
+	</AndroidResource>
+  </ItemGroup>
+</Project>

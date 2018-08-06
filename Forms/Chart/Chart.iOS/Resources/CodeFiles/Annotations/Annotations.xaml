@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.Annotations" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+    <local:SampleView.Content>
+        <chart:SfChart x:Name="chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <chart:SfChart.PrimaryAxis>
+                <chart:NumericalAxis Minimum="0" ShowMajorGridLines="false" Maximum="4" />
+            </chart:SfChart.PrimaryAxis>
+            <chart:SfChart.SecondaryAxis>
+                <chart:NumericalAxis Minimum="20" Maximum="70" ShowMajorGridLines="false" />
+            </chart:SfChart.SecondaryAxis>
+            <chart:SfChart.ChartAnnotations>
+                <chart:VerticalLineAnnotation X1="2" LineCap="Arrow" ShowAxisLabel="true" Text="Vertical Line" />
+                <chart:HorizontalLineAnnotation Y1="45" LineCap="Arrow" ShowAxisLabel="true" Text="Horizontal Line" />
+                <chart:LineAnnotation X1="2.5" X2="3.5" Y1="52" Y2="63" LineCap="Arrow" Text="Line" />
+                <chart:RectangleAnnotation X1="0.5" X2="1.5" Y1="25" Y2="35" Text="Rectangle" />
+                <chart:EllipseAnnotation X1="2.5" X2="3.5" Y1="25" Y2="35" Text="Ellipse" />
+                <chart:TextAnnotation X1="1" Y1="57.5" Text="Text Annotation" />
+            </chart:SfChart.ChartAnnotations>
+        </chart:SfChart>
+    </local:SampleView.Content>
+</local:SampleView>

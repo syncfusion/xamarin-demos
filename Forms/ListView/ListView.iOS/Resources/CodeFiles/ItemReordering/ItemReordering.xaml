@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sample:SampleView x:Class="SampleBrowser.SfListView.ItemReordering"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.SfListView"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+                  xmlns:helpers="clr-namespace:Syncfusion.ListView.XForms.Helpers;assembly=Syncfusion.SfListView.XForms"
+                  xmlns:dataSource="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable">
+
+    <sample:SampleView.Resources>
+      <ResourceDictionary>
+        <helpers:InverseBoolConverter x:Key="inverseBoolConverter"/>
+        <sample:ImagePathConverter x:Key="ImagePathConverter"/>
+      </ResourceDictionary>
+    </sample:SampleView.Resources>
+    
+	<sample:SampleView.Content>
+		<syncfusion:SfListView x:Name="listView"
+			ItemSize="60" BackgroundColor="#FFE8E8EC"
+			GroupHeaderSize="50"
+			AllowGroupExpandCollapse="false"
+      		DragStartMode="OnHold,OnDragIndicator"
+			IsStickyGroupHeader="false" SelectionMode="None">
+
+			<syncfusion:SfListView.Behaviors>
+				<local:ListViewItemReorderingBehavior/>
+			</syncfusion:SfListView.Behaviors>
+
+			<syncfusion:SfListView.GroupHeaderTemplate>
+				<DataTemplate>
+					<Grid>
+						<Grid.BackgroundColor>
+                            <OnPlatform x:TypeArguments="Color">
+                                <On Platform="Android" Value="#eeeeee"/>
+                                <On Platform="UWP" Value="#f2f2f2"/>
+                                <On Platform="iOS" Value="#f7f7f7"/>
+                                <On  Platform="macOS" Value="#f7f7f7"/>
+                            </OnPlatform>
+						</Grid.BackgroundColor>
+						<Label Text="{Binding Key}" 
+							FontSize="14" 
+                         	TextColor="#333333"
+                         	FontAttributes="Bold"
+                         	VerticalOptions="Center" 
+                         	HorizontalOptions="Start" 
+                         	Margin="15,0,0,0" />
+					</Grid>
+				</DataTemplate>
+			</syncfusion:SfListView.GroupHeaderTemplate>
+
+			<syncfusion:SfListView.ItemTemplate>
+				<DataTemplate>
+                    <Frame HasShadow="True" BackgroundColor="White" Padding="0">
+						<Frame.InputTransparent>
+                            <OnPlatform x:TypeArguments="x:Boolean">
+                                <On Platform="Android" Value="True"/>
+                                <On Platform="UWP" Value="False"/>
+                                <On Platform="iOS" Value="False"/>
+                                <On  Platform="macOS" Value="false"/>
+                            </OnPlatform>
+						</Frame.InputTransparent>
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="70" />
+							<ColumnDefinition Width="*" />
+							<ColumnDefinition Width="60" />
+						</Grid.ColumnDefinitions>
+                            <Grid Padding="25,20,25,20">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.MarkDoneCommand, Source={x:Reference Name=listView}}"
+                                                  CommandParameter="{Binding .}"/>
+                                </Grid.GestureRecognizers>
+                                <local:SfImage Source="{Binding ., Converter={StaticResource ImagePathConverter }, ConverterParameter=SampleBrowser.SfListView.Checked.png}"
+                                       HorizontalOptions="Center" VerticalOptions="Center" Aspect="AspectFill"
+                                   IsVisible="{Binding IsDone}" HeightRequest="60" WidthRequest="60"/>
+                                <local:SfImage Source="{Binding ., Converter={StaticResource ImagePathConverter }, ConverterParameter=SampleBrowser.SfListView.Unchecked.png}"
+                                       HorizontalOptions="Center" VerticalOptions="Center" Aspect="AspectFill" HeightRequest="60" WidthRequest="60"
+                                   IsVisible="{Binding IsDone, Converter={StaticResource inverseBoolConverter}}"/>
+                            </Grid>
+
+                            <Label x:Name="textLabel" Text="{Binding Name}"
+							Grid.Column="1"
+							FontSize="15" 
+                         	TextColor="#333333"
+                         	VerticalOptions="Center" 
+                         	HorizontalOptions="Start" 
+                         	Margin="5,0,0,0" />
+
+                            <BoxView Grid.Column="1" Margin="5,3,0,0" BackgroundColor="#333333" 
+                                     HeightRequest="1" WidthRequest="{Binding Source={x:Reference textLabel}, Path=Width}"
+                                     VerticalOptions="Center" HorizontalOptions="Start"
+                                     IsVisible="{Binding IsDone}" />
+
+                            <syncfusion:DragIndicatorView Grid.Column="2" ListView="{x:Reference listView}" HorizontalOptions="Center" VerticalOptions="Center">
+							<Grid Padding="10, 20, 20, 20">
+                            <local:SfImage Source="{Binding ., Converter={StaticResource ImagePathConverter }, ConverterParameter=SampleBrowser.SfListView.DragIndicator.png}"
+									VerticalOptions="Center" HeightRequest="60" WidthRequest="60"
+                           			HorizontalOptions="Center" />
+							</Grid>
+						</syncfusion:DragIndicatorView>
+					</Grid>
+                    </Frame>
+                </DataTemplate>
+			</syncfusion:SfListView.ItemTemplate>
+            
+        </syncfusion:SfListView>
+	</sample:SampleView.Content>
+</sample:SampleView>

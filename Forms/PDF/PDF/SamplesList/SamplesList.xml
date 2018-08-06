@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Samples>  
+	<Sample  Name = "GettingStartedPDF" Title = "Getting Started" Description="This sample demonstrates how to create a simple PDF document with text and images." />
+	<Sample  Name = "Stamping" Title = "Stamping" Description="This sample demonstrates how to stamp or watermark an existing PDF document." />
+	<Sample  Name = "TableFeatures" Title = "Table Features" Description="This sample demonstrates how to create borderless tables in a PDF document." />
+	<Sample  Name = "Booklet" Title = "Booklet" Description="This sample demonstrates how to create a booklet from an existing PDF document."/>
+	<Sample  Name = "Barcode" Title = "Barcode" Description="This sample demonstrates how to create various barcode in a PDF document."/>
+	<Sample  Name = "MailAttachment" Title = "Email Attachment" Description="This sample demonstrates how to send a filled PDF form as an email attachment." />
+	<Sample  Name = "DigitalSignature" Title = "Digital Signature" Description="This sample demonstrates how to digitally sign PDF document using a .pfx certificate."/>
+	<Sample  Name = "ImageInsertion" Title = "Image Insertion" Description="This sample demonstrates how to insert images in a PDF document."/>
+	<Sample  Name = "Encryption" Title = "Encryption" Description="This sample demonstrates how to create secure PDF document."/>
+	<Sample  Name = "RTLSupport" Title = "RTL Text" Description="This sample demonstrates how to draw a right to left text in a PDF document." IsNew ="true"/>
+</Samples>

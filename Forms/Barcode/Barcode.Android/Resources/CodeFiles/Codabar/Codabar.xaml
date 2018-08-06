@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView
+              xmlns:barcode="clr-namespace:Syncfusion.SfBarcode.XForms;assembly=Syncfusion.SfBarcode.XForms"
+              xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+              xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfBarcode.Codabar" Padding="8">
+  <local:SampleView.Content>
+
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="0.1*"/>
+        <RowDefinition Height="0.1*"/>
+        <RowDefinition Height="*"/>
+      </Grid.RowDefinitions>
+
+      <Label Text="Allowed Characters" Grid.Row="0" FontAttributes="Bold" FontSize="15" />
+
+      <Label Text="0 1 2 3 4 5 6 7 8 9 - $ : / dot(.) +" Grid.Row="1" />
+
+      <barcode:SfBarcode x:Name="barcode" Grid.Row="2" BackgroundColor="White" Text="$52675:14-98" Symbology="CodaBar" >
+
+      </barcode:SfBarcode>
+
+    </Grid>
+
+  </local:SampleView.Content>
+</local:SampleView>

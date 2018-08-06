@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PatientMonitor.MasterDesktopView" xmlns:local="clr-namespace:PatientMonitor;assembly=PatientMonitor">
+    <StackLayout VerticalOptions="FillAndExpand" Spacing="0">
+    
+    <StackLayout Orientation="Horizontal" Spacing="0" BackgroundColor="#B51110">
+      <Button Text="My Patients" Clicked="button_clicked" WidthRequest="200" HeightRequest="50" BackgroundColor="#B51110" TextColor="White" x:Name="btn_Home"/>
+      <Button Text="My Appointments" Clicked="button_clicked" WidthRequest="200" HeightRequest="50" BackgroundColor="#B51110" TextColor="White" x:Name="btn_Event"/>
+    </StackLayout>
+
+      <Grid x:Name="ContentLayout"  VerticalOptions="FillAndExpand">
+        <local:ScheduleView_Page x:Name="schedule_View" BindingContext="{Binding Path=Appointments}"  />
+        <local:Grid_View x:Name="grid_View" BindingContext="{Binding Path=Patients}" />
+      </Grid>
+  
+  </StackLayout>
+</ContentPage>

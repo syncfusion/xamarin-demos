@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             x:Class="SampleBrowser.SfCircularGauge.Pointers">
+
+  <local:SampleView.Content BackgroundColor="White">
+
+    <ScrollView x:Name="scrollView">
+
+      <StackLayout  x:Name="main_layout"  VerticalOptions="FillAndExpand" Orientation="Vertical" >
+
+        <StackLayout Orientation="Vertical" WidthRequest="200" HeightRequest="200">
+          <gauge:SfCircularGauge x:Name="circularGauge1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+
+            <gauge:SfCircularGauge.Headers>
+              <gauge:Header x:Name="header1" Position="0.5,0.6" TextSize="18" Text="Inverted Triangle" ForegroundColor="Black"/>
+            </gauge:SfCircularGauge.Headers>
+
+            <gauge:SfCircularGauge.Scales>
+              <gauge:Scale x:Name="scale1" StartAngle="180" SweepAngle="180" ScaleStartOffset="0.7" ScaleEndOffset="0.68"
+                       StartValue="0" EndValue="100" RimColor="Gray" Interval="50"
+                       ShowLabels="False" ShowTicks="False" MinorTicksPerInterval="0">
+
+                <gauge:Scale.Pointers>
+                  <gauge:MarkerPointer x:Name="invertedTriangle" Value="80"  Color="#00bdae" Offset="0.7" MarkerShape="InvertedTriangle"/>
+                </gauge:Scale.Pointers>
+
+              </gauge:Scale>
+            </gauge:SfCircularGauge.Scales>
+          </gauge:SfCircularGauge>
+        </StackLayout>
+
+        <StackLayout  Orientation="Vertical" WidthRequest="200" HeightRequest="200">
+          <gauge:SfCircularGauge x:Name="circularGauge2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+
+            <gauge:SfCircularGauge.Headers>
+              <gauge:Header x:Name="header2" Position="0.5,0.6" TextSize="18" Text="Triangle" ForegroundColor="Black"/>
+            </gauge:SfCircularGauge.Headers>
+
+            <gauge:SfCircularGauge.Scales>
+
+              <gauge:Scale x:Name="scale2" StartAngle="180" SweepAngle="180" ScaleStartOffset="0.7" ScaleEndOffset="0.68"
+                      StartValue="0" EndValue="100" RimColor="Gray" Interval="50"
+                      ShowLabels="False" ShowTicks="False" MinorTicksPerInterval="0">
+
+                <gauge:Scale.Pointers>
+                  <gauge:MarkerPointer x:Name="triangle" Value="80"  Color="Green" Offset="0.68" MarkerShape="Triangle"/>
+                </gauge:Scale.Pointers>
+
+              </gauge:Scale>
+            </gauge:SfCircularGauge.Scales>
+          </gauge:SfCircularGauge>
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical" WidthRequest="200" HeightRequest="200">
+          <gauge:SfCircularGauge x:Name="circularGauge3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+
+            <gauge:SfCircularGauge.Headers>
+              <gauge:Header x:Name="header3" Position="0.5,0.6" TextSize="18" Text="Range Pointer" ForegroundColor="Black"/>
+            </gauge:SfCircularGauge.Headers>
+
+            <gauge:SfCircularGauge.Scales>
+              <gauge:Scale x:Name="scale3" StartAngle="180" SweepAngle="180" Interval="50"
+                      StartValue="0" EndValue="100" RadiusFactor="0.7" RimColor="Gray"
+                      ShowLabels="False" ShowTicks="False" RimThickness="3" MinorTicksPerInterval="0">
+
+                <gauge:Scale.Pointers>
+                  <gauge:RangePointer x:Name="rangePointer" Value="60"  Color="#FF2680" Offset="0.6" Thickness ="20" EnableAnimation="False"/>
+                </gauge:Scale.Pointers>
+
+              </gauge:Scale>
+            </gauge:SfCircularGauge.Scales>
+          </gauge:SfCircularGauge>
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical" WidthRequest="200" HeightRequest="200">
+          <gauge:SfCircularGauge x:Name="circularGauge4" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+
+            <gauge:SfCircularGauge.Headers>
+              <gauge:Header x:Name="header4" Position="0.5,0.6" TextSize="18" Text="Needle Pointer" ForegroundColor="Black"/>
+            </gauge:SfCircularGauge.Headers>
+
+            <gauge:SfCircularGauge.Scales>
+              <gauge:Scale x:Name="scale4" StartAngle="180" SweepAngle="180" Interval="50"
+                       StartValue="0" EndValue="100" RadiusFactor="0.7" RimColor="Gray"
+                       ShowLabels="False" ShowTicks="False" RimThickness="3" MinorTicksPerInterval="0">
+
+                <gauge:Scale.Pointers>
+                  <gauge:NeedlePointer x:Name="needlePointer" Value="80"  Color="Purple" LengthFactor="0.7" KnobRadius="0" Thickness ="10" Type="Triangle"/>
+                </gauge:Scale.Pointers>
+
+              </gauge:Scale>
+            </gauge:SfCircularGauge.Scales>
+          </gauge:SfCircularGauge>
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical" WidthRequest="250" HeightRequest="280">
+          <gauge:SfCircularGauge x:Name="circularGauge5" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+
+            <gauge:SfCircularGauge.Headers>
+              <gauge:Header x:Name="header5" Position="0.5,0.7" TextSize="18" Text="Multiple Needle" ForegroundColor="Black"/>
+            </gauge:SfCircularGauge.Headers>
+
+            <gauge:SfCircularGauge.Scales>
+              <gauge:Scale x:Name="scale5" StartAngle="180" SweepAngle="180" Interval="50"
+                       StartValue="0" EndValue="100" RadiusFactor="0.7" RimColor="Gray"
+                       ShowLabels="False" ShowTicks="False" RimThickness="3" MinorTicksPerInterval="0">
+
+                <gauge:Scale.Pointers>
+                  <gauge:NeedlePointer x:Name="needlePointer11" Value="40"  Color="#ed7d31" LengthFactor="0.5" KnobRadiusFactor="0.05" KnobColor="White" Thickness ="10" Type="Triangle"
+                                       TailColor="#ed7d31" TailLengthFactor="0.2" TailStrokeColor="#ed7d31" KnobStrokeWidth="2" KnobStrokeColor="#ed7d31"/>
+                  <gauge:NeedlePointer x:Name="needlePointer12" Value="70" Color="#ed7d31" LengthFactor="0.6" KnobRadiusFactor="0.05" KnobColor="White" Thickness ="10" Type="Triangle"
+                                       TailColor="#ed7d31" TailLengthFactor="0.25" TailStrokeColor="#ed7d31" KnobStrokeWidth="2" KnobStrokeColor="#ed7d31"/>
+                </gauge:Scale.Pointers>
+
+              </gauge:Scale>
+            </gauge:SfCircularGauge.Scales>
+          </gauge:SfCircularGauge>
+        </StackLayout>
+
+      </StackLayout>
+    </ScrollView>
+
+  </local:SampleView.Content>
+</local:SampleView>

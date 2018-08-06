@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:linear="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"
+             x:Class="SampleBrowser.SfDigitalGauge.DigitalGauge_Tablet">
+
+   <local:SampleView.Content>
+    <Grid Padding="0,20,0,0">
+      <Grid.RowDefinitions>
+        <RowDefinition Height ="*"/>
+        <RowDefinition Height ="*"/>
+        <RowDefinition Height ="*"/>
+        <RowDefinition Height ="*"/>
+      </Grid.RowDefinitions>
+
+      <StackLayout Orientation="Vertical" Grid.Row="0">
+        <Label x:Name="sevenSegment" Text = "7 Segment" FontSize="24" HeightRequest = "60" HorizontalOptions="Center" TextColor = "Black"/>
+        <gauge:SfDigitalGauge x:Name="segmentSevenGauge" BackgroundColor="Aqua" WidthRequest="290" HorizontalOptions="Center" DisabledSegmentAlpha="30" CharacterHeight="50" CharacterWidth="25"  SegmentStrokeWidth="3" CharacterType="SegmentSeven" />
+      </StackLayout>
+      <StackLayout Orientation="Vertical" Grid.Row="1">
+        <Label 	x:Name="fourteenSegment" Text = "14 Segment" FontSize="24"  HeightRequest = "60" HorizontalOptions="Center" TextColor = "Black"/>
+        <gauge:SfDigitalGauge x:Name="segmentFourteenGauge" WidthRequest="290" HorizontalOptions="Center" DisabledSegmentAlpha="30" CharacterHeight="50" CharacterWidth="25" SegmentStrokeWidth="3" CharacterType="SegmentFourteen"/>
+      </StackLayout>
+      <StackLayout Orientation="Vertical" Grid.Row="2">
+        <Label 	x:Name="sixteenSegment" Text = "16 Segment" FontSize="24"  HeightRequest = "60" HorizontalOptions="Center" TextColor = "Black"/>
+        <gauge:SfDigitalGauge x:Name="segmentSixteenGauge" WidthRequest="290" HorizontalOptions="Center"  DisabledSegmentAlpha="30"  CharacterHeight="50" CharacterWidth="25" SegmentStrokeWidth="3" CharacterType="SegmentSixteen"  />
+      </StackLayout>
+      <StackLayout Orientation="Vertical" Grid.Row="3">
+        <Label 	x:Name="matrixSegment" Text = "8*8 Segment" FontSize="24"  HeightRequest = "60" HorizontalOptions="Center" TextColor = "Black"/>
+        <gauge:SfDigitalGauge x:Name="segmentMatrixGauge" WidthRequest="290" HorizontalOptions="Center" DisabledSegmentAlpha="30"  CharacterHeight="50" CharacterWidth="25" SegmentStrokeWidth="3" CharacterType="EightCrossEightDotMatrix"  />
+      </StackLayout>
+
+    </Grid>
+  </local:SampleView.Content>
+</local:SampleView>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:imageeditor="clr-namespace:Syncfusion.SfImageEditor.XForms;assembly=Syncfusion.SfImageEditor.XForms"
+    xmlns:customControls="clr-namespace:SampleBrowser.SfImageEditor.CustomControls"
+    x:Class="SampleBrowser.SfImageEditor.ImageEditorToolbarPage">
+    <ContentPage.Content>
+        <Grid x:Name="mainGrid">
+
+            <Grid  BackgroundColor="Transparent" 
+                  VerticalOptions="FillAndExpand"
+                  HorizontalOptions="FillAndExpand">
+                <imageeditor:SfImageEditor x:Name="imageEditor" >
+                </imageeditor:SfImageEditor>
+            </Grid>
+
+            <Grid  BackgroundColor="White" HeightRequest="50" 
+                  x:Name="cancelToolBar" IsVisible="False" 
+                   VerticalOptions="Start" 
+                   HorizontalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <customControls:CustomButton  Grid.Column="0" BackgroundColor="White" 
+                                              HeightRequest="50" Text="Ok"
+                                              Clicked="Done_Clicked" BorderColor="White" />
+                <customControls:CustomButton  Grid.Column="1"
+                                              BackgroundColor="White"
+                                              HeightRequest="50" Text="Cancel"  
+                                              Clicked="Cancel_Clicked"
+                                              BorderColor="White"/>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <Configurations>Debug;Release;Release-xml</Configurations>
+     <RootNamespace>SampleBrowser.SfLinearGauge</RootNamespace>
+    <AssemblyName>SampleBrowser.SfLinearGauge</AssemblyName>
+  </PropertyGroup>
+ 
+  <ItemGroup>
+    <EmbeddedResource Include="SamplesList\SamplesList.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SampleBrowser.Core" Version="16.2.0.41" />
+    <PackageReference Include="Syncfusion.Xamarin.SfGauge" Version="16.2.0.41" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="16.2.0.41" />
+    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="16.2.0.41" />
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="16.2.0.41" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="16.2.0.41" />
+    <PackageReference Include="Xamarin.Forms" Version="2.4.0.280" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>   
+  </ItemGroup>
+
+    <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+
+ <PropertyGroup>
+    <PrepareResourceNamesDependsOn>
+      IncludeFilesInDroid;
+      $(PrepareResourceNamesDependsOn)
+    </PrepareResourceNamesDependsOn>
+  </PropertyGroup>
+  <Target Name="IncludeFilesInDroid">
+  <ItemGroup>
+      <FilesToDelete Include="..\LinearGauge.Android\Resources\CodeFiles\**\*" />
+      <FilesToDelete Include="..\LinearGauge.iOS\Resources\CodeFiles\**\*" />     
+      <FilesToDelete Include="..\LinearGauge.UWP\Resources\CodeFiles\**\*" />
+    </ItemGroup>
+    <Delete Files="@(FilesToDelete)" />
+    <RemoveDir Directories="..\LinearGauge.Android\Resources\CodeFiles\" />
+    <RemoveDir Directories="..\LinearGauge.iOS\Resources\CodeFiles\" />
+    <RemoveDir Directories="..\LinearGauge.UWP\Resources\CodeFiles\" />		
+    <ItemGroup>
+      <SourceResourceFiles Include="Samples\**\*">
+        <DroidFiles>..\LinearGauge.Android\Resources\CodeFiles\</DroidFiles>
+        <iOSFiles>..\LinearGauge.iOS\Resources\CodeFiles\</iOSFiles>
+        <UWPFiles>..\LinearGauge.UWP\Resources\CodeFiles\</UWPFiles>
+      </SourceResourceFiles>
+    </ItemGroup>
+    <Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(DroidFiles)\%(RecursiveDir)" />
+    <Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(iOSFiles)\%(RecursiveDir)" />
+    <Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(UWPFiles)\%(RecursiveDir)" />
+  </Target>
+
+</Project>

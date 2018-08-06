@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+					   x:Class="ServerMonitor.Views.NetworkView"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" Padding="0,15,0,0">
+
+  <ContentPage.BackgroundColor>
+    <OnPlatform x:TypeArguments="Color">
+      <OnPlatform.iOS>
+        White
+      </OnPlatform.iOS>
+      <OnPlatform.Android>
+        White
+      </OnPlatform.Android>
+    </OnPlatform>
+  </ContentPage.BackgroundColor>
+  
+   <StackLayout Orientation="Vertical">
+
+     <Label  x:Name="MemoryUsed" Text="Disk Utilization" HorizontalOptions="Center" FontSize="15">
+       <Label.TextColor>
+         <OnPlatform x:TypeArguments="Color">
+           <OnPlatform.Android>
+             Black
+           </OnPlatform.Android>
+         </OnPlatform>
+       </Label.TextColor>
+     </Label>
+     
+        <chart:SfChart x:Name="PieChart" VerticalOptions="FillAndExpand">
+          <chart:SfChart.BackgroundColor>
+            <OnPlatform x:TypeArguments="Color">
+              <OnPlatform.iOS>
+                White
+              </OnPlatform.iOS>
+              <OnPlatform.Android>
+                White
+              </OnPlatform.Android>
+            </OnPlatform>
+          </chart:SfChart.BackgroundColor>
+
+          <chart:SfChart.Legend>
+            <chart:ChartLegend IsVisible="True"></chart:ChartLegend>
+          </chart:SfChart.Legend>
+          
+            <chart:PieSeries x:Name="pieSeries">
+              <chart:PieSeries.DataMarker>
+                <chart:ChartDataMarker ShowLabel="True"></chart:ChartDataMarker>
+              </chart:PieSeries.DataMarker>
+            </chart:PieSeries>   
+          
+        </chart:SfChart>
+
+     <Label  x:Name="DataDownload" Text="Data Download Rate" HorizontalOptions="Center" FontSize="15">
+       <Label.TextColor>
+         <OnPlatform x:TypeArguments="Color">
+           <OnPlatform.Android>
+             Black
+           </OnPlatform.Android>
+         </OnPlatform>
+       </Label.TextColor>
+     </Label>
+        <chart:SfChart x:Name="Chart" VerticalOptions="FillAndExpand">
+          <chart:SfChart.BackgroundColor>
+            <OnPlatform x:TypeArguments="Color">
+              <OnPlatform.iOS>
+                White
+              </OnPlatform.iOS>
+              <OnPlatform.Android>
+                White
+              </OnPlatform.Android>
+            </OnPlatform>
+          </chart:SfChart.BackgroundColor>
+
+          <chart:SfChart.PrimaryAxis>
+              <chart:NumericalAxis>
+          </chart:NumericalAxis>
+          </chart:SfChart.PrimaryAxis>
+
+          <chart:SfChart.SecondaryAxis>
+              <chart:NumericalAxis Maximum="75" Minimum="0" Interval="15">
+          </chart:NumericalAxis>
+          </chart:SfChart.SecondaryAxis>
+            <chart:LineSeries x:Name="series" Label="DataPoints" Color = "Purple"/>
+        </chart:SfChart>
+
+      </StackLayout>
+ 
+</ContentPage>

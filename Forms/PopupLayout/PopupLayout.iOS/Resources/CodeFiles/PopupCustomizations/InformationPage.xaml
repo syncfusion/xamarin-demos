@@ -1,0 +1,109 @@
+    <ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfPopupLayout.InformationPage"
+             xmlns:local="clr-namespace:SampleBrowser.SfPopupLayout" 
+             xmlns:popuplayout="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms">
+    <ContentView.BindingContext>
+        <local:InformationPageViewModel />
+    </ContentView.BindingContext>
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="heightRequest"
+                        x:TypeArguments="x:Double">
+                <On Platform="Android,iOS,UWP">
+                    <OnIdiom x:TypeArguments="x:Double">
+                        <OnIdiom.Phone>270</OnIdiom.Phone>
+                        <OnIdiom.Tablet>350</OnIdiom.Tablet>
+                        <OnIdiom.Desktop>350</OnIdiom.Desktop>
+                    </OnIdiom>
+                </On>
+            </OnPlatform>
+            
+            <OnPlatform x:Key="minimumHeightRequest"
+                        x:TypeArguments="x:Double">
+                <On Platform="UWP" Value="250"/>
+                <On Platform="Android" Value="220"/>
+                <On Platform="iOS" Value="270"/>
+
+            </OnPlatform>
+
+            <OnPlatform x:Key="widthRequest"
+                        x:TypeArguments="x:Double">
+                <On Platform="UWP,Android,iOS" >
+                    <OnIdiom x:TypeArguments="x:Double">
+                        <OnIdiom.Phone>300</OnIdiom.Phone>
+                        <OnIdiom.Tablet>350</OnIdiom.Tablet>
+                        <OnIdiom.Desktop>350</OnIdiom.Desktop>
+                    </OnIdiom>
+                </On>
+            </OnPlatform>
+
+            <OnPlatform x:Key="minimumWidthRequest"
+                        x:TypeArguments="x:Double">
+
+                <On Platform="UWP" Value="300"/>
+                <On Platform="Android" Value="250"/>
+                <On Platform="iOS" Value="300"/>
+            </OnPlatform>
+
+            <OnPlatform x:Key="labelHeightRequest"
+                        x:TypeArguments="x:Double">
+
+                <On Platform="UWP,Android,iOS" >
+                    <OnIdiom x:TypeArguments="x:Double">
+                        <OnIdiom.Phone>60</OnIdiom.Phone>
+                        <OnIdiom.Tablet>90</OnIdiom.Tablet>
+                        <OnIdiom.Desktop>90</OnIdiom.Desktop>
+                    </OnIdiom>
+                </On>
+            </OnPlatform>
+
+            <OnPlatform x:Key="labelFontSize"
+                        x:TypeArguments="x:Double">
+
+                <On Platform="UWP,Android,iOS" >
+                    <OnIdiom x:TypeArguments="x:Double">
+                        <OnIdiom.Phone>14</OnIdiom.Phone>
+                        <OnIdiom.Tablet>19</OnIdiom.Tablet>
+                        <OnIdiom.Desktop>19</OnIdiom.Desktop>
+                    </OnIdiom>
+                </On>
+            </OnPlatform>
+        </ResourceDictionary>
+    </ContentView.Resources>
+
+    <ContentView.Content>
+        <popuplayout:SfPopupLayout x:Name="popup">
+            <popuplayout:SfPopupLayout.PopupView>
+                <popuplayout:PopupView ShowFooter="False" HeightRequest="{StaticResource heightRequest}" MinimumHeightRequest="{StaticResource minimumHeightRequest}" WidthRequest="{StaticResource widthRequest}" MinimumWidthRequest="{StaticResource minimumWidthRequest}">
+                    <popuplayout:PopupView.PopupStyle>
+                        <popuplayout:PopupStyle HeaderTextAlignment="Center" HeaderBackgroundColor="White" HeaderTextColor="Black" BorderColor="Gray" BorderThickness="1" HeaderFontSize="17" HeaderFontAttribute="Bold">
+                        </popuplayout:PopupStyle>
+                    </popuplayout:PopupView.PopupStyle>
+                    <popuplayout:PopupView.ContentTemplate>
+                        <DataTemplate>
+                            <StackLayout x:Name="mainLayout" Orientation="Vertical" BackgroundColor="White" WidthRequest="270" Padding="10,5,10,50">
+                                <Label x:Name="address" HeightRequest="{StaticResource labelHeightRequest}" FontSize="{StaticResource labelFontSize}" Margin="0,10,0,0" Text="No.15, 12th Main Road, Sector 1, 421 E DRACHMAN TUCSON AZ 85705 - 7598 USA" TextColor="#007CEE" LineBreakMode="WordWrap" />
+                                <Label x:Name="facilities" Margin="0,20,0,10" Text="Available Facilities" HeightRequest="30" FontSize="16" TextColor="Black" HorizontalTextAlignment="Center" />
+                                <StackLayout x:Name="totalFacilities" Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="0,5,10,5" >
+                                    <StackLayout x:Name="mticket" Orientation="Vertical" WidthRequest="90" BackgroundColor="White" HorizontalOptions="CenterAndExpand">
+                                        <Image x:Name="ticketImage" Source="{Binding TicketImageSource}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="30" WidthRequest="30"/>
+                                        <Label x:Name="ticket" Text="M-Ticket" TextColor="Black" HeightRequest="20" FontSize="12" HorizontalTextAlignment="Center"/>
+                                    </StackLayout>
+                                    <StackLayout x:Name="mparking" Orientation="Vertical" BackgroundColor="White" WidthRequest="90" HorizontalOptions="StartAndExpand" >
+                                        <Image x:Name="parkingImage" Source="{Binding ParkingImageSource}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" HeightRequest="30" WidthRequest="30"/>
+                                        <Label x:Name="parking" Text="Parking" TextColor="Black" HeightRequest="20" FontSize="12" HorizontalTextAlignment="Center"/>
+                                    </StackLayout>
+                                    <StackLayout x:Name="mfoodCourt" Orientation="Vertical" BackgroundColor="White" WidthRequest="90" HorizontalOptions="EndAndExpand">
+                                        <Image x:Name="foodCourtImage" Source="{Binding FoodCourtImageSource}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" HeightRequest="30" WidthRequest="30"/>
+                                        <Label x:Name="foodCourt" Text="FoodCourt" HorizontalTextAlignment="Center" TextColor="Black" HeightRequest="20" FontSize="12"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </DataTemplate>
+                    </popuplayout:PopupView.ContentTemplate>
+                </popuplayout:PopupView>
+            </popuplayout:SfPopupLayout.PopupView>
+        </popuplayout:SfPopupLayout>
+    </ContentView.Content>
+</ContentView>

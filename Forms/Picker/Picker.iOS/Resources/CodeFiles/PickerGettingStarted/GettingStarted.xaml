@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView  xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPicker.XForms"
+                   xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" 
+                   xmlns:custom="clr-namespace:SampleBrowser.SfPicker" 
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   x:Class="SampleBrowser.SfPicker.PickerGettingStarted">
+<local:SampleView.Content>
+<ScrollView Margin="10" >
+    <Grid x:Name="grid_layout" Padding="20,10,20,0" HorizontalOptions="Center">
+      <Grid.RowDefinitions>
+        <RowDefinition x:Name="rowheight" Height="300" />
+		<RowDefinition x:Name="logname" Height="35" />
+        <RowDefinition Height="*" />			
+      </Grid.RowDefinitions>
+
+      <Grid HorizontalOptions="Center">
+        <picker:SfPicker x:Name="picker"
+             HorizontalOptions="FillAndExpand"
+					   SelectedIndex="{Binding SelectedIndex}"
+					   ItemsSource="{Binding Source}"
+					   ShowHeader="{Binding IsShowHeader}"
+					   ShowColumnHeader="{Binding IsShowColumnHeader}"
+                       EnableLooping="{Binding IsEnableAutoReverse}"
+                       SelectionBackgroundColor="{Binding IsEnableBorderColor}"
+					   HeaderText="{Binding HeaderText}"
+				       ColumnHeaderText="{Binding ColumnHeaderTextCollection}"
+				       SelectionChanged="Picker_SelectionChanged" >
+        <picker:SfPicker.Behaviors>
+          <custom:SfPickerBehavior />
+        </picker:SfPicker.Behaviors>
+      </picker:SfPicker>
+      </Grid>
+
+		<Grid Grid.Row="1">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+			<Label Text="Event Log" Grid.Column="0"  HorizontalOptions="Start"  FontSize="16" />
+			<Button Text="Clear Logs" Grid.Column="1" x:Name="clearLogsButton"  FontSize="10"  BackgroundColor="White" BorderWidth="1" VerticalOptions="Center" BorderColor="#007aff" TextColor="#007aff" WidthRequest="100" HeightRequest="50" HorizontalOptions="End" Clicked="Handle_Clicked"  />
+		</Grid>
+
+		<ContentView Grid.Row="2" BackgroundColor="#FFFFFF" Padding="3,1,1,3" >
+			<ContentView BackgroundColor="White" VerticalOptions="Fill" Padding="10,5,10,10">
+				<ScrollView x:Name="scrollView" IsClippedToBounds="true" >
+					<StackLayout x:Name="eventLogLayout" Margin="5"/>
+				</ScrollView>
+			</ContentView>
+		</ContentView>
+    </Grid>
+		</ScrollView>
+  </local:SampleView.Content>
+	<local:SampleView.PropertyView>
+		<StackLayout Orientation="Vertical" x:Name="mainStack">
+    		<StackLayout   x:Name="ShowHeaderLayout" Orientation="Horizontal">
+    			<Label x:Name="ShowHeader"  FontAttributes="None" FontSize="16" Text = "Show Header" HeightRequest = "20" HorizontalOptions = "Start" TextColor="#666666"/>
+				<Label WidthRequest="120" x:Name="HeaderSpacelabel"/>
+    			<Switch HorizontalOptions="Center"  IsToggled="{Binding IsShowHeader}" />
+    		</StackLayout>
+
+    		<StackLayout   x:Name="ShowColumnHeaderLayout" Orientation="Horizontal">
+    			<Label x:Name="ShowColumnHeader"  FontAttributes="None" FontSize="16" Text = "Show Column Header" HeightRequest = "20" HorizontalOptions = "Start" TextColor="#666666" />
+				<Label WidthRequest="60" x:Name="ColumnSpacelabel"/>
+    			<Switch HorizontalOptions="Center" IsToggled="{Binding IsShowColumnHeader,Mode=TwoWay}"  />
+    		</StackLayout>
+
+            <StackLayout   x:Name="EnableAutoReverseLayout" Orientation="Horizontal">
+                <Label x:Name="EnableAutoReverse"  FontAttributes="None" FontSize="16" Text = "Enable AutoReverse" HeightRequest = "20" HorizontalOptions = "Start" TextColor="#666666" />
+                <Label WidthRequest="70" x:Name="AutoReverseSpacelabel"/>
+                <Switch HorizontalOptions="Center" IsToggled="{Binding IsEnableAutoReverse,Mode=TwoWay}"  />
+            </StackLayout>
+
+             <StackLayout   x:Name="SelectionBorderColorLayout" Orientation="Horizontal">
+                <Label x:Name="BorderColor"  FontAttributes="None" FontSize="16" Text = "Enable SelectionBorder" HeightRequest = "20" HorizontalOptions = "Start" TextColor="#666666" />
+                <Label WidthRequest="45" x:Name="BorderColorSpacelabel"/>
+                <Switch HorizontalOptions="Center" IsToggled="{Binding IsEnableBorderColor,Mode=TwoWay}" Toggled="Handle_Toggled" />
+            </StackLayout>
+  
+			<StackLayout   x:Name="selectedRowTextColorLayout" >
+    			<Label x:Name="SelectedRowTextColorlbl"  FontAttributes="None" FontSize="16" Text = "SelectedRow TextColor" HeightRequest = "20" HorizontalOptions = "Start" TextColor="#666666" />
+    			<Picker x:Name="SelectedRowTextColorPicker"   VerticalOptions="Start" SelectedIndex="0" SelectedIndexChanged="Handle_SelectedIndexChanged3"/>
+    		</StackLayout>
+
+			<StackLayout   x:Name="unselectedRowTextColorLayout" >
+    			<Label x:Name="UnSelectedRowTextColorlbl"  FontAttributes="None" FontSize="16" Text = "UnSelectedRow TextColor" HeightRequest = "20" HorizontalOptions = "Start" TextColor="#666666" />
+    			<Picker x:Name="UnSelectedRowTextColorPicker"  VerticalOptions="Start"  SelectedIndex="0" SelectedIndexChanged="Handle_SelectedIndexChanged4"/>
+    		</StackLayout>
+
+			<StackLayout   x:Name="BorderColorLayout" >
+    			<Label x:Name="BorderColorlbl"  FontAttributes="None" FontSize="16" Text = "Border TextColor" HeightRequest = "20" HorizontalOptions = "Start" TextColor="#666666" />
+    			<Picker x:Name="BorderColorPicker"   VerticalOptions="Start" SelectedIndex="0" SelectedIndexChanged="Handle_SelectedIndexChanged5"/>
+    		</StackLayout>
+		</StackLayout>
+	</local:SampleView.PropertyView>
+</local:SampleView>

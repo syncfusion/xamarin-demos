@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+              xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+              xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="SampleBrowser.PDF.Booklet">
+
+  <local:SampleView.Content>
+    <StackLayout Padding="10">
+     
+      <Label x:Name="Description" Text="This sample demonstrates how to create a booklet from an existing PDF document."
+             FontSize="Medium"
+             HorizontalOptions="Start"
+             VerticalOptions="Center">
+      </Label>
+      <Label></Label>
+      <Button x:Name="btnGenerate"  Text="Generate PDF"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Clicked="OnButtonClicked" />
+
+    </StackLayout>
+  </local:SampleView.Content>
+
+  <local:SamplePage.PropertyView>
+
+  </local:SamplePage.PropertyView>
+
+</local:SampleView>

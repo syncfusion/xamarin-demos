@@ -1,0 +1,80 @@
+<Project>
+
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+     <Link>Samples\Sparkline\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+
+ <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Sparkline\Spark_Windows.xaml">
+   
+<Link>Samples\Sparkline\Samples\Sparkline\Spark_Windows.xaml</Link>
+   <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+   
+   <SubType>Designer</SubType>
+ 
+   </EmbeddedResource>
+
+
+<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Sparkline\Sparkline_Phone.xaml">
+    
+<Link>Samples\Sparkline\Samples\Sparkline\Sparkline_Phone.xaml</Link>
+  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    
+  <SubType>Designer</SubType>
+  
+  </EmbeddedResource>
+
+
+ <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Sparkline\Sparkline.xaml">
+   
+<Link>Samples\Sparkline\Samples\Sparkline\Sparkline.xaml</Link>
+   <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+   
+   <SubType>Designer</SubType>
+   
+ </EmbeddedResource>
+
+
+ <Compile Include="$(MSBuildThisFileDirectory)\Samples\Sparkline\SparklineViewModel.cs" >
+<Link>Samples\Sparkline\Samples\Sparkline\SparklineViewModel.cs</Link>
+ </Compile>
+  
+
+
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Sparkline\Sparkline.xaml.cs">
+   
+<Link>Samples\Sparkline\Samples\Sparkline\Sparkline.xaml.cs</Link>
+  <DependentUpon>Sparkline.xaml</DependentUpon>
+   
+ </Compile>
+
+
+<Compile Include="$(MSBuildThisFileDirectory)\Samples\Sparkline\SparklineModel.cs" >
+<Link>Samples\Sparkline\Samples\Sparkline\SparklineModel.cs</Link>
+ </Compile>
+
+   
+
+ <Compile Include="$(MSBuildThisFileDirectory)\Samples\Sparkline\Spark_Windows.xaml.cs">
+ 
+<Link>Samples\Sparkline\Samples\Sparkline\Spark_Windows.xaml.cs</Link>
+     <DependentUpon>Spark_Windows.xaml</DependentUpon>
+   
+ </Compile>
+  
+
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\Sparkline\Sparkline_Phone.xaml.cs">
+    
+<Link>Samples\Sparkline\Samples\Sparkline\Sparkline_Phone.xaml.cs</Link>
+  <DependentUpon>Sparkline_Phone.xaml</DependentUpon>
+
+    </Compile>
+
+
+  </ItemGroup>
+
+</Project>

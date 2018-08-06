@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.SemiDoughnutChart" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+    <local:SampleView.Content>
+        <StackLayout x:Name="layout">
+            <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <chart:SfChart.Title>
+                    <chart:ChartTitle Text="Products Growth - 2015" >
+                    </chart:ChartTitle>
+                </chart:SfChart.Title>
+                <chart:SfChart.BindingContext>
+                    <sampleBrowser:SemiDoughnutSeriesViewModel />
+                </chart:SfChart.BindingContext>
+                <chart:SfChart.Legend>
+                    <chart:ChartLegend IconWidth="14" IconHeight="14" DockPosition="Bottom" ToggleSeriesVisibility="true" />
+                </chart:SfChart.Legend>
+                <chart:SfChart.Series>
+                    <chart:DoughnutSeries ItemsSource="{Binding SemiCircularData}" XBindingPath="Name" YBindingPath="Value" CircularCoefficient="1" EnableAnimation="true" StartAngle="180" EndAngle="360" StrokeWidth="1" StrokeColor="White">
+                        <chart:DoughnutSeries.ColorModel>
+                            <chart:ChartColorModel Palette="Natural" />
+                        </chart:DoughnutSeries.ColorModel>
+                    </chart:DoughnutSeries>
+                </chart:SfChart.Series>
+            </chart:SfChart>
+        </StackLayout>
+    </local:SampleView.Content>
+</local:SampleView>

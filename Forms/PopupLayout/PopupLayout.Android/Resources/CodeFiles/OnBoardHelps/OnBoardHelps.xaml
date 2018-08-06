@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sample:SampleView xmlns="http://xamarin.com/schemas/2014/forms" 
+                   xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" 
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                   x:Class="SampleBrowser.SfPopupLayout.OnBoardHelps" 
+                   xmlns:sfgrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms" xmlns:popuplayout="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms"
+                   xmlns:local="clr-namespace:SampleBrowser.SfPopupLayout">
+  <sample:SampleView.Resources>
+    <ResourceDictionary>
+      <Image x:Key="leftImage" BackgroundColor="Transparent" />
+      <Image x:Key="rightImage" BackgroundColor="Transparent" HorizontalOptions="Fill" />
+      <Image x:Key="InfoNotification" />
+      <StackLayout x:Key="ResizingIllustration" BackgroundColor="Transparent">
+        <Image HeightRequest="150" WidthRequest="150" />
+      </StackLayout>
+      <Image x:Key="EditIllustration" />
+      <StackLayout x:Key="SwipeIllustration">
+        <Image HeightRequest="130" WidthRequest="130" />
+      </StackLayout>
+      <RelativeLayout x:Key="dragDropLayout">
+                <Image HeightRequest="30" WidthRequest="30" RelativeLayout.WidthConstraint="30" RelativeLayout.HeightConstraint="30"  RelativeLayout.XConstraint="0" RelativeLayout.YConstraint="60">
+        </Image>
+        <Image HeightRequest="200" WidthRequest="200" RelativeLayout.WidthConstraint="200" RelativeLayout.HeightConstraint="200"  RelativeLayout.XConstraint="0" RelativeLayout.YConstraint="0"/>
+      </RelativeLayout>
+    </ResourceDictionary>
+  </sample:SampleView.Resources>
+  
+    <sample:SampleView.Content>
+        <popuplayout:SfPopupLayout x:Name="popupLayout" StaysOpen="True">
+          <popuplayout:SfPopupLayout.PopupView >
+            <popuplayout:PopupView AnimationMode="None" ShowHeader="False" ShowFooter="False" ContentTemplate="{Binding PopupContentTemplate}">
+            <popuplayout:PopupView.PopupStyle>
+              <popuplayout:PopupStyle BorderColor="Transparent" />
+            </popuplayout:PopupView.PopupStyle>
+            </popuplayout:PopupView>
+          </popuplayout:SfPopupLayout.PopupView>
+            <popuplayout:SfPopupLayout.Content>
+                <Grid x:Name="overViewPage" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                        <sfgrid:SfDataGrid x:Name="dataGrid" 
+                                           AutoGenerateColumns="true" 
+                                           ColumnSizer="Star" 
+                                           HeaderRowHeight="52" 
+                                           MaxSwipeOffset="150" 
+                                           RowHeight="58" 
+                                           VerticalOverScrollMode="None"
+                                           AllowSwiping="true" 
+                                           AllowEditing="true"
+                                           AllowResizingColumn="true" 
+                                           AllowDraggingRow="true">
+                          
+                            <sfgrid:SfDataGrid.LeftSwipeTemplate>
+                              <DataTemplate>
+                                <Grid BackgroundColor="#EF5350">
+                                  <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40" />
+                                    <ColumnDefinition />
+                                  </Grid.ColumnDefinitions>
+                                  <ContentView Grid.Column="0" Padding="16,0,0,0" Content="{StaticResource rightImage}" />
+                                        <Label Grid.Column="1" BackgroundColor="Transparent" HorizontalTextAlignment="Start" LineBreakMode="NoWrap" Text="DELETE" TextColor="White" VerticalTextAlignment="Center">
+                                            <Label.Behaviors>
+                                                <local:SwipeDeleteBehavior Parameter="{x:Reference dataGrid}"/>
+                                            </Label.Behaviors>
+                                        </Label>
+                                </Grid>
+                              </DataTemplate>
+                            </sfgrid:SfDataGrid.LeftSwipeTemplate>
+
+                          <sfgrid:SfDataGrid.RightSwipeTemplate>
+                            <DataTemplate>
+                              <Grid BackgroundColor="#EF5350">
+                                <Grid.ColumnDefinitions>
+                                  <ColumnDefinition Width="40" />
+                                  <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <ContentView Grid.Column="0" Padding="16,0,0,0" Content="{StaticResource rightImage}" />
+                                <Label Grid.Column="1" BackgroundColor="Transparent" HorizontalTextAlignment="Start" LineBreakMode="NoWrap" Text="DELETE" TextColor="White" VerticalTextAlignment="Center">
+                                  <Label.Behaviors>
+                                    <local:SwipeDeleteBehavior Parameter="{x:Reference dataGrid}"/>
+                                  </Label.Behaviors>
+                                </Label>
+                              </Grid>
+                            </DataTemplate>
+                          </sfgrid:SfDataGrid.RightSwipeTemplate>
+                          
+                        </sfgrid:SfDataGrid>
+                  
+                    <RelativeLayout x:Name="relativeLayout" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Label x:Name="label" FontAttributes="Bold" FontSize="25" Text="Next" TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HeightRequest="50" WidthRequest="100" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.8}"
+                            HorizontalOptions="EndAndExpand" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0.7}" IsVisible="true" />
+                        <Label x:Name="oklabel" FontAttributes="Bold" FontSize="20" Text="Ok, got it !" TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HeightRequest="50" WidthRequest="100" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.8}"
+                            HorizontalOptions="CenterAndExpand" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0.7}" IsVisible="false" />
+                    </RelativeLayout>
+                </Grid>
+            </popuplayout:SfPopupLayout.Content>
+        </popuplayout:SfPopupLayout>
+    </sample:SampleView.Content>
+  
+    <sample:SampleView.Behaviors>
+        <local:OnBoardHelpsBehavior />
+    </sample:SampleView.Behaviors>
+  
+</sample:SampleView>

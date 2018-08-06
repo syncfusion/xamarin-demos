@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>SampleBrowser.SfCheckBox</AssemblyName>
+    <RootNamespace>SampleBrowser.SfCheckBox</RootNamespace>
+  </PropertyGroup>
+
+	<PropertyGroup>
+		<TargetFramework>netstandard1.0</TargetFramework>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+	</PropertyGroup>
+
+
+  <ItemGroup>
+    <None Remove="SampleBrowser.SfCheckBox.nuspec" />
+    <None Remove="SampleBrowser.SfCheckBox.props" />
+    <None Remove="SamplesList\SamplesList.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SamplesList\SamplesList.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SampleBrowser.Core" Version="16.2.0.41" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="16.2.0.41" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="16.2.0.41" />
+    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="16.2.0.41" />
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="16.2.0.41" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="16.2.0.41" />
+    <PackageReference Include="Xamarin.Forms" Version="2.4.0.280" />
+  </ItemGroup>
+
+	<Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+ 
+   <PropertyGroup>
+    <PrepareResourceNamesDependsOn>
+      IncludeFilesInDroid;
+      $(PrepareResourceNamesDependsOn)
+    </PrepareResourceNamesDependsOn>
+  </PropertyGroup>
+  
+  <Target Name="IncludeFilesInDroid">
+    <RemoveDir Directories="..\CheckBox.Droid\Resources\CodeFiles\" />
+    <RemoveDir Directories="..\CheckBox.iOS\Resources\CodeFiles\" />
+    <RemoveDir Directories="..\CheckBox.UWP\Resources\CodeFiles\" />
+    <ItemGroup>
+      <SourceResourceFiles Include="Samples\**\*">
+        <DroidFiles>..\CheckBox.Droid\Resources\CodeFiles\</DroidFiles>
+        <iOSFiles>..\CheckBox.iOS\Resources\CodeFiles\</iOSFiles>
+        <UWPFiles>..\CheckBox.UWP\Resources\CodeFiles\</UWPFiles>
+      </SourceResourceFiles>
+    </ItemGroup>
+    <Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(DroidFiles)\%(RecursiveDir)" />
+    <Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(iOSFiles)\%(RecursiveDir)" />
+    <Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(UWPFiles)\%(RecursiveDir)" />
+  </Target>
+  
+</Project>

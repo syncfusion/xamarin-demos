@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                   xmlns:numeric="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms"
+               xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             x:Class="SampleBrowser.SfNumericUpDown.NumericUpDown_Default">
+  <local:SampleView.Content>
+    <Grid x:Name="sampleLayout">
+      <Grid.Resources>
+        <ResourceDictionary>
+          <local:ImagePathConverter x:Key="ImagePathConverter" />
+        </ResourceDictionary>
+      </Grid.Resources>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="60" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <Grid BackgroundColor="Black">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label Text="My Fruits" x:Name="fruitHeadingLabel" TextColor="White" Margin="10,0,0,0" VerticalOptions="Center" />
+        <StackLayout x:Name="cartInfoStack" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,10,0">
+          <Label Text="Check Out" x:Name="checkoutLabel" TextColor="White" Margin="-2,5,0,0" />
+          <Label TextColor="#d16d10" Margin="5" x:Name="TotalCart" Text="(0)" />
+          <Image Source="{Binding Converter={StaticResource ImagePathConverter},ConverterParameter=SampleBrowser.SfNumericUpDown.cartimage.png}" Margin="0,5,5,5" HeightRequest="28" WidthRequest="28" />
+        </StackLayout>
+      </Grid>
+      <ScrollView Grid.Row="1" IsClippedToBounds="true">
+        <StackLayout BackgroundColor="#edf8fc">
+          <Grid HeightRequest="150" Margin="4,4,4,2" BackgroundColor="White">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="0.8*" />
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Source="{Binding Converter={StaticResource ImagePathConverter},ConverterParameter=SampleBrowser.SfNumericUpDown.peach.jpg}" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="Center" />
+            <Image Source="{Binding Converter={StaticResource ImagePathConverter},ConverterParameter=SampleBrowser.SfNumericUpDown.off.png}" WidthRequest="40" HeightRequest="40" Grid.Column="1" VerticalOptions="Start" HorizontalOptions="End" Margin="7" Aspect="AspectFit" />
+            <Grid Grid.Column="1" Margin="7">
+              <Grid.RowDefinitions>
+                <RowDefinition x:Name="aheader" Height="20" />
+                <RowDefinition Height="15" />
+                <RowDefinition Height="45" />
+                <RowDefinition Height="*" />
+              </Grid.RowDefinitions>
+              <Grid>
+                <Label Text="Peach" TextColor="Black" Font="16" VerticalOptions="End" HorizontalOptions="Start" />
+              </Grid>
+              <Label Text="$0.49 per Unit" TextColor="Gray" Font="12" VerticalOptions="Start" Grid.Row="1" HorizontalOptions="Start" />
+              <numeric:SfNumericUpDown Grid.Row="2" x:Name="AppleCount" MaximumDecimalDigits="0" HeightRequest="35" WidthRequest="50" MinimumHeightRequest="50" TextColor="Black" AllowNull="false" HorizontalOptions="FillAndExpand" VerticalOptions="Center"
+								FormatString="n" Watermark="Units" Value="0" SpinButtonAlignment="Both" ValueChanged="Handle_ValueChanged" TextAlignment="Center" />
+              <Label x:Name="AppleCost" Text="$0" Grid.Row="3" TextColor="Black" Font="18" VerticalOptions="Center" FontAttributes="Bold" HorizontalOptions="Start" />
+              <Button Text="Add To Cart" Font="16" Grid.Row="3" IsEnabled="false"  x:Name="appleAddButton" HeightRequest="30" WidthRequest="120" BackgroundColor="#d16d10" TextColor="White" HorizontalOptions="End" VerticalOptions="End"
+								Clicked="Handle_Clicked" />
+            </Grid>
+          </Grid>
+          <Grid HeightRequest="150" Margin="4,4,4,2" BackgroundColor="White">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="0.8*" />
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Source="{Binding Converter={StaticResource ImagePathConverter},ConverterParameter=SampleBrowser.SfNumericUpDown.greenapple.jpg}" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="Center" />
+            <Image Source="{Binding Converter={StaticResource ImagePathConverter},ConverterParameter=SampleBrowser.SfNumericUpDown.off.png}" WidthRequest="40" HeightRequest="40" Grid.Column="1" VerticalOptions="Start" HorizontalOptions="End" Margin="7" Aspect="AspectFit" />
+            <Grid Grid.Column="1" Margin="7">
+              <Grid.RowDefinitions>
+                <RowDefinition x:Name="pheader" Height="20" />
+                <RowDefinition Height="15" />
+                <RowDefinition Height="45" />
+                <RowDefinition Height="*" />
+              </Grid.RowDefinitions>
+              <Grid>
+                <Label Text="Green Apple" TextColor="Black" Font="16" VerticalOptions="End" HorizontalOptions="Start" />
+              </Grid>
+              <Label Text="$0.99 per Unit" TextColor="Gray" Font="12" VerticalOptions="Start" Grid.Row="1" HorizontalOptions="Start" />
+              <numeric:SfNumericUpDown Grid.Row="2" x:Name="PomegranateCount" MaximumDecimalDigits="0" HeightRequest="35" WidthRequest="50" MinimumHeightRequest="50" TextColor="Black" AllowNull="false" HorizontalOptions="FillAndExpand" VerticalOptions="Center"
+								FormatString="n" Watermark="Units" Value="0" SpinButtonAlignment="Both" ValueChanged="Handle_ValueChanged2" TextAlignment="Center" />
+              <Label x:Name="PomegranateCost" Text="$0" Grid.Row="3" TextColor="Black" Font="18" VerticalOptions="Center" FontAttributes="Bold" HorizontalOptions="Start" />
+              <Button Text="Add To Cart" Font="16" Grid.Row="3" IsEnabled="false"  x:Name="pomegranateAddButton" HeightRequest="30" WidthRequest="120" BackgroundColor="#d16d10" TextColor="White" HorizontalOptions="End" VerticalOptions="End"
+								Clicked="Handle_Clicked" />
+            </Grid>
+          </Grid>
+          <Grid HeightRequest="150" Margin="4,4,4,2" BackgroundColor="White">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="0.8*" />
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Source="{Binding Converter={StaticResource ImagePathConverter},ConverterParameter=SampleBrowser.SfNumericUpDown.kiwi.jpg}" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="Center" />
+            <Image Source="{Binding Converter={StaticResource ImagePathConverter},ConverterParameter=SampleBrowser.SfNumericUpDown.off.png}" WidthRequest="40" HeightRequest="40" Grid.Column="1" VerticalOptions="Start" HorizontalOptions="End" Margin="7" Aspect="AspectFit" />
+            <Grid Grid.Column="1" Margin="7">
+              <Grid.RowDefinitions>
+                <RowDefinition x:Name="oheader" Height="20" />
+                <RowDefinition Height="15" />
+                <RowDefinition Height="45" />
+                <RowDefinition Height="*" />
+              </Grid.RowDefinitions>
+              <Grid>
+                <Label Text="Kiwi (Imported)" TextColor="Black" Font="16" VerticalOptions="End" HorizontalOptions="Start" />
+              </Grid>
+              <Label Text="$0.19 per Unit" TextColor="Gray" Font="12" VerticalOptions="Start" Grid.Row="1" HorizontalOptions="Start" />
+              <numeric:SfNumericUpDown Grid.Row="2" x:Name="OrangeCount" MaximumDecimalDigits="0" HeightRequest="35" WidthRequest="50" MinimumHeightRequest="50" TextColor="Black" AllowNull="false" HorizontalOptions="FillAndExpand" VerticalOptions="Center"
+								FormatString="n" Watermark="Units" Value="0" SpinButtonAlignment="Both" ValueChanged="Handle_ValueChanged3" TextAlignment="Center" />
+              <Label x:Name="OrangeCost" Text="$0" Grid.Row="3" TextColor="Black" Font="18" VerticalOptions="Center" FontAttributes="Bold" HorizontalOptions="Start" />
+              <Button Text="Add To Cart" Font="16" Grid.Row="3" IsEnabled="false"  x:Name="orangeAddButton" HeightRequest="30" WidthRequest="120" BackgroundColor="#d16d10" TextColor="White" HorizontalOptions="End" VerticalOptions="End"
+								Clicked="Handle_Clicked" />
+            </Grid>
+          </Grid>
+          <Grid HeightRequest="150" Margin="4,4,4,2" BackgroundColor="White">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="0.8*" />
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Source="{Binding Converter={StaticResource ImagePathConverter},ConverterParameter=SampleBrowser.SfNumericUpDown.strawberry.jpg}" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="Center" />
+            <Image Source="{Binding Converter={StaticResource ImagePathConverter},ConverterParameter=SampleBrowser.SfNumericUpDown.off.png}" WidthRequest="40" HeightRequest="40" Grid.Column="1" VerticalOptions="Start" HorizontalOptions="End" Margin="7" Aspect="AspectFit" />
+            <Grid Grid.Column="1" Margin="7">
+              <Grid.RowDefinitions>
+                <RowDefinition x:Name="bheader" Height="20" />
+                <RowDefinition Height="15" />
+                <RowDefinition Height="45" />
+                <RowDefinition Height="*" />
+              </Grid.RowDefinitions>
+              <Grid>
+                <Label Text="Strawberry" TextColor="Black" Font="16" VerticalOptions="End" HorizontalOptions="Start" />
+              </Grid>
+              <Label Text="$0.09 per Unit" TextColor="Gray" Font="12" VerticalOptions="Start" Grid.Row="1" HorizontalOptions="Start" />
+              <numeric:SfNumericUpDown Grid.Row="2" x:Name="BananaCount" MaximumDecimalDigits="0" HeightRequest="35" WidthRequest="50" MinimumHeightRequest="50" TextColor="Black" AllowNull="false" HorizontalOptions="FillAndExpand" VerticalOptions="Center"
+								FormatString="n" Watermark="Units" Value="0" SpinButtonAlignment="Both" ValueChanged="Handle_ValueChanged4" TextAlignment="Center" />
+              <Label x:Name="BananaCost" Text="$0" Grid.Row="3" TextColor="Black" Font="18" VerticalOptions="Center" FontAttributes="Bold" HorizontalOptions="Start" />
+              <Button Text="Add To Cart" Font="16" Grid.Row="3" IsEnabled="false" x:Name="bananaAddButton" HeightRequest="30" WidthRequest="120" BackgroundColor="#d16d10" TextColor="White" HorizontalOptions="End" VerticalOptions="End"
+								Clicked="Handle_Clicked" />
+            </Grid>
+          </Grid>
+        </StackLayout>
+      </ScrollView>
+    </Grid>
+  </local:SampleView.Content>
+  <local:SampleView.PropertyView>
+    <StackLayout x:Name="optionLayout" Spacing="20">
+      <Grid HeightRequest="80">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="2*" x:Name="minColumn1" />
+          <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="minimumValueLabel" Text="Minimum Value" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontFamily="Helvetica" FontSize="18" />
+        <Entry x:Name="minimumValueText" Grid.Column="1" HorizontalOptions="End" Keyboard="Numeric" WidthRequest="130" VerticalOptions="Center" Text="0" />
+      </Grid>
+      <Grid HeightRequest="80">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="2*" x:Name="maxColumn1" />
+          <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="maximumValueLabel" Text="Maximum Value" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontFamily="Helvetica" FontSize="18" />
+        <Entry x:Name="maximumValueText" Grid.Column="1" Text="25" Keyboard="Numeric" HorizontalOptions="End" WidthRequest="130" VerticalOptions="Center" />
+      </Grid>
+     <Grid HeightRequest="80">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="2*" x:Name="FontSizeColumn" />
+          <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="FontSizeLabel" Text="FontSize" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontFamily="Helvetica" FontSize="18" />
+        <Entry x:Name="FontSizeText" Grid.Column="1" Text="18" Keyboard="Numeric" HorizontalOptions="End" WidthRequest="130" VerticalOptions="Center" />
+      </Grid>
+      <Grid HeightRequest="80">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="2*" x:Name="reverseColumn1" />
+          <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="autoReverseLabel" Text="Auto Reverse" VerticalOptions="Center" HorizontalOptions="Start" FontFamily="Helvetica" FontSize="18" />
+        <Switch x:Name="autoReverseToggle" Grid.Column="1" HorizontalOptions="End" WidthRequest="130" IsToggled="false" VerticalOptions="Center" />
+      </Grid>
+     <Grid HeightRequest="80">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="2*" x:Name="selectallonfocusColumn" />
+          <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="selectallonfocuslabel" Text="SelectAllOnFocus" VerticalOptions="Center" HorizontalOptions="Start" FontFamily="Helvetica" FontSize="18" />
+        <Switch x:Name="selectallonfocusToggle" Grid.Column="1" HorizontalOptions="End" WidthRequest="130" IsToggled="false" VerticalOptions="Center" />
+      </Grid>
+      <StackLayout Orientation="Vertical" Grid.Row="3">
+        <Label x:Name="spinButtonAlignmentLabel" Text="SpinButton Alignment" FontSize="18" HeightRequest="40" HorizontalOptions="Start" VerticalOptions="StartAndExpand" />
+        <Picker x:Name="localePicker" />
+      </StackLayout>
+    </StackLayout>
+  </local:SampleView.PropertyView>
+</local:SampleView>

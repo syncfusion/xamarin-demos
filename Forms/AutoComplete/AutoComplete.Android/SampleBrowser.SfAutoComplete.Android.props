@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\autocompleteplayer.ttf">
+            <Link>Assets\autocompleteplayer.ttf</Link>
+        </AndroidAsset>
+        <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\icon.ttf">
+            <Link>Assets\icon.ttf</Link>
+        </AndroidAsset>
+        <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\Sample.ttf">
+            <Link>Assets\Sample.ttf</Link>
+        </AndroidAsset>
+        <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\Segoe_MDL2_Assets.ttf">
+            <Link>Assets\Segoe_MDL2_Assets.ttf</Link>
+        </AndroidAsset>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\a0.png">
+            <Link>Resources\drawable\a0.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\a1.png">
+            <Link>Resources\drawable\a1.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\a2.png">
+            <Link>Resources\drawable\a2.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\a3.png">
+            <Link>Resources\drawable\a3.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\a4.png">
+            <Link>Resources\drawable\a4.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\a5.png">
+            <Link>Resources\drawable\a5.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Aeroplane.png">
+            <Link>Resources\drawable\Aeroplane.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\all.png">
+            <Link>Resources\drawable\all.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Available.png">
+            <Link>Resources\drawable\Available.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Away.png">
+            <Link>Resources\drawable\Away.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\b0.png">
+            <Link>Resources\drawable\b0.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\b1.png">
+            <Link>Resources\drawable\b1.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\b10.png">
+            <Link>Resources\drawable\b10.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\b11.png">
+            <Link>Resources\drawable\b11.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\b12.png">
+            <Link>Resources\drawable\b12.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\b13.png">
+            <Link>Resources\drawable\b13.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\b2.png">
+            <Link>Resources\drawable\b2.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\b3.png">
+            <Link>Resources\drawable\b3.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\b4.png">
+            <Link>Resources\drawable\b4.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\b5.png">
+            <Link>Resources\drawable\b5.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\b6.png">
+            <Link>Resources\drawable\b6.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\b7.png">
+            <Link>Resources\drawable\b7.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\b8.png">
+            <Link>Resources\drawable\b8.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\b9.png">
+            <Link>Resources\drawable\b9.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Book.png">
+            <Link>Resources\drawable\Book.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Busy.png">
+            <Link>Resources\drawable\Busy.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\cancelsearch.png">
+            <Link>Resources\drawable\cancelsearch.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DND.png">
+            <Link>Resources\drawable\DND.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Image.png">
+            <Link>Resources\drawable\Image.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Maps1.png">
+            <Link>Resources\drawable\Maps1.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Media.png">
+            <Link>Resources\drawable\Media.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Music.png">
+            <Link>Resources\drawable\Music.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Newspaper.png">
+            <Link>Resources\drawable\Newspaper.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Offline.png">
+            <Link>Resources\drawable\Offline.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Picture.png">
+            <Link>Resources\drawable\Picture.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Spaceship.png">
+            <Link>Resources\drawable\Spaceship.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+</Project>

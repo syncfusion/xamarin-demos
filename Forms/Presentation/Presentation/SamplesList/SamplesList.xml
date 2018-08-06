@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Samples>
+  <Sample  Title = "Getting Started" Name = "GettingStarted" Category="Types" Description ="This sample demonstrates how to create a PowerPoint presentation by adding text with simple text formatting." />
+    <Sample  Title = "Slides" Name = "Slides" Category="Types" Description ="This sample demonstrates how to create a slide with predefined layouts, like Microsoft PowerPoint." />
+    <Sample  Title = "Charts" Name = "Charts" Category="Types" Description ="This sample demonstrates how to create a pie chart in PowerPoint presentation." />
+    <Sample  Title = "Tables" Name = "Tables" Category="Types" Description ="This sample demonstrates how to create a table with specified number of rows and columns in PowerPoint presentation for displaying tabular data." />
+    <Sample  Title = "Images" Name = "Images" Category="Types" Description ="This sample demonstrates how to add an image in PowerPoint presentation." />
+    <Sample  Title = "Comments" Name = "Comments" Category="Types" Description ="This sample demonstrates how to add comments in PowerPoint presentation for reviewing and updating feedbacks." />
+    <Sample  Title = "Create Animation" Name = "CreateAnimation" Category="Types" IsNew = "true" Description ="This sample demonstrates how to create a animation in PowerPoint presentation." />
+    <Sample  Title = "Modify Animation" Name = "ModifyAnimation" Category="Types" IsNew = "true" Description ="This sample demonstrates how to modify the animation effect in PowerPoint presentation." />
+  </Samples>

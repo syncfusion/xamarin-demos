@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+					   x:Class="XamarinIOInvoice.Views.UserView">
+  <ScrollView>
+  <StackLayout x:Name="UserLayout" Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+     <StackLayout x:Name="NameLayout" Orientation="Vertical" HorizontalOptions="FillAndExpand">
+      <StackLayout x:Name="NameLabelLayout" Orientation="Vertical" HorizontalOptions="StartAndExpand">
+      <Label x:Name="NameLabel" Font="Large" Text="Name">
+        <Label.Font>
+          <OnPlatform x:TypeArguments="Font">
+            <OnPlatform.iOS>Small</OnPlatform.iOS>
+            <OnPlatform.Android>15</OnPlatform.Android>
+            <OnPlatform.WinPhone>Normal,20</OnPlatform.WinPhone>
+          </OnPlatform>
+        </Label.Font>
+      </Label>
+      </StackLayout>
+      <StackLayout x:Name="NameValueLayout" Orientation="Vertical">
+        <Entry x:Name="NameValueLabel"  Text="Hanna Moos"></Entry>
+      </StackLayout>
+    </StackLayout>
+    <StackLayout x:Name="DateLayout" Orientation="Vertical" HorizontalOptions="FillAndExpand">
+      <StackLayout x:Name="DateLabelLayout" Orientation="Vertical">
+        <Label x:Name="DateLabel" Font="Large" Text="Date of Purchase">
+          <Label.Font>
+            <OnPlatform x:TypeArguments="Font">
+              <OnPlatform.iOS>Small</OnPlatform.iOS>
+              <OnPlatform.Android>15</OnPlatform.Android>
+              <OnPlatform.WinPhone>Normal,20</OnPlatform.WinPhone>
+            </OnPlatform>
+          </Label.Font>
+        </Label>
+      </StackLayout>
+      <StackLayout x:Name="DateValueLayout" Orientation="Vertical">
+        <Entry x:Name="DateValueLabel"></Entry>
+      </StackLayout>
+    </StackLayout>
+    <StackLayout x:Name="NumberLayout" Orientation="Vertical" HorizontalOptions="FillAndExpand">
+      <StackLayout x:Name="NumberLabelLayout" Orientation="Vertical" HorizontalOptions="FillAndExpand">
+        <Label x:Name="NumberLabel" Font="Large" Text="Invoice No">
+          <Label.Font>
+            <OnPlatform x:TypeArguments="Font">
+              <OnPlatform.iOS>Small</OnPlatform.iOS>
+              <OnPlatform.Android>15</OnPlatform.Android>
+              <OnPlatform.WinPhone>Normal,20</OnPlatform.WinPhone>
+            </OnPlatform>
+          </Label.Font>
+        </Label>
+      </StackLayout>
+      <StackLayout x:Name="NumberValueLayout" Orientation="Vertical" >
+        <Entry x:Name="NumberValueLabel" Text="947823"></Entry>
+      </StackLayout>
+    </StackLayout>
+    <StackLayout x:Name="AdressLayout" Orientation="Vertical" HorizontalOptions="FillAndExpand">
+      <StackLayout x:Name="AdressLabelLayout" Orientation="Vertical" HorizontalOptions="StartAndExpand">
+        <Label x:Name="AdressLabel" Font="Large" Text="Address">
+          <Label.Font>
+            <OnPlatform x:TypeArguments="Font">
+              <OnPlatform.iOS>Small</OnPlatform.iOS>
+              <OnPlatform.Android>15</OnPlatform.Android>
+              <OnPlatform.WinPhone>Normal,20</OnPlatform.WinPhone>
+            </OnPlatform>
+          </Label.Font>
+        </Label>
+      </StackLayout>
+      <StackLayout x:Name="AdressValueLayout" Orientation="Vertical">
+        <Entry x:Name="AdressValueLabel" Text="German"></Entry>
+      </StackLayout>
+    </StackLayout>
+  </StackLayout>
+  </ScrollView>
+</ContentPage>

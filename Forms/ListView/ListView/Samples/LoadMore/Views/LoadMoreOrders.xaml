@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="SampleBrowser.SfListView.LoadMoreOrders"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SampleBrowser.SfListView"
+             xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:numeric="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms"
+             xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             x:Name="orderPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:InverseZeroVisibilityConverter x:Key="inverseZeroVisibilityConverter"/>
+            <local:TotalItemsCountConverter x:Key="totalItemsCountConverter"/>
+            <local:ZeroVisibilityConverter x:Key="zeroVisibilityConverter"/>
+            <local:CurrencyFormatConverter x:Key="currencyFormatConverter"/>
+            <sample:ImagePathConverter x:Key="ImagePathConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid x:Name="sampleLayout" RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="48"/>
+        </Grid.RowDefinitions>
+        <Frame BackgroundColor="White" HasShadow="True" Padding="0" Margin="0">
+            <Grid Padding="0">
+                <Grid.HeightRequest>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <OnPlatform.Android>56</OnPlatform.Android>
+                        <OnPlatform.iOS>48</OnPlatform.iOS>
+                        <OnPlatform.WinPhone>48</OnPlatform.WinPhone>
+                    </OnPlatform>
+                </Grid.HeightRequest>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid x:Name="grid" Grid.Column="0" Margin="16,0,8,0">
+                    <Label Text="Cart" FontAttributes="Bold" VerticalOptions="Center" FontSize="16">
+                        <Label.TextColor>
+                            <OnPlatform x:TypeArguments="Color">
+                                <OnPlatform.Android>#000000</OnPlatform.Android>
+                                <OnPlatform.iOS>#333333</OnPlatform.iOS>
+                                <OnPlatform.WinPhone>#333333</OnPlatform.WinPhone>
+                            </OnPlatform>
+                        </Label.TextColor>
+                        <Label.Opacity>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <OnPlatform.Android>0.87</OnPlatform.Android>
+                                <OnPlatform.iOS>1</OnPlatform.iOS>
+                                <OnPlatform.WinPhone>1</OnPlatform.WinPhone>
+                            </OnPlatform>
+                        </Label.Opacity>
+                    </Label>
+                </Grid>
+                <Grid Grid.Column="1" BackgroundColor="White" HorizontalOptions="End" VerticalOptions="Center" Padding="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label FontAttributes="Bold" Margin="0" Text="{Binding TotalOrderedItems, Converter={StaticResource totalItemsCountConverter}}"
+                           VerticalOptions="Center" HorizontalOptions="End" FontSize="16">
+                        <Label.TextColor>
+                            <OnPlatform x:TypeArguments="Color">
+                                <OnPlatform.Android>#009688</OnPlatform.Android>
+                                <OnPlatform.iOS>#1C73F2</OnPlatform.iOS>
+                                <OnPlatform.WinPhone>#0078D7</OnPlatform.WinPhone>
+                            </OnPlatform>
+                        </Label.TextColor>
+                    </Label>
+                    <Label Grid.Column="1" FontAttributes="Bold"
+                           Text="{Binding TotalPrice, StringFormat='{0:c}'}" 
+                           VerticalOptions="Center" HorizontalOptions="End" Margin="16,0,8,0" FontSize="16">
+                        <Label.TextColor>
+                            <OnPlatform x:TypeArguments="Color">
+                                <OnPlatform.Android>#009688</OnPlatform.Android>
+                                <OnPlatform.iOS>#1C73F2</OnPlatform.iOS>
+                                <OnPlatform.WinPhone>#0078D7</OnPlatform.WinPhone>
+                            </OnPlatform>
+                        </Label.TextColor>
+                    </Label>
+                </Grid>
+            </Grid>
+        </Frame>
+        <BoxView x:Name="boxView" Grid.Row="1" BackgroundColor="#EAEAEA">
+            <BoxView.HeightRequest>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <OnPlatform.Android>0</OnPlatform.Android>
+                    <OnPlatform.iOS>0</OnPlatform.iOS>
+                    <OnPlatform.WinPhone>1</OnPlatform.WinPhone>
+                </OnPlatform>
+            </BoxView.HeightRequest>
+        </BoxView>
+        <sync:SfListView x:Name="listView" Grid.Row="2"
+                            ItemSize="120"
+                            SelectionMode="None"
+                            ItemsSource="{Binding Orders}">
+            <sync:SfListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid HeightRequest="120" Margin="0" Padding="0" RowSpacing="0" BackgroundColor="White">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="1"/>
+                        </Grid.RowDefinitions>
+                        <Grid Padding="0" ColumnSpacing="0">
+                            <Grid.Margin>
+                                <OnPlatform x:TypeArguments="Thickness">
+                                    <OnPlatform.Android>16</OnPlatform.Android>
+                                    <OnPlatform.iOS>15,12,15,12</OnPlatform.iOS>
+                                    <OnPlatform.WinPhone>15,12,15,12</OnPlatform.WinPhone>
+                                </OnPlatform>
+                            </Grid.Margin>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.4*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <local:SfImage Source="{Binding Image}" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="Center" />
+                            <Grid Grid.Column="1" Padding="0" RowSpacing="0">
+                                <Grid.Margin>
+                                    <OnPlatform x:TypeArguments="Thickness">
+                                        <OnPlatform.Android>16,0,0,0</OnPlatform.Android>
+                                        <OnPlatform.iOS>12,0,0,0</OnPlatform.iOS>
+                                        <OnPlatform.WinPhone>12,0,0,0</OnPlatform.WinPhone>
+                                    </OnPlatform>
+                                </Grid.Margin>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid Margin="0" HorizontalOptions="End" VerticalOptions="Start">
+                                    <Grid.HeightRequest>
+                                        <OnPlatform x:TypeArguments="x:Double">
+                                            <OnPlatform.Android>24</OnPlatform.Android>
+                                            <OnPlatform.iOS>32</OnPlatform.iOS>
+                                            <OnPlatform.WinPhone>32</OnPlatform.WinPhone>
+                                        </OnPlatform>
+                                    </Grid.HeightRequest>
+                                    <Grid.WidthRequest>
+                                        <OnPlatform x:TypeArguments="x:Double">
+                                            <OnPlatform.Android>24</OnPlatform.Android>
+                                            <OnPlatform.iOS>32</OnPlatform.iOS>
+                                            <OnPlatform.WinPhone>32</OnPlatform.WinPhone>
+                                        </OnPlatform>
+                                    </Grid.WidthRequest>
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.RemoveOrderCommand, Source={x:Reference listView}}" 
+                                                              CommandParameter="{Binding .}" />
+                                    </Grid.GestureRecognizers>
+                                    <local:SfImage Source="{Binding ., Converter={StaticResource ImagePathConverter }, ConverterParameter=SampleBrowser.SfListView.LoadMoreDelete.png}"
+                                           HeightRequest="18" WidthRequest="18"
+                                           VerticalOptions="Center" HorizontalOptions="Center" Aspect="AspectFit"/>
+                                </Grid>
+                                <Label Text="{Binding Name}" HorizontalOptions="Start" Margin="0,0,0,4" FontSize="16">
+                                    <Label.Opacity>
+                                        <OnPlatform x:TypeArguments="x:Double">
+                                            <OnPlatform.Android>0.87</OnPlatform.Android>
+                                            <OnPlatform.iOS>1</OnPlatform.iOS>
+                                            <OnPlatform.WinPhone>1</OnPlatform.WinPhone>
+                                        </OnPlatform>
+                                    </Label.Opacity>
+                                    <Label.TextColor>
+                                        <OnPlatform x:TypeArguments="Color">
+                                            <OnPlatform.Android>#000000</OnPlatform.Android>
+                                            <OnPlatform.iOS>#333333</OnPlatform.iOS>
+                                            <OnPlatform.WinPhone>#333333</OnPlatform.WinPhone>
+                                        </OnPlatform>
+                                    </Label.TextColor>
+                                </Label>
+                                <Label Text="{Binding Weight}" FontSize="14" Grid.Row="1" HorizontalOptions="Start" >
+                                    <Label.TextColor>
+                                        <OnPlatform x:TypeArguments="Color">
+                                            <OnPlatform.Android>#000000</OnPlatform.Android>
+                                            <OnPlatform.iOS>#757575</OnPlatform.iOS>
+                                            <OnPlatform.WinPhone>#4C4C4C</OnPlatform.WinPhone>
+                                        </OnPlatform>
+                                    </Label.TextColor>
+                                    <Label.Opacity>
+                                        <OnPlatform x:TypeArguments="x:Double">
+                                            <OnPlatform.Android>0.54</OnPlatform.Android>
+                                            <OnPlatform.iOS>1</OnPlatform.iOS>
+                                            <OnPlatform.WinPhone>1</OnPlatform.WinPhone>
+                                        </OnPlatform>
+                                    </Label.Opacity>
+                                </Label>
+
+                                <Grid Grid.Row="2" Padding="0" ColumnSpacing="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding TotalPrice, Converter={StaticResource currencyFormatConverter}}" VerticalOptions="Start" FontAttributes="Bold" 
+                                           HorizontalOptions="Start" FontSize="16">
+                                        <Label.TextColor>
+                                            <OnPlatform x:TypeArguments="Color">
+                                                <OnPlatform.Android>#009688</OnPlatform.Android>
+                                                <OnPlatform.iOS>#1C73F2</OnPlatform.iOS>
+                                                <OnPlatform.WinPhone>#0078D7</OnPlatform.WinPhone>
+                                            </OnPlatform>
+                                        </Label.TextColor>
+                                        <Label.Margin>
+                                            <OnPlatform x:TypeArguments="Thickness">
+                                                <OnPlatform.Android>0,16,0,0</OnPlatform.Android>
+                                                <OnPlatform.iOS>0,12,0,0</OnPlatform.iOS>
+                                                <OnPlatform.WinPhone>0,12,0,0</OnPlatform.WinPhone>
+                                            </OnPlatform>
+                                        </Label.Margin>
+                                    </Label>
+                                    <numeric:SfNumericUpDown Grid.Column="1"  x:Name="numericUpDown" MaximumDecimalDigits="0" IsEditable="False"
+                                                             Minimum="0" Maximum="9"
+                                                                HorizontalOptions="End" VerticalOptions="Center" AllowNull="false" 
+                                                                FormatString="n" Watermark="Units" TextAlignment="Center"
+                                                                SpinButtonAlignment="Both" UpDownButtonColor="White"
+                                                                Value="{Binding Quantity, Mode=TwoWay}" >
+                                        <numeric:SfNumericUpDown.TextColor>
+                                            <OnPlatform x:TypeArguments="Color">
+                                                <OnPlatform.Android>#FFFFFF</OnPlatform.Android>
+                                                <OnPlatform.iOS>#1C73F2</OnPlatform.iOS>
+                                                <OnPlatform.WinPhone>#0078D7</OnPlatform.WinPhone>
+                                            </OnPlatform>
+                                        </numeric:SfNumericUpDown.TextColor>
+                                        <numeric:SfNumericUpDown.BackgroundColor>
+                                            <OnPlatform x:TypeArguments="Color">
+                                                <OnPlatform.Android>#009688</OnPlatform.Android>
+                                                <OnPlatform.iOS>#FFFFFF</OnPlatform.iOS>
+                                                <OnPlatform.WinPhone>#C9C9C9</OnPlatform.WinPhone>
+                                            </OnPlatform>
+                                        </numeric:SfNumericUpDown.BackgroundColor>
+                                        <numeric:SfNumericUpDown.WidthRequest>
+                                            <OnPlatform x:TypeArguments="x:Double">
+                                                <OnPlatform.Android>150</OnPlatform.Android>
+                                                <OnPlatform.iOS>150</OnPlatform.iOS>
+                                                <OnPlatform.WinPhone>150</OnPlatform.WinPhone>
+                                            </OnPlatform>
+                                        </numeric:SfNumericUpDown.WidthRequest>
+                                    </numeric:SfNumericUpDown>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        <BoxView x:Name="boxView" Grid.Row="1" BackgroundColor="#EAEAEA"/>
+                    </Grid>
+                </DataTemplate>
+            </sync:SfListView.ItemTemplate>
+        </sync:SfListView>
+        <Label Grid.Row="2" LineBreakMode="WordWrap" FontAttributes="Bold"
+               Text="Your cart is empty!" VerticalOptions="Center" HorizontalOptions="Center"
+               IsVisible="{Binding TotalOrderedItems, Converter={StaticResource zeroVisibilityConverter}}" FontSize="16">
+            <Label.TextColor>
+                <OnPlatform x:TypeArguments="Color">
+                    <OnPlatform.Android>#009688</OnPlatform.Android>
+                    <OnPlatform.iOS>#1C73F2</OnPlatform.iOS>
+                    <OnPlatform.WinPhone>#0078D7</OnPlatform.WinPhone>
+                </OnPlatform>
+            </Label.TextColor>
+        </Label>
+        <Button Grid.Row="3" TextColor="#FFFFFF" Text="CHECKOUT" 
+                HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                Command="{Binding CheckoutCommand}" CommandParameter="{Binding Source={x:Reference Name=orderPage}}" BorderRadius="0"
+                IsVisible="{Binding TotalOrderedItems, Converter={StaticResource inverseZeroVisibilityConverter}}">
+            <Button.BackgroundColor>
+                <OnPlatform x:TypeArguments="Color">
+                    <OnPlatform.Android>#009688</OnPlatform.Android>
+                    <OnPlatform.iOS>#1C73F2</OnPlatform.iOS>
+                    <OnPlatform.WinPhone>#0078D7</OnPlatform.WinPhone>
+                </OnPlatform>
+            </Button.BackgroundColor>
+            <Button.FontSize>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <OnPlatform.Android>16</OnPlatform.Android>
+                    <OnPlatform.iOS>12</OnPlatform.iOS>
+                    <OnPlatform.WinPhone>12</OnPlatform.WinPhone>
+                </OnPlatform>
+            </Button.FontSize>
+        </Button>
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,108 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <ItemGroup>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\BlackoutDates\BlackoutDates.xaml.cs">
+            <Link>Samples\Calendar\BlackoutDates\BlackoutDates.xaml.cs</Link>
+            <DependentUpon>BlackoutDates.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\CalendarGettingStarted\CalendarGettingStarted.xaml.cs">
+            <Link>Samples\Calendar\CalendarGettingStarted\CalendarGettingStarted.xaml.cs</Link>
+            <DependentUpon>CalendarGettingStarted.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\CalendarLocalization\CalendarLocalization.xaml.cs">
+            <Link>Samples\Calendar\CalendarLocalization\CalendarLocalization.xaml.cs</Link>
+            <DependentUpon>CalendarLocalization.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\CalendarLocalization\CalendarLocalization_Default.xaml.cs">
+            <Link>Samples\Calendar\CalendarLocalization\CalendarLocalization_Default.xaml.cs</Link>
+            <DependentUpon>CalendarLocalization_Default.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\CalendarLocalization\CalendarLocalization_Tablet.xaml.cs">
+            <Link>Samples\Calendar\CalendarLocalization\CalendarLocalization_Tablet.xaml.cs</Link>
+            <DependentUpon>CalendarLocalization_Tablet.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\Configuration\Configuration.xaml.cs">
+            <Link>Samples\Calendar\Configuration\Configuration.xaml.cs</Link>
+            <DependentUpon>Configuration.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\Configuration\Configuration_Default.xaml.cs">
+            <Link>Samples\Calendar\Configuration\Configuration_Default.xaml.cs</Link>
+            <DependentUpon>Configuration_Default.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\Configuration\Configuration_Tablet.xaml.cs">
+            <Link>Samples\Calendar\Configuration\Configuration_Tablet.xaml.cs</Link>
+            <DependentUpon>Configuration_Tablet.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\InlineEvents\InlineEvents.xaml.cs">
+            <Link>Samples\Calendar\InlineEvents\InlineEvents.xaml.cs</Link>
+            <DependentUpon>InlineEvents.xaml</DependentUpon>
+        </Compile>
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+            <Link>Samples\Calendar\SamplesList\SamplesList.xml</Link>
+        </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\BlackoutDates\BlackoutDates.xaml">
+            <Link>Samples\Calendar\BlackoutDates\BlackoutDates.xaml</Link>
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CalendarGettingStarted\CalendarGettingStarted.xaml">
+            <Link>Samples\Calendar\CalendarGettingStarted\CalendarGettingStarted.xaml</Link>
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CalendarLocalization\CalendarLocalization.xaml">
+            <Link>Samples\Calendar\CalendarLocalization\CalendarLocalization.xaml</Link>
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CalendarLocalization\CalendarLocalization_Default.xaml">
+            <Link>Samples\Calendar\CalendarLocalization\CalendarLocalization_Default.xaml</Link>
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CalendarLocalization\CalendarLocalization_Tablet.xaml">
+            <Link>Samples\Calendar\CalendarLocalization\CalendarLocalization_Tablet.xaml</Link>
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Configuration\Configuration.xaml">
+            <Link>Samples\Calendar\Configuration\Configuration.xaml</Link>
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Configuration\Configuration_Default.xaml">
+            <Link>Samples\Calendar\Configuration\Configuration_Default.xaml</Link>
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Configuration\Configuration_Tablet.xaml">
+            <Link>Samples\Calendar\Configuration\Configuration_Tablet.xaml</Link>
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\InlineEvents\InlineEvents.xaml">
+            <Link>Samples\Calendar\InlineEvents\InlineEvents.xaml</Link>
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+    </ItemGroup>
+</Project>

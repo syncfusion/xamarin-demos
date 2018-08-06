@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" 
+	xmlns:Calendar="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="SampleBrowser.SfCalendar.Configuration_Default">
+	<local:SampleView.Content>
+			<Calendar:SfCalendar ViewMode="MonthView" x:Name="calendar" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+	</local:SampleView.Content>
+	<local:SampleView.PropertyView>
+		<StackLayout x:Name="mainStack">
+    		<StackLayout  Orientation="Vertical" x:Name="selectionmodeLayout">
+    			<Label x:Name="selectionModeLabel"  FontAttributes="None" FontSize="20" Text = " Selection Mode"  HorizontalOptions = "Start" TextColor = "Gray"/>
+    			<Picker x:Name="selectionModePicker" VerticalOptions="Start" SelectedIndex="0"/>
+    		</StackLayout>
+
+    		<StackLayout Margin="0,10,0,0">
+    			<Label   FontAttributes="None" FontSize="20" Text = " Min Date"  HorizontalOptions = "Start" TextColor = "Gray"/>
+    			<DatePicker x:Name="minDatePicker" Date="2012, 1, 1" Format="D" />
+    		</StackLayout>
+
+    		<StackLayout Margin="0,10,0,0">
+    			<Label  FontAttributes="None" FontSize="20" Text = " Max Date"  HorizontalOptions = "Start" TextColor = "Gray"/>
+    			<DatePicker x:Name="maxDatePicker" Date="2018, 12, 1" Format="D"/>
+    		</StackLayout>
+      
+      <StackLayout Margin="0,10,0,0">
+        <Label  FontAttributes="None" FontSize="20" Text = " Navigation Direction"  HorizontalOptions = "Start" TextColor = "Gray"/>
+        <Picker x:Name="navigationDirectionPicker" VerticalOptions="Start" SelectedIndex="0">
+        </Picker>
+      </StackLayout>
+
+      <StackLayout Margin="0,10,0,0">
+        <Label  FontAttributes="None" FontSize="20" Text = " Grid Lines"  HorizontalOptions = "Start" TextColor = "Gray"/>
+        <Picker x:Name="horizontalLinePicker" VerticalOptions="Start" SelectedIndex="0"/>
+      </StackLayout>
+
+      <StackLayout Margin="0,10,0,0">
+        <Label  FontAttributes="None" FontSize="20" Text = " Show YearView"  HorizontalOptions = "Start" TextColor = "Gray"/>
+        <Picker x:Name="yearViewPicker" VerticalOptions="Start" SelectedIndex="0"/>
+      </StackLayout>
+
+		</StackLayout>
+	</local:SampleView.PropertyView>
+</local:SampleView>

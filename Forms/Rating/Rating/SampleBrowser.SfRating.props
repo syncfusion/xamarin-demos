@@ -1,0 +1,69 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Rating Customization\CustomLabel.cs" >
+	<Link>Samples\Rating\Rating Customization\CustomLabel.cs</Link>
+	</Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Rating Customization\MyView.xaml.cs">
+	<Link>Samples\Rating\Rating Customization\MyView.xaml.cs</Link>
+      <DependentUpon>MyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Rating Customization\Rating_Customization.xaml.cs">
+	<Link>Samples\Rating\Rating Customization\Rating_Customization.xaml.cs</Link>
+      <DependentUpon>Rating_Customization.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Rating\Rating.xaml.cs">
+	<Link>Samples\Rating\Rating\Rating.xaml.cs</Link>
+      <DependentUpon>Rating.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Rating\Rating_Default.xaml.cs">
+	<Link>Samples\Rating\Rating\Rating_Default.xaml.cs</Link>
+      <DependentUpon>Rating_Default.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Rating\Rating_Tablet.xaml.cs">
+	<Link>Samples\Rating\Rating\Rating_Tablet.xaml.cs</Link>
+      <DependentUpon>Rating_Tablet.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml" >
+	<Link>Samples\Rating\SamplesList\SamplesList.xml</Link>
+	</EmbeddedResource>
+  </ItemGroup>
+ 
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Rating\Rating.xaml">
+	<Link>Samples\Rating\Rating\Rating.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Rating\Rating_Default.xaml">
+	<Link>Samples\Rating\Rating\Rating_Default.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Rating\Rating_Tablet.xaml">
+	<Link>Samples\Rating\Rating\Rating_Tablet.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Rating Customization\Rating_Customization.xaml">
+	<Link>Samples\Rating\Rating Customization\Rating_Customization.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Rating Customization\MyView.xaml">
+	<Link>Samples\Rating\Rating Customization\MyView.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

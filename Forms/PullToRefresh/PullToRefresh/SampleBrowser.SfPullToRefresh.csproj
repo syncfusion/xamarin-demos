@@ -1,0 +1,72 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <AssemblyName>SampleBrowser.SfPullToRefresh</AssemblyName>
+    <RootNamespace>SampleBrowser.SfPullToRefresh</RootNamespace>
+    <Configurations>Debug;Release;Release-xml</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Icons\BlogAuthor.png" />
+    <EmbeddedResource Include="Icons\BlogCategory.png" />
+    <EmbeddedResource Include="Icons\Blog_Facebook.png" />
+    <EmbeddedResource Include="Icons\Blog_Google Plus.png" />
+    <EmbeddedResource Include="Icons\Blog_LinkedIn.png" />
+    <EmbeddedResource Include="Icons\Blog_Twitter.png" />
+    <EmbeddedResource Include="Icons\cloudy.png" />
+    <EmbeddedResource Include="Icons\cloudyselected.png" />
+    <EmbeddedResource Include="Icons\humid.png" />
+    <EmbeddedResource Include="Icons\humidselected.png" />
+    <EmbeddedResource Include="Icons\rainy.png" />
+    <EmbeddedResource Include="Icons\rainyselected.png" />
+    <EmbeddedResource Include="Icons\warm.png" />
+    <EmbeddedResource Include="Icons\warmselected.png" />
+    <EmbeddedResource Include="Icons\windy.png" />
+    <EmbeddedResource Include="Icons\windyselected.png" />
+    <EmbeddedResource Include="SamplesList\SamplesList.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Syncfusion.Licensing.XForms" Condition="$(DefineConstants.Contains('SyncfusionLicense'))" />
+    <PackageReference Include="SampleBrowser.Core" Version="16.2.0.41" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="16.2.0.41" />
+    <PackageReference Include="Syncfusion.Xamarin.SfDataGrid" Version="16.2.0.41" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="16.2.0.41" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPullToRefresh" Version="16.2.0.41" />
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="MainPage.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />  
+   <PropertyGroup>
+    <PrepareResourceNamesDependsOn>
+      IncludeFilesInDroid;
+      $(PrepareResourceNamesDependsOn)
+    </PrepareResourceNamesDependsOn>
+  </PropertyGroup>
+  <Target Name="IncludeFilesInDroid">
+    <RemoveDir Directories="..\PullToRefresh.Android\Resources\CodeFiles\" />
+    <RemoveDir Directories="..\PullToRefresh.iOS\Resources\CodeFiles\" />
+    <RemoveDir Directories="..\PullToRefresh.UWP\Resources\CodeFiles\" />
+    <ItemGroup>
+      <SourceResourceFiles Include="Samples\**\*">
+        <DroidFiles>..\PullToRefresh.Android\Resources\CodeFiles\</DroidFiles>
+        <iOSFiles>..\PullToRefresh.iOS\Resources\CodeFiles\</iOSFiles>
+        <UWPFiles>..\PullToRefresh.UWP\Resources\CodeFiles\</UWPFiles>
+      </SourceResourceFiles>
+    </ItemGroup>
+    <Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(DroidFiles)\%(RecursiveDir)" />
+    <Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(iOSFiles)\%(RecursiveDir)" />
+    <Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(UWPFiles)\%(RecursiveDir)" />
+  </Target>
+</Project>

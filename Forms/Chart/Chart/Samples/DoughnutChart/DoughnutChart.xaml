@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.DoughnutChart" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+  <local:SampleView.BindingContext>
+    <sampleBrowser:DoughnutSeriesViewModel />
+  </local:SampleView.BindingContext>
+  <local:SampleView.Content>
+   <StackLayout x:Name="layout">
+        <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <chart:SfChart.Title>
+                <chart:ChartTitle Text="Project Cost Breakdown"  />
+            </chart:SfChart.Title>
+            <chart:SfChart.BindingContext>
+                <sampleBrowser:DoughnutSeriesViewModel />
+            </chart:SfChart.BindingContext>
+            <chart:SfChart.Legend>
+                <chart:ChartLegend IconHeight="14" IconWidth="14" OverflowMode="Wrap" DockPosition="Bottom" />
+            </chart:SfChart.Legend>
+            <chart:SfChart.Series>
+                <chart:DoughnutSeries  ExplodeIndex="{Binding SelectedIndex}" x:Name="doughnutSeries" ItemsSource="{Binding DoughnutSeriesData}" XBindingPath="Name" YBindingPath="Value" LegendIcon="Circle" EnableAnimation="true" StrokeWidth="1" StrokeColor="White" ExplodeOnTouch="true" EnableDataPointSelection="true">
+                    <chart:DoughnutSeries.DataMarker>
+                        <chart:ChartDataMarker ShowLabel="True">
+                            <chart:ChartDataMarker.LabelStyle>
+                                <chart:DataMarkerLabelStyle LabelFormat="##'M'"/>
+                            </chart:ChartDataMarker.LabelStyle>
+                        </chart:ChartDataMarker>
+                    </chart:DoughnutSeries.DataMarker>
+                    <chart:DoughnutSeries.ColorModel>
+                        <chart:ChartColorModel Palette="Natural" />
+                    </chart:DoughnutSeries.ColorModel>
+                    <chart:DoughnutSeries.CenterView>
+                        <StackLayout x:Name="stack" Orientation ="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Label Text="{Binding BindingContext.SelectedItemName}" TextColor="Black" FontAttributes="Bold" FontSize="12" FontFamily="Helvetica" WidthRequest="80" HorizontalTextAlignment="Center"/>
+                            <Label Text="{Binding BindingContext.SelectedItemsPercentage,StringFormat='{0}%'}" TextColor="Black" FontAttributes="Bold" FontSize="12" FontFamily="Helvetica" WidthRequest="60" HorizontalTextAlignment="Center"/>
+                        </StackLayout>
+                    </chart:DoughnutSeries.CenterView>
+                </chart:DoughnutSeries>
+            </chart:SfChart.Series>
+        </chart:SfChart>
+    </StackLayout>
+  </local:SampleView.Content>
+</local:SampleView>

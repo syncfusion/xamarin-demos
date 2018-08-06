@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfListView.Orientation"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.SfListView"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
+    <sample:SampleView.Behaviors>
+        <local:SfListViewOrientationBehavior/>
+    </sample:SampleView.Behaviors>
+    <sample:SampleView.Content>
+        <ScrollView Orientation="Vertical">
+            <Grid RowSpacing="0" BackgroundColor="#FFFFFF">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid RowSpacing="0" Padding="0,10,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <StackLayout Orientation="Vertical" Padding="10,0,0,0">
+                        <Label Text="Veg Pizza" FontAttributes="Bold" TextColor="Black">
+                            <Label.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double">
+                                    <On  Platform="Android">
+                                        <OnIdiom x:TypeArguments="x:Double" Phone="20" Tablet="22" />
+                                    </On>
+                                    <On  Platform="iOS">
+                                        <OnIdiom x:TypeArguments="x:Double" Phone="18" Tablet="20"/>
+                                    </On>
+                                    <On  Platform="UWP">
+                                        <OnIdiom x:TypeArguments="x:Double"  Desktop="22" Phone="18" Tablet="22" />
+                                    </On>
+                                    <On  Platform="macOS" Value="20"/>
+                                </OnPlatform>
+                            </Label.FontSize>
+                        </Label>
+                        <Label Text="Veg pizza prepared with the items that meet vegetarian standards by not including any meat or animal tissue products."
+                     TextColor="#4D4D4D">
+                            <Label.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double">
+                                    <On  Platform="Android">
+                                        <OnIdiom x:TypeArguments="x:Double"  Phone="14" Tablet="16" />
+                                    </On>
+                                    <On  Platform="iOS">
+                                        <OnIdiom x:TypeArguments="x:Double" Phone="12" Tablet="14" />
+                                    </On>
+                                    <On  Platform="UWP">
+                                        <OnIdiom x:TypeArguments="x:Double"  Desktop="17" Phone="12" Tablet="17" />
+                                    </On>
+                                    <On  Platform="macOS" Value="14"/>
+                                </OnPlatform>
+                            </Label.FontSize>
+                        </Label>
+                    </StackLayout>
+                    <sync:SfListView x:Name="listView"
+                             Grid.Row="1"
+                             Padding="10,13,10,-5"
+                             SelectionMode="None"
+                             Orientation="Horizontal"
+                             ItemSpacing="5,10,5,10">
+                        <sync:SfListView.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On  Platform="Android">
+                                    <OnIdiom x:TypeArguments="x:Double"  Phone="220" Tablet="220" />
+                                </On>
+                                <On  Platform="iOS">
+                                    <OnIdiom x:TypeArguments="x:Double" Phone="170" Tablet="280" />
+                                </On>
+                                <On  Platform="UWP">
+                                    <OnIdiom x:TypeArguments="x:Double"  Desktop="220" Phone="200" Tablet="220" />
+                                </On>
+                                <On  Platform="macOS" Value="220"/>
+                            </OnPlatform>
+                        </sync:SfListView.HeightRequest>
+                        <sync:SfListView.ItemSize>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On  Platform="Android">
+                                    <OnIdiom x:TypeArguments="x:Double"  Phone="173" Tablet="180" />
+                                </On>
+                                <On  Platform="iOS">
+                                    <OnIdiom x:TypeArguments="x:Double" Phone="125" Tablet="250" />
+                                </On>
+                                <On  Platform="UWP">
+                                    <OnIdiom x:TypeArguments="x:Double"  Desktop="170" Phone="160" Tablet="170" />
+                                </On>
+                                <On  Platform="macOS" Value="170"/>
+                            </OnPlatform>
+                        </sync:SfListView.ItemSize>
+                        <sync:SfListView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame BackgroundColor="#EEEEEE" Padding="2">
+                                    <Frame.HasShadow>
+                                        <OnPlatform x:TypeArguments="x:Boolean">
+                                            <On Platform="Android" Value="True"/>
+                                            <On Platform="UWP" Value="True"/>
+                                            <On Platform="iOS,macOS" Value="False"/>
+                                        </OnPlatform>
+                                    </Frame.HasShadow>
+                                    <Grid RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="48" />
+                                        </Grid.RowDefinitions>
+                                        <local:SfImage Source="{Binding PizzaImage}" Aspect="Fill"/>
+                                        <Label Grid.Row="1" Text="{Binding PizzaName}"
+                             LineBreakMode="WordWrap"
+                             HorizontalTextAlignment="Start"
+                             VerticalTextAlignment="Center"
+                             TextColor="Black" Opacity="0.87"
+                             Margin="16,0,0,0" FontSize="16">
+                                        </Label>
+                                    </Grid>
+                                </Frame>
+                            </DataTemplate>
+                        </sync:SfListView.ItemTemplate>
+                    </sync:SfListView>
+                </Grid>
+                <Grid RowSpacing="0" Grid.Row="2" Padding="0,0,0,20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <StackLayout Orientation="Vertical" Padding="10,0,0,0">
+                        <Label Text="Non-veg Pizza" FontAttributes="Bold" TextColor="Black" >
+                            <Label.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double">
+                                    <On  Platform="Android">
+                                        <OnIdiom x:TypeArguments="x:Double" Phone="20" Tablet="22" />
+                                    </On>
+                                    <On  Platform="iOS">
+                                        <OnIdiom x:TypeArguments="x:Double" Phone="18" Tablet="20"/>
+                                    </On>
+                                    <On  Platform="UWP">
+                                        <OnIdiom x:TypeArguments="x:Double"  Desktop="22" Phone="18" Tablet="22" />
+                                    </On>
+                                    <On  Platform="macOS" Value="20"/>
+                                </OnPlatform>
+                            </Label.FontSize>
+                        </Label>
+
+                        <Label Text="Non-veg pizza is prepared by including the meat and animal tissue products."
+                     TextColor="#4D4D4D">
+                            <Label.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double">
+                                    <On  Platform="Android">
+                                        <OnIdiom x:TypeArguments="x:Double"  Phone="14" Tablet="16" />
+                                    </On>
+                                    <On  Platform="iOS">
+                                        <OnIdiom x:TypeArguments="x:Double" Phone="12" Tablet="14" />
+                                    </On>
+                                    <On  Platform="UWP">
+                                        <OnIdiom x:TypeArguments="x:Double"  Desktop="17" Phone="12" Tablet="17" />
+                                    </On>
+                                    <On  Platform="macOS" Value="14"/>
+                                </OnPlatform>
+                            </Label.FontSize>
+                        </Label>
+                    </StackLayout>
+                    <sync:SfListView x:Name="listView1"
+                     Grid.Row="1"
+                     Padding="10,13,10,-5"
+                     SelectionMode="None"
+                     Orientation="Horizontal"
+                     ItemSpacing="5,10,5,10">
+                        <sync:SfListView.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On  Platform="Android">
+                                    <OnIdiom x:TypeArguments="x:Double"  Phone="220" Tablet="220" />
+                                </On>
+                                <On  Platform="iOS">
+                                    <OnIdiom x:TypeArguments="x:Double" Phone="170" Tablet="280"  />
+                                </On>
+                                <On  Platform="UWP">
+                                    <OnIdiom x:TypeArguments="x:Double"  Desktop="220" Phone="200" Tablet="220" />
+                                </On>
+                                <On  Platform="macOS" Value="220"/>
+                            </OnPlatform>
+                        </sync:SfListView.HeightRequest>
+                        <sync:SfListView.ItemSize>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On  Platform="Android">
+                                    <OnIdiom x:TypeArguments="x:Double"  Phone="173" Tablet="180" />
+                                </On>
+                                <On  Platform="iOS">
+                                    <OnIdiom x:TypeArguments="x:Double" Phone="125" Tablet="250"  />
+                                </On>
+                                <On  Platform="UWP">
+                                    <OnIdiom x:TypeArguments="x:Double"  Desktop="170" Phone="160" Tablet="170" />
+                                </On>
+                                <On  Platform="macOS" Value="170"/>
+                            </OnPlatform>
+                        </sync:SfListView.ItemSize>
+                        <sync:SfListView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame BackgroundColor="#EEEEEE"  Padding="2">
+                                    <Frame.HasShadow>
+                                        <OnPlatform x:TypeArguments="x:Boolean">
+                                            <On Platform="Android" Value="True"/>
+                                            <On Platform="UWP" Value="True"/>
+                                            <On Platform="iOS,macOS" Value="False"/>
+                                        </OnPlatform>
+                                    </Frame.HasShadow>
+                                    <Grid RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="48" />
+                                        </Grid.RowDefinitions>
+                                        <local:SfImage Source="{Binding PizzaImage}" Aspect="Fill" />
+                                        <Label Grid.Row="1" Text="{Binding PizzaName}"
+           LineBreakMode="WordWrap"
+           HorizontalTextAlignment="Start"
+           VerticalTextAlignment="Center"
+           TextColor="Black" Opacity="0.87"
+           FontSize="16" Margin="16,0,0,0">
+                                        </Label>
+                                    </Grid>
+                                </Frame>
+                            </DataTemplate>
+                        </sync:SfListView.ItemTemplate>
+                    </sync:SfListView>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </sample:SampleView.Content>
+</sample:SampleView>

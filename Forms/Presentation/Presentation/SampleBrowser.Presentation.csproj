@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <Configurations>Debug;Release;Release-xml</Configurations>
+	<AssemblyName>SampleBrowser.Presentation</AssemblyName>
+	<RootNamespace>SampleBrowser.Presentation</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="SampleBrowser.Presentation.nuspec" />
+	<None Remove="SampleBrowser.Presentation.props" />
+  </ItemGroup>
+  <ItemGroup>    
+    <PackageReference Include="SampleBrowser.Core" Version="16.2.0.41" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="16.2.0.41" />
+    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="16.2.0.41" />
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="16.2.0.41" />
+    <PackageReference Include="Syncfusion.Xamarin.Presentation" Version="16.2.0.41" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="16.2.0.41" />
+    <PackageReference Include="Xamarin.Forms" Version="2.4.0.280" />
+  </ItemGroup>  
+  <ItemGroup>
+    <EmbeddedResource Include="SamplesList\SamplesList.xml" />
+    <EmbeddedResource Include="Samples\Templates\HelloWorld.pptx" />
+    <EmbeddedResource Include="Samples\Templates\Images.pptx" />
+    <EmbeddedResource Include="Samples\Templates\NewCharts.pptx" />
+    <EmbeddedResource Include="Samples\Templates\Slides.pptx" />
+	<EmbeddedResource Include="Samples\Templates\ShapeWithAnimation.pptx" />
+	<EmbeddedResource Include="Samples\Templates\Animation.pptx" />  
+    <EmbeddedResource Include="Samples\Templates\Products.xml" />
+    <EmbeddedResource Include="Samples\Templates\SlideTableData.xml" />
+    <EmbeddedResource Include="Samples\Templates\TableData.xml" />
+    <EmbeddedResource Include="Samples\Templates\tablet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>  
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+  <PropertyGroup>
+    <PrepareResourceNamesDependsOn>
+      IncludeFilesInDroid;
+      $(PrepareResourceNamesDependsOn)
+    </PrepareResourceNamesDependsOn>
+  </PropertyGroup>
+  <Target Name="IncludeFilesInDroid">
+    <RemoveDir Directories="..\Presentation.Droid\Resources\CodeFiles\" />
+    <RemoveDir Directories="..\Presentation.iOS\Resources\CodeFiles\" />
+    <RemoveDir Directories="..\Presentation.UWP\Resources\CodeFiles\" />		
+    <ItemGroup>
+      <SourceResourceFiles Include="Samples\**\*">
+        <DroidFiles>..\Presentation.Droid\Resources\CodeFiles\</DroidFiles>
+        <iOSFiles>..\Presentation.iOS\Resources\CodeFiles\</iOSFiles>
+        <UWPFiles>..\Presentation.UWP\Resources\CodeFiles\</UWPFiles>
+      </SourceResourceFiles>
+    </ItemGroup>
+    <Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(DroidFiles)\%(RecursiveDir)" />
+    <Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(iOSFiles)\%(RecursiveDir)" />
+    <Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(UWPFiles)\%(RecursiveDir)" />
+	<RemoveDir Directories="..\Presentation.Android\Resources\CodeFiles\Assets\" />
+    <RemoveDir Directories="..\Presentation.iOS\Resources\CodeFiles\Assets\" />
+    <RemoveDir Directories="..\Presentation.UWP\Resources\CodeFiles\Assets\" />
+  </Target>
+</Project>

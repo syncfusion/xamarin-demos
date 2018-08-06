@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.XlsIO.CreateSpreadsheetPage">
+
+
+  <local:SampleView.Content>
+    <StackLayout Padding="10">      
+      <Label x:Name="Content_1" Text="This sample demonstrates the creation of a simple Excel document with text, number, date and formula."
+                 FontSize="Medium" VerticalOptions="Center">
+      </Label>      
+      <Label></Label>
+      <Button x:Name="btnGenerate" Clicked ="OnButtonClicked" Text ="Generate Excel" HorizontalOptions="Center" VerticalOptions="Center"></Button>
+    </StackLayout>
+  </local:SampleView.Content>
+  <local:SampleView.PropertyView>
+
+  </local:SampleView.PropertyView>
+
+</local:SampleView>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PatientMonitor.Grid_View"
+             xmlns:local="clr-namespace:PatientMonitor;assembly=PatientMonitor"
+             xmlns:sfgrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
+              BackgroundColor="#FFFFFF">
+  <ContentView.Content>
+  <Grid x:Name="homeGrid" BackgroundColor="#DE3531" >
+    <sfgrid:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding}"
+                               AutoGenerateColumns="false"
+                             ColumnSizer="Star"
+                             AllowSorting = "true"
+                             HeightRequest="290"
+                 VerticalOptions="Start"
+                             SelectionMode="Single">
+      <sfgrid:SfDataGrid.Columns>
+
+        <sfgrid:GridTemplateColumn HeaderFontAttribute="Bold"
+                                   HeaderText="Patient"
+                                   LoadUIView="true"
+                                   Width="150"
+                                   MappingName="Name">
+          <sfgrid:GridTemplateColumn.HeaderCellTextSize>
+            <OnIdiom Phone="12"
+                     Tablet="15"
+                     x:TypeArguments="x:Double" />
+          </sfgrid:GridTemplateColumn.HeaderCellTextSize>
+
+          <sfgrid:GridTemplateColumn.CellTemplate>
+            <DataTemplate>
+              <Grid Padding="0,5,0,5">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition />
+                  <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding Image}"  WidthRequest="50" HeightRequest="50" />
+                <Label TextColor="Black" VerticalTextAlignment="Center" Grid.Column="1" Text="{Binding Name}" />
+              </Grid>
+
+            </DataTemplate>
+          </sfgrid:GridTemplateColumn.CellTemplate>
+        </sfgrid:GridTemplateColumn>
+
+
+        <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                               HeaderText="RR"
+                               MappingName="RR">
+          <sfgrid:GridTextColumn.HeaderCellTextSize>
+            <OnPlatform Android="14"
+                        WinPhone="12"
+                        iOS="12"
+                        x:TypeArguments="x:Double" />
+          </sfgrid:GridTextColumn.HeaderCellTextSize>
+          <sfgrid:GridTextColumn.CellTextSize>
+            <OnPlatform Android="14"
+                        WinPhone="12"
+                        iOS="12"
+                        x:TypeArguments="x:Double" />
+          </sfgrid:GridTextColumn.CellTextSize>
+        </sfgrid:GridTextColumn>
+
+        <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                               HeaderText="BP"
+                               MappingName="BP">
+          <sfgrid:GridTextColumn.HeaderCellTextSize>
+            <OnPlatform Android="14"
+                        WinPhone="12"
+                        iOS="12"
+                        x:TypeArguments="x:Double" />
+          </sfgrid:GridTextColumn.HeaderCellTextSize>
+          <sfgrid:GridTextColumn.CellTextSize>
+            <OnPlatform Android="14"
+                        WinPhone="12"
+                        iOS="12"
+                        x:TypeArguments="x:Double" />
+          </sfgrid:GridTextColumn.CellTextSize>
+        </sfgrid:GridTextColumn>
+
+        <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                               HeaderText="RR"
+                               MappingName="RR">
+          <sfgrid:GridTextColumn.HeaderCellTextSize>
+            <OnPlatform Android="14"
+                        WinPhone="12"
+                        iOS="12"
+                        x:TypeArguments="x:Double" />
+          </sfgrid:GridTextColumn.HeaderCellTextSize>
+          <sfgrid:GridTextColumn.CellTextSize>
+            <OnPlatform Android="14"
+                        WinPhone="12"
+                        iOS="12"
+                        x:TypeArguments="x:Double" />
+          </sfgrid:GridTextColumn.CellTextSize>
+        </sfgrid:GridTextColumn>
+
+
+
+      </sfgrid:SfDataGrid.Columns>
+    </sfgrid:SfDataGrid>
+
+  </Grid>
+    </ContentView.Content>
+</ContentView>

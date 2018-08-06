@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+ 	<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <Configurations>Debug;Release;Release-xml</Configurations>
+    <AssemblyName>SampleBrowser.SfMaskedEdit</AssemblyName>
+    <RootNamespace>SampleBrowser.SfMaskedEdit</RootNamespace>
+	</PropertyGroup>
+  
+	<ItemGroup>
+	  <Compile Remove="SfMaskedEditSampleBrowser.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="SampleBrowser.SfMaskedEdit.nuspec" />
+	  <None Remove="SampleBrowser.SfMaskedEdit.props" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="SamplesList\SamplesList.xml" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="SampleBrowser.Core" Version="16.2.0.41" />
+		<PackageReference Include="Syncfusion.Xamarin.Core" Version="16.2.0.41" />
+		<PackageReference Include="Syncfusion.Xamarin.DataSource" Version="16.2.0.41" />
+		<PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="16.2.0.41" />
+		<PackageReference Include="Syncfusion.Xamarin.SfListView" Version="16.2.0.41" />
+		<PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit" Version="16.2.0.41" />
+		<PackageReference Include="Xamarin.Forms" Version="2.4.0.280" />
+	</ItemGroup>
+
+	<Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+
+	<PropertyGroup>
+		<PrepareResourceNamesDependsOn>
+      IncludeFilesInDroid;
+      $(PrepareResourceNamesDependsOn)
+		</PrepareResourceNamesDependsOn>
+	</PropertyGroup>
+	<Target Name="IncludeFilesInDroid">
+		<RemoveDir Directories="..\MaskedEdit.Droid\Resources\CodeFiles\" />
+		<RemoveDir Directories="..\MaskedEdit.iOS\Resources\CodeFiles\" />
+		<RemoveDir Directories="..\MaskedEdit.UWP\Resources\CodeFiles\" />
+		<ItemGroup>
+			<SourceResourceFiles Include="Samples\**\*">
+				<DroidFiles>..\MaskedEdit.Droid\Resources\CodeFiles\</DroidFiles>
+				<iOSFiles>..\MaskedEdit.iOS\Resources\CodeFiles\</iOSFiles>
+				<UWPFiles>..\MaskedEdit.UWP\Resources\CodeFiles\</UWPFiles>
+			</SourceResourceFiles>
+		</ItemGroup>
+		<Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(DroidFiles)\%(RecursiveDir)" />
+		<Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(iOSFiles)\%(RecursiveDir)" />
+		<Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(UWPFiles)\%(RecursiveDir)" />
+	</Target>
+</Project>

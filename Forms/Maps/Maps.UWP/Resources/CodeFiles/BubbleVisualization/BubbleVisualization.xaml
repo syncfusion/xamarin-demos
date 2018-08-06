@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfMaps.BubbleVisualization"
+              xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+              xmlns:maps="clr-namespace:Syncfusion.SfMaps.XForms;assembly=Syncfusion.SfMaps.XForms">
+
+    <local:SampleView.Content>
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Text="Top Population Countries With Bubbles"  VerticalOptions="Center" XAlign="Start" YAlign="Center" FontSize="16"  />
+
+            <maps:SfMaps x:Name="sfmap"  Grid.Row="1"  BackgroundColor="White" >
+                <maps:SfMaps.Layers >
+                    <maps:ShapeFileLayer Uri="world1.shp" ShapeIDPath="Country" ShapeIDTableField="NAME" ShowMapItems="true"  >
+                        <maps:ShapeFileLayer.ShapeSettings>
+                            <maps:ShapeSetting ShapeValuePath="Code" ShapeFill="#A9D9F7" />
+                        </maps:ShapeFileLayer.ShapeSettings>
+                        <maps:ShapeFileLayer.BubbleMarkerSettings>
+                            <maps:BubbleMarkerSetting  MaxSize="30" MinSize="20" ValuePath="Population" Fill="#ffa500" />
+                        </maps:ShapeFileLayer.BubbleMarkerSettings>
+                    </maps:ShapeFileLayer>
+                </maps:SfMaps.Layers>
+            </maps:SfMaps>
+
+        </Grid>
+
+    </local:SampleView.Content>
+</local:SampleView>

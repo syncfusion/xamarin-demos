@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfTreeMap.TreeMapCustomization"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:tree="clr-namespace:Syncfusion.SfTreeMap.XForms;assembly=Syncfusion.SfTreeMap.XForms"
+                  >
+
+    <local:SampleView.Content>
+        <tree:SfTreeMap  x:Name="TreeMap"  HorizontalOptions="FillAndExpand" 
+      VerticalOptions="FillAndExpand" WeightValuePath="TotalMedals" ColorValuePath="TotalMedals" BackgroundColor="White"   >
+            <tree:SfTreeMap.LeafItemSettings>
+                <tree:LeafItemSettings ShowLabels="false" BorderColor="#A9D9F7" Gap="2" LabelPath="Country" >
+                </tree:LeafItemSettings>
+            </tree:SfTreeMap.LeafItemSettings>
+            <tree:SfTreeMap.ItemTemplate>
+                <DataTemplate>
+                    <Grid BackgroundColor ="#D73028" >
+                        <Image  HorizontalOptions= "Center" VerticalOptions= "Center" HeightRequest= "50" WidthRequest= "50" Source="{Binding Data.GameImgSource}" />
+                        <Label Margin="5,5,0,0"  FontSize="12" Text= "{Binding Data.GameName}" TextColor = "White" HeightRequest="50" WidthRequest="100" HorizontalOptions= "Start" VerticalOptions= "Start"/>
+
+
+                    </Grid>
+                </DataTemplate>
+            </tree:SfTreeMap.ItemTemplate>
+        </tree:SfTreeMap>
+    </local:SampleView.Content>
+</local:SampleView>
