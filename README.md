@@ -50,7 +50,7 @@ If you download the samples using the "Download ZIP" option then please follow t
 | <b>GRIDS<b> | <B><center>GRIDS</center><b> | <b><center>GRIDS</center><b> |
 | [DataGrid](Forms/DataGrid) | [DataGrid](Android/SampleBrowser/Samples/DataGrid) | [DataGrid](iOS/SampleBrowser/Samples/DataGrid) |
 | <b><center>DATA VISUALIZATION</center></b> | <b><center>DATA VISUALIZATION</center></b> | <b><center>DATA VISUALIZATION</center></b> |
-| [Bar Code](Forms/BarCode) | [Bar Code](Android/SampleBrowser/Samples/BarCode) | [Bar Code](iOS/SampleBrowser/Samples/BarCode) |
+| [Bar Code](Forms/Barcode) | [Bar Code](Android/SampleBrowser/Samples/Barcode) | [Bar Code](iOS/SampleBrowser/Samples/Barcode) |
 | [Charts](Forms/Chart) | [Charts](Android/SampleBrowser/Samples/Chart) | [Charts](iOS/SampleBrowser/Samples/Chart) |
 | [Circular Gauge](Forms/CircularGauge) | [Circular Gauge](Android/SampleBrowser/Samples/CircularGauge) | [Circular Gauge](iOS/SampleBrowser/Samples/CircularGauge) |
 | [Diagram](Forms/Diagram)| [Diagram](Android/SampleBrowser/Samples/Diagram) | [Diagram](iOS/SampleBrowser/Samples/Diagram) |
@@ -58,7 +58,7 @@ If you download the samples using the "Download ZIP" option then please follow t
 | [Linear Gauge](Forms/LinearGauge) | [Linear Gauge](Android/SampleBrowser/Samples/LinearGauge) | [Linear Gauge](iOS/SampleBrowser/Samples/LinearGauge) |
 | [Maps](Forms/Maps) | [Maps](Android/SampleBrowser/Samples/Maps) | [Maps](iOS/SampleBrowser/Samples/Maps) |
 | [Range Navigator](Forms/RangeNavigator) | [Range Navigator](Android/SampleBrowser/Samples/RangeNavigator) | [Range Navigator](iOS/SampleBrowser/Samples/RangeNavigator) |
-| [Sparkline](Forms/Sparkline) | [Sparkline](Android/SampleBrowser/Samples/Sparkline) | [Sparkline](iOS/SampleBrowser/Samples/Sparkline) |
+| [Sparkline](Forms/Sparkline) | [Sparkline](Android/SampleBrowser/Samples/SparkLine) | [Sparkline](iOS/SampleBrowser/Samples/Sparkline) |
 | [Sunburst Chart](Forms/SunburstChart) | [Sunburst Chart](Android/SampleBrowser/Samples/Sunburst) | [Sunburst Chart](iOS/SampleBrowser/Samples/Sunburst) |
 | [Tree Map](Forms/TreeMap) | [Tree Map](Android/SampleBrowser/Samples/TreeMap) | [Tree Map](iOS/SampleBrowser/Samples/TreeMap) |
 | <b><center>CALENDAR</center><b> | <b><center>CALENDAR</center><b> | <b><center>CALENDAR</center><b> |
@@ -72,7 +72,7 @@ If you download the samples using the "Download ZIP" option then please follow t
 | [Pull To Refresh](Forms/PullToRefresh) | [Pull To Refresh](Android/SampleBrowser/Samples/PullToRefresh) | [Pull To Refresh](iOS/SampleBrowser/Samples/PullToRefresh) |
 | <b><center>VIEWER/EDITOR</center><b> | <b><center>VIEWER/EDITOR</center><b> | <b><center>VIEWER/EDITOR</center><b> |
 | [Image Editor](Forms/ImageEditor) | [Image Editor](Android/SampleBrowser/Samples/ImageEditor) | [Image Editor](iOS/SampleBrowser/Samples/ImageEditor) |
-| [PDF Viewer](Forms/PdfViewer) | [PDF Viewer](Android/SampleBrowser/Samples/PdfViewer) | [PDF Viewer](iOS/SampleBrowser/Samples/PdfViewer) |
+| [PDF Viewer](Forms/PdfViewer) | [PDF Viewer](Android/SampleBrowser/Samples/PDFViewer) | [PDF Viewer](iOS/SampleBrowser/Samples/PDFViewer) |
 | <b><center>NAVIGATION</center><b> | <b><center>NAVIGATION</center><b> | <b><center>NAVIGATION</center><b> |
 | [Navigation Drawer](Forms/NavigationDrawer) | [Navigation Drawer](Android/SampleBrowser/Samples/NavigationDrawer) | [Navigation Drawer](iOS/SampleBrowser/Samples/NavigationDrawer) |
 | [Radial Menu](Forms/RadialMenu) | [Radial Menu](Android/SampleBrowser/Samples/RadialMenu) | [Radial Menu](iOS/SampleBrowser/Samples/RadialMenu) |
@@ -83,7 +83,7 @@ If you download the samples using the "Download ZIP" option then please follow t
 | [ListView](Forms/ListView) | - | - |
 | [Pop-up](Forms/PopupLayout) | [Pop-up](Android/SampleBrowser/Samples/PopupLayout) | [Pop-up](iOS/SampleBrowser/Samples/PopupLayout) |
 | <b><center>EDITORS</center><b> | <b><center>EDITORS</center><b> | <b><center>EDITORS</center><b> |
-| [Autocomplete](Forms/AutoComplete) | [Autocomplete](Android/SampleBrowser/Samples/Autocomplete) | [Autocomplete](iOS/SampleBrowser/Samples/Autocomplete) |
+| [Autocomplete](Forms/AutoComplete) | [Autocomplete](Android/SampleBrowser/Samples/AutoComplete) | [Autocomplete](iOS/SampleBrowser/Samples/AutoComplete) |
 | [CheckBox](Forms/CheckBox) | [CheckBox](Android/SampleBrowser/Samples/CheckBox) | [CheckBox](iOS/SampleBrowser/Samples/CheckBox) |
 | [Combo Box](Forms/ComboBox) | [Combo Box](Android/SampleBrowser/Samples/ComboBox) | [Combo Box](iOS/SampleBrowser/Samples/ComboBox) |
 | [Data Form](Forms/DataForm) | [Data Form](Android/SampleBrowser/Samples/DataForm) | [Data Form](iOS/SampleBrowser/Samples/DataForm) |
