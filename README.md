@@ -1,6 +1,6 @@
 # Syncfusion Xamarin samples
 
-This repository contains the demos of [Syncfusion Xamarin UI controls](https://www.syncfusion.com/products/xamarin). This is the best place to check our controls to get more insight about the usage of APIs. You can also check our controls by installing the complete Xamarin.Forms sample browser from [ Google Play Store](https://play.google.com/store/apps/details?id=com.syncfusion.samplebrowser) or [Microsoft Store](https://www.microsoft.com/en-in/p/syncfusion-essential-studio-for-xamarin/9nn069tldzf4), in which you can browse the demo for all the controls and view the source code of each sample within the app itself.
+This repository contains the demos of [Syncfusion Xamarin UI controls](https://www.syncfusion.com/products/xamarin?utm_source=github&utm_medium=listing). This is the best place to check our controls to get more insight about the usage of APIs. You can also check our controls by installing the complete Xamarin.Forms sample browser from [ Google Play Store](https://play.google.com/store/apps/details?id=com.syncfusion.samplebrowser) or [Microsoft Store](https://www.microsoft.com/en-in/p/syncfusion-essential-studio-for-xamarin/9nn069tldzf4), in which you can browse the demo for all the controls and view the source code of each sample within the app itself.
 
 This section guides you to use the Syncfusion Xamarin samples in your applications.
 
@@ -37,7 +37,7 @@ If you download the samples using the "Download ZIP" option then please follow t
 * Before you unzip the archive, right-click it, select Properties, and then select Unblock.
 * Be sure to unzip the entire archive, and not just individual samples. The samples all depend on the SharedContent folder in the archive.
 
-**To use the Syncfusion Xamarin samples, Syncfusion license key should be registered in samples. Refer [this](https://www.syncfusion.com/kb/9002) link for more information.**
+**To use the Syncfusion Xamarin samples, Syncfusion license key should be registered in samples. Refer [this](https://www.syncfusion.com/kb/9002?utm_source=github&utm_medium=listing) link for more information.**
 
 
 **Reminder:** If you unzip individual samples, they will not build due to references to other portions of the ZIP file that were not unzipped. You must unzip the entire archive if you intend to build the samples.
@@ -108,11 +108,11 @@ If you download the samples using the "Download ZIP" option then please follow t
 
 * For using the Syncfusion controls, refer the following User Guide links.
 
-   * [Xamarin Forms](https://help.syncfusion.com/xamarin/introduction/overview)
-   * [Xamarin-Android](https://help.syncfusion.com/xamarin-android/introduction/overview)
-   * [Xamarin-iOS](https://help.syncfusion.com/xamarin-ios/introduction/overview)
+   * [Xamarin Forms](https://help.syncfusion.com/xamarin/introduction/overview?utm_source=github&utm_medium=listing)
+   * [Xamarin-Android](https://help.syncfusion.com/xamarin-android/introduction/overview?utm_source=github&utm_medium=listing)
+   * [Xamarin-iOS](https://help.syncfusion.com/xamarin-ios/introduction/overview?utm_source=github&utm_medium=listing)
 
-* For any other queries, reach our [Syncfusion support team](https://www.syncfusion.com/support/directtrac/incidents/newincident) or post the queries through the [community forums](https://www.syncfusion.com/forums).
+* For any other queries, reach our [Syncfusion support team](https://www.syncfusion.com/support/directtrac/incidents/newincident?utm_source=github&utm_medium=listing) or post the queries through the [community forums](https://www.syncfusion.com/forums?utm_source=github&utm_medium=listing).
 
-* To renew the subscription, click [here](https://www.syncfusion.com/sales/products) or contact our sales team at <salessupport@syncfusion.com>.
+* To renew the subscription, click [here](https://www.syncfusion.com/sales/products?utm_source=github&utm_medium=listing) or contact our sales team at <salessupport@syncfusion.com>.
   
