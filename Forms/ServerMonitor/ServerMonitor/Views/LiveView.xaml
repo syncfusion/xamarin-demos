@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+					   x:Class="ServerMonitor.Views.LiveView">
+  <ScrollView>
+    <StackLayout>
+      <StackLayout.BackgroundColor>
+        <OnPlatform x:TypeArguments="Color">
+          <OnPlatform.iOS>
+            White
+          </OnPlatform.iOS>
+          <OnPlatform.Android>
+            White
+          </OnPlatform.Android>
+        </OnPlatform>
+      </StackLayout.BackgroundColor>
+      <StackLayout x:Name="StatusLayout" Orientation="Horizontal" Spacing="0" HorizontalOptions="FillAndExpand" Padding="10" BackgroundColor="Green" HeightRequest="60">
+        <Label x:Name="Status" HorizontalOptions="Start" FontSize="20" Text="CURRENT STATUS : " VerticalOptions="Center">
+          <Label.TextColor>
+            <OnPlatform x:TypeArguments="Color">
+              <OnPlatform.Android>
+                White
+              </OnPlatform.Android>
+            </OnPlatform>
+          </Label.TextColor>
+        </Label>
+        <Label x:Name="StatusValue" FontSize="20" HorizontalOptions="End" Text="UP" VerticalOptions="Center">
+          <Label.TextColor>
+            <OnPlatform x:TypeArguments="Color">
+              <OnPlatform.Android>
+                White
+              </OnPlatform.Android>
+            </OnPlatform>
+          </Label.TextColor>
+        </Label>
+      </StackLayout>
+      <StackLayout  Orientation="Horizontal" HeightRequest="50" >
+      </StackLayout>
+      <StackLayout  Orientation="Horizontal" >
+        <StackLayout HeightRequest="60"/>
+        <StackLayout x:Name="LiveCPULayout">
+          <StackLayout x:Name="CPULayout"  Orientation="Vertical"  >
+            <Label x:Name="CPU" Text="CPU Performance: " >
+              <Label.TextColor>
+                <OnPlatform x:TypeArguments="Color">
+                  <OnPlatform.Android>
+                    Black
+                  </OnPlatform.Android>
+                </OnPlatform>
+              </Label.TextColor>
+            </Label>
+            <Label x:Name="Performace" Text="50%" >
+              <Label.TextColor>
+                <OnPlatform x:TypeArguments="Color">
+                  <OnPlatform.Android>
+                    Black
+                  </OnPlatform.Android>
+                </OnPlatform>
+              </Label.TextColor>
+            </Label>
+          </StackLayout>
+        </StackLayout>
+        <StackLayout x:Name="LiveMemoryLayout">
+          <StackLayout x:Name="MemoryLayout" Orientation="Vertical"  >
+            <Label x:Name="Memory" Text="Memory Usage: " >
+              <Label.TextColor>
+            <OnPlatform x:TypeArguments="Color">
+              <OnPlatform.Android>
+                Black
+              </OnPlatform.Android>
+            </OnPlatform>
+          </Label.TextColor>
+            </Label>
+            <Label x:Name="Usage" Text="40%" >
+              <Label.TextColor>
+                <OnPlatform x:TypeArguments="Color">
+                  <OnPlatform.Android>
+                    Black
+                  </OnPlatform.Android>
+                </OnPlatform>
+              </Label.TextColor>
+            </Label>
+          </StackLayout>
+        </StackLayout>
+      </StackLayout>
+      <StackLayout  Orientation="Horizontal" HeightRequest="15" >
+      </StackLayout>
+      <StackLayout  Orientation="Horizontal" >
+        <StackLayout HeightRequest="60"/>
+        <StackLayout x:Name="LiveDiskLayout">
+          <StackLayout x:Name="DiskLayout" Orientation="Vertical"  >
+            <Label x:Name="Disk" Text="Disk Utilization : " >
+              <Label.TextColor>
+                <OnPlatform x:TypeArguments="Color">
+                  <OnPlatform.Android>
+                    Black
+                  </OnPlatform.Android>
+                </OnPlatform>
+              </Label.TextColor>
+            </Label>
+            <Label x:Name="Used" Text="45%" >
+              <Label.TextColor>
+                <OnPlatform x:TypeArguments="Color">
+                  <OnPlatform.Android>
+                    Black
+                  </OnPlatform.Android>
+                </OnPlatform>
+              </Label.TextColor>
+            </Label>
+          </StackLayout>
+        </StackLayout>
+        <StackLayout x:Name="LiveDataLayout">
+          <StackLayout x:Name="DataLayout" Orientation="Vertical">
+            <StackLayout.Padding>
+              <OnPlatform x:TypeArguments="Thickness">
+                <OnPlatform.iOS>
+                  50, 10, 0, 10
+                </OnPlatform.iOS>
+                <OnPlatform.Android>
+                  40, 10, 0, 10
+                </OnPlatform.Android>
+                <OnPlatform.WinPhone>
+                  40, 10, 10, 10
+                </OnPlatform.WinPhone>
+              </OnPlatform>
+            </StackLayout.Padding>
+
+            <Label x:Name="Data" Text="Download Rate: ">
+              <Label.TextColor>
+            <OnPlatform x:TypeArguments="Color">
+              <OnPlatform.Android>
+                Black
+              </OnPlatform.Android>
+            </OnPlatform>
+          </Label.TextColor>
+            </Label>
+            <StackLayout  Orientation="Horizontal" >
+              <Label x:Name="Download" Text="8.0" >
+                <Label.TextColor>
+                  <OnPlatform x:TypeArguments="Color">
+                    <OnPlatform.Android>
+                      Black
+                    </OnPlatform.Android>
+                  </OnPlatform>
+                </Label.TextColor>
+              </Label>
+              <Label x:Name="Kbps" Text="Kbps" HeightRequest="100" VerticalOptions="End" >
+                <Label.TextColor>
+                  <OnPlatform x:TypeArguments="Color">
+                    <OnPlatform.Android>
+                      Black
+                    </OnPlatform.Android>
+                  </OnPlatform>
+                </Label.TextColor>
+              </Label>
+            </StackLayout>
+          </StackLayout>
+        </StackLayout>
+      </StackLayout>
+      <StackLayout HeightRequest="50" WidthRequest="50"></StackLayout>
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

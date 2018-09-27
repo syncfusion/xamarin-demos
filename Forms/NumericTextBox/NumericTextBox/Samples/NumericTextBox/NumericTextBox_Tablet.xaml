@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView  xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                   	xmlns:numeric="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms" 
+  x:Class="SampleBrowser.SfNumericTextBox.NumericTextBox_Tablet">
+   <local:SampleView.Content >
+    <Grid Padding="10">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="8*"/>
+        <RowDefinition Height="3*"/>
+      </Grid.RowDefinitions>
+      <ScrollView IsClippedToBounds="true">
+        <Grid >
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+          </Grid.RowDefinitions>
+          <Label x:Name="simpleInterestCalculatorLabel"  Grid.Row="0" Text = "Simple Interest Calculator" HeightRequest = "40" FontSize="20" FontAttributes="Bold" HorizontalOptions = "Center"/>
+          <Label x:Name="findingSimpleInterestLabel" Grid.Row="1" Text = "The formula for finding simple interest is : Interest = Principal * Rate * Time" FontSize="16"  HorizontalOptions = "Center"/>
+
+          <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10,0,0,0" Grid.Row="2" x:Name="principalLayout">
+            <Label x:Name="principalLabel"  Text = "Principal" FontSize="20" HeightRequest = "40" WidthRequest="200" VerticalOptions = "Center" HorizontalOptions = "Start" />
+            <numeric:SfNumericTextBox MaximumNumberDecimalDigits="2" FontSize="20" x:Name="principalNumericTextBox"  AllowNull="false" HorizontalOptions="End" VerticalOptions="Center" FormatString="c" Watermark="Enter the Principal" Value="1000" />
+          </StackLayout>
+          <StackLayout Orientation="Horizontal"  HorizontalOptions="Center" Padding="10,0,0,0" Grid.Row="3">
+            <Label x:Name="interestRateLabel"  Text = "Interest Rate" FontSize="20" HeightRequest = "40"  WidthRequest="200" VerticalOptions = "Center" HorizontalOptions = "Start"/>
+            <numeric:SfNumericTextBox MaximumNumberDecimalDigits="0" FontSize="20" ValueChangeMode="OnKeyFocus"  PercentDisplayMode="Compute" x:Name="interestRateNumericTextBox" AllowNull="false" HorizontalOptions="End" VerticalOptions="Center" FormatString="p" Watermark="Enter the RI" Value="0.2" ParserMode="Decimal" />
+          </StackLayout>
+          <StackLayout Orientation="Horizontal"  HorizontalOptions="Center" Padding="10,0,0,0" Grid.Row="4">
+            <Label x:Name="termLabel"  Text = " Term" HeightRequest = "40" FontSize="20"  WidthRequest="200" VerticalOptions = "Center" HorizontalOptions = "Start" />
+            <numeric:SfNumericTextBox MaximumNumberDecimalDigits="0" FontSize="20" ValueChangeMode="OnKeyFocus"  x:Name="termNumericTextBox" AllowNull="false" HorizontalOptions="End" VerticalOptions="Center" FormatString="years" Watermark="Enter the Year" Value="20" />
+          </StackLayout>
+          <StackLayout Orientation="Horizontal"  HorizontalOptions="Center" Padding="10,0,0,0" Grid.Row="5">
+            <Label x:Name="interestLabel"  Text = "Amount" HeightRequest = "40" FontSize="20" WidthRequest="200" VerticalOptions = "Center" HorizontalOptions = "Start"/>
+            <numeric:SfNumericTextBox MaximumNumberDecimalDigits="0" IsEnabled="false" FontSize="20"  ValueChangeMode="OnKeyFocus" x:Name="interestNumericTextBox" AllowNull="false" HorizontalOptions="EndAndExpand" VerticalOptions="Center" FormatString="c" Watermark="Enter a number" Value="2000" />
+          </StackLayout>
+        </Grid>
+      </ScrollView>
+      <ScrollView Grid.Row="1" IsClippedToBounds="true">
+
+        <StackLayout x:Name="Property_Windows">
+          <StackLayout Orientation="Horizontal" Padding="10,0,0,0" x:Name="temp"  HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
+            <Label x:Name="PropertyLabel" Text="OPTIONS" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="150" FontSize="18"  FontFamily="Helvetica"/>
+            <Button x:Name="Property_Button" HorizontalOptions="EndAndExpand" ></Button>
+          </StackLayout>
+        </StackLayout>
+
+      </ScrollView>
+    </Grid>
+  </local:SampleView.Content>
+</local:SampleView>
+

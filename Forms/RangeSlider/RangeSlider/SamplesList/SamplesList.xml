@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Samples>
+  <Sample Title="RangeSlider" Name="RangeSlider" Icon="AllControlls/RangeSlider.png"/>
+  <Sample Title="Slider" Name="Orientation" SearchTags="single,thumb,vertical"/>
+</Samples>  

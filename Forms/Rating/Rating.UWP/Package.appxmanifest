@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Name="com.syncfusion.samplebrowser.sfrating" Publisher="CN=paulanderson" Version="1.0.0.0" />
+  <mp:PhoneIdentity PhoneProductId="352cb9cd-f2e6-4411-889a-2348c0dcbe52" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>Rating Sample</DisplayName>
+    <PublisherDisplayName>samuelrajaduraie</PublisherDisplayName>
+    <Logo>SampleBrowser.Core.UWP\Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="SampleBrowser.SfRating.UWP.App">
+      <uap:VisualElements DisplayName="Rating Sample" Square150x150Logo="SampleBrowser.Core.UWP\Assets\Square150x150Logo.png" Square44x44Logo="SampleBrowser.Core.UWP\Assets\Square44x44Logo.png" Description="SampleBrowser.SfRating.UWP" BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="SampleBrowser.Core.UWP\Assets\Wide310x150Logo.png">
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="SampleBrowser.Core.UWP\Assets\SplashScreen.png" BackgroundColor="blue" />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

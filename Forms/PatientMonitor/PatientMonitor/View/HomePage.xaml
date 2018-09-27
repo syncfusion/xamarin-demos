@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PatientMonitor.HomePage"
+             xmlns:local="clr-namespace:PatientMonitor;assembly=PatientMonitor"
+             Title="Dr. Jacob John M.D.">
+
+  <local:GridViewPage BindingContext="{Binding Path=Patients}" />
+  <local:ScheduleViewPage BindingContext="{Binding Path=Appointments}" />
+</TabbedPage>

@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfListView.SortingFiltering"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.SfListView"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
+
+    <sample:SampleView.Behaviors>
+        <local:SfListViewSortingFilteringBehavior/>
+    </sample:SampleView.Behaviors>
+
+    <sample:SampleView.Resources>
+        <ResourceDictionary>
+            <local:ListViewBoolToSortImageConverter  x:Key="BoolToSortIconConverter"/>
+        </ResourceDictionary>
+    </sample:SampleView.Resources>
+
+    <sample:SampleView.Content>
+        <Grid Margin="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid x:Name="headerGrid" ColumnSpacing="0" RowSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="60" />
+                </Grid.ColumnDefinitions>
+                <Grid x:Name="seachbar_Grid" BackgroundColor="#E4E4E4">
+                    <SearchBar x:Name="filterText"
+                          Grid.Row="0"
+                          Grid.Column="0"
+                          IsVisible="true"
+                          Placeholder="Search here to filter" >
+                        <SearchBar.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On  Platform="Android,iOS,macOS" Value="50"/>
+                                <On  Platform="UWP">
+                                    <OnIdiom x:TypeArguments="x:Double"  Phone="40" Tablet="40" Desktop="40" />
+                                </On>
+                            </OnPlatform>
+                        </SearchBar.HeightRequest>
+                    </SearchBar>
+                </Grid>
+                <Grid Grid.Column="1" x:Name="sortImageParent">
+                    <Image
+         x:Name="sortImage"
+         Source="{Binding Path=SortingOptions, Converter={StaticResource BoolToSortIconConverter}}"
+         HeightRequest="40"
+         WidthRequest="40"
+         HorizontalOptions="Center"
+         VerticalOptions="Center"/>
+                </Grid>
+            </Grid>
+            <sync:SfListView x:Name="listView" 
+                       Grid.Row="1"
+                       SelectionMode="None"
+                       ItemSpacing="0,5,0,5"
+                       BackgroundColor="#F0F0F0"
+                       ItemSize="100">
+                <sync:SfListView.ItemTemplate>
+                    <DataTemplate x:Name="ItemTemplate"  x:Key="ItemTemplate">
+                        <Frame OutlineColor="#b3b3b3" Padding="2" Margin="10,0,10,0">
+                            <Frame.HasShadow>
+                                <OnPlatform x:TypeArguments="x:Boolean">
+                                    <On Platform="Android" Value="True"/>
+                                    <On Platform="UWP" Value="True"/>
+                                    <On Platform="iOS,macOS" Value="False"/>
+                                </OnPlatform>
+                            </Frame.HasShadow>
+                            <Grid BackgroundColor="White" Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <Label x:Name="TitleLabel" LineBreakMode="NoWrap" Text="{Binding Title}"
+                       FontAttributes="Bold" TextColor="Black">
+                                    <Label.FontSize>
+                                        <OnPlatform x:TypeArguments="x:Double">
+                                            <On  Platform="Android">
+                                                <OnIdiom x:TypeArguments="x:Double" Phone="16" Tablet="18"/>
+                                            </On>
+                                            <On  Platform="iOS">
+                                                <OnIdiom x:TypeArguments="x:Double" Phone="16" Tablet="18"/>
+                                            </On>
+                                            <On  Platform="UWP">
+                                                <OnIdiom x:TypeArguments="x:Double"  Phone="18" Tablet="20" Desktop="20" />
+                                            </On>
+                                            <On  Platform="macOS" Value="18"/>
+                                        </OnPlatform>
+                                    </Label.FontSize>
+                                </Label>
+
+                                <Label Grid.Row="1" x:Name="DescriptionLabel" Text="{Binding Description}" TextColor="Teal">
+                                    <Label.FontSize>
+                                        <OnPlatform x:TypeArguments="x:Double">
+                                            <On  Platform="Android">
+                                                <OnIdiom x:TypeArguments="x:Double" Phone="12" Tablet="14"/>
+                                            </On>
+                                            <On  Platform="iOS">
+                                                <OnIdiom x:TypeArguments="x:Double" Phone="12" Tablet="14"/>
+                                            </On>
+                                            <On  Platform="UWP">
+                                                <OnIdiom x:TypeArguments="x:Double"  Phone="12" Tablet="12" Desktop="12" />
+                                            </On>
+                                            <On  Platform="macOS" Value="14"/>
+                                        </OnPlatform>
+                                    </Label.FontSize>
+                                </Label>
+
+                                <Frame Grid.Row="2" Padding="4,2,4,2" BackgroundColor="#FFE7E8E9" HorizontalOptions="Start" VerticalOptions="End">
+                                    <Frame.HasShadow>
+                                        <OnPlatform x:TypeArguments="x:Boolean">
+                                            <On Platform="Android" Value="True"/>
+                                            <On Platform="UWP" Value="True"/>
+                                            <On Platform="iOS" Value="False"/>
+                                        </OnPlatform>
+                                    </Frame.HasShadow>
+                                    <Label x:Name="TagLabel" LineBreakMode="NoWrap" Text="{Binding Tag}"
+                          FontSize="10" TextColor="Black"/>
+                                </Frame>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </sync:SfListView.ItemTemplate>
+            </sync:SfListView>
+        </Grid>
+    </sample:SampleView.Content>
+</sample:SampleView>

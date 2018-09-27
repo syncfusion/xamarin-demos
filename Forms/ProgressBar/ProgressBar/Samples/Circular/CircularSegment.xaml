@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<core:SampleView xmlns="http://xamarin.com/schemas/2014/forms" 
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:core="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                 xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
+                 x:Class="SampleBrowser.SfProgressBar.CircularSegment">
+    <core:SampleView.Content>
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+          </Grid.ColumnDefinitions>
+            <Label Text="Segment"
+                   Grid.Column="0" Grid.ColumnSpan="3"
+                   HorizontalOptions="Start" VerticalOptions="Start"
+                   Margin="10,0,0,0">
+              <Label.FontSize>
+                <OnPlatform x:TypeArguments="x:Double" iOS="11"/>
+              </Label.FontSize>
+            </Label>
+          
+            <!--Circular progress bar with segment-->
+            <progressBar:SfCircularProgressBar x:Name="SegmentedCircularProgressBar"
+                                          Grid.Column="0"
+                                          Margin="0,10,0,0"
+                                          Progress="75"
+                                          ShowProgressValue="False"
+                                          SegmentCount="4"
+                                          ValueChanged="SegmentedCircularProgressBar_ValueChanged"
+                                          >
+
+            </progressBar:SfCircularProgressBar>
+
+            <!--Circular progress bar with segment-->
+            <progressBar:SfCircularProgressBar x:Name="SegmentedPaddingCircularProgressBar"
+                                          Grid.Column="1"
+                                          Margin="0,10,0,0"
+                                          Progress="75"
+                                          ShowProgressValue="False"
+                                          TrackInnerRadius="0.6"
+                                          IndicatorInnerRadius="0.65"
+                                          IndicatorOuterRadius="0.7"
+                                          SegmentCount="4"
+                                          ValueChanged="SegmentedPaddingCircularProgressBar_ValueChanged"
+                                          >
+
+            </progressBar:SfCircularProgressBar>
+
+            <progressBar:SfCircularProgressBar x:Name="SegmentedFillingStyle"
+                                          Grid.Column="2"
+                                          Margin="0,10,0,0"
+                                          ShowProgressValue="False"
+                                          SegmentCount="20"
+                                          >
+
+            </progressBar:SfCircularProgressBar>
+        </Grid>
+    </core:SampleView.Content>
+</core:SampleView>

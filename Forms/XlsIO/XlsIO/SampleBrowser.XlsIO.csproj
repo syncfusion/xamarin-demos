@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+	  <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <RootNamespace>SampleBrowser.XlsIO</RootNamespace>
+    <AssemblyName>SampleBrowser.XlsIO</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="SamplePages.cs" />
+    <Compile Remove="XlsIOSampleBrowser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="SampleBrowser.XlsIO.nuspec" />
+    <None Remove="SamplesList\SamplesList.xml" />
+	<None Remove="SampleBrowser.XlsIO.props" />
+	<None Remove="Samples\Template\NorthwindTemplate.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SamplesList\SamplesList.xml" />
+    <EmbeddedResource Include="Samples\Template\AdvancedFilterData.xlsx" />
+    <EmbeddedResource Include="Samples\Template\ChartData.xlsx" />
+    <EmbeddedResource Include="Samples\Template\FilterData.xlsx" />
+	<EmbeddedResource Include="Samples\Template\FilterData_Color.xlsx" />
+	<EmbeddedResource Include="Samples\Template\IconFilterData.xlsx" />
+    <EmbeddedResource Include="Samples\Template\NorthwindTemplate.xlsx" />
+    <EmbeddedResource Include="Samples\Template\ReplaceOptions.xlsx" />
+    <EmbeddedResource Include="Samples\Template\CLRObjects.xml" />
+    <EmbeddedResource Include="Samples\Template\customers.xml" />
+    <EmbeddedResource Include="Samples\Template\ExportSales.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="SampleBrowser.Core" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.XlsIO" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.Compression" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.SfDataGrid" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="16.3.0.21" />
+    <PackageReference Include="Xamarin.Forms" version="2.5.1.527436" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <PropertyGroup>
+    <PrepareResourceNamesDependsOn>
+      IncludeFilesInDroid;
+      $(PrepareResourceNamesDependsOn)
+    </PrepareResourceNamesDependsOn>
+  </PropertyGroup>
+</Project>

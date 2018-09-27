@@ -1,0 +1,68 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <PackageId>SampleBrowser.DocIO</PackageId>
+    <Configurations>Debug;Release;Release-xml</Configurations>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+	<RootNamespace>SampleBrowser.DocIO</RootNamespace>
+    <AssemblyName>SampleBrowser.DocIO</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="SampleBrowser.DocIO.nuspec" />
+	<None Remove="SampleBrowser.DocIO.props" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="SampleBrowser.Core" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.Compression" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.OfficeChart" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.DocIO" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="16.3.0.21" />
+    <PackageReference Include="Xamarin.Forms" Version="2.4.0.280" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Samples\Templates\BkmkDocumentPart_Template.doc" />
+    <EmbeddedResource Include="Samples\Templates\Bookmark_Template.doc" />
+    <EmbeddedResource Include="Samples\Templates\ContentControlTemplate.docx" />
+    <EmbeddedResource Include="Samples\Templates\WordtoHTML.doc" />
+    <EmbeddedResource Include="Samples\Templates\Excel_Template.xlsx" />
+    <EmbeddedResource Include="Samples\Templates\Letter Formatting.docx" />
+    <EmbeddedResource Include="Samples\Templates\Employees.xml" />
+    <EmbeddedResource Include="Samples\Templates\Mountain-200.jpg" />
+    <EmbeddedResource Include="Samples\Templates\Mountain-300.jpg" />
+    <EmbeddedResource Include="Samples\Templates\Northwind.png" />
+    <EmbeddedResource Include="Samples\Templates\Products.xml" />
+    <EmbeddedResource Include="Samples\Templates\Road-550-W.jpg" />
+    <EmbeddedResource Include="Samples\Templates\AdventureCycle.jpg" />
+    <EmbeddedResource Include="SamplesList\SamplesList.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <PropertyGroup>
+    <PrepareResourceNamesDependsOn>
+      IncludeFilesInDroid;
+      $(PrepareResourceNamesDependsOn)
+    </PrepareResourceNamesDependsOn>
+  </PropertyGroup>
+  <Target Name="IncludeFilesInDroid">
+    <RemoveDir Directories="..\DocIO.Droid\Resources\CodeFiles\" />
+    <RemoveDir Directories="..\DocIO.iOS\Resources\CodeFiles\" />
+    <RemoveDir Directories="..\DocIO.UWP\Resources\CodeFiles\" />
+    <ItemGroup>
+      <SourceResourceFiles Include="Samples\**\*">
+        <DroidFiles>..\DocIO.Droid\Resources\CodeFiles\</DroidFiles>
+        <iOSFiles>..\DocIO.iOS\Resources\CodeFiles\</iOSFiles>
+        <UWPFiles>..\DocIO.UWP\Resources\CodeFiles\</UWPFiles>
+      </SourceResourceFiles>
+    </ItemGroup>
+    <Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(DroidFiles)\%(RecursiveDir)" />
+    <Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(iOSFiles)\%(RecursiveDir)" />
+    <Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(UWPFiles)\%(RecursiveDir)" />
+  </Target>
+</Project>

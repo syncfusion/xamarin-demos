@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Samples>
+    <Sample Name = "BubbleVisualization" IsUpdated="True" Title = "Bubble Visualization" SearchTags="Sphere,scatter,round,ball"/>
+    <Sample Name = "ColorMappings" Title = "Color Mappings" SearchTags="ColorCustomization,RangeColorMapping,EqualColorMapping,DesaturationColorMapping" />
+    <Sample Name = "MapsGettingStarted" Title = "Data Markers" SearchTags="Markers,MapsShowCase"/>
+    <Sample Name = "MapsTicketBooking" Title = "Ticket Booking" SearchTags="BusBooking,reservation" />
+    <Sample Name = "OSM" IsUpdated="True" Title = "Open Street Map" SearchTags="OSM, Open street Map, bing" />
+    <Sample Name = "Sublayer" IsNew="True" Title = "Sublayers" SearchTags="sublayer, multilayer" />
+    <Sample Name = "DataLabels" IsNew="True" Title = "Data Labels" SearchTags="label, DataLabels" />
+    <Sample Name = "Drilldown" IsNew="True" Title = "Drilldown" SearchTags="Drilldown, basemapindex" />
+</Samples>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView  xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		x:Class="SampleBrowser.SfKanban.KanbanCustomizationSample"
+		xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+		xmlns:kanban="clr-namespace:Syncfusion.SfKanban.XForms;assembly=Syncfusion.SfKanban.XForms">
+  <local:SampleView.Content>
+
+    <StackLayout>
+
+      <StackLayout BackgroundColor="Red" x:Name="labelLayout" IsVisible="False" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <Label x:Name="label" Text="Pizza Shop" FontSize="18" TextColor="White" Margin="10,10,0,0"
+               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+               HorizontalOptions="FillAndExpand"/>
+      </StackLayout>
+
+      <kanban:SfKanban x:Name="kanban" AutoGenerateColumns="False" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ItemsSource="{Binding Cards}"
+                DragStart="Handle_DragStart" DragEnd="Handle_DragEnd" DragOver="Handle_DragOver">
+
+        <kanban:SfKanban.Columns>
+
+          <kanban:KanbanColumn x:Name="column1" Title="Menu"  >
+          </kanban:KanbanColumn>
+
+          <kanban:KanbanColumn x:Name="column2" Title="Order">
+          </kanban:KanbanColumn>
+
+          <kanban:KanbanColumn x:Name="column3" Title="Ready to Serve" >
+          </kanban:KanbanColumn>
+
+          <kanban:KanbanColumn x:Name="column4" Title="Delivery" >
+          </kanban:KanbanColumn>
+
+        </kanban:SfKanban.Columns>
+      </kanban:SfKanban>
+
+    </StackLayout>
+
+  </local:SampleView.Content>
+
+</local:SampleView>

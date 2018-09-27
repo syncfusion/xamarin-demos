@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+ 	<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <Configurations>Debug;Release;Release-xml</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="SampleBrowser.SfCarousel.nuspec" />
+	<None Remove="SampleBrowser.SfCarousel.props" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SampleBrowser.Core" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.SfCarousel" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown" Version="16.3.0.21" />
+    <PackageReference Include="Xamarin.Forms" Version="2.4.0.280" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CustomSearch.txt" />
+    <EmbeddedResource Include="SamplesList\SamplesList.xml" />
+  </ItemGroup>
+</Project>

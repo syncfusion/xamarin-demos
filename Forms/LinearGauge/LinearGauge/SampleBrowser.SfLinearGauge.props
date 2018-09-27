@@ -1,0 +1,48 @@
+<Project ToolsVersion="15.0">
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>Samples\LinearGauge\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Annotation\Annotation.xaml">
+      <Link>Samples\LinearGauge\Samples\Annotation\Annotation.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Default\Default.xaml">
+      <Link>Samples\LinearGauge\Samples\Default\Default.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Ranges\Ranges.xaml">
+      <Link>Samples\LinearGauge\Samples\Ranges\Ranges.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ScaleAndPointers\ScaleAndPointers.xaml">
+      <Link>Samples\LinearGauge\Samples\ScaleAndPointers\ScaleAndPointers.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Annotation\Annotation.xaml.cs">
+      <DependentUpon>Annotation.xaml</DependentUpon>
+      <Link>Samples\LinearGauge\Samples\Annotation\Annotation.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Default\Default.xaml.cs">
+      <DependentUpon>Default.xaml</DependentUpon>
+      <Link>Samples\LinearGauge\Samples\Default\Default.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Ranges\Ranges.xaml.cs">
+      <DependentUpon>Ranges.xaml</DependentUpon>
+      <Link>Samples\LinearGauge\Samples\Ranges\Ranges.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ScaleAndPointers\ScaleAndPointers.xaml.cs">
+      <DependentUpon>ScaleAndPointers.xaml</DependentUpon>
+      <Link>Samples\LinearGauge\Samples\ScaleAndPointers\ScaleAndPointers.xaml.cs</Link>
+    </Compile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,115 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Arrow_128.png" />
+    <None Remove="Images\Arrow_256.png" />
+    <None Remove="Images\Arrow_48.png" />
+    <None Remove="Images\Audip.png" />
+    <None Remove="Images\Audip_128.png" />
+    <None Remove="Images\Audip_256.png" />
+    <None Remove="Images\Buchanan.png" />
+    <None Remove="Images\Callahan.png" />
+    <None Remove="Images\Clock.png" />
+    <None Remove="Images\Clock_128.png" />
+    <None Remove="Images\Clock_256.png" />
+    <None Remove="Images\Davolio.png" />
+    <None Remove="Images\Delete.png" />
+    <None Remove="Images\Dodsworth.png" />
+    <None Remove="Images\Image0.png" />
+    <None Remove="Images\Image1.png" />
+    <None Remove="Images\Image10.png" />
+    <None Remove="Images\Image11.png" />
+    <None Remove="Images\Image12.png" />
+    <None Remove="Images\Image13.png" />
+    <None Remove="Images\Image14.png" />
+    <None Remove="Images\Image15.png" />
+    <None Remove="Images\Image16.png" />
+    <None Remove="Images\Image17.png" />
+    <None Remove="Images\Image18.png" />
+    <None Remove="Images\Image19.png" />
+    <None Remove="Images\Image2.png" />
+    <None Remove="Images\Image20.png" />
+    <None Remove="Images\Image21.png" />
+    <None Remove="Images\Image22.png" />
+    <None Remove="Images\Image23.png" />
+    <None Remove="Images\Image24.png" />
+    <None Remove="Images\Image25.png" />
+    <None Remove="Images\Image26.png" />
+    <None Remove="Images\Image27.png" />
+    <None Remove="Images\Image28.png" />
+    <None Remove="Images\Image3.png" />
+    <None Remove="Images\Image4.png" />
+    <None Remove="Images\Image5.png" />
+    <None Remove="Images\Image6.png" />
+    <None Remove="Images\Image7.png" />
+    <None Remove="Images\Image8.png" />
+    <None Remove="Images\Image9.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Arrow_128.png" />
+    <EmbeddedResource Include="Images\Arrow_256.png" />
+    <EmbeddedResource Include="Images\Arrow_48.png" />
+    <EmbeddedResource Include="Images\Audip.png" />
+    <EmbeddedResource Include="Images\Audip_128.png" />
+    <EmbeddedResource Include="Images\Audip_256.png" />
+    <EmbeddedResource Include="Images\Buchanan.png" />
+    <EmbeddedResource Include="Images\Callahan.png" />
+    <EmbeddedResource Include="Images\Clock.png" />
+    <EmbeddedResource Include="Images\Clock_128.png" />
+    <EmbeddedResource Include="Images\Clock_256.png" />
+    <EmbeddedResource Include="Images\Davolio.png" />
+    <EmbeddedResource Include="Images\Delete.png" />
+    <EmbeddedResource Include="Images\Dodsworth.png" />
+    <EmbeddedResource Include="Images\Image0.png" />
+    <EmbeddedResource Include="Images\Image1.png" />
+    <EmbeddedResource Include="Images\Image10.png" />
+    <EmbeddedResource Include="Images\Image11.png" />
+    <EmbeddedResource Include="Images\Image12.png" />
+    <EmbeddedResource Include="Images\Image13.png" />
+    <EmbeddedResource Include="Images\Image14.png" />
+    <EmbeddedResource Include="Images\Image15.png" />
+    <EmbeddedResource Include="Images\Image16.png" />
+    <EmbeddedResource Include="Images\Image17.png" />
+    <EmbeddedResource Include="Images\Image18.png" />
+    <EmbeddedResource Include="Images\Image19.png" />
+    <EmbeddedResource Include="Images\Image2.png" />
+    <EmbeddedResource Include="Images\Image20.png" />
+    <EmbeddedResource Include="Images\Image21.png" />
+    <EmbeddedResource Include="Images\Image22.png" />
+    <EmbeddedResource Include="Images\Image23.png" />
+    <EmbeddedResource Include="Images\Image24.png" />
+    <EmbeddedResource Include="Images\Image25.png" />
+    <EmbeddedResource Include="Images\Image26.png" />
+    <EmbeddedResource Include="Images\Image27.png" />
+    <EmbeddedResource Include="Images\Image28.png" />
+    <EmbeddedResource Include="Images\Image3.png" />
+    <EmbeddedResource Include="Images\Image4.png" />
+    <EmbeddedResource Include="Images\Image5.png" />
+    <EmbeddedResource Include="Images\Image6.png" />
+    <EmbeddedResource Include="Images\Image7.png" />
+    <EmbeddedResource Include="Images\Image8.png" />
+    <EmbeddedResource Include="Images\Image9.png" />
+  </ItemGroup>
+    
+  <ItemGroup>
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.SfDataGrid" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.SfSchedule" Version="16.3.0.21" />
+    <PackageReference Include="Xamarin.Forms" Version="2.4.0.280" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

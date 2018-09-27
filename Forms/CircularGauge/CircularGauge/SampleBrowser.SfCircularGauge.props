@@ -1,0 +1,94 @@
+<Project ToolsVersion="15.0">
+  <PropertyGroup>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>Samples\CircularGauge\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CircularGaugeAnnotation\CircularGaugeAnnotation.xaml">
+      <Link>Samples\CircularGauge\Samples\CircularGaugeAnnotation\CircularGaugeAnnotation.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CircularGaugeLiveUpdate\CircularGaugeLiveUpdate.xaml">
+      <Link>Samples\CircularGauge\Samples\CircularGaugeLiveUpdate\CircularGaugeLiveUpdate.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CircularGaugeSample\CircularGaugeSample.xaml">
+      <Link>Samples\CircularGauge\Samples\CircularGaugeSample\CircularGaugeSample.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CustomizationSample\CustomizationSample.xaml">
+      <Link>Samples\CircularGauge\Samples\CustomizationSample\CustomizationSample.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DirectionCompass\DirectionCompass.xaml">
+      <Link>Samples\CircularGauge\Samples\DirectionCompass\DirectionCompass.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\GradientRange\GradientRange.xaml">
+      <Link>Samples\CircularGauge\Samples\GradientRange\GradientRange.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\MultipleScales\MultipleScales.xaml">
+      <Link>Samples\CircularGauge\Samples\MultipleScales\MultipleScales.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Pointers\Pointers.xaml">
+      <Link>Samples\CircularGauge\Samples\Pointers\Pointers.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\CircularGaugeAnnotation\CircularGaugeAnnotation.xaml.cs">
+      <DependentUpon>CircularGaugeAnnotation.xaml</DependentUpon>
+      <Link>Samples\CircularGauge\Samples\CircularGaugeAnnotation\CircularGaugeAnnotation.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\CircularGaugeLiveUpdate\CircularGaugeLiveUpdate.xaml.cs">
+      <DependentUpon>CircularGaugeLiveUpdate.xaml</DependentUpon>
+      <Link>Samples\CircularGauge\Samples\CircularGaugeLiveUpdate\CircularGaugeLiveUpdate.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\CircularGaugeSample\CircularGaugeSample.xaml.cs">
+      <DependentUpon>CircularGaugeSample.xaml</DependentUpon>
+      <Link>Samples\CircularGauge\Samples\CircularGaugeSample\CircularGaugeSample.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\CustomizationSample\CustomizationSample.xaml.cs">
+      <DependentUpon>CustomizationSample.xaml</DependentUpon>
+      <Link>Samples\CircularGauge\Samples\CustomizationSample\CustomizationSample.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DirectionCompass\DirectionCompass.xaml.cs">
+      <DependentUpon>DirectionCompass.xaml</DependentUpon>
+      <Link>Samples\CircularGauge\Samples\DirectionCompass\DirectionCompass.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\GradientRange\GradientRange.xaml.cs">
+      <DependentUpon>GradientRange.xaml</DependentUpon>
+      <Link>Samples\CircularGauge\Samples\GradientRange\GradientRange.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\MultipleScales\MultipleScales.xaml.cs">
+      <DependentUpon>MultipleScales.xaml</DependentUpon>
+      <Link>Samples\CircularGauge\Samples\MultipleScales\MultipleScales.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Pointers\Pointers.xaml.cs">
+      <DependentUpon>Pointers.xaml</DependentUpon>
+      <Link>Samples\CircularGauge\Samples\Pointers\Pointers.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\ViewModel\CircularGaugeViewModel.cs">
+      <Link>Samples\CircularGauge\ViewModel\CircularGaugeViewModel.cs</Link>
+    </Compile>
+  </ItemGroup>
+</Project>
