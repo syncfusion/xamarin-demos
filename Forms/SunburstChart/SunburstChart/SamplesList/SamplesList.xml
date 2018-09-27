@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
-<Samples>
-<Sample Title = "Getting Started" Name = "GettingStarted" Description ="This samples show cases the sunburst chart for hierarchical." 
-        IsUpdated="true" SearchTags="GettingStarted,SunburstShowCase"/>
-<Sample Title = "Drill down" Name = "Drilldown" Description ="This samples show cases the drill down feature of sunburst chart." 
-        IsNew="true" SearchTags="Drilldown,Zooming"/>
-<Sample Title = "Selection" Name = "Selection" Description ="This samples show cases the various selection modes of sunburst chart."  
-        IsNew="true" SearchTags="Selection,SegmentSelection"/>
-</Samples>
