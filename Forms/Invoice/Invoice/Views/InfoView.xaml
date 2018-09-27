@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+					   x:Class="XamarinIOInvoice.Views.InfoView">
+  <ScrollView>
+    <StackLayout x:Name="InfoLayout">
+      <StackLayout x:Name="InfoWPAndroid" Padding="10,10,0,10" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical">
+        <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical">
+          <StackLayout Padding="0,0,0,0" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+            <Label x:Name="labelProductName" Text="{Binding ProductName}" YAlign="Center">
+              <Label.Font>
+                <OnPlatform x:TypeArguments="Font">
+                  <OnPlatform.iOS>Large</OnPlatform.iOS>
+                  <OnPlatform.Android>Large</OnPlatform.Android>
+                  <OnPlatform.WinPhone>35</OnPlatform.WinPhone>
+                </OnPlatform>
+              </Label.Font>
+            </Label>
+          </StackLayout>
+          <Label x:Name="labelDescription" Text="{Binding Description}" YAlign="Center" Font="Small">
+            <Label.Font>
+              <OnPlatform x:TypeArguments="Font">
+                <OnPlatform.iOS>Small</OnPlatform.iOS>
+                <OnPlatform.Android>Medium</OnPlatform.Android>
+                <OnPlatform.WinPhone>Normal,20</OnPlatform.WinPhone>
+              </OnPlatform>
+            </Label.Font>
+          </Label>
+        </StackLayout>
+      </StackLayout>
+      <StackLayout x:Name="Info" Orientation="Vertical"  Padding="10,15,10,10">
+        <StackLayout Orientation="Vertical" >
+          <Label Text="INVOICE" Font="Bold,18"></Label>
+          <Label Font="12" Text="This application provides a simple invoice generation which has export functionality to different file formats such as PDF, Excel and Word.  The following assemblies are referred to generate the invoice."></Label>
+        </StackLayout>
+        <StackLayout Padding="0,5,0,0" Orientation="Vertical" >
+          <Label Font="12" Text="* Syncfusion.Compression.Portable"></Label>
+          <Label Font="12" Text="* Syncfusion.Pdf.Portable"></Label>
+          <Label Font="12" Text="* Syncfusion.XlsIO.Portable"></Label>
+          <Label Font="12" Text="* Syncfusion.DocIO.Portable"></Label>
+        </StackLayout>
+        <StackLayout Orientation="Vertical" >
+          <Label Font="12" Text="Essential PDF makes it possible to easily create richly formatted PDF documents as well as modify existing ones. Essential XlsIO creates and manipulates Microsoft Excel files, which can be used on systems that do not have Microsoft Excel installed, making it an excellent report engine for tabular data. Essential DocIO allows creation and manipulation of Microsoft Word files without any dependencies of Microsoft Word. It enables users to create richly formatted Microsoft Word reports."></Label>
+        </StackLayout>
+      </StackLayout>
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

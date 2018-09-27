@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\carousel.ttf" >
+	<Link>Resources\carousel.ttf</Link>
+	</BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\CarouselIcon.ttf" >
+	<Link>Resources\CarouselIcon.ttf</Link>
+	</BundleResource>
+  </ItemGroup>
+ 
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\icon_512x512.png" >
+	<Link>Resources\icon_512x512.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\carousel_person1.png" >
+	<Link>Resources\carousel_person1.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\carousel_person2.png" >
+	<Link>Resources\carousel_person2.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\carousel_person3.png" >
+	<Link>Resources\carousel_person3.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\carousel_person4.png" >
+	<Link>Resources\carousel_person4.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\carousel_person5.png" >
+	<Link>Resources\carousel_person5.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\circle.png" >
+	<Link>Resources\circle.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\editor.png" >
+	<Link>Resources\editor.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  
+</Project>

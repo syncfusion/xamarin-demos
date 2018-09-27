@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PatientMonitor.HistoryView"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             xmlns:local="clr-namespace:PatientMonitor;assembly=PatientMonitor" >
+  <ContentPage.Content>
+    <!--History View Grid-->
+    <Grid x:Name="mainGrid" Grid.RowSpacing="0" BackgroundColor="White">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="50" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <Grid x:Name="LiveHeaderGrid" BackgroundColor="#B51110" HorizontalOptions="FillAndExpand" Grid.Row="0"  Grid.ColumnSpan="2" >
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="0.95*"/>
+          <ColumnDefinition Width="0.05*"/>
+        </Grid.ColumnDefinitions>
+        <StackLayout Orientation="Horizontal" Grid.Column="0">
+          <Label WidthRequest="15"/>
+          <Label x:Name="labelLive" Text="Live View" FontSize="30" TextColor="White"  VerticalTextAlignment="Center"/>
+        </StackLayout>
+        <StackLayout x:Name="imageStack" Orientation="Horizontal" Grid.Column="1" >
+          <Label x:Name="alignLabel" />
+          <Image x:Name="imageButton" HorizontalOptions="End" ></Image>
+        </StackLayout>
+      </Grid>
+
+      <Grid RowSpacing="0" x:Name="SampleLayout" IsVisible="False"  Grid.Row="1" Grid.ColumnSpan="2">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="0.2*" />
+          <RowDefinition Height="0.2*" />
+          <RowDefinition Height="0.2*" />
+          <RowDefinition Height="0.2*" />
+        </Grid.RowDefinitions>
+
+        <chart:SfChart x:Name="Chart" Grid.Row="0" HorizontalOptions="FillAndExpand" Grid.ColumnSpan="1"  VerticalOptions="FillAndExpand">
+          <chart:SfChart.ChartBehaviors>
+            <chart:ChartTrackballBehavior>
+            </chart:ChartTrackballBehavior>
+          </chart:SfChart.ChartBehaviors>
+          <chart:SfChart.PrimaryAxis>
+            <chart:CategoryAxis x:Name="pri" ShowMajorGridLines="false" ShowTrackballInfo="false" />
+          </chart:SfChart.PrimaryAxis>
+          <chart:SfChart.SecondaryAxis>
+            <chart:NumericalAxis x:Name="sec" IsVisible="true" Minimum="0" Maximum="90" ShowMajorGridLines="false" EdgeLabelsDrawingMode="Shift">
+              <chart:NumericalAxis.Title>
+                <chart:ChartAxisTitle Text="BP" TextColor="#41bf74" />
+              </chart:NumericalAxis.Title>
+            </chart:NumericalAxis>
+          </chart:SfChart.SecondaryAxis>
+          <chart:SfChart.Series>
+            <chart:LineSeries x:Name="historyChart1" Color="#41bf74" ItemsSource="{Binding HistoryObservations}" XBindingPath="DateTime" YBindingPath="BP" Label="Germany" LegendIcon="Rectangle" EnableTooltip="false" EnableAnimation="True" />
+          </chart:SfChart.Series>
+        </chart:SfChart>
+
+        <chart:SfChart Grid.Row="1" x:Name="Chart1" Grid.ColumnSpan="1"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+          <chart:SfChart.ChartBehaviors>
+            <chart:ChartTrackballBehavior>
+            </chart:ChartTrackballBehavior>
+          </chart:SfChart.ChartBehaviors>
+          <chart:SfChart.PrimaryAxis>
+            <chart:CategoryAxis x:Name="pri1" ShowMajorGridLines="false" ShowTrackballInfo="false" />
+          </chart:SfChart.PrimaryAxis>
+          <chart:SfChart.SecondaryAxis>
+            <chart:NumericalAxis x:Name="sec1" IsVisible="true" ShowMajorGridLines="false" EdgeLabelsDrawingMode="Shift">
+              <chart:NumericalAxis.Title>
+                <chart:ChartAxisTitle Text="Sat"  TextColor="#f7931e"  />
+              </chart:NumericalAxis.Title>
+            </chart:NumericalAxis>
+          </chart:SfChart.SecondaryAxis>
+          <chart:SfChart.Series>
+            <chart:LineSeries x:Name="historyChart2"  Color="#f7931e" ItemsSource="{Binding HistoryObservations}" XBindingPath="DateTime" YBindingPath="RR" Label="Germany" LegendIcon="Rectangle" EnableTooltip="false" EnableAnimation="True" />
+          </chart:SfChart.Series>
+        </chart:SfChart>
+
+        <chart:SfChart Grid.Row="2" x:Name="Chart2" Grid.ColumnSpan="1"   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+          <chart:SfChart.ChartBehaviors>
+            <chart:ChartTrackballBehavior>
+            </chart:ChartTrackballBehavior>
+          </chart:SfChart.ChartBehaviors>
+          <chart:SfChart.PrimaryAxis>
+            <chart:CategoryAxis x:Name="pri2" ShowMajorGridLines="false" ShowTrackballInfo="false" />
+          </chart:SfChart.PrimaryAxis>
+          <chart:SfChart.SecondaryAxis>
+            <chart:NumericalAxis x:Name="sec2" IsVisible="true" Minimum="0" Maximum="90" ShowMajorGridLines="false" EdgeLabelsDrawingMode="Shift">
+              <chart:NumericalAxis.Title>
+                <chart:ChartAxisTitle Text="HR"  TextColor="#278cfc" />
+              </chart:NumericalAxis.Title>
+            </chart:NumericalAxis>
+          </chart:SfChart.SecondaryAxis>
+          <chart:SfChart.Series>
+            <chart:LineSeries x:Name="historyChart3" Color="#278cfc" ItemsSource="{Binding HistoryObservations}" XBindingPath="DateTime" YBindingPath="HR" Label="Germany" LegendIcon="Rectangle" EnableTooltip="false" EnableAnimation="True" />
+          </chart:SfChart.Series>
+        </chart:SfChart>
+
+        <chart:SfChart Grid.Row="3" x:Name="Chart3" Grid.ColumnSpan="1"   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+          <chart:SfChart.ChartBehaviors>
+            <chart:ChartTrackballBehavior>
+            </chart:ChartTrackballBehavior>
+          </chart:SfChart.ChartBehaviors>
+          <chart:SfChart.PrimaryAxis>
+            <chart:CategoryAxis x:Name="pri3" ShowMajorGridLines="false" ShowTrackballInfo="true" />
+          </chart:SfChart.PrimaryAxis>
+          <chart:SfChart.SecondaryAxis>
+            <chart:NumericalAxis x:Name="sec3" Minimum="0" Maximum="90" IsVisible="true" ShowMajorGridLines="false" EdgeLabelsDrawingMode="Shift">
+              <chart:NumericalAxis.Title>
+                <chart:ChartAxisTitle Text="Temp" TextColor="#e02f2f" />
+              </chart:NumericalAxis.Title>
+            </chart:NumericalAxis>
+          </chart:SfChart.SecondaryAxis>
+          <chart:SfChart.Series>
+            <chart:LineSeries x:Name="historyChart4" Color="#e02f2f" ItemsSource="{Binding HistoryObservations}" XBindingPath="DateTime" YBindingPath="Temp" Label="Germany" LegendIcon="Rectangle" EnableTooltip="false" EnableAnimation="True" />
+          </chart:SfChart.Series>
+        </chart:SfChart>
+
+      </Grid>
+
+      <!--Live View Grid-->
+
+      <Grid x:Name="LiveLayout" RowSpacing="0" IsVisible="True" Grid.Row="1" Grid.ColumnSpan="2">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="0.05*"/>
+          <RowDefinition Height="0.25*"/>
+          <RowDefinition Height="0.05*"/>
+          <RowDefinition Height="0.25*"/>
+          <RowDefinition Height="0.05*"/>
+          <RowDefinition Height="0.25*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="0.4*"/>
+          <ColumnDefinition Width="0.6*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackLayout Orientation="Horizontal" Grid.Row="0"  Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" BackgroundColor="#f5f6f7">
+          <Label WidthRequest="10"/>
+          <Label x:Name="LiveBPLabel" Text="BP" FontSize="17" TextColor="#808080" Grid.Row="0" VerticalOptions = "Center" HorizontalOptions = "Start" />
+          <Label WidthRequest="20"/>
+          <Label x:Name="LiveBPLabel1"  FontSize="17" Grid.Row="0" TextColor="#41bf74" VerticalOptions = "Center" HorizontalOptions = "End" />
+        </StackLayout>
+
+        <StackLayout Grid.ColumnSpan="2" VerticalOptions = "FillAndExpand"  Grid.Row="1">
+          <chart:SfChart x:Name="LiveChart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+            <chart:SfChart.PrimaryAxis>
+              <chart:DateTimeAxis IsVisible="false" ShowMajorGridLines="false"/>
+            </chart:SfChart.PrimaryAxis>
+
+            <chart:SfChart.SecondaryAxis>
+              <chart:NumericalAxis IsVisible="false" ShowMajorGridLines="false"/>
+            </chart:SfChart.SecondaryAxis>
+
+            <chart:SfChart.Series>
+
+              <chart:LineSeries x:Name="historyChart5" Color="#41bf74"  ItemsSource="{Binding LiveObservations}" XBindingPath="DateTime" YBindingPath="BP" Label="Germany" LegendIcon="Rectangle" EnableTooltip="False" EnableAnimation="True"/>
+            </chart:SfChart.Series>
+          </chart:SfChart>
+
+        </StackLayout>
+
+        <!--<StackLayout Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" BackgroundColor="#E5E7E9">
+         <Label WidthRequest="10"/>
+         	    <Label x:Name="SatLabel" Text="Sat" FontSize="15"  TextColor="#808080"   VerticalOptions="Center" HorizontalOptions = "Start" />
+         <Label WidthRequest="20"/>
+         	    <Label x:Name="SatValueLabel" Text="95%" FontSize="15"  TextColor="#f7931e"     VerticalOptions="Center" HorizontalOptions = "End" />
+       </StackLayout>-->
+
+        <StackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" BackgroundColor="#f5f6f7">
+          <Label WidthRequest="10"/>
+          <Label x:Name="LiveRRLabel" Text="RR" FontSize="17" TextColor="#808080"  VerticalOptions="Center"  HorizontalOptions = "Start" />
+          <Label WidthRequest="20"/>
+          <Label x:Name="LiveRRValueLabel"  FontSize="17" TextColor="#f7931e"   VerticalOptions="Center"  HorizontalOptions = "End" />
+        </StackLayout>
+        <StackLayout VerticalOptions = "FillAndExpand" Grid.ColumnSpan="2" Grid.Row="3">
+          <chart:SfChart x:Name="LiveChart1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+            <chart:SfChart.PrimaryAxis>
+              <chart:DateTimeAxis IsVisible="false" ShowMajorGridLines="false"/>
+            </chart:SfChart.PrimaryAxis>
+
+            <chart:SfChart.SecondaryAxis>
+              <chart:NumericalAxis IsVisible="false" ShowMajorGridLines="false"/>
+            </chart:SfChart.SecondaryAxis>
+
+            <chart:SfChart.Series>
+
+              <chart:LineSeries x:Name="historyChart6"  Color="#f7931e" ItemsSource="{Binding LiveObservations}" XBindingPath="DateTime" YBindingPath="RR" Label="Germany" LegendIcon="Rectangle" EnableTooltip="False" EnableAnimation="True"/>
+            </chart:SfChart.Series>
+          </chart:SfChart>
+
+        </StackLayout>
+
+        <!--<StackLayout Grid.Row="5" Grid.Column="0" Orientation="Horizontal" Grid.ColumnSpan="2" BackgroundColor="#f5f6f7">
+         <Label WidthRequest="10"/>
+  	  	<Label x:Name="HRLabel" Text="HR" FontSize="15" TextColor="#808080"  VerticalOptions = "Center" HorizontalOptions = "Start" />
+         <Label WidthRequest="20"/>
+  	  	<Label x:Name="HRValueLabel" Text="122" FontSize="15"  TextColor="#278cfc" VerticalOptions = "Center" HorizontalOptions = "End" />
+       </StackLayout>-->
+        <StackLayout Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" BackgroundColor="#f5f6f7">
+          <Label WidthRequest="10"/>
+          <Label x:Name="LiveTempLabel" Text="Temp" FontSize="17"  TextColor="#808080" VerticalOptions = "Center" HorizontalOptions = "Start" />
+          <Label WidthRequest="20"/>
+          <Label x:Name="LiveTempValueLabel"  FontSize="17" TextColor="#278cfc"  VerticalOptions = "Center" HorizontalOptions = "End" />
+        </StackLayout>
+
+        <StackLayout VerticalOptions = "FillAndExpand" Grid.ColumnSpan="2" Grid.Row="5">
+          <chart:SfChart x:Name="LiveChart2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+            <chart:SfChart.PrimaryAxis>
+              <chart:DateTimeAxis IsVisible="false" ShowMajorGridLines="false"/>
+            </chart:SfChart.PrimaryAxis>
+
+            <chart:SfChart.SecondaryAxis>
+              <chart:NumericalAxis IsVisible="false" ShowMajorGridLines="false"/>
+            </chart:SfChart.SecondaryAxis>
+
+            <chart:SfChart.Series>
+
+              <chart:LineSeries x:Name="historyChart7" Color="#278cfc" ItemsSource="{Binding LiveObservations}" XBindingPath="DateTime" YBindingPath="Temp" Label="Germany" LegendIcon="Rectangle" EnableTooltip="False" EnableAnimation="True"/>
+            </chart:SfChart.Series>
+          </chart:SfChart>
+
+        </StackLayout>
+      </Grid>
+
+    </Grid>
+  </ContentPage.Content>
+</ContentPage>

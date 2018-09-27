@@ -1,0 +1,150 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Icons\bigbenbridge.jpg" />
+    <None Remove="Icons\Chart.jpg" />
+    <None Remove="Icons\Chart.txt" />
+    <None Remove="Icons\CreateIcon.png" />
+    <None Remove="Icons\CreateNew.png" />
+    <None Remove="Icons\Customize.jpg" />
+    <None Remove="Icons\dashboard.jpg" />
+    <None Remove="Icons\Delete1.png" />
+    <None Remove="Icons\Freehand.jpg" />
+    <None Remove="Icons\FreeHand.txt" />
+    <None Remove="Icons\Gallery_S.png" />
+    <None Remove="Icons\Gallery_W.png" />
+    <None Remove="Icons\image2.png" />
+    <None Remove="Icons\image3.png" />
+    <None Remove="Icons\image4.png" />
+    <None Remove="Icons\NotSelected.png" />
+    <None Remove="Icons\Plain.png" />
+    <None Remove="Icons\Selected.png" />
+    <None Remove="Icons\sendbackward.png" />
+    <None Remove="Icons\settings.png" />
+    <None Remove="Icons\share.png" />
+    <None Remove="Icons\succinity.png" />
+    <None Remove="Icons\Summer.txt" />
+    <None Remove="Icons\Take_Photo_S.png" />
+    <None Remove="Icons\Take_Photo_W.png" />
+    <None Remove="Icons\twitter.jpeg" />
+    <None Remove="Icons\Venn.jpg" />
+    <None Remove="Icons\Venn.txt" />
+    <None Remove="Icons\CustomViewImage1.png" />
+    <None Remove="Icons\CustomViewImage2.png" />
+    <None Remove="Icons\CustomViewImage3.png" />
+	<None Remove="Icons\AddIcon.png" />
+    <None Remove="Icons\ReplaceIcon.png" />
+    <None Remove="Icons\BringFrontIcon.png" />
+	<None Remove="Icons\SendBack.png" />
+    <None Remove="Icons\ITypogy1.png" />
+    <None Remove="Icons\ITypogy2.png" />
+    <None Remove="Icons\ITypogy3.png" />
+    <None Remove="Icons\ITypogy4.png" />
+    <None Remove="Icons\ITypogy5.png" />
+    <None Remove="Icons\ITypogy6.png" />
+    <None Remove="SamplesList\SamplesList.xml" />
+    <None Remove="Syncfusion.lic" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Icons\bigbenbridge.jpg" />
+    <EmbeddedResource Include="Icons\Chart.jpg" />
+    <EmbeddedResource Include="Icons\Chart.txt" />
+    <EmbeddedResource Include="Icons\CreateIcon.png" />
+    <EmbeddedResource Include="Icons\CreateNew.png" />
+    <EmbeddedResource Include="Icons\Customize.jpg" />
+    <EmbeddedResource Include="Icons\dashboard.jpg" />
+    <EmbeddedResource Include="Icons\Delete1.png" />
+    <EmbeddedResource Include="Icons\Freehand.jpg" />
+    <EmbeddedResource Include="Icons\FreeHand.txt" />
+    <EmbeddedResource Include="Icons\Gallery_S.png" />
+    <EmbeddedResource Include="Icons\Gallery_W.png" />
+    <EmbeddedResource Include="Icons\image2.png" />
+    <EmbeddedResource Include="Icons\image3.png" />
+    <EmbeddedResource Include="Icons\image4.png" />
+    <EmbeddedResource Include="Icons\NotSelected.png" />
+    <EmbeddedResource Include="Icons\Plain.png" />
+    <EmbeddedResource Include="Icons\Selected.png" />
+    <EmbeddedResource Include="Icons\sendbackward.png" />
+    <EmbeddedResource Include="Icons\settings.png" />
+    <EmbeddedResource Include="Icons\share.png" />
+    <EmbeddedResource Include="Icons\succinity.png" />
+    <EmbeddedResource Include="Icons\Summer.txt" />
+    <EmbeddedResource Include="Icons\Take_Photo_S.png" />
+    <EmbeddedResource Include="Icons\Take_Photo_W.png" />
+    <EmbeddedResource Include="Icons\twitter.jpeg" />
+    <EmbeddedResource Include="Icons\Venn.jpg" />
+    <EmbeddedResource Include="Icons\Venn.txt" />
+	<EmbeddedResource Include="Icons\AddIcon.png" />
+    <EmbeddedResource Include="Icons\ReplaceIcon.png" />
+    <EmbeddedResource Include="Icons\BringFrontIcon.png" />
+	<EmbeddedResource Include="Icons\SendBack.png" />
+    <EmbeddedResource Include="Icons\CustomViewImage1.png" />
+    <EmbeddedResource Include="Icons\CustomViewImage2.png" />
+    <EmbeddedResource Include="Icons\CustomViewImage3.png" />
+    <EmbeddedResource Include="Icons\ITypogy1.png" />
+    <EmbeddedResource Include="Icons\ITypogy2.png" />
+    <EmbeddedResource Include="Icons\ITypogy3.png" />
+    <EmbeddedResource Include="Icons\ITypogy4.png" />
+    <EmbeddedResource Include="Icons\ITypogy5.png" />
+    <EmbeddedResource Include="Icons\ITypogy6.png" />
+    <EmbeddedResource Include="SamplesList\SamplesList.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SampleBrowser.Core" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.SfImageEditor" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="16.3.0.21" />
+    <PackageReference Include="System.ComponentModel" Version="4.3.0" />
+    <PackageReference Include="Xamarin.Forms" Version="2.4.0.280" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Samples\CustomViewSample\CustomViewHomePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+  <PropertyGroup>
+    <PrepareResourceNamesDependsOn>
+      IncludeFilesInDroid;
+      $(PrepareResourceNamesDependsOn)
+    </PrepareResourceNamesDependsOn>
+  </PropertyGroup>
+  <Target Name="IncludeFilesInDroid">
+    <ItemGroup>
+      <FilesToDelete Include="..\ImageEditor.Android\Resources\CodeFiles\**\*" />
+      <FilesToDelete Include="..\ImageEditor.iOS\Resources\CodeFiles\**\*" />
+      <FilesToDelete Include="..\ImageEditor.UWP\Resources\CodeFiles\**\*" />
+    </ItemGroup>
+    <Delete Files="@(FilesToDelete)" />
+    <RemoveDir Directories="..\ImageEditor.Android\Resources\CodeFiles\" />
+    <RemoveDir Directories="..\ImageEditor.iOS\Resources\CodeFiles\" />
+    <RemoveDir Directories="..\ImageEditor.UWP\Resources\CodeFiles\" />
+    <ItemGroup>
+      <SourceResourceFiles Include="Samples\**\*">
+        <DroidFiles>..\ImageEditor.Android\Resources\CodeFiles\</DroidFiles>
+        <iOSFiles>..\ImageEditor.iOS\Resources\CodeFiles\</iOSFiles>
+        <UWPFiles>..\ImageEditor.UWP\Resources\CodeFiles\</UWPFiles>
+      </SourceResourceFiles>
+    </ItemGroup>
+    <Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(DroidFiles)\%(RecursiveDir)" />
+    <Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(iOSFiles)\%(RecursiveDir)" />
+    <Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(UWPFiles)\%(RecursiveDir)" />
+  </Target>
+</Project>

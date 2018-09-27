@@ -1,0 +1,542 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\CodeviewerDependency.cs">
+      <Link>Diagram\CodeviewerDependency.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\BorderFrameRenderer.cs">
+      <Link>Diagram\BorderFrameRenderer.cs</Link>
+    </Compile>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DPaul.png">
+      <Link>Resources\drawable\DPaul.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Demp.png">
+      <Link>Resources\drawable\Demp.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DClayton.png">
+      <Link>Resources\drawable\DClayton.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Deric.png">
+      <Link>Resources\drawable\Deric.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DImage17.png">
+      <Link>Resources\drawable\DImage17.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Dimage57.png">
+      <Link>Resources\drawable\Dimage57.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DImage9.png">
+      <Link>Resources\drawable\DImage9.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Dimages12.png">
+      <Link>Resources\drawable\Dimages12.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Dimages2.png">
+      <Link>Resources\drawable\Dimages2.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Dimages3.png">
+      <Link>Resources\drawable\Dimages3.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Dimages9.png">
+      <Link>Resources\drawable\Dimages9.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DJenny.png">
+      <Link>Resources\drawable\DJenny.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DMaria.png">
+      <Link>Resources\drawable\DMaria.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DImage23.png">
+      <Link>Resources\drawable\DImage23.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\FlowDiagram.png">
+      <Link>Resources\drawable\FlowDiagram.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\HierarchicalLayout.png">
+      <Link>Resources\drawable\HierarchicalLayout.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\NodeAnnotation.png">
+      <Link>Resources\drawable\NodeAnnotation.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\OrganizationalLayout.png">
+      <Link>Resources\drawable\OrganizationalLayout.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Ports.png">
+      <Link>Resources\drawable\Ports.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Stencil.png">
+      <Link>Resources\drawable\Stencil.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DImage24.png">
+      <Link>Resources\drawable\DImage24.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DThomas.png">
+      <Link>Resources\drawable\DThomas.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Dsmith.png">
+      <Link>Resources\drawable\Dsmith.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DJohn.png">
+      <Link>Resources\drawable\DJohn.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Dimages7.png">
+      <Link>Resources\drawable\Dimages7.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Dimage56.png">
+      <Link>Resources\drawable\Dimage56.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Dimage55.png">
+      <Link>Resources\drawable\Dimage55.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Dimage54.png">
+      <Link>Resources\drawable\Dimage54.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Dimage53.png">
+      <Link>Resources\drawable\Dimage53.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Dimage51.png">
+      <Link>Resources\drawable\Dimage51.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Dimage50.png">
+      <Link>Resources\drawable\Dimage50.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Dimage43.png">
+      <Link>Resources\drawable\Dimage43.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DImage30.png">
+      <Link>Resources\drawable\DImage30.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DImage29.png">
+      <Link>Resources\drawable\DImage29.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DImage28.png">
+      <Link>Resources\drawable\DImage28.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DImage27.png">
+      <Link>Resources\drawable\DImage27.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DImage26.png">
+      <Link>Resources\drawable\DImage26.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DImage25.png">
+      <Link>Resources\drawable\DImage25.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DImage22.png">
+      <Link>Resources\drawable\DImage22.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DImage18.png">
+      <Link>Resources\drawable\DImage18.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DImage19.png">
+      <Link>Resources\drawable\DImage19.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DImage20.png">
+      <Link>Resources\drawable\DImage20.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DImage21.png">
+      <Link>Resources\drawable\DImage21.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DImage16.png">
+      <Link>Resources\drawable\DImage16.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DImage15.png">
+      <Link>Resources\drawable\DImage15.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DImage14.png">
+      <Link>Resources\drawable\DImage14.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DImage13.png">
+      <Link>Resources\drawable\DImage13.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DImage12.png">
+      <Link>Resources\drawable\DImage12.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DImage11.png">
+      <Link>Resources\drawable\DImage11.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DImage10.png">
+      <Link>Resources\drawable\DImage10.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DImage0.png">
+      <Link>Resources\drawable\DImage0.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\mindmapcollpase.png">
+      <Link>Resources\drawable\mindmapcollpase.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\mindmapdelete.png">
+      <Link>Resources\drawable\mindmapdelete.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\mindmapexpand.png">
+      <Link>Resources\drawable\mindmapexpand.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\mindmapmore.png">
+      <Link>Resources\drawable\mindmapmore.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\mindmapplus.png">
+      <Link>Resources\drawable\mindmapplus.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Edge.png">
+      <Link>Resources\drawable\Edge.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Edge1.png">
+      <Link>Resources\drawable\Edge1.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\plus.png">
+      <Link>Resources\drawable\plus.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Pointer.png">
+      <Link>Resources\drawable\Pointer.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Pointer1.png">
+      <Link>Resources\drawable\Pointer1.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\PointerW.png">
+      <Link>Resources\drawable\PointerW.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Straight.png">
+      <Link>Resources\drawable\Straight.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Straight1.png">
+      <Link>Resources\drawable\Straight1.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\sub.png">
+      <Link>Resources\drawable\sub.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\TextNode1.png">
+      <Link>Resources\drawable\TextNode1.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\TextNodeNormal.png">
+      <Link>Resources\drawable\TextNodeNormal.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\TextNodeW.png">
+      <Link>Resources\drawable\TextNodeW.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Curve1.png">
+      <Link>Resources\drawable\Curve1.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Curve.png">
+      <Link>Resources\drawable\Curve.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ConnectorToolW.png">
+      <Link>Resources\drawable\ConnectorToolW.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ConnectorTool1.png">
+      <Link>Resources\drawable\ConnectorTool1.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ConnectorTool.png">
+      <Link>Resources\drawable\ConnectorTool.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\mindmapDefault.png">
+      <Link>Resources\drawable\mindmapDefault.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\mindmapconttree.png">
+      <Link>Resources\drawable\mindmapconttree.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\mindmaportho.png">
+      <Link>Resources\drawable\mindmaportho.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\mindmapsimpletree.png">
+      <Link>Resources\drawable\mindmapsimpletree.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-hdpi\mindmapDefault.png">
+      <Link>Resources\drawable-hdpi\mindmapDefault.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-hdpi\mindmapconttree.png">
+      <Link>Resources\drawable-hdpi\mindmapconttree.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-hdpi\mindmaportho.png">
+      <Link>Resources\drawable-hdpi\mindmaportho.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-hdpi\mindmapsimpletree.png">
+      <Link>Resources\drawable-hdpi\mindmapsimpletree.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xhdpi\mindmapDefault.png">
+      <Link>Resources\drawable-xhdpi\mindmapDefault.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xhdpi\mindmapconttree.png">
+      <Link>Resources\drawable-xhdpi\mindmapconttree.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xhdpi\mindmaportho.png">
+      <Link>Resources\drawable-xhdpi\mindmaportho.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xhdpi\mindmapsimpletree.png">
+      <Link>Resources\drawable-xhdpi\mindmapsimpletree.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxhdpi\mindmapDefault.png">
+      <Link>Resources\drawable-xxhdpi\mindmapDefault.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxhdpi\mindmapconttree.png">
+      <Link>Resources\drawable-xxhdpi\mindmapconttree.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxhdpi\mindmaportho.png">
+      <Link>Resources\drawable-xxhdpi\mindmaportho.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxhdpi\mindmapsimpletree.png">
+      <Link>Resources\drawable-xxhdpi\mindmapsimpletree.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxhdpi\Curve1.png">
+      <Link>Resources\drawable-xxhdpi\Curve1.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxhdpi\Curve.png">
+      <Link>Resources\drawable-xxhdpi\Curve.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+    <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xhdpi\Curve1.png">
+      <Link>Resources\drawable-xhdpi\Curve1.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+    <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xhdpi\Curve.png">
+      <Link>Resources\drawable-xhdpi\Curve.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-hdpi\Curve1.png">
+      <Link>Resources\drawable-hdpi\Curve1.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-hdpi\Curve.png">
+      <Link>Resources\drawable-hdpi\Curve.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxhdpi\Straight1.png">
+      <Link>Resources\drawable-xxhdpi\Curve1.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxhdpi\Straight.png">
+      <Link>Resources\drawable-xxhdpi\Curve.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+    <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xhdpi\Straight1.png">
+      <Link>Resources\drawable-xhdpi\Curve1.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+    <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xhdpi\Straight.png">
+      <Link>Resources\drawable-xhdpi\Curve.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-hdpi\Straight1.png">
+      <Link>Resources\drawable-hdpi\Curve1.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-hdpi\Straight.png">
+      <Link>Resources\drawable-hdpi\Curve.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+    <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxhdpi\Edge1.png">
+      <Link>Resources\drawable-xxhdpi\Curve1.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxhdpi\Edge.png">
+      <Link>Resources\drawable-xxhdpi\Curve.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+    <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xhdpi\Edge1.png">
+      <Link>Resources\drawable-xhdpi\Curve1.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+    <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xhdpi\Edge.png">
+      <Link>Resources\drawable-xhdpi\Curve.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-hdpi\Edge1.png">
+      <Link>Resources\drawable-hdpi\Curve1.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-hdpi\Edge.png">
+      <Link>Resources\drawable-hdpi\Curve.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+</Project>

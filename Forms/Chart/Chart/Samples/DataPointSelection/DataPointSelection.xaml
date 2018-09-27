@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.DataPointSelection" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+    <local:SampleView.Content>
+        <Grid Padding="10,10,10,10">
+            <Grid.RowDefinitions>
+                <RowDefinition>
+                </RowDefinition>
+                <RowDefinition Height="Auto">
+                </RowDefinition>
+            </Grid.RowDefinitions>
+            <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" SelectionChanged="chart_SelectionChanged">
+                <chart:SfChart.Title>
+                    <chart:ChartTitle Text="Product Sale 2016" />
+                </chart:SfChart.Title>
+                <chart:SfChart.BindingContext>
+                    <sampleBrowser:DataPointSelectionViewModel />
+                </chart:SfChart.BindingContext>
+                <chart:SfChart.PrimaryAxis>
+                    <chart:CategoryAxis ShowMajorGridLines="false" LabelPlacement="BetweenTicks">
+                    </chart:CategoryAxis>
+                </chart:SfChart.PrimaryAxis>
+                <chart:SfChart.SecondaryAxis>
+                    <chart:NumericalAxis Interval="20" ShowMajorGridLines="false" >                        
+                        <chart:NumericalAxis.LabelStyle>
+                            <chart:ChartAxisLabelStyle x:Name="secondaryAxisLabelStyle" />
+                        </chart:NumericalAxis.LabelStyle>
+                    </chart:NumericalAxis>
+                </chart:SfChart.SecondaryAxis>
+                <chart:SfChart.Series>
+                    <chart:ColumnSeries x:Name="column" ItemsSource="{Binding SelectionData}" Label="Google" 
+                                        XBindingPath="Name" YBindingPath="Value"
+                                        EnableDataPointSelection="true" SelectedDataPointColor="#FF00BDAE" 
+                                        Color="#7F00BDAE" />
+                </chart:SfChart.Series>
+            </chart:SfChart>
+            <StackLayout Padding="5,10,5,0" Grid.Row="1">
+                <Label HorizontalOptions="Center" VerticalOptions="Center" VerticalTextAlignment="Center" x:Name="label">
+                </Label>
+            </StackLayout>
+        </Grid>
+    </local:SampleView.Content>
+</local:SampleView>

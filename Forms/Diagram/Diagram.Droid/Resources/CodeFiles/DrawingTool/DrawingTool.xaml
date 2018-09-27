@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="SampleBrowser.SfDiagram.DrawingTool"
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+        xmlns:sfdiagram="clr-namespace:Syncfusion.SfDiagram.XForms;assembly=Syncfusion.SfDiagram.XForms"
+    xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfDiagram;assembly=SampleBrowser.SfDiagram">
+	<local:SampleView.Content>
+    <Grid  BackgroundColor="White">
+           <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid  BackgroundColor="White" Grid.Row="1" >
+                <sfdiagram:SfDiagram x:Name="diagram">
+                </sfdiagram:SfDiagram>
+            </Grid>
+            <StackLayout BackgroundColor="#F5F5F5" Grid.Row="0" Orientation="Horizontal">
+                <StackLayout x:Name="NonStack" HorizontalOptions="Center" VerticalOptions="Center" >
+                    <Button x:Name="None" ClassId="fillStack" Image="PointerW.png" HeightRequest="30" WidthRequest="30" BorderRadius="15" BorderWidth="1" BorderColor="Black" BackgroundColor="DodgerBlue" VerticalOptions="Center" Margin="10,10,10,10" Clicked="None_Clicked"/>
+                </StackLayout>
+                <StackLayout x:Name="ConnectorToolStack" HorizontalOptions="Center" VerticalOptions="Center" >
+                    <Button x:Name="Connector" ClassId="fillStack" Image="ConnectorTool1.png" HeightRequest="30" WidthRequest="30" BorderRadius="15" BorderWidth="1" BorderColor="Black" BackgroundColor="White" VerticalOptions="Center" Margin="10,10,10,10" Clicked="Connector_Clicked"/>
+                </StackLayout>
+                <StackLayout x:Name="TextnodeStack" HorizontalOptions="Center" VerticalOptions="Center" >
+                    <Button x:Name="Textnode" ClassId="fillStack" Image="TextNodeNormal.png" HeightRequest="30" WidthRequest="30" BorderRadius="15" BorderWidth="1" BorderColor="Black" BackgroundColor="White" VerticalOptions="Center" Margin="10,10,10,10" Clicked="Textnode_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+      <BoxView BackgroundColor="LightGray" Grid.Row="0" HeightRequest="0.5" VerticalOptions="End" HorizontalOptions="FillAndExpand"/>
+    </Grid>
+  </local:SampleView.Content>
+  <local:SampleView.PropertyView>
+       
+  </local:SampleView.PropertyView>
+</local:SampleView>

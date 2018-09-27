@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                   xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" 
+                   xmlns:local="clr-namespace:SampleBrowser.SfPopupLayout" 
+                   x:Class="SampleBrowser.SfPopupLayout.TicketBooking" 
+                   xmlns:sfgrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms" 
+                   xmlns:popuplayout="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms">
+
+    <ContentPage.BindingContext>
+        <local:TicketBookingViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:TicketBookingViewModel x:Key="viewModel" />
+            <local:CustomConverter x:Key="customConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <sfgrid:SfDataGrid x:Name="seconddataGrid" 
+                           ItemsSource="{Binding TheaterInformation}"
+                           AutoGenerateColumns="False"
+                           HeaderRowHeight="72"
+                           RowHeight="110"
+                           VerticalOverScrollMode="None"
+                           ColumnSizer="Star">
+            <sfgrid:SfDataGrid.Columns x:TypeArguments="syncfusion:Columns">
+                <sfgrid:GridTemplateColumn MappingName="DayLabel">
+
+                    <sfgrid:GridTemplateColumn.HeaderTemplate>
+                        <DataTemplate>
+                            <local:CustomHeaderTemplate NumberOfLabel="7"></local:CustomHeaderTemplate>
+                        </DataTemplate>
+                    </sfgrid:GridTemplateColumn.HeaderTemplate>
+
+                    <sfgrid:GridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackLayout x:Name="mainLayout" Orientation="Horizontal" Padding="10,10,10,10">
+                                
+                                <StackLayout x:Name="theaterDetails" Orientation="Vertical" Padding="10,0,10,10">
+                                    <Label Text="{Binding TheaterName}" Opacity="100" FontSize = "15" TextColor="Black" />
+                                    <Label Text="{Binding TheaterLocation}" Opacity="100" FontSize = "12" TextColor="Black"/>
+
+                                    <StackLayout x:Name="timing" Orientation="Horizontal">
+                                        <Button Text="{Binding Timing1}" Opacity="0.8" FontSize = "14" TextColor="#007CEE" BorderColor="LightBlue" BorderWidth="1" BorderRadius="3" HeightRequest="38" WidthRequest="90" Margin="0,0,5,5" BackgroundColor="White" >
+                                            <Button.Behaviors>
+                                                <local:TimingButtonBehavior DataGridObject="{x:Reference seconddataGrid}"/>
+                                            </Button.Behaviors>
+                                        </Button>
+                                        <Button Text="{Binding Timing2}" Opacity="0.8" FontSize = "14"  IsVisible="{Binding Converter={StaticResource customConverter}}" TextColor="#007CEE" HeightRequest="38" WidthRequest="90" Margin="0,0,5,5" BackgroundColor="White" BorderColor="LightBlue" BorderWidth="1" BorderRadius="3" >
+                                            <Button.Behaviors>
+                                                <local:TimingButtonBehavior DataGridObject="{x:Reference seconddataGrid}"/>
+                                            </Button.Behaviors>
+                                        </Button>
+                                    </StackLayout>
+                                </StackLayout>
+                                
+                                <ContentView x:Name="contentView" WidthRequest="32" InputTransparent="False"  VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Padding="0,0,0,20" >
+                                    <ContentView.Behaviors >
+                                        <local:TheaterInfoBehavior />
+                                    </ContentView.Behaviors>
+                                    <Image x:Name="popupImage" Source="{Binding InfoImage}" WidthRequest="32" HeightRequest="32" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Margin="0,0,10,0" InputTransparent="False" Opacity="0.5" />
+                                </ContentView>
+                            </StackLayout>
+                        </DataTemplate>
+                    </sfgrid:GridTemplateColumn.CellTemplate>
+
+                </sfgrid:GridTemplateColumn>
+            </sfgrid:SfDataGrid.Columns>
+        </sfgrid:SfDataGrid>
+    </ContentPage.Content>
+
+</ContentPage>

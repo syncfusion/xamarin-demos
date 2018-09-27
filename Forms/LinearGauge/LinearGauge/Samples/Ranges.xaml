@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:linear="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"
+             x:Class="SampleBrowser.SfLinearGauge.Ranges">
+  <local:SampleView.Content BackgroundColor="White">
+    <ScrollView>
+      <Grid  BackgroundColor="White">
+        <Grid.RowDefinitions>
+          <RowDefinition/>
+          <RowDefinition/>
+          <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <linear:SfLinearGauge  x:Name="gauge" Grid.Row="0"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               BackgroundColor="White">
+          <linear:SfLinearGauge.Scales>
+            <linear:LinearScale  MinimumValue="0" Interval="25"
+                                 LabelOffset="10" ScaleBarColor="Transparent"
+                                 MaximumValue="100"  LabelColor="#424242" 
+                                 ShowTicks="False"
+                                 LabelFontSize="14" MinorTicksPerInterval="0">
+              <linear:LinearScale.Pointers>
+                <linear:SymbolPointer Color="Black" MarkerShape="InvertedTriangle"
+                                      SymbolPointerPosition="Far"
+                                      Thickness="10" Value="35">
+                </linear:SymbolPointer>
+              </linear:LinearScale.Pointers>
+              <linear:LinearScale.Ranges>
+                <linear:LinearRange StartValue="0"  StartWidth="20" EndWidth="20" EndValue="25" Color="#1A237E"/>
+                <linear:LinearRange StartValue="25" StartWidth="20" EndWidth="20" EndValue="50" Color="#283593"/>
+                <linear:LinearRange StartValue="50" StartWidth="20" EndWidth="20" EndValue="75" Color="#3F51B5"/>
+                <linear:LinearRange StartValue="75" StartWidth="20" EndWidth="20" EndValue="100" Color="#5C6BC0"/>
+              </linear:LinearScale.Ranges>
+            </linear:LinearScale>
+          </linear:SfLinearGauge.Scales>
+        </linear:SfLinearGauge>
+
+
+        <linear:SfLinearGauge  x:Name="gauge1" BackgroundColor="White"
+                               Grid.Row="1"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand">
+          <linear:SfLinearGauge.Scales>
+            <linear:LinearScale MinimumValue="0" Interval="25" ShowTicks="False"
+                                ScaleBarColor="Transparent" 
+                                MaximumValue="100"  LabelColor="#424242"
+                                LabelFontSize="14" MinorTicksPerInterval="0">
+              <linear:LinearScale.Pointers>
+                <linear:SymbolPointer Color="Black" MarkerShape="InvertedTriangle"
+                                      SymbolPointerPosition="Far"
+                                      Thickness="10" Value="35">
+                </linear:SymbolPointer>
+              </linear:LinearScale.Pointers>
+              <linear:LinearScale.Ranges>
+                <linear:LinearRange StartValue="0"  StartWidth="10" EndWidth="15" EndValue="25" Color="#6de500"/>
+                <linear:LinearRange StartValue="25" StartWidth="15" EndWidth="20" EndValue="50" Color="#53ad00"/>
+                <linear:LinearRange StartValue="50" StartWidth="20" EndWidth="25" EndValue="75" Color="#009148"/>
+                <linear:LinearRange StartValue="75" StartWidth="25" EndWidth="30" EndValue="100" Color="#026623"/>
+              </linear:LinearScale.Ranges>
+            </linear:LinearScale>
+          </linear:SfLinearGauge.Scales>
+
+        </linear:SfLinearGauge>
+        <linear:SfLinearGauge  x:Name="gauge2" Grid.Row="2" BackgroundColor="White">
+          <linear:SfLinearGauge.Scales>
+            <linear:LinearScale ShowTicks="False"  LabelColor="#424242"
+                                LabelFontSize="14" Interval="25" LabelOffset="10"
+                                ScaleBarSize="20" ScaleBarColor="Transparent">
+              <linear:LinearScale.Pointers>
+                <linear:SymbolPointer Color="#FFD91D71" MarkerShape="InvertedTriangle"
+                                      SymbolPointerPosition="Far"
+                                      Thickness="10" Value="35">
+                </linear:SymbolPointer>
+              </linear:LinearScale.Pointers>
+              <linear:LinearScale.Ranges>
+                <linear:LinearRange StartWidth="20" EndWidth="20" StartValue="0" EndValue="100">
+                  <linear:LinearRange.GradientStops>
+                    <linear:GaugeGradientStop Value="0" Color="#FFF9C2C3"/>
+                    <linear:GaugeGradientStop Value="100" Color="#FFD91D71"/>
+                  </linear:LinearRange.GradientStops>
+                </linear:LinearRange>
+              </linear:LinearScale.Ranges>
+            </linear:LinearScale>
+          </linear:SfLinearGauge.Scales>
+        </linear:SfLinearGauge>
+
+      </Grid>
+
+    </ScrollView>
+  </local:SampleView.Content>
+
+</local:SampleView>

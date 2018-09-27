@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\CustomEntryRenderer.cs" >
+	<Link>TabView\CustomEntryRenderer.cs</Link>
+	</Compile>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\NestedTab.ttf" >
+	<Link>Resources\NestedTab.ttf</Link>
+	</BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Segoe MDL2 Assets.ttf" >
+	<Link>Resources\Segoe MDL2 Assets.ttf</Link>
+	</BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\TabIcons.ttf" >
+	<Link>Resources\TabIcons.ttf</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\a0.png" >
+	<Link>Resources\a0.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\a1.png" >
+	<Link>Resources\a1.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\a2.png" >
+	<Link>Resources\a2.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\a3.png" >
+	<Link>Resources\a3.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\a4.png" >
+	<Link>Resources\a4.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\a5.png" >
+	<Link>Resources\a5.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\allmail.png" >
+	<Link>Resources\allmail.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\apple.png" >
+	<Link>Resources\apple.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\b0.png" >
+	<Link>Resources\b0.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\b1.png" >
+	<Link>Resources\b1.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\b10.png" >
+	<Link>Resources\b10.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\b11.png" >
+	<Link>Resources\b11.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\b12.png" >
+	<Link>Resources\b12.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\b13.png" >
+	<Link>Resources\b13.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\b2.png" >
+	<Link>Resources\b2.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\b3.png" >
+	<Link>Resources\b3.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\b4.png" >
+	<Link>Resources\b4.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\b5.png" >
+	<Link>Resources\b5.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\b6.png" >
+	<Link>Resources\b6.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\b7.png" >
+	<Link>Resources\b7.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\b8.png" >
+	<Link>Resources\b8.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\b9.png" >
+	<Link>Resources\b9.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\banana.png" >
+	<Link>Resources\banana.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\blackshoe.png" >
+	<Link>Resources\blackshoe.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\blueberry.png" >
+	<Link>Resources\blueberry.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\boots.png" >
+	<Link>Resources\boots.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\canvas.png" >
+	<Link>Resources\canvas.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\chair.png" >
+	<Link>Resources\chair.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Compose.png" >
+	<Link>Resources\Compose.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\edit.png" >
+	<Link>Resources\edit.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\friends.png" >
+	<Link>Resources\friends.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\graycanvas.png" >
+	<Link>Resources\graycanvas.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\hall.png" >
+	<Link>Resources\hall.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\hall2.png" >
+	<Link>Resources\hall2</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\icon_512x512.png" >
+	<Link>Resources\icon_512x512.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\leather.png" >
+	<Link>Resources\leather.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\minion.png" >
+	<Link>Resources\minion.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\orange.png" >
+	<Link></Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\tabviewphone.png" >
+	<Link>Resources\tabviewphone.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\redcoat.png" >
+	<Link>Resources\redcoat.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\robot.png" >
+	<Link>Resources\robot.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Send.png" >
+	<Link>Resources\Send.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\shirt.png" >
+	<Link>Resources\shirt.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\silvercoat.png" >
+	<Link>Resources\silvercoat.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\sofa.png" >
+	<Link>Resources\sofa.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\sofa2.png" >
+	<Link>Resources\sofa2.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\strawberry.png" >
+	<Link>Resources\strawberry.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\tab1.png" >
+	<Link>Resources\tab1.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\tab2.png" >
+	<Link>Resources\tab2.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\tab3.png" >
+	<Link>Resources\tab3.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\tab4.png" >
+	<Link>Resources\tab4.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\train.png" >
+	<Link>Resources\train.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\tshirt.png" >
+	<Link>Resources\tshirt.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\van.png" >
+	<Link>Resources\van.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\whiteshirt.png" >
+	<Link>Resources\whiteshirt.png</Link>
+	</BundleResource>
+  </ItemGroup>
+</Project>

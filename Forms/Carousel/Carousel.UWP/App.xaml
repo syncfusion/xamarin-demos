@@ -1,0 +1,12 @@
+﻿<Application
+    x:Class="SampleBrowser.SfCarousel.UWP.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SampleBrowser.SfCarousel.UWP"
+    RequestedTheme="Light">
+    <Application.Resources>
+        <Style x:Key="EllipsisButton" TargetType="Button">
+            <Setter Property="MaxWidth" Value="0"/>
+        </Style>
+    </Application.Resources>
+</Application>

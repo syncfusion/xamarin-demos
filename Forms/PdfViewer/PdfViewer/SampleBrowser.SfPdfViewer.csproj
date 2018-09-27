@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+   <PropertyGroup>
+		<TargetFramework>netstandard1.0</TargetFramework>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute> 
+   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\F# Succinctly.pdf" />
+    <None Remove="Assets\GIS Succinctly.pdf" />
+    <None Remove="Assets\HTTP Succinctly.pdf" />
+    <None Remove="Assets\JavaScript Succinctly.pdf" />
+    <None Remove="SamplesList\SamplesList.xml" />
+	<None Remove="SampleBrowser.SfPdfViewer.Props" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\F# Succinctly.pdf" />
+    <EmbeddedResource Include="Assets\GIS Succinctly.pdf" />
+    <EmbeddedResource Include="Assets\HTTP Succinctly.pdf" />
+    <EmbeddedResource Include="Assets\JavaScript Succinctly.pdf" />
+    <EmbeddedResource Include="SamplesList\SamplesList.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SampleBrowser.Core" Version= "*" />
+	<PackageReference Include="Syncfusion.Xamarin.Core" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="16.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version= "*"  />
+    <PackageReference Include="Syncfusion.Xamarin.SfPdfViewer" Version= "*"  />
+	<PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version= "*"  />
+	<PackageReference Include="Syncfusion.Xamarin.SfRangeSlider" Version= "*"  />
+    <PackageReference Include="Xamarin.Forms" Version="2.4.0.280" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="MainPage.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+</Project>

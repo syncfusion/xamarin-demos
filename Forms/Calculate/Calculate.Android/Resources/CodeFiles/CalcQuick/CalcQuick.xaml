@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SampleBrowser.Calculate"
+             xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             x:Class="SampleBrowser.Calculate.CalcQuick">
+
+  <sample:SampleView.Content>
+    <ScrollView x:Name="scrollView" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+      <Grid Padding="10,10,10,10">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.BindingContext>
+          <local:CalcQuickViewModel x:Name="viewModel"/>
+        </Grid.BindingContext>
+
+        <Label Text="CalcQuick Calculation"  HorizontalOptions="Center" FontSize="25" />
+
+        <Grid Grid.Row="1" Padding="0,5,0,0">
+          <Label Text="This sample demonstrates the calculation via keys and expressions using CalcQuick." HeightRequest="40" LineBreakMode="WordWrap" FontSize="12" />
+        </Grid>
+
+        <Grid Grid.Row="2" Padding="0,10,0,0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+          </Grid.ColumnDefinitions>
+
+          <Label Text="Key A"  FontSize="14" VerticalTextAlignment="Center"/>
+          <Entry Grid.Column="1" BackgroundColor="#d3d3d3" FontSize="14" Text="{Binding TextA}" />
+
+          <Label Grid.Row="1"  Text="Key B" FontSize="14" VerticalTextAlignment="Center"/>
+          <Entry Grid.Row="1" BackgroundColor="#d3d3d3" Grid.Column="1" FontSize="14" Text="{Binding TextB}" />
+
+          <Label Grid.Row="2"  Text="Key C" FontSize="14" VerticalTextAlignment="Center"/>
+          <Entry Grid.Row="2" Grid.Column="1" BackgroundColor="#d3d3d3" FontSize="14" Text="{Binding TextC}"/>
+        </Grid>
+
+        <Grid Grid.Row="3" Padding="0,10,0,0">
+          <Button Text="Compute" Command="{Binding ComputeCommand}" BackgroundColor="#2196F3" TextColor="Black" HeightRequest="38"/>
+        </Grid>
+
+        <Grid Grid.Row="4" Padding="0,15,0,0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+
+          <Label  Text="Expressions" FontSize="20" VerticalTextAlignment="Center"/>
+
+          <Grid Grid.Row="1" Padding="0,10,0,0">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="50*"/>
+              <ColumnDefinition Width="50*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label  Text="Sum([A],[B],[C])" FontSize="14" VerticalTextAlignment="Center"/>
+
+            <Grid Grid.Column="1" Padding="0,15,0,0">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+              <Label  FontSize="14" Text="{Binding Result1}"/>
+              <BoxView Grid.Row="1" HeightRequest="1" BackgroundColor="Black"/>
+            </Grid>
+          </Grid>
+
+          <Grid Grid.Row="2" Padding="0,15,0,0">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="50*"/>
+              <ColumnDefinition Width="50*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label  Text="PI()*([A]^2)" FontSize="14" VerticalTextAlignment="Center"/>
+            <Grid Grid.Column="1">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+              <Label FontSize="14"  Text="{Binding Result2}"/>
+              <BoxView Grid.Row="1" HeightRequest="1" BackgroundColor="Black"/>
+            </Grid>
+          </Grid>
+
+          <Grid Grid.Row="3" Padding="0,15,0,0">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="50*"/>
+              <ColumnDefinition Width="50*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label  Text="Concatenate([A],[B],[C])" FontSize="14" VerticalTextAlignment="Center"/>
+            <Grid Grid.Column="1">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+              <Label FontSize="14"  Text="{Binding Result3}"/>
+              <BoxView Grid.Row="1" HeightRequest="1" BackgroundColor="Black"/>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
+    </ScrollView>
+  </sample:SampleView.Content>
+</sample:SampleView>

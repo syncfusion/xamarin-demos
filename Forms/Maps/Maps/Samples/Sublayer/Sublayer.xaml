@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfMaps.Sublayer"
+              xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+              xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfMaps"
+              xmlns:maps="clr-namespace:Syncfusion.SfMaps.XForms;assembly=Syncfusion.SfMaps.XForms">
+
+    <local:SampleView.Content>
+        <Grid BackgroundColor="White">
+            <Grid.BindingContext>
+                <sampleBrowser:SublayerViewModel />
+            </Grid.BindingContext>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+                <RowDefinition Height="20" />
+            </Grid.RowDefinitions>
+
+            <Label Text="Samsung Semiconductor office locations in USA" Margin="20,0,0,0" FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <maps:SfMaps  x:Name="Map" Grid.Row="1">
+                <maps:SfMaps.Layers >
+                    <maps:ShapeFileLayer x:Name="layer"  Uri="usa_state.shp" 
+                                 ShapeIDPath="Name" ShapeIDTableField="STATE_NAME"
+                                 ShowMapItems="True" ItemsSource="{Binding DataSource}" >
+                        <maps:ShapeFileLayer.DataLabelSettings>
+                            <maps:DataLabelSetting SmartLabelMode="Trim"/>
+                        </maps:ShapeFileLayer.DataLabelSettings>
+                        <maps:ShapeFileLayer.ShapeSettings>
+                            <maps:ShapeSetting ShapeValuePath="Type" ShapeStroke="#D0D0D0" ShapeStrokeThickness="2" ShapeFill="#E5E5E5" >
+                            </maps:ShapeSetting>
+                        </maps:ShapeFileLayer.ShapeSettings>
+                        <maps:ShapeFileLayer.Sublayers>
+                          
+                            <maps:ShapeFileLayer x:Name="subLayer" Uri="Texas.shp">
+                                <maps:ShapeFileLayer.ShapeSettings>
+                                    <maps:ShapeSetting ShapeFill="#B1D8F5" ShapeStroke="#8DCCF4" ShapeStrokeThickness="1">
+                                    </maps:ShapeSetting>
+                                </maps:ShapeFileLayer.ShapeSettings>
+                                <maps:ShapeFileLayer.Markers>
+                                    <maps:MapMarker Latitude="30.267153" Longitude="-97.7430608"/>
+                                </maps:ShapeFileLayer.Markers>
+                            </maps:ShapeFileLayer>
+                            
+                            <maps:ShapeFileLayer x:Name="subLayer1" Uri="California.shp">
+                                <maps:ShapeFileLayer.ShapeSettings>
+                                    <maps:ShapeSetting ShapeFill="#B1D8F5" ShapeStroke="#8DCCF4" ShapeStrokeThickness="1">
+                                    </maps:ShapeSetting>
+                                </maps:ShapeFileLayer.ShapeSettings>
+                                <maps:ShapeFileLayer.Markers>
+                                    <maps:MapMarker Latitude="37.3382082" Longitude="-121.8863286"/>
+                                </maps:ShapeFileLayer.Markers>
+                            </maps:ShapeFileLayer>
+
+                        </maps:ShapeFileLayer.Sublayers>
+
+                    </maps:ShapeFileLayer>
+                </maps:SfMaps.Layers>
+            </maps:SfMaps>
+           
+            <StackLayout Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="Start" Grid.Row="2" Margin="0,0,5,-5" >
+                <Label Text="Source:" FontSize="12" />
+                <Label Text="www.samsung.com" TextColor="DeepSkyBlue" x:Name="Link" FontSize="12" />
+            </StackLayout>
+        </Grid>
+
+    </local:SampleView.Content>
+</local:SampleView>

@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfListView.Paging"
+                   x:Name="sampleView"
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:local="clr-namespace:SampleBrowser.SfListView"
+                   xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                   xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+                   xmlns:sfPager="clr-namespace:Syncfusion.SfDataGrid.XForms.DataPager;assembly=Syncfusion.SfDataGrid.XForms">
+
+    <sample:SampleView.Behaviors>
+        <local:SfListViewPagingBehavior/>
+    </sample:SampleView.Behaviors>
+
+    <sample:SampleView.Resources>
+        <ResourceDictionary>
+            <local:CurrencyFormatConverter x:Key="currencyFormatConverter"/>
+        </ResourceDictionary>
+    </sample:SampleView.Resources>
+
+    <sample:SampleView.Content>
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+         
+            <sfPager:SfDataPager x:Name ="dataPager"
+                       HorizontalOptions="Center"
+                       Grid.Row="1"
+                       Padding="0,10,0,7"
+                       UseOnDemandPaging="True">
+                <sfPager:SfDataPager.DisplayMode>
+                    <OnIdiom x:TypeArguments="sfPager:PagerDisplayMode"
+                                 Phone="PreviousNextNumeric"
+                                 Tablet="FirstLastPreviousNextNumeric"
+                                 Desktop="FirstLastPreviousNextNumeric"/>
+                </sfPager:SfDataPager.DisplayMode>
+                <sfPager:SfDataPager.NumericButtonCount>
+                    <OnIdiom x:TypeArguments="x:Int32"
+                                 Phone="4"
+                                 Tablet="8"
+                                 Desktop="8"/>
+                </sfPager:SfDataPager.NumericButtonCount>
+                <sfPager:SfDataPager.HeightRequest>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="Android" Value="50"/>
+                        <On Platform="UWP" Value="40"/>
+                        <On Platform="iOS,macOS" Value="50"/>
+                    </OnPlatform>
+                </sfPager:SfDataPager.HeightRequest>
+                <sfPager:SfDataPager.WidthRequest>
+                    <OnIdiom x:TypeArguments="x:Double"
+                      Phone="312"
+                      Tablet="630"
+                      Desktop="630"/>
+                </sfPager:SfDataPager.WidthRequest>
+                <sfPager:SfDataPager.PageSize>
+                    <OnIdiom x:TypeArguments="x:Int32"
+                      Phone="6"
+                      Tablet="9"
+                      Desktop="9"/>
+                </sfPager:SfDataPager.PageSize>
+            </sfPager:SfDataPager>
+            <syncfusion:SfListView x:Name="listView"
+               SelectionMode="None" BackgroundColor="White"
+               Grid.Row="0">
+                <syncfusion:SfListView.ItemSize>
+                    <OnIdiom x:TypeArguments="x:Double"
+                      Phone="250"
+                      Tablet="300"
+                      Desktop="300"/>
+                </syncfusion:SfListView.ItemSize>
+                <syncfusion:SfListView.LayoutManager>
+                    <syncfusion:GridLayout>
+                        <syncfusion:GridLayout.SpanCount>
+                            <OnIdiom x:TypeArguments="x:Int32"
+                                Phone="2"
+                                Tablet="3"
+                                Desktop="3"/>
+                        </syncfusion:GridLayout.SpanCount>
+                    </syncfusion:GridLayout>
+                </syncfusion:SfListView.LayoutManager>
+                <syncfusion:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame OutlineColor="#b3b3b3" Margin="5" >
+                            <Frame.HasShadow>
+                                <OnPlatform x:TypeArguments="x:Boolean">
+                                    <On Platform="Android" Value="True"/>
+                                    <On Platform="UWP" Value="True"/>
+                                    <On Platform="iOS,macOS" Value="False"/>
+                                </OnPlatform>
+                            </Frame.HasShadow>
+                            <Grid Padding="0" ColumnSpacing="0" Margin="2">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <local:SfImage Source="{Binding Image}" Aspect="AspectFit" BackgroundColor="White" VerticalOptions="Center" HorizontalOptions="Center" />
+                                <Grid Grid.Row="1" Padding="0" RowSpacing="4" HorizontalOptions="Start" Margin="5,0,0,0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Label Text="{Binding Name}" LineBreakMode="NoWrap" Grid.Row="0" HorizontalOptions="Start" FontFamily="Bold" >
+                                        <Label.FontSize>
+                                            <OnIdiom x:TypeArguments="x:Double"
+                                                Phone="16"
+                                                Tablet="18"
+                                                Desktop="20"/>
+                                        </Label.FontSize>
+                                        <Label.Opacity>
+                                            <OnPlatform x:TypeArguments="x:Double">
+                                                <On Platform="Android" Value="0.87"/>
+                                                <On Platform="UWP" Value="1"/>
+                                                <On Platform="iOS,macOS" Value="1"/>
+                                            </OnPlatform>
+                                        </Label.Opacity>
+                                        <Label.TextColor>
+                                            <OnPlatform x:TypeArguments="Color">
+                                                <On Platform="Android" Value="#000000"/>
+                                                <On Platform="UWP" Value="#333333"/>
+                                                <On Platform="iOS,macOS" Value="#333333"/>
+                                            </OnPlatform>
+                                        </Label.TextColor>
+                                    </Label>
+                                    <Label Text="{Binding Weight}" FontSize="10" Grid.Row="1" HorizontalOptions="Start">
+                                        <Label.TextColor>
+                                            <OnPlatform x:TypeArguments="Color">
+                                                <On Platform="Android" Value="#000000"/>
+                                                <On Platform="UWP" Value="#4C4C4C"/>
+                                                <On Platform="iOS,macOS" Value="#757575"/>
+                                            </OnPlatform>
+                                        </Label.TextColor>
+                                        <Label.Opacity>
+                                            <OnPlatform x:TypeArguments="x:Double">
+                                                <On Platform="Android" Value="0.54"/>
+                                                <On Platform="UWP" Value="1"/>
+                                                <On Platform="iOS,macOS" Value="1"/>
+                                            </OnPlatform>
+                                        </Label.Opacity>
+                                    </Label>
+                                    <Grid Grid.Row="2" VerticalOptions="Center" HorizontalOptions="Start">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid Grid.Column="0">
+                                            <Frame BackgroundColor="Green" Padding="2" HeightRequest="20">
+                                                <Frame.HasShadow>
+                                                    <OnPlatform x:TypeArguments="x:Boolean">
+                                                        <On Platform="Android" Value="True"/>
+                                                        <On Platform="UWP" Value="True"/>
+                                                        <On Platform="iOS,macOS" Value="False"/>
+                                                    </OnPlatform>
+                                                </Frame.HasShadow>
+                                                <Frame.WidthRequest>
+                                                    <OnIdiom x:TypeArguments="x:Double"
+                                                        Phone="33"
+                                                        Tablet="40"
+                                                        Desktop="40"/>
+                                                </Frame.WidthRequest>
+                                                <Grid ColumnSpacing="0">
+                                                    <Grid.ColumnDefinitions >
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Label Text="{Binding ReviewValue}" Grid.Column="0" FontFamily="Bold"  VerticalOptions="Center" HorizontalOptions="Center" TextColor="White">
+                                                        <Label.Margin>
+                                                            <OnIdiom x:TypeArguments="Thickness"
+                                                                Phone="3,0,0,0"
+                                                                Tablet="5,0,0,0"
+                                                                Desktop="5,0,0,0"/>
+                                                        </Label.Margin>
+                                                        <Label.FontSize>
+                                                            <OnIdiom x:TypeArguments="x:Double"
+                                                                Phone="12"
+                                                                Tablet="15"
+                                                                Desktop="15"/>
+                                                        </Label.FontSize>
+                                                    </Label>
+                                                    <local:SfImage Source="{Binding Image1}" Grid.Column="1" HeightRequest="10" WidthRequest="15" />
+                                                </Grid>
+                                            </Frame>
+                                        </Grid>
+                                        <Label Grid.Column="1" Text="{Binding Ratings}" VerticalTextAlignment="Center" LineBreakMode="NoWrap" VerticalOptions="Center" HorizontalOptions="Center" FontFamily="Bold" TextColor="Gray" >
+                                            <Label.FontSize>
+                                                <OnPlatform x:TypeArguments="x:Double">
+                                                    <On  Platform="Android">
+                                                        <OnIdiom x:TypeArguments="x:Double" Phone="12" Tablet="14"/>
+                                                    </On>
+                                                    <On  Platform="iOS">
+                                                        <OnIdiom x:TypeArguments="x:Double" Phone="10" Tablet="14"/>
+                                                    </On>
+                                                    <On  Platform="UWP">
+                                                        <OnIdiom x:TypeArguments="x:Double"  Phone="11" Tablet="14" Desktop="14" />
+                                                    </On>
+                                                    <On  Platform="macOS" Value="14"/>
+                                                </OnPlatform>
+                                            </Label.FontSize>
+                                        </Label>
+                                    </Grid>
+                                    <Grid Grid.Row="3" Padding="0" VerticalOptions="Center" HorizontalOptions="Start">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Text="{Binding Price, Converter={StaticResource currencyFormatConverter}}" VerticalOptions="Center" FontAttributes="Bold" Grid.Column="0" HorizontalOptions="Start" >
+                                            <Label.FontSize>
+                                                <OnIdiom x:TypeArguments="x:Double"
+                                                    Phone="18"
+                                                    Tablet="20"
+                                                    Desktop="22"/>
+                                            </Label.FontSize>
+                                            <Label.TextColor>
+                                                <OnPlatform x:TypeArguments="Color">
+                                                    <On Platform="Android" Value="#009688"/>
+                                                    <On Platform="UWP" Value="#0078D7"/>
+                                                    <On Platform="iOS,macOS" Value="#1C73F2"/>
+                                                </OnPlatform>
+                                            </Label.TextColor>
+                                        </Label>
+                                        <Grid Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center">
+                                            <Label Text="{Binding Offer}" HorizontalTextAlignment="Center" LineBreakMode="NoWrap" VerticalTextAlignment="Center" FontFamily="Bold" TextColor="Gray" >
+                                                <Label.FontSize>
+                                                    <OnPlatform x:TypeArguments="x:Double">
+                                                        <On  Platform="Android">
+                                                            <OnIdiom x:TypeArguments="x:Double" Phone="12" Tablet="14"/>
+                                                        </On>
+                                                        <On  Platform="iOS">
+                                                            <OnIdiom x:TypeArguments="x:Double" Phone="11" Tablet="14"/>
+                                                        </On>
+                                                        <On  Platform="UWP">
+                                                            <OnIdiom x:TypeArguments="x:Double"  Phone="11" Tablet="14" Desktop="14" />
+                                                        </On>
+                                                        <On  Platform="macOS" Value="14"/>
+                                                    </OnPlatform>
+                                                </Label.FontSize>
+                                            </Label>
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </syncfusion:SfListView.ItemTemplate>
+            </syncfusion:SfListView>
+        </Grid>
+    </sample:SampleView.Content>
+</sample:SampleView>

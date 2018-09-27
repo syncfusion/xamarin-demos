@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<local:SampleView
+    x:Class="SampleBrowser.SfTextInputLayout.PaymentView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion.SfMaskedEdit.XForms"
+    xmlns:sftextinputlayout="clr-namespace:SampleBrowser.SfTextInputLayout"
+    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <local:SampleView.BindingContext>
+        <sftextinputlayout:PaymentViewModel />
+    </local:SampleView.BindingContext>
+
+    <local:SampleView.Content>
+        <ScrollView Margin="0,20,0,20">
+            <ScrollView.HorizontalOptions>
+                <OnIdiom
+                    x:TypeArguments="LayoutOptions"
+                    Desktop="Center"
+                    Phone="FillAndExpand"
+                    Tablet="FillAndExpand" />
+            </ScrollView.HorizontalOptions>
+
+            <ScrollView.WidthRequest>
+                <OnIdiom x:TypeArguments="x:Double" Desktop="400" />
+            </ScrollView.WidthRequest>
+
+            <StackLayout
+                Margin="20,0,20,20"
+                Padding="0,0,0,20"
+                Spacing="10">
+
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="Large"
+                    Text="Card Details" />
+
+                <inputLayout:SfTextInputLayout
+                    x:Name="nameLayout"
+                    ContainerType="Outlined"
+                    Hint="Name on your card">
+                    <Entry x:Name="name" Text="{Binding Name}" />
+                </inputLayout:SfTextInputLayout>
+
+                <inputLayout:SfTextInputLayout
+                    x:Name="numberLayout"
+                    ContainerType="Outlined"
+                    HelperText="Enter 16-digit card number"
+                    Hint="Card number">
+
+                    <maskededit:SfMaskedEdit
+                        x:Name="number"
+                        Keyboard="Numeric"
+                        Mask="0000 0000 0000 0000"
+                    Value="{Binding CardNumber}" />
+                    
+                </inputLayout:SfTextInputLayout>
+
+                <inputLayout:SfTextInputLayout
+                    x:Name="cvvLayout"
+                    CharMaxLength="3"
+                    ContainerType="Outlined"
+                    ErrorText="Invalid CVV number"
+                    HasError="{Binding HasError}"
+                    HelperText="Enter the last 3 digits on back"
+                    Hint="CVV"
+                    ShowCharCount="True">
+                    
+                    <Entry
+                        x:Name="cvvNumber"
+                        Keyboard="Numeric"
+                        Text="{Binding CVVNumber}" />
+                    
+                </inputLayout:SfTextInputLayout>
+
+                <Grid>
+                    <inputLayout:SfTextInputLayout
+                        x:Name="dateLayout"
+                        ContainerType="Outlined"
+                        HelperText="Enter the date your card expires"
+                        Hint="Expiration date">
+
+                        <Entry
+                        x:Name="validDate"
+                        Text="{Binding ValidityDate}" />
+
+                        <inputLayout:SfTextInputLayout.TrailingView>
+                            <Label
+                                FontSize="18"
+                                Text="D"
+                                TextColor="{Binding Path=CurrentActiveColor, Source={x:Reference Name=dateLayout}}"
+                                VerticalTextAlignment="Center">
+
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="labelGesture" Tapped="GestureRecognizer_Tapped" />
+                                </Label.GestureRecognizers>
+
+                                <Label.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <On Platform="iOS" Value="InputLayoutIcons" />
+                                        <On Platform="Android" Value="InputLayoutIcons.ttf#InputLayoutIcons" />
+                                        <On Platform="UWP" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+                                    </OnPlatform>
+                                </Label.FontFamily>
+                            </Label>
+                        </inputLayout:SfTextInputLayout.TrailingView>
+                    </inputLayout:SfTextInputLayout>
+
+                    <DatePicker
+                        x:Name="date_Picker"
+                        Date="{Binding DateTime}"
+                        MinimumDate="{x:Static system:DateTime.Now}"
+                        Opacity="0"
+                        VerticalOptions="CenterAndExpand" />
+                </Grid>
+
+                <Button
+                    x:Name="paymentButton"
+                    BackgroundColor="#0074C4"
+                    Command="{Binding PaymentCommand}"
+                    HorizontalOptions="Center"
+                    Text="Submit"
+                    TextColor="White"
+                    WidthRequest="100" />
+
+            </StackLayout>
+        </ScrollView>
+    </local:SampleView.Content>
+</local:SampleView>

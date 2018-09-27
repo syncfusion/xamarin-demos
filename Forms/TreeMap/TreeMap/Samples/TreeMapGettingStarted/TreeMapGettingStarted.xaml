@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfTreeMap.TreeMapGettingStarted"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:tree="clr-namespace:Syncfusion.SfTreeMap.XForms;assembly=Syncfusion.SfTreeMap.XForms">
+    <local:SampleView.Content>
+        
+        <tree:SfTreeMap  x:Name="TreeMap"  HorizontalOptions="FillAndExpand" 
+      VerticalOptions="FillAndExpand" WeightValuePath="Population" ColorValuePath="Growth" BackgroundColor="White"   >
+            <tree:SfTreeMap.LeafItemSettings>
+                <tree:LeafItemSettings BorderColor="#A9D9F7" Gap="2" LabelPath="Country" >
+                </tree:LeafItemSettings>
+            </tree:SfTreeMap.LeafItemSettings>
+            <tree:SfTreeMap.LegendSettings>
+                <tree:LegendSettings ShowLegend="True" >
+                    <tree:LegendSettings.LabelStyle>
+                        <tree:Style Font="14" Color="Gray">
+                        </tree:Style>
+                    </tree:LegendSettings.LabelStyle>
+                </tree:LegendSettings>
+            </tree:SfTreeMap.LegendSettings>
+            <tree:SfTreeMap.Levels>
+                <tree:TreeMapFlatLevel GroupBackground="White" HeaderHeight="20" GroupPath = "Continent" GroupGap =" 5" ShowHeader = "true"  >
+                    <tree:TreeMapFlatLevel.HeaderStyle>
+                        <tree:Style Color= "Black"/>
+                    </tree:TreeMapFlatLevel.HeaderStyle>
+                </tree:TreeMapFlatLevel>
+            </tree:SfTreeMap.Levels>
+        </tree:SfTreeMap>
+    </local:SampleView.Content>
+
+</local:SampleView>

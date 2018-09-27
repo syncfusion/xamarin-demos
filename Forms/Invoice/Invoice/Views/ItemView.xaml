@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+					   x:Class="XamarinIOInvoice.Views.ItemView">
+ 
+  <StackLayout x:Name="ItemsLayout" Orientation="Vertical">
+  <StackLayout x:Name="MainLayout" Orientation="Vertical">
+    <StackLayout x:Name="ListLayout"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+      <StackLayout x:Name="AddButtonLayout" Orientation="Horizontal"  HorizontalOptions="EndAndExpand" >
+        <Button x:Name="AddButton"  Text="Add"></Button>
+        <Button x:Name="ExportButton" Text="Export"></Button>
+      </StackLayout>
+       <ListView x:Name="listView" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" IsVisible="false" >
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>              
+                <StackLayout Padding="15,5,15,5" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical">
+                 <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical">
+                  <StackLayout Padding="0,0,0,0" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                    <Label Text="{Binding ItemName}" YAlign="Center">
+                          <Label.Font>
+                            <OnPlatform x:TypeArguments="Font">
+                            <OnPlatform.iOS>15</OnPlatform.iOS>
+                            <OnPlatform.Android>Large</OnPlatform.Android>
+                            <OnPlatform.WinPhone>35</OnPlatform.WinPhone>
+                             </OnPlatform>
+                         </Label.Font>
+                    </Label>
+                    <Label Text="{Binding TotalAmount}" YAlign="Center" Font="Large"  HorizontalOptions="EndAndExpand">
+                          <Label.Font>
+                            <OnPlatform x:TypeArguments="Font">
+                            <OnPlatform.iOS>15</OnPlatform.iOS>
+                            <OnPlatform.Android>Large</OnPlatform.Android>
+                            <OnPlatform.WinPhone>35</OnPlatform.WinPhone>
+                             </OnPlatform>
+                         </Label.Font>
+                    </Label>
+                  </StackLayout>
+                  <Label Text="{Binding Quantity}" YAlign="Center" Font="Small">
+                         <Label.Font>
+                            <OnPlatform x:TypeArguments="Font">
+                            <OnPlatform.iOS>10</OnPlatform.iOS>
+                            <OnPlatform.Android>Medium</OnPlatform.Android>
+                            <OnPlatform.WinPhone>Normal,20</OnPlatform.WinPhone>
+                             </OnPlatform>
+                         </Label.Font>
+                  </Label>
+                 </StackLayout>
+                 </StackLayout>             
+             </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+     
+       <StackLayout x:Name="ListStack" Padding="0,10,0,10" >
+     	<StackLayout Orientation="Vertical" Padding="10,10,10,10" HorizontalOptions="FillAndExpand">
+     	<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+     	<Label x:Name="WinRTLabel" Text="WinRT" HorizontalOptions="StartAndExpand">
+        <Label.Font>
+          <OnPlatform x:TypeArguments="Font">
+            <OnPlatform.iOS></OnPlatform.iOS>
+            <OnPlatform.Android>15</OnPlatform.Android>
+            <OnPlatform.WinPhone>35</OnPlatform.WinPhone>
+          </OnPlatform>
+        </Label.Font>
+      </Label>
+     	<Label x:Name="WinRTLabelRate" Text="$ 426.93" HorizontalOptions="EndAndExpand">
+        <Label.Font>
+          <OnPlatform x:TypeArguments="Font">
+            <OnPlatform.iOS></OnPlatform.iOS>
+            <OnPlatform.Android>15</OnPlatform.Android>
+            <OnPlatform.WinPhone>35</OnPlatform.WinPhone>
+          </OnPlatform>
+        </Label.Font>
+      </Label>
+     	</StackLayout>
+     	<Label Text="Quantity : 1" HorizontalOptions="StartAndExpand">
+        <Label.Font>
+          <OnPlatform x:TypeArguments="Font">
+            <OnPlatform.iOS></OnPlatform.iOS>
+            <OnPlatform.Android>10</OnPlatform.Android>
+            <OnPlatform.WinPhone>Normal,20</OnPlatform.WinPhone>
+          </OnPlatform>
+        </Label.Font>
+      </Label>
+     	</StackLayout>
+
+     	 <StackLayout Orientation="Vertical" Padding="10,10,10,10" HorizontalOptions="FillAndExpand">
+     	<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+     	<Label x:Name="WindowsPhoneLabel" Text="Windows Phone" HorizontalOptions="StartAndExpand">
+        <Label.Font>
+          <OnPlatform x:TypeArguments="Font">
+            <OnPlatform.iOS></OnPlatform.iOS>
+            <OnPlatform.Android>15</OnPlatform.Android>
+            <OnPlatform.WinPhone>35</OnPlatform.WinPhone>
+          </OnPlatform>
+        </Label.Font>
+      </Label>
+     	<Label x:Name ="WindowsPhoneLabelRate" Text="$ 105.93" HorizontalOptions="EndAndExpand">
+        <Label.Font>
+          <OnPlatform x:TypeArguments="Font">
+            <OnPlatform.iOS></OnPlatform.iOS>
+            <OnPlatform.Android>15</OnPlatform.Android>
+            <OnPlatform.WinPhone>35</OnPlatform.WinPhone>
+          </OnPlatform>
+        </Label.Font>
+      </Label>
+     	</StackLayout>
+     	<Label Text="Quantity : 1" HorizontalOptions="StartAndExpand">
+        <Label.Font>
+          <OnPlatform x:TypeArguments="Font">
+            <OnPlatform.iOS></OnPlatform.iOS>
+            <OnPlatform.Android>10</OnPlatform.Android>
+            <OnPlatform.WinPhone>Normal,20</OnPlatform.WinPhone>
+          </OnPlatform>
+        </Label.Font>
+      </Label>
+     	</StackLayout>
+     	</StackLayout>
+		
+    </StackLayout>
+  </StackLayout>
+    <StackLayout x:Name="AddLayout" Orientation="Vertical"  >
+      <StackLayout x:Name="AddTitleLayout" Orientation="Horizontal">
+        <StackLayout x:Name="DummyLayout" >
+        </StackLayout>
+        <StackLayout x:Name="AddTitleLabelLayout" >
+          <Label x:Name="AddTitleLabel" Text=""></Label>
+        </StackLayout>
+        <StackLayout x:Name="DoneButtonLayout"  >
+          <Button x:Name="DoneButton" Text="Done"></Button>
+        </StackLayout>
+      </StackLayout>
+      <StackLayout x:Name="PickerLayout" Orientation="Vertical">
+        <Label x:Name="ProductName" Text="Product">
+          <Label.Font>
+            <OnPlatform x:TypeArguments="Font">
+              <OnPlatform.iOS>Small</OnPlatform.iOS>
+              <OnPlatform.Android>15</OnPlatform.Android>
+              <OnPlatform.WinPhone>Normal,20</OnPlatform.WinPhone>
+            </OnPlatform>
+          </Label.Font>
+        </Label>
+         <StackLayout x:Name="ItemPickerLayout">
+          <Picker x:Name="ItemPicker"></Picker>
+        </StackLayout>
+        <Label x:Name="ProductQuantity" Text="Quantity">
+          <Label.Font>
+            <OnPlatform x:TypeArguments="Font">
+              <OnPlatform.iOS>Small</OnPlatform.iOS>
+              <OnPlatform.Android>15</OnPlatform.Android>
+              <OnPlatform.WinPhone>Normal,20</OnPlatform.WinPhone>
+            </OnPlatform>
+          </Label.Font>
+        </Label>
+        <StackLayout x:Name="QuantityPickerLayout">
+          <Picker x:Name="QuantityPicker"></Picker>
+        </StackLayout>
+         <Label x:Name="AmountLabel" Text="Amount">
+          <Label.Font>
+            <OnPlatform x:TypeArguments="Font">
+              <OnPlatform.iOS>Small</OnPlatform.iOS>
+              <OnPlatform.Android>15</OnPlatform.Android>
+              <OnPlatform.WinPhone>Normal,20</OnPlatform.WinPhone>
+            </OnPlatform>
+          </Label.Font>
+        </Label>
+        <StackLayout x:Name="AmountEntryLayout">
+          <Frame x:Name="AmountFrame">
+            <Label x:Name="AmountEntry" Text="$ 0.0"></Label>
+          </Frame>
+         
+        </StackLayout>
+      </StackLayout>
+    </StackLayout>
+    <StackLayout x:Name="ExportLayout" Orientation="Vertical">
+      <StackLayout x:Name="ExpoTitleLayout" Orientation="Horizontal">
+        <StackLayout x:Name="ExportDummyLayout" >
+        </StackLayout>
+        <StackLayout x:Name="ExpoTitLabLayout" >
+          <Label x:Name="ExportTitleLabel" Text=""></Label>
+        </StackLayout>
+        <StackLayout x:Name="HomeButtonLayout"  HorizontalOptions="EndAndExpand" >
+          <Button x:Name="HomeButton" Text="Home" ></Button>
+        </StackLayout>
+      </StackLayout>
+      <StackLayout x:Name="ExportBtnLayout" Orientation="Vertical">
+        <Button x:Name="PDFButton" Text="Export To PDF" HorizontalOptions="FillAndExpand" />
+        <Button x:Name="WordButton"   Text="Export To Word"  HorizontalOptions="FillAndExpand" />
+        <Button x:Name="ExcelButton"  Text="Export To Excel"  HorizontalOptions="FillAndExpand" />
+      </StackLayout>
+    </StackLayout>
+  </StackLayout>
+</ContentPage>
