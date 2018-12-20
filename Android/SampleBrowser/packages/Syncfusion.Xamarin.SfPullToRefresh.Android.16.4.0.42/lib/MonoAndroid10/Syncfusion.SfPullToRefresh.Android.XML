@@ -1,0 +1,949 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.SfPullToRefresh.Android</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.SfPullToRefresh.PullingEventHandler">
+            <summary>
+            Represents the method that will handle the <see cref="E:Syncfusion.SfPullToRefresh.SfPullToRefresh.Pulling"/> event in <see cref="T:Syncfusion.SfPullToRefresh.SfPullToRefresh"/>.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="T:Syncfusion.SfPullToRefresh.RefreshingEventHandler">
+            <summary>
+            Represents the method that will handle the <see cref="E:Syncfusion.SfPullToRefresh.SfPullToRefresh.Refreshing"/> event in <see cref="T:Syncfusion.SfPullToRefresh.SfPullToRefresh"/>.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="T:Syncfusion.SfPullToRefresh.RefreshedEventHandler">
+            <summary>
+            Represents the method that will handle the <see cref="E:Syncfusion.SfPullToRefresh.SfPullToRefresh.Refreshed"/> event in <see cref="T:Syncfusion.SfPullToRefresh.SfPullToRefresh"/>.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="T:Syncfusion.SfPullToRefresh.PullingEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Syncfusion.SfPullToRefresh.SfPullToRefresh.Pulling"/> event.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.PullingEventArgs.#ctor">
+            <summary>
+            Initializes a new instance of the PullingEventArgs class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfPullToRefresh.PullingEventArgs.Progress">
+            <summary>
+            Gets or sets the progress of pulling.
+            </summary>
+            <value>The progress of pulling.</value>
+        </member>
+        <member name="T:Syncfusion.SfPullToRefresh.RefreshingEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Syncfusion.SfPullToRefresh.SfPullToRefresh.Refreshing"/> event.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.RefreshingEventArgs.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the RefreshingEventArgs class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfPullToRefresh.RefreshingEventArgs.Refreshed">
+            <summary>
+            Gets or sets a value indicating whether refreshing should be continued.
+            </summary>
+            <value>
+            A value indicating whether refreshing should be continued.
+            </value>
+        </member>
+        <member name="T:Syncfusion.SfPullToRefresh.TransitionType">
+            <summary>
+            Describes the possible transition types available in the <see cref="T:Syncfusion.SfPullToRefresh.SfPullToRefresh"/> control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.TransitionType.Push">
+            <summary>
+            Positions the <see cref="T:Syncfusion.SfPullToRefresh.SfProgressCircleView"/> over the pullable content.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.TransitionType.SlideOnTop">
+            <summary>
+            Positions the <see cref="T:Syncfusion.SfPullToRefresh.SfProgressCircleView"/> above the pullable content, translating it based on the pulling progress.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfPullToRefresh.SfProgressCircleView">
+            <summary>
+            A class that contains the refresh content for the SfPullToRefresh to display the progress of animation when performing the pull to refresh action.
+            </summary>
+            <exclude/>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfProgressCircleView.viewPaint">
+            <summary>
+            Gets the background color of the progress view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfProgressCircleView.arcPaint">
+            <summary>
+            Gets the color of the inner arc of the view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfProgressCircleView.oval">
+            <summary>
+            Gets the oval, which indicates the inner arc of the view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfProgressCircleView.rotationDegree">
+            <summary>
+            Gets the rotation degree of the progress view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfProgressCircleView.rotateProgressView">
+            <summary>
+            Gets the animator of the progress view, which animates the rotation degree value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfProgressCircleView.rotationAnimationDuration">
+            <summary>
+            Indicates the duration of rotation animation.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfProgressCircleView.radiusRange">
+            <summary>
+            Indicates the ProgessCircleView Shadow radius.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfPullToRefresh.SfProgressCircleView.PullToRefresh">
+            <summary>
+            Gets or sets the reference of the <see cref="T:Syncfusion.SfPullToRefresh.SfPullToRefresh"/> control.
+            </summary>
+            <value>
+            The reference of the <see cref="T:Syncfusion.SfPullToRefresh.SfPullToRefresh"/> control.
+            </value>
+        </member>
+        <member name="P:Syncfusion.SfPullToRefresh.SfProgressCircleView.RotationDegree">
+            <summary>
+            Gets or sets the degree of rotation of the view, when refreshing is in progress.
+            </summary>
+            <value>
+            The degree of rotation of the view, when refreshing is in progress.
+            </value>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfProgressCircleView.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of SfProgressCircleView class.
+            </summary>
+            <param name="context">The <see cref="T:Android.Content.Context"/>.</param>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfProgressCircleView.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the SfProgressCircleView class.
+            </summary>
+            <param name="context">The <see cref="T:Android.Content.Context"/>.</param>
+            <param name="attributeSet">The <see cref="T:Android.Util.IAttributeSet"/>.</param>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfProgressCircleView.#ctor(Android.Content.Context,Android.Util.IAttributeSet,System.Int32)">
+            <summary>
+            Initializes a new instance of the SfProgressCircleView class.
+            </summary>
+            <param name="context">The <see cref="T:Android.Content.Context"/>.</param>
+            <param name="attributeSet">The <see cref="T:Android.Util.IAttributeSet"/>.</param>
+            <param name="definedStyle">The value indicating the defined style.</param>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfProgressCircleView.#ctor(System.IntPtr,Android.Runtime.JniHandleOwnership)">
+            <summary>
+            Initializes a new instance of SfProgressCircleView class.
+            </summary>
+            <param name="javaReference">The <see cref="T:System.IntPtr"/>.</param>
+            <param name="transfer">The <see cref="T:Android.Runtime.JniHandleOwnership"/>.</param>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfProgressCircleView.#ctor(Android.Content.Context,Syncfusion.SfPullToRefresh.SfPullToRefresh)">
+            <summary>
+            Initializes a new instance of SfProgressCircleView class.
+            </summary>
+            <param name="context">The <see cref="T:Android.Content.Context"/>.</param>
+            <param name="pullToRefresh">The reference of <see cref="T:Syncfusion.SfPullToRefresh.SfPullToRefresh"/>.</param>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfProgressCircleView.RenderProgress(System.Double)">
+            <summary>
+            The layout position of the view is performed in this method.
+            </summary>
+            <param name="yPosition">The y-position of the view in which it should be layout.</param>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfProgressCircleView.OnDraw(Android.Graphics.Canvas)">
+            <summary>
+            This method is implemented for drawing the progress view.
+            </summary>
+            <param name="canvas">The canvas on which the background will be drawn.</param>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfProgressCircleView.InitializePaintProperties">
+            <summary>
+            Initializes the paint properties of the SfProgressCircleView.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfProgressCircleView.UpdatePaintProperties">
+            <summary>
+            Updates the paint properties of the progress circle view.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfProgressCircleView.InitializeAnimatorProperties">
+            <summary>
+            Initializes the animator properties of the progress circle view.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfProgressCircleView.GetAngleBasedOnYPostion">
+            <summary>
+            This method calculates the progress value based on the pulling.
+            </summary>
+            <returns>The progress value based on the pulling.</returns>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfProgressCircleView.Dispose(System.Boolean)">
+            <summary>
+            Releases the unmanaged resources used by the component and optionally releases the managed resources.
+            </summary>
+            <param name="disposing"> if true - release both managed and unmanaged resources; 
+            if false - release only unmanaged resources.
+            </param>
+        </member>
+        <member name="T:Syncfusion.SfPullToRefresh.SfPullToRefresh">
+            <summary>
+            A refresh control that allows you to interact and refresh the view loaded in it. The SfPullToRefresh control allows you to refresh the view upon performing the pull to refresh action.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfPullToRefresh.yPositionOfPullableContent">
+            <summary>
+            Gets the y-position of the pullable content.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfPullToRefresh.isInZoomAnimation">
+            <summary>
+            Gets the value indicating whether the zoom animation of the progress view is being done.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfPullToRefresh.alreadyDisposed">
+            <summary>
+            Allow only once to dispose managed and unmanaged resources.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfPullToRefresh.downY">
+            <summary>
+            Gets the touch down point of the Y.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfPullToRefresh.downX">
+            <summary>
+            Gets the touch down point of X.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfPullToRefresh.YPositionOfProgressView">
+            <summary>
+            Gets the y-position of the progress circle view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfPullToRefresh.isPulling">
+            <summary>
+            Gets the value indicating whether the pulling is performed.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfPullToRefresh.density">
+            <summary>
+            Gets the density of the device.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfPullToRefresh.pullingCancelled">
+            <summary>
+            This flag denotes whether the pulling is canceled.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfPullToRefresh.pullingEventArgs">
+            <summary>
+            Gets the pulling event arguments.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfPullToRefresh.refreshingEventArgs">
+            <summary>
+            Gets the refreshing event arguments.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfPullToRefresh.animatePullingProgress">
+            <summary>
+            Gets the animator for animating the pulling progress when the pulling is cancelled.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfPullToRefresh.animateProgressViewLayout">
+            <summary>
+            Gets the animator for animating the progress view layout, which is used when 
+            pulling is canceled, refreshing is completed and touch is up for refreshing to start.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfPullToRefresh.animatePullableContent">
+            <summary>
+            Gets the animator for animating the pullable content layout, which is used in push 
+            mode.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfPullToRefresh.animateScaleXOfProgressView">
+            <summary>
+            Gets the animator for scaleX of the progress view for zooming animations.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfPullToRefresh.animateScaleYOfProgressView">
+            <summary>
+            Gets the animator for scaleY of the progress view for zooming animations.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfPullToRefresh.zoomAnimationDuration">
+            <summary>
+            Indicates the duration of zoom animation.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfPullToRefresh.pullingDistance">
+            <summary>
+            The distance applied between the progress view and the pullable content when 
+            pulling is performed.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfPullToRefresh.refreshingDistance">
+            <summary>
+            The distance applied between the progress view and the pullable content when 
+            refreshing is performed.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPullToRefresh.SfPullToRefresh.onScreenPoint">
+            <summary>
+            Gets the point of SfPullToRefresh on screen.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfPullToRefresh.SfPullToRefresh.Progress">
+            <summary>
+            Gets the percentage of the progress of pulling.
+            </summary>
+            <value>
+            The percentage of the progress of pulling.
+            </value>
+        </member>
+        <member name="P:Syncfusion.SfPullToRefresh.SfPullToRefresh.PullingThreshold">
+            <summary>
+            Gets or sets the value for the pulling threshold, this indicate progress indicator maximum pulling position in view.
+            </summary>
+            <value>The value for the pulling threshold, this indicate progress indicator maximum pulling position in view.</value>
+        </member>
+        <member name="P:Syncfusion.SfPullToRefresh.SfPullToRefresh.TransitionType">
+            <summary>
+            Gets or sets the transition mode of the SfPullToRefresh.
+            </summary>
+            <value>The transition mode of the SfPullToRefresh.</value>
+        </member>
+        <member name="P:Syncfusion.SfPullToRefresh.SfPullToRefresh.ProgressStrokeColor">
+            <summary>
+            Gets or sets the progress stroke color of the SfPullToRefresh.
+            </summary>
+            <value>The progress stroke color of the SfPullToRefresh.</value>
+        </member>
+        <member name="P:Syncfusion.SfPullToRefresh.SfPullToRefresh.ProgressBackgroundColor">
+            <summary>
+            Gets or sets the progress background color of the SfPullToRefresh.
+            </summary>
+            <value>The progress background color of the SfPullToRefresh.</value>
+        </member>
+        <member name="P:Syncfusion.SfPullToRefresh.SfPullToRefresh.ProgressShadowColor">
+            <summary>
+            Gets or sets the shadow color of the progress view.
+            </summary>
+            <value>The shadow color of the progress view.</value>
+        </member>
+        <member name="P:Syncfusion.SfPullToRefresh.SfPullToRefresh.ProgressStrokeWidth">
+            <summary>
+            Gets or sets the progress indicator stroke width.
+            </summary>
+            <value>The progress indicator stroke width.</value>
+        </member>
+        <member name="P:Syncfusion.SfPullToRefresh.SfPullToRefresh.PullableContent">
+            <summary>
+            Gets or sets the pullable content of the SfPullToRefresh.
+            </summary>
+            <value>The pullable content of the SfPullToRefresh.</value>
+        </member>
+        <member name="P:Syncfusion.SfPullToRefresh.SfPullToRefresh.RefreshContentThreshold">
+            <summary>
+            Gets or sets the refresh content threshold value that indicates progress indicator starting position in view.
+            </summary>
+            <value>The refresh content threshold value that indicates progress indicator starting position in view.</value>
+        </member>
+        <member name="P:Syncfusion.SfPullToRefresh.SfPullToRefresh.RefreshContentRadius">
+            <summary>
+            Gets or sets the radius of the refreshing view.
+            </summary>
+            <value>The radius of the refreshing view.</value>
+        </member>
+        <member name="P:Syncfusion.SfPullToRefresh.SfPullToRefresh.IsRefreshing">
+            <summary>
+            Gets a value indicating whether to enable or disable the refreshing or not.
+            </summary>
+            <value>A value indicating whether to enable or disable the refreshing or not.</value>
+        </member>
+        <member name="P:Syncfusion.SfPullToRefresh.SfPullToRefresh.IsProgrammaticRefresh">
+            <summary>
+            Gets or sets the value indicating whether the refreshing is performed at run time.
+            </summary>
+            <value>The value indicating whether the refreshing is performed at run time.</value>
+        </member>
+        <member name="P:Syncfusion.SfPullToRefresh.SfPullToRefresh.SfProgressCircleView">
+            <summary>
+            Gets the SfProgressCircleView of the SfPullToRefresh.
+            </summary>
+            <value>The SfProgressCircleView of the SfPullToRefresh.</value>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of SfPullToRefresh class.
+            </summary>
+            <param name="context">The <see cref="T:Android.Content.Context"/>.</param>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the SfPullToRefresh class.
+            </summary>
+            <param name="context">The <see cref="T:Android.Content.Context"/>.</param>
+            <param name="attributeSet">The <see cref="T:Android.Util.IAttributeSet"/>.</param>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.#ctor(Android.Content.Context,Android.Util.IAttributeSet,System.Int32)">
+            <summary>
+            Initializes a new instance of the SfPullToRefresh class.
+            </summary>
+            <param name="context">The <see cref="T:Android.Content.Context"/>.</param>
+            <param name="attributeSet">The <see cref="T:Android.Util.IAttributeSet"/>.</param>
+            <param name="definedStyle">The value indicating the defined style.</param>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.#ctor(Android.Content.Context,Android.Util.IAttributeSet,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the SfPullToRefresh class.
+            </summary>
+            <param name="context">The <see cref="T:Android.Content.Context"/>.</param>
+            <param name="attributeSet">The <see cref="T:Android.Util.IAttributeSet"/>.</param>
+            <param name="definedStyle">The value indicating the defined style</param>
+            <param name="definedResource">The value indicating the defined resource</param>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.#ctor(System.IntPtr,Android.Runtime.JniHandleOwnership)">
+            <summary>
+            Initializes a new instance of SfPullToRefresh class.
+            </summary>
+            <param name="javaReference">The <see cref="T:System.IntPtr"/>.</param>
+            <param name="transfer">The <see cref="T:Android.Runtime.JniHandleOwnership"/>.</param>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.MapAttributes(Android.Content.Context,Android.Util.IAttributeSet,System.Int32,System.Int32)">
+            <summary>
+            Map the attributes.
+            </summary>
+            <param name="context">The context</param>
+            <param name="attributes">The attributes</param>
+            <param name="styleAttributes">The style attributes</param>
+            <param name="styleRes">The style res</param>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.transitionTypeChanged(System.Int32)">
+            <summary>
+            Method used to set TransitionType
+            </summary>
+            <param name="option">option value</param>
+        </member>
+        <member name="E:Syncfusion.SfPullToRefresh.SfPullToRefresh.Pulling">
+            <summary>
+            Occurs when pulling operation is performed.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfPullToRefresh.SfPullToRefresh.Refreshing">
+            <summary>
+            Occurs when refreshing operation is started.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfPullToRefresh.SfPullToRefresh.Refreshed">
+            <summary>
+            Occurs once refreshing is completed.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.StartRefreshing">
+            <summary>
+            Starts refreshing the pullable content displaying the refreshing animation.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.EndRefreshing">
+            <summary>
+            Ends refreshing the pullable content stopping the refreshing animation.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.ProcessPullingEvent">
+            <summary>
+            Process the <see cref="E:Syncfusion.SfPullToRefresh.SfPullToRefresh.Pulling"/> event. 
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.ProcessRefreshingEvent">
+            <summary>
+            Process the <see cref="E:Syncfusion.SfPullToRefresh.SfPullToRefresh.Refreshing"/> event.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.ProcessRefreshedEvent">
+            <summary>
+            Process the <see cref="E:Syncfusion.SfPullToRefresh.SfPullToRefresh.Refreshed"/> event.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.ProcessPullingCancelled">
+            <summary>
+            Fires the pulling canceled method of IPullToRefresh.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.RaisePullingEvent">
+            <summary>
+            Raises the <see cref="E:Syncfusion.SfPullToRefresh.SfPullToRefresh.Pulling"/> event.
+            </summary>
+            <returns>Returns whether the pulling event is canceled or not.</returns>
+            <remarks>Returns false, if the pulling event is canceled.</remarks>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.RaiseRefreshingEvent">
+            <summary>
+            Raises the <see cref="E:Syncfusion.SfPullToRefresh.SfPullToRefresh.Refreshing"/> event.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.RaiseRefreshedEvent">
+            <summary>
+            Raises the <see cref="E:Syncfusion.SfPullToRefresh.SfPullToRefresh.Refreshed"/> event.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.OnMeasure(System.Int32,System.Int32)">
+            <summary>
+            Measures the view and its content to determine the measured width and the
+            measured height.
+            </summary>
+            <param name="widthMeasureSpec">The horizontal space requirements as imposed by the parent.</param>
+            <param name="heightMeasureSpec">The vertical space requirements as imposed by the parent.</param>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.OnLayout(System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Called from layout when this view should assign a size and position to each
+            of its children.
+            </summary>
+            <param name="changed">A value indicating whether this is a new size or position for this view.</param>
+            <param name="left">Left position, relative to parent.</param>
+            <param name="top">Top position, relative to parent.</param>
+            <param name="right">Right position, relative to parent.</param>
+            <param name="bottom">Bottom position, relative to parent.</param>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.OnInterceptTouchEvent(Android.Views.MotionEvent)">
+            <summary>
+            This method fires when touch is intercepted in the view.
+            </summary>
+            <param name="ev">The motion event being dispatched down the hierarchy.</param>
+            <returns>Returns true if the touch is handled.</returns>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.OnTouchEvent(Android.Views.MotionEvent)">
+            <summary>
+            This method fires when touch is intercepted in the view and handled.
+            </summary>
+            <param name="e">The motion event.</param>
+            <returns>Returns true if the touch is handled.</returns>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.HandleTouchForPullToRefresh(Android.Views.MotionEvent)">
+            <summary>
+            This method handles the touch for performing pull to refresh.
+            </summary>
+            <param name="e">The motion event.</param>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.InitializeAnimatorProperties">
+            <summary>
+            Initializes the animator properties.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.AnimateBackProgressCircleView(System.Single,System.Single)">
+            <summary>
+            Animates the progress circle view layout.
+            </summary>
+            <param name="layoutFromValue">The starting position from which the view should be animated.</param>
+            <param name="layoutToValue">The end position up-to which the view should be animated.</param>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.ZoomOutProgressView">
+            <summary>
+            Animates the progress view when initially comes in view.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.ZoomInProgressView">
+            <summary>
+            Animates the progress view when refreshing is complete.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.AnimatePullableContent(System.Int32)">
+            <summary>
+            Animates the top position of the pullable content.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.AnimatePullableContentOnPullingCanceled(System.Int32)">
+             <summary>
+             Animates the view of pullable content layout.
+             </summary>
+             <param name="LayoutToValue">The end position up-to which the view should be animated.</param>
+            <remarks>This animation is only used when pulling is canceled and when the transition mode is push.</remarks>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefresh.Dispose(System.Boolean)">
+            <summary>
+            Releases the unmanaged resources used by the component and optionally releases the managed resources.
+            </summary>
+            <param name="isDisposing"> if true - release both managed and unmanaged resources; 
+            if false - release only unmanaged resources.
+            </param>
+        </member>
+        <member name="T:Syncfusion.SfPullToRefresh.Namespacedoc">
+            <summary>
+            Provides classes to create <see cref="T:Syncfusion.SfPullToRefresh.SfPullToRefresh"/>, that enable a user to load an animation while 
+            refreshing the data in the underlying collection, when the pull to refresh action is performed.
+            </summary>
+            <exclude/>
+        </member>
+        <member name="T:Syncfusion.SfPullToRefresh.XamarinExtensions">
+            <exclude/>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.XamarinExtensions.SetVisibility(Android.Views.View,System.Boolean)">
+            <summary>
+            Sets the visibility to the view based on the <paramref name="isVisible"/> value.
+            </summary>
+            <param name="view">The view whose visiblity is to be set.</param>
+            <param name="isVisible">Indicates whether to set visible or invisible to 
+            the view.</param>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.XamarinExtensions.GetVisibility(Android.Views.View)">
+            <summary>
+            Returns true, if the view is visible.
+            </summary>
+            <param name="view">The view whose visiblity is to be obtained.</param>
+            <returns>Returns true, if the view is visible.</returns>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.XamarinExtensions.CallDraw(Android.Views.View)">
+            <summary>
+            Calls the Draw method of the given view.
+            </summary>
+            <param name="view">The view whose draw is to be called.</param>
+        </member>
+        <member name="T:Syncfusion.SfPullToRefresh.SfPullToRefreshHelpers">
+            <summary>
+            Class which contains the helper extension methods for SfPullToRefresh.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefreshHelpers.ConvertDpToPixels(Syncfusion.SfPullToRefresh.SfPullToRefresh,System.Double)">
+            <summary>
+            Converts the given dp to pixels.
+            </summary>
+            <param name="pullToRefresh">The SfPullToRefresh in which the density should be considered for calculation of pixel value.</param>
+            <param name="dp">The density independent pixel value for which the pixel 
+            value should be obtained.</param>
+            <returns>The pixels for the given dp value.</returns>
+        </member>
+        <member name="M:Syncfusion.SfPullToRefresh.SfPullToRefreshHelpers.ConvertPixelsToDp(Syncfusion.SfPullToRefresh.SfPullToRefresh,System.Double)">
+            <summary>
+            Converts the pixels to dp.
+            </summary>
+            <param name="pullToRefresh">The SfPullToRefresh in which the pixels should be converted to density pixels.</param>
+            <param name="pixels">The pixel value for which the density independent pixel should be obtained.</param>
+            <returns>The dp for the given pixels.</returns>
+        </member>
+        <member name="T:Com.Syncfusion.Sfpulltorefresh.BackgroundView">
+            <exclude/>
+        </member>
+        <member name="M:Com.Syncfusion.Sfpulltorefresh.BackgroundView.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the BackgroundView class.
+            </summary>
+            <param name="context">The <see cref="T:Android.Content.Context"/>.</param>
+        </member>
+        <member name="M:Com.Syncfusion.Sfpulltorefresh.BackgroundView.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the BackgroundView class.
+            </summary>
+            <param name="context">The <see cref="T:Android.Content.Context"/>.</param>
+            <param name="attributeSet">The <see cref="T:Android.Util.IAttributeSet"/>.</param>
+        </member>
+        <member name="M:Com.Syncfusion.Sfpulltorefresh.BackgroundView.#ctor(Android.Content.Context,Android.Util.IAttributeSet,System.Int32)">
+            <summary>
+            Initializes a new instance of the BackgroundView class.
+            </summary>
+            <param name="context">The <see cref="T:Android.Content.Context"/>.</param>
+            <param name="attributeSet">The <see cref="T:Android.Util.IAttributeSet"/>.</param>
+            <param name="definedStyle">The value indicating the defined style.</param>
+        </member>
+        <member name="M:Com.Syncfusion.Sfpulltorefresh.BackgroundView.#ctor(System.IntPtr,Android.Runtime.JniHandleOwnership)">
+            <summary>
+            Initializes a new instance of BackgroundView class.
+            </summary>
+            <param name="javaReference">The <see cref="T:System.IntPtr"/>.</param>
+            <param name="transfer">The <see cref="T:Android.Runtime.JniHandleOwnership"/>.</param>
+        </member>
+        <member name="T:Com.Syncfusion.Sfpulltorefresh.HeaderView">
+            <exclude/>
+        </member>
+        <member name="M:Com.Syncfusion.Sfpulltorefresh.HeaderView.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of HeaderView class.
+            </summary>
+            <param name="context">The <see cref="T:Android.Content.Context"/>.</param>
+        </member>
+        <member name="M:Com.Syncfusion.Sfpulltorefresh.HeaderView.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the HeaderView class.
+            </summary>
+            <param name="context">The <see cref="T:Android.Content.Context"/>.</param>
+            <param name="attributeSet">The <see cref="T:Android.Util.IAttributeSet"/>.</param>
+        </member>
+        <member name="M:Com.Syncfusion.Sfpulltorefresh.HeaderView.#ctor(Android.Content.Context,Android.Util.IAttributeSet,System.Int32)">
+            <summary>
+            Initializes a new instance of the HeaderView class.
+            </summary>
+            <param name="context">The <see cref="T:Android.Content.Context"/>.</param>
+            <param name="attributeSet">The <see cref="T:Android.Util.IAttributeSet"/>.</param>
+            <param name="definedStyle">The value indicating the defined style.</param>
+        </member>
+        <member name="M:Com.Syncfusion.Sfpulltorefresh.HeaderView.#ctor(System.IntPtr,Android.Runtime.JniHandleOwnership)">
+            <summary>
+            Initializes a new instance of HeaderView class.
+            </summary>
+            <param name="javaReference">The <see cref="T:System.IntPtr"/>.</param>
+            <param name="transfer">The <see cref="T:Android.Runtime.JniHandleOwnership"/>.</param>
+        </member>
+        <member name="P:Com.Syncfusion.Sfpulltorefresh.HeaderView.BackgroundView">
+            <summary>
+            Gets or sets the background view.
+            </summary>
+            <value>The background view.</value>
+        </member>
+        <member name="T:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh">
+            <summary>
+            A refresh control that allows you to interact and refresh the view loaded in it. The SfPullToRefresh control allows you to refresh the view upon performing the pull to refresh action.
+            </summary>
+            <exclude/>
+        </member>
+        <member name="P:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.HeaderView">
+            <summary>
+            Gets or sets the header view.
+            </summary>
+            <value>The header view.</value>
+        </member>
+        <member name="P:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.BackgroundView">
+            <summary>
+            Gets or sets the background view.
+            </summary>
+            <value>The background view.</value>
+        </member>
+        <member name="P:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.Density">
+            <summary>
+            Gets or sets the density.
+            </summary>
+            <value>The density value.</value>
+        </member>
+        <member name="P:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.RefreshContent">
+            <summary>
+            Gets or sets the content to refresh.
+            </summary>
+            <value>The content to refresh.</value>
+        </member>
+        <member name="P:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.PullDirection">
+            <summary>
+            Gets or sets the pull direction.
+            </summary>
+            <value>The pulling direction.</value>
+        </member>
+        <member name="P:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.ProgressBackground">
+            <summary>
+            Gets or sets the progress background.
+            </summary>
+            <value>The value of background progressing.</value>
+        </member>
+        <member name="P:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.ProgressStrokeColor">
+            <summary>
+            Gets or sets the color of the progress stroke.
+            </summary>
+            <value>The color of the progress stroke.</value>
+        </member>
+        <member name="P:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.ProgressRadius">
+            <summary>
+            Gets or sets the progress radius.
+            </summary>
+            <value>The value of progress radius.</value>
+        </member>
+        <member name="P:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.ProgressStrokeWidth">
+            <summary>
+            Gets or sets the progress indicator stroke width.
+            </summary>
+            <value>The progress indicator stroke width.</value>
+        </member>
+        <member name="P:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.RefreshContentWidth">
+            <summary>
+            Gets or sets the width of RefreshContent.
+            </summary>
+            <value>
+            The width of RefreshContent.
+            </value>
+        </member>
+        <member name="P:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.RefreshContentHeight">
+            <summary>
+            Gets or sets the height of RefreshContent.
+            </summary>
+            <value>
+            The height of RefreshContent.
+            </value>
+        </member>
+        <member name="P:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.PullableContent">
+            <summary>
+            Gets or sets the pullable content of the SfPullToRefresh.
+            </summary>
+            <value>The pullable content of the SfPullToRefresh.</value>
+        </member>
+        <member name="P:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.IsRefreshing">
+            <summary>
+            Gets a value indicating whether to enable or disable the refreshing or not.
+            </summary>
+            <value>A value indicating whether to enable or disable the refreshing or not.</value>
+        </member>
+        <member name="P:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.Progress">
+            <summary>
+            Gets the percentage of the progress of pulling.
+            </summary>
+            <value>
+            The percentage of the progress of pulling.
+            </value>
+        </member>
+        <member name="P:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.TransitionType">
+            <summary>
+            Gets or sets the transition mode of the SfPullToRefresh.
+            </summary>
+            <value>The transition mode of the SfPullToRefresh.</value>
+        </member>
+        <member name="M:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of SfPullToRefresh class.
+            </summary>
+            <param name="context">The <see cref="T:Android.Content.Context"/>.</param>
+        </member>
+        <member name="M:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.#ctor(System.IntPtr,Android.Runtime.JniHandleOwnership)">
+            <summary>
+            Initializes a new instance of SfPullToRefresh class.
+            </summary>
+            <param name="javaReference">The <see cref="T:System.IntPtr"/>.</param>
+            <param name="transfer">The <see cref="T:Android.Runtime.JniHandleOwnership"/>.</param>
+        </member>
+        <member name="M:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.OnRefreshingAnimation">
+            <summary>
+             The animation during refreshing the SfPullToRefresh.
+            </summary>
+        </member>
+        <member name="M:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.SetOnPullingListener(Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.IPullingListener)">
+            <summary>
+            Pulling listener during pulling.
+            </summary>
+            <param name="p0">SfPullToRefresh.IPullingListener.</param>
+        </member>
+        <member name="M:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.SetOnRefreshedListener(Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.IRefreshedListener)">
+            <summary>
+            Refreshed listener while refreshing the SfPullToRefresh.
+            </summary>
+            <param name="p0">SfPullToRefresh.IRefreshedListener.</param>
+        </member>
+        <member name="M:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.SetOnRefreshingListener(Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.IRefreshingListener)">
+            <summary>
+            Refreshing listener while refreshing the SfPullToRefresh..
+            </summary>
+            <param name="p0">SfPullToRefresh.IRefreshingListener.</param>
+        </member>
+        <member name="M:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.Refresh">
+            <summary>
+            Starts Refreshing programmatially.
+            </summary>
+        </member>
+        <member name="M:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.SetPullingThreshold(System.Single)">
+            <summary>
+            Sets the pulling threshold.
+            </summary>
+            <param name="value">The threshold value of pulling.</param>
+        </member>
+        <member name="E:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.Pulling">
+            <summary>
+            Occurs when pulling operation is performed.
+            </summary>
+        </member>
+        <member name="E:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.Refreshing">
+            <summary>
+            Occurs when refreshing operation is started.
+            </summary>
+        </member>
+        <member name="M:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.RaisePullingEvent">
+            <summary>
+            Raises the <see cref="E:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.Pulling"/> event.
+            </summary>
+        </member>
+        <member name="M:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.RaiseRefreshingEvent">
+            <summary>
+            Raises the <see cref="E:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.Refreshing"/> event.
+            </summary>
+        </member>
+        <member name="T:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.PullingEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.Pulling"/> event.
+            </summary>
+            <exclude/>
+        </member>
+        <member name="M:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.PullingEventArgs.#ctor">
+            <summary>
+            Initializes a new instance of the PullingEventArgs class.
+            </summary>
+        </member>
+        <member name="P:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.PullingEventArgs.P0">
+            <summary>
+            Gets the progress of pulling.
+            </summary>
+            <value>The progress of pulling.</value>
+        </member>
+        <member name="T:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.IPullingListener">
+            <exclude/>
+        </member>
+        <member name="T:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.IRefreshedListener">
+            <exclude/>
+        </member>
+        <member name="T:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh.IRefreshingListener">
+            <exclude/>
+        </member>
+        <member name="T:Com.Syncfusion.Sfpulltorefresh.PullDirection">
+            <exclude/>
+        </member>
+        <member name="P:Com.Syncfusion.Sfpulltorefresh.PullDirection.Bottom">
+            <summary>
+            Gets the bottom direction.
+            </summary>
+            <value>The bottom directon.</value>
+        </member>
+        <member name="P:Com.Syncfusion.Sfpulltorefresh.PullDirection.Top">
+            <summary>
+            Gets the top direction.
+            </summary>
+            <value>The top direction.</value>
+        </member>
+        <member name="T:Com.Syncfusion.Sfpulltorefresh.TransitionType">
+            <summary>
+            Describes the possible transition types available in the <see cref="T:Com.Syncfusion.Sfpulltorefresh.SfPullToRefresh"/> control.
+            </summary>
+            <exclude/>
+        </member>
+        <member name="P:Com.Syncfusion.Sfpulltorefresh.TransitionType.Push">
+            <summary>
+            Gets or sets the push TransitionType.
+            </summary>
+            <value>The push TransitionType.</value>
+        </member>
+        <member name="P:Com.Syncfusion.Sfpulltorefresh.TransitionType.SlideonTop">
+            <summary>
+            Gets or sets the slideon top TransitionType.
+            </summary>
+            <value>The slideon top TransitionType.</value>
+        </member>
+        <member name="M:Com.Syncfusion.Sfpulltorefresh.TransitionType.#ctor">
+            <summary>
+            Initializes a new instance of TransitionType class.
+            </summary>
+        </member>
+    </members>
+</doc>

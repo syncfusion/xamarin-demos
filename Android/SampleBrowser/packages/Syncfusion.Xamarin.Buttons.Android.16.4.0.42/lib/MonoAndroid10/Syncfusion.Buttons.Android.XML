@@ -1,0 +1,1529 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.Buttons.Android</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.Android.Buttons.SegmentDisplayMode">
+            <summary>
+            Describes the possible values for the display type of headers in <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/> View.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SegmentDisplayMode.Image">
+            <summary>
+            Specifies the image type for header in <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/> View.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SegmentDisplayMode.Text">
+            <summary>
+            Specifies the text type for header in <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/> View.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SegmentDisplayMode.ImageWithText">
+            <summary>
+            Specifies both image as well as text for the header in <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/> View.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Android.Buttons.SelectionIndicatorPosition">
+            <summary>
+            Describes the possible values for the position of selection strip in <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/> View,
+            selection indicator is to indicate the selected index in the <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/> View.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SelectionIndicatorPosition.Top">
+            <summary>
+            Specifies the top location for the selection indicator in <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/> View.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SelectionIndicatorPosition.Bottom">
+            <summary>
+            Specifies the bottom location for the selection indicator in <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/> View.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SelectionIndicatorPosition.Fill">
+            <summary>
+            Specifies the fill region for the selection indicator in <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/> View.
+            </summary>
+            <remarks>Selection color of <see cref="T:Syncfusion.Android.Buttons.SfSegmentItem"/> should be varied with the strip color when set this value. /></remarks>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SelectionIndicatorPosition.Border">
+            <summary>
+            Specifies the border to cover the outer region of the selected item in <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/> View.
+            </summary>
+            <remarks>Selection color of <see cref="T:Syncfusion.Android.Buttons.SfSegmentItem"/> should be varied with the strip color when set this value. /></remarks>
+        </member>
+        <member name="T:Syncfusion.Android.Buttons.SegmentedControlHelper">
+            <summary>
+            Contains static helper methods which are not dependent to any classes.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SegmentedControlHelper.DensityConverter(System.Double,Android.Content.Context)">
+            <summary>
+            Gets density based value for actual value.
+            </summary>
+            <param name="oldValue">Old value</param>
+            <param name="context">Context type</param>
+            <returns>return value</returns>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SegmentedControlHelper.RefreshView(Android.Views.View,System.Boolean)">
+            <summary>
+            Redraws the view based on the updated values.
+            </summary>
+            <param name="view">view type</param>
+            <param name="islayoutcall">it is a boolean type</param>
+        </member>
+        <member name="T:Syncfusion.Android.Buttons.SfSegmentedControl">
+            <summary>
+            SegmentedControl View lets users explore and switch among different views.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.isAnimate">
+            <summary>
+            It is used to get the animation state of the item 
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.Density">
+            <summary>
+            Density field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.Count">
+            <summary>
+            Count of items added.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.isViewLoaded">
+            <summary>
+            View loaded field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.selectionChangedEventArgs">
+            <summary>
+            Selection changed event args
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.cloneView">
+            <summary>
+            clone view field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.currentView">
+            <summary>
+            current view field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.itemsSource">
+            <summary>
+            Items field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.selectedIndex">
+            <summary>
+            selected index field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.viewLayout">
+            <summary>
+            To hold the segments
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.viewLayoutBackground">
+            <summary>
+            To hold the segments
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.selectionIndicatorSettings">
+            <summary>
+            Selection indicator field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.segmentHeight">
+            <summary>
+            Segment height field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.displayMode">
+            <summary>
+            Display mode field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.visibleSegmentsCount">
+            <summary>
+            Visible header count field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.segmentWidth">
+            <summary>
+            Segment width field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.cornerRadius">
+            <summary>
+            Corner Radius for parent layout
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.segmentCornerRadius">
+            <summary>
+            Corner Radius for parent layout
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.borderColor">
+            <summary>
+            Border color of parent layout
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.borderThickness">
+            <summary>
+            Selection color of the segments
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.typeface">
+            <summary>
+            Text font style field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.fontSize">
+            <summary>
+            Text font size field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.fontColor">
+            <summary>
+            title font color field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.fontIconStyle">
+            <summary>
+            Font icon style field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.fontIconFontSize">
+            <summary>
+            Font icon font size field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.fontIconFontColor">
+            <summary>
+            Text font icon font color field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.selectionTextColor">
+            <summary>
+            Selection text color field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.disabledTextColor">
+            <summary>
+            Disabled text color field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.allowMultiSelection">
+            <summary>
+            Allows multi-selection field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.indices">
+            <summary>
+            holds selected index values.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.selectionStrip">
+            <summary>
+            Indicate the selected segment.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.scrollView">
+            <summary>
+            Scroll view field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.container">
+            <summary>
+            holds all the view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.backColor">
+            <summary>
+            Background Color field.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentedControl.BackColor">
+            <summary>
+            Back color field.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfSegmentedControl.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/> class.
+            </summary>
+            <param name="context">Context type</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfSegmentedControl.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/> class.
+            </summary>
+            <param name="context">Context Type</param>
+            <param name="attribute">Attribute sets</param>
+        </member>
+        <member name="E:Syncfusion.Android.Buttons.SfSegmentedControl.SelectionChanged">
+            <summary>
+            Occurs when index changed.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.Android.Buttons.SfSegmentedControl.PropertyChanged">
+            <inheritdoc />
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentedControl.ItemsSource">
+            <summary>
+            Gets or sets children for <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/> through the collection of <see cref="T:Syncfusion.Android.Buttons.SfSegmentItem"/> or collection of strings or views.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentedControl.SelectedIndex">
+            <summary>
+            Gets or sets the value for current index of <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/>.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentedControl.DisplayMode">
+            <summary>
+            Gets or sets the value to define the type of segment. By default, it will display title from <see cref="T:Syncfusion.Android.Buttons.SfSegmentItem"/> or the string value.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentedControl.SegmentHeight">
+            <summary>
+            Gets or sets the value for the height of the segment in <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/>.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentedControl.SegmentWidth">
+            <summary>
+            Gets or sets the value for the width of the segment in <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/>.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentedControl.VisibleSegmentsCount">
+            <summary>
+            Gets or sets the value to show the segments in the available space in <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/>. As it overrides to segment width property, other segments can be viewed by scrolling.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentedControl.SelectionIndicatorSettings">
+            <summary>
+            Gets or sets value to configure the attributes of <see cref="P:Syncfusion.Android.Buttons.SfSegmentedControl.SelectionIndicatorSettings"/>,
+            Selection indicator is a strip which is used to indicate the selected index of <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/>
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentedControl.DisabledTextColor">
+            <summary>
+            Gets or sets the text color of disabled segment items in <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/>.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentedControl.SelectionTextColor">
+            <summary>
+            Gets or sets the text color of the selected segment in <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/>.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentedControl.BorderColor">
+            <summary>
+            Gets or sets the color of the border for <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/>.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentedControl.BorderThickness">
+            <summary>
+            Gets or sets the thickness of the border for <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/>.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentedControl.CornerRadius">
+            <summary>
+            Gets or sets the corner radius value for the border of <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/>.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentedControl.SegmentCornerRadius">
+            <summary>
+            Gets or sets the corner radius value for the segment items available in <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.segmentBorderColor">
+            <summary>
+            segment bordercolor field.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentedControl.SegmentBorderColor">
+            <summary>
+            Gets or sets Segment border color
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.segmentBackgroundColor">
+            <summary>
+            segment backgroundcolor field.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentedControl.SegmentBackgroundColor">
+            <summary>
+            Gets or sets Segment background color
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.segmentBorderThickness">
+            <summary>
+            Segment Border Thickness.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentedControl.SegmentBorderThickness">
+            <summary>
+            Gets or sets Segment border thickness
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.segmentPadding">
+            <summary>
+            SegmentItem padding field
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentedControl.SegmentPadding">
+            <summary>
+            Gets or sets Segment border thickness
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentedControl.Typeface">
+            <summary>
+            Gets or sets the value for the font representation of text for a segment item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentedControl.FontSize">
+            <summary>
+            Gets or sets the value for the font size of text for a segment item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentedControl.FontColor">
+            <summary>
+            Gets or sets the value for the color of text for a segment item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentedControl.FontIconStyle">
+            <summary>
+            Gets or sets the value for the font family of icon font text for a segment item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentedControl.FontIconFontSize">
+            <summary>
+            Gets or sets the value for the font size of icon font text for a segment item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentedControl.FontIconFontColor">
+            <summary>
+            Gets or sets the value for the color of font icon text for a segment item.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentedControl.selectionAnimationDuration">
+            <summary>
+            selection animation duration field 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentedControl.SelectionAnimationDuration">
+            <summary>
+            Gets or sets the selection animation duration.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfSegmentedControl.CanTriggerSelectionChangedEvent">
+            <summary>
+            To check Whether the selection changed event triggered or not.
+            </summary>
+            <returns>return value</returns>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfSegmentedControl.RaiseSelectionChanged(Syncfusion.Android.Buttons.SelectionChangedEventArgs)">
+            <summary>
+            Invoke event with the updated index value.
+            </summary>
+            <param name="args">event args</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfSegmentedControl.OnSizeChanged(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            method for size changed
+            </summary>
+            <param name="w">width</param>
+            <param name="h">height</param>
+            <param name="oldw">old width</param>
+            <param name="oldh">old height</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfSegmentedControl.OnLayout(System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <inheritdoc />
+            <summary>
+            Position all children within this layout.
+            </summary>     
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfSegmentedControl.OnDraw(Android.Graphics.Canvas)">
+            <summary>
+            On draw method.
+            </summary>
+            <param name="canvas"></param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfSegmentedControl.GetPaddingSpace">
+            <summary>
+            Get padding space.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfSegmentedControl.UpdateSegmentBounds">
+            <summary>
+            Update segment bounds.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfSegmentedControl.GetSegmentWidth">
+            <summary>
+            Get segment width.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfSegmentedControl.Checkmode(System.Int32)">
+            <summary>
+            Checks the display mode.
+            </summary>
+            <returns>The displaymode.</returns>
+            <param name="displaymodeValue">display mode value.</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfSegmentedControl.Checkposition(System.Int32)">
+            <summary>
+            Checks the position.
+            </summary>
+            <returns>The position.</returns>
+            <param name="positionValue">position.</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfSegmentedControl.MapAttributes(Android.Content.Context,Android.Util.IAttributeSet,System.Int32,System.Int32)">
+            <summary>
+            Maps the attributes.
+            </summary>
+            <param name="context">Context Property.</param>
+            <param name="attributes">Attributes Value.</param>
+            <param name="styleAttributes">Style attributes.</param>
+            <param name="styleResource">Style resource.</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfSegmentedControl.CreateSegmentView(Syncfusion.Android.Buttons.SfSegmentedControl)">
+            <summary>
+            method for create segment view
+            </summary>
+            <param name="segmentedControl">segmentedControl</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfSegmentedControl.SetChildViews">
+            <summary>
+            Set child views.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfSegmentedControl.UpdateChildViews">
+            <summary>
+            Update child views.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfSegmentedControl.UpdateBorders">
+            <summary>
+            Update views border.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfSegmentedControl.UpdateSelectionStrip(System.Boolean)">
+            <summary>
+            Update Selection strip.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfSegmentedControl.UpdateSelectionIndicator">
+            <summary>
+            Update selection indicator.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfSegmentedControl.UpdateTextStyle">
+            <summary>
+            Update text style.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfSegmentedControl.UpdateFontIconStyle">
+            <summary>
+            Update font icon style.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfSegmentedControl.UpdateIndex">
+            <summary>
+            Update Selected index
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfSegmentedControl.SingleSelection(System.Int32,Syncfusion.Android.Buttons.SegmentView)">
+            <summary>
+            Single selection update.
+            </summary>
+            <param name="i"></param>
+            <param name="segment"></param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfSegmentedControl.RaiseOnPropertyChanged(System.String)">
+            <summary>
+            This method is called by the Set accessor of each property.
+            The CallerMemberName attribute that is applied to the optional propertyName
+            parameter causes the property name of the caller to be substituted as an argument.
+            </summary>
+            <param name="propertyName">String type</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfSegmentedControl.Dispose(System.Boolean)">
+            <summary>
+            method to dispose dead objects
+            </summary>
+            <param name="disposing">whether indicates disposing or not.</param>
+        </member>
+        <member name="T:Syncfusion.Android.Buttons.SelectionChangedEventArgs">
+            <inheritdoc />
+            <summary>
+            Contains data for the event which is raised selected index changed.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SelectionChangedEventArgs.Index">
+            <summary>
+            Gets the value of selected index.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Android.Buttons.SfSegmentItem">
+            <inheritdoc />
+            <summary>
+            Represents a single element in <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl" /> View.
+            It contains the properties to configure text and content region.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentItem.text">
+            <summary>
+            text field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentItem.iconFont">
+            <summary>
+            Font icon text field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentItem.typeface">
+            <summary>
+            Text font style field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentItem.fontSize">
+            <summary>
+            Text font size field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentItem.fontColor">
+            <summary>
+            text font color field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentItem.fontIconTypeface">
+            <summary>
+            Font icon style field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentItem.fontIconFontSize">
+            <summary>
+            Font icon font size field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentItem.fontIconFontColor">
+            <summary>
+            Text font icon font color field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentItem.selectionTextColor">
+            <summary>
+            Selection text color field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentItem.selectionBackgroundColor">
+            <summary>
+            Selection background color field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentItem.backgroundColor">
+            <summary>
+            Selection background color field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfSegmentItem.isEnabled">
+            <summary>
+            enabled field.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.Android.Buttons.SfSegmentItem.PropertyChanged">
+            <inheritdoc />
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentItem.Text">
+            <summary>
+            Gets or sets the value for the text of Segment item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentItem.IconFont">
+            <summary>
+            Gets or sets the value for the font icon text for a Segment item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentItem.Typeface">
+            <summary>
+            Gets or sets the value for the font representation of text for a segment item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentItem.FontSize">
+            <summary>
+            Gets or sets the value for the font size of text for a segment item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentItem.FontColor">
+            <summary>
+            Gets or sets the value for the color of text for a segment item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentItem.FontIconTypeface">
+            <summary>
+            Gets or sets the value for the font family of icon font text for a segment item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentItem.FontIconFontSize">
+            <summary>
+            Gets or sets the value for the font size of icon font text for a segment item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentItem.FontIconFontColor">
+            <summary>
+            Gets or sets the value for the color of font icon text for a segment item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentItem.SelectionTextColor">
+            <summary>
+            Gets or sets the color value for the selection text of segment item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentItem.SelectionBackgroundColor">
+            <summary>
+            Gets or sets the background color value for the selected segment item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentItem.BackgroundColor">
+            <summary>
+            Gets or sets the background color value for the segment item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfSegmentItem.IsEnabled">
+            <summary>
+            Gets or sets the value to choose whether the segment item is enabled or not.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfSegmentItem.RaiseOnPropertyChanged(System.String)">
+            <summary>
+            This method is called by the Set accessor of each property.
+            The CallerMemberName attribute that is applied to the optional propertyName
+            parameter causes the property name of the caller to be substituted as an argument.
+            </summary>
+            <param name="propertyName">String type</param>
+        </member>
+        <member name="T:Syncfusion.Android.Buttons.Border">
+            <inheritdoc />
+            <summary>
+            Helps to draw a rectangular border based on the given attributes such as color thickness and bounds value.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.Border.#ctor(Android.Graphics.Color,System.Single,System.Int32,Android.Graphics.Color)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Android.Buttons.Border" /> class.
+            </summary>
+            <param name="borderColor">bordercolor field</param>
+            <param name="cornerRadius">corner radius field</param>
+            <param name="thickness">thickness field</param>
+            <param name="backgroundColor">background field</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.Border.UpdatedCornerRadius(System.Single)">
+            <summary>
+            Update corner radius.
+            </summary>
+            <param name="cornerRadius">corner radius field</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.Border.UpdateBorders(System.Int32,Android.Graphics.Color)">
+            <summary>
+            update border.
+            </summary>
+            <param name="thickness">thickness field</param>
+            <param name="borderColor">border coloir field</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.Border.UpdateBackgroundColor(Android.Graphics.Color)">
+            <summary>
+            Update background color.
+            </summary>
+            <param name="color">update backgroundcolor field</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.Border.Dispose(System.Boolean)">
+            <summary>
+            method to dispose dead objects. 
+            </summary>
+            <param name="disposing">whether indicates disposing or not</param>
+        </member>
+        <member name="T:Syncfusion.Android.Buttons.SegmentView">
+            <inheritdoc />
+            <summary>
+            Draws the appearance of header item based on <see cref="!:SegmentHeaderItemStyle"/>
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SegmentView.paint">
+            <summary>
+            paint field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SegmentView.text">
+            <summary>
+            Text field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SegmentView.fontText">
+            <summary>
+            Font Text field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SegmentView.fontIconFontFamily">
+            <summary>
+            Font Icon family field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SegmentView.fontFamily">
+            <summary>
+            Font family field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SegmentView.textSize">
+            <summary>
+            Text size field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SegmentView.border">
+            <summary>
+            border field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SegmentView.fontIconTextSize">
+            <summary>
+            Font icon field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SegmentView.textColor">
+            <summary>
+            Text color field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SegmentView.fontIcontColor">
+            <summary>
+            Font icon color field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SegmentView.selectionTextColor">
+            <summary>
+            Selection text color field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SegmentView.selectionColor">
+            <summary>
+            Selection color field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SegmentView.textPosition">
+            <summary>
+            Text position field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SegmentView.fontIconPosition">
+            <summary>
+            Font icon position.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SegmentView.isSelected">
+            <summary>
+            Is selection field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SegmentView.isEnabled">
+            <summary>
+            Is enabled field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SegmentView.AllowTextRendering">
+            <summary>
+            Allow Text rendering.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SegmentView.IsEnabled">
+            <summary>
+            Gets or sets the Isenabled field.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SegmentView.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SegmentView.FontText">
+            <summary>
+            Gets or sets the font text.
+            </summary>
+            <value>The font text.</value>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SegmentView.FontIconFontFamily">
+            <summary>
+            Gets or sets the font icon font family.
+            </summary>
+            <value>The font icon font family.</value>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SegmentView.FontFamily">
+            <summary>
+            Gets or sets the font family.
+            </summary>
+            <value>The font family.</value>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SegmentView.TextSize">
+            <summary>
+            Gets or sets the size of the text.
+            </summary>
+            <value>The size of the text.</value>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SegmentView.FontIconTextSize">
+            <summary>
+            Gets or sets the size of the font icon text.
+            </summary>
+            <value>The size of the font icon text.</value>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SegmentView.FontIcontColor">
+            <summary>
+            Gets or sets the color of the font icont.
+            </summary>
+            <value>The color of the font icont.</value>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SegmentView.SelectionTextColor">
+            <summary>
+            Gets or sets the color of the selection text.
+            </summary>
+            <value>The color of the selection text.</value>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SegmentView.SelectionColor">
+            <summary>
+            Gets or sets the color of the selection.
+            </summary>
+            <value>The color of the selection.</value>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SegmentView.CornerRadius">
+            <summary>
+            Corner radius field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SegmentView.segmentedView">
+            <summary>
+            segment view field.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SegmentView.SegmentedControl">
+            <summary>
+            Gets or sets the Segmented view field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SegmentView.segmentItem">
+            <summary>
+            segment item field.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SegmentView.SegmentItem">
+            <summary>
+            Segment item field.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SegmentView.IsSelected">
+            <summary>
+             Gets or sets the Is Selected field.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SegmentView.TextColor">
+            <summary>
+             Gets or sets Text color field.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SegmentView.#ctor(Syncfusion.Android.Buttons.SfSegmentItem,Android.Content.Context,System.String,System.String,System.Double,Android.Graphics.Typeface,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Android.Buttons.SegmentView" /> class.
+            </summary>
+            <param name="item">item field.</param>
+            <param name="context">context filed.</param>
+            <param name="text">text field.</param>
+            <param name="fontText">font text field.</param>
+            <param name="cornerRadius">corner radius field.</param>
+            <param name="iconFontFamily">icon font family.</param>
+            <param name="allTextRendering">text renering field.</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SegmentView.SetStyleFromSegment(Syncfusion.Android.Buttons.SfSegmentItem)">
+            <summary>
+            set Style from segment.
+            </summary>
+            <param name="data">data field.</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SegmentView.Dispose(System.Boolean)">
+            <summary>
+            method for dispose dead objects
+            </summary>
+            <param name="disposing">whether indicates disposing or not</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SegmentView.OnDraw(Android.Graphics.Canvas)">
+            <summary>
+            On draw method.
+            </summary>
+            <param name="canvas">canvas field</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SegmentView.OnTouchEvent(Android.Views.MotionEvent)">
+            <summary>
+            On touch event
+            </summary>
+            <param name="e">Motion event</param>
+            <returns>return value</returns>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SegmentView.GetPosition">
+            <summary>
+            Get position 
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SegmentView.DrawText(Android.Graphics.Canvas)">
+            <summary>
+            Draw text method.
+            </summary>
+            <param name="canvas">Canvas type</param>
+            <param name="left">Left value</param>
+            <param name="top">Top value</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SegmentView.DrawFont(Android.Graphics.Canvas)">
+            <summary>
+            Draw font method.
+            </summary>
+            <param name="canvas">Canvas type</param>
+            <param name="left">Left value</param>
+            <param name="top">Top value</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SegmentView.SetBorders">
+            <summary>
+            Set borders.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SegmentView.UpdateBorders(Android.Graphics.Color)">
+            <summary>
+            Update borders.
+            </summary>
+            <param name="selectionColor"></param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SegmentView.UpdateFontIconStyle(Android.Graphics.Typeface,System.Double,Android.Graphics.Color,Android.Graphics.Color)">
+            <summary>
+            update font icon style.
+            </summary>
+            <param name="typeface"></param>
+            <param name="size"></param>
+            <param name="color"></param>
+            <param name="selectionColor"></param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SegmentView.UpdateTextStyle(Android.Graphics.Typeface,System.Double,Android.Graphics.Color,Android.Graphics.Color)">
+            <summary>
+            Update text style.
+            </summary>
+            <param name="fontTypeface"></param>
+            <param name="fontSize"></param>
+            <param name="color"></param>
+            <param name="selectionTextColor"></param>
+        </member>
+        <member name="T:Syncfusion.Android.Buttons.SelectionIndicatorSettings">
+            <inheritdoc />
+            <summary>
+            Provides set of properties to be customized for selection indicator in <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/>,
+            selection indicator is strip which is to indicate the selected index in the <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/> View.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SelectionIndicatorSettings.color">
+            <summary>
+            color field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SelectionIndicatorSettings.position">
+            <summary>
+            position field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SelectionIndicatorSettings.strokeThickness">
+            <summary>
+            stroke thickness field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SelectionIndicatorSettings.cornerRadius">
+            <summary>
+            corner radius field.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.Android.Buttons.SelectionIndicatorSettings.PropertyChanged">
+            <inheritdoc />
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SelectionIndicatorSettings.Color">
+            <summary>
+            Gets or sets the value for the color of selection indicator.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SelectionIndicatorSettings.Position">
+            <summary>
+            Gets or sets the value for the position of selection indicator.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SelectionIndicatorSettings.StrokeThickness">
+            <summary>
+            Gets or sets the value for the thickness of selection indicator.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SelectionIndicatorSettings.CornerRadius">
+            <summary>
+            Gets or sets the corner radius value for the border of selection indicator.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SelectionIndicatorSettings.RaiseOnPropertyChanged(System.String)">
+            <summary>
+            This method is called by the Set accessor of each property.
+            The CallerMemberName attribute that is applied to the optional propertyName
+            parameter causes the property name of the caller to be substituted as an argument.
+            </summary>
+            <param name="propertyName">String type</param>
+        </member>
+        <member name="T:Syncfusion.Android.Buttons.SelectionStrip">
+            <inheritdoc />
+            <summary>
+            Represents the UI for the selected header in <see cref="T:Syncfusion.Android.Buttons.SfSegmentedControl"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SelectionStrip.paint">
+            <summary>
+            Paint field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SelectionStrip.SegmentedControl">
+            <summary>
+            Segment view field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SelectionStrip.selectedIndex">
+            <summary>
+            Selected index field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SelectionStrip.CornerRadius">
+            <summary>
+            Corner Radius
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SelectionStrip.count">
+            <summary>
+            Count field.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SelectionStrip.#ctor(Android.Content.Context,Syncfusion.Android.Buttons.SfSegmentedControl,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Android.Buttons.SelectionStrip"/> class.
+            </summary>
+            <param name="context">context type</param>
+            <param name="mainControl">Segment view type</param>
+            <param name="cornerRadius">corner radius value</param>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SelectionStrip.SelectedIndex">
+            <summary>
+            Gets or sets the value of Selected index property
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SelectionStrip.Count">
+            <summary>
+            Gets or sets the value of count property.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SelectionStrip.HandleTouch(Android.Views.MotionEvent)">
+            <summary>
+            Handles touch for translation of the view.
+            </summary>
+            <param name="e">motion event</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SelectionStrip.OnDraw(Android.Graphics.Canvas)">
+            <summary>
+            Drawing a view is to override the Draw method
+            </summary>
+            <param name="canvas">Defines draw shapes on the screen</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SelectionStrip.Dispose(System.Boolean)">
+            <summary>
+            method to dispose dead objects.
+            </summary>
+            <param name="disposing">whether indicates dispose or not</param>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.ViewLayout.CornerRadius">
+            <summary>
+            field for corner radius
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.ViewLayout.border">
+            <summary>
+            field for border
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.ViewLayout.borderColor">
+            <summary>
+            field for border color
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.ViewLayout.borderThickness">
+            <summary>
+            field for border thickness
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.ViewLayout.segmentWidth">
+            <summary>
+            field for segment width
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.ViewLayout.canvas">
+            <summary>
+            field for canvas
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.ViewLayout.Dispose(System.Boolean)">
+            <summary>
+            method for dispose
+            </summary>
+            <param name="disposing">disposing</param>
+        </member>
+        <member name="T:Syncfusion.Android.Buttons.StateChangedEventArgs">
+            <summary>
+             Specifies the state event arguments.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.StateChangedEventArgs.#ctor(System.Nullable{System.Boolean})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Android.Buttons.StateChangedEventArgs"/> class
+            </summary>
+            <param name="isChecked">Current state of the control</param>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.StateChangedEventArgs.IsChecked">
+            <summary>
+            Gets or set a value indicating whether the ToggleButton is checked.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Android.Buttons.SfCheckBox">
+            <summary>
+            Represents the check box control
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfCheckBox.isChecked">
+            <summary>
+            Indicate whether control is checked or not.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfCheckBox.isThreeState">
+            <summary>
+            Indicate control is a three stated
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfCheckBox.cornerRadius">
+            <summary>
+            Represents corner radius of control
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfCheckBox.indeterminateColor">
+            <summary>
+            Represents the indeterminate state color
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfCheckBox.isConstructor">
+            <summary>
+            Check is constructor
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfCheckBox.defaultLeftPadding">
+            <summary>
+            Represents the default padding of text
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfCheckBox.layoutDirection">
+            <summary>
+            Represents the direction of the layout
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfCheckBox.CHECKED_STATE_SET">
+            <summary>
+            Represents the indeterminate state
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Android.Buttons.SfCheckBox"/> class
+            </summary>
+            <param name="context">the application context</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Android.Buttons.SfCheckBox"/> class
+            </summary>
+            <param name="context">the application context</param>
+            <param name="attributes">the attributes</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.#ctor(Android.Content.Context,Android.Util.IAttributeSet,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Android.Buttons.SfCheckBox"/> class
+            </summary>
+            <param name="context">the application context</param>
+            <param name="attributes">the attributes</param>
+            <param name="style">the default style</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.#ctor(Android.Content.Context,Android.Util.IAttributeSet,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Android.Buttons.SfCheckBox"/> class
+            </summary>
+            <param name="context">the application context</param>
+            <param name="attributes">the attributes</param>
+            <param name="styleAttribute">the default style attribute</param>
+            <param name="style">the default style</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.#ctor(System.IntPtr,Android.Runtime.JniHandleOwnership)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Android.Buttons.SfCheckBox"/> class
+            </summary>
+            <param name="javaReference">java reference</param>
+            <param name="transfer">The runtime ownership</param>
+        </member>
+        <member name="E:Syncfusion.Android.Buttons.SfCheckBox.StateChanged">
+            <summary>
+            Event handles when state changed
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfCheckBox.Checked">
+            <summary>
+            Gets or sets a value indicating whether control is checked or not.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfCheckBox.IsThreeState">
+            <summary>
+            Gets or sets a value indicating whether control is three stated.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfCheckBox.CornerRadius">
+            <summary>
+             Gets or sets a corner radius of the control
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfCheckBox.PaddingLeft">
+            <summary>
+            Get the left padding value.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfCheckBox.PaddingRight">
+            <summary>
+            Get the right padding value.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.OnSaveInstanceState">
+            <summary>
+            Hook allowing a view to generate a representation of its internal state that can later be used to create a new instance with that same state.
+            </summary>
+            <returns>parcel state</returns>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.SetPadding(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Sets the padding
+            </summary>
+            <param name="left">the left</param>
+            <param name="top">the top</param>
+            <param name="right">the top</param>
+            <param name="bottom">the bottom</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.OnRestoreInstanceState(Android.OS.IParcelable)">
+            <summary>
+            Hook allowing a view to re-apply a representation of its internal state that had previously been generated by Android.Views.View.OnSaveInstanceState.
+            </summary>
+            <param name="state">The frozen state that had previously been returned by Android.Widget.TextView.OnSaveInstanceState.</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.SetBackgroundColor(Android.Graphics.Color)">
+            <summary>
+            Sets the background color for this view.
+            </summary>
+            <param name="color">the color of the background</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.Dispose(System.Boolean)">
+            <summary>
+            Dispose the objects
+            </summary>
+            <param name="disposing">Is disposing</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.OnCreateDrawableState(System.Int32)">
+            <summary>
+            Generate new drawable state
+            </summary>
+            <param name="extraSpace">the extra space</param>
+            <returns>The state</returns>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.OnLayout(System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Ons the layout.
+            </summary>
+            <param name="changed">If set to <c>true</c> changed.</param>
+            <param name="left">Left.</param>
+            <param name="top">Top.</param>
+            <param name="right">Right.</param>
+            <param name="bottom">Bottom.</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.OnDraw(Android.Graphics.Canvas)">
+            <summary>
+            Method to draw the shapes.
+            </summary>
+            <param name="canvas">the canvas</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.ValueOf(System.Int32)">
+            <summary>
+            Convert the integer to color
+            </summary>
+            <param name="color">integer value</param>
+            <returns>The color</returns>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.UpdatePaint">
+            <summary>
+             Update the paint for current state
+            </summary>
+            <returns>The paint</returns>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.UpdateRippleColor">
+            <summary>
+            To update the ripple color while state changing
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.GetColor(System.Boolean)">
+            <summary>
+            To get default checked or un checked color.
+            </summary>
+            <param name="isCheckedState">Checked or un checked state</param>
+            <returns>The default checked or un checked color based on given state.</returns>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.OnLoading(Android.Content.Context,System.Int32)">
+            <summary>
+            Initializes the events and members
+            </summary>
+            <param name="context">The current context</param>
+            <param name="style">The current style</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.UpdateRippleColor(Android.Graphics.Color,Android.Graphics.Color)">
+            <summary>
+            Update the ripple color as per the state
+            </summary>
+            <param name="checkedColor">checked color</param>
+            <param name="uncheckedColor">unchecked color</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.LayoutDirectionChanges">
+            <summary>
+            Update the Layouts direction changes.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.InitializeDefaultSettings">
+            <summary>
+            Initialize the default settings
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.UpdateRippleColor(Android.Graphics.Color)">
+            <summary>
+            Update the ripple color
+            </summary>
+            <param name="color">The color</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.ReDraw">
+            <summary>
+            Redraw the control based on the state
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.SfCheckBox_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the on click event
+            </summary>
+            <param name="sender">the sender</param>
+            <param name="eventArgs">the event argument</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.InitializeControl(Android.Content.Context,Android.Util.IAttributeSet,System.Int32,System.Int32)">
+            <summary>
+            Method to initialize the control.
+            </summary>
+            <param name="context">application context</param>
+            <param name="attributeSet">the attributes</param>
+            <param name="defaultStyle">the default style</param>
+            <param name="defaultStyleResource">the default resource</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.ValidateLicenseKey">
+            <summary>
+            Validate the License Key.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.ShowLicenseMessage(System.String)">
+            <summary>
+            Show License Message.
+            </summary>
+            <param name="message">The Message</param>
+        </member>
+        <member name="T:Syncfusion.Android.Buttons.SfCheckBox.SfSavedState">
+            <summary>
+            Represents the saved state
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.Buttons.SfCheckBox.SfSavedState.ischecked">
+            <summary>
+            Indicates is checked or not
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.SfSavedState.#ctor(Android.OS.IParcelable)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Android.Buttons.SfCheckBox.SfSavedState" /> class.
+            </summary>
+            <param name="superState">Super state</param>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.SfSavedState.#ctor(Android.OS.Parcel)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Android.Buttons.SfCheckBox.SfSavedState" /> class.
+            </summary>
+            <param name="parcel">The parcel</param>
+        </member>
+        <member name="P:Syncfusion.Android.Buttons.SfCheckBox.SfSavedState.Ischecked">
+            <summary>
+            Gets or sets is checked.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.SfSavedState.WriteToParcel(Android.OS.Parcel,Android.OS.ParcelableWriteFlags)">
+            <summary>
+            Flatten this object to parcel
+            </summary>
+            <param name="destination">the destination</param>
+            <param name="flags">the flags</param>
+        </member>
+        <member name="T:Syncfusion.Android.Buttons.SfCheckBox.SfSavedState.SavedStateCreator">
+            <summary>
+            Represents the saved state creator
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.SfSavedState.SavedStateCreator.CreateFromParcel(Android.OS.Parcel)">
+            <summary>
+            Create object from parcel
+            </summary>
+            <param name="source">The parcel</param>
+            <returns>Saved object</returns>
+        </member>
+        <member name="M:Syncfusion.Android.Buttons.SfCheckBox.SfSavedState.SavedStateCreator.NewArray(System.Int32)">
+            <summary>
+            Create new array with saved state
+            </summary>
+            <param name="size">Array size</param>
+            <returns>object array</returns>
+        </member>
+        <member name="F:Syncfusion.Android.SegmentedControl.ViewContainer.borderColor">
+            <summary>
+            field of border color
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.SegmentedControl.ViewContainer.borderThickness">
+            <summary>
+            field of border thickness
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.SegmentedControl.ViewContainer.border">
+            <summary>
+            field of border
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.SegmentedControl.ViewContainer.CornerRadius">
+            <summary>
+            field of corner radius
+            </summary>
+        </member>
+    </members>
+</doc>

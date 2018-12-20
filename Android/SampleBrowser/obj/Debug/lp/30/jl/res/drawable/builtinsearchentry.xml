@@ -1,0 +1,6 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"><!--<item>
+    <shape android:shape="rectangle">
+       --><!--Draw a 2dp width border around shape--><!-- 
+      <stroke android:background="#FFFFFF"  android:width="2dp" android:visibility="gone"/>
+    </shape>
+  </item>--><!--Overlap the left, top and right border using background color--><item android:bottom="1dp"><shape android:shape="rectangle"><solid android:background="#000000" /></shape></item></layer-list>

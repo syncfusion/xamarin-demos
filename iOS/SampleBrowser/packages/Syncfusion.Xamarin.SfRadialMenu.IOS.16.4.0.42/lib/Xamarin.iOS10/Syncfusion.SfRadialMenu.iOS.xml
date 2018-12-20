@@ -1,0 +1,1393 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.SfRadialMenu.iOS</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.SfRadialMenu.iOS.BackgroundView">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.iOS.BackgroundView"/> class. 
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.BackgroundView.pointsList">
+            <summary>
+            The points list.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.BackgroundView.segmentpointsList">
+            <summary>
+            The segments points list.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.BackgroundView.radialMenu">
+            <summary>
+            The radial menu.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.BackgroundView.radius1">
+            <summary>
+            The Radius.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.BackgroundView.opened">
+            <summary>
+            The is opened.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.BackgroundView.isopen">
+            <summary>
+            The is open.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.BackgroundView.count">
+            <summary>
+            The count.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.BackgroundView.selectedIndex">
+            <summary>
+            The selected index.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.BackgroundView.#ctor(CoreGraphics.CGRect,Syncfusion.SfRadialMenu.iOS.SfRadialMenu)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.iOS.BackgroundView"/> class. 
+            </summary>
+            <param name="frame">The frame.</param>
+            <param name="radialMenus">The radial menu.</param>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.BackgroundView.Frame">
+            <summary>
+            The override Frame method.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.BackgroundView.Opened">
+            <summary>
+            Gets or sets a value indicating whether is opened.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.BackgroundView.IsOpen">
+            <summary>
+            Gets or sets a value indicating whether is open.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.BackgroundView.SelectedIndex">
+            <summary>
+            Gets or sets the selected index.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.BackgroundView.VisibleItems">
+            <summary>
+            Gets or sets the visible items.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.BackgroundView.previousVisibleItems">
+            <summary>
+            Gets or sets the Previous Visible Items.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.BackgroundView.Views">
+            <summary>
+            Gets or sets the views.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.BackgroundView.HitTest(CoreGraphics.CGPoint,UIKit.UIEvent)">
+            <summary>
+            The Hit test.
+            </summary>
+            <param name="point">The point.</param>
+            <param name="uievent">The u i event.</param>
+            <returns>Returns a value.</returns>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.BackgroundView.Draw(CoreGraphics.CGRect)">
+            <summary>
+            The Override Draw method.
+            </summary>
+            <param name="rect">The rectangle.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.BackgroundView.DrawGraph(CoreGraphics.CGContext,System.nfloat,System.nfloat)">
+            <summary>
+            The Draw Graph Method.
+            </summary>
+            <param name="graph">The graph value.</param>
+            <param name="xvalue">The x value.</param>
+            <param name="yvalue">The y value.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.BackgroundView.AddItems">
+            <summary>
+            The Add Items method.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.BackgroundView.AddPreviousItems">
+            <summary>
+            The add previous items.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.BackgroundView.drawSelection(Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem)">
+            <summary>
+            The Draw Selection method.
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.BackgroundView.PushPop">
+            <summary>
+            The push pop method
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.BackgroundView.Shrink">
+            <summary>
+            The Shrink method.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.BackgroundView.ShrinkPrevious">
+            <summary>
+            The Shrink previous method.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.BackgroundView.Dispose(System.Boolean)">
+            <summary>
+            Dispose the specified disposing.
+            </summary>
+            <param name="disposing">If set to <c>true</c> disposing.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.BackgroundView.DegreesToXY(System.Double,System.nfloat,CoreGraphics.CGPoint)">
+            <summary>
+            The Degrees to X Y.
+            </summary>
+            <param name="degrees">The Degrees.</param>
+            <param name="radius">The radius.</param>
+            <param name="origin">The origin.</param>
+            <returns>Returns a value.</returns>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.BackgroundView.Open">
+            <summary>
+            The open method.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.BackgroundView.calculateButtonPositionAtIndex(System.Int32,System.Int32)">
+            <summary>
+            The calculate Button Position At Index
+            </summary>
+            <param name="index">The index.</param>
+            <param name="i">The i value.</param>
+            <returns>Returns a value.</returns>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.BackgroundView.calculateButtonPositions">
+            <summary>
+            The calculate Button Positions.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.BackgroundView.GetItemsfromSlottedIndex(System.Int32)">
+            <summary>
+            Get the index value.
+            </summary>
+            <param name="index">The Index.</param>
+            <returns>Returns a value.</returns>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem">
+            <summary>
+            Represents an item that can be added as children in RadialMenu. Any object can be added as RadialMenuItem and that can be populated as menus
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.canNavigate">
+            <summary>
+            The can navigate.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.bgcolor">
+            <summary>
+            The Background color.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.view">
+            <summary>
+            The view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.image">
+            <summary>
+            The image.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.text">
+            <summary>
+            The text.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.height">
+            <summary>
+            The height.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.width">
+            <summary>
+            The width.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.fontSize">
+            <summary>
+            The font size.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.slottedIndex">
+            <summary>
+            The slotted index.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.iconFont">
+            <summary>
+            The icon font.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.textColor">
+            <summary>
+            The text color.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.font">
+            <summary>
+            The font.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.fontIconColor">
+            <summary>
+            The font icon color.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.backgroundColor">
+            <summary>
+            The Background color.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.backgroundImage">
+            <summary>
+            The Background Image.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.fontIconFrame">
+            <summary>
+            The font Icon Frame.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.fontIcon">
+            <summary>
+            The Font Icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.itemArgs">
+            <summary>
+            The Item Argument.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.items">
+            <summary>
+            The items.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.backgroundView">
+            <summary>
+            The Background view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.radialMenu">
+            <summary>
+            The radial menu.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem"/> class.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.ItemTapped">
+            <summary>
+            The event item tapped.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.Image">
+            <summary>
+            Gets or sets the value indicating image that load on the item. Users can directly load an image instead of custom view.
+            </summary>
+            <value>The image.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.FontIconFrame">
+            <summary>
+            Gets or sets the font icon frame.
+            </summary>
+            <value>The font icon frame.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.Text">
+            <summary>
+            Gets or sets the value indicating caption text of the item. It will not applicable to custom view.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.View">
+            <summary>
+            Gets or sets the value indicating a view that placed on it . Any view can be assigned on the item.
+            </summary>
+            <value>The view.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.IconFont">
+            <summary>
+            Gets or sets the icon font.
+            </summary>
+            <value>The icon font.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.Font">
+            <summary>
+            Gets or sets the font.
+            </summary>
+            <value>The font.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.FontSize">
+            <summary>
+            Gets or sets the value indicating size of the caption text of the item. It will not applicable to custom view.
+            </summary>
+            <value>The size of the font.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.FontIconColor">
+            <summary>
+            Gets or sets the value indicating the color of FontIconText.
+            </summary>
+            <value>The color of the font icon.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.TextColor">
+            <summary>
+            Gets or sets the value indicating color of the caption text of the item. It will not applicable to custom view.
+            </summary>
+            <value>The color of the text.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.BackgroundColor">
+            <summary>
+            Gets or sets the value indicating the back color of the item. It will not applicable to custom view.
+            </summary>
+            <value>The color of the background.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.BackgroundImage">
+            <summary>
+            Gets or sets the value indicating the back image of the item. It will not applicable to custom view.
+            </summary>
+            <value>The image of the background.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.FontIcon">
+            <summary>
+            Gets or sets the font icon.
+            </summary>
+            <value>The font icon.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.Height">
+            <summary>
+            Gets or sets the value indication the height of the items.
+            </summary>
+            <value>The height.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.Width">
+            <summary>
+            Gets or sets the value indication the width of the items.
+            </summary>
+            <value>The width.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.Items">
+            <summary>
+            Gets or sets the items.
+            </summary>
+            <value>The items.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.SlottedIndex">
+            <summary>
+            Gets or sets The Slotted Index.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.RadialMenuEventArgs">
+            <summary>
+            Gets or sets the radial menu event.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.RadialMenu">
+            <summary>
+            Gets or sets the radial menu.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.BackgroundView">
+            <summary>
+            Gets or sets the background view.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.BGCOLOR">
+            <summary>
+            Gets or sets the Background color.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.TouchesBegan(Foundation.NSSet,UIKit.UIEvent)">
+            <summary>
+            Override Touches Began.
+            </summary>
+            <param name="touches">The Touches.</param>
+            <param name="evt">The event.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.TouchesEnded(Foundation.NSSet,UIKit.UIEvent)">
+            <summary>
+            Override touches end.
+            </summary>
+            <param name="touches">The touches.</param>
+            <param name="evt">The event.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.OnItemTapped(System.EventArgs)">
+            <summary>
+            ON Item Tapped.
+            </summary>
+            <param name="args">The argument.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenuItem.Dispose(System.Boolean)">
+            <summary>
+            Dispose the specified disposing.
+            </summary>
+            <param name="disposing">If set to <c>true</c> disposing.</param>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.iOS.RadialView">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.iOS.RadialView"/> class.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.RadialView.radialMenu">
+            <summary>
+            The radial menu.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.RadialView.isMoved">
+            <summary>
+            The boolean is moved.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.RadialView.#ctor(CoreGraphics.CGRect,Syncfusion.SfRadialMenu.iOS.SfRadialMenu)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.iOS.RadialView"/> class.
+            </summary>
+            <param name="frame">The frame.</param>
+            <param name="radialMenus">The radial menu.</param>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.RadialView.Frame">
+            <summary>
+            Gets or sets the frame.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.RadialView.RadialMenu">
+            <summary>
+            Gets or sets the radial menu.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.RadialView.TouchesEnded(Foundation.NSSet,UIKit.UIEvent)">
+            <summary>
+            Override touches end.
+            </summary>
+            <param name="touches">The touches.</param>
+            <param name="evt">The event.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.RadialView.TouchesMoved(Foundation.NSSet,UIKit.UIEvent)">
+            <summary>
+            Override touches moved method.
+            </summary>
+            <param name="touches">The touches.</param>
+            <param name="evt">The event.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.RadialView.TouchesBegan(Foundation.NSSet,UIKit.UIEvent)">
+            <summary>
+            Override touches began method.
+            </summary>
+            <param name="touches">The touches.</param>
+            <param name="evt">The event.</param>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.iOS.SfRadialMenu">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.iOS.SfRadialMenu"/> class.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.radialView">
+            <summary>
+            The radial view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.backgroundView">
+            <summary>
+            The background view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.radialArgs">
+            <summary>
+            The radial argument.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.items">
+            <summary>
+            The items.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.centerButtonBackView">
+            <summary>
+            The center button back view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.centerButtonView">
+            <summary>
+            The center button view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.count">
+            <summary>
+            The count.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.outerRimColor">
+            <summary>
+            The outer rim color.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.drillDownColor">
+            <summary>
+            The drill down color.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.rimActiveColor">
+            <summary>
+            The rim active color.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.rimColor">
+            <summary>
+            The rim color.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.separatorColor">
+            <summary>
+            The separator color.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.centerButtonBorderColor">
+            <summary>
+            The center Button Border Color.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.centerButtonBackgroundColor">
+            <summary>
+            The center Button Background color.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.selectionColor">
+            <summary>
+            The selection color.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.centerButtonIconFont">
+            <summary>
+            The Center Button icon font.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.centerButtonTextColor">
+            <summary>
+            The center button text color.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.centerButtonBackTextColor">
+            <summary>
+            The center button back text color.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.centerButtonTextFrame">
+            <summary>
+            The center button text frame.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.centerButtonText">
+            <summary>
+            The center button text.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.centerButtonBackText">
+            <summary>
+            The center button back text.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.centerButtonBorderThickness">
+            <summary>
+            The center Button Border Thickness.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.centerButtonRadius">
+            <summary>
+            The center Button Radius.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.outerRimThickness">
+            <summary>
+            The outer rim thickness.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.separatorThickness">
+            <summary>
+            The separator thickness.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.animationDuration">
+            <summary>
+            The animation duration.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.rimRadius">
+            <summary>
+            The rim radius.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.isDragEnabled">
+            <summary>
+            The is drag enabled.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.isOpen">
+            <summary>
+            The is open.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.enableRotation">
+            <summary>
+            The enable rotation.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.enableCenterButtonAnimation">
+            <summary>
+            The enable center button animation.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.visibleItemCount">
+            <summary>
+            The visible item count.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.dragBeginCount">
+            <summary>
+            The dragBeginCount checks count of drag begin event to be called.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.layoutType">
+            <summary>
+            The Layout type.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.previousTouchPoint">
+            <summary>
+            The previous touch point.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.position">
+            <summary>
+            The position.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.startPosition">
+            <summary>
+            The start position of Radial menu.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.isNotDrag">
+            <summary>
+            The is not drag.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.test1">
+            <summary>
+            The test 1.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.imageView">
+            <summary>
+            The image view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.mlocationBegan">
+            <summary>
+            The m location began.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.centerButtonDiameter">
+            <summary>
+            The center button diameter.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.ismenuOpen">
+            <summary>
+            The is menu open.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.isMoved">
+            <summary>
+            The is moved.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.isMoveCalled">
+            <summary>
+            The is moved called.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.drilledLevel">
+            <summary>
+            The drilled level.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.mcurrentAngle">
+            <summary>
+            The m current angle.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.rimDiameter">
+            <summary>
+            The rim diameter.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.menulabel">
+            <summary>
+            The menu label.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.backlabel">
+            <summary>
+            The back label.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.itemSelection">
+            <summary>
+            The item selection.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.ismenutapped">
+            <summary>
+            The is menu tapped.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.centerButtonPlacement">
+            <summary>
+            The Sf Radial menu center button placement holds the Position of RadialMenu.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.orientation">
+            <summary>
+            The Orientation of view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.oldOrientation">
+            <summary>
+            The Orientation of view.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.iOS.SfRadialMenu"/> class.
+            </summary>
+            <param name="handle">The handle.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.iOS.SfRadialMenu"/> class.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.Opened">
+            <summary>
+            Occurs when the first level menu get expanded to opened.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.Closed">
+            <summary>
+            Occurs when the first level menu get collapsed to Closed.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.Closing">
+            <summary>
+            Occurs when the first level menu that starts to collapsing to close.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.CenterButtonTapped">
+            <summary>
+            Occurs when the Center button is tapped. Center button can be retrieve and customized.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.Navigating">
+            <summary>
+            Occurs when a Radial Menu item tapped to starts navigating to its next hierarchy level or Center back button is tapped to starts navigating to previous hierarchy level. Its occurs only an item that has children.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.Navigated">
+            <summary>
+            Occurs when a Radial Menu item tapped and navigated to its next hierarchy level or Center back button is tapped to navigated to its previous hierarchy level. Its occurs only an item that has children.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.Opening">
+            <summary>
+            Occurs when the first level menu that starts to expanding to open.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.DragBegin">
+            <summary>
+            Occurs when the Radial Menu is begin to drag.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.DragEnd">
+            <summary>
+            Occurs when the Radial menu is stopped dragging.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.Disposed">
+            <summary>
+            Disposed event.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.Frame">
+            <summary>
+            Gets or sets the frame.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.CenterButtonTextFrame">
+            <summary>
+            Gets or sets the value indicating view of the center button at first level. Any view can be assigned as center button view.
+            </summary>
+            <value>The center button text frame.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.EnableCenterButtonAnimation">
+            <summary>
+            Gets or sets a value indicating whether that enable and disable Zoom In or Zoom out animation when the RadialMenu getting open or close respectively.
+            </summary>
+            <value><c>true</c> if enable center button animation; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.CenterButtonIconFont">
+            <summary>
+            Gets or sets the center button icon font.
+            </summary>
+            <value>The center button icon font.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.CenterButtonText">
+            <summary>
+            Gets or sets a value indicating whether text of the center button at first level and it can also act as font icon. It will not applicable to custom view assigned through CenterButtonView.
+            </summary>
+            <value>The center button text.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.CenterButtonBackText">
+            <summary>
+            Gets or sets a value indicating whether text of the center button when it navigated to next level and not in first level and it can also act as font icon. It will not applicable to custom view assigned through CenterBackButtonView.
+            </summary>
+            <value>The center button back text.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.CenterButtonBorderThickness">
+            <summary>
+            Gets or sets a value indicating whether the border thickness of the center button.
+            </summary>
+            <value>The center button border thickness.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.CenterButtonBackgroundColor">
+            <summary>
+            Gets or sets a value indicating whether the back color of the center button at first level. It will not applicable to custom view assigned through CenterButtonView.
+            </summary>
+            <value>The color of the center button background.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.CenterButtonTextColor">
+            <summary>
+            Gets or sets a value indicating whether text/font icon color of the center button at first level. It will not applicable to custom view assigned through CenterButtonView
+            </summary>
+            <value>The color of the center button text.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.CenterButtonBackTextColor">
+            <summary>
+            Gets or sets a value indicating center button back text/font icon color. 
+            </summary>
+            <value>The color of the center button back text.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.CenterButtonBackView">
+            <summary>
+            Gets or sets a value indicating whether a view of the center button when it navigated to next level and not in first level. Any view can be assigned as center back button view
+            </summary>
+            <value>The center button back view.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.CenterButtonView">
+            <summary>
+            Gets or sets a value indicating whether view of the center button at first level. Any view can be assigned as center button view
+            </summary>
+            <value>The center button view.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.CenterButtonBorderColor">
+            <summary>
+            Gets or sets a value indicating whether the border color of the center button.
+            </summary>
+            <value>The color of the center button border.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.OuterRimColor">
+            <summary>
+            Gets or sets the color of the outer rim.
+            </summary>
+            <value>The color of the outer rim.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.SelectionColor">
+            <summary>
+            Gets or sets the value indicating the back color of each items. Generally its represent as pie. It will not applicable to custom view
+            </summary>
+            <value>The color of the selection.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.SeparatorColor">
+            <summary>
+            Gets or sets the value indicating the color of the separator that appear between two items.
+            </summary>
+            <value>The color of the separator.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.AnimationDuration">
+            <summary>
+            Gets or sets the duration of the animation.
+            </summary>
+            <value>The duration of the animation.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.DrillDownColor">
+            <summary>
+            Gets or sets the color of the drill down.
+            </summary>
+            <value>The color of the drill down.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.RimActiveColor">
+            <summary>
+            Gets or sets the color of the rim active.
+            </summary>
+            <value>The color of the rim active.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.OuterRimThickness">
+            <summary>
+            Gets or sets the outer rim thickness.
+            </summary>
+            <value>The outer rim thickness.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.SeparatorThickness">
+            <summary>
+            Gets or sets the value indicating the thickness of the separator that appear between two items.
+            </summary>
+            <value>The separator thickness.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.RimRadius">
+            <summary>
+            Gets or sets the value indicating the size of the rim by adjusting its radius.
+            </summary>
+            <value>The rim radius.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.RimColor">
+            <summary>
+            Gets or sets the value indicating the color of the entire rim.
+            </summary>
+            <value>The color of the rim.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.Items">
+            <summary>
+            Gets or sets the items.
+            </summary>
+            <value>The items.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.CenterButtonRadius">
+            <summary>
+            Gets or sets the value that indicating the size of the center button at first level by adjusting its radius.
+            </summary>
+            <value>The center button radius.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.Position">
+            <summary>
+            Gets or sets the position.
+            </summary>
+            <value>The position.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.IsDragEnabled">
+            <summary>
+            Gets or sets a value indicating whether the center button can be drag on the view. It is applicable when the RadialMenu in closed state.
+            </summary>
+            <value><c>true</c> if is drag enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.EnableRotation">
+            <summary>
+            Gets or sets a value indicating whether that enable or disable the rim rotation with touch gestures.
+            </summary>
+            <value><c>true</c> if enable rotation; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.VisibleItemCount">
+            <summary>
+            Gets or sets a value indicating whether that splits the available spaces as pie segments. Exceeded items will not shown and beneath items leave empty space on rim. It will be applicable only if the RadialMenu in Custom layout type
+            </summary>
+            <value>The visible item count.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.LayoutType">
+            <summary>
+            Gets or sets the value indicating arrangement of items on rim either automatic or user defined.
+            </summary>
+            <value>The type of the layout.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.CenterButtonPlacement">
+            <summary>
+            Gets or sets the center button placement.
+            </summary>
+            <value>The center button placement.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.IsOpen">
+            <summary>
+            Gets or sets a value indicating whether the control has to be open or closed. Using this property user can load the control with open state.
+            </summary>
+            <value><c>true</c> if is open; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.Site">
+            <summary>
+            Gets or sets the Site.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.RadialMenuEventArgs">
+            <summary>
+            Gets or sets the radial menu event.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.TotalItems">
+            <summary>
+            Gets or sets the total items.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.ItemSelection">
+            <summary>
+            Gets or sets a value indicating whether item selection.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.IsMenuTapped">
+            <summary>
+            Gets or sets a value indicating whether the is menu tapped.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.IsMenuOpen">
+            <summary>
+            Gets or sets a value indicating whether is menu open.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.IsMoved">
+            <summary>
+            Gets or sets a value indicating whether is moved.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.DrilledLevel">
+            <summary>
+            Gets or sets the drilled level.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.MCurrentAngle">
+            <summary>
+            Gets or sets the m current angle.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.DragBeginEventArgs">
+            <summary>
+            Gets or sets the drag begin event.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.RadialView">
+            <summary>
+            Gets or sets the radial view.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.DragEndEventArgs">
+            <summary>
+            Gets or sets the drag end event.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.CenterButtonDiameter">
+            <summary>
+            Gets or sets the center button diameter.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.Open">
+            <summary>
+            Opens the first level items of the Radial Menu by expanding the rim
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.Close">
+            <summary>
+            Closed the items of the Radial Menu by collapsing the rim.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.TouchesBegan(Foundation.NSSet,UIKit.UIEvent)">
+            <summary>
+            Override touches began method.
+            </summary>
+            <param name="touches">The touches.</param>
+            <param name="evt">The event.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.TouchesMoved(Foundation.NSSet,UIKit.UIEvent)">
+            <summary>
+            Override touches moved method.
+            </summary>
+            <param name="touches">The touches.</param>
+            <param name="evt">The event.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.TouchesEnded(Foundation.NSSet,UIKit.UIEvent)">
+            <summary>
+            Override touches end method.
+            </summary>
+            <param name="touches">The touches.</param>
+            <param name="evt">The event.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.AwakeFromNib">
+            <summary>
+            The method overrides the AwakeFromNib
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.updateRotation(CoreGraphics.CGPoint)">
+            <summary>
+            The Update Rotation.
+            </summary>
+            <param name="location">The location.</param>
+            <returns>Returns a value.</returns>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.LayoutSubviews">
+            <summary>
+            Layout sub views.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.HitTest(CoreGraphics.CGPoint,UIKit.UIEvent)">
+            <summary>
+            Override Hit test method.
+            </summary>
+            <param name="point">The Point.</param>
+            <param name="uievent">The U I Event.</param>
+            <returns>Returns a value.</returns>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.isPointInCircle(System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            The is point in circle.
+            </summary>
+            <param name="centerX">The center X.</param>
+            <param name="centerY">The Center Y.</param>
+            <param name="radius">The radius.</param>
+            <param name="x">The X.</param>
+            <param name="y">The Y.</param>
+            <returns>Returns a value.</returns>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.OnOpening(Syncfusion.SfRadialMenu.iOS.RadialMenuEventArgs)">
+            <summary>
+            The virtual On opening method.
+            </summary>
+            <param name="args">The argument.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.OnDragStart(Syncfusion.SfRadialMenu.iOS.DragBeginEventArgs)">
+            <summary>
+            The virtual On drag start method.
+            </summary>
+            <param name="args">The argument.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.OnDragEnd(Syncfusion.SfRadialMenu.iOS.DragEndEventArgs)">
+            <summary>
+            The virtual On drag end method.
+            </summary>
+            <param name="args">The argument.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.OnOpened(System.EventArgs)">
+            <summary>
+            The virtual On Opened method.
+            </summary>
+            <param name="args">The argument.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.OnClosed(System.EventArgs)">
+            <summary>
+            The virtual On Closed method.
+            </summary>
+            <param name="args">The Closed.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.OnClosing(Syncfusion.SfRadialMenu.iOS.RadialMenuEventArgs)">
+            <summary>
+            The Virtual On Closing method.
+            </summary>
+            <param name="args">The argument.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.OnCenterButtonTapped(System.EventArgs)">
+            <summary>
+            The Virtual void On center button tapped.
+            </summary>
+            <param name="args">The argument.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.OnItemNavigating(Syncfusion.SfRadialMenu.iOS.RadialMenuEventArgs)">
+            <summary>
+            The Virtual void On item navigating.
+            </summary>
+            <param name="args">The argument.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.OnNavigated(System.EventArgs)">
+            <summary>
+            The Virtual void On Navigated.
+            </summary>
+            <param name="args">The argument.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.Initialize">
+            <summary>
+            The Initialize method.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.UpdateFrames">
+            <summary>
+            The Update Frames.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.ShowMenu">
+            <summary>
+            The Show Menu.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.Shrink">
+            <summary>
+            The Shrink Method.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.MenuAnimationEnd">
+            <summary>
+            The Menu Animation End.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.ShowPreviousMenu">
+            <summary>
+            TheShow Previous Menu.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.Dispose(System.Boolean)">
+            <summary>
+            Override Dispose Method.
+            </summary>
+            <param name="disposing">The Disposing.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.isInRectangle(System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            The is in rectangle.
+            </summary>
+            <param name="centerX">The Center X.</param>
+            <param name="centerY">The Center Y.</param>
+            <param name="radius">The Radius.</param>
+            <param name="x">The X.</param>
+            <param name="y">The Y.</param>
+            <returns>Returns a value.</returns>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.wrapd(System.Double,System.Double,System.Double)">
+            <summary>
+            The wrapped.
+            </summary>
+            <param name="val">The value.</param>
+            <param name="min">The minimum.</param>
+            <param name="max">The maximum.</param>
+            <returns>Returns a value.</returns>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.UpdateRadialMenuVisibility(System.Boolean)">
+            <summary>
+            Updates the visibility of radial menu.
+            </summary>
+            <param name="isVisible">The Show.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.iOS.SfRadialMenu.InitializeMenuButton">
+            <summary>
+            Initialize Menu Button.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.iOS.RadialMenuEventArgs">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.iOS.RadialMenuEventArgs"/> class.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.RadialMenuEventArgs.cancel">
+            <summary>
+            The boolean Cancel.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.RadialMenuEventArgs.Cancel">
+            <summary>
+            Gets or sets a value indicating whether the boolean is cancel.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.iOS.DragEndEventArgs">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.iOS.DragEndEventArgs"/> class.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.DragEndEventArgs.handled">
+            <summary>
+            The boolean handled to restrict the drag end movement.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.DragEndEventArgs.oldValue">
+            <summary>
+            Gets the start position value of the Radial menu.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.DragEndEventArgs.newValue">
+            <summary>
+            Gets the end position value of the Radial menu.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.DragEndEventArgs.Handled">
+            <summary>
+            Gets or sets a value indicating whether the boolean is cancel.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.DragEndEventArgs.OldValue">
+            <summary>
+            Gets or sets the start position value of the Radial menu.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.DragEndEventArgs.NewValue">
+            <summary>
+            Gets or sets the end position value of the Radial menu.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.iOS.DragBeginEventArgs">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.iOS.DragEndEventArgs"/> class.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.DragBeginEventArgs.handled">
+            <summary>
+            The boolean handled to restrict the drag begin movement.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.DragBeginEventArgs.position">
+            <summary>
+            Gets the start position value.
+            </summary>
+            <value>The old value.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.DragBeginEventArgs.Handled">
+            <summary>
+            Gets or sets a value indicating whether the boolean is cancel.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.iOS.DragBeginEventArgs.Position">
+            <summary>
+            Gets or sets the start position value of the Radial menu.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.iOS.SfRadialMenuLayoutType">
+            <summary>
+            Contains values of LayoutType that determines arrangement of items on rim either automatic or user defined
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenuLayoutType.Custom">
+            <summary>
+            User can split the available spaces using VisibleSegmentCount as segments. Exceeded items will not shown and beneath items leave empty space on rim. User can rearrange or position the items using SegmentIndex property of RadialMenuItem
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenuLayoutType.Default">
+            <summary>
+            Available items can populated on the rim by sharing the available space in equal ratio. Order of the item based on order of items in the assigned source
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.iOS.SfRadialMenuCenterButtonPlacement">
+            <summary>
+            Contains the position of RadialMenu to be placed  .
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenuCenterButtonPlacement.TopLeft">
+            <summary>
+            The top left sets the RadialMenu axis(0,0) to be placed in the top left position.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.iOS.SfRadialMenuCenterButtonPlacement.Center">
+            <summary>
+            The center sets the RadialMenu axis(0,0) to be placed in the Center position.
+            </summary>
+        </member>
+    </members>
+</doc>

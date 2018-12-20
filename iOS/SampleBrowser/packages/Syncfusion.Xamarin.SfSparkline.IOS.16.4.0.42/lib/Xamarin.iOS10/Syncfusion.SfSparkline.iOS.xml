@@ -1,0 +1,606 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.SfSparkline.iOS</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.SfSparkline.iOS.Drawing">
+            <summary>
+            To draw the sparkline
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfSparkline.iOS.EmptyPointValues">
+            <summary>
+            Represents the type of EmptyPointValues
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfSparkline.iOS.EmptyPointValues.None">
+            <summary>
+            Represents the none type EmptyPointValues
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfSparkline.iOS.EmptyPointValues.Zero">
+            <summary>
+            Represents the zero type EmptyPointValues
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfSparkline.iOS.EmptyPointValues.Average">
+            <summary>
+            Represents the average type EmptyPointValues
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfSparkline.iOS.SparklineMarker">
+            <summary>
+            Represents the marker in sparkline
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SparklineMarker.Height">
+            <summary>
+            Gets or sets height of the marker.
+            </summary>
+            <value>The height.</value>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SparklineMarker.Width">
+            <summary>
+            Gets or sets width of the marker.
+            </summary>
+            <value>The width.</value>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SparklineMarker.IsVisible">
+            <summary>
+            Gets or sets visibility of the marker.
+            </summary>
+            <value><c>true</c> if is visible; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SparklineMarker.Color">
+            <summary>
+            Gets or sets color of the marker.
+            </summary>
+            <value>The color.</value>
+        </member>
+        <member name="T:Syncfusion.SfSparkline.iOS.SparklineAxis">
+            <summary>
+            Represents the axis of sparkline
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SparklineAxis.IsVisible">
+            <summary>
+            Gets or sets visibility of the axis.
+            </summary>
+            <value><c>true</c> if is visible; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SparklineAxis.Color">
+            <summary>
+            Gets or sets stroke color of the axis line.
+            </summary>
+            <value>The color.</value>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SparklineAxis.StrokeWidth">
+            <summary>
+            Gets or sets stroke width of the axis line.
+            </summary>
+            <value>The width of the stroke.</value>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SparklineAxis.Origin">
+            <summary>
+            Gets or sets origin of the sparkline axis.
+            </summary>
+            <value>The origin.</value>
+        </member>
+        <member name="T:Syncfusion.SfSparkline.iOS.FastReflectionCaches">
+            <summary>
+            Contains members to hold PropertyInfo.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.FastReflectionCaches.#cctor">
+            <summary>
+            Initializes static members of the <see cref="T:Syncfusion.SfSparkline.iOS.FastReflectionCaches"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.FastReflectionCaches.MethodInvokerCache">
+            <summary>
+            Gets or sets the method invoker cache
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.FastReflectionCaches.PropertyAccessorCache">
+            <summary>
+            Gets or sets the property accessor cache
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.FastReflectionFactories.MethodInvokerFactory">
+            <summary>
+            Gets or sets the method invoker factory
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.MethodInvokerFactory.Create(System.Reflection.MethodInfo)">
+            <summary>
+            Get the method invoker
+            </summary>
+            <param name="key">To get key</param>
+            <returns>method key</returns>
+        </member>
+        <member name="T:Syncfusion.SfSparkline.iOS.IPropertyAccessor">
+            <summary>
+            Interface for PropertyAccessor
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.IPropertyAccessor.GetMethod">
+            <summary>
+            Gets the PropertyAccessor
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.IPropertyAccessor.GetValue(System.Object)">
+            <summary>
+            Gets the instance of PropertyAccessor
+            </summary>
+            <param name="instance">To get the instance</param>
+            <returns>the object</returns>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.IPropertyAccessor.SetValue(System.Object,System.Object)">
+            <summary>
+            Sets the instance of PropertyAccessor
+            </summary>
+            <param name="instance">To get the instance</param>
+            <param name="value">To get the value</param>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.PropertyAccessor.PropertyInfo">
+            <summary>
+            Gets the property info
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.PropertyAccessor.#ctor(System.Reflection.PropertyInfo)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfSparkline.iOS.PropertyAccessor"/> class .
+            </summary>
+            <param name="propertyInfo">To get property info</param>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.PropertyAccessor.GetValue(System.Object)">
+            <summary>
+            Gets the getter
+            </summary>
+            <param name="o">To get object</param>
+            <returns>getter method</returns>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.PropertyAccessor.SetValue(System.Object,System.Object)">
+            <summary>
+            Gets the setter method
+            </summary>
+            <param name="o">To get object</param>
+            <param name="value">To get value</param>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.MethodInvoker.MethodInfo">
+            <summary>
+            Gets the method info
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.MethodInvoker.#ctor(System.Reflection.MethodInfo)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfSparkline.iOS.MethodInvoker"/> class .
+            </summary>
+            <param name="methodInfo">To get method info</param>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.MethodInvoker.Invoke(System.Object,System.Object[])">
+            <summary>
+            Invokes the method
+            </summary>
+            <param name="instance">To get instance</param>
+            <param name="parameters">To get parameters</param>
+            <returns>method invoker</returns>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.FastReflectionCache`2.Get(`0)">
+            <summary>
+            To get the key value
+            </summary>
+            <param name="key">To get key</param>
+            <returns>key value</returns>
+        </member>
+        <member name="T:Syncfusion.SfSparkline.iOS.SfAreaSparkline">
+            <summary>
+            Represents the area series in sparkline
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SfAreaSparkline.Color">
+            <summary>
+            Gets or sets color to fill the interior of the area sparkline.
+            </summary>
+            <value>The color.</value>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfAreaSparkline.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfSparkline.iOS.SfAreaSparkline"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfAreaSparkline.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfSparkline.iOS.SfAreaSparkline"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SfAreaSparkline.Marker">
+            <summary>
+            Gets or sets marker to the sparkline.
+            </summary>
+            <value>The marker.</value>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfAreaSparkline.RenderSegments(Syncfusion.SfSparkline.iOS.DrawingContext)">
+            <summary>
+            To draw the segments of sparkline
+            </summary>
+            <param name="drawing">To get the drawing</param>
+        </member>
+        <member name="T:Syncfusion.SfSparkline.iOS.SfColumnSparkline">
+            <summary>
+            Represents the column series in sparkline
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SfColumnSparkline.Color">
+            <summary>
+            Gets or sets color to fill the interior of the column sparkline.
+            </summary>
+            <value>The color.</value>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfColumnSparkline.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfSparkline.iOS.SfColumnSparkline"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfColumnSparkline.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfSparkline.iOS.SfColumnSparkline"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfColumnSparkline.UpdateMinMaxValues">
+            <summary>
+            To update the min and max values
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfColumnSparkline.RenderSegments(Syncfusion.SfSparkline.iOS.DrawingContext)">
+            <summary>
+            To draw the segments
+            </summary>
+            <param name="drawing">To get drawing</param>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfColumnSparkline.GetColumnColor(System.Double,System.Double)">
+            <summary>
+            To get the color of column
+            </summary>
+            <param name="x">To get x</param>
+            <param name="y">To get y</param>
+            <returns>Column color</returns>
+        </member>
+        <member name="T:Syncfusion.SfSparkline.iOS.SfLineSparkline">
+            <summary>
+            Represents the Line series in sparkline
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfLineSparkline.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfSparkline.iOS.SfLineSparkline"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfLineSparkline.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfSparkline.iOS.SfLineSparkline"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SfLineSparkline.Marker">
+            <summary>
+            Gets or sets marker to the sparkline.
+            </summary>
+            <value>The marker.</value>
+        </member>
+        <member name="T:Syncfusion.SfSparkline.iOS.SfSparklineBase">
+            <summary>
+            Represents the sparkline series
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfSparkline.iOS.SfSparklineBase.minYValue">
+            <summary>
+            Internal variables
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfSparkline.iOS.SfSparklineBase.maxYValue">
+            <summary>
+            Internal variables
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfSparkline.iOS.SfSparklineBase.deltaY">
+            <summary>
+            Internal variables
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfSparkline.iOS.SfSparklineBase.minXValue">
+            <summary>
+            Internal variables
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfSparkline.iOS.SfSparklineBase.maxXValue">
+            <summary>
+            Internal variables
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfSparkline.iOS.SfSparklineBase.deltaX">
+            <summary>
+            Internal variables
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfSparkline.iOS.SfSparklineBase.availableWidth">
+            <summary>
+            Internal variables
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfSparkline.iOS.SfSparklineBase.availableHeight">
+            <summary>
+            Internal variables
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfSparkline.iOS.SfSparklineBase.diffX">
+            <summary>
+            Internal variables
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfSparklineBase.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfSparkline.iOS.SfSparklineBase"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfSparklineBase.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfSparkline.iOS.SfSparklineBase"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfSparklineBase.AwakeFromNib">
+            <summary>
+            Render the control at design time.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfSparklineBase.InitBase">
+            <summary>
+            Init basic properties for sparkline.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfSparklineBase.CreateDesignTimeAreaSparkline(Syncfusion.SfSparkline.iOS.SfAreaSparkline)">
+            <summary>
+            Method used to design the area sparkline.
+            </summary>
+            <param name="areaSparkline">The Area Sparkline</param>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfSparklineBase.CreateDesignTimeColumnSparkline(Syncfusion.SfSparkline.iOS.SfColumnSparkline)">
+            <summary>
+            Method used to design the column sparkline.
+            </summary>
+            <param name="columnSparkline">The Column Sparkline</param>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfSparklineBase.CreateDesignTimeLineSparkline(Syncfusion.SfSparkline.iOS.SfLineSparkline)">
+            <summary>
+            Method used to design the line sparkline.
+            </summary>
+            <param name="lineSparkline">The Line Sparkline</param>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfSparklineBase.CreateDesignTimeWinLossSparkline(Syncfusion.SfSparkline.iOS.SfWinLossSparkline)">
+            <summary>
+            Method used to design the winloss sparkline.
+            </summary>
+            <param name="winLossSparkline">The option</param>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SfSparklineBase.Site">
+            <summary>
+            Implement by interface
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfSparkline.iOS.SfSparklineBase.Disposed">
+            <summary>
+            Implement by interface
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SfSparklineBase.RangeBandColor">
+            <summary>
+            Gets or sets color of range band.
+            </summary>
+            <value>The color of the range band.</value>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SfSparklineBase.FirstPointColor">
+            <summary>
+            Gets or sets color to highlight the first point.
+            </summary>
+            <value>The first color of the point.</value>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SfSparklineBase.LastPointColor">
+            <summary>
+            Gets or sets color to highlight the last point.
+            </summary>
+            <value>The last color of the point.</value>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SfSparklineBase.HighPointColor">
+            <summary>
+            Gets or sets color to highlight the highest point.
+            </summary>
+            <value>The color of the high point.</value>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SfSparklineBase.LowPointColor">
+            <summary>
+            Gets or sets color to highlight the lowest point.
+            </summary>
+            <value>The color of the low point.</value>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SfSparklineBase.NegativePointsColor">
+            <summary>
+            Gets or sets color to highlight the negative points.
+            </summary>
+            <value>The color of the negative points.</value>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SfSparklineBase.RangeBandEnd">
+            <summary>
+            Gets or sets end value of range band in Y axis.
+            </summary>
+            <value>The range band end.</value>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SfSparklineBase.RangeBandStart">
+            <summary>
+            Gets or sets start value of range band in Y axis.
+            </summary>
+            <value>The range band start.</value>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SfSparklineBase.StrokeColor">
+            <summary>
+            Gets or sets stroke color of the sparkline.
+            </summary>
+            <value>The color of the stroke.</value>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SfSparklineBase.StrokeWidth">
+            <summary>
+            Gets or sets stroke width of the sparkline.
+            </summary>
+            <value>The width of the stroke.</value>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SfSparklineBase.Axis">
+            <summary>
+            Gets or sets axis to the sparklines. It is used to enable/disable the axis and customize its appearance.
+            </summary>
+            <value>The axis.</value>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SfSparklineBase.YBindingPath">
+            <summary>
+            Gets or sets the property path to retrieve Y data from ItemsSource.
+            </summary>
+            <value>The YBinding path.</value>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SfSparklineBase.EmptyPointValue">
+            <summary>
+            Gets or sets empty point value. It can be average, zero or none.
+            </summary>
+            <value>The empty point value.</value>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SfSparklineBase.MinimumYValue">
+            <summary>
+            Gets or sets minimum Y-axis value
+            </summary>
+            <value>The minimum YValue.</value>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SfSparklineBase.MaximumYValue">
+            <summary>
+            Gets or sets maximum Y-Axis value
+            </summary>
+            <value>The maximum YValue.</value>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SfSparklineBase.ItemsSource">
+            <summary>
+            Gets or sets the data source for sparkline.
+            </summary>
+            <value>The items source.</value>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfSparklineBase.OnItemsSourceChanged(System.Object,System.Object)">
+            <summary>
+            Refresh the series when the ItemsSource is changed
+            </summary>
+            <param name="oldValue">To get oldValue</param>
+            <param name="newValue">To get newValue</param>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfSparklineBase.OnItemsSourceCollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Updates the series when the ItemsSource collection is changed
+            </summary>
+            <param name="sender">To get sender</param>
+            <param name="e">To get eventargs</param>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfSparklineBase.OnItemsSourcePropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Called when the property ItemsSource is changed
+            </summary>
+            <param name="sender">To get sender</param>
+            <param name="e">To get eventArgs</param>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfSparklineBase.TransformToVisible(System.Double,System.Double)">
+            <summary>
+            Creates the screen point from data point.
+            </summary>
+            <param name="x">To get x</param>
+            <param name="y">To get y</param>
+            <returns>visible points</returns>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfSparklineBase.Draw(CoreGraphics.CGRect)">
+            <summary>
+            To draw segments in sparkline
+            </summary>
+            <param name="rect">To get rect</param>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfSparklineBase.RenderSegments(Syncfusion.SfSparkline.iOS.DrawingContext)">
+            <summary>
+            To render the visual segments
+            </summary>
+            <param name="drawing">To get drawing</param>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfSparklineBase.GeneratePoints(System.String)">
+            <summary>
+            Generate the points from the items source
+            </summary>
+            <param name="xPath">To get xPath</param>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfSparklineBase.ValidateEmptyPoints(System.Collections.Generic.List{System.Double})">
+            <summary>
+            Validate empty points
+            </summary>
+            <param name="yValues">To get yValues</param>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfSparklineBase.FindEmptyPoints">
+            <summary>
+            Find empty points.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfSparklineBase.UpdateMinMaxValues">
+            <summary>
+            Update min/max values from user data.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfSparklineBase.SetIndividualPoints(System.Int32,System.Object,System.Boolean,System.String)">
+            <summary>
+            set the individual points to the existing collection
+            </summary>
+            <param name="index">To get index</param>
+            <param name="obj">To get object</param>
+            <param name="replace">To get replace</param>
+            <param name="xPath">To get xPath</param>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfSparklineBase.LayoutSubviews">
+            <summary>
+            Subviews of the layout
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfSparkline.iOS.SparklineModel">
+            <summary>
+            Class for Sparkline Model.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SparklineModel.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfSparkline.iOS.SfWinLossSparkline">
+            <summary>
+            Represents the WinLoss series in sparkLine
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfWinLossSparkline.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfSparkline.iOS.SfWinLossSparkline"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfSparkline.iOS.SfWinLossSparkline.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfSparkline.iOS.SfWinLossSparkline"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SfWinLossSparkline.NeutralPointsColor">
+            <summary>
+            Gets or sets color to fill the interior of neutral columns.
+            </summary>
+            <value>The color of the neutral points.</value>
+        </member>
+        <member name="P:Syncfusion.SfSparkline.iOS.SfWinLossSparkline.Color">
+            <summary>
+            Gets or sets color to fill the interior of positive columns.
+            </summary>
+            <value>The color.</value>
+        </member>
+    </members>
+</doc>

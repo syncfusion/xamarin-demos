@@ -1,0 +1,4 @@
+Values/Strings.xml;values/strings.xml
+Drawable/popup_android_shadow.xml;drawable/popup_android_shadow.xml
+Drawable/popup_android_close_icon.png;drawable/popup_android_close_icon.png
+Values/attrs.xml;values/attrs.xml

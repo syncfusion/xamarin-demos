@@ -1,0 +1,11 @@
+layout/DefaultCardView.axml;layout/defaultcardview.xml
+layout/CardViewHolder.axml;layout/cardviewholder.xml
+anim/path_morph_hide.xml;anim/path_morph_hide.xml
+anim/path_morph_show.xml;anim/path_morph_show.xml
+drawable/ripple.xml;drawable/ripple.xml
+drawable/roundedcorner.xml;drawable/roundedcorner.xml
+values/Strings.xml;values/strings.xml
+drawable/kanban_collapse.png;drawable/kanban_collapse.png
+drawable/defaultphoto.png;drawable/defaultphoto.png
+drawable/errorimage.png;drawable/errorimage.png
+layout-ldrtl/DefaultCardView.axml;layout-ldrtl/defaultcardview.xml

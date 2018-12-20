@@ -1,0 +1,2349 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.SfRadialMenu.Android</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.SfRadialMenu.Android.CircleLayout">
+            <summary>
+            Circle layout class
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.pointsList">
+            <summary>
+            Point list field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.rectList">
+            <summary>
+            Rect list
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.mItemCount">
+            <summary>
+            Item count field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.drillDownLevel">
+            <summary>
+            Dril down field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.selectedIndex">
+            <summary>
+            Selected index field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.radialItems">
+            <summary>
+            Radial items field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.isDismiss">
+            <summary>
+            Is dismiss field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.flag">
+            <summary>
+            flag field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.itemsFrame">
+            <summary>
+            Item frame field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.totaldegree">
+            <summary>
+            Total degree field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.density">
+            <summary>
+            Density field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.mPaint">
+            <summary>
+            Paint field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.img">
+            <summary>
+            Image field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.mOvalRect">
+            <summary>
+            Oval field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.mSweepAngle">
+            <summary>
+            Sweep angle field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.mRimRadius">
+            <summary>
+            Rim radius field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.outerRimRadius">
+            <summary>
+            Outer rim radius field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.itemWidth">
+            <summary>
+            Outer rim radius field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.itemHeight">
+            <summary>
+            Outer rim radius field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.mRenderer">
+            <summary>
+            renderer field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.mRadialMenu">
+            <summary>
+            Radial menu field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.previousItems">
+            <summary>
+            Previous Items field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.separatorThickness">
+            <summary>
+            Seperator thickness field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.context">
+            <summary>
+            Context field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.shrink">
+            <summary>
+            Shrink field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.expand">
+            <summary>
+            Shrink field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.tSize">
+            <summary>
+            Size field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.isShrunk">
+            <summary>
+            Shrunk field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.duration">
+            <summary>
+            Duration field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.width">
+            <summary>
+            Width,Height field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.height">
+            <summary>
+            Width,Height field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.itemPos">
+            <summary>
+            Item position field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.childView">
+            <summary>
+            Child view field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.menuItem">
+            <summary>
+            Menu item field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.itemObject">
+            <summary>
+            Item object field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.item1">
+            <summary>
+            Item1,item2 field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.item2">
+            <summary>
+            Item1,item2 field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.navi">
+            <summary>
+            Navigation field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.CircleLayout.timer">
+            <summary>
+            Timer field.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.CircleLayout.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.Android.CircleLayout" /> class.
+            </summary>
+            <param name="context">Context type</param>
+            <param name="attrs">Attribute set</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.CircleLayout.#ctor(Android.Content.Context,Android.Util.IAttributeSet,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.Android.CircleLayout" /> class.
+            </summary>
+            <param name="context">Context type</param>
+            <param name="attrs">Attribute set</param>
+            <param name="defStyleAttr">Integer type</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.CircleLayout.#ctor(Android.Content.Context,Syncfusion.SfRadialMenu.Android.RadialMenuRenderer,System.Collections.Generic.List{Syncfusion.SfRadialMenu.Android.SfRadialMenuItem},Syncfusion.SfRadialMenu.Android.SfRadialMenu)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.Android.CircleLayout" /> class.
+            </summary>
+            <param name="context">context type</param>
+            <param name="renderer">Radial menu renderer</param>
+            <param name="menuItems">menu items</param>
+            <param name="radialMenu">radial menu</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.CircleLayout.OnClick(Android.Views.View)">
+            <summary>
+            On click method.
+            </summary>
+            <param name="v">View type</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.CircleLayout.OnTouchEvent(Android.Views.MotionEvent)">
+            <summary>
+            On touch event method.
+            </summary>
+            <param name="e">Motion event</param>
+            <returns>return value</returns>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.CircleLayout.OnAnimationEnd(Android.Views.Animations.Animation)">
+            <summary>
+            On animation method.
+            </summary>
+            <param name="animation">Animation type</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.CircleLayout.OnAnimationRepeat(Android.Views.Animations.Animation)">
+            <summary>
+            On animation repeat method.
+            </summary>
+            <param name="animation">Animation type.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.CircleLayout.OnAnimationStart(Android.Views.Animations.Animation)">
+            <summary>
+            On animation start method.
+            </summary>
+            <param name="animation">animation type</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.CircleLayout.OnTouch(Android.Views.View,Android.Views.MotionEvent)">
+            <summary>
+            On touch method.
+            </summary>
+            <param name="v">View type</param>
+            <param name="e">Motion event</param>
+            <returns>return value</returns>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.CircleLayout.DegreesToXY(System.Double,System.Single,Android.Graphics.Point)">
+            <summary>
+            Degree method.
+            </summary>
+            <param name="degrees">Double type</param>
+            <param name="radius">Float type</param>
+            <param name="origin">Point type</param>
+            <returns>return value</returns>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.CircleLayout.RadialItemCountMethod">
+            <summary>
+            Radials the item count method.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.CircleLayout.Initialize">
+            <summary>
+            Initialize method.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.CircleLayout.SettingSegmentIndex">
+            <summary>
+            Setting segment index method.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.CircleLayout.Navigate(Syncfusion.SfRadialMenu.Android.SfRadialMenuItem)">
+            <summary>
+            navigate method.
+            </summary>
+            <param name="item">Item type</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.CircleLayout.Goback">
+            <summary>
+            Go back method.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.CircleLayout.OnDraw(Android.Graphics.Canvas)">
+            <summary>
+            On draw method.
+            </summary>
+            <param name="canvas">Canvas type</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.CircleLayout.OnSizeChanged(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            On size changed method.
+            </summary>
+            <param name="w">Width value</param>
+            <param name="h">Height value</param>
+            <param name="oldw">Old width value</param>
+            <param name="oldh">Old height value</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.CircleLayout.ShrinkandExpand">
+            <summary>
+            Shrink and expand method.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.CircleLayout.PositionItems(System.Int32,System.Drawing.Size,Android.Graphics.Point)">
+            <summary>
+            Position item method.
+            </summary>
+            <param name="i">Integer type</param>
+            <param name="tSize">Size type</param>
+            <param name="itemPoint">point type</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.CircleLayout.RemoveItemFromParent(Android.Views.View)">
+            <summary>
+            Remove item from parent method.
+            </summary>
+            <param name="item">view type</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.CircleLayout._timer_Elapsed(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            Timer elapsed method.
+            </summary>
+            <param name="sender">Object type</param>
+            <param name="e">Elapsed event args</param>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.Android.ItemView">
+            <summary>
+            Item view class
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.ItemView.viewToConvert">
+            <summary>
+            View to convert field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.ItemView.itemheight">
+            <summary>
+            Item height,item width field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.ItemView.itemwidth">
+            <summary>
+            Item height,item width field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.ItemView.fontIconSize">
+            <summary>
+            Item height,item width field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.ItemView.con">
+            <summary>
+            Context field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.ItemView.ImageText">
+            <summary>
+            Image text field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.ItemView.fontIconText">
+            <summary>
+            Image text field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.ItemView.typeFace">
+            <summary>
+            Type face field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.ItemView.TextTypeface">
+            <summary>
+            Type face field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.ItemView.fontIconColor">
+            <summary>
+            Font icon color field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.ItemView.textColor">
+            <summary>
+            Font icon color field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.ItemView.TextSize">
+            <summary>
+            Text size field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.ItemView.mRadialMenu">
+            <summary>
+            Radial menu field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.ItemView.iconPaint">
+            <summary>
+            Icon paint field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.ItemView.bm">
+            <summary>
+            Bitmap field.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.ItemView.#ctor(Android.Content.Context,Syncfusion.SfRadialMenu.Android.SfRadialMenu)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.Android.ItemView" /> class.
+            </summary>
+            <param name="context">Context type</param>
+            <param name="radialMenu">Radial menu type</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.ItemView.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.Android.ItemView" /> class.
+            </summary>
+            <param name="context">Context type</param>
+            <param name="attrs">Attribute set</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.ItemView.#ctor(Android.Content.Context,Android.Util.IAttributeSet,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.Android.ItemView" /> class.
+            </summary>
+            <param name="context">Context type</param>
+            <param name="attrs">Attribute set</param>
+            <param name="defStyle">Integer type</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.ItemView.Initialize(Android.Views.View,System.Drawing.Size,System.String)">
+            <summary>
+            Initialize method
+            </summary>
+            <param name="view">View type</param>
+            <param name="size">Size type</param>
+            <param name="imageText">String type</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.ItemView.Initialize(System.Drawing.Size,System.String,System.Double,Android.Graphics.Color,Android.Graphics.Typeface)">
+            <summary>
+            Initialize method.
+            </summary>
+            <param name="size">Size type</param>
+            <param name="imageText">String type</param>
+            <param name="textSize">Double type</param>
+            <param name="textcolor">color type</param>
+            <param name="textTypeface">Text type face</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.ItemView.Initialize(System.String,Android.Graphics.Typeface,System.Double,Android.Graphics.Color,System.Drawing.Size,System.String,System.Double,Android.Graphics.Color,Android.Graphics.Typeface)">
+            <summary>
+            Initialize method.
+            </summary>
+            <param name="fontIconName">Font icon name</param>
+            <param name="fontTypeFace">Font type face</param>
+            <param name="fontSize">font face</param>
+            <param name="iconColor">Icon color</param>
+            <param name="size">Size type</param>
+            <param name="imageText">Image text</param>
+            <param name="textSize">Text size</param>
+            <param name="textcolor">Text color </param>
+            <param name="textTypeface">Text type face</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.ItemView.OnDraw(Android.Graphics.Canvas)">
+            <summary>
+            On draw method.
+            </summary>
+            <param name="canvas">Canvas type</param>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.Android.OpeningEventArgs">
+            <summary>
+            Occurs when the first level menu that starts to expanding to open.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.OpeningEventArgs.cancel">
+            <summary>
+            cancel field.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.OpeningEventArgs.Cancel">
+            <summary>
+            Gets or sets a value indicating whether the value of Cancel property.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.Android.OpenedEventArgs">
+            <summary>
+            Occurs when the first level menu get expanded to opened.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.Android.ClosingEventArgs">
+            <summary>
+            Occurs when the first level menu that starts to collapsing to close.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.ClosingEventArgs.cancel">
+            <summary>
+            cancel field.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.ClosingEventArgs.Cancel">
+            <summary>
+            Gets or sets a value indicating whether value of cancel property
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.Android.ClosedEventArgs">
+            <summary>
+            Occurs when the first level menu get collapsed to Closed.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.Android.NavigatingEventArgs">
+            <summary>
+            Occurs when a Radial Menu item tapped to starts navigating to its next hierarchy level or Center back button is tapped to starts navigating to previous hierarchy level. Its occurs only an item that has children
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.NavigatingEventArgs.cancel">
+            <summary>
+            Cancel field.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.NavigatingEventArgs.Cancel">
+            <summary>
+            Gets or sets a value indicating whether the value of Cancel property.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.Android.NavigatedEventArgs">
+            <summary>
+            Occurs when a Radial Menu item tapped and navigated to its next hierarchy level or Center back button is tapped to navigated to its previous hierarchy level. Its occurs only an item that has children
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.Android.CenterButtonBackTappedEventArgs">
+            <summary>
+            Center button back tapped event args method.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.Android.RadialMenuItemTappedEventArgs">
+            <summary>
+            Occurs when a RadialMenuItem get Tapped. Item can be retrieve and customized
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.Android.DragBeginEventArgs">
+            <summary>
+            Occurs when the control get dragged.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.DragBeginEventArgs.handled">
+            <summary>
+            handled field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.DragBeginEventArgs.position">
+            <summary>
+            position field.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.DragBeginEventArgs.Handled">
+            <summary>
+            Gets or sets a value indicating whether the value of Handled property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.DragBeginEventArgs.Position">
+            <summary>
+            Gets or sets a value indicating whether the value of Position property.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.Android.DragEndEventArgs">
+            <summary>
+            Occurs when the control get dragend.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.DragEndEventArgs.handled">
+            <summary>
+            handled field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.DragEndEventArgs.oldValue">
+            <summary>
+            oldValue field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.DragEndEventArgs.newValue">
+            <summary>
+            newValue field.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.DragEndEventArgs.Handled">
+            <summary>
+            Gets or sets a value indicating whether the value of Handled property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.DragEndEventArgs.OldValue">
+            <summary>
+            Gets or sets a value indicating whether the value of OldValue property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.DragEndEventArgs.NewValue">
+            <summary>
+            Gets or sets a value indicating whether the value of NewValue property.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer">
+            <summary>
+            Radial menu renderer
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.density">
+            <summary>
+            Density field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.icon">
+            <summary>
+            Icon field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.backIcon">
+            <summary>
+            Back icon field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.radialButton">
+            <summary>
+            Radial button field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.layout">
+            <summary>
+            layout field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.circularLayout">
+            <summary>
+            Circular layout field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.TotalItems">
+            <summary>
+            Total item field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.items">
+            <summary>
+            Items field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.itemSize">
+            <summary>
+            Item size field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.buttonRadius">
+            <summary>
+            Button radius field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.separatorThickness">
+            <summary>
+            Button radius field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.dragBeginIsCancel">
+            <summary>
+            dragBeginIsCancel field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.innerRadius">
+            <summary>
+            Inner radius field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.centerButtonBorderThickness">
+            <summary>
+            Inner radius field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.outerRimRadius">
+            <summary>
+            Outer rim radius field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.outerRimBrush">
+            <summary>
+            Outer rim brush field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.activeRimBrush">
+            <summary>
+            Outer rim brush field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.rimBackground">
+            <summary>
+            Outer rim brush field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.centerButtonBorderColor">
+            <summary>
+            Outer rim brush field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.centerButtonTextColor">
+            <summary>
+            Outer rim brush field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.centerButtonBackTextColor">
+            <summary>
+            Outer rim brush field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.mRadialMenu">
+            <summary>
+            Radial menu;
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.prevAngle">
+            <summary>
+            Previous angle field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.prevUp">
+            <summary>
+            Previous angle field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.prevRad">
+            <summary>
+            Previous angle field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.currentRad">
+            <summary>
+            Previous angle field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.isMoved">
+            <summary>
+            Is moved field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.isDown">
+            <summary>
+            Is moved field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.con">
+            <summary>
+            Con field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.centerButtonText">
+            <summary>
+            center button text field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.centerButtonBackText">
+            <summary>
+            center button text field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.menuButtonBackground">
+            <summary>
+            Menu button background field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.separationColor">
+            <summary>
+            Menu button background field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.itemsSource">
+            <summary>
+            Item source field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.isOpen">
+            <summary>
+            Is open field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.isDragEnabled">
+            <summary>
+            Is open field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.centerButtonTextSize">
+            <summary>
+            Center button Text size field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.centerButtonBackTextSize">
+            <summary>
+            Center button Text size field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.centerButtonTextTypeface">
+            <summary>
+            Center button text typeface field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.centerButtonBackTypeface">
+            <summary>
+            Center button text typeface field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.collapseVar">
+            <summary>
+            Collase field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.navigate">
+            <summary>
+            Collase field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.visibleSegmentsCount">
+            <summary>
+            Visible segment field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.duration">
+            <summary>
+            Visible segment field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.layoutType">
+            <summary>
+            Layout type field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.x1">
+            <summary>
+            X1,Y1 fields.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.y1">
+            <summary>
+            X1,Y1 fields.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.offSet">
+            <summary>
+            Offset field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.width">
+            <summary>
+            width,Height fields.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.height">
+            <summary>
+            width,Height fields.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.animationSet1">
+            <summary>
+            Animation set field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.mCurrAngle">
+            <summary>
+            Angle field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.downX">
+            <summary>
+            Down and move values.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.downY">
+            <summary>
+            Down and move values.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.moveX">
+            <summary>
+            Down and move values.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.moveY">
+            <summary>
+            Down and move values.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.dX">
+            <summary>
+            Down and move values.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.dY">
+            <summary>
+            Down and move values.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.isMoving">
+            <summary>
+            Is moving field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.degree">
+            <summary>
+            degree field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.a">
+            <summary>
+            Value field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.dragBeginEventArgs">
+            <summary>
+            DragBegin Event.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.dragEndEventArgs">
+            <summary>
+            DragEnd Event.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer" /> class.
+            </summary>
+            <param name="context">context type</param>
+            <param name="attrs">Attribute set</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.#ctor(Android.Content.Context,Android.Util.IAttributeSet,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer" /> class.
+            </summary>
+            <param name="context">context type</param>
+            <param name="attrs">Attribute set</param>
+            <param name="defStyle">Integer type</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.#ctor(Android.Content.Context,Syncfusion.SfRadialMenu.Android.SfRadialMenu)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer" /> class.
+            </summary>
+            <param name="context">Context type</param>
+            <param name="radialMenu">Radial menu</param>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.Icon">
+            <summary>
+            Gets or sets the value of icon property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.Items">
+            <summary>
+            Gets or sets the value of items property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.ItemsSource">
+            <summary>
+            Gets or sets the value of Items source property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.IsOpen">
+            <summary>
+            Gets or sets a value indicating whether open or not.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.ItemSize">
+            <summary>
+            Gets or sets the value of Item size property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.InnerRimRadius">
+            <summary>
+            Gets or sets the value of Inner rim radius property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.OuterRimRadius">
+            <summary>
+            Gets or sets the value of Outer rim radius property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.RimRadius">
+            <summary>
+            Gets or sets the rim radius property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.RimBackground">
+            <summary>
+            Gets or sets the Rim background property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.ActiveRimBrush">
+            <summary>
+            Gets or sets the value of Active rim brush property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.OuterRimBrush">
+            <summary>
+            Gets or sets the value of Outer rim brush property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.BackIcon">
+            <summary>
+            Gets or sets the value of Back icon property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.IsDragEnabled">
+            <summary>
+            Gets or sets a value indicating whether value of drag enabled property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.CenterButtonBorderThickness">
+            <summary>
+            Gets or sets the value of Center button border thickness property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.CenterButtonText">
+            <summary>
+            Gets or sets the center button text property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.CenterButtonTextSize">
+            <summary>
+            Gets or sets the value of Center Button text size property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.CenterButtonTextTypeface">
+            <summary>
+            Gets or sets the value of Center Button Text 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.CenterButtonBorderColor">
+            <summary>
+            Gets or sets the value of Center Button border color property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.CenterButtonTextColor">
+            <summary>
+            Gets or sets the value of Center button text color property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.CenterButtonBackTextSize">
+            <summary>
+            Gets or sets the value of Center button back text size property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.CenterButtonBackTextColor">
+            <summary>
+            Gets or sets the value of Center Button back text color property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.CenterButtonBackText">
+            <summary>
+            Gets or sets the value of Center button back text property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.CenterButtonBackTypeface">
+            <summary>
+            Gets or sets the value of center button back typeface property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.CenterButtonBackground">
+            <summary>
+            Gets or sets the value of Center button background property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.SeparatorThickness">
+            <summary>
+            Gets or sets the value of separator thickness property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.SeparatorColor">
+            <summary>
+            Gets or sets the value of Separator color property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.VisibleSegmentsCount">
+            <summary>
+            Gets or sets the value of Visible segment count property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.LayoutType">
+            <summary>
+            Gets or sets the value of Layout type property.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.OnAnimationEnd(Android.Views.Animations.Animation)">
+            <summary>
+            On animation end method.
+            </summary>
+            <param name="animation">Animation type</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.OnAnimationRepeat(Android.Views.Animations.Animation)">
+            <summary>
+            On animation repeat method.
+            </summary>
+            <param name="animation">Animation field</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.OnAnimationStart(Android.Views.Animations.Animation)">
+            <summary>
+            On animation start field.
+            </summary>
+            <param name="animation">Animation field.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.OnInterceptTouchEvent(Android.Views.MotionEvent)">
+            <summary>
+            On Intercept touch event method.
+            </summary>
+            <param name="e">Motion event</param>
+            <returns>return value</returns>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.OnTouchEvent(Android.Views.MotionEvent)">
+            <summary>
+            On touch event
+            </summary>
+            <param name="e">Motion event</param>
+            <returns>return value</returns>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.expand(Android.Views.View)">
+            <summary>
+            Expand method.
+            </summary>
+            <param name="v">View type</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.collapse(Android.Views.View)">
+            <summary>
+            Collapse method.
+            </summary>
+            <param name="v">View type</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.isPointInCircle(System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Is Point circle method.
+            </summary>
+            <param name="centerX">Center X</param>
+            <param name="centerY">Center  Y</param>
+            <param name="radius">Radius value</param>
+            <param name="x">Double X</param>
+            <param name="y">Double Y</param>
+            <returns>return value</returns>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.Initialize">
+            <summary>
+            Initialize method.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.dragBegin(Android.Graphics.Point)">
+            <summary>
+            drag Begin method.
+            </summary>
+            <param name="point">Position Point</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.dragEnd(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            drag End method.
+            </summary>
+            <param name="xPosRadial">x PosRadial</param>
+            <param name="yPosRadial">y PosRadial</param>
+            <param name="newValueX">newValue X</param>
+            <param name="newValueY">newValue Y</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.OnSizeChanged(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            On size changed method.
+            </summary>
+            <param name="w">Integer W</param>
+            <param name="h">Integer h</param>
+            <param name="oldw">Old Width</param>
+            <param name="oldh">Old Height</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.isInRectangle(System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            In rectangle method.
+            </summary>
+            <param name="centerX">Center X</param>
+            <param name="centerY">Center  Y</param>
+            <param name="radius">Radius value</param>
+            <param name="x">Double X</param>
+            <param name="y">Double Y</param>
+            <returns>return value</returns>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.removeItemFromParent(Android.Views.View)">
+            <summary>
+            Remove from parent method.
+            </summary>
+            <param name="item">View type</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.HandleAction">
+            <summary>
+            Handle action method.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.animate(System.Double)">
+            <summary>
+            Animate method.
+            </summary>
+            <param name="toDegrees">To degree</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.detectCircle(System.Single,System.Single)">
+            <summary>
+            Detect circle method.
+            </summary>
+            <param name="x">Float X</param>
+            <param name="y">Float Y</param>
+            <returns>return value</returns>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.Android.RoundButton">
+            <summary>
+            Round button class
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.background">
+            <summary>
+            Background field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.width">
+            <summary>
+            Width,height fields.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.height">
+            <summary>
+            Width,height fields.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.circle">
+            <summary>
+            Circle,border fields.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.border">
+            <summary>
+            Circle,border fields.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.iconView">
+            <summary>
+            Icon view field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.radialMenu">
+            <summary>
+            Radial menu.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.radial">
+            <summary>
+            Radial menu.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.density">
+            <summary>
+            Density field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.cOffset">
+            <summary>
+            Density field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.con">
+            <summary>
+            Context field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.iconPaint">
+            <summary>
+            Icon paint field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.bounds">
+            <summary>
+            Bounds  field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.buttonPaint">
+            <summary>
+            Button Paint field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.centerButtonColor">
+            <summary>
+            Text color field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.textColor">
+            <summary>
+            Text color field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.text">
+            <summary>
+            Text field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.textSize">
+            <summary>
+            Text size field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.typeFace">
+            <summary>
+            Type face field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.CenterButton">
+            <summary>
+            Center button field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.aPosX">
+            <summary>
+            Position  x field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.aPosY">
+            <summary>
+            Position Y field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.dx">
+            <summary>
+            DX value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.dy">
+            <summary>
+            DY value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.x">
+            <summary>
+            X value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.y">
+            <summary>
+            Y value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.newValueX">
+            <summary>
+            newValueX value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.newValueY">
+            <summary>
+            newValueY value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.xPosRadial">
+            <summary>
+            xPosRadial value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.YPosRadial">
+            <summary>
+            YPosRadial value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.dragbegin">
+            <summary>
+            dragbegin value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.RoundButton.isMoved">
+            <summary>
+            Is moved field..
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RoundButton.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.Android.RoundButton" /> class.
+            </summary>
+            <param name="context">ontext type</param>
+            <param name="attrs">Attribute set</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RoundButton.#ctor(Android.Content.Context,Android.Util.IAttributeSet,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.Android.RoundButton" /> class.
+            </summary>
+            <param name="context">Context type</param>
+            <param name="attrs">Attribute set</param>
+            <param name="defStyle">Integer type</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RoundButton.#ctor(Android.Content.Context,Syncfusion.SfRadialMenu.Android.RadialMenuRenderer,Syncfusion.SfRadialMenu.Android.SfRadialMenu,Android.Graphics.Color,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.Android.RoundButton" /> class.
+            </summary>
+            <param name="context">Context type</param>
+            <param name="radialMenu">Radial menu</param>
+            <param name="radial">Radial menu type</param>
+            <param name="buttonBG">Button type</param>
+            <param name="borderThickness">border thickness</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RoundButton.OnTouchEvent(Android.Views.MotionEvent)">
+            <summary>
+            On touch event method.
+            </summary>
+            <param name="e">Motion event</param>
+            <returns>return value</returns>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RoundButton.Initialize(System.Boolean)">
+            <summary>
+            Initialize method.
+            </summary>
+            <param name="centerbutton">Center button</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RoundButton.OnDraw(Android.Graphics.Canvas)">
+            <summary>
+            On draw method.
+            </summary>
+            <param name="canvas">Canvas type</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RoundButton.OnSizeChanged(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            On size changed method.
+            </summary>
+            <param name="w">Width W</param>
+            <param name="h">Height H</param>
+            <param name="oldw">Old Width.</param>
+            <param name="oldh">Old Height.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.RoundButton.removeItemFromParent(Android.Views.View)">
+            <summary>
+            Remove from parent method.
+            </summary>
+            <param name="item">View type</param>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.Android.SfRadialMenu">
+            <summary>
+            Radial menu class
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.density">
+            <summary>
+            Density fields.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.isOpen">
+            <summary>
+            Is open field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.point">
+            <summary>
+            Point field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.Rwidth">
+            <summary>
+            R width
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.Rheight">
+            <summary>
+            R height
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.touchIsOpen">
+            <summary>
+            Touch is open 
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.icon">
+            <summary>
+            Icon field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.backIcon">
+            <summary>
+            Back icon field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.items">
+            <summary>
+            Items field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.itemsSource">
+            <summary>
+            items source feild.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.itemSize">
+            <summary>
+            Item size field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.buttonRadius">
+            <summary>
+            Button field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.moveX">
+            <summary>
+            move X field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.moveY">
+            <summary>
+            move Y field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.innerRadius">
+            <summary>
+            Inner radius field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.outerRimRadius">
+            <summary>
+            Outer rim radius field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.outerRimBrush">
+            <summary>
+            Outer rim radius fields.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.activeRimBrush">
+            <summary>
+            Outer rim radius fields.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.rimBackground">
+            <summary>
+            Outer rim radius fields.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.selectionColor">
+            <summary>
+            Outer rim radius fields.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.separationColor">
+            <summary>
+            seperation color field
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.menuButtonBackground">
+            <summary>
+            seperation color field
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.centerButtonBorderColor">
+            <summary>
+            seperation color field
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.centerButtonTextColor">
+            <summary>
+            Center button text color field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.centerButtonBackTextColor">
+            <summary>
+            Center button text color field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.separatorThickness">
+            <summary>
+            Seperator thickness field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.isEnableRotation">
+            <summary>
+            Is Enable rotation field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.enableAnimation">
+            <summary>
+            Is Enable rotation field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.visibleSegmentsCount">
+            <summary>
+            Visible segment count field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.animationDuration">
+            <summary>
+            Visible segment count field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.isDragEnabled">
+            <summary>
+            Is drag enabled field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.centerButtonText">
+            <summary>
+            Center Button text field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.centerButtonBackText">
+            <summary>
+            Center Button text field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.centerButtonPlacement">
+            <summary>
+             SfRadialMenuCenterButtonPlacement  field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.centerTypeface">
+            <summary>
+            Center type face field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.centerButtonBackTypeface">
+            <summary>
+            Center type face field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.centerButtonBorderThickness">
+            <summary>
+            Center border thickness field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.centerButtonTextSize">
+            <summary>
+            Center button text size field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.centerButtonBackTextSize">
+            <summary>
+            Center button text size field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.layoutType">
+            <summary>
+            Layout type field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.radialRenderer">
+            <summary>
+            Radial renderer field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.rect">
+            <summary>
+            Rect field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenu.context">
+            <summary>
+            Contextr field.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenu.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.Android.SfRadialMenu" /> class.
+            </summary>
+            <param name="context">Context type</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenu.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.Android.SfRadialMenu" /> class.
+            </summary>
+            <param name="context">Context type</param>
+            <param name="attrs">Attribute set</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenu.#ctor(Android.Content.Context,Android.Util.IAttributeSet,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.Android.SfRadialMenu" /> class.
+            </summary>
+            <param name="context">Context type</param>
+            <param name="attrs">Attribute set</param>
+            <param name="defStyle">Integer type</param>
+        </member>
+        <member name="E:Syncfusion.SfRadialMenu.Android.SfRadialMenu.DragBegin">
+            <summary>
+            DragBegin event.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfRadialMenu.Android.SfRadialMenu.DragEnd">
+            <summary>
+            DragEnd event.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfRadialMenu.Android.SfRadialMenu.Opening">
+            <summary>
+            Opening event.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfRadialMenu.Android.SfRadialMenu.Opened">
+            <summary>
+            Openend event.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfRadialMenu.Android.SfRadialMenu.Closing">
+            <summary>
+            Closing event.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfRadialMenu.Android.SfRadialMenu.Closed">
+            <summary>
+            Closed event.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfRadialMenu.Android.SfRadialMenu.Navigating">
+            <summary>
+            Navigating event.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfRadialMenu.Android.SfRadialMenu.Navigated">
+            <summary>
+            Navigated event.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonBackTapped">
+            <summary>
+            Center Button back tapped event.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonView">
+            <summary>
+            Gets or sets the value indicating view of the center button at first level. Any view can be assigned as center button view.
+            </summary>
+            <value>The center button view.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.Items">
+            <summary>
+            Gets or sets the items.
+            </summary>
+            <value>The items.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.ItemsSource">
+            <summary>
+            Gets or sets a collection of items that can be populated as SfRadialMenuItem and get rendered at run-time based on the Template provided.
+            </summary>
+            <value>The items source.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.Point">
+            <summary>
+            Gets or sets the value indication the position of the center button placement. User can determine the position of the center button while loading.
+            </summary>
+            <value>The point.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.IsOpen">
+            <summary>
+            Gets or sets a value indicating whether the control has to be open or closed. Using this property user can load the control with open state.
+            </summary>
+            <value><c>true</c> if is open; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.EnableRotation">
+            <summary>
+            Gets or sets a value indicating whether that enable or disable the rim rotation with touch gestures.
+            </summary>
+            <value><c>true</c> if enable rotation; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.IsDragEnabled">
+            <summary>
+            Gets or sets a value indicating whether the center button can be drag on the view. It is applicable when the SfRadialMenu in closed state.
+            </summary>
+            <value><c>true</c> if is drag enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.EnableCenterButtonAnimation">
+            <summary>
+            Gets or sets a value indicating whether the value that enable and disable Zoom In or Zoom out animation when the RadialMenu getting open or close respectively.
+            </summary>
+            <value><c>true</c> if enable center button animation; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.VisibleSegmentsCount">
+            <summary>
+            Gets or sets the value that splits the available spaces as pie segments. Exceeded items will not shown and beneath items leave empty space on rim. It will be applicable only if the SfRadialMenu in Custom layout type.
+            </summary>
+            <value>The visible segments count.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.AnimationDuration">
+            <summary>
+            Gets or sets the value indicating the speed of opening / closing / navigating animations.
+            </summary>
+            <value>The duration of the animation.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonRadius">
+            <summary>
+            Gets or sets the value that indicating the size of the center button at first level by adjusting its radius.
+            </summary>
+            <value>The center button radius.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonText">
+            <summary>
+            Gets or sets the value indicating text of the center button at first level and it can also act as font icon. It will not applicable to custom view assigned through CenterButtonView.
+            </summary>
+            <value>The center button text.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonPlacement">
+            <summary>
+            Gets or sets SfRadialMenuCenterButtonPlacement.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonTextSize">
+            <summary>
+            Gets or sets the value that indicating the size of the text / icon of the center button at first level. It will not applicable to custom view assigned through CenterButtonView
+            </summary>
+            <value>The size of the center button text.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonBackText">
+            <summary>
+            Gets or sets the value indicating text of the center button when it navigated to next level and not in first level and it can also act as font icon. It will not applicable to custom view assigned through CenterBackButtonView.
+            </summary>
+            <value>The center button back text.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonBackTypeface">
+            <summary>
+            Gets or sets the value that indicating the font family of the text of center button when it navigated to next level and not in first level. Font icon support will achieved through this support. It will not applicable to custom view assigned through CenterBackButtonView
+            </summary>
+            <value>The center button back typeface.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonBackTextSize">
+            <summary>
+            Gets or sets the value that indicating the size of the text / icon of the center button when it navigated to next level and not in first level. It will not applicable to custom view assigned through CenterBackButtonView.
+            </summary>
+            <value>The size of the center button back text.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonBackTextColor">
+            <summary>
+            Gets or sets the value indicating text/font icon color of the center button when it navigated to next level and not in first level. It will not applicable to custom view assigned through CenterBackButtonView.
+            </summary>
+            <value>The color of the center button back text.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonTypeface">
+            <summary>
+            Gets or sets the value that indicating the font family of the text of center button when it navigated to next level and not in first level. Font icon support will achieved through this support. It will not applicable to custom view assigned through CenterBackButtonView.
+            </summary>
+            <value>The center button typeface.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonBorderThickness">
+            <summary>
+            Gets or sets the value indicating the border thickness of the center button.
+            </summary>
+            <value>The center button border thickness.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.OuterRimThickness">
+            <summary>
+            Gets or sets the outer rim thickness.
+            </summary>
+            <value>The outer rim thickness.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.RimRadius">
+            <summary>
+            Gets or sets the value indicating the size of the rim by adjusting its radius.
+            </summary>
+            <value>The rim radius.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.RimColor">
+            <summary>
+            Gets or sets the value indicating the color of the entire rim.
+            </summary>
+            <value>The color of the rim.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonTextColor">
+            <summary>
+            Gets or sets the value indicating text/font icon color of the center button at first level. It will not applicable to custom view assigned through CenterButtonView.
+            </summary>
+            <value>The color of the center button text.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonBorderColor">
+            <summary>
+            Gets or sets the value indicating the border color of the center button.
+            </summary>
+            <value>The color of the center button border.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.RimActiveColor">
+            <summary>
+            Gets or sets the color of the rim active.
+            </summary>
+            <value>The color of the rim active.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.OuterRimColor">
+            <summary>
+            Gets or sets the color of the outer rim.
+            </summary>
+            <value>The color of the outer rim.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonBackIcon">
+            <summary>
+            Gets or sets the center button back icon.
+            </summary>
+            <value>The center button back icon.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.SeparatorColor">
+            <summary>
+            Gets or sets the value indicating the color of the separator that appear between two items.
+            </summary>
+            <value>The color of the separator.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.SelectionColor">
+            <summary>
+            Gets or sets the value indicating the back color of each items. Generally its represent as pie. It will not applicable to custom view.
+            </summary>
+            <value>The color of the selection.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonBackground">
+            <summary>
+            Gets or sets the value indicating the back color of the center button at first level. It will not applicable to custom view assigned through CenterButtonView.
+            </summary>
+            <value>The center button background.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.SeparatorThickness">
+            <summary>
+            Gets or sets the value indicating the thickness of the separator that appear between two items.
+            </summary>
+            <value>The separator thickness.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.LayoutType">
+            <summary>
+            Gets or sets the value indicating arrangement of items on rim either automatic or user defined.
+            </summary>
+            <value>The type of the layout.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.ItemSize">
+            <summary>
+            Gets or sets a item size property
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.DragBeginEventArgs">
+            <summary>
+            Gets or sets the value of DragBegin event args
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.DragEndEventArgs">
+            <summary>
+            Gets or sets the value of DragEnd event args
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.OpeningEventArgs">
+            <summary>
+            Gets or sets the value of Opening event args
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.OpenedEventArgs">
+            <summary>
+            Gets or sets the value of Opening event args.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.ClosingEventArgs">
+            <summary>
+            Gets or sets the value of closing event args.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.ClosedEventArgs">
+            <summary>
+            Gets or sets the value of Closing event args.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.NavigatingEventArgs">
+            <summary>
+            Gets or sets the value of Navigating event args.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.NavigatedEventArgs">
+            <summary>
+            Gets or sets the value of Navigated event args.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonBackTappedEventArgs">
+            <summary>
+            Gets or sets the value of center tapped event args.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenu.Show">
+            <summary>
+            Opens the first level items of the Radial Menu by expanding the rim.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenu.Close">
+            <summary>
+            Closed the items of the Radial Menu by collapsing the rim.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenu.DispatchTouchEvent(Android.Views.MotionEvent)">
+            <summary>
+            Dispatch Touch event 
+            </summary>
+            <param name="e">Motion event</param>
+            <returns>return value</returns>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenu.Move(System.Single,System.Single)">
+            <summary>
+            Move method 
+            </summary>
+            <param name="x">X value</param>
+            <param name="y">Y value</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenu.OnOpening(Syncfusion.SfRadialMenu.Android.OpeningEventArgs)">
+            <summary>
+            On opening method
+            </summary>
+            <param name="args">event args</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenu.OnOpened(Syncfusion.SfRadialMenu.Android.OpenedEventArgs)">
+            <summary>
+            On opened method.
+            </summary>
+            <param name="args">event args</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenu.OnClosing(Syncfusion.SfRadialMenu.Android.ClosingEventArgs)">
+            <summary>
+            On closing method.
+            </summary>
+            <param name="args">Closing event args</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenu.OnClosed(Syncfusion.SfRadialMenu.Android.ClosedEventArgs)">
+            <summary>
+            On closed method.
+            </summary>
+            <param name="args">Closed event args</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenu.OnNavigating(Syncfusion.SfRadialMenu.Android.NavigatingEventArgs)">
+            <summary>
+            On navigating method.
+            </summary>
+            <param name="args">Navigating event args</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenu.OnNavigated(Syncfusion.SfRadialMenu.Android.NavigatedEventArgs)">
+            <summary>
+            On navigated method.
+            </summary>
+            <param name="args">Navigated event args</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenu.OnCenterButtonBackTapped(Syncfusion.SfRadialMenu.Android.CenterButtonBackTappedEventArgs)">
+            <summary>
+            On center button back tapped method.
+            </summary>
+            <param name="args">Tapped event args</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenu.OnDragBegin(Syncfusion.SfRadialMenu.Android.DragBeginEventArgs)">
+            <summary>
+            On DragBegin method.
+            </summary>
+            <param name="args">Drag Begin event args</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenu.OnDragEnd(Syncfusion.SfRadialMenu.Android.DragEndEventArgs)">
+            <summary>
+            On DragEnd method.
+            </summary>
+            <param name="args">Drag End event args</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenu.OnSizeChanged(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            OnSizeChanged Method.
+            </summary>
+            <param name="w">Integer W</param>
+            <param name="h">Integer h</param>
+            <param name="oldw">Old Width</param>
+            <param name="oldh">Old Height</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenu.Initialize(Android.Content.Context)">
+            <summary>
+            Initialize method.
+            </summary>
+            <param name="con">Context type</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenu.MapAttributes(Android.Content.Context,Android.Util.IAttributeSet,System.Int32,System.Int32)">
+            <summary>
+            Maps the attributes.
+            </summary>
+            <param name="context">Context Property.</param>
+            <param name="attributes">Attributes Value.</param>
+            <param name="styleAttributes">Style attributes.</param>
+            <param name="styleRes">Style resource.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenu.ToLayoutType(System.Int32)">
+            <summary>
+            Converts integer to Layout type
+            </summary>
+            <returns>The Layout type.</returns>
+            <param name="layoutTypeValue">Layout Type.</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenu.ToCenterButtonPlacement(System.Int32)">
+            <summary>
+            Converts integer to CenterButtonPlacement
+            </summary>
+            <returns>The center Button Placement.</returns>
+            <param name="centerButtonPlacementValue">Layout Type.</param>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem">
+            <summary>
+            Radial menu item class
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.radialMenu">
+            <summary>
+            Radial menu field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.subItems">
+            <summary>
+            Sub items field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.context">
+            <summary>
+            Context field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.view">
+            <summary>
+            view field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.imageName">
+            <summary>
+            Image name field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.backgroundImage">
+            <summary>
+            Image name field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.text">
+            <summary>
+            Text field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.fontIconText">
+            <summary>
+            Text field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.textColor">
+            <summary>
+            Text color field. 
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.fontIconColor">
+            <summary>
+            Text color field. 
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.backgroundColor">
+            <summary>
+            Text color field. 
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.height">
+            <summary>
+            Height,width,textsize,fonticon size fields.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.width">
+            <summary>
+            Height,width,textsize,fonticon size fields.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.textsize">
+            <summary>
+            Height,width,textsize,fonticon size fields.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.fontIconSize">
+            <summary>
+            Height,width,textsize,fonticon size fields.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.textTypeFace">
+            <summary>
+            Typeface fields.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.fontIconTypeFace">
+            <summary>
+            Typeface fields.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.visibleSegmentsCount">
+            <summary>
+            Visible segment count field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.segmentIndex">
+            <summary>
+            Visible segment count field.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem" /> class. 
+            </summary>
+            <param name="context">Context type</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem" /> class.
+            </summary>
+            <param name="context">Context type</param>
+            <param name="attrs">Attribute set</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.#ctor(Android.Content.Context,Android.Util.IAttributeSet,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem" /> class.
+            </summary>
+            <param name="context">Context type</param>
+            <param name="attrs">Attribute set</param>
+            <param name="defStyle">Integer type</param>
+        </member>
+        <member name="E:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.ItemTapped">
+            <summary>
+            Item tapped event event
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.Image">
+            <summary>
+            Gets or sets the  image name available in resources
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.BackgroundImage">
+            <summary>
+            Gets or sets the  image name available in resources
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.Text">
+            <summary>
+            Gets or sets the Text that can be displayed below the icon
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.FontIconText">
+            <summary>
+            Gets or sets the font icon Text that can be displayed as the icon
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.View">
+            <summary>
+            Gets or sets the custom View that can be displayed
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.TextColor">
+            <summary>
+            Gets or sets the  color of the bottom text
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.BackgroundColor">
+            <summary>
+            Gets or sets the color of the item background
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.FontIconColor">
+            <summary>
+             Gets or sets color of the font icon
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.ItemHeight">
+            <summary>
+            Gets or sets height of the item
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.ItemWidth">
+            <summary>
+            Gets or sets the width of the item
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.TextSize">
+            <summary>
+            Gets or sets the size of the bottom text
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.FontIconSize">
+            <summary>
+            Gets or sets the size of the font icon
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.IconFont">
+            <summary>
+            Gets or sets the typeface of the font icon
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.TextTypeFace">
+            <summary>
+            Gets or sets the type face of the bottom text
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.VisibleSegmentsCount">
+            <summary>
+            Gets or sets the value of Visible segment count property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.Items">
+            <summary>
+            Gets or sets the subitems for every radialmenu item
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.SegmentIndex">
+            <summary>
+            Gets or sets the Enables the position of the childrens
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.RadialMenuItemTappedEventArgs">
+            <summary>
+            Gets or sets the Radial menu item tapped event args
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.OnItemTapped(Syncfusion.SfRadialMenu.Android.RadialMenuItemTappedEventArgs)">
+            <summary>
+            On item tapped method.
+            </summary>
+            <param name="args">Tapped event args</param>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.Initialize">
+            <summary>
+            Initialize method.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.Android.LayoutType">
+            <summary>
+            Contains values of LayoutType that determines arrangement of items on rim either automatic or user defined
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.LayoutType.Default">
+            <summary>
+            Available items can populated on the rim by sharing the available space in equal ratio. Order of the item based on order of items in the assigned source
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.LayoutType.Custom">
+            <summary>
+            User can split the available spaces using VisibleSegmentCount as segments. Exceeded items will not shown and beneath items leave empty space on rim. User can rearrange or position the items using SegmentIndex property of SfRadialMenuItem
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.Android.SfRadialMenuCenterButtonPlacement">
+            <summary>
+            Contains values of CenterButtonPlacement that used to set the Placement of the CenterButton.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenuCenterButtonPlacement.TopLeft">
+            <summary>
+             SfRadialMenuCenterButtonPlacement at TopLeft
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.SfRadialMenuCenterButtonPlacement.Center">
+            <summary>
+             SfRadialMenuCenterButtonPlacement at Center
+            </summary>
+        </member>
+    </members>
+</doc>

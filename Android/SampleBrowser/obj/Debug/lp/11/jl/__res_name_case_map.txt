@@ -1,0 +1,7 @@
+values/Strings.xml;values/strings.xml
+layout/CustomizedView1.xml;layout/customizedview1.xml
+layout/CustomizedView.xml;layout/customizedview.xml
+layout/sfautocomplete_layout.xml;layout/sfautocomplete_layout.xml
+drawable/sfclosebutton.png;drawable/sfclosebutton.png
+drawable/styleinfo.xml;drawable/styleinfo.xml
+values/attrs.xml;values/attrs.xml

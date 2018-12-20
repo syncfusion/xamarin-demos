@@ -1,0 +1,2957 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.SfAutoComplete.iOS</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.SFAutoComplete">
+            <summary>
+            Auto complete class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SFAutoComplete.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfAutoComplete.iOS.SFAutoComplete" /> class.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.SfAutoComplete">
+            <summary>
+            Auto complete class.
+            </summary>
+            <summary>
+            Auto complete class
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.NSECPERSEC">
+            <summary>
+            Second field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.selectionUpdate">
+            <summary>
+            The property update.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.autoTempArray">
+            <summary>
+            Auto temp array field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.isThreadRunning">
+            <summary>
+            The is thread running.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.isSelectionUpdated">
+            <summary>
+            The is selection updated.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.returnvalue">
+            <summary>
+            The returnvalue.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.paddingView">
+            <summary>
+            The padding view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.lastTokenWidth">
+            <summary>
+            The last width of the token.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.tokenWidth">
+            <summary>
+            The width of the token.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.separator">
+            <summary>
+            Separator field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.repeatedItemsCollections">
+            <summary>
+            The repeated items collections.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.tableviewstyle">
+            <summary>
+            Table view style field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.minimumPrefixCharacters">
+            <summary>
+            Minimum prefix characters field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.maximumSuggestion">
+            <summary>
+            Maximum Suggestion field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.index">
+            <summary>
+            Temp field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.oldSelectedItem">
+            <summary>
+            Old selected item.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.keyboardType">
+            <summary>
+            The type of the keyboard.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.tokenSpacing">
+            <summary>
+            The tokern space.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.dropDownTextSize">
+            <summary>
+            Drop down text size field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.textFieldWidth">
+            <summary>
+            The width of the text field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.itemHeight">
+            <summary>
+            Item height field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.maxDropDownHeight">
+            <summary>
+            Max drop Down height field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.scrollOffSetX">
+            <summary>
+            The scroll off set X value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.popUpDelay">
+            <summary>
+            Pop up delay field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.searchItemPath">
+            <summary>
+            search item path field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.imageCollection">
+            <summary>
+            Image collection field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.internalText">
+            <summary>
+            Text field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.watermark">
+            <summary>
+            Water mark field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.isSuggestionOpenValue">
+            <summary>
+            Is suggestion open field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.showSuggestionsOnFocus">
+            <summary>
+            Show suggestions on focus field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.isDropDownOpen">
+            <summary>
+            Is drop down open field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.autoCompleteSource">
+            <summary>
+            auto complete source field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.itemssource">
+            <summary>
+            Item source field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.subText">
+            <summary>
+            Sub text field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.elementArray">
+            <summary>
+            Element array field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.obj">
+            <summary>
+            Object field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.imageArray">
+            <summary>
+            Image array field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.viewArray">
+            <summary>
+            View array field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.textField">
+            <summary>
+            Text field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.textSize">
+            <summary>
+            Text size field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.autoCompleteTableView">
+            <summary>
+            Auto complete table view field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.referenceView">
+            <summary>
+            reference field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.autoCompleteString">
+            <summary>
+            Auto complete string field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.textColor">
+            <summary>
+            Text color field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.borderColor">
+            <summary>
+            Border color field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.watermarkColor">
+            <summary>
+            Water mark color field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.dropDownTextColor">
+            <summary>
+            Drop down text color field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.displayMemberPath">
+            <summary>
+            Display member path field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.selectedIndex">
+            <summary>
+            Selected index field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.selectedValuePath">
+            <summary>
+            Selected value path field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.selectedValue">
+            <summary>
+            selected value field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.selectedItem">
+            <summary>
+            selected item field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.font">
+            <summary>
+            font field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.dropDownFont">
+            <summary>
+            Drop down font field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.currentIndex">
+            <summary>
+            current index field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.filterCollectionChangedEventArgs">
+            <summary>
+            The filtered items changed event arguments.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.newDataSource">
+            <summary>
+            The new data source.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.enableSelectionIndicator">
+            <summary>
+            Enable selection indicator field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.indicatorTextSize">
+            <summary>
+            Indicator text size field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.indicatorTextColor">
+            <summary>
+            Drop down text color field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.indicatorFont">
+            <summary>
+            indicator font field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.indicatorText">
+            <summary>
+            The indicatorText.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.itemPadding">
+            <summary>
+            The itemPadding.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.tokenCollection">
+            <summary>
+            The token collection.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.multiSelectionTapGesture">
+            <summary>
+            The multi selection tap gesture.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.removedTokenPos">
+            <summary>
+            The removed token position.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.buttonHolder">
+            <summary>
+            The button holder.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.clearButton">
+            <summary>
+            The clear button.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.tokensWrapMode">
+            <summary>
+            The tokens wrap mode.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.tokenVerticalPadding">
+            <summary>
+            The token vertical padding.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.selectedIndices">
+            <summary>
+            The selected indexes.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.selectedValues">
+            <summary>
+            The selected values.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.selectedIndexCollection">
+            <summary>
+            The selected index collection.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.selectedValuesCollection">
+            <summary>
+            The selected values collection.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.selectedItemsCollection">
+            <summary>
+            The selected items collection.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.multiSelectMode">
+            <summary>
+            The text view mode.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.tokenSettings">
+            <summary>
+            The token settings.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.imageMemberPath">
+            <summary>
+            The image path.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.dropDownCornerRadius">
+            <summary>
+            The drop down corner radius.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.dropDownHeaderView">
+            <summary>
+            The drop down header view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.dropDownFooterView">
+            <summary>
+            The drop down footer view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.delimiter">
+            <summary>
+            The delimiter.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.filteredItems">
+            <summary>
+            The filtered items.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.highlightedTextFontAttributes">
+            <summary>
+            The highlight text font attributes.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.tempString">
+            <summary>
+            The temp string.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.currentString">
+            <summary>
+            The current string.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.isFocused">
+            <summary>
+            The is focused.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.dropDownHeaderViewHeight">
+            <summary>
+            The height of the drop down header view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.dropDownFooterViewHeight">
+            <summary>
+            The height of the drop down footer view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.showDropDownHeaderView">
+            <summary>
+            The show drop down header view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.showDropDownFooterView">
+            <summary>
+            The show drop down footer view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.task">
+            <summary>
+            The task.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.cancelSource">
+            <summary>
+            The cancel source.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.showClearButton">
+            <summary>
+            The show clear button.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.showBorder">
+            <summary>
+            Show Border field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ignoreDiacritic">
+            <summary>
+            Show Border field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.isDelimiterMode">
+            <summary>
+            The is delimiter mode.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.delimiterChar">
+            <summary>
+            The delimiter char.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.imageTempArray">
+            <summary>
+            The image temp array.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.isAutoCompleteItem">
+            <summary>
+            The is auto complete item.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.typedString">
+            <summary>
+            The typed string.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.highlightedTextColor">
+            <summary>
+            The color of the highlight text.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.textHighlightMode">
+            <summary>
+            The text highlight mode.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.sortList">
+            <summary>
+            The sort list.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.fromTableSelection">
+            <summary>
+            From table selection.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.fireCollectionChanged">
+            <summary>
+            The fire collection changed.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.selectedValueArray">
+            <summary>
+            The selected value array.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.isSourceString">
+            <summary>
+            The is source string.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.multiSelectionParentView">
+            <summary>
+            The multi selection parent view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.scrollView">
+            <summary>
+            The scroll view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.popView">
+            <summary>
+            The pop view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.origin">
+            <summary>
+            The origin.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.selectionChangingEventArgs">
+            <summary>
+            Selection changing event args field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.dropDownItemEventArgs">
+            <summary>
+            The drop down item event arguments.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.filterItemEventArgs">
+            <summary>
+            Filter item event args field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.focusEventArgs">
+            <summary>
+            Focus event args field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.isSuggestionboxManuallyClosed">
+            <summary>
+            Is Suggestionbox ManuallyClosed args field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.imageText">
+            <summary>
+            Image text field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.text">
+            <summary>
+            Image text field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.isXFormsiOS">
+            <summary>
+            forms field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.backgroundView">
+            <summary>
+            Background view field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.dropDownWidth">
+            <summary>
+            pop Up View Width field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.internaldropDownWidth">
+            <summary>
+            Internal Drop Down Width field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.tapGesture">
+            <summary>
+            Tap gesture field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.panGesture">
+            <summary>
+            Pan gesture field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.scrolling">
+            <summary>
+            Scroll field
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.textRange">
+            <summary>
+            The text range.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.replacementText">
+            <summary>
+            The replacement text.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.clearButtonColor">
+            <summary>
+            The color of the clear button.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.loadMoreText">
+            <summary>
+            The load more text.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.noResultsFoundText">
+            <summary>
+            The no results found.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.dropDownBackgroundColor">
+            <summary>
+            The color of the drop down background.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.isSelectedItemsVisibleInDropDown">
+            <summary>
+            The is selected item visible in drop down.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.isSelectionChangingEventRaised">
+            <summary>
+            The is selection changing fire.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.noResultHeight">
+            <summary>
+            The height of the no result.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.clearButtonHeight">
+            <summary>
+            The height of the clear button.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.defaultScrollViewHeight">
+            <summary>
+            The default height of the scroll view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.dropdownButtonWidth">
+            <summary>
+            The width of the dropdown button.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.textViewWidth">
+            <summary>
+            The width of the text view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.textViewPadding">
+            <summary>
+            The text view padding.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.textPadding">
+            <summary>
+            The text view padding.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.multiLineTextHeight">
+            <summary>
+            The height of the multi line text.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.clearButtonSize">
+            <summary>
+            The size of the clear button.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SelectionChangingEventHandler">
+            <summary>
+            Represents the DidSelectionChangingChange.
+            </summary>
+            <param name="sender">object type.</param>
+            <param name="e">Text event args.</param>
+        </member>
+        <member name="E:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SelectionChanging">
+            <summary>
+            Occurs only the selection changed
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.Frame">
+            <summary>
+            Gets or sets the value of Frame.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.MaximumSuggestion">
+            <summary>
+            Gets or sets the value of Maximum Suggestion method
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.KeyboardType">
+            <summary>
+            Gets or sets the type of the keyboard.
+            </summary>
+            <value>The type of the keyboard.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.Separator">
+            <summary>
+            Gets or sets the value of Separator.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.TableViewStyle">
+            <summary>
+            Gets or sets the value of tableViewStyle.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.MinimumPrefixCharacters">
+            <summary>
+            Gets or sets the value of MinimumPrefixCharacters.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.DropDownTextSize">
+            <summary>
+            Gets or sets the value of DropDownTextSize.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ItemHeight">
+            <summary>
+            Gets or sets the value of ItemHeight.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.MaxDropDownHeight">
+            <summary>
+            Gets or sets the value of MaxDropDownHeight.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.PopUpDelay">
+            <summary>
+            Gets or sets the value of PopUpDelay.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.IsDropDownOpen">
+            <summary>
+            Gets or sets a value indicating whether the value of IsDropDownOpen.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.DataSource">
+            <summary>
+            Gets or sets the value of DataSource.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SearchItemPath">
+            <summary>
+            Gets or sets the value of Search Item Path.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ImageCollection">
+            <summary>
+            Gets or sets the value of Image Collection.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.Text">
+            <summary>
+            Gets or sets the value of Text.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.Watermark">
+            <summary>
+            Gets or sets the value of Watermark.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.IsSuggestionOpen">
+            <summary>
+            Gets or sets a value indicating whether the value of is Suggestion Open.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ShowSuggestionsOnFocus">
+            <summary>
+            Gets or sets a value indicating whether the value of Show Suggestions OnFocus.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ElementArray">
+            <summary>
+            Gets or sets the value of Element Array.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.Obj">
+            <summary>
+            Gets or sets the value of Object.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ImageArray">
+            <summary>
+            Gets or sets the value of Image Array.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ViewArray">
+            <summary>
+            Gets or sets the value of View Array.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.TextField">
+            <summary>
+            Gets or sets the value of Text field property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.TextSize">
+            <summary>
+            Gets or sets the value of Text Size.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.AutoCompleteTableView">
+            <summary>
+            Gets or sets the value of Auto Complete Table View.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ReferenceView">
+            <summary>
+            Gets or sets the value of Reference View.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.AutoCompleteString">
+            <summary>
+            Gets or sets the value of Auto Complete String.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.TextColor">
+            <summary>
+            Gets or sets the value of Text Color.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.BorderColor">
+            <summary>
+            Gets or sets the value of Border Color.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.WatermarkColor">
+            <summary>
+            Gets or sets the value of Watermark Color.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.DropDownTextColor">
+            <summary>
+            Gets or sets the value of Drop Down Text Color.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.DisplayMemberPath">
+            <summary>
+            Gets or sets the value of Display Member Path.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SelectedIndex">
+            <summary>
+            Gets or sets the value of Selected Index.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SelectedValuePath">
+            <summary>
+            Gets or sets the value of Selected Value Path.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SelectedValue">
+            <summary>
+            Gets or sets the value of Selected Value.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SelectedItem">
+            <summary>
+            Gets or sets the value of Selected Item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.Font">
+            <summary>
+            Gets or sets the value of Font.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.DropDownFont">
+            <summary>
+            Gets or sets the value of DropDownFont.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.IsFocused">
+            <summary>
+            Gets or sets a value indicating whether Focus value to Autocomplete.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.TokensWrapMode">
+            <summary>
+            Gets or sets TokensWrapMode to AutoComplete.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SelectedIndices">
+            <summary>
+            Gets or sets collection of indices.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.MultiSelectMode">
+            <summary>
+            Gets or sets the multi select mode.
+            </summary>
+            <value>The multi select mode.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.TokenSettings">
+            <summary>
+            Gets or sets token settings to AutoComplete.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.FilteredItems">
+            <summary>
+            Gets or sets the filtered items.
+            </summary>
+            <value>The filtered items.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ImageMemberPath">
+            <summary>
+            Gets or sets the image path.
+            </summary>
+            <value>The image path.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.DropDownCornerRadius">
+            <summary>
+            Gets or sets the drop down corner radius.
+            </summary>
+            <value>The drop down corner radius.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.DropDownHeaderView">
+            <summary>
+            Gets or sets the drop down header view.
+            </summary>
+            <value>The drop down header view.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.DropDownFooterView">
+            <summary>
+            Gets or sets the drop down footer view.
+            </summary>
+            <value>The drop down footer view.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.Delimiter">
+            <summary>
+            Gets or sets the delimiter.
+            </summary>
+            <value>The delimiter.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.HighlightedTextFontAttributes">
+            <summary>
+            Gets or sets the highlight text font attributes.
+            </summary>
+            <value>The highlight text font attributes.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.HighlightedTextColor">
+            <summary>
+            Gets or sets the color of the highlight text.
+            </summary>
+            <value>The color of the highlight text.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.TextHighlightMode">
+            <summary>
+            Gets or sets the text highlight mode.
+            </summary>
+            <value>The text highlight mode.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.DropDownHeaderViewHeight">
+            <summary>
+            Gets or sets the height of the drop down header view.
+            </summary>
+            <value>The height of the drop down header view.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.DropDownFooterViewHeight">
+            <summary>
+            Gets or sets the height of the drop down footer view.
+            </summary>
+            <value>The height of the drop down footer view.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ShowDropDownHeaderView">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Syncfusion.SfAutoComplete.iOS.SfAutoComplete"/>
+            show drop down header view.
+            </summary>
+            <value><c>true</c> if show drop down header view; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ShowDropDownFooterView">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Syncfusion.SfAutoComplete.iOS.SfAutoComplete"/>
+            show drop down footer view.
+            </summary>
+            <value><c>true</c> if show drop down footer view; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ShowClearButton">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Syncfusion.SfAutoComplete.iOS.SfAutoComplete"/>
+            show clear button.
+            </summary>
+            <value><c>true</c> if show clear button; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ShowBorder">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Syncfusion.SfAutoComplete.iOS.SfAutoComplete"/>
+            show border.
+            </summary>
+            <value><c>true</c> if show border; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.IgnoreDiacritic">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Syncfusion.SfAutoComplete.iOS.SfAutoComplete"/>
+            enable diacritics.
+            </summary>
+            <value><c>true</c> if enable diacritics; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ClearButtonColor">
+            <summary>
+            Gets or sets the color of the clear button.
+            </summary>
+            <value>The color of the clear button.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.LoadMoreText">
+            <summary>
+            Gets or sets the load more text.
+            </summary>
+            <value>The load more text.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.NoResultsFoundText">
+            <summary>
+            Gets or sets the no results found text.
+            </summary>
+            <value>The no results found text.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.DropDownBackgroundColor">
+            <summary>
+            Gets or sets the color of the drop down background.
+            </summary>
+            <value>The color of the drop down background.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.IsSelectedItemsVisibleInDropDown">
+            <summary>
+            Gets or sets a value indicating whether selected items visible in drop down property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.IndicatorTextSize">
+            <summary>
+            Gets or sets the value of IndicatorTextSize.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.EnableSelectionIndicator">
+            <summary>
+            Gets or sets a value indicating whether the value of enable selection indicator.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.IndicatorTextColor">
+            <summary>
+            Gets or sets the value of indicator Text Color.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.IndicatorFont">
+            <summary>
+            Gets or sets the value of Indicator Font.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.IndicatorText">
+            <summary>
+            Gets or sets the value of Indicator Text.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ItemPadding">
+            <summary>
+            Gets or sets the value of Item Padding.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SubText">
+            <summary>
+            Gets or sets the value of SubText1.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.DropDownWidth">
+            <summary>
+            Gets or sets the value of MaxDropDownHeight.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.TokenCollection">
+            <summary>
+            Gets or sets the token collections.
+            </summary>
+            <value>The token collections.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SelectedItemsCollection">
+            <summary>
+            Gets or sets the token collections.
+            </summary>
+            <value>The token collections.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SelectedValues">
+            <summary>
+            Gets or sets selected values in AutoComplete.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.CustomTextField">
+            <summary>
+            Gets or sets the value of Text Field.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.Scrolling">
+            <summary>
+            Gets or sets a value indicating whether the value of scrolling.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.CurrentIndex">
+            <summary>
+            Gets or sets the value of CurrentIndex.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.AutoTempArray">
+            <summary>
+            Gets or sets the value of Auto temp array property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SelectionChangingEventArgs">
+            <summary>
+            Gets or sets the value of Selection changing event args property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.DropDownItemEventArgs">
+            <summary>
+            Gets or sets the value of DropDown Item Event args.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.IsXFormsiOS">
+            <summary>
+            Gets or sets a value indicating whether the value of forms.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.IsDelimiterMode">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Syncfusion.SfAutoComplete.iOS.SfAutoComplete"/> is
+            delimiter mode.
+            </summary>
+            <value><c>true</c> if is delimiter mode; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.DelimiterChar">
+            <summary>
+            Gets or sets the delimiter char.
+            </summary>
+            <value>The delimiter char.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ImageTempArray">
+            <summary>
+            Gets or sets the image temp array.
+            </summary>
+            <value>The image temp array.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.IsAutoCompleteItem">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Syncfusion.SfAutoComplete.iOS.SfAutoComplete"/> is
+            auto complete item.
+            </summary>
+            <value><c>true</c> if is auto complete item; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.TypedString">
+            <summary>
+            Gets or sets the typed string.
+            </summary>
+            <value>The typed string.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SortList">
+            <summary>
+            Gets or sets the sort list.
+            </summary>
+            <value>The sort list.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.FromTableSelection">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Syncfusion.SfAutoComplete.iOS.SfAutoComplete"/>
+            from table selection.
+            </summary>
+            <value><c>true</c> if from table selection; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.FireCollectionChanged">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Syncfusion.SfAutoComplete.iOS.SfAutoComplete"/>
+            fire collection changed.
+            </summary>
+            <value><c>true</c> if fire collection changed; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SelectedValueArray">
+            <summary>
+            Gets or sets the selected value array.
+            </summary>
+            <value>The selected value array.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.IsSourceString">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Syncfusion.SfAutoComplete.iOS.SfAutoComplete"/> is
+            source string.
+            </summary>
+            <value><c>true</c> if is source string; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.RepeatedItemsCollections">
+            <summary>
+            Gets or sets the repeated items collections.
+            </summary>
+            <value>The repeated items collections.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.MultiSelectionParentView">
+            <summary>
+            Gets or sets the multi selection parent view.
+            </summary>
+            <value>The multi selection parent view.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ScrollView">
+            <summary>
+            Gets or sets the scroll view.
+            </summary>
+            <value>The scroll view.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.IsLTRLayoutDirection">
+            <summary>
+            Gets a value indicating whether this <see cref="T:Syncfusion.iOS.ComboBox.SfComboBox"/> is ltr.
+            </summary>
+            <value><c>true</c> if is ltr; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.PopView">
+            <summary>
+            Gets or sets the pop view.
+            </summary>
+            <value>The pop view.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.Origin">
+            <summary>
+            Gets or sets the origin.
+            </summary>
+            <value>The origin.</value>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.AwakeFromNib">
+            <summary>
+            Awake from nib.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.Clear">
+            <summary>
+            Clear method.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.Focus">
+            <summary>
+            Focus the AutoComplete instance.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SetCursorPosition(System.Int32)">
+            <summary>
+            Sets the cursor position.
+            </summary>
+            <param name="curserIndex">Curser index.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ReturnDiacriticsRemovedText(System.String)">
+            <summary>
+            Returns the diacritics removed text.
+            </summary>
+            <returns>The diacritics removed text.</returns>
+            <param name="text">Text for conversion.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.TokenWithLabel(System.String)">
+            <summary>
+            Tokens the with label.
+            </summary>
+            <param name="tokenText">Token text.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.TokenWithItem(System.String,System.String)">
+            <summary>
+            Tokens the with item.
+            </summary>
+            <param name="tokenText">Token text.</param>
+            <param name="tokenImage">Token image.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.FinishedSearching">
+            <summary>
+            Finished searching method.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.PointInsideClearButton(CoreGraphics.CGPoint)">
+            <summary>
+            Point Inside clear button method.
+            </summary>
+            <param name="point">Cg point.</param>
+            <returns>return value.</returns>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SelectedIndexCalculation(System.nint,System.String)">
+            <summary>
+            Selected index calculation method.
+            </summary>
+            <param name="selectedRow">Integer type.</param>
+            <param name="text">string type.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.GetSelectionItemforEvent(System.nint,System.String)">
+            <summary>
+            Gets the selection item for event.
+            </summary>
+            <param name="selectedRow">Selected Row.</param>
+            <param name="text">String Type.</param>
+            <returns>return value.</returns>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ConvertingToNsObject(System.Object)">
+            <summary>
+            Converting to ns object.
+            </summary>
+            <returns>The to ns object.</returns>
+            <param name="item">object type.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.OnSelectionChanging(Syncfusion.SfAutoComplete.iOS.SelectionChangingEventArgs)">
+            <summary>
+            On selection changing method.
+            </summary>
+            <param name="args">Selection event args.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.RaiseSelectionChangingEvent(System.Object)">
+            <summary>
+            Raises the selection changing event.
+            </summary>
+            <returns><c>true</c>, if selection changing event was raised, <c>false</c> otherwise.</returns>
+            <param name="selectItem">Select item.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.OnFocusChanged(Syncfusion.SfAutoComplete.iOS.FocusEventArgs)">
+            <summary>
+            Raises the Focus changing.
+            </summary>
+            <param name="args">Focus event args.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.OnCompleted(System.EventArgs)">
+            <summary>
+            On the completed.
+            </summary>
+            <param name="args">Event Arguments.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.OnFilteredCollectionChanged(Syncfusion.SfAutoComplete.iOS.FilterCollectionChangedEventArgs)">
+            <summary>
+            On the filtered items changed.
+            </summary>
+            <param name="args">Arguments type.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.FireSelection_Changed">
+            <summary>
+            Fires the selection changed.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.Dispose(System.Boolean)">
+            <summary>
+            Dispose the specified disposing.
+            </summary>
+            <param name="disposing">If set to <c>true</c> disposing.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SetTokenDeleteButtonPlacement(Syncfusion.SfAutoComplete.iOS.Token)">
+            <summary>
+            Sets the token delete button placement.
+            </summary>
+            <param name="token">The token.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SetSelectedItem(System.Object)">
+            <summary>
+            Selected Item calculation method.
+            </summary>
+            <param name="value">Object type.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.AutoCompleteSourceCalculation">
+            <summary>
+            AutoComplete Source calculation method.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.DisplayMemberCalculation">
+            <summary>
+            Display member calculation method.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.Compare(System.Collections.Generic.IList{System.Object})">
+            <summary>
+            Compare the specified coll.
+            </summary>
+            <returns>The compare.</returns>
+            <param name="coll">Collection field.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.Initialize">
+            <summary>
+            Initialize method.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.Handle_CollectionChanged1(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Handles the collection changed.
+            </summary>
+            <param name="sender">sender object.</param>
+            <param name="e">Collection argument.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.Setup">
+            <summary>
+            Set up  method.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.InitialSetUpView">
+            <summary>
+            Initial set up method.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.Handle_EditingDidEnd(System.Object,System.EventArgs)">
+            <summary>
+            Handle editing end method.
+            </summary>
+            <param name="sender">Object type.</param>
+            <param name="e">Event args.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.Handle_ShouldClear(UIKit.UITextField)">
+            <summary>
+            Handle should clear method.
+            </summary>
+            <param name="textField">UI text field.</param>
+            <returns>return value.</returns>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.Handle_TextFieldShouldReturn(UIKit.UITextField)">
+            <summary>
+            Handle text field should return field.
+            </summary>
+            <param name="textField">UI text field.</param>
+            <returns>return value.</returns>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SearchingTask(System.Threading.CancellationToken,System.String)">
+            <summary>
+            Searching the task.
+            </summary>
+            <returns>The task.</returns>
+            <param name="cancelToken">Cancel token.</param>
+            <param name="searchText">Search text.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.FilteredItemsCalculation">
+            <summary>
+            Filtered the items calculation.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.Draw">
+            <summary>
+            Draw method.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ShowTable">
+            <summary>
+            Shows the table.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ShowSuggestionTableView">
+            <summary>
+            Show suggestion table view method.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.Condition(System.String,System.Int32)">
+            <summary>
+            condition method.
+            </summary>
+            <param name="searchText">String type</param>
+            <param name="i">Integer type.</param>
+            <returns>return value.</returns>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.DefaultTokenSettings">
+            <summary>
+            Defaults the token settings.
+            </summary>
+            <returns>The token settings.</returns>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.TokenCollection_CollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Tokens the collection collection changed.
+            </summary>
+            <param name="sender">Object type.</param>
+            <param name="e">Event args.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SetFrameToToken">
+            <summary>
+            Sets the frame to token.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.TokenFocusLost">
+            <summary>
+            Tokens the focus lost.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.Token_TokenRemoved(System.Object,System.EventArgs)">
+            <summary>
+            Tokens the token removed.
+            </summary>
+            <param name="sender">Object type.</param>
+            <param name="e">Event args.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.AddLoadMoreView(System.Int32)">
+            <summary>
+            Adds the load more view.
+            </summary>
+            <param name="index">index object.</param>
+            <returns>return load more.</returns>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.Handle_BackPressed(System.Object,System.EventArgs)">
+            <summary>
+            Handles the back pressed.
+            </summary>
+            <param name="sender">Object type.</param>
+            <param name="e">Event args.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ChangeLayoutToMultiSelection">
+            <summary>
+            Changes the layout to multi selection.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ClearButton_TouchDown(System.Object,System.EventArgs)">
+            <summary>
+            Clears the button touch down.
+            </summary>
+            <param name="sender">Sender is button.</param>
+            <param name="e">E button argument.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ClearCollectionItems">
+            <summary>
+            Clears the collection items.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ClearItems">
+            <summary>
+            Clears the items.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.MultiSelectionTapAction">
+            <summary>
+            Multi the selection tap action.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.suggestionMode">
+            <summary>
+            suggestion Mode field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.suggestionBoxPlacement">
+            <summary>
+            suggestion Box Placement field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.autoCompleteMode">
+            <summary>
+            autoCompleteMode field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.autoCompleteTableSource">
+            <summary>
+            The autocomplete table source.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.autoCompleteTableDelegate">
+            <summary>
+            The autocomplete table delegate.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.textEventArgs">
+            <summary>
+            text event args field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.selectionEventArgs">
+            <summary>
+            Selection event args field
+            </summary>   
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfAutoComplete.iOS.SfAutoComplete"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfAutoComplete.iOS.SfAutoComplete"/> class.
+            </summary>
+            <param name="intPtr">Int ptr.</param>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.DidSelectionChange">
+            <summary>
+            Represents the DidSelectionChange
+            </summary>
+            <param name="sender">object type</param>
+            <param name="e">Text event args</param> 
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.DrawDropDownItem">
+            <summary>
+            Represents the DrawDropDownItem
+            </summary>
+            <param name="sender">object type</param>
+            <param name="e">Text event args</param> 
+            <returns>return value</returns>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.FilterItem">
+            <summary>
+            Represents the method that will handle the autocomplete dropdown item changed event in AutoComplete
+            </summary>
+            <param name="sender">object type</param>
+            <param name="e">Text event args</param> 
+            <returns>return value</returns>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.DidFocusChange">
+            <summary>
+            Represents the method that will handle the autocomplete focus changed event in AutoComplete
+            </summary>  
+            <param name="sender">object type</param>
+            <param name="e">Text event args</param> 
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.DidTextChange">
+            <summary>
+            Represents the method that will handle the autocomplete text field text value event in AutoComplete
+            </summary>
+            <param name="sender">object type</param>
+            <param name="e">Text event args</param>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.DidCompleted">
+            <summary>
+            Represents the method that will handle the autocomplete completed event in AutoComplete
+            </summary>
+            <param name="sender">object type</param>
+            <param name="e">Text event args</param> 
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.DidFilterCollectionChanged">
+            <summary>
+            Did filtered items changed.
+            </summary>
+            <param name="sender">object type</param>
+            <param name="e">FilterItemChanged event args</param>
+        </member>
+        <member name="E:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.TextChanged">
+            <summary>
+            Occurs only the value changed
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SelectionChanged">
+            <summary>
+            Occurs only the selection changed
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.DropDownItemChanged">
+            <summary>
+            Occurs only the dropdown item
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.FilterItemChanged">
+            <summary>
+            Occurs only the dropdown item changed
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.FocusChanged">
+            <summary>
+            Occurs only the Focus changed
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.Completed">
+            <summary>
+            Occurs when completed.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.FilterCollectionChanged">
+            <summary>
+            Occurs when filtered items changed.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SuggestionMode">
+            <summary>
+            Gets or sets the value of SuggestionMode
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SuggestionBoxPlacement">
+            <summary>
+            Gets or sets the value of SuggestionBoxPlacement
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.AutoCompleteMode">
+            <summary>
+            Gets or sets the value of AutoCompleteMode
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.AutoCompleteSource">
+            <summary>
+            Gets or sets the value of Auto Complete Source
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.itemsSource">
+            <summary>
+            Gets or sets the value of items Source
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SelectionEventArgs">
+            <summary>
+            Gets or sets the value of Selection event args property.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.OnDropDownItemChanged(Syncfusion.SfAutoComplete.iOS.DropDownItemEventArgs)">
+            <summary>
+            On DropDown Item Changed
+            </summary>
+            <param name="args">Drop down event</param>
+            <returns>return value</returns>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.OnFilterItemChanged(Syncfusion.SfAutoComplete.iOS.FilterItemEventArgs)">
+            <summary>
+            Raises the dropdown item changing
+            </summary>
+            <param name="args">Filter event args</param>
+            <returns>return value</returns>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.LoadMore">
+            <summary>
+            Loads the more.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.LoadMore(System.Int32)">
+            <summary>
+            Loads the more with argument.
+            </summary>
+            <param name="suggestionCount">Integer count</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.OnSelectionChanged(Syncfusion.SfAutoComplete.iOS.SelectionEventArgs)">
+            <summary>
+            On selection changed method
+            </summary>
+            <param name="args">Selection event args </param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.OnTextChanged(Syncfusion.SfAutoComplete.iOS.TextEventArgs)">
+            <summary>
+            Raises the value changing
+            </summary>
+            <param name="args">Text event args</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.IsSuggestionCustomMode">
+            <summary>
+            Ises the suggestion custom mode.
+            </summary>
+            <returns><c>true</c>, if suggestion custom mode was ised, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.HideClearButton">
+            <summary>
+            Hides the clear button.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ShowDropDown">
+            <summary>
+            Shows the drop down.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.HideBackgroundView">
+            <summary>
+            Hides the background view.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ControlInitialize">
+            <summary>
+            Controls the initialize.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.HandleTapAction">
+            <summary>
+            Handle tap Action method
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.IsTextMode(System.String)">
+            <summary>
+            Ises the text mode.
+            </summary>
+            <returns><c>true</c>, if text mode was ised, <c>false</c> otherwise.</returns>
+            <param name="textmode">Text mode.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ShowSuggestion_DropDown">
+            <summary>
+            Shows the suggestion.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.Handle_EditingDidBegin(System.Object,System.EventArgs)">
+            <summary>
+            Handle editing begin method
+            </summary>
+            <param name="sender">object type</param>
+            <param name="e">event args</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.RemoveBackgroundView">
+            <summary>
+            Removes the background view.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.TextFieldShouldReturn">
+            <summary>
+            Texts the field should return.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SetDisplayMemberPath">
+            <summary>
+            Sets the display member path.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SetTextBoxFocus">
+            <summary>
+            Sets the text box focus.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SetTextEmpty">
+            <summary>
+            Sets the text empty.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.Handle_ShouldChangeCharacters(UIKit.UITextField,Foundation.NSRange,System.String)">
+            <summary>
+            Handle should change characters method
+            </summary>
+            <param name="textField">UI text field.</param>
+            <param name="range">NSRANGE type</param>
+            <param name="replacementString">String type</param>
+            <returns>return value</returns>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SearchAutocompleteEntriesWithSubstring(System.String)">
+            <summary>
+            Search auto complete method
+            </summary>
+            <param name="searchText">String type</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.AppendSuggestions(System.String)">
+            <summary>
+            Appends the suggestions.
+            </summary>
+            <param name="substring">Substring for suggestion.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.IsSuggestionMode(System.String)">
+            <summary>
+            Ises the suggestion mode.
+            </summary>
+            <returns><c>true</c>, if suggestion mode was ised, <c>false</c> otherwise.</returns>
+            <param name="suggestionmode">Suggestion mode.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SetTextView(System.nfloat,System.nfloat)">
+            <summary>
+            Sets the text view.
+            </summary>
+            <param name="width">Width value.</param>
+            <param name="height">Height value.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ShowBackgroundView">
+            <summary>
+            Hides the background view.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.IsDropDownPlacement(System.String)">
+            <summary>
+            Ises the drop down placement.
+            </summary>
+            <returns><c>true</c>, if drop down placement was ised, <c>false</c> otherwise.</returns>
+            <param name="placement">Placement value.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SetInternalDropDownWidth">
+            <summary>
+            Sets the width of the internal drop down.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SetTokenWidth">
+            <summary>
+            Sets the width of the token.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SetScrollViewSize(CoreGraphics.CGSize)">
+            <summary>
+            Sets the size of the scroll view.
+            </summary>
+            <param name="scrollSize">Scroll size.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.IsNeedtoUpdate(CoreGraphics.CGSize)">
+            <summary>
+            Ises the needto update.
+            </summary>
+            <returns><c>true</c>, if needto update was ised, <c>false</c> otherwise.</returns>
+            <param name="scrollSize">Scroll size.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SetEventArgs">
+            <summary>
+            Sets the event arguments.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SetDropDownButton">
+            <summary>
+            Sets the drop down button.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.GetAvilableWidth(System.nfloat)">
+            <summary>
+            Gets the width of the avilable.
+            </summary>
+            <returns>The avilable width.</returns>
+            <param name="value">width Value.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SetVisibleClearButton">
+            <summary>
+            Sets the visible clear button.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SetTextFiledSize">
+            <summary>
+            Sets the size of the text filed.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SetScrollViewHeight(System.nfloat)">
+            <summary>
+            Sets the height of the scroll view.
+            </summary>
+            <returns>The scroll view height.</returns>
+            <param name="right">Right value.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.IsNeedtoScroll">
+            <summary>
+            Ises the needto scroll.
+            </summary>
+            <returns><c>true</c>, if needto scroll was ised, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.IsTextBoxFocused">
+            <summary>
+            Ises the text box focused.
+            </summary>
+            <returns><c>true</c>, if text box focused was ised, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.IsVisibleClearButton">
+            <summary>
+            Ises the visible clear button.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SetClearButtonViewVisible">
+            <summary>
+            Sets the clear button view visible.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.AddDropDownButton">
+            <summary>
+            Adds the drop down button.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.AddFrontView(System.Boolean)">
+            <summary>
+            Add Front View
+            </summary>
+            <param name="multiSelection">MultiSelection value</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.UpdateFrames">
+            <summary>
+            Updates the frames.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.UpdateSelectionChangedEventArguments">
+            <summary>
+            Updates the selection changed event arguments.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.UpdateTokenModeSelectionChangedEventArguments(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Updates the token mode selection changed event arguments.
+            </summary>
+            <param name="e">Eventargs value.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.UpdateDelimiterModeSelectionChangedEventArguments">
+            <summary>
+            Updates the delimiter mode selection changed event arguments.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SetSelectionChangedEventArgsValue(System.Object)">
+            <summary>
+            Sets the selection changed event arguments value.
+            </summary>
+            <param name="item">Removed item.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SetScrollViewOffset(System.Boolean,CoreGraphics.CGPoint)">
+            <summary>
+            Sets the scroll view offset.
+            </summary>
+            <param name="isLayoutTapped">If set to <c>true</c> is layout tapped.</param>
+            <param name="offset">Content offset point.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ChangeTextFieldSize(UIKit.UIView)">
+            <summary>
+            Changes the size of the text field.
+            </summary>
+            <param name="tokenHolderView">Token holder view.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.SetScrollViewContentOffset">
+            <summary>
+            Sets the scroll view content offset.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ChangeWatermarkVisibility">
+            <summary>
+            Changes the watermark visibility.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.ClearNativeObjects">
+            <summary>
+            Clear the native objects.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoComplete.UpdateLayoutFrames">
+            <summary>
+            Updates the layout frames.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.SelectionChangingEventArgs">
+            <summary>
+            Selection changing event args class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SelectionChangingEventArgs.Value">
+            <summary>
+            Gets the value.
+            </summary>
+            <value>The value.</value>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.DropDownItemEventArgs">
+            <summary>
+            Drop down event args class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.DropDownItemEventArgs.Item">
+            <summary>
+            Gets the value of Item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.DropDownItemEventArgs.Index">
+            <summary>
+            Gets  Index.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.DropDownItemEventArgs.View">
+            <summary>
+            Gets or sets the view.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.FilterItemEventArgs">
+            <summary>
+            Filter item event args class
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.FilterItemEventArgs.Text">
+            <summary>
+            Gets the value of Text property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.FilterItemEventArgs.Item">
+            <summary>
+            Gets the value of item property.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.FocusEventArgs">
+            <summary>
+            Focus event args class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.FocusEventArgs.HasFocus">
+            <summary>
+            Gets or sets a value indicating whether the value of Has Focus property.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.FilterCollectionChangedEventArgs">
+            <summary>
+            Filtered items changed event arguments.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.FilterCollectionChangedEventArgs.Value">
+            <summary>
+            Gets the value.
+            </summary>
+            <value>The value.</value>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.CustomTextField">
+            <summary>
+            Custom text field.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.CustomTextField.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfAutoComplete.iOS.CustomTextField"/> class.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.CustomTextField.DidBackPressed">
+            <summary>
+            Did back pressed.
+            </summary>
+            <param name="sender">Object type.</param>
+            <param name="e">Event args.</param>
+        </member>
+        <member name="E:Syncfusion.SfAutoComplete.iOS.CustomTextField.BackPressed">
+            <summary>
+            Occurs when back pressed.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.CustomTextField.DeleteBackward">
+            <summary>
+            Deletes the backward.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.CustomTextField.OnBackPressed(System.EventArgs)">
+            <summary>
+            Ons the back pressed.
+            </summary>
+            <param name="args">Event Arguments.</param>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.InternalAutoCompleteItem">
+            <summary>
+            Internal auto complete item.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.InternalAutoCompleteItem.textName">
+            <summary>
+            The name of the text.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.InternalAutoCompleteItem.imageName">
+            <summary>
+            The name of the image.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.InternalAutoCompleteItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfAutoComplete.iOS.InternalAutoCompleteItem"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.InternalAutoCompleteItem.TextName">
+            <summary>
+            Gets or sets the name of the text.
+            </summary>
+            <value>The name of the text.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.InternalAutoCompleteItem.ImageName">
+            <summary>
+            Gets or sets the name of the image.
+            </summary>
+            <value>The name of the image.</value>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.RepeatedItems">
+            <summary>
+            Repeated items.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.RepeatedItems.searchString">
+            <summary>
+            The search string.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.RepeatedItems.searchItem">
+            <summary>
+            The search item.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.RepeatedItems.#ctor(System.String,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfAutoComplete.iOS.RepeatedItems"/> class.
+            </summary>
+            <param name="searchString1">Search string.</param>
+            <param name="searchItem1">Search item.</param>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.RepeatedItems.SearchString">
+            <summary>
+            Gets or sets the search string.
+            </summary>
+            <value>The search string.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.RepeatedItems.SearchItem">
+            <summary>
+            Gets or sets the search item.
+            </summary>
+            <value>The search item.</value>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.SFAutoCompleteAutoCompleteMode">
+            <summary>
+            SFAutoComplete AutoComplete Mode
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SFAutoCompleteAutoCompleteMode.SFAutoCompleteAutoCompleteModeSuggest">
+            <summary>
+            SFAuto Complete Auto Complete Mode Suggest
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SFAutoCompleteAutoCompleteMode.SFAutoCompleteAutoCompleteModeAppend">
+            <summary>
+            SFAuto Complete Auto Complete Mode Append
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SFAutoCompleteAutoCompleteMode.SFAutoCompleteAutoCompleteModeSuggestAppend">
+            <summary>
+            SFAutoComplete Auto Complete Mode Suggest Append
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.SFAutoCompleteSuggestionBoxPlacement">
+            <summary>
+            SF Auto Complete Suggestion Box Placement
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SFAutoCompleteSuggestionBoxPlacement.SFAutoCompleteSuggestionBoxPlacementTop">
+            <summary>
+            SFAuto Complete Suggestion Box Placement Top,
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SFAutoCompleteSuggestionBoxPlacement.SFAutoCompleteSuggestionBoxPlacementBottom">
+            <summary>
+            SFAuto Complete Suggestion Box Placement Bottom
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SFAutoCompleteSuggestionBoxPlacement.SFAutoCompleteSuggestionBoxPlacementNone">
+            <summary>
+            SF Auto Complete Suggestion Box Placement None
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.SFAutoCompleteSuggestionMode">
+            <summary>
+            autocomplete enum
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SFAutoCompleteSuggestionMode.SFAutoCompleteSuggestionModeNone">
+            <summary>
+            SFAutoComplete Suggestion Mode None
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SFAutoCompleteSuggestionMode.SFAutoCompleteSuggestionModeStartsWith">
+            <summary>
+            SFAuto Complete Suggestion Mode Starts With
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SFAutoCompleteSuggestionMode.SFAutoCompleteSuggestionModeContains">
+            <summary>
+             SFAuto Complete Suggestion Mode Contains
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SFAutoCompleteSuggestionMode.SFAutoCompleteSuggestionModeEndsWith">
+            <summary>
+             SFAuto Complete Suggestion Mode Ends With
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SFAutoCompleteSuggestionMode.SFAutoCompleteSuggestionModeStartsWithCaseSensitive">
+            <summary>
+             SFAuto Complete Suggestion Mode Starts With Case Sensitive.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SFAutoCompleteSuggestionMode.SFAutoCompleteSuggestionModeContainsCaseSensitive">
+            <summary>
+             SFAutoComplete Suggestion Mode Contains Case Sensitive
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SFAutoCompleteSuggestionMode.SFAutoCompleteSuggestionModeEquals">
+            <summary>
+            SFAutoComplete Suggestion Mode Equals
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SFAutoCompleteSuggestionMode.SFAutoCompleteSuggestionModeEqualsCaseSensitive">
+            <summary>
+            SFAuto Complete Suggestion Mode Equals Case Sensitive.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SFAutoCompleteSuggestionMode.SFAutoCompleteSuggestionModeEndsWithCaseSensitive">
+            <summary>
+            SFAuto Complete Suggestion Mode Ends With Case Sensitive.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SFAutoCompleteSuggestionMode.SFAutoCompleteSuggestionModeCustom">
+            <summary>
+            SF Auto Complete Suggestion ModeCustom
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.TokensWrapMode">
+            <summary>
+            Tokens wrap mode.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.TokensWrapMode.None">
+            <summary>
+            The SfAutoComplete Tokens Wrap Mode None.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.TokensWrapMode.Wrap">
+            <summary>
+            The SfAutoComplete Tokens Wrap Mode Wrap.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.MultiSelectMode">
+            <summary>
+            Text view mode.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.MultiSelectMode.None">
+            <summary>
+            The SfAutoComplete Text View Mode Default.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.MultiSelectMode.Token">
+            <summary>
+            The SfAutoComplete Text View Mode Token.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.MultiSelectMode.Delimiter">
+            <summary>
+            The SfAutoComplete Text View Mode Delimiter.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.OccurrenceMode">
+            <summary>
+            Occurrence mode.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.OccurrenceMode.None">
+            <summary>
+            Occurrence Mode None
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.OccurrenceMode.FirstOccurrence">
+            <summary>
+            Occurrence Mode FirstOccurrence
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.OccurrenceMode.MultipleOccurrence">
+            <summary>
+            Occurrence Mode MultipleOccurrence
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.DeleteButtonPlacement">
+            <summary>
+            Placement option to align the delete button in token.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.DeleteButtonPlacement.Right">
+            <summary>
+            Placement option to align the delete button in right side of Token.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.DeleteButtonPlacement.Left">
+            <summary>
+            Placement option to align the delete button in left side of Token.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.AutoCompleteTableDelegate">
+            <summary>
+            Auto complete table delegate.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.AutoCompleteTableDelegate.autoComplete">
+            <summary>
+            Auto complete field
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.AutoCompleteTableDelegate.isNeedToScroll">
+            <summary>
+            Temp field
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.AutoCompleteTableDelegate.#ctor(Syncfusion.SfAutoComplete.iOS.SfAutoComplete)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfAutoComplete.iOS.AutoCompleteTableDelegate" /> class.
+            </summary>
+            <param name="controller">auto complete controller</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.AutoCompleteTableDelegate.RowSelected(UIKit.UITableView,Foundation.NSIndexPath)">
+            <summary>
+            Row selected method
+            </summary>
+            <param name="tableView">Table view</param>
+            <param name="indexPath">Index path</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.AutoCompleteTableDelegate.WillDisplay(UIKit.UITableView,UIKit.UITableViewCell,Foundation.NSIndexPath)">
+            <summary>
+            Wills the display.
+            </summary>
+            <param name="tableView">Table view.</param>
+            <param name="cell">Cell View.</param>
+            <param name="indexPath">Index path.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.AutoCompleteTableDelegate.DraggingStarted(UIKit.UIScrollView)">
+            <summary>
+            Dragging Started method
+            </summary>
+            <param name="scrollview">Scroll view</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.AutoCompleteTableDelegate.DraggingEnded(UIKit.UIScrollView,System.Boolean)">
+            <summary>
+            Dragging Ended
+            </summary>
+            <param name="scrollview">Scroll view</param>
+            <param name="decelerate">Decelerate as boolean value</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.AutoCompleteTableDelegate.DecelerationEnded(UIKit.UIScrollView)">
+            <summary>
+            Deceleration Ended Method
+            </summary>
+            <param name="scrollview">Scroll view</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.AutoCompleteTableDelegate.ScrollAnimationEnded(UIKit.UIScrollView)">
+            <summary>
+            Scroll Animation Ended method
+            </summary>
+            <param name="scrollview">Scroll view</param>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.AutoCompeteTableSource">
+            <summary>
+            Auto complete table source class
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.AutoCompeteTableSource.defaultFont">
+            <summary>
+            default Font
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.AutoCompeteTableSource.cellTextColor">
+            <summary>
+            cell Text Color
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.AutoCompeteTableSource.noResultHeight">
+            <summary>
+            no Result Height
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.AutoCompeteTableSource.loadMoretHeight">
+            <summary>
+            loadMore Height
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.AutoCompeteTableSource.loadMoreTexttHeight">
+            <summary>
+            loadMore Text tHeight
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.AutoCompeteTableSource.noResultTextHeight">
+            <summary>
+            noResult Text Height
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.AutoCompeteTableSource.autoComplete">
+            <summary>
+            Auto complete field
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.AutoCompeteTableSource.tableItems">
+            <summary>
+            Table items field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.AutoCompeteTableSource.selectionView">
+            <summary>
+            selection View field
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.AutoCompeteTableSource.cellIdentifier">
+            <summary>
+            Cell identifier field
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.AutoCompeteTableSource.#ctor(Foundation.NSMutableArray,Syncfusion.SfAutoComplete.iOS.SfAutoComplete)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfAutoComplete.iOS.AutoCompeteTableSource" /> class.
+            </summary>
+            <param name="items">Mutable array</param>
+            <param name="auto">auto complete</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.AutoCompeteTableSource.#ctor(Syncfusion.SfAutoComplete.iOS.SfAutoComplete)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfAutoComplete.iOS.AutoCompeteTableSource" /> class.
+            </summary>
+            <param name="auto">auto complete</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.AutoCompeteTableSource.NumberOfSections(UIKit.UITableView)">
+            <summary>
+            Number of sections
+            </summary>
+            <param name="tableView">Table view</param>
+            <returns>return value</returns>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.AutoCompeteTableSource.RowsInSection(UIKit.UITableView,System.nint)">
+            <summary>
+            Row in section
+            </summary>
+            <param name="tableview">UI table view</param>
+            <param name="section">Integer type</param>
+            <returns>return value</returns>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.AutoCompeteTableSource.GetCell(UIKit.UITableView,Foundation.NSIndexPath)">
+            <summary>
+            Get cell 
+            </summary>
+            <param name="tableView">Table view</param>
+            <param name="indexPath">Integer type</param>
+            <returns>return value</returns>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.SFAutoCompleteItem">
+            <summary>
+            Auto complete item class
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SFAutoCompleteItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfAutoComplete.iOS.SFAutoCompleteItem" /> class.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.SfAutoCompleteItem">
+            <summary>
+            Auto complete Item class
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoCompleteItem.image">
+            <summary>
+            Image field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.SfAutoCompleteItem.itemText">
+            <summary>
+            Item text field.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.SfAutoCompleteItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfAutoComplete.iOS.SfAutoCompleteItem" /> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoCompleteItem.Image">
+            <summary>
+            Gets or sets the image.
+            </summary>
+            <value>The image.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SfAutoCompleteItem.ItemText">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.Token">
+            <summary>
+            Token class.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.Token.isPlacingRight">
+            <summary>
+            Token delete button is placing in right it holds true value.Otherwise, it is false.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.Token.tokenCustomView">
+            <summary>
+            The token custom view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.Token.tokenLabel">
+            <summary>
+            The token label.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.Token.tokenDeleteButton">
+            <summary>
+            The token delete button.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.Token.isTemplateApplied">
+            <summary>
+            The is template applied.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.Token.text">
+            <summary>
+            The text.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.Token.image">
+            <summary>
+            The image.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.Token.isTokenSelected">
+            <summary>
+            The is token selected.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.Token.internalSettings">
+            <summary>
+            The internal settings.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.Token.tokenHeight">
+            <summary>
+            The height of the token delete button.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.Token.tokenDeleteButtonWidth">
+            <summary>
+            The width of the token delete button.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.Token.tokenAdjustHeight">
+            <summary>
+            The height of the token adjust.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.Token.tokenWidth">
+            <summary>
+            The width of the token.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.Token.tokenDefaultWidth">
+            <summary>
+            The width of the token default.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.Token.tokenLabelWidth">
+            <summary>
+            The width of the token label.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.Token.tokenCustomViewWidth">
+            <summary>
+            The width of the token custom view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.Token.tokenCustomViewPosition">
+            <summary>
+            The token custom view position.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.Token.tokenLabelPosition">
+            <summary>
+            The token label position.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.Token.modifiedTokenLabelWidth">
+            <summary>
+            The width of the token label.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.Token.modifiedTokenCustomViewPosition">
+            <summary>
+            The modified token custom view position.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.Token.tokenDeleteButtonLeft">
+            <summary>
+            The token delete button left.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.Token.deleteButtonLeft">
+            <summary>
+            The delete button left.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.Token.tokenLabelHorizontalSpacing">
+            <summary>
+            The token label horizontal spacing.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.Token.tokenLabelVerticalSpacing">
+            <summary>
+            The token label horizontal spacing.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.Token.adjustablePadding">
+            <summary>
+            The adjustable padding.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.Token.nativeobject">
+            <summary>
+            The auto complete.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.Token.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfAutoComplete.iOS.Token"/> class.
+            </summary>
+            <param name="templateApplied">If set to <c>true</c> template applied.</param>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.Token.DidTokenRemoved">
+            <summary>
+            Did token removed.
+            </summary>
+            <param name="sender">object type</param>
+            <param name="e">event args</param>
+        </member>
+        <member name="E:Syncfusion.SfAutoComplete.iOS.Token.TokenRemoved">
+            <summary>
+            Occurs when token removed.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.Token.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.Token.Image">
+            <summary>
+            Gets or sets the image.
+            </summary>
+            <value>The image.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.Token.TokenCustomView">
+            <summary>
+            Gets or sets the token custom view.
+            </summary>
+            <value>The token custom view.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.Token.IsTokenSelected">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Syncfusion.SfAutoComplete.iOS.Token"/> is token selected.
+            </summary>
+            <value><c>true</c> if is token selected; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.Token.IsPlacingRight">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Syncfusion.SfAutoComplete.iOS.Token"/> is placing right.
+            </summary>
+            <value><c>true</c> if is placing right; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.Token.Nativeobject">
+            <summary>
+            Gets or sets the AutoComplete.
+            </summary>
+            <value>The internal settings.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.Token.InternalSettings">
+            <summary>
+            Gets or sets the internal settings.
+            </summary>
+            <value>The internal settings.</value>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.Token.OnTokenRemoved(System.EventArgs)">
+            <summary>
+            On the token removed.
+            </summary>
+            <param name="args">Arguments type.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.Token.Initilize">
+            <summary>
+            Initilise this instance.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.Token.TokenDeleteButton_TouchDown(System.Object,System.EventArgs)">
+            <summary>
+            Tokens the delete button touch down.
+            </summary>
+            <param name="sender">object type.</param>
+            <param name="e">Event args.</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.Token.SetFrames">
+            <summary>
+            Sets the frames.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.Token.UpdateFrames(System.nfloat,System.nfloat)">
+            <summary>
+            Updates the frames.
+            </summary>
+            <param name="width">Width value</param>
+            <param name="height">Height value</param>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.Token.UpdateViewFrames">
+            <summary>
+            Updates the view frames.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.TokenSettings">
+            <summary>
+            Token settings.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.TokenSettings.backgroundColor">
+            <summary>
+            The color of the background.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.TokenSettings.selectedBackgroundColor">
+            <summary>
+            The color of the selected background.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.TokenSettings.textColor">
+            <summary>
+            The color of the text.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.TokenSettings.cornerRadius">
+            <summary>
+            The corner radius.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.TokenSettings.fontSize">
+            <summary>
+            The size of the font.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.TokenSettings.isCloseButtonVisible">
+            <summary>
+            The show delete buttons.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.TokenSettings.fontFamily">
+            <summary>
+            The font family.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.TokenSettings.deleteButtonColor">
+            <summary>
+            The color of the delete button.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.iOS.TokenSettings.deleteButtonPlacement">
+            <summary>
+            The delete button placement.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.iOS.TokenSettings.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfAutoComplete.iOS.TokenSettings"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.TokenSettings.BackgroundColor">
+            <summary>
+            Gets or sets the color of the background.
+            </summary>
+            <value>The color of the background.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.TokenSettings.SelectedBackgroundColor">
+            <summary>
+            Gets or sets the color of the selected background.
+            </summary>
+            <value>The color of the selected background.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.TokenSettings.TextColor">
+            <summary>
+            Gets or sets the color of the text.
+            </summary>
+            <value>The color of the text.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.TokenSettings.CornerRadius">
+            <summary>
+            Gets or sets the corner radius.
+            </summary>
+            <value>The corner radius.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.TokenSettings.FontSize">
+            <summary>
+            Gets or sets the size of the font.
+            </summary>
+            <value>The size of the font.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.TokenSettings.FontFamily">
+            <summary>
+            Gets or sets the font family.
+            </summary>
+            <value>The font family.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.TokenSettings.IsCloseButtonVisible">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Syncfusion.SfAutoComplete.iOS.TokenSettings"/>
+            show delete buttons.
+            </summary>
+            <value><c>true</c> if show delete buttons; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.TokenSettings.DeleteButtonColor">
+            <summary>
+            Gets or sets the color of the delete button.
+            </summary>
+            <value>The color of the delete button.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.TokenSettings.DeleteButtonPlacement">
+            <summary>
+            Gets or sets the delete button placement.
+            </summary>
+            <value>The delete button placement.</value>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.TextEventArgs">
+            <summary>
+            Text event args class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.TextEventArgs.Value">
+            <summary>
+            Gets the value.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.iOS.SelectionEventArgs">
+            <summary>
+            Selection event args class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SelectionEventArgs.Value">
+            <summary>
+            Gets the value.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SelectionEventArgs.RemovedItems">
+            <summary>
+            Gets the removed items.
+            </summary>
+            <value>The removed items.</value>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.iOS.SelectionEventArgs.AddedItems">
+            <summary>
+            Gets the added items.
+            </summary>
+            <value>The added items.</value>
+        </member>
+    </members>
+</doc>

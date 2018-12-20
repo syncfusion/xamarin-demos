@@ -1,0 +1,1 @@
+<set xmlns:android="http://schemas.android.com/apk/res/android"><objectAnimator android:duration="300" android:propertyName="pathData" android:valueFrom="M45,35L60,50 45,65" android:valueTo="M65,35L50,50 65,65" android:valueType="pathType" /></set>

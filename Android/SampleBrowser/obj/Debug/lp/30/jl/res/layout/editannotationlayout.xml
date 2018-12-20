@@ -1,0 +1,29 @@
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:background="#F6F6F6" android:layout_height="56dp" xmlns:android="http://schemas.android.com/apk/res/android"><View android:layout_width="match_parent" android:layout_height="1dp" android:layout_gravity="top" android:background="#D3D3D3" /><GridLayout android:background="#F6F6F6" android:layout_width="match_parent" android:columnCount="2" android:layout_height="55dp"><GridLayout android:id="@+id/backBtnGrid" android:background="#F6F6F6" android:layout_width="wrap_content" android:columnCount="3" android:layout_gravity="left" android:layout_height="55dp"><Syncfusion.SfPdfViewer.Android.EditBackButton android:id="@+id/backButtonselected" android:layout_width="56dp" android:layout_height="55dp" android:background="#F6F6F6" android:text="" android:stateListAnimator="@null" android:textColor="#808080" android:layout_gravity="center|center_vertical" /><View android:background="#000000" android:layout_width="1dp" android:alpha="0.12" android:layout_height="match_parent" android:layout_gravity="center" /><Button android:id="@+id/highlightbtnselected" android:background="#F6F6F6" android:layout_width="66dp" android:layout_height="55dp" android:stateListAnimator="@null" android:textColor="#0076FF" android:layout_gravity="center|center_vertical" /></GridLayout><GridLayout android:id="@+id/editviewgrid" android:background="#F6F6F6" android:layout_width="wrap_content" android:columnCount="5" android:layout_gravity="right" android:layout_height="55dp"><Syncfusion.SfPdfViewer.Android.EditTextAnnotationButton android:id="@+id/editButton" android:background="@android:color/transparent" android:layout_width="40dp" android:layout_height="40dp" android:textSize="24dp" android:layout_gravity="center" android:layout_weight="1" android:text="" android:stateListAnimator="@null" android:alpha="0.54" android:textColor="#000000" /><!--<LinearLayout
+            android:id="@+id/thickbuttoncellEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="#F6F6F6">
+            <ImageButton
+                android:id="@+id/thickbuttononeEdit"
+                android:background="#000000"
+                android:layout_width="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_height="1dp" />
+            <ImageButton
+                android:id="@+id/thickbuttontwoEdit"
+                android:background="#000000"
+                android:layout_width="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_height="2dp" />
+            <ImageButton
+                android:id="@+id/thickbuttonthreeEdit"
+                android:background="#000000"
+                android:layout_width="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_height="4dp" />
+        </LinearLayout>--><Syncfusion.SfPdfViewer.Android.ThicknessButton android:id="@+id/thicknessbutton" android:background="#F6F6F6" android:layout_width="56dp" android:layout_height="55dp" android:stateListAnimator="@null" android:textColor="#808080" /><GridLayout android:id="@+id/colorgrideditGrid" android:layout_width="wrap_content" android:layout_height="55dp" android:layout_gravity="center" android:background="#F6F6F6"><FrameLayout android:layout_width="wrap_content" android:layout_gravity="center|center_vertical" android:background="#F6F6F6" android:layout_marginLeft="24dp" android:layout_marginRight="24dp" android:layout_height="wrap_content"><ImageButton android:id="@+id/colorgridselectedouter" android:layout_width="28dp" android:layout_height="28dp" android:layout_gravity="center|center_vertical" android:background="#F6F6F6" android:src="@drawable/rectangleouter" /><Syncfusion.SfPdfViewer.Android.ColorButton android:id="@+id/colorgridselected" android:layout_width="20dp" android:layout_height="20dp" android:layout_gravity="center|center_vertical" android:background="#FFFFFF" android:src="@drawable/rect" /></FrameLayout></GridLayout><View android:background="#000000" android:layout_width="1dp" android:alpha="0.12" android:layout_height="match_parent" android:layout_gravity="center" /><Syncfusion.SfPdfViewer.Android.DeleteButton android:id="@+id/deletebtn" android:background="#F6F6F6" android:layout_width="40dp" android:layout_height="40dp" android:text="" android:stateListAnimator="@null" android:textColor="#808080" android:layout_gravity="center|center_vertical" /></GridLayout></GridLayout></LinearLayout>

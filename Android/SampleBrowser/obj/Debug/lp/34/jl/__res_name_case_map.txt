@@ -1,0 +1,2 @@
+Values/Strings.xml;values/strings.xml
+Values/attrs.xml;values/attrs.xml

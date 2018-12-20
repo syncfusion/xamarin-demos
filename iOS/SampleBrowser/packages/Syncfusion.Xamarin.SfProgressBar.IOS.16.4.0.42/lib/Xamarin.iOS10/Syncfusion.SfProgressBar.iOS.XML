@@ -1,0 +1,1476 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.SfProgressBar.iOS</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.iOS.ProgressBar.Drawing">
+            <summary>
+            Abstract class for drawing the shapes.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.Drawing.DrawRect(System.Single,System.Single,System.Single,System.Single,System.Single,UIKit.UIColor)">
+            <summary>
+            Draw the rounded rectangle.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="top">The top.</param>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <param name="cornerRadius">The corner radius.</param>
+            <param name="color">The color.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.Drawing.DrawArc(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,UIKit.UIColor,CoreGraphics.CGGradient)">
+            <summary>
+            Draw the arc.
+            </summary>
+            <param name="centerX">Center x.</param>
+            <param name="centerY">Center y.</param>
+            <param name="innerRadius">inner Radius.</param>
+            <param name="outerRadius">Outer Radius.</param>
+            <param name="actualStartAngle">Start angle.</param>
+            <param name="actualEndAngle">End angle.</param>
+            <param name="color">The color.</param>
+            <param name="gradient">Gradient color for arc.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.Drawing.DrawRect(System.Single,System.Single,System.Single,System.Single,System.Single,CoreGraphics.CGPoint,CoreGraphics.CGPoint,CoreGraphics.CGGradient)">
+            <summary>
+            Draw the gradient rounded rectangle.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="top">The top.</param>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <param name="cornerRadius">The corner radius.</param>
+            <param name="gradientStartPoint">The gradient start point.</param>
+            <param name="gradientEndPoint">The gradient end point.</param>
+            <param name="gradient">The gradient.</param>
+        </member>
+        <member name="T:Syncfusion.iOS.ProgressBar.DrawingContext">
+            <summary>
+            The Class used for drawing the shape of the progress bar.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.DrawingContext.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.iOS.ProgressBar.DrawingContext"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.DrawingContext.Context">
+            <summary>
+            Gets the current context of the view.
+            </summary>
+            <value>The context.</value>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.DrawingContext.DrawRect(System.Single,System.Single,System.Single,System.Single,System.Single,CoreGraphics.CGPoint,CoreGraphics.CGPoint,CoreGraphics.CGGradient)">
+            <summary>
+            Draw the gradient rounded rectangle.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="top">The top.</param>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <param name="cornerRadius">The corner radius.</param>
+            <param name="gradientStartPoint">The gradient start point.</param>
+            <param name="gradientEndPoint">The gradient end point.</param>
+            <param name="gradient">The gradient.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.DrawingContext.DrawRect(System.Single,System.Single,System.Single,System.Single,System.Single,UIKit.UIColor)">
+            <summary>
+            Draw the gradient rounded rectangle.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="top">The top.</param>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <param name="cornerRadius">The corner radius.</param>
+            <param name="color">The color.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.DrawingContext.DrawArc(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,UIKit.UIColor,CoreGraphics.CGGradient)">
+            <summary>
+            Draw the arc.
+            </summary>
+            <param name="centerX">Center x.</param>
+            <param name="centerY">Center y.</param>
+            <param name="innerRadius">Inner radius.</param>
+            <param name="outerRadius">Outer radius.</param>
+            <param name="actualStartAngle">Start angle.</param>
+            <param name="actualEndAngle">End angle.</param>
+            <param name="color">The color.</param>
+            <param name="gradient">Gradient color of the arc.</param>
+        </member>
+        <member name="T:Syncfusion.iOS.ProgressBar.ProgressBarBase">
+            <summary>
+            Represents the progress bar graphical control which is used to visualize the progression of any extended operation.
+            </summary>
+            <summary>
+            A progress bar is a graphical control element used to visualize the progression of an extended operation.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.ProgressBarBase.progress">
+            <summary>
+            Backing field of <see cref="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.Progress"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.ProgressBarBase.isIndeterminate">
+            <summary>
+            Backing field of <see cref="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.IsIndeterminate"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.ProgressBarBase.indeterminateAnimationDuration">
+            <summary>
+            Backing field of <see cref="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.IndeterminateAnimationDuration"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.ProgressBarBase.minimum">
+            <summary>
+            Backing field of <see cref="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.Minimum"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.ProgressBarBase.maximum">
+            <summary>
+            Backing field of <see cref="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.Maximum"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.ProgressBarBase.indeterminateIndicatorWidth">
+            <summary>
+            Gets or sets the level of indicator in indeterminate state.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.ProgressBarBase.progressColor">
+            <summary>
+            Backing field of <see cref="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.ProgressColor"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.ProgressBarBase.rangeColors">
+            <summary>
+            Backing field of <see cref="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.RangeColors"/>
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.ProgressBarBase.trackColor">
+            <summary>
+            Backing field of <see cref="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.TrackColor"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.ProgressBarBase.animationDuration">
+            <summary>
+            Backing field of <see cref="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.AnimationDuration"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.ProgressBarBase.segmentCount">
+            <summary>
+            Backing field of <see cref="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.SegmentCount"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.ProgressBarBase.gapWidth">
+            <summary>
+            Backing field of <see cref="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.GapWidth"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.ProgressBarBase.actualGapWidth">
+            <summary>
+            Backing field of <see cref="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.ActualGapWidth"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.ProgressBarBase.actualProgress">
+            <summary>
+            Field to access <see cref="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.ActualProgress"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.ProgressBarBase.canAnimate">
+            <summary>
+            Backing field of <see cref="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.CanAnimate"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.ProgressBarBase.primaryTimer">
+            <summary>
+            The primary timer.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.ProgressBarBase.primaryDuration">
+            <summary>
+            The duration of the primary.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.ProgressBarBase.primaryTimeOffset">
+            <summary>
+            The primary time offset.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.ProgressBarBase.primaryLastStep">
+            <summary>
+            The primary last step.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.ProgressBarBase.previousProgress">
+            <summary>
+            To store the previous progress value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.ProgressBarBase.valueChangedEventArgs">
+            <summary>
+            Arguments contain values relevant to <see cref="E:Syncfusion.iOS.ProgressBar.ProgressBarBase.ValueChanged"/> event.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.ProgressBarBase.progressCompletedEventArgs">
+            <summary>
+            Arguments contain values relevant to <see cref="E:Syncfusion.iOS.ProgressBar.ProgressBarBase.ProgressCompleted"/> event.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.iOS.ProgressBar.ProgressBarBase.ValueChanged">
+            <summary>
+            Occurs when <see cref="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.Progress"/> value changed. 
+            </summary>
+        </member>
+        <member name="E:Syncfusion.iOS.ProgressBar.ProgressBarBase.ProgressCompleted">
+            <summary>
+            Occurs when <see cref="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.Progress"/> value attains <see cref="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.Maximum"/> value. 
+            </summary>
+        </member>
+        <member name="E:Syncfusion.iOS.ProgressBar.ProgressBarBase.Disposed">
+            <summary>
+            Occurs when disposed.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.Progress">
+            <summary>
+            Gets or sets the progress value.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.IsIndeterminate">
+            <summary>
+            Gets or sets a value indicating whether progress bar is in indeterminate state.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.Minimum">
+            <summary>
+            Gets or sets the minimum range value of the progress bar.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.Maximum">
+            <summary>
+            Gets or sets the maximum range value of the progress bar.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.ProgressColor">
+            <summary>
+            Gets or sets the color of the progress indicator.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.RangeColors">
+            <summary>
+            Gets or sets collection of colors to the progress indicator based on the range constraint.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.IndeterminateIndicatorWidth">
+            <summary>
+            Gets or sets the level of indicator in indeterminate state.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.TrackColor">
+            <summary>
+            Gets or sets the color of the track.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.AnimationDuration">
+            <summary>
+            Gets or sets the duration of the animation for primary progress bar.
+            </summary>
+            <value>The duration of the animation.</value>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.IndeterminateAnimationDuration">
+            <summary>
+            Gets or sets the duration an animation takes to complete one cycle for the indicator.
+            </summary>
+            <value>The duration of the animation.</value>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.SegmentCount">
+            <summary>
+            Gets or sets a count of the segments in progress bar.
+            </summary>
+            <value>The segment count.</value>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.GapWidth">
+            <summary>
+            Gets or sets the value that determines gap between the segments.
+            </summary>
+            <value>The width of the gap.</value>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.Site">
+            <summary>
+            Gets or sets the site.
+            </summary>
+            <value>The site.</value>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.ActualProgress">
+            <summary>
+            Gets or sets the value of progress for internal calculation.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.PrimaryIndicatorWidth">
+            <summary>
+            Gets the right position of the primary bar.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.SegmentWidth">
+            <summary>
+            Gets or sets the width of the segmented progress bar.
+            </summary>
+            <value>The width of the segment.</value>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.AvailableSize">
+            <summary>
+            Gets or sets the size of the available.
+            </summary>
+            <value>The size of the available.</value>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.Drawing">
+            <summary>
+            Gets or sets the instance of <see cref="T:Syncfusion.iOS.ProgressBar.DrawingContext"/>.
+            </summary>
+            <value>The drawing.</value>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.CircularCenter">
+            <summary>
+            Gets or sets the center of View.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.ActualGapWidth">
+            <summary>
+            Gets or sets the gap width for the progress bar.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.CanAnimate">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Syncfusion.iOS.ProgressBar.ProgressBarBase"/> can animate.
+            </summary>
+            <value><c>true</c> if can animate; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.ProgressSegment">
+            <summary>
+            Gets or sets the circular progress segment.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.TrackSegment">
+            <summary>
+            Gets or sets the circular track segment.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.AwakeFromNib">
+            <summary>
+            Called after the object has been loaded from the nib file.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.CalculateProgressPercentage(System.Double,System.Double,System.Double)">
+            <summary>
+            Calculate the indicator percentage.
+            </summary>
+            <returns>The indicator percentage.</returns>
+            <param name="indicatorValue">Indicator value.</param>
+            <param name="min">Minimum value.</param>
+            <param name="max">Maximum value.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.Interpolate(System.Double,System.Double,System.Double)">
+            <summary>
+            Interpolate the specified from, to and time.
+            </summary>
+            <returns>The interpolate.</returns>
+            <param name="fromValue">The actual value.</param>
+            <param name="toValue">The final value.</param>
+            <param name="time">The time.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.AddLayer(CoreAnimation.CALayer,CoreAnimation.CALayer)">
+            <summary>
+            Add the layer.
+            </summary>
+            <param name="viewLayer">View layer.</param>
+            <param name="subLayer">Sub layer.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.InitiateProgressIndicatorAnimation">
+            <summary>
+            Animate the progress bar.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.CalculateIndicatorWidth(System.Double)">
+            <summary>
+            Calculates the width of the indicator.
+            </summary>
+            <returns>The indicator width.</returns>
+            <param name="progressValue">Progress value.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.InvalidateLayout">
+            <summary>
+            Update the ProgressBar.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.RenderProgressBar(Syncfusion.iOS.ProgressBar.DrawingContext)">
+            <summary>
+            Update the ProgressBar based on the value.
+            </summary>
+            <param name="drawing">The drawing.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.RenderSegment">
+            <summary>
+            Update the ProgressBar based on the value.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.CalculateSegmentWidth">
+            <summary>
+            Refresh the width of the progress.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.ApplyGradient">
+            <summary>
+            Applies the gradient.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.SetProgressColor">
+            <summary>
+            Sets the progress color.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.CreateTrackSegment">
+            <summary>
+            Create the track segment.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.OnIndeterminateIndicatorWidthChanged">
+            <summary>
+            Called when the indeterminate indicator width changed.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.CreateProgressSegment(System.Collections.ObjectModel.ObservableCollection{Syncfusion.iOS.ProgressBar.ProgressBarSegment},System.Double)">
+            <summary>
+            Create the progress segment.
+            </summary>
+            <param name="progressSegments">The Progress segments.</param>
+            <param name="progressWidth">The Progress width.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.RefreshSegment(System.Boolean)">
+            <summary>
+            Refresh the segment.
+            </summary>
+            <param name="canRefreshLayout">If set to <c>true</c> can refresh layout.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.UpdateActualProgress">
+            <summary>
+            Update the progress value.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.Initialize">
+            <summary>
+            Initialize this instance.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.OnProgressCompleted">
+            <summary>
+            Called when <see cref="E:Syncfusion.iOS.ProgressBar.ProgressBarBase.ProgressCompleted"/> event occurs. 
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.OnProgressValueChanged">
+            <summary>
+            Called when <see cref="E:Syncfusion.iOS.ProgressBar.ProgressBarBase.ValueChanged"/> event occurs. 
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.AnimateProgressIndicator">
+            <summary>
+            Animation of the primary progress bar.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.ApplyRTL">
+            <summary>
+            Change indicator direction to right to left.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.UpdateProgressBar">
+            <summary>
+            Update the state of the determinate.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.iOS.ProgressBar.ProgressBarBase"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.iOS.ProgressBar.ProgressBarBase"/> class.
+            </summary>
+            <param name="handle">Designer handle.</param>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.Frame">
+            <summary>
+            Gets or sets the frame of the view.
+            </summary>
+            <value>The frame.</value>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.Draw(CoreGraphics.CGRect)">
+            <summary>
+            Draw the Chart.
+            </summary>
+            <param name="rect">The rectangle.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarBase.LayoutSubviews">
+            <summary>
+            Get the view size.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.iOS.ProgressBar.SfCircularProgressBar">
+            <summary>
+            The circular progress bar provides a customizable visual that indicates the progress of a task.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.startAngle">
+            <summary>
+            Backing field of <see cref="P:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.StartAngle"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.endAngle">
+            <summary>
+            Backing field of <see cref="P:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.EndAngle"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.trackOuterRadius">
+            <summary>
+            Field to have the outer radius of the Track.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.trackInnerRadius">
+            <summary>
+            Field to have the inner radius of the Track.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.indicatorOuterRadius">
+            <summary>
+            Field to have the indicator outer radius of the Indicator.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.indicatorInnerRadius">
+            <summary>
+            Field to have the indicator inner radius of the Indicator.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.content">
+            <summary>
+            Backing field of <see cref="P:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.Content"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.showProgressValue">
+            <summary>
+            Backing field of <see cref="P:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.ShowProgressValue"/>. 
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.outerTrackRadiusValue">
+            <summary>
+            The outer track radius.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.innerTrackRadiusValue">
+            <summary>
+            The inner track radius.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.outerIndicatorRadiusValue">
+            <summary>
+            The outer indicator radius.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.innerIndicatorRadiusValue">
+            <summary>
+            The inner indicator radius.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.gapWidth">
+            <summary>
+            Splits the segment equally.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.angleDifference">
+            <summary>
+            Gets the angle difference.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.label">
+            <summary>
+            Label for displaying the progress value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.inDeterminateTimer">
+            <summary>
+            The indeterminate timer.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.inDeterminateDuration">
+            <summary>
+            The duration of the indeterminate state.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.inDeterminateTimeOffset">
+            <summary>
+            The indeterminate time offset.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.inDeterminateLastStep">
+            <summary>
+            The indeterminate last step.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.canIndeterminateAnimate">
+            <summary>
+            Gets or sets a value indicating whether to animate or not.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.actualStartAngle">
+            <summary>
+            Actual start angle.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.actualEndAngle">
+            <summary>
+            Actual end angle.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.iOS.ProgressBar.SfCircularProgressBar"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.iOS.ProgressBar.SfCircularProgressBar"/> class.
+            </summary>
+            <param name="handle">Designer handle.</param>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.StartAngle">
+            <summary>
+            Gets or sets the start angle of the <see cref="T:Syncfusion.iOS.ProgressBar.SfCircularProgressBar"/>.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.EndAngle">
+            <summary>
+            Gets or sets the end angle of the <see cref="T:Syncfusion.iOS.ProgressBar.SfCircularProgressBar"/>.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.ShowProgressValue">
+            <summary>
+            Gets or sets a value indicating whether to show progress value label.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.Content">
+            <summary>
+            Gets or sets the content for the <see cref="T:Syncfusion.iOS.ProgressBar.SfCircularProgressBar"/>.
+            </summary>
+            <value>The content of the progress bar.</value>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.TrackOuterRadius">
+            <summary>
+            Gets or sets a value that indicates the outer radius of the track.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.TrackInnerRadius">
+            <summary>
+            Gets or sets a value that indicates the inner radius of the track.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.IndicatorOuterRadius">
+            <summary>
+            Gets or sets a value that indicates the outer radius of the progress indicator.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.IndicatorInnerRadius">
+            <summary>
+            Gets or sets a value that indicates the inner radius of the progress indicator.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.AngleOfSlice">
+            <summary>
+            Gets or sets the angle of slice.
+            </summary>
+            <value>The angle of slice.</value>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.ActualStartAngle">
+            <summary>
+            Gets or sets the start angle of the track path. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.ActualEndAngle">
+            <summary>
+            Gets or sets the end angle of the track path. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.TrackLayer">
+            <summary>
+            Gets or sets the track layer of the circular.
+            </summary>
+            <value>The track layer.</value>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.ProgressLayer">
+            <summary>
+            Gets or sets the progress layer of the circular.
+            </summary>
+            <value>The progress layer.</value>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.LayoutSubviews">
+            <summary>
+            Layout the sub views.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.RenderSegment">
+            <summary>
+            Renders the circular progress bar.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.CreateTrackSegment">
+            <summary>
+            Create the track segment.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.CreateProgressSegment(System.Collections.ObjectModel.ObservableCollection{Syncfusion.iOS.ProgressBar.ProgressBarSegment},System.Double)">
+            <summary>
+            Create the progress segment.
+            </summary>
+            <param name="progressSegments">The Progress segments.</param>
+            <param name="progressWidth">The Progress width.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.UpdateProgressContent">
+            <summary>
+            Updates the content of the progress bar.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.SetProgressColor">
+            <summary>
+            Sets the progress color.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.OnIndeterminateIndicatorWidthChanged">
+            <summary>
+            Called when the indeterminate indicator width changed.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.CalculateSegmentWidth">
+            <summary>
+            Refresh the width of the progress.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.RefreshSegment(System.Boolean)">
+            <summary>
+            Refresh the circular progress.
+            </summary>
+            <param name="canRefreshLayout">If set to <c>true</c> can refresh layout.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.ApplyGradient">
+            <summary>
+            Applies the gradient.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.AddContent">
+            <summary>
+            Add the content or label to the view.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.Dispose(System.Boolean)">
+            <summary>
+            Dispose the sub views.
+            </summary>
+            <param name="disposing">If set to <c>true</c> disposing.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.CreateGradient(Syncfusion.iOS.ProgressBar.RangeColor,Syncfusion.iOS.ProgressBar.RangeColor)">
+            <summary>
+            To create gradient for range color.
+            </summary>
+            <param name="rangeColor">Current range color.</param>
+            <param name="prevColor">Previous range color.</param>
+            <returns>Gradient color.</returns>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.CreateCircularSegment(System.Single@,System.Single)">
+            <summary>
+            To create circular segment for track.
+            </summary>
+            <param name="circularStartAngle">Start angle for segment.</param>
+            <param name="angleOfSlice">Sweep angle for each slice.</param>
+            <returns>Progress bar segment.</returns>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.HideSubViews">
+            <summary>
+            Hide the sub view.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.AddSubLayer">
+            <summary>
+            Add the sub layer.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.HideSubLayers">
+            <summary>
+            Hide the sub layer.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.AnimateProgress">
+            <summary>
+            Animate the progress.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.AnimateIndeterminateBar">
+            <summary>
+            Animate the indeterminate state.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.InDeterminateAnimation">
+            <summary>
+            Animate the indeterminate state.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.RenderIndeterminateSegment(Syncfusion.iOS.ProgressBar.ProgressBarSegment,Syncfusion.iOS.ProgressBar.DrawingContext,UIKit.UIColor,System.Boolean)">
+            <summary>
+            Draws indeterminate path of circular progress bar.
+            </summary>
+            <param name="segment">Progress bar segment.</param>
+            <param name="drawing">drawing context of the progress bar.</param>
+            <param name="fillColor">Color to fill the path.</param>
+            <param name="isProgress">Indicating whether the segment is progress or not.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.InitCircularProgressBar">
+            <summary>
+            Initializes the circular progress bar.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.RenderArcSegment(Syncfusion.iOS.ProgressBar.DrawingContext,System.Collections.ObjectModel.ObservableCollection{Syncfusion.iOS.ProgressBar.ProgressBarSegment},UIKit.UIColor,System.Boolean)">
+            <summary>
+            Draw the progress of the circular bar.
+            </summary>
+            <param name="context">Drawing context.</param>
+            <param name="segments">Segments of control.</param>
+            <param name="fillColor">Color to fill the segment.</param>
+            <param name="isProgress">Indicating whether the segment is progress or not.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.GetRadius(System.Double)">
+            <summary>
+            Gets the radius.
+            </summary>
+            <param name="currentRadius">Radius to calculate value.</param>
+            <returns>The radius.</returns>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfCircularProgressBar.CalculateRadius">
+            <summary>
+            Calculates the radius.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.iOS.ProgressBar.SfLinearProgressBar">
+            <summary>
+            The linear progress bar provides a customizable visual that indicates the progress of a task.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.indicatorPadding">
+            <summary>
+            Backing field of <see cref="P:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.IndicatorPadding"/>
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.trackHeight">
+            <summary>
+            Gets or sets the height of the progress bar.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.secondaryProgress">
+            <summary>
+            Backing field of <see cref="P:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.SecondaryProgress"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.secondaryProgressColor">
+            <summary>
+             Backing field of <see cref="P:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.SecondaryProgressColor"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.secondaryAnimationDuration">
+            <summary>
+            Backing field of <see cref="P:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.SecondaryAnimationDuration"/>
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.isGradient">
+            <summary>
+            Indicates whether gradient should be created or not.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.cornerRadius">
+            <summary>
+            Backing field for <see cref="P:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.CornerRadius"/>
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.actualTrackHeight">
+            <summary>
+            The actual height of the track.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.actualSecondaryProgress">
+            <summary>
+            Secondary progress percentage value with considering min and max value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.canAnimateSecondary">
+            <summary>
+            Indicating whether secondary bar can be animated or not.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.secondaryTimer">
+            <summary>
+            The secondary timer.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.secondaryDuration">
+            <summary>
+            The duration of the secondary.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.secondaryTimeOffset">
+            <summary>
+            The secondary time offset.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.secondaryLastStep">
+            <summary>
+            The secondary last step.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.previousSecondaryProgress">
+            <summary>
+            To store the previous secondary progress value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.inDeterminateTimer">
+            <summary>
+            The indeterminate timer.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.inDeterminateDuration">
+            <summary>
+            The duration of the indeterminate state.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.inDeterminateTimeOffset">
+            <summary>
+            The indeterminate time offset.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.inDeterminateLastStep">
+            <summary>
+            The indeterminate last step.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.canIndeterminateAnimate">
+            <summary>
+            Gets or sets a value indicating whether to animate or not.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.currentTrackRect">
+            <summary>
+            The current track bounds.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.currentProgressRect">
+            <summary>
+            The current progress bounds.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.currentSecondaryRect">
+            <summary>
+            The current secondary bounds.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.iOS.ProgressBar.SfLinearProgressBar"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.iOS.ProgressBar.SfLinearProgressBar"/> class.
+            </summary>
+            <param name="handle">Designer handle.</param>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.IndicatorPadding">
+            <summary>
+            Gets or sets the padding value for the progress indicator.
+            </summary>
+            <value>The indicator padding.</value>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.SecondaryProgress">
+            <summary>
+            Gets or sets the secondary progress value.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.SecondaryProgressColor">
+            <summary>
+            Gets or sets the color of the secondary progress indicator.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.SecondaryAnimationDuration">
+            <summary>
+            Gets or sets the duration an animation takes to complete one cycle for secondary progress indicator.
+            </summary>
+            <value>The duration of the animation.</value>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.TrackHeight">
+            <summary>
+            Gets or sets the height of the track.
+            </summary>
+            <value>The height of the track.</value>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.CornerRadius">
+            <summary>
+            Gets or sets the corner radius of the  <see cref="T:Syncfusion.iOS.ProgressBar.SfLinearProgressBar"/>. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.ProgressLayer">
+            <summary>
+            Gets or sets the progress layer.
+            </summary>
+            <value>The progress layer.</value>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.TrackLayer">
+            <summary>
+            Gets or sets the track layer.
+            </summary>
+            <value>The track layer.</value>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.SecondaryProgressSegment">
+            <summary>
+            Gets or sets the secondary progress segment.
+            </summary>
+            <value>The secondary progress segment.</value>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.SecondaryIndicatorWidth">
+            <summary>
+            Gets the width of the secondary indicator.
+            </summary>
+            <value>The width of the secondary indicator.</value>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.ActualSecondaryProgress">
+            <summary>
+            Gets or sets the progress percentage of current progress.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.IndicatorWidth">
+            <summary>
+            Gets the IsIndeterminate indicator bar width.
+            </summary>
+            <value>The width of the bar.</value>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.LayoutSubviews">
+            <summary>
+            Get the view size.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.RenderSegment">
+            <summary>
+            Renders the Linear progress bar.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.RenderProgressBar(Syncfusion.iOS.ProgressBar.DrawingContext)">
+            <summary>
+            Renders the linear progress bar.
+            </summary>
+            <param name="drawing">The drawing.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.CreateTrackSegment">
+            <summary>
+            Create the track segment.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.CreateProgressSegment(System.Collections.ObjectModel.ObservableCollection{Syncfusion.iOS.ProgressBar.ProgressBarSegment},System.Double)">
+            <summary>
+            Create the progress segment.
+            </summary>
+            <param name="progressSegments">The Progress segments.</param>
+            <param name="progressWidth">The Progress width.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.ApplyGradient">
+            <summary>
+            Apply the range colors for drawable.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.OnIndeterminateIndicatorWidthChanged">
+            <summary>
+            Called when the indeterminate indicator width changed.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.RefreshSegment(System.Boolean)">
+            <summary>
+            Refresh the linear progress.
+            </summary>
+            <param name="canRefreshLayout">If set to <c>true</c> can refresh layout.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.Dispose(System.Boolean)">
+            <summary>
+            Dispose the sub layers.
+            </summary>
+            <param name="disposing">If set to <c>true</c> disposing.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.RefreshIndeterminateAnimation">
+            <summary>
+            Refresh the indeterminate progress bar.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.InDeterminateAnimation">
+            <summary>
+            Defines the indeterminate animation.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.ApplySecondaryProgress">
+            <summary>
+            To apply the secondary progress.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.GenerateSegment(System.Collections.ObjectModel.ObservableCollection{Syncfusion.iOS.ProgressBar.ProgressBarSegment},System.Int32,System.Double)">
+            <summary>
+            Generates the segment.
+            </summary>
+            <param name="segments">Segments collection</param>
+            <param name="count">Segment count</param>
+            <param name="width">Segment width</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.GenerateTrackSegment(System.Collections.ObjectModel.ObservableCollection{Syncfusion.iOS.ProgressBar.ProgressBarSegment},System.Int32)">
+            <summary>
+            Generates the segment.
+            </summary>
+            <param name="segments">Segments collection</param>
+            <param name="count">Segment count</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.InitLinearProgressBar">
+            <summary>
+            Initializes the linear progress bar.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.ApplyCornerRadius">
+            <summary>
+            Apply the corner radius to progress bar.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.CalculateTrackHeight(System.Single)">
+            <summary>
+            Calculate the height of the track.
+            </summary>
+            <param name="height">The Height.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.RenderSegment(Syncfusion.iOS.ProgressBar.DrawingContext,System.Collections.ObjectModel.ObservableCollection{Syncfusion.iOS.ProgressBar.ProgressBarSegment},UIKit.UIColor,System.Boolean,System.Boolean)">
+            <summary>
+            Draw the progress of the circular bar.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="segments">Segments collection.</param>
+            <param name="color">Color for rectangle.</param>
+            <param name="isProgress">Indicating whether progress or not.</param>
+            <param name="canApplyPadding">To apply padding or not.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.AddSubLayers">
+            <summary>
+            Add the Sub layers.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.RenderDeterminateState(System.Drawing.RectangleF,System.Drawing.RectangleF,System.Drawing.RectangleF,Syncfusion.iOS.ProgressBar.DrawingContext)">
+            <summary>
+            Draw the determinate state progress bar.
+            </summary>
+            <param name="trackBound">Track bound.</param>
+            <param name="secondaryBound">Secondary bound.</param>
+            <param name="progressBound">Progress bound.</param>
+            <param name="drawing">The Drawing.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.UpdateLayers(System.Single)">
+            <summary>
+            Update the values of layer for track and progress bar.
+            </summary>
+            <param name="width">Width of the frame.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.HideSubLayers">
+            <summary>
+            Hide the sub layers.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.AnimateProgress">
+            <summary>
+            Animate the progress.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.AnimateSecondaryIndicator">
+            <summary>
+            Animate the secondary progress bar.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.SecondaryAnimation">
+            <summary>
+            Animation the secondary progress bar.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.CreateGradient(Syncfusion.iOS.ProgressBar.ProgressBarSegment,System.Drawing.RectangleF)">
+            <summary>
+            Create the gradient for segmented progress bar.
+            </summary>
+            <param name="segment">Progress bar segment value.</param>
+            <param name="rect">progress bar rectangle.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.CreateGradient(System.Double,System.Double,System.Drawing.RectangleF)">
+            <summary>
+            Create the gradient for non segmented progress bar.
+            </summary>
+            <param name="start">Segment start.</param>
+            <param name="end">Segment end.</param>
+            <param name="rect">Progress rectangle.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.SfLinearProgressBar.PlatformColor(UIKit.UIColor)">
+            <summary>
+            Convert the color depend on the platforms.
+            </summary>
+            <returns>The color.</returns>
+            <param name="color">The Color.</param>
+        </member>
+        <member name="T:Syncfusion.iOS.ProgressBar.ProgressBarUtils">
+            <summary>
+            To add the utils methods.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarUtils.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:Syncfusion.iOS.ProgressBar.ProgressBarUtils"/> class from being created.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarUtils.GetPaddingRect(System.Drawing.RectangleF,UIKit.UIEdgeInsets,System.Boolean)">
+            <summary>
+            Get the padding for progress rectangle.
+            </summary>
+            <returns>The padding rectangle.</returns>
+            <param name="rectangle">Progress rectangle.</param>
+            <param name="padding">Indicator padding.</param>
+            <param name="canApplyPadding">Decides to apply padding.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarUtils.DegreeToRadianConverter(System.Double)">
+            <summary>
+            Convert degrees to radian converter.
+            </summary>
+            <returns>The to radian converter.</returns>
+            <param name="degree">The Degree.</param>
+        </member>
+        <member name="T:Syncfusion.iOS.ProgressBar.ProgressBarSegment">
+            <summary>
+            Schema for the progress segment.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressBarSegment.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.iOS.ProgressBar.ProgressBarSegment"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarSegment.SegmentStart">
+            <summary>
+            Gets or sets the segment start angle of the track path. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarSegment.SegmentEnd">
+            <summary>
+            Gets or sets the range.
+            </summary>
+            <value>The range.</value>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarSegment.XPosition">
+            <summary>
+            Gets or sets the X Position.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarSegment.Width">
+            <summary>
+            Gets or sets the width of the segment.
+            </summary>
+            <value>The width.</value>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarSegment.ActualEndAngle">
+            <summary>
+            Gets or sets the segment end angle of the track path. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarSegment.InnerRadius">
+            <summary>
+            Gets or sets the segment's inner radius.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressBarSegment.OuterRadius">
+            <summary>
+            Gets or sets the segment's outer radius.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.iOS.ProgressBar.ProgressValueEventArgs">
+            <summary>
+            Event arguments for ValueChanged and ProgressCompleted events. Provides progress value.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressValueEventArgs.Progress">
+            <summary>
+            Gets a value of <see cref="P:Syncfusion.iOS.ProgressBar.ProgressBarBase.Progress"/>.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.iOS.ProgressBar.ProgressLayer">
+            <summary>
+            Progress layer.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressLayer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.iOS.ProgressBar.ProgressLayer"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressLayer.Color">
+            <summary>
+            Gets or sets the progress color.
+            </summary>
+            <value>The color.</value>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressLayer.IndicatorWidth">
+            <summary>
+            Gets or sets the width of the indicator.
+            </summary>
+            <value>The width of the indicator.</value>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressLayer.PositionX">
+            <summary>
+            Gets or sets the position x.
+            </summary>
+            <value>The position x.</value>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressLayer.DrawInContext(CoreGraphics.CGContext)">
+            <summary>
+            Draw the in context.
+            </summary>
+            <param name="ctx">The context.</param>
+        </member>
+        <member name="T:Syncfusion.iOS.ProgressBar.ProgressTrackLayer">
+            <summary>
+            Progress track layer.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressTrackLayer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.iOS.ProgressBar.ProgressTrackLayer"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.ProgressTrackLayer.Color">
+            <summary>
+            Gets or sets the track color.
+            </summary>
+            <value>The color.</value>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.ProgressTrackLayer.DrawInContext(CoreGraphics.CGContext)">
+            <summary>
+            Draw the in context.
+            </summary>
+            <param name="ctx">The context.</param>
+        </member>
+        <member name="T:Syncfusion.iOS.ProgressBar.CircularTrackLayer">
+            <summary>
+            Track layer for circular progress bar.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.CircularTrackLayer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.iOS.ProgressBar.CircularTrackLayer"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.CircularTrackLayer.DrawArc(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,UIKit.UIColor)">
+            <summary>
+            Draws the arc.
+            </summary>
+            <param name="centerX">Center x.</param>
+            <param name="centerY">Center y.</param>
+            <param name="innerRadius">Inner radius.</param>
+            <param name="outerRadius">Outer radius.</param>
+            <param name="actualStartAngle">Actual start angle.</param>
+            <param name="actualEndAngle">Actual end angle.</param>
+            <param name="color">Color of the context.</param>
+        </member>
+        <member name="T:Syncfusion.iOS.ProgressBar.CircularProgressLayer">
+            <summary>
+            Circular layer to animate the progress bar.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.CircularProgressLayer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.iOS.ProgressBar.CircularProgressLayer"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.CircularProgressLayer.Center">
+            <summary>
+            Gets or sets the center point.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.CircularProgressLayer.InnerRadius">
+            <summary>
+            Gets or sets the inner radius.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.CircularProgressLayer.OuterRadius">
+            <summary>
+            Gets or sets the outer radius.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.CircularProgressLayer.Color">
+            <summary>
+            Gets or sets the color.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.CircularProgressLayer.ActualStartAngle">
+            <summary>
+            Gets or sets the actual start angle.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.CircularProgressLayer.ActualEndAngle">
+            <summary>
+            Gets or sets the actual end angle.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.CircularProgressLayer.DrawInContext(CoreGraphics.CGContext)">
+            <summary>
+            Draws in context.
+            </summary>
+            <param name="ctx">Drawing context.</param>
+        </member>
+        <member name="M:Syncfusion.iOS.ProgressBar.CircularProgressLayer.DrawArc(CoreGraphics.CGContext,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,UIKit.UIColor)">
+            <summary>
+            Draw the arc.
+            </summary>
+            <param name="context">Current context.</param>
+            <param name="centerX">Center x.</param>
+            <param name="centerY">Center y.</param>
+            <param name="inRadius">Inner radius.</param>
+            <param name="outRadius">Outer radius.</param>
+            <param name="actualStartAngle">Start angle.</param>
+            <param name="actualEndAngle">End angle.</param>
+            <param name="color">Color of context.</param>
+        </member>
+        <member name="T:Syncfusion.iOS.ProgressBar.RangeColor">
+            <summary>
+            Represents the multi colors for the indicator.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.RangeColor.Color">
+            <summary>
+            Gets or sets the color for the range.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.RangeColor.Start">
+            <summary>
+            Gets or sets the start of the range.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.RangeColor.End">
+            <summary>
+            Gets or sets the end of the range.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.iOS.ProgressBar.RangeColor.IsGradient">
+            <summary>
+            Gets or sets a value indicating whether the color should be applied as gradient..
+            </summary>
+        </member>
+        <member name="T:Syncfusion.iOS.ProgressBar.RangeColorCollection">
+            <summary>
+            Collection of <see cref="T:Syncfusion.iOS.ProgressBar.RangeColor"/>.
+            </summary>
+        </member>
+    </members>
+</doc>

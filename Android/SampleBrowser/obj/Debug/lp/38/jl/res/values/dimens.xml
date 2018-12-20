@@ -1,0 +1,1 @@
+<resources><dimen name="btn_Size">50dp</dimen><dimen name="outerCircle">5dp</dimen><dimen name="inner_circle">3dp</dimen><dimen name="conc_circle">4dp</dimen><dimen name="dot_space">25dp</dimen><dimen name="thumb_padding">4dp</dimen></resources>

@@ -1,0 +1,49 @@
+<resources><declare-styleable name="SfSunburstChart"><!--Determines the visibility of the title in sunburst.--><attr name="titleVisibility" format="boolean" /><!--Determines the text of the title in sunburst.--><attr name="titleText" format="string" /><!--Determines the background color of the title in sunburst.--><attr name="titleBackgroundColor" format="color" /><!--Determines the alignment of the title in sunburst.--><!--<attr name="titleAlignment" format="enum" >
+      <enum name="textStart" value="0" />
+      <enum name="textEnd" value="1" />
+      <enum name="center" value="2" />
+      <enum name="viewStart" value="3" />
+      <enum name="viewEnd" value="3" />
+    </attr>--><!--Determines the stroke color of the title in sunburst.--><attr name="titleStrokeColor" format="color" /><!--Determines the stroke width of the title in sunburst.--><attr name="titleStrokeWidth" format="float" /><!--Determines the text color of the title in sunburst.--><attr name="sunburstTitleTextColor" format="color" /><!--Determines the text size of the title in sunburst.--><attr name="titleTextSize" format="float" /><!--Determines the visibility of the legend in sunburst.--><!--
+    <attr name="legendVisibility" format="boolean" />--><!--Determines the legend icon width in sunburst.--><attr name="sunburstLegendIconWidth" format="float" /><!--Determines the legend icon height in sunburst.--><attr name="sunburstLegendIconHeight" format="float" /><!--Determines the background of the legend in sunburst.--><attr name="sunburstLegendBackground" format="color" /><!--Determines the legend position.--><!--<attr name="legendPosition" format="enum">
+      <enum name="left" value="0" />
+      <enum name="right" value="1" />
+      <enum name="top" value="2" />
+      <enum name="bottom" value="3" />
+    </attr>--><!--Determines the legend icon.--><!--<attr name="legendIcon" format="enum">
+      <enum name="circle" value="0" />
+      <enum name="cross" value="1" />
+      <enum name="diamond" value="2" />
+      <enum name="pentagon" value="3" />
+      <enum name="rectangle" value="4" />
+      <enum name="triangle" value="5" />
+    </attr>--><!--Determines the visibility of the datalabel in sunburst.--><attr name="labelVisibility" format="boolean" /><!--Determines the overflow mode.--><!--<attr name="overflowMode" format="enum">
+      <enum name="trim" value="0" />
+      <enum name="hide" value="1" />
+    </attr>--><!--Determines the rotation mode.--><!--<attr name="rotationMode" format="enum">
+      <enum name="angle" value="0" />
+      <enum name="normal" value="1" />
+    </attr>--><!--Determines the color palatte.--><!--<attr name="colorPalatte" format="enum">
+      <enum name="metro" value="0" />
+      <enum name="tomatoSpectrum" value="1" />
+      <enum name="pineapple" value="2" />
+      <enum name="cutsom" value="3" />
+      <enum name="natural" value="4" />
+    </attr>--><!--Determines the drilldown in sunburst.--><attr name="enableSunburstDrilldown" format="boolean" /><!--Determines the drilldown offset x in sunburst.--><attr name="drilldownOffsetX" format="float" /><!--Determines the drilldown offset y in sunburst.--><attr name="drilldownOffsetY" format="float" /><!--Determines the toolbar horizontal Alignment.--><!--<attr name="drilldownHorizontalAlignment" format="enum">
+      <enum name="start" value="0" />
+      <enum name="center" value="1" />
+      <enum name="end" value="2" />
+    </attr>--><!--Determines the toolbar vertical Alignment.--><!--<attr name="drilldownVerticalAlignment" format="enum">
+      <enum name="start" value="0" />
+      <enum name="center" value="1" />
+      <enum name="end" value="2" />
+    </attr>--><!--Determines the selection in sunburst.--><attr name="enableSunburstSelection" format="boolean" /><!--Determines the selection opacity in sunburst.--><attr name="selectionOpacity" format="float" /><!--Determines the selection display mode in sunburst.--><!--<attr name="selectionDisplayMode" format="enum" >
+      <enum name="highlightByColor" value="0" />
+      <enum name="highlightByOpacity" value="1" />
+      <enum name="highlightByStroke" value="2" />
+    </attr>--><!--Determines the selection stroke brush in sunburst.--><attr name="selectionStrokeBrush" format="color" /><!--Determines the selection stroke width in sunburst.--><attr name="selectionStrokeWidth" format="float" /><!--Determines the selection type in sunburst.--><!--<attr name="selectionType" format="enum" >
+      <enum name="child" value="0" />
+      <enum name="group" value="1" />
+      <enum name="single" value="2" />
+      <enum name="parent" value="3" />
+    </attr>--><!--Determines the selection brush in sunburst.--><attr name="selectionBrush" format="color" /><!--Determines the tooltip in sunburst.--><attr name="showSunburstTooltip" format="boolean" /></declare-styleable></resources>

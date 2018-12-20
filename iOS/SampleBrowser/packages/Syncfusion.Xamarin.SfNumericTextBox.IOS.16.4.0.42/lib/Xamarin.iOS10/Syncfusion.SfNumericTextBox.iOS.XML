@@ -1,0 +1,808 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.SfNumericTextBox.iOS</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.SfNumericTextBox.iOS.NumericHelper">
+            <summary>
+            Numeric helper class
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.NumericHelper.numericTextBox">
+            <summary>
+            Represents the numericTextBox instance field
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.NumericHelper.decimalMaxValue">
+            <summary>
+            Represents the decimalMaxValue and decimalMinValue instance field
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.NumericHelper.decimalMinValue">
+            <summary>
+            Represents the decimalMaxValue and decimalMinValue instance field
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.NumericHelper.doubleMaxValue">
+            <summary>
+            Represents the doubleMaxValue and doubleMinValue instance field
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.NumericHelper.doubleMinValue">
+            <summary>
+            Represents the doubleMaxValue and doubleMinValue instance field
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.NumericHelper.#ctor(Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfNumericTextBox.iOS.NumericHelper" /> class
+            </summary>
+            <param name="numericTextBox">SfNumericTextBox instance</param>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.NumericHelper.PerformKeyRestriction(System.String,System.Char,System.Int32)">
+            <summary>
+            Represents the restrictions of keys
+            </summary>
+            <param name="text">Entered full text</param>
+            <param name="typedChar">typed character</param>
+            <param name="start">cursor position</param>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.NumericHelper.OnMaximumNumberDecimalDigitsChanged">
+            <summary>
+            On MaximumNumberDecimalDigits changed
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.NumericHelper.OnAllowNullChanged(System.Boolean)">
+            <summary>
+            On the allow null changed.
+            </summary>
+            <param name="allowNullValue">If set to <c>true</c> allow null value.</param>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.NumericHelper.OnCultureChanged(Foundation.NSLocale)">
+            <summary>
+            On the culture changed.
+            </summary>
+            <param name="locale">the control culture</param>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.NumericHelper.OnValueChanged(System.Object)">
+            <summary>
+            value changed method
+            </summary>
+            <param name="value">the changed value</param>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.NumericHelper.OnMaximumChanged(System.Object)">
+            <summary>
+            Maximum changed method
+            </summary>
+            <param name="value">the changed Maximum</param>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.NumericHelper.OnMinimumChanged(System.Object)">
+            <summary>
+            Minimum changed method
+            </summary>
+            <param name="value">the changed Maximum</param>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.NumericHelper.RemoveUnWantedDigits">
+            <summary>
+            Removes the unwanted characters in this method
+            </summary>
+            <returns> wanted digits</returns>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.NumericHelper.UpdateValueFromText">
+            <summary>
+            Updates the value.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.NumericHelper.UpdateValueBasedOnMaxNoDecimalDigits">
+            <summary>
+            Updates the correct truncated value to numeric edit text.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.NumericHelper.GetFormattedOutput">
+            <summary>
+            Gets the formatted out put.
+            </summary>
+            <returns>The formatted out put.</returns>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.NumericHelper.ValidateMaximumValue(System.Object)">
+            <summary>
+            Validates the maximum value.
+            </summary>
+            <param name="value">Maximum value</param>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.NumericHelper.ValidateMinimumValue(System.Object)">
+            <summary>
+            Validates the minimum value.
+            </summary>
+            <param name="value">Minimum value</param>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.NumericHelper.IsStandardNumericFormat(System.String)">
+            <summary>
+            Check whether the current Formatting string is standard numeric format
+            </summary>
+            <param name="value">format string value</param>
+            <returns>Return true, if the FormattingString is n,p,c,f,g,e</returns>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.NumericHelper.IsCustomNumericFormatString(System.String)">
+            <summary>
+            Check whether the current Formatting string is a custom format string.
+            </summary>
+            <param name="value">the format string value</param>
+            <returns> the format string is custom format or not</returns>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.NumericHelper.UpdateValue(System.IFormattable)">
+            <summary>
+            Update the value.
+            </summary>
+            <param name="value">Update the value</param>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.NumericHelper.ParseRange">
+            <summary>
+            Parse the range
+            </summary>
+            <returns> the ParseRange is true or false</returns>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.NumericHelper.GetFormattedString(System.String)">
+            <summary>
+             Gets the formatted string.
+            </summary>
+            <param name="format">the format string value</param>
+            <returns> formatted string</returns>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.NumericHelper.TriggerValueChangedEvent">
+            <summary>
+            Trigger ValueChanged event
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.NumericHelper.GetDecimalDigitsCount">
+            <summary>
+            Gets the decimal digit count.
+            </summary>
+            <returns>The decimal digit count.</returns>
+        </member>
+        <member name="T:Syncfusion.SfNumericTextBox.iOS.SFNumericTextBox">
+            <summary>
+            It is a Class
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SFNumericTextBox.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfNumericTextBox.iOS.SFNumericTextBox" /> class.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox">
+            <summary>
+            Represents a control that allows the user to enter only numeric values.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.numericEditText">
+            <summary>
+            Represents maintaining typed characters.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.isTextChangedInternally">
+            <summary>
+            Represents restrict the text changed event.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.previousText">
+            <summary>
+            Represents the previously typed text.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.anotherSeparator">
+            <summary>
+            Its is a string value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.formatString">
+            <summary>
+            Its is a string value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.watermark">
+            <summary>
+            Its is a string value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.allowNull">
+            <summary>
+            Its is a boolean value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.borderColor">
+            <summary>
+            Its is a color value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.watermarkColor">
+            <summary>
+            Its is a string value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.cultureInfo">
+            <summary>
+            Its is a local value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.showGroupSeparator">
+            <summary>
+            Its is a boolean value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.selectAllOnFocus">
+            <summary>
+            Its is a boolean value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.textboxvalue">
+            <summary>
+            Its is a object value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.buttonWidth">
+            <summary>
+            Its is a float value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.parserMode">
+            <summary>
+            Its is a textBox value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.percentDisplayMode">
+            <summary>
+            Its is a textBox value.
+            </summary>    
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.valueChangeMode">
+            <summary>
+            Its is a textBox value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.maximumNumberDecimalDigits">
+            <summary>
+            It is a decimal value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.returnButton">
+            <summary>
+            Its is a button value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.minusButton">
+            <summary>
+            Its is a button value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.separatorButton">
+            <summary>
+            Its is a button value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.lineView1">
+            <summary>
+            Its is a view value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.lineView2">
+            <summary>
+            Its is a view value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.lineView3">
+            <summary>
+            Its is a view value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.lineView4">
+            <summary>
+            Its is a view value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.toolbarView">
+            <summary>
+            Its is a view value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.fontSize">
+            <summary>
+            Font size field.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.minimum">
+            <summary>
+            Represents the minimum value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.maximum">
+            <summary>
+            Represents the maximum value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.numericHelper">
+            <summary>
+            Represents the common helper class
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.isValueUpdatingInternally">
+            <summary>
+            Represents whether the value is updating internally
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.decimalSeparator">
+            <summary>
+            Represents the decimal separator of the culture.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.negativeSign">
+            <summary>
+            Represents the negative sign of the culture.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.isFocused">
+            <summary>
+            Represents a value indicating control got focus
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.range">
+            <summary>
+            Represents the range of selected text
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.internalCulture">
+            <summary>
+            Represents the exact c# culture info of the control.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox" /> class.
+            </summary>
+            <param name="handle">The Handle</param>    
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox" /> class.
+            </summary>       
+        </member>
+        <member name="T:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.FocusChangedEventHandler">
+            <summary>
+            Represents the method that will handle the NumericTextBox.Focus event of a NumericTextBox.
+            </summary>
+            <param name="sender">The parameter name is sender</param>
+            <param name="e">The Parameter name is E</param>
+        </member>
+        <member name="T:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.ValueEventHandler">
+            <summary>
+            Represents the method that will handle the NumericTextBox.Value event of a NumericTextBox.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="E:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.ValueChanged">
+            <summary>
+            Occurs when value changed.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.FocusChanged">
+            <summary>
+            Occurs when focus changed.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.ReturnkeyPressed">
+            <summary>
+            Occurs when return key pressed.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.ReturnKeyPressed">
+            <summary>s
+            It is a event
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.AllowNull">
+            <summary>
+            Gets or sets a value indicating whether null value can be set or not in input field.
+            </summary>     
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.BorderColor">
+            <summary>
+            Gets or sets the Border color of the input field.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.WatermarkColor">
+            <summary>
+            Gets or sets the color of hint text of the input field.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.Watermark">
+            <summary>
+            Gets or sets the value to display hint text when the input field is empty and unfocused.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.FormatString">
+            <summary>
+            Gets or sets the value that determines the display format of the text when the control is unfocused.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.CultureInfo">
+            <summary>
+            Gets or sets the value for a culture to display the value based on it.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.ParserMode">
+            <summary>
+            Gets or sets the value that determines the dataType of Value property.
+            </summary>  
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.EnableGroupSeparator">
+            <summary>
+            Gets or sets a value indicating whether to show or hide the separator.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.PercentDisplayMode">
+            <summary>
+            Gets or sets the value that determines the percentage value in the input field.
+            </summary>   
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.ValueChangeMode">
+            <summary>
+            Gets or sets the value that determines when the value get change in the input field.
+            </summary>    
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.Value">
+            <summary>
+            Gets or sets the value of the input field.
+            </summary>   
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.Maximum">
+            <summary>
+            Gets or sets the maximum range of the numeric text box.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.Minimum">
+            <summary>
+            Gets or sets the minimum range of the numeric text box. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.Text">
+            <summary>
+            Gets or sets the text and symbols.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.FontSize">
+            <summary>
+            Gets or sets the size of the font.
+            </summary>
+            <value>The size of the font.</value>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.MaximumNumberDecimalDigits">
+            <summary>
+            Gets or sets the value that determines the maximum number of decimal digits to be allowed.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.SelectAllOnFocus">
+            <summary>
+            Gets or sets a value indicating whether boolean value
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.IsFocused">
+            <summary>
+            Gets or sets a value indicating whether it is focused or not.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.NumericEditText">
+            <summary>
+            Gets or sets the numeric edit text.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.SelectionStart">
+            <summary>
+            Gets the Prompt index
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.DecimalSeparator">
+            <summary>
+            Gets or sets the decimal separator of the current culture.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.NegativeSign">
+            <summary>
+            Gets or sets the minus sign of the current culture.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.IsValueUpdatingInternally">
+            <summary>
+            Gets or sets a value indicating whether the value is updated internally
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.IsTextChangedInternally">
+            <summary>
+            Gets or sets a value indicating whether the text is updated internally
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.PreviousText">
+            <summary>
+            Gets or sets a previous text
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.InternalCulture">
+            <summary>
+            Gets or sets the internal culture.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.Resource">
+            <summary>
+            Sets the resource.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.TextRect(CoreGraphics.CGRect)">
+            <summary>
+            Its is a override method.
+            </summary>
+            <param name="forBounds">The value name is bound.</param>
+            <returns>Its return value.</returns>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.AwakeFromNib">
+            <summary>
+            The method overrides the AwakeFromNib
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.EditingRect(CoreGraphics.CGRect)">
+            <summary>
+            Its is a override method
+            </summary>
+            <param name="forBounds">The Bound value</param>
+            <returns>Its return value</returns>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.Cut(Foundation.NSObject)">
+            <summary>
+            Cut the specified sender.
+            </summary>
+            <param name="sender">the cut operation NSObject data type.</param>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.OnReturnkeyPressed(System.EventArgs)">
+            <summary>
+            It is a void method.
+            </summary>
+            <param name="args">The parameter value</param>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.OnValueChanged(Syncfusion.SfNumericTextBox.iOS.ValueEventArgs)">
+            <summary>
+            Raises the value changing.
+            </summary>
+            <param name="args">The Arguments.</param>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.SetCulture(Foundation.NSLocale)">
+            <summary>
+            set the culture
+            </summary>
+            <param name="culture"> the culture</param>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.UpdateInternalCulture">
+            <summary>
+            Updates the internal culture in c# for formatting generalize method.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.SetNumericEditTextAndIndex(System.String,System.Int32)">
+            <summary>
+            Sets the numeric edit text and index.
+            </summary>
+            <param name="value">The Value.</param>
+            <param name="index">The Index.</param>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.SetNumericEditText(System.String)">
+            <summary>
+            Sets the numeric edit text.
+            </summary>
+            <param name="value">The Value</param>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.SetValue(System.Object)">
+            <summary>
+            Set value internally
+            </summary>
+            <param name="value">The Value</param>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.SetMaximum(System.Object)">
+            <summary>
+            Set Maximum internally
+            </summary>
+            <param name="value">the maximum</param>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.SetMinimum(System.Object)">
+            <summary>
+            Set Minimum internally
+            </summary>
+            <param name="value">the minimum</param>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.GetMaximumNumberDecimalDigits">
+            <summary>
+            The Maximum Number Decimal Digits
+            </summary>
+            <returns>The maximum number of decimal digits</returns>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.GetParsingMode">
+            <summary>
+            Parsing mode 
+            </summary>
+            <returns>Parse mode</returns>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.SetSelection(System.Int32)">
+            <summary>
+            Set the selection range of selected text.
+            </summary>
+            <param name="index">Selection index.</param>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.GetDisplayLocale">
+            <summary>
+            Gets the display locale.
+            </summary>
+            <returns>The display locale.</returns>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.OnFocusChanged(System.Boolean)">
+            <summary>
+            Focus changed event
+            </summary>
+            <param name="hasFocus"> has focus </param>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.Handle_ShouldReturn(UIKit.UITextField)">
+            <summary>
+            Its is boolean method
+            </summary>
+            <param name="textField">The Field name is text</param>
+            <returns>Its return boolean value</returns>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.AddToolBarItems">
+            <summary>
+            Its is a void method.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.DeviceRotated(Foundation.NSNotification)">
+            <summary>
+            Its is a void method
+            </summary>
+            <param name="notifcation">The Notification</param>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.UpdateFrames">
+            <summary>
+            Its is a void method
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.OnLoading">
+            <summary>
+            Its is a void method. 
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.Handle_EditingDidEnd(System.Object,System.EventArgs)">
+            <summary>
+            Its is a void method.
+            </summary>
+            <param name="sender">The value name is sender</param>
+            <param name="e">The value name is E</param>   
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.Handle_EditingDidBegin(System.Object,System.EventArgs)">
+            <summary>
+            Its a void method
+            </summary>
+            <param name="sender">The sender argument</param>
+            <param name="e">The E argument</param>   
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.SetSelectedTextRange">
+            <summary>
+            Set cursor position
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.Handle_ShouldChangeCharacters(UIKit.UITextField,Foundation.NSRange,System.String)">
+            <summary>
+            its is a return method
+            </summary>
+            <param name="textField">The Text</param>
+            <param name="textRange">The range</param>
+            <param name="replacementString">The replacement</param>
+            <returns>Its return a boolean value</returns>      
+        </member>
+        <member name="T:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.SfNumericTextResources">
+            <summary>
+            Numeric text box resources class
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.SfNumericTextResources.ResourceManager">
+            <summary>
+            Gets or sets the resource manager.
+            </summary>
+            <value>The resource manager.</value>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.SfNumericTextResources.Culture">
+            <summary>
+            Gets the culture.
+            </summary>
+            <value>The culture.</value>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.SfNumericTextResources.Return">
+            <summary>
+            Gets the localized string for load more text.
+            </summary>
+            <value>The items count.</value>
+        </member>
+        <member name="M:Syncfusion.SfNumericTextBox.iOS.SfNumericTextBox.SfNumericTextResources.GetString(System.Globalization.CultureInfo,System.String)">
+            <summary>
+            Gets the localized string.
+            </summary>
+            <returns>The string.</returns>
+            <param name="culture">The culture.</param>
+            <param name="text">The text.</param>
+        </member>
+        <member name="T:Syncfusion.SfNumericTextBox.iOS.ValueEventArgs">
+            <summary>
+            Value event arguments.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.ValueEventArgs.Value">
+            <summary>
+            Gets a value indicating whether object value
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfNumericTextBox.iOS.FocusChangedEventArgs">
+            <summary>
+            Value event arguments.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfNumericTextBox.iOS.FocusChangedEventArgs.HasFocus">
+            <summary>
+            Gets a value indicating whether boolean value
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfNumericTextBox.iOS.SFNumericTextBoxParsers">
+            <summary>
+            Its is a enum value.
+            </summary>  
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SFNumericTextBoxParsers.Double">
+            <summary>
+            Its is a Double value.
+            </summary>
+            		Display the parser content in double format.
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SFNumericTextBoxParsers.Decimal">
+            <summary>
+            Its is a Decimal value.
+            </summary>
+            		Display the parsers content in decimal format.
+        </member>
+        <member name="T:Syncfusion.SfNumericTextBox.iOS.SFNumericTextBoxPercentDisplayMode">
+            <summary>
+            Its is a enum value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SFNumericTextBoxPercentDisplayMode.Value">
+            <summary>
+            Its is a Double value.
+            </summary>
+            		Display the value with Percentage(%) symbol.
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SFNumericTextBoxPercentDisplayMode.Compute">
+            <summary>
+            Its is a compute value.
+            </summary>
+            		Display the computed value with Percentage(%) symbol.
+        </member>
+        <member name="T:Syncfusion.SfNumericTextBox.iOS.SFNumericTextBoxValueChangeMode">
+            <summary>
+            Its is a enum value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SFNumericTextBoxValueChangeMode.OnLostFocus">
+            <summary>
+            Its is a Focus value.
+            </summary>
+            		The value will be updated once the control lost its focus.
+        </member>
+        <member name="F:Syncfusion.SfNumericTextBox.iOS.SFNumericTextBoxValueChangeMode.OnKeyFocus">
+            <summary>
+            Its is a Focus value.
+            </summary>
+            		The value will be changed for each keypress.
+        </member>
+    </members>
+</doc>
