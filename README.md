@@ -1,5 +1,5 @@
 # Syncfusion Xamarin samples
-
+ 
 This repository contains the demos of [Syncfusion Xamarin UI controls](https://www.syncfusion.com/products/xamarin?utm_source=github&utm_medium=listing). This is the best place to check our controls to get more insight about the usage of APIs. You can also check our controls by installing the complete Xamarin.Forms sample browser from [ Google Play Store](https://play.google.com/store/apps/details?id=com.syncfusion.samplebrowser) or [Microsoft Store](https://www.microsoft.com/en-in/p/syncfusion-essential-studio-for-xamarin/9nn069tldzf4), in which you can browse the demo for all the controls and view the source code of each sample within the app itself.
 
 This section guides you to use the Syncfusion Xamarin samples in your applications.
