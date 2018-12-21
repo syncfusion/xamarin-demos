@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Samples>
+  <Sample Title = "ListView" Name = "ParallaxView" IsNew="True"/>
+    <Sample Title = "Rotator" Name = "ParallaxViewPage" IsNew="True" />
+</Samples>

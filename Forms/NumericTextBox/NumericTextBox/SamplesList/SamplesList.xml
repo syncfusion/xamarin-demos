@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Samples>
+
+  <Sample Title="NumericTextBox" Name="NumericTextBox" Icon="AllControlls/NumericTextBox.png"/>
+</Samples>  

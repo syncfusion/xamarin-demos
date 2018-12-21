@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<ItemGroup>
+<Content Include="$(MSBuildThisFileDirectory)\cart.png">
+      <Link>cart.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Checked.png">
+      <Link>Checked.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Delete.png">
+      <Link>Delete.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Delete1.png">
+      <Link>Delete1.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\DragIndicator.png">
+      <Link>DragIndicator.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Favorites.png">
+      <Link>Favorites.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Favorites1.png">
+      <Link>Favorites1.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\InboxIcon.png">
+      <Link>InboxIcon.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\ListAutofitItems.png">
+      <Link>ListAutofitItems.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\ListDataTemplateSelector.png">
+      <Link>ListDataTemplateSelector.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\ListFiltering.png">
+      <Link>ListFiltering.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\ListGettingStarted.png">
+      <Link>ListGettingStarted.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\ListGridLayout.png">
+      <Link>ListGridLayout.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\ListGrouping.png">
+      <Link>ListGrouping.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\ListItemReordering.png">
+      <Link>ListItemReordering.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\ListLoadMore.png">
+      <Link>ListLoadMore.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\ListOrientation.png">
+      <Link>ListOrientation.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\ListPaging.png">
+      <Link>ListPaging.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\ListPullToRefresh.png">
+      <Link>ListPullToRefresh.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\ListSelection.png">
+      <Link>ListSelection.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\ListSwiping.png">
+      <Link>ListSwiping.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\LoadMoreDelete.png">
+      <Link>LoadMoreDelete.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\SelectionEdit.png">
+      <Link>SelectionEdit.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Unchecked.png">
+      <Link>Unchecked.png</Link>
+    </Content>
+
+    <Compile Include="$(MSBuildThisFileDirectory)\DataTemplateRenderer\IncomingCustomContentViewRenderer.cs">
+      <Link>DataTemplateRenderer\IncomingCustomContentViewRenderer.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\DataTemplateRenderer\OutgoingCustomContentViewRenderer.cs">
+      <Link>DataTemplateRenderer\OutgoingCustomContentViewRenderer.cs</Link>
+    </Compile>
+	</ItemGroup>
+</Project>

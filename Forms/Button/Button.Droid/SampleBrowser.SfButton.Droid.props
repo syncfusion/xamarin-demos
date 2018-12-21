@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+        <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\button_Segoe MDL2 Assets.ttf">
+            <Link>Assets\button_Segoe MDL2 Assets.ttf</Link>
+        </AndroidAsset>
+  </ItemGroup>
+  <ItemGroup>
+        
+	<AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\button_backgroundImage.png">
+            		
+		<Link>Resources\drawable\button_backgroundImage.png</Link>
+        
+	</AndroidResource>
+    
+  </ItemGroup>
+
+  <ItemGroup>
+        
+	<AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\buttonbackground.png">
+            
+		<Link>Resources\drawable\buttonbackground.png</Link>
+ 
+       </AndroidResource>
+  
+  </ItemGroup>
+
+  <ItemGroup>
+        
+	<AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\button_alignCenter.png">
+            
+		<Link>Resources\drawable\button_alignCenter.png</Link>
+ 
+       </AndroidResource>
+  
+  </ItemGroup>
+
+  <ItemGroup>
+        
+	<AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\button_alignRight.png">
+            
+		<Link>Resources\drawable\button_alignRight.png</Link>
+ 
+       </AndroidResource>
+  
+  </ItemGroup>
+
+  <ItemGroup>
+        
+	<AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\button_alignLeft.png">
+            
+		<Link>Resources\drawable\button_alignLeft.png</Link>
+ 
+       </AndroidResource>
+  
+  </ItemGroup>
+
+  <ItemGroup>
+        
+	<AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\button_Heart.png">
+            
+		<Link>Resources\drawable\button_Heart.png</Link>
+ 
+       </AndroidResource>
+  
+  </ItemGroup>
+
+</Project>

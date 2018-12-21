@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="SampleBrowser.SfListView.ReadMoreContentPage">
+  <ScrollView Padding="10">
+    <Grid RowSpacing="0" Padding="10">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <Label Text="{Binding BlogTitle}" FontAttributes="Bold" FontSize="20" TextColor="#000000" />
+      <Grid Grid.Row="1" Padding="0,15,0,0">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+          </Grid.ColumnDefinitions>
+          <Image HeightRequest="10" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="10" Source="{Binding BlogAuthorIcon}" />
+          <Label Text="{Binding BlogAuthor}" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1" Opacity=" 0.54" LineBreakMode="WordWrap" TextColor="#000000" FontSize="12"/>
+        </Grid>
+        <Grid Grid.Column="1" Padding="15,0,0,0">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+          </Grid.ColumnDefinitions>
+          <Image HeightRequest="10" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="10" Source="{Binding BlogCategoryIcon}" />
+          <Label Text="{Binding BlogCategory}"  VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1" Opacity=" 0.54" LineBreakMode="WordWrap" TextColor="#000000" FontSize="12"/>
+        </Grid>
+      </Grid>
+      <Grid Grid.Row="2" Padding="0,15,0,0">
+        <Label Text="{Binding ReadMoreContent}" FontSize="14"/>
+      </Grid>
+    </Grid>
+  </ScrollView>
+</ContentPage>

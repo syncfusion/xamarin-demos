@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<local:SampleView
+    x:Class="SampleBrowser.SfTextInputLayout.SignUpView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:sftextinputlayout="clr-namespace:SampleBrowser.SfTextInputLayout"
+    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <local:SampleView.Resources>
+        <ResourceDictionary>
+            <sftextinputlayout:ContainerTypeConverter x:Key="ContainerTypeConverter" />
+        </ResourceDictionary>
+    </local:SampleView.Resources>
+
+    <local:SampleView.BindingContext>
+        <sftextinputlayout:SignUpViewModel />
+    </local:SampleView.BindingContext>
+
+    <local:SampleView.Content>
+        <ScrollView Margin="0,20,0,20" Padding="0,0,0,20">
+            <ScrollView.HorizontalOptions>
+                <OnIdiom
+                    x:TypeArguments="LayoutOptions"
+                    Desktop="Center"
+                    Phone="FillAndExpand"
+                    Tablet="FillAndExpand" />
+            </ScrollView.HorizontalOptions>
+
+            <ScrollView.WidthRequest>
+                <OnIdiom x:TypeArguments="x:Double" Desktop="400" />
+            </ScrollView.WidthRequest>
+
+            <StackLayout Margin="0,0,20,20" Spacing="10">
+                <inputLayout:SfTextInputLayout
+                    x:Name="nameLayout"
+                    ContainerType="{Binding SelectedItem, Source={x:Reference picker}, Converter={StaticResource ContainerTypeConverter}}"
+                    ErrorText="Enter your name"
+                    HasError="{Binding IsNameEmpty}"
+                    HelperText="Enter your name"
+                    Hint="Name"
+                    LeadingViewPosition="Outside">
+
+                    <Entry x:Name="name" Text="{Binding Name}" />
+
+                    <inputLayout:SfTextInputLayout.LeadingView>
+                        <Label
+                            FontSize="18"
+                            Text="F"
+                            TextColor="{Binding Path=CurrentActiveColor, Source={x:Reference Name=nameLayout}}"
+                            VerticalTextAlignment="Center">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="InputLayoutIcons" />
+                                    <On Platform="Android" Value="InputLayoutIcons.ttf#InputLayoutIcons" />
+                                    <On Platform="UWP" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                    </inputLayout:SfTextInputLayout.LeadingView>
+                </inputLayout:SfTextInputLayout>
+
+                <inputLayout:SfTextInputLayout
+                    x:Name="mobileLayout"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    ContainerType="{Binding SelectedItem, Source={x:Reference picker}, Converter={StaticResource ContainerTypeConverter}}"
+                    ErrorText="Enter your phone number"
+                    HasError="{Binding IsMobileNumberEmpty}"
+                    HelperText="Don't include country code"
+                    Hint="Phone number"
+                    LeadingViewPosition="Outside">
+
+                    <Entry
+                        x:Name="phoneNumber"
+                        Keyboard="Telephone"
+                    Text="{Binding PhoneNumber}" />
+
+                    <inputLayout:SfTextInputLayout.LeadingView>
+                        <Label
+                            FontSize="18"
+                            Text="E"
+                            TextColor="{Binding Path=CurrentActiveColor, Source={x:Reference Name=mobileLayout}}"
+                            VerticalTextAlignment="Center">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="InputLayoutIcons" />
+                                    <On Platform="Android" Value="InputLayoutIcons.ttf#InputLayoutIcons" />
+                                    <On Platform="UWP" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                    </inputLayout:SfTextInputLayout.LeadingView>
+                </inputLayout:SfTextInputLayout>
+
+                <inputLayout:SfTextInputLayout
+                    x:Name="mailLayout"
+                    ContainerType="{Binding SelectedItem, Source={x:Reference picker}, Converter={StaticResource ContainerTypeConverter}}"
+                    ErrorText="Enter a valid email address"
+                    HasError="{Binding HasError}"
+                    HelperText="Enter your email address"
+                    Hint="Email"
+                    LeadingViewPosition="Outside">
+
+                    <Entry x:Name="mail" Text="{Binding Mail}" />
+
+                    <inputLayout:SfTextInputLayout.LeadingView>
+                        <Label
+                            FontSize="18"
+                            Text="G"
+                            TextColor="{Binding Path=CurrentActiveColor, Source={x:Reference Name=mailLayout}}"
+                            VerticalTextAlignment="Center">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="InputLayoutIcons" />
+                                    <On Platform="Android" Value="InputLayoutIcons.ttf#InputLayoutIcons" />
+                                    <On Platform="UWP" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                    </inputLayout:SfTextInputLayout.LeadingView>
+                </inputLayout:SfTextInputLayout>
+
+                <inputLayout:SfTextInputLayout
+                    x:Name="passwordLayout"
+                    CharMaxLength="8"
+                    ContainerType="{Binding SelectedItem, Source={x:Reference picker}, Converter={StaticResource ContainerTypeConverter}}"
+                    EnablePasswordVisibilityToggle="true"
+                    ErrorText="Enter 5 to 8 characters"
+                    HasError="{Binding IsPasswordEmpty}"
+                    HelperText="Enter 5 to 8 characters"
+                    Hint="Password"
+                    ShowCharCount="true">
+
+                    <Entry
+                        x:Name="password"
+                        IsPassword="true"
+                    Text="{Binding Password}" />
+
+                    <inputLayout:SfTextInputLayout.LeadingView>
+                        <Label
+                            FontSize="18"
+                            Text="K"
+                            TextColor="{Binding Path=CurrentActiveColor, Source={x:Reference Name=passwordLayout}}"
+                            VerticalTextAlignment="Center">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="InputLayoutIcons" />
+                                    <On Platform="Android" Value="InputLayoutIcons.ttf#InputLayoutIcons" />
+                                    <On Platform="UWP" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                    </inputLayout:SfTextInputLayout.LeadingView>
+                </inputLayout:SfTextInputLayout>
+
+                <inputLayout:SfTextInputLayout
+                    x:Name="confirmPasswordLayout"
+                    ContainerType="{Binding SelectedItem, Source={x:Reference picker}, Converter={StaticResource ContainerTypeConverter}}"
+                    ErrorText="Re-enter your password"
+                    HasError="{Binding IsConfirmPasswordEmpty}"
+                    HelperText="Re-enter your password"
+                    Hint="Confirm password"
+                    IsEnabled="{Binding IsEnabled}">
+
+                    <Entry
+                        x:Name="confirmPassword"
+                        IsPassword="true"
+                    Text="{Binding ConfirmPassword}" />
+
+                    <inputLayout:SfTextInputLayout.LeadingView>
+                        <Label
+                            FontSize="18"
+                            Text="K"
+                            TextColor="{Binding Path=CurrentActiveColor, Source={x:Reference Name=confirmPasswordLayout}}"
+                            VerticalTextAlignment="Center">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="InputLayoutIcons" />
+                                    <On Platform="Android" Value="InputLayoutIcons.ttf#InputLayoutIcons" />
+                                    <On Platform="UWP" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                    </inputLayout:SfTextInputLayout.LeadingView>
+                </inputLayout:SfTextInputLayout>
+
+                <Grid>
+                    <inputLayout:SfTextInputLayout
+                        x:Name="birthdayLayout"
+                        ContainerType="{Binding SelectedItem, Source={x:Reference picker}, Converter={StaticResource ContainerTypeConverter}}"
+                        HelperText="Enter your date of birth"
+                        Hint="Birth date"
+                        LeadingViewPosition="Outside"
+                        TrailingViewPosition="Inside">
+
+                        <Entry x:Name="dateOfBirth" Text="{Binding DateOfBirth}" />
+
+                        <inputLayout:SfTextInputLayout.LeadingView>
+                            <Label
+                                FontSize="18"
+                                Text="H"
+                                TextColor="{Binding Path=CurrentActiveColor, Source={x:Reference Name=birthdayLayout}}"
+                                VerticalTextAlignment="Center">
+                                <Label.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <On Platform="iOS" Value="InputLayoutIcons" />
+                                        <On Platform="Android" Value="InputLayoutIcons.ttf#InputLayoutIcons" />
+                                        <On Platform="UWP" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+                                    </OnPlatform>
+                                </Label.FontFamily>
+                            </Label>
+                        </inputLayout:SfTextInputLayout.LeadingView>
+
+                        <inputLayout:SfTextInputLayout.TrailingView>
+                            <Label
+                                FontSize="18"
+                                Text="D"
+                                TextColor="{Binding Path=CurrentActiveColor, Source={x:Reference Name=birthdayLayout}}"
+                                VerticalTextAlignment="Center">
+
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="labelGesture" Tapped="GestureRecognizer_Tapped" />
+                                </Label.GestureRecognizers>
+
+                                <Label.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <On Platform="iOS" Value="InputLayoutIcons" />
+                                        <On Platform="Android" Value="InputLayoutIcons.ttf#InputLayoutIcons" />
+                                        <On Platform="UWP" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+                                    </OnPlatform>
+                                </Label.FontFamily>
+                            </Label>
+                        </inputLayout:SfTextInputLayout.TrailingView>
+                    </inputLayout:SfTextInputLayout>
+
+                    <DatePicker
+                        x:Name="date_Picker"
+                        Date="{Binding DateTime}"
+                        MaximumDate="{x:Static system:DateTime.Now}"
+                        Opacity="0"
+                    VerticalOptions="CenterAndExpand" />
+                </Grid>
+
+                <inputLayout:SfTextInputLayout
+                    x:Name="notesLayout"
+                    CharMaxLength="50"
+                    ContainerType="{Binding SelectedItem, Source={x:Reference picker}, Converter={StaticResource ContainerTypeConverter}}"
+                    Hint="Notes"
+                    LeadingViewPosition="Outside"
+                    ShowCharCount="True">
+
+                    <Editor
+                        x:Name="notes"
+                        HeightRequest="80"
+                    Text="{Binding Notes}" />
+
+                    <inputLayout:SfTextInputLayout.LeadingView>
+                        <Label
+                            FontSize="18"
+                            Text="B"
+                            TextColor="{Binding Path=CurrentActiveColor, Source={x:Reference Name=notesLayout}}"
+                            VerticalTextAlignment="Center">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="InputLayoutIcons" />
+                                    <On Platform="Android" Value="InputLayoutIcons.ttf#InputLayoutIcons" />
+                                    <On Platform="UWP" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                    </inputLayout:SfTextInputLayout.LeadingView>
+                </inputLayout:SfTextInputLayout>
+
+                <StackLayout
+                    Padding="25,0,0,0"
+                    HorizontalOptions="Center"
+                    Orientation="Horizontal">
+                    <Button
+                        x:Name="submitButton"
+                        BackgroundColor="#0d5fa3"
+                        Command="{Binding SubmitCommand}"
+                        Text="Submit"
+                        TextColor="White"
+                        WidthRequest="100" />
+
+                    <Button
+                        x:Name="resetButton"
+                        BackgroundColor="#90979b"
+                        Command="{Binding ResetCommand}"
+                        Text="Reset"
+                        TextColor="White"
+                        WidthRequest="100" />
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </local:SampleView.Content>
+
+    <local:SampleView.PropertyView>
+        <StackLayout Padding="20,20,20,20">
+            <Label HorizontalOptions="FillAndExpand" Text="Select layout type" />
+
+            <Picker
+                x:Name="picker"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                WidthRequest="400">
+
+                <Picker.Items>
+                    <x:String>Filled</x:String>
+                    <x:String>Outlined</x:String>
+                    <x:String>None</x:String>
+                </Picker.Items>
+            </Picker>
+        </StackLayout>
+    </local:SampleView.PropertyView>
+</local:SampleView> 
