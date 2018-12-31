@@ -3,6 +3,6 @@
 	<Sample Title="Getting Started" Name = "Configuration"  Description="Showcases the single and multiple selections support to restrict navigation beyond the specified minimum and maximum dates and month view lines appearance customization." />
     <Sample Title="Blackout Dates" Name = "BlackoutDates" SearchTags="disabled,blackout"  Description="Showcases the specific date blackout capability of calendar." />
     <Sample Title="Agenda View" Name = "InlineEvents" SearchTags="inline,appointments"  Description="Showcases the inline events in inline view mode and agenda view mode in a specific date of the month." />
-    <Sample Title="Customization" Name = "CalendarCustomization" IsNew = "true" SearchTags="customview, celltemplate"  Description="Showcases customization."  />
+    <Sample Title="Customization" Name = "Customization" IsNew = "true" SearchTags="customview, celltemplate"  Description="Showcases customization."  />
     <Sample Title="Globalization" Name = "CalendarLocalization" SearchTags="culture,localize"  Description="Showcases localization and globalization."  />
 </Samples>  
