@@ -1,9 +1,0 @@
-values/Strings.xml;values/strings.xml
-Layout/SunburstChart_Legend_Item.xml;layout/sunburstchart_legend_item.xml
-Layout/SunburstChart_Legend.xml;layout/sunburstchart_legend.xml
-Layout/ZoomingToolbar.xml;layout/zoomingtoolbar.xml
-Anim/Fadein.xml;anim/fadein.xml
-Drawable/ZoomBack.xml;drawable/zoomback.xml
-values/attrs.xml;values/attrs.xml
-Drawable/Reset.xml;drawable/reset.xml
-Anim/FadeinForZoom.xml;anim/fadeinforzoom.xml

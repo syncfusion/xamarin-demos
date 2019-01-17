@@ -1,1 +1,0 @@
-<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/pathLayout" xmlns:android="http://schemas.android.com/apk/res/android"><include android:id="@+id/pathColors" layout="@layout/colors_layout" /></LinearLayout>

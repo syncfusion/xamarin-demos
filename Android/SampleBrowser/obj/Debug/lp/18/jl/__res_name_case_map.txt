@@ -1,5 +1,0 @@
-Layout/Spinner_item.axml;layout/spinner_item.xml
-Values/attrs.xml;values/attrs.xml
-Values/Strings.xml;values/strings.xml
-drawable/GroupExpander.png;drawable/groupexpander.png
-drawable/GroupCollapse.png;drawable/groupcollapse.png

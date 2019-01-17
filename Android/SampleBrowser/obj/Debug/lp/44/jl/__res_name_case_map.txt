@@ -1,4 +1,0 @@
-values/attrs.xml;values/attrs.xml
-Layout/treeviewborderlayout.xml;layout/treeviewborderlayout.xml
-drawable/NodeCollapse.png;drawable/nodecollapse.png
-drawable/NodeExpand.png;drawable/nodeexpand.png

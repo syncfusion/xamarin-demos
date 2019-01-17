@@ -1,1 +1,0 @@
-<resources><declare-styleable name="SfTreeView"><attr name="childProperty" format="string" /><attr name="expanderWidth" format="float" /><attr name="indentation" format="float" /><attr name="itemHeight" format="float" /></declare-styleable></resources>

@@ -1,5 +1,0 @@
-values/Strings.xml;values/strings.xml
-drawable/arrow_up.png;drawable/arrow_up.png
-drawable/arrow_down.png;drawable/arrow_down.png
-drawable/Recurrence.png;drawable/recurrence.png
-values/attrs.xml;values/attrs.xml

@@ -1,2 +1,0 @@
-drawable/ripple_effect.xml;drawable/ripple_effect.xml
-values/attrs.xml;values/attrs.xml
