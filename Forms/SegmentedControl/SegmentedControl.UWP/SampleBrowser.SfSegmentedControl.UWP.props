@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  
+  <ItemGroup>
+	
+	<Content Include="$(MSBuildThisFileDirectory)\Assets\Fonts\Segmented.ttf" >
+		<Link>Assets\Fonts\Segmented.ttf</Link>
+	</Content>
+	
+	<Content Include="$(MSBuildThisFileDirectory)\Assets\Fonts\SegmentIcon.ttf" >
+		<Link>Assets\Fonts\SegmentIcon.ttf</Link>
+	</Content>
+	
+	<Content Include="$(MSBuildThisFileDirectory)\Assets\Fonts\Segoe_MDL2_Assets.ttf" >
+		<Link>Assets\Fonts\Segoe_MDL2_Assets.ttf</Link>
+	</Content>
+	
+	<Content Include="$(MSBuildThisFileDirectory)\Assets\Fonts\switch.ttf" >
+		<Link>Assets\Fonts\switch.ttf</Link>
+	</Content>
+	
+	<Content Include="$(MSBuildThisFileDirectory)\angry.png" >
+		<Link>angry.png</Link>
+	</Content>
+  </ItemGroup>
+  <ItemGroup>
+	  <Content Include="$(MSBuildThisFileDirectory)\angry.png" >
+		<Link>angry.png</Link>
+	</Content>
+	
+	<Content Include="$(MSBuildThisFileDirectory)\cat.png" >
+		<Link>cat.png</Link>
+	</Content>
+	
+	<Content Include="$(MSBuildThisFileDirectory)\ellana.png" >
+		<Link>ellana.png</Link>
+	</Content>
+	
+	
+	<Content Include="$(MSBuildThisFileDirectory)\heart.png" >
+		<Link>heart.png</Link>
+	</Content>
+	
+	<Content Include="$(MSBuildThisFileDirectory)\laugh.png" >
+		<Link>laugh.png</Link>
+	</Content>
+	
+	<Content Include="$(MSBuildThisFileDirectory)\like.png" >
+		<Link>like.png</Link>
+	</Content>
+	
+	<Content Include="$(MSBuildThisFileDirectory)\likes.png" >
+		<Link>likes.png</Link>
+	</Content>
+	
+	<Content Include="$(MSBuildThisFileDirectory)\love.png" >
+		<Link>love.png</Link>
+	</Content>
+	
+	<Content Include="$(MSBuildThisFileDirectory)\sad.png" >
+		<Link>sad.png</Link>
+	</Content>
+	
+	<Content Include="$(MSBuildThisFileDirectory)\wow.png" >
+		<Link>wow.png</Link>
+	</Content>
+  </ItemGroup>
+  
+</Project>

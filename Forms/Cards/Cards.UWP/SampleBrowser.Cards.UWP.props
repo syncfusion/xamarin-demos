@@ -1,0 +1,24 @@
+<Project>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\Assets\Segoe MDL2 Assets.ttf">
+      <Link>Assets\Segoe MDL2 Assets.ttf</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+	<Content Include="$(MSBuildThisFileDirectory)\Card_chair.png">
+     <Link>Card_chair.png</Link>
+    </Content>
+	<Content Include="$(MSBuildThisFileDirectory)\Card_hall.png">
+     <Link>Card_hall.png</Link>
+    </Content>
+	<Content Include="$(MSBuildThisFileDirectory)\Card_hall2.png">
+     <Link>Card_hall2.png</Link>
+    </Content>
+	<Content Include="$(MSBuildThisFileDirectory)\Card_sofa.png">
+     <Link>Card_sofa.png</Link>
+    </Content>
+	<Content Include="$(MSBuildThisFileDirectory)\Card_sofa2.png">
+     <Link>Card_sofa2.png</Link>
+    </Content>
+  </ItemGroup>
+</Project>

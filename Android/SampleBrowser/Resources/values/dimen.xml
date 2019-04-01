@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="map_txtht_size">30dp</dimen>
+    <dimen name="nav_drawer_imd_size">90dp</dimen>
+    <dimen name="nav_drawer_btn_ht">25dp</dimen>
+    <dimen name="nav_drawer_btn_wt">32dp</dimen>
+    <dimen name="nav_drawer_header_ht">47dp</dimen>
+    <dimen name="nav_drawer_slider_ht">130dp</dimen>
+    <dimen name="nav_drawer_prof_ht">115dp</dimen>
+    <dimen name="nav_drawer_gap_ht">82dp</dimen>
+    <dimen name="auto_picker_ht">50dp</dimen>
+    <dimen name="range_ht">80dp</dimen>
+    <dimen name="crsl_txtht">60dp</dimen>
+    <dimen name="crsl_item_ht">300dp</dimen>
+    <dimen name="crsl_item_wt">200dp</dimen>
+	  <dimen name="numeric_ht">60dp</dimen>
+	  <dimen name="numeric_txt_ht">70dp</dimen>
+    <dimen name="range_ht">120dp</dimen>
+</resources>
+

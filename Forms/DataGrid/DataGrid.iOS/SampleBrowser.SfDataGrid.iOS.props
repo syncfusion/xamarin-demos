@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\DataGridDependencyService.cs">
+      <Link>DataGrid\DataGridDependencyService.cs</Link>
+    </Compile>
+     <Compile Include="$(MSBuildThisFileDirectory)\MailService.cs">
+      <Link>DataGrid\MailService.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\FormsViewRenderer.cs">
+      <Link>DataGrid\FormsViewRenderer.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\SaveIOS.cs">
+      <Link>DataGrid\SaveIOS.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\PreviewControllerDS.cs">
+      <Link>DataGrid\PreviewControllerDS.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\QLPreviewItemFileSystem.cs">
+      <Link>DataGrid\QLPreviewItemFileSystem.cs</Link>
+    </Compile>
+   <Compile Include="$(MSBuildThisFileDirectory)\QLPreviewItemBundle.cs">
+      <Link>DataGrid\QLPreviewItemBundle.cs</Link>
+    </Compile>
+  </ItemGroup>
+</Project>

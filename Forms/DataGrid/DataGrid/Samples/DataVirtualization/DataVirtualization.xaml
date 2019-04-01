@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfDataGrid.DataVirtualization"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.SfDataGrid"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:sfgrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms">
+
+  <sample:SampleView.BindingContext>
+        <local:DataVirtualizationViewModel x:Name="viewModel" />
+    </sample:SampleView.BindingContext>
+
+
+  <sample:SampleView.Content>
+        <sfgrid:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding ViewSource}"
+                           AutoGenerateColumns="false"
+                           ColumnSizer="Star"
+                           HeaderRowHeight="52"
+                           RowHeight="48"
+                           SelectionMode="Single"
+                           VerticalOverScrollMode="None">
+
+            <sfgrid:SfDataGrid.Columns>
+                <sfgrid:GridTextColumn CellTextSize="12"
+                                       HeaderCellTextSize="12"
+                                       HeaderFontAttribute="Bold"
+                                       HeaderText="Contact ID"
+                                       HeaderTextAlignment="Start"
+                                       MappingName="ContactID"
+                                       Padding="5,0,5,0"
+                                       TextAlignment="End" />
+
+                <sfgrid:GridTextColumn CellTextSize="12"
+                                       HeaderCellTextSize="12"
+                                       HeaderFontAttribute="Bold"
+                                       HeaderTextAlignment="Start"
+                                       MappingName="Name"
+                                       Padding="5, 0, 0, 0"
+                                       TextAlignment="Start" />
+
+                <sfgrid:GridTextColumn CellTextSize="12"
+                                       Format="C"
+                                       HeaderCellTextSize="12"
+                                       HeaderFontAttribute="Bold"
+                                       HeaderTextAlignment="Start"
+                                       MappingName="Salary"
+                                       Padding="5,0,5,0"
+                                       TextAlignment="End" />
+
+                <sfgrid:GridTextColumn CellTextSize="12"
+                                       HeaderCellTextSize="12"
+                                       HeaderFontAttribute="Bold"
+                                       HeaderTextAlignment="Start"
+                                       MappingName="Title"
+                                       Padding="5, 0, 0, 0"
+                                       TextAlignment="Start" />
+
+                <sfgrid:GridTextColumn CellTextSize="12"
+                                       Format="d"
+                                       HeaderCellTextSize="12"
+                                       HeaderFontAttribute="Bold"
+                                       HeaderText="Birth Date"
+                                       HeaderTextAlignment="Start"
+                                       MappingName="BirthDate"
+                                       Padding="5, 0, 0, 0"
+                                       TextAlignment="Start" />
+
+            </sfgrid:SfDataGrid.Columns>
+
+        </sfgrid:SfDataGrid>
+    </sample:SampleView.Content>
+</sample:SampleView>

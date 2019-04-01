@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\bucolicpie.png" >
+		<Link>Resources\bucolicpie.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\bumpercrop.png" >
+		<Link>Resources\bumpercrop.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\doublecheesemargherita.png" >
+		<Link>Resources\doublecheesemargherita.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Image8.png" >
+		<Link>Resources\Image8.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Image9.png" >
+		<Link>Resources\Image9.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Image10.png" >
+		<Link>Resources\Image10.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Image11.png" >
+		<Link>Resources\Image11.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Image12.png" >
+		<Link>Resources\Image12.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Image13.png" >
+		<Link>Resources\Image13.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Image14.png" >
+		<Link>Resources\Image14.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Image15.png" >
+		<Link>Resources\Image15.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Image16.png" >
+		<Link>Resources\Image16.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Image17.png" >
+		<Link>Resources\Image17.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Image18.png" >
+		<Link>Resources\Image18.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Image19.png" >
+		<Link>Resources\Image19.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Image20.png" >
+		<Link>Resources\Image20.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Image21.png" >
+		<Link>Resources\Image21.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Image22.png" >
+		<Link>Resources\Image22.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Image23.png" >
+		<Link>Resources\Image23.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Image24.png" >
+		<Link>Resources\Image24.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Image25.png" >
+		<Link>Resources\Image25.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Image26.png" >
+		<Link>Resources\Image26.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Image27.png" >
+		<Link>Resources\Image27.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Image28.png" >
+		<Link>Resources\Image28.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Image29.png" >
+		<Link>Resources\Image29.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Image30.png" >
+		<Link>Resources\Image30.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\margherita.png" >
+		<Link>Resources\margherita.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\saladdaze.png" >
+		<Link>Resources\saladdaze.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\spiceoflife.png" >
+		<Link>Resources\spiceoflife.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\verynicoise.png" >
+		<Link>Resources\verynicoise.png</Link>
+		</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+      <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Delivered.png" >
+          <Link>Resources\Delivered.png</Link>
+      </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+      <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Prepare.png" >
+          <Link>Resources\Prepare.png</Link>
+      </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+      <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Ready.png" >
+          <Link>Resources\Ready.png</Link>
+      </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+      <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Time.png" >
+          <Link>Resources\Time.png</Link>
+      </BundleResource>
+  </ItemGroup>
+</Project>

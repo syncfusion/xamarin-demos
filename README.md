@@ -7,7 +7,7 @@ This section guides you to use the Syncfusion Xamarin samples in your applicatio
 * [Requirements to run the demo](#requirements-to-run-the-demo)
 * [Repository Structure](#repository-structure)
 * [License](#license)
-* [Using the samples](#using-the-samples)
+* [Using the samples](#using-the-samples) 
 * [Controls Catalog](#controls-catalog)
 * [Support and Feedback](#support-and-feedback)
 

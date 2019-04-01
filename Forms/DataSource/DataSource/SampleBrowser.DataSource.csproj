@@ -1,0 +1,124 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>79cb6222-5714-42c9-b24f-977154e39dda</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SampleBrowser.DataSource</RootNamespace>
+    <AssemblyName>SampleBrowser.DataSource</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Icons\Image0.png" />
+    <None Remove="Icons\Image1.png" />
+    <None Remove="Icons\Image10.png" />
+    <None Remove="Icons\Image11.png" />
+    <None Remove="Icons\Image12.png" />
+    <None Remove="Icons\Image13.png" />
+    <None Remove="Icons\Image14.png" />
+    <None Remove="Icons\Image15.png" />
+    <None Remove="Icons\Image16.png" />
+    <None Remove="Icons\Image17.png" />
+    <None Remove="Icons\Image18.png" />
+    <None Remove="Icons\Image19.png" />
+    <None Remove="Icons\Image2.png" />
+    <None Remove="Icons\Image20.png" />
+    <None Remove="Icons\Image21.png" />
+    <None Remove="Icons\Image22.png" />
+    <None Remove="Icons\Image23.png" />
+    <None Remove="Icons\Image24.png" />
+    <None Remove="Icons\Image25.png" />
+    <None Remove="Icons\Image26.png" />
+    <None Remove="Icons\Image27.png" />
+    <None Remove="Icons\Image28.png" />
+    <None Remove="Icons\Image3.png" />
+    <None Remove="Icons\Image4.png" />
+    <None Remove="Icons\Image5.png" />
+    <None Remove="Icons\Image6.png" />
+    <None Remove="Icons\Image7.png" />
+    <None Remove="Icons\Image8.png" />
+    <None Remove="Icons\Image9.png" />
+    <None Remove="SamplesList\SamplesList.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Icons\Image0.png" />
+    <EmbeddedResource Include="Icons\Image1.png" />
+    <EmbeddedResource Include="Icons\Image10.png" />
+    <EmbeddedResource Include="Icons\Image11.png" />
+    <EmbeddedResource Include="Icons\Image12.png" />
+    <EmbeddedResource Include="Icons\Image13.png" />
+    <EmbeddedResource Include="Icons\Image14.png" />
+    <EmbeddedResource Include="Icons\Image15.png" />
+    <EmbeddedResource Include="Icons\Image16.png" />
+    <EmbeddedResource Include="Icons\Image17.png" />
+    <EmbeddedResource Include="Icons\Image18.png" />
+    <EmbeddedResource Include="Icons\Image19.png" />
+    <EmbeddedResource Include="Icons\Image2.png" />
+    <EmbeddedResource Include="Icons\Image20.png" />
+    <EmbeddedResource Include="Icons\Image21.png" />
+    <EmbeddedResource Include="Icons\Image22.png" />
+    <EmbeddedResource Include="Icons\Image23.png" />
+    <EmbeddedResource Include="Icons\Image24.png" />
+    <EmbeddedResource Include="Icons\Image25.png" />
+    <EmbeddedResource Include="Icons\Image26.png" />
+    <EmbeddedResource Include="Icons\Image27.png" />
+    <EmbeddedResource Include="Icons\Image28.png" />
+    <EmbeddedResource Include="Icons\Image3.png" />
+    <EmbeddedResource Include="Icons\Image4.png" />
+    <EmbeddedResource Include="Icons\Image5.png" />
+    <EmbeddedResource Include="Icons\Image6.png" />
+    <EmbeddedResource Include="Icons\Image7.png" />
+    <EmbeddedResource Include="Icons\Image8.png" />
+    <EmbeddedResource Include="Icons\Image9.png" />
+    <EmbeddedResource Include="SamplesList\SamplesList.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SampleBrowser.Core" Version="17.1.0.38" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="17.1.0.38" />
+    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="17.1.0.38" />
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="17.1.0.38" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="17.1.0.38" />
+    <PackageReference Include="Xamarin.Forms" Version="3.2.0.871581" />
+	<PackageReference Include="System.ComponentModel" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="MainPage.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>
