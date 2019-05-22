@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Calculator.png">
+            <Link>Resources\drawable\Calculator.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Camera.png">
+            <Link>Resources\drawable\Camera.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\CDMusic.png">
+            <Link>Resources\drawable\CDMusic.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Download2.png">
+            <Link>Resources\drawable\Download2.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Excel.png">
+            <Link>Resources\drawable\Excel.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\GMail.png">
+            <Link>Resources\drawable\GMail.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\GoogleChrome.png">
+            <Link>Resources\drawable\GoogleChrome.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Instagram.png">
+            <Link>Resources\drawable\Instagram.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Maps.png">
+            <Link>Resources\drawable\Maps.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\MicrosoftPowerPoint.png">
+            <Link>Resources\drawable\MicrosoftPowerPoint.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\MicrosoftWord.png">
+            <Link>Resources\drawable\MicrosoftWord.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Skype.png">
+            <Link>Resources\drawable\Skype.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Talk.png">
+            <Link>Resources\drawable\Talk.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Twitter.png">
+            <Link>Resources\drawable\Twitter.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\yahoo.png">
+            <Link>Resources\drawable\yahoo.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+</Project>

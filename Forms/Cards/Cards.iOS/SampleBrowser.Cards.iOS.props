@@ -1,0 +1,24 @@
+<Project>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Segoe MDL2 Assets.ttf">
+      <Link>Resources\Segoe MDL2 Assets.ttf</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Card_chair.png">
+      <Link>Resources\Card_chair</Link>
+    </BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Card_hall.png">
+      <Link>Resources\Card_hall</Link>
+    </BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Card_hall2.png">
+      <Link>Resources\Card_hall2</Link>
+    </BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Card_sofa.png">
+      <Link>Resources\Card_sofa</Link>
+    </BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Card_sofa.png">
+      <Link>Resources\Card_sofa2</Link>
+    </BundleResource>
+  </ItemGroup>
+</Project>

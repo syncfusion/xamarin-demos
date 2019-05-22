@@ -1,0 +1,268 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>5b92368b-7e6c-49d9-bfa2-f5b0a60e3fc9</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SampleBrowser.SfListView</RootNamespace>
+    <AssemblyName>SampleBrowser.SfListView</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <Configurations>Debug;Release;Release-xml</Configurations>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icons\Accordion\AddContact.png" />
+    <EmbeddedResource Include="Icons\Accordion\BlockSpan.png" />
+    <EmbeddedResource Include="Icons\Accordion\CallDetails.png" />
+    <EmbeddedResource Include="Icons\Accordion\Image1.png" />
+    <EmbeddedResource Include="Icons\Accordion\Image10.png" />
+    <EmbeddedResource Include="Icons\Accordion\Image11.png" />
+    <EmbeddedResource Include="Icons\Accordion\Image12.png" />
+    <EmbeddedResource Include="Icons\Accordion\Image13.png" />
+    <EmbeddedResource Include="Icons\Accordion\Image2.png" />
+    <EmbeddedResource Include="Icons\Accordion\Image3.png" />
+    <EmbeddedResource Include="Icons\Accordion\Image4.png" />
+    <EmbeddedResource Include="Icons\Accordion\Image5.png" />
+    <EmbeddedResource Include="Icons\Accordion\Image6.png" />
+    <EmbeddedResource Include="Icons\Accordion\Image7.png" />
+    <EmbeddedResource Include="Icons\Accordion\Image8.png" />
+    <EmbeddedResource Include="Icons\Accordion\Image9.png" />
+    <EmbeddedResource Include="Icons\Accordion\NewContact.png" />
+    <EmbeddedResource Include="Icons\Accordion\PhoneImage.png" />
+    <EmbeddedResource Include="Icons\Accordion\SendMessage.png" />
+    <EmbeddedResource Include="Icons\Autofit\Image0.png" />
+    <EmbeddedResource Include="Icons\Autofit\Image1.png" />
+    <EmbeddedResource Include="Icons\Autofit\Image10.png" />
+    <EmbeddedResource Include="Icons\Autofit\Image11.png" />
+    <EmbeddedResource Include="Icons\Autofit\Image12.png" />
+    <EmbeddedResource Include="Icons\Autofit\Image13.png" />
+    <EmbeddedResource Include="Icons\Autofit\Image14.png" />
+    <EmbeddedResource Include="Icons\Autofit\Image15.png" />
+    <EmbeddedResource Include="Icons\Autofit\Image16.png" />
+    <EmbeddedResource Include="Icons\Autofit\Image17.png" />
+    <EmbeddedResource Include="Icons\Autofit\Image18.png" />
+    <EmbeddedResource Include="Icons\Autofit\Image19.png" />
+    <EmbeddedResource Include="Icons\Autofit\Image2.png" />
+    <EmbeddedResource Include="Icons\Autofit\Image3.png" />
+    <EmbeddedResource Include="Icons\Autofit\Image4.png" />
+    <EmbeddedResource Include="Icons\Autofit\Image5.png" />
+    <EmbeddedResource Include="Icons\Autofit\Image6.png" />
+    <EmbeddedResource Include="Icons\Autofit\Image7.png" />
+    <EmbeddedResource Include="Icons\Autofit\Image8.png" />
+    <EmbeddedResource Include="Icons\Autofit\Image9.png" />
+    <EmbeddedResource Include="Icons\BlogAuthor.png" />
+    <EmbeddedResource Include="Icons\BlogCategory.png" />
+    <EmbeddedResource Include="Icons\Blog_Facebook.png" />
+    <EmbeddedResource Include="Icons\Blog_Google Plus.png" />
+    <EmbeddedResource Include="Icons\Blog_LinkedIn.png" />
+    <EmbeddedResource Include="Icons\Blog_Twitter.png" />
+    <EmbeddedResource Include="Icons\Books.jpg" />
+    <EmbeddedResource Include="Icons\Cameras &amp; Optics.jpg" />
+    <EmbeddedResource Include="Icons\ContactImage\Image0.png" />
+    <EmbeddedResource Include="Icons\ContactImage\Image1.png" />
+    <EmbeddedResource Include="Icons\ContactImage\Image10.png" />
+    <EmbeddedResource Include="Icons\ContactImage\Image11.png" />
+    <EmbeddedResource Include="Icons\ContactImage\Image12.png" />
+    <EmbeddedResource Include="Icons\ContactImage\Image13.png" />
+    <EmbeddedResource Include="Icons\ContactImage\Image14.png" />
+    <EmbeddedResource Include="Icons\ContactImage\Image15.png" />
+    <EmbeddedResource Include="Icons\ContactImage\Image16.png" />
+    <EmbeddedResource Include="Icons\ContactImage\Image17.png" />
+    <EmbeddedResource Include="Icons\ContactImage\Image18.png" />
+    <EmbeddedResource Include="Icons\ContactImage\Image19.png" />
+    <EmbeddedResource Include="Icons\ContactImage\Image2.png" />
+    <EmbeddedResource Include="Icons\ContactImage\Image3.png" />
+    <EmbeddedResource Include="Icons\ContactImage\Image4.png" />
+    <EmbeddedResource Include="Icons\ContactImage\Image5.png" />
+    <EmbeddedResource Include="Icons\ContactImage\Image6.png" />
+    <EmbeddedResource Include="Icons\ContactImage\Image7.png" />
+    <EmbeddedResource Include="Icons\ContactImage\Image8.png" />
+    <EmbeddedResource Include="Icons\ContactImage\Image9.png" />
+    <EmbeddedResource Include="Icons\DataTemplateSelector\IncomingIndicatorImage.png" />
+    <EmbeddedResource Include="Icons\DataTemplateSelector\OutgoingIndicatorImage.png" />
+    <EmbeddedResource Include="Icons\DataTemplateSelector\Profile0.png" />
+    <EmbeddedResource Include="Icons\DataTemplateSelector\Profile1.png" />
+    <EmbeddedResource Include="Icons\DataTemplateSelector\Profile2.png" />
+    <EmbeddedResource Include="Icons\DataTemplateSelector\Profile3.png" />
+    <EmbeddedResource Include="Icons\DataTemplateSelector\Profile4.png" />
+    <EmbeddedResource Include="Icons\DataTemplateSelector\SendIcon.png" />
+    <EmbeddedResource Include="Icons\DataTemplateSelector\TemplateImage0.jpg" />
+    <EmbeddedResource Include="Icons\DataTemplateSelector\TemplateImage1.jpg" />
+    <EmbeddedResource Include="Icons\DataTemplateSelector\TemplateImage2.jpg" />
+    <EmbeddedResource Include="Icons\DataTemplateSelector\TemplateImage3.jpg" />
+    <EmbeddedResource Include="Icons\DataTemplateSelector\TemplateImage4.jpg" />
+    <EmbeddedResource Include="Icons\Delete.png" />
+    <EmbeddedResource Include="Icons\Delete1.png" />
+    <EmbeddedResource Include="Icons\Electronics.jpg" />
+    <EmbeddedResource Include="Icons\Fashion.jpg" />
+    <EmbeddedResource Include="Icons\Favorites.png" />
+    <EmbeddedResource Include="Icons\Favorites1.png" />
+    <EmbeddedResource Include="Icons\FlowerGiftCakes.jpg" />
+    <EmbeddedResource Include="Icons\Food.jpg" />
+    <EmbeddedResource Include="Icons\Footware.jpg" />
+    <EmbeddedResource Include="Icons\GalleryIcon.png" />
+    <EmbeddedResource Include="Icons\GridLayout\Image1.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image10.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image11.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image12.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image13.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image14.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image15.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image16.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image17.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image18.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image19.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image2.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image20.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image21.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image22.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image23.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image24.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image25.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image26.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image27.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image28.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image29.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image3.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image30.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image4.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image5.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image6.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image7.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image8.jpg" />
+    <EmbeddedResource Include="Icons\GridLayout\Image9.jpg" />
+	<EmbeddedResource Include="Icons\GridLayout\Favorite1.png" />
+    <EmbeddedResource Include="Icons\GridLayout\Favorite2.png" />
+    <EmbeddedResource Include="Icons\Home &amp; Kitchen.jpg" />
+    <EmbeddedResource Include="Icons\InboxIcon.png" />
+    <EmbeddedResource Include="Icons\Jewellery.jpg" />
+    <EmbeddedResource Include="Icons\Kids.jpg" />
+    <EmbeddedResource Include="Icons\Layout.jpg" />
+    <EmbeddedResource Include="Icons\LoadMore\Apple.jpg" />
+    <EmbeddedResource Include="Icons\LoadMore\Apricot.jpg" />
+    <EmbeddedResource Include="Icons\LoadMore\Banana.jpg" />
+    <EmbeddedResource Include="Icons\LoadMore\Cherry.jpg" />
+    <EmbeddedResource Include="Icons\LoadMore\CustardApple.jpg" />
+    <EmbeddedResource Include="Icons\LoadMore\Dragon.jpg" />
+    <EmbeddedResource Include="Icons\LoadMore\Grapes.jpg" />
+    <EmbeddedResource Include="Icons\LoadMore\Guava.jpg" />
+    <EmbeddedResource Include="Icons\LoadMore\Jackfruit.jpg" />
+    <EmbeddedResource Include="Icons\LoadMore\Kiwi.jpg" />
+    <EmbeddedResource Include="Icons\LoadMore\Lemon.jpg" />
+    <EmbeddedResource Include="Icons\LoadMore\Lime.jpg" />
+    <EmbeddedResource Include="Icons\LoadMore\Mango.jpg" />
+    <EmbeddedResource Include="Icons\LoadMore\Orange.jpg" />
+    <EmbeddedResource Include="Icons\LoadMore\Papaya.jpg" />
+    <EmbeddedResource Include="Icons\LoadMore\Peaches.jpg" />
+    <EmbeddedResource Include="Icons\LoadMore\Pear.jpg" />
+    <EmbeddedResource Include="Icons\LoadMore\Pineapple.jpg" />
+    <EmbeddedResource Include="Icons\LoadMore\Pomegranate.jpg" />
+    <EmbeddedResource Include="Icons\LoadMore\Raspberry.jpg" />
+    <EmbeddedResource Include="Icons\LoadMore\Strawberry.jpg" />
+    <EmbeddedResource Include="Icons\LoadMore\Watermelon.jpg" />
+    <EmbeddedResource Include="Icons\Mobile &amp; Accesories.jpg" />
+    <EmbeddedResource Include="Icons\Movies &amp; Music.jpg" />
+    <EmbeddedResource Include="Icons\NotSelected.png" />
+    <EmbeddedResource Include="Icons\NotSelected1.png" />
+    <EmbeddedResource Include="Icons\Perfumes.jpg" />
+    <EmbeddedResource Include="Icons\Pizza0.jpg" />
+    <EmbeddedResource Include="Icons\Pizza1.jpg" />
+    <EmbeddedResource Include="Icons\Pizza10.jpg" />
+    <EmbeddedResource Include="Icons\Pizza11.jpg" />
+    <EmbeddedResource Include="Icons\Pizza12.jpg" />
+    <EmbeddedResource Include="Icons\Pizza13.jpg" />
+    <EmbeddedResource Include="Icons\Pizza14.jpg" />
+    <EmbeddedResource Include="Icons\Pizza15.jpg" />
+    <EmbeddedResource Include="Icons\Pizza16.jpg" />
+    <EmbeddedResource Include="Icons\Pizza17.jpg" />
+    <EmbeddedResource Include="Icons\Pizza2.jpg" />
+    <EmbeddedResource Include="Icons\Pizza3.jpg" />
+    <EmbeddedResource Include="Icons\Pizza4.jpg" />
+    <EmbeddedResource Include="Icons\Pizza5.jpg" />
+    <EmbeddedResource Include="Icons\Pizza6.jpg" />
+    <EmbeddedResource Include="Icons\Pizza7.jpg" />
+    <EmbeddedResource Include="Icons\Pizza8.jpg" />
+    <EmbeddedResource Include="Icons\Pizza9.jpg" />
+    <EmbeddedResource Include="Icons\Rating.png" />
+    <EmbeddedResource Include="Icons\Selected.png" />
+    <EmbeddedResource Include="Icons\Selected1.png" />
+    <EmbeddedResource Include="Icons\SelectionCancel.png" />
+    <EmbeddedResource Include="Icons\SelectionEdit.png" />
+    <EmbeddedResource Include="Icons\SongThumbnail.png" />
+    <EmbeddedResource Include="Icons\SortIcon.png" />
+    <EmbeddedResource Include="Icons\Sort_Ascending.png" />
+    <EmbeddedResource Include="Icons\Sort_Decending.png" />
+    <EmbeddedResource Include="Icons\Sports &amp; Health.jpg" />
+    <EmbeddedResource Include="Icons\Watches.jpg" />
+    <EmbeddedResource Include="SamplesList\SamplesList.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    
+    <PackageReference Include="SampleBrowser.Core" Version="17.1.0.47" />
+	
+	<PackageReference Include="Syncfusion.Xamarin.Buttons" Version="17.1.0.47" />
+    
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="17.1.0.47" />
+    
+    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="17.1.0.47" />
+    
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="17.1.0.47" />
+    
+    <PackageReference Include="Syncfusion.Xamarin.SfDataGrid" Version="17.1.0.47" />
+    
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="17.1.0.47" />
+    
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox" Version="17.1.0.47" />
+    
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown" Version="17.1.0.47" />
+    
+    <PackageReference Include="Syncfusion.Xamarin.SfPullToRefresh" Version="17.1.0.47" />
+    
+    <PackageReference Include="System.ComponentModel" Version="4.3.0" />
+    
+    <PackageReference Include="Xamarin.Forms" Version="3.2.0.871581" />
+	
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="MainPage.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Samples\Themes\Themes.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

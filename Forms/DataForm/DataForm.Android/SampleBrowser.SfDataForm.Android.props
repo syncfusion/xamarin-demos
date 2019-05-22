@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project >
+    
+    <ItemGroup>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\icon.png">
+            <Link>Resources\drawable\icon.png</Link>
+        </AndroidResource>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Add.png">
+            <Link>Resources\drawable\Add.png</Link>
+        </AndroidResource>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Address.png">
+            <Link>Resources\drawable\Address.png</Link>
+        </AndroidResource>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\BirthDate.png">
+            <Link>Resources\drawable\BirthDate.png</Link>
+        </AndroidResource>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DataForm_Contact0.png">
+            <Link>Resources\drawable\DataForm_Contact0.png</Link>
+        </AndroidResource>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DataForm_Contact1.png">
+            <Link>Resources\drawable\DataForm_Contact1.png</Link>
+        </AndroidResource>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DataForm_Contact2.png">
+            <Link>Resources\drawable\DataForm_Contact2.png</Link>
+        </AndroidResource>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DataForm_Contact3.png">
+            <Link>Resources\drawable\DataForm_Contact3.png</Link>
+        </AndroidResource>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DataForm_Contact4.png">
+            <Link>Resources\drawable\DataForm_Contact4.png</Link>
+        </AndroidResource>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DataForm_Contact5.png">
+            <Link>Resources\drawable\DataForm_Contact5.png</Link>
+        </AndroidResource>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DataForm_Contact6.png">
+            <Link>Resources\drawable\DataForm_Contact6.png</Link>
+        </AndroidResource>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DataForm_Contact7.png">
+            <Link>Resources\drawable\DataForm_Contact7.png</Link>
+        </AndroidResource>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DataForm_Contact8.png">
+            <Link>Resources\drawable\DataForm_Contact8.png</Link>
+        </AndroidResource>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ContactForm.png">
+            <Link>Resources\drawable\ContactForm.png</Link>
+        </AndroidResource>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DataFormGettingStarted.png">
+            <Link>Resources\drawable\DataFormGettingStarted.png</Link>
+        </AndroidResource>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Email.png">
+            <Link>Resources\drawable\Email.png</Link>
+        </AndroidResource>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Group.png">
+            <Link>Resources\drawable\Group.png</Link>
+        </AndroidResource>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\LabelContactName.png">
+            <Link>Resources\drawable\LabelContactName.png</Link>
+        </AndroidResource>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\DataForm_Phone.png">
+            <Link>Resources\drawable\DataForm_Phone.png</Link>
+        </AndroidResource>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\TapEditIllustration.png">
+            <Link>Resources\drawable\TapEditIllustration.png</Link>
+        </AndroidResource>
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Notes.png">
+            <Link>Resources\drawable\Notes.png</Link>
+        </AndroidResource>
+    </ItemGroup>
+    
+</Project>

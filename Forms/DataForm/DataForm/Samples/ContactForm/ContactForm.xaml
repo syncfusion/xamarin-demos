@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SampleBrowser.SfDataForm"
+             xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:fab="clr-namespace:FAB.Forms;assembly=FAB.Forms"
+             xmlns:dataSource="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable"
+             x:Class="SampleBrowser.SfDataForm.ContactForm">
+    <sample:SampleView.BindingContext>
+        <local:ContactListViewModel/>
+    </sample:SampleView.BindingContext>
+
+  <sample:SampleView.Behaviors>
+    <local:ContactFormBehaviors/>
+  </sample:SampleView.Behaviors>
+  
+  <Grid Margin="0" x:Name="gridLayout">
+    <sync:SfListView x:Name="listView" ItemSize="60" SelectionBackgroundColor="#E4E4E4"
+                     ItemsSource="{Binding ContactsInfo}">
+      <sync:SfListView.DataSource>
+        <dataSource:DataSource LiveDataUpdateMode="AllowDataShaping">
+          <dataSource:DataSource.SortDescriptors>
+            <dataSource:SortDescriptor PropertyName="ContactName"/>
+          </dataSource:DataSource.SortDescriptors>
+        </dataSource:DataSource>
+      </sync:SfListView.DataSource>
+      <sync:SfListView.ItemTemplate>
+        <DataTemplate>
+          <Grid x:Name="grid" RowSpacing="0">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*" />
+              <RowDefinition Height="1" />
+            </Grid.RowDefinitions>
+            <Grid RowSpacing="0">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="70" />
+              </Grid.ColumnDefinitions>
+
+              <Image Source="{Binding ContactImage}"
+             VerticalOptions="Center"
+             HorizontalOptions="Center"
+             HeightRequest="50"/>
+
+              <Grid Grid.Column="1"
+            RowSpacing="1"
+            Padding="10,0,0,0"
+            VerticalOptions="Center">
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="*" />
+                  <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Label LineBreakMode="NoWrap"
+             TextColor="#474747"
+             Text="{Binding ContactName}">
+                  <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double">
+                      <OnPlatform.WinPhone>
+                        <OnIdiom x:TypeArguments="x:Double" Phone="18" Tablet="20" Desktop="20" />
+                      </OnPlatform.WinPhone>
+                      <OnPlatform.Android>
+                        <OnIdiom x:TypeArguments="x:Double"
+               Phone="16"
+               Tablet="18" />
+                      </OnPlatform.Android>
+                      <OnPlatform.iOS>
+                        <OnIdiom x:TypeArguments="x:Double"
+               Phone="16"
+               Tablet="18" />
+                      </OnPlatform.iOS>
+                    </OnPlatform>
+                  </Label.FontSize>
+                </Label>
+                <Label Grid.Row="1"
+             Grid.Column="0"
+             TextColor="#474747"
+             LineBreakMode="NoWrap"
+             Text="{Binding ContactNumber}">
+                  <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double">
+                      <OnPlatform.WinPhone>
+                        <OnIdiom x:TypeArguments="x:Double" Phone="12" Tablet="12" Desktop="12" />
+                      </OnPlatform.WinPhone>
+                      <OnPlatform.Android>
+                        <OnIdiom x:TypeArguments="x:Double"
+               Phone="12"
+               Tablet="14" />
+                      </OnPlatform.Android>
+                      <OnPlatform.iOS>
+                        <OnIdiom x:TypeArguments="x:Double"
+               Phone="12"
+               Tablet="14" />
+                      </OnPlatform.iOS>
+                    </OnPlatform>
+                  </Label.FontSize>
+                </Label>
+              </Grid>
+              <Grid Grid.Row="0"
+            Grid.Column="2"
+            RowSpacing="0"
+            HorizontalOptions="End"
+            Padding="0,10,10,0">
+                <Label LineBreakMode="NoWrap"
+             TextColor="#474747"
+             Text="{Binding ContactType}">
+                  <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double">
+                      <OnPlatform.WinPhone>
+                        <OnIdiom x:TypeArguments="x:Double" Phone="10" Tablet="11" Desktop="11" />
+                      </OnPlatform.WinPhone>
+                      <OnPlatform.Android>
+                        <OnIdiom x:TypeArguments="x:Double"
+               Phone="10"
+               Tablet="12" />
+                      </OnPlatform.Android>
+                      <OnPlatform.iOS>
+                        <OnIdiom x:TypeArguments="x:Double"
+               Phone="10"
+               Tablet="12" />
+                      </OnPlatform.iOS>
+                    </OnPlatform>
+                  </Label.FontSize>
+                </Label>
+              </Grid>
+            </Grid>
+            <StackLayout Grid.Row="1" BackgroundColor="#E4E4E4" HeightRequest="1"/>
+          </Grid>
+        </DataTemplate>
+      </sync:SfListView.ItemTemplate>
+      <sync:SfListView.Behaviors>
+        <local:ListViewBehavior/>
+      </sync:SfListView.Behaviors>
+    </sync:SfListView>
+    <local:FloatingActionButtonImage Margin="15" HeightRequest="60" WidthRequest="60"
+                                     AbsoluteLayout.LayoutFlags="PositionProportional"
+                                     AbsoluteLayout.LayoutBounds="1.0,1.0,-1,-1"
+                                     Command="{Binding Path=BindingContext.AddCommand, Source={x:Reference Name=listView}}"
+                                              CommandParameter="{Binding Source={x:Reference Name=listView}}"/>
+    <Grid x:Name="Illustrationgrid" BackgroundColor="Black" Opacity="0.8"/>
+  </Grid>
+</sample:SampleView>
