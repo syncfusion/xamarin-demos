@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Samples>
-  <Sample Title="Getting Started" Name="SegmentViewGettingStarted" />
-  <Sample Title="Customization" Name="SegmentCustomization" />
-  <Sample Title="Switches and Tokens" Name="Tokens" />
-  <Sample Title="Custom Views" Name="SegmentCustomView" />
-</Samples>
