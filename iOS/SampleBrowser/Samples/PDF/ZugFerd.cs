@@ -432,7 +432,7 @@ namespace SampleBrowser
                                             break;
                                         case "Price":
                                             reader.Read();
-                                            product.Price = float.Parse(reader.Value);
+                                            product.Price = float.Parse(reader.Value, System.Globalization.CultureInfo.InvariantCulture);
                                             break;
                                         case "Quantity":
                                             reader.Read();
@@ -440,7 +440,7 @@ namespace SampleBrowser
                                             break;
                                         case "Total":
                                             reader.Read();
-                                            product.Total = float.Parse(reader.Value);
+                                            product.Total = float.Parse(reader.Value, System.Globalization.CultureInfo.InvariantCulture);
                                             break;
                                     }
                                 }
@@ -470,8 +470,8 @@ namespace SampleBrowser
             for (int i = 0; i < grid.Rows.Count; i++)
             {
                 string cellValue = grid.Rows[i].Cells[grid.Columns.Count - 1].Value.ToString();
-                float result;
-                Total += float.TryParse(cellValue, out result) ? result : 0;
+                float result = float.Parse(cellValue, System.Globalization.CultureInfo.InvariantCulture);
+                Total += result;
             }
             return Total;
 

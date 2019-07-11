@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\cake_schedule.png">
+            <Link>Resources\cake_schedule.png</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Checkup.png">
+            <Link>Resources\Checkup.png</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Conference.png">
+            <Link>Resources\Conference.png</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\conference_schedule.png">
+            <Link>Resources\conference_schedule.png</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\schedule_editor.png">
+            <Link>Resources\schedule_editor.png</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\scheduleview.png">
+            <Link>Resources\scheduleview.png</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\stethoscope_schedule.png">
+            <Link>Resources\cake_schedule.png</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\troubleshoot_schedule.png">
+            <Link>Resources\troubleshoot_schedule.png</Link>
+        </BundleResource>
+		<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Schedule_Resource0.png">
+            <Link>Resources\Schedule_Resource0.png</Link>
+        </BundleResource>
+		<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Schedule_Resource1.png">
+            <Link>Resources\Schedule_Resource1.png</Link>
+        </BundleResource>
+		<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Schedule_Resource2.png">
+            <Link>Resources\Schedule_Resource2.png</Link>
+        </BundleResource>
+		<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Schedule_Resource3.png">
+            <Link>Resources\Schedule_Resource3.png</Link>
+        </BundleResource>
+		<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Schedule_Resource4.png">
+            <Link>Resources\Schedule_Resource4.png</Link>
+        </BundleResource>
+		<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Schedule_Resource5.png">
+            <Link>Resources\Schedule_Resource5.png</Link>
+        </BundleResource>
+		<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Schedule_Resource6.png">
+            <Link>Resources\Schedule_Resource6.png</Link>
+        </BundleResource>
+		<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Schedule_Resource7.png">
+            <Link>Resources\Schedule_Resource7.png</Link>
+        </BundleResource>
+		<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Schedule_Resource8.png">
+            <Link>Resources\Schedule_Resource8.png</Link>
+        </BundleResource>
+    </ItemGroup>
+    
+</Project>
+

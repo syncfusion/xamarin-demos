@@ -57,6 +57,7 @@ namespace SampleBrowser
         internal UIView highlightToolbar = new UIView();
         internal UIView underlineToolbar = new UIView();
         internal UIView strikeOutToolbar = new UIView();
+        internal UIView editStampAnnotationToolbar = new UIView();
         internal UIButton toolbarBackbutton = new UIButton();
         internal UIButton colorButton = new UIButton();
         internal UIView colorToolbar = new UIView();
@@ -65,6 +66,7 @@ namespace SampleBrowser
         private UIButton saveButton = new UIButton();
         internal UIButton highlightEnable = new UIButton();
         internal UIButton underlineEnable = new UIButton();
+        internal UIButton editStampButton = new UIButton();
         internal UIButton strikeEnable = new UIButton();
         internal UIButton redButton = new UIButton();
         internal UIButton blueButton = new UIButton();
@@ -107,7 +109,7 @@ namespace SampleBrowser
         internal bool isAnnotationToolbarVisible;
         internal IAnnotation annotation;
         internal AlertViewDelegate alertViewDelegate;
-        internal UIFont highFont;
+        internal UIFont highFont, stampFont;
         internal UIFont fontSizeFont;
         internal UIFont bookmarkFont;
         internal bool IsSelected;
@@ -154,6 +156,7 @@ namespace SampleBrowser
         internal UIView separator = new UIView();
         internal AnnotationMode shapeView;
         internal UIButton signatureButton = new UIButton();
+        internal UIButton stampButton = new UIButton();
         internal UIFont signatureFont;
        
         //PdfLoadedDocument instance from which the bookmarks will be obtained
@@ -162,15 +165,20 @@ namespace SampleBrowser
         internal BookmarkToolbar bookmarkToolbar;
         internal List<CustomBookmark> listViewItemsSource = new List<CustomBookmark>();
         internal bool isBookmarkPaneVisible;
+        internal StampAnnotationView stampView;
+
         public CustomToolbar()
         {
             parentView = new UIView(this.Frame);
             initialStream = typeof(CustomToolbar).GetTypeInfo().Assembly.GetManifestResourceStream("SampleBrowser.Samples.PDFViewer.Assets.F# Succinctly.pdf");
-            loadedDocument = new PdfLoadedDocument(initialStream);
+            MemoryStream initialDocumentStream = new MemoryStream();
+            initialStream.CopyTo(initialDocumentStream);
+            loadedDocument = new PdfLoadedDocument(initialDocumentStream);
             PopulateInitialBookmarkList();
             var tap = new UITapGestureRecognizer(OnSingleTap);
             tap.CancelsTouchesInView = false; //for iOS5
             highFont = UIFont.FromName("Final_PDFViewer_IOS_FontUpdate", 30);
+            stampFont = UIFont.FromName("Font Text edit stamp", 30);
             fontSizeFont = UIFont.FromName("Font size Font", 30);
 			signatureFont = UIFont.FromName("Signature_PDFViewer_FONT", 30);
             //Font that defines the icons for the bookmark toolbar buttons
@@ -201,6 +209,8 @@ namespace SampleBrowser
             pdfViewerControl.FreeTextPopupDisappeared += edittextHelper.PdfViewerControl_FreeTextPopupDisappearing;
             pdfViewerControl.ShapeAnnotationSelected += shapeHelper.PdfViewerControl_ShapeAnnotationSelected;
             pdfViewerControl.ShapeAnnotationDeselected += shapeHelper.PdfViewerControl_ShapeAnnotationDeselected;
+            pdfViewerControl.StampAnnotationSelected += helper.PdfViewerControl_StampAnnotationSelected;
+            pdfViewerControl.StampAnnotationDeselected += helper.PdfViewerControl_StampAnnotationDeselected;
             BoldBtn1.TouchUpInside += inkHelper.BoldColorBtn1_TouchUpInside;
             BoldColorBtn1.TouchUpInside += inkHelper.BoldColorBtn1_TouchUpInside;
             BoldBtn2.TouchUpInside += inkHelper.BoldColorBtn2_TouchUpInside;
@@ -236,7 +246,9 @@ namespace SampleBrowser
             dropDownMenu.DropDownMenuItemChanged += (e, a) =>
             {
                 fileStream = typeof(CustomToolbar).GetTypeInfo().Assembly.GetManifestResourceStream("SampleBrowser.Samples.PDFViewer.Assets." + a.DisplayText + ".pdf");
-                loadedDocument = new PdfLoadedDocument(fileStream);
+                MemoryStream stream = new MemoryStream();
+                fileStream.CopyTo(stream);
+                loadedDocument = new PdfLoadedDocument(stream);
                 PopulateInitialBookmarkList();
                 pdfViewerControl.LoadDocument(fileStream);
                 isBookmarkPaneVisible = false;
@@ -258,10 +270,11 @@ namespace SampleBrowser
             if(bookmarkToolbar != null)
                 bookmarkToolbar.bookmarkListView.ReloadData();
         }
+        internal bool isStampViewVisible;
         public override void LayoutSubviews()
         {
             base.LayoutSubviews();
-            if (!isBookmarkPaneVisible || UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
+            if (!isStampViewVisible && !isBookmarkPaneVisible || UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
             {
 				//Set the frames to SfPdfViewer and bookmark toolbar based on whether the bookmark toolbar is visible
                 if (!isBookmarkPaneVisible)
@@ -276,6 +289,13 @@ namespace SampleBrowser
                     if (bookmarkToolbar != null)
                         bookmarkToolbar.Frame = new CGRect(3 * this.Frame.Width / 5, DefaultToolbarHeight, this.Frame.Width - (3 * this.Frame.Width / 5), this.Frame.Height - 2*DefaultToolbarHeight);
                 }
+
+                if(isStampViewVisible)
+                {
+                    parentView.Frame = new CGRect(0, DefaultToolbarHeight, this.Frame.Width, this.Frame.Height - (DefaultToolbarHeight));
+                    stampView.Frame = new CGRect(0, 0, this.Frame.Width, this.Frame.Height);
+                }
+
                 if (!isLoaded)
                 {
                     pdfViewerControl.LoadDocument(initialStream);
@@ -316,7 +336,10 @@ namespace SampleBrowser
                 highlightToolbar.Frame = separateAnnotationFrame;
                 underlineToolbar.Frame = separateAnnotationFrame;
                 strikeOutToolbar.Frame = separateAnnotationFrame;
+                editStampAnnotationToolbar.Frame = separateAnnotationFrame;
                 deleteButton.Frame = new CGRect(this.Frame.Width - 100, 7, 35, 35);
+                if (annotation != null && annotation is StampAnnotation)
+                    deleteButton.Frame = new CGRect(this.Frame.Width - 50, 7, 35, 35);
                 toolbarBackbutton.Frame = new CGRect(15, 7, 35, 35);
                 inkAnnotationSessionToolbar.Frame = toolBarFrame;
                 shapeAnnotationToolbar.Frame = separateAnnotationFrame;
@@ -327,9 +350,11 @@ namespace SampleBrowser
                 arrowToolbar.Frame = separateAnnotationFrame;
                 annotationToolbar.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
             }
-			//For mobile set the frame to bookmark toolbar so that it occupies the entire view
-            else if(UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone)
+            //For mobile set the frame to bookmark toolbar so that it occupies the entire view
+            else if (!isStampViewVisible && UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone)
                 bookmarkToolbar.Frame = new CGRect(this.Frame.X, 0, this.Frame.Width, this.Frame.Height);
+            else if (isStampViewVisible && UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone)
+                stampView.Frame = new CGRect(this.Frame.X, 0, Frame.Width, Frame.Height);
         }
         void PdfViewerControl_CanUndoModified(object sender, CanUndoModifiedEventArgs args)
         {

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Samples>
+	<Group ImageId = "AllControlls/PDFViewer.png" Title = "PDFViewer"
+                Description = "High performance PDF Viewer component with features like search, zooming and text selection." SearchTags = "PDF viewer,PDF reader,Display PDF,View PDF,search text, zooming, scroll, select text, copy text" >
+    <Sample IsUpdated="True" Title="Getting Started" Name="PDFViewerGettingStarted" Icon="AllControlls/PDFViewer.png" EnableStoragePermission="true" />
+    <Sample IsUpdated="True" Title="Custom Toolbar" Name="PDFViewerCustomToolbar" IsUpated="True" Icon="AllControlls/PDFViewer.png" EnableStoragePermission="true" />
+    <Sample Title="Fill And Sign" Name="FillAndSign" Icon="AllControlls/PDFViewer.png" EnableStoragePermission="true" />
+  </Group>
+</Samples>

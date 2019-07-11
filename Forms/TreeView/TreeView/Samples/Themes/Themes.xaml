@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   x:Class="SampleBrowser.SfTreeView.Themes"
+                   xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                   xmlns:syncfusion="clr-namespace:Syncfusion.XForms.TreeView;assembly=Syncfusion.SfTreeView.XForms"
+                   xmlns:treeviewengine="clr-namespace:Syncfusion.TreeView.Engine;assembly=Syncfusion.SfTreeView.XForms"
+                   xmlns:core="clr-namespace:Syncfusion.XForms.Themes;assembly=Syncfusion.Core.XForms">
+  
+
+    <sample:SampleView.Content>
+        <syncfusion:SfTreeView x:Name="treeView" IsAnimationEnabled="True">
+            <syncfusion:SfTreeView.Nodes>
+                <treeviewengine:TreeViewNode Content="Animals" IsExpanded="True">
+                    <treeviewengine:TreeViewNode.ChildNodes>
+                        <treeviewengine:TreeViewNode Content="Mammals">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Bat"/>
+                                <treeviewengine:TreeViewNode Content="Bear"/>
+                                <treeviewengine:TreeViewNode Content="Deer"/>
+                                <treeviewengine:TreeViewNode Content="Rhinocerous"/>
+                                <treeviewengine:TreeViewNode Content="Hamster"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="Reptiles" IsExpanded="True">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Squamata">
+                                    <treeviewengine:TreeViewNode.ChildNodes>
+                                        <treeviewengine:TreeViewNode Content="Snake"/>
+                                        <treeviewengine:TreeViewNode Content="Lizard"/>
+                                    </treeviewengine:TreeViewNode.ChildNodes>
+                                </treeviewengine:TreeViewNode>
+                                <treeviewengine:TreeViewNode Content="Testudines">
+                                    <treeviewengine:TreeViewNode.ChildNodes>
+                                        <treeviewengine:TreeViewNode Content="Turtle"/>
+                                        <treeviewengine:TreeViewNode Content="Tortoises"/>
+                                    </treeviewengine:TreeViewNode.ChildNodes>
+                                </treeviewengine:TreeViewNode>
+                                <treeviewengine:TreeViewNode Content="Crocodile"/>
+                                <treeviewengine:TreeViewNode Content="Lacertids"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="Amphibians" IsExpanded="True">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Frog"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                    </treeviewengine:TreeViewNode.ChildNodes>
+                </treeviewengine:TreeViewNode>
+                <treeviewengine:TreeViewNode Content="Birds" IsExpanded="True">
+                    <treeviewengine:TreeViewNode.ChildNodes>
+                        <treeviewengine:TreeViewNode Content="Tweety Birds" IsExpanded="True">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Sparrows"/>
+                                <treeviewengine:TreeViewNode Content="Finches"/>
+                                <treeviewengine:TreeViewNode Content="Robins"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="Hawk-like Birds"/>
+                        <treeviewengine:TreeViewNode Content="Ducky Birds">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Ducks"/>
+                                <treeviewengine:TreeViewNode Content="Swans"/>
+                                <treeviewengine:TreeViewNode Content="Sea gulls"/>
+                                <treeviewengine:TreeViewNode Content="albatrosses"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="Eagles">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Bald Eagles"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="Avocets">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Red-necked Avocet"/>
+                                <treeviewengine:TreeViewNode Content="Pied Avocet"/>
+                                <treeviewengine:TreeViewNode Content="Andean Avocet"/>
+                                <treeviewengine:TreeViewNode Content="American Avocet"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="King Fisher"/>
+                        <treeviewengine:TreeViewNode Content="Parrot"/>
+                    </treeviewengine:TreeViewNode.ChildNodes>
+                </treeviewengine:TreeViewNode>
+            </syncfusion:SfTreeView.Nodes>
+        </syncfusion:SfTreeView>
+    </sample:SampleView.Content>
+</sample:SampleView>

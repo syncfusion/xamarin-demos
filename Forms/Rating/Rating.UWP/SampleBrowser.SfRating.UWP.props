@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"> 
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\Angry_selected.png" >
+	<Link>Angry_selected.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Angry_Unselected.png" >
+	<Link>Angry_Unselected.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Excited_selected.png" >
+	<Link>Excited_selected.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Excited_Unselected.png" >
+	<Link>Excited_Unselected.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Happy_selected.png" >
+	<Link>Happy_selected.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Happy_Unselected.png" >
+	<Link>Happy_Unselected.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\movie.png" >
+	<Link>movie.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Neutral_selected.png" >
+	<Link>Neutral_selected.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Neutral_Unselected.png" >
+	<Link>Neutral_Unselected.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\UnHappy_selected.png" >
+	<Link>UnHappy_selected.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\UnHappy_Unselected.png" >
+	<Link>UnHappy_Unselected.png</Link>
+	</Content>
+  </ItemGroup>
+
+</Project>

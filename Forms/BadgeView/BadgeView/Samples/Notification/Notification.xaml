@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView x:Class="SampleBrowser.SfBadgeView.Notification"
+                    xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+                  xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:samplelocal="clr-namespace:SampleBrowser.SfBadgeView" xmlns:badge="clr-namespace:Syncfusion.XForms.BadgeView;assembly=Syncfusion.SfBadgeView.XForms">
+
+    <local:SampleView.Resources>
+        <ResourceDictionary>
+            <samplelocal:BadgeViewConverter x:Key ="colorConverter"/>
+        </ResourceDictionary>
+    </local:SampleView.Resources>
+    <local:SampleView.BindingContext>
+        <samplelocal:NotificationViewModel />
+    </local:SampleView.BindingContext>
+    <local:SampleView.Content>
+        <Grid BackgroundColor="#f7f7f7">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            <sync:SfListView x:Name="listView" BackgroundColor="White"
+                       ItemSize="75" ItemsSource="{Binding Collection}"
+					   FocusBorderThickness="0" 
+                       IsStickyGroupHeader="True"
+                       AllowGroupExpandCollapse="True" 
+                       SelectionBackgroundColor="#ECECEC">
+
+                <sync:SfListView.HeaderSize>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On  Platform="Android, iOS, UWP">
+                            <OnIdiom x:TypeArguments="x:Double" Phone="40" Tablet="40" />
+                        </On>
+                    </OnPlatform>
+                </sync:SfListView.HeaderSize>
+
+                <sync:SfListView.HeaderTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal" BackgroundColor="#E4E4E4">
+                                    <Label Text="Chats" 
+                         FontSize="20" 
+                         FontAttributes="Bold"
+                         VerticalOptions="Center" 
+                         HorizontalOptions="Start" 
+                         Margin="20,0,0,0" />
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </sync:SfListView.HeaderTemplate>
+
+                <sync:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid x:Name="grid" RowSpacing="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="1" />
+                                    </Grid.RowDefinitions>
+                                    <Grid RowSpacing="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="70" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Image Source="{Binding Image}"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           HeightRequest="50" WidthRequest="50"/>
+
+                                        <Grid Grid.Column="1"
+                          RowSpacing="1"
+                          Padding="10,0,0,0"
+                          VerticalOptions="Center">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+
+                                            <Label LineBreakMode="NoWrap"
+                             TextColor="Black"
+                             Text="{Binding Name}">
+                                                <Label.FontSize>
+                                                    <OnPlatform x:TypeArguments="x:Double">
+                                                        <On  Platform="Android,iOS, UWP">
+                                                            <OnIdiom x:TypeArguments="x:Double" Phone="16" Tablet="18" Desktop="20"/>
+                                                        </On>
+                                                    </OnPlatform>
+                                                </Label.FontSize>
+                                            </Label>
+                                            <Label Grid.Row="1"
+                             Grid.Column="0"
+                             TextColor="#777777"
+                             LineBreakMode="NoWrap"
+                             Text="{Binding Message}">
+                                                <Label.FontSize>
+                                                    <OnPlatform x:TypeArguments="x:Double">
+                                                        <On  Platform="Android,iOS, UWP">
+                                                            <OnIdiom x:TypeArguments="x:Double" Phone="12" Tablet="14" Desktop="12"/>
+                                                        </On>
+                                                    </OnPlatform>
+                                                </Label.FontSize>
+                                            </Label>
+                                        </Grid>
+                                        <Grid Grid.Row="0"
+                          Grid.Column="2"
+                          RowSpacing="1" 
+                          VerticalOptions="Center">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="0.4*" />
+                                                <RowDefinition Height="0.6*" />
+                                            </Grid.RowDefinitions>
+                                            <Label LineBreakMode="NoWrap" Grid.Row="0" Margin="0,0,10,0" HorizontalOptions="Center"
+                                                   VerticalOptions="Start"
+                              TextColor="{Binding Count,Converter={StaticResource colorConverter}}" Text="{Binding Time}">
+                                                <Label.FontSize>
+                                                    <OnPlatform x:TypeArguments="x:Double">
+                                                        <On  Platform="Android,iOS, UWP">
+                                                            <OnIdiom x:TypeArguments="x:Double" Phone="11" Tablet="13" Desktop="12"/>
+                                                        </On>
+                                                    </OnPlatform>
+                                                </Label.FontSize>
+                                            </Label>
+                                            <badge:SfBadgeView BadgeText="{Binding Count}"  Grid.Row="1">
+                                                <badge:SfBadgeView.BadgeSettings>
+                                                    <badge:BadgeSetting BadgeAnimation="None" BadgeType="Primary" />
+                                                </badge:SfBadgeView.BadgeSettings>
+                                            </badge:SfBadgeView>
+                                        </Grid>
+
+                                    </Grid>
+                                    <StackLayout Grid.Row="1" BackgroundColor="#E4E4E4" HeightRequest="1"/>
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </sync:SfListView.ItemTemplate>
+            </sync:SfListView>
+            <Grid Grid.Row="1" HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand" BackgroundColor="#f7f7f7">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0" BackgroundColor="#f7f7f7">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="20" />
+                    </Grid.RowDefinitions>
+                    <badge:SfBadgeView  x:Name="statusBadge" Margin="0,2,0,0">
+                        <badge:SfBadgeView.Content>
+                            <samplelocal:FontIconLabel Text="&#xe703;" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="#777777" FontSize="28">
+                                <Label.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String" Android="BadgeViewFont.ttf#FONT Sf Badge view" WinPhone="Assets/BadgeViewFont.ttf#FONT Sf Badge view" />
+                                </Label.FontFamily>
+                            </samplelocal:FontIconLabel>
+                        </badge:SfBadgeView.Content>
+                        <badge:SfBadgeView.BadgeSettings>
+                            <badge:BadgeSetting BadgePosition="TopRight" Stroke="White" StrokeWidth="2"                                
+                                    BadgeIcon="Dot" BadgeType="Primary"/>
+                        </badge:SfBadgeView.BadgeSettings>
+                    </badge:SfBadgeView>
+                    <Label Grid.Row="1" FontSize="12" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Margin="0,-5,0,0" Text="Status" TextColor="#777777"/>
+                </Grid>
+
+                <Grid Grid.Column="1" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="20"/>
+                    </Grid.RowDefinitions>
+                    <badge:SfBadgeView x:Name="callsBadge"  Margin="0,1,0,0"
+                              BadgeText="3">
+                        <badge:SfBadgeView.Content>
+                            <samplelocal:FontIconLabel Text="&#xe700;" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" TextColor="#777777" FontSize="28" >
+                                <Label.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String" Android="BadgeViewFont.ttf#FONT Sf Badge view" WinPhone="Assets/BadgeViewFont.ttf#FONT Sf Badge view" />
+                                </Label.FontFamily>
+                            </samplelocal:FontIconLabel>
+                        </badge:SfBadgeView.Content>
+                        <badge:SfBadgeView.BadgeSettings>
+                            <badge:BadgeSetting BadgeAlignment="Center" 
+                                FontSize="12"  BadgeType="Error">
+                            </badge:BadgeSetting>
+                        </badge:SfBadgeView.BadgeSettings>
+                    </badge:SfBadgeView>
+                    <Label Text="Calls" Grid.Row="1" Margin="0,-5,0,0" FontSize="12" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" TextColor="#777777"/>
+                </Grid>
+
+            <Grid Grid.Column="2" BackgroundColor="#f7f7f7">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="20"/>
+                    </Grid.RowDefinitions>
+                    <samplelocal:FontIconLabel Text="&#xe702;" FontAttributes="Bold" TextColor="#777777" FontSize="28" HorizontalTextAlignment="Center" VerticalTextAlignment="End">
+                        <Label.FontFamily>
+                            <OnPlatform x:TypeArguments="x:String" Android="BadgeViewFont.ttf#FONT Sf Badge view" WinPhone="Assets/BadgeViewFont.ttf#FONT Sf Badge view" />
+                        </Label.FontFamily>
+                    </samplelocal:FontIconLabel>
+                    <Label Text="Camera" Grid.Row="1"  FontSize="12" Margin="0,-5,0,0" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" TextColor="#777777"/>
+                </Grid>
+
+             <Grid Grid.Column="4" BackgroundColor="#f7f7f7">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="20"/>
+                    </Grid.RowDefinitions>
+                    <samplelocal:FontIconLabel Text="&#xe704;" FontAttributes="Bold" TextColor="#777777" FontSize="28" HorizontalTextAlignment="Center" VerticalTextAlignment="End">
+                        <Label.FontFamily>
+                            <OnPlatform x:TypeArguments="x:String" Android="BadgeViewFont.ttf#FONT Sf Badge view" WinPhone="Assets/BadgeViewFont.ttf#FONT Sf Badge view" />
+                        </Label.FontFamily>
+                    </samplelocal:FontIconLabel>
+                    <Label Text="Settings" Grid.Row="1"  FontSize="12" Margin="0,-5,0,0" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" TextColor="#777777"/>
+                </Grid>
+
+     <Grid Grid.Column="3" BackgroundColor="#f7f7f7">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="20" />
+                    </Grid.RowDefinitions>
+                    <badge:SfBadgeView x:Name="chatBadge" Margin="0,2,0,0"
+                              BadgeText="1" >
+                        <badge:SfBadgeView.Content>
+                            <samplelocal:FontIconLabel Text="&#xe701;" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="#2770e5" FontSize="28">
+                                <Label.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String" Android="BadgeViewFont.ttf#FONT Sf Badge view" WinPhone="Assets/BadgeViewFont.ttf#FONT Sf Badge view" />
+                                </Label.FontFamily>
+                            </samplelocal:FontIconLabel>
+                        </badge:SfBadgeView.Content>
+                        <badge:SfBadgeView.BadgeSettings>
+                            <badge:BadgeSetting  BadgePosition="TopRight" BadgeAnimation="Scale"
+                                        FontSize="12" BadgeType="Error"/>
+                        </badge:SfBadgeView.BadgeSettings>
+                    </badge:SfBadgeView>
+                    <Label Grid.Row="1" Text="Chats"  FontSize="12" Margin="0,-5,0,0" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" TextColor="#777777"/>
+                </Grid>
+
+            </Grid>
+        </Grid>
+    </local:SampleView.Content>
+
+</local:SampleView>

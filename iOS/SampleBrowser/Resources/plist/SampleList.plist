@@ -512,7 +512,7 @@
 			<key>IsNew</key>
 			<string>NO</string>
 			<key>IsUpdated</key>
-			<string>YES</string>
+			<string>NO</string>
 		</dict>
 		<dict>
 			<key>SampleName</key>
@@ -526,9 +526,17 @@
 			<key>SampleName</key>
 			<string>DataLabel</string>
 			<key>IsNew</key>
-			<string>YES</string>
+			<string>NO</string>
 			<key>IsUpdated</key>
 			<string>NO</string>
+		</dict>
+        <dict>
+            <key>DisplayName</key>
+			<string>Drilldown</string>
+			<key>SampleName</key>
+			<string>TreeMapDrilldown</string>
+			<key>IsNew</key>
+			<string>YES</string>
 		</dict>
 	</array>
 	<key>Rating</key>
@@ -623,7 +631,7 @@
 			<key>IsNew</key>
 			<string>NO</string>
 			<key>IsUpdated</key>
-			<string>NO</string>
+			<string>YES</string>
 			<key>DisplayName</key>
 			<string>Sublayer</string>
 		</dict>
@@ -1110,7 +1118,7 @@
 			<key>IsNew</key>
 			<string>NO</string>
 			<key>IsUpdated</key>
-			<string>YES</string>
+			<string>NO</string>
 		</dict>
 		<dict>
 			<key>Image</key>
@@ -1124,7 +1132,7 @@
 			<key>IsNew</key>
 			<string>NO</string>
 			<key>IsUpdated</key>
-			<string>YES</string>
+			<string>NO</string>
 		</dict>
 		<dict>
 			<key>Image</key>
@@ -1162,18 +1170,20 @@
 			<key>IsUpdated</key>
 			<string>NO</string>
 		</dict>
-		<dict>
-			<key>Image</key>
-			<string>Images/Unbound.png</string>
-			<key>Description</key>
-			<string>This sample showcases the unbound column capability of SfDataGrid. Unbound columns are extra columns that do not belong to the data source.</string>
-			<key>SampleName</key>
-			<string>Unbound Column</string>
-			<key>IsNew</key>
-			<string>NO</string>
-			<key>IsUpdated</key>
-			<string>NO</string>
-		</dict>
+    <dict>
+	  <key>DisplayName</key>
+	  <string>Unbound Views</string>
+      <key>Image</key>
+      <string>Images/Unbound.png</string>
+      <key>Description</key>
+      <string>This sample showcases the unbound column and unbound row capability of SfDataGrid. Unbound columns / rows are extra columns / rows that are generated but do not belong to the data source.</string>
+      <key>SampleName</key>
+      <string>Unbound Column</string>
+      <key>IsNew</key>
+      <string>NO</string>
+      <key>IsUpdated</key>
+      <string>YES</string>
+    </dict>
 		<dict>
 			<key>Image</key>
 			<string>Images/Style.png</string>
@@ -1978,7 +1988,7 @@
       <key>SampleName</key>
       <string>PPTXToImage</string>
       <key>IsNew</key>
-      <string>YES</string>
+      <string>NO</string>
       <key>IsUpdated</key>
       <string>NO</string>
     </dict>
@@ -1990,10 +2000,22 @@
       <key>SampleName</key>
       <string>PPTXToPDF</string>
       <key>IsNew</key>
-      <string>YES</string>
+      <string>NO</string>
       <key>IsUpdated</key>
       <string>NO</string>
     </dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Presentation/slidesample.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to set write protection for Microsoft PowerPoint.</string>
+			<key>SampleName</key>
+			<string>WriteProtection</string>
+			<key>IsNew</key>
+			<string>YES</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
 		<dict>
 			<key>Image</key>
 			<string>Images/Presentation/slidesample.png</string>
@@ -2175,7 +2197,7 @@
 			<key>IsNew</key>
 			<string>NO</string>
 			<key>IsUpdated</key>
-			<string>YES</string>
+			<string>NO</string>
 		</dict>
 		<dict>
 			<key>Image</key>
@@ -2300,6 +2322,30 @@
 			<key>IsUpdated</key>
 			<string>NO</string>
 		</dict>
+    <dict>
+      <key>Image</key>
+      <string>Images/DocIO/letterformat.png</string>
+      <key>Description</key>
+      <string>This sample demonstrates how to create a employee report using Mail merge functionality of DocIO.</string>
+      <key>SampleName</key>
+      <string>Employee Report</string>
+      <key>IsNew</key>
+      <string>YES</string>
+      <key>IsUpdated</key>
+      <string>NO</string>
+    </dict>
+    <dict>
+      <key>Image</key>
+      <string>Images/DocIO/letterformat.png</string>
+      <key>Description</key>
+      <string>This sample demonstrates how to perform Mail merge for nested groups using Mail merge functionality of DocIO.</string>
+      <key>SampleName</key>
+      <string>Nested Mail Merge</string>
+      <key>IsNew</key>
+      <string>NO</string>
+      <key>IsUpdated</key>
+      <string>NO</string>
+    </dict>
 		<dict>
 			<key>Image</key>
 			<string>Images/DocIO/protectionandformfilling.png</string>
@@ -2333,6 +2379,30 @@
 			<string>Word To HTML</string>
 			<key>IsNew</key>
 			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/wordtopdf.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to convert a Word document into PDF.</string>
+			<key>SampleName</key>
+			<string>Word To PDF</string>
+			<key>IsNew</key>
+			<string>YES</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/groupshapes.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create a Word document with Group shapes.</string>
+			<key>SampleName</key>
+			<string>Group Shapes</string>
+			<key>IsNew</key>
+			<string>YES</string>
 			<key>IsUpdated</key>
 			<string>NO</string>
 		</dict>
@@ -2463,7 +2533,7 @@
 			<key>IsNew</key>
 			<string>NO</string>
 			<key>IsUpdated</key>
-			<string>YES</string>
+			<string>NO</string>
 		</dict>
 		<dict>
 			<key>Image</key>
@@ -2475,7 +2545,7 @@
 			<key>SampleName</key>
 			<string>ZugFerd</string>
 			<key>IsNew</key>
-			<string>YES</string>
+			<string>NO</string>
 			<key>IsUpdated</key>
 			<string>NO</string>
 		</dict>
@@ -2508,7 +2578,7 @@
 			<key>IsNew</key>
 			<string>NO</string>
 			<key>IsUpdated</key>
-			<string>NO</string>
+			<string>YES</string>
 		</dict>
 		<dict>
 			<key>Image</key>
@@ -2522,7 +2592,7 @@
 			<key>IsNew</key>
 			<string>NO</string>
 			<key>IsUpdated</key>
-			<string>NO</string>
+			<string>YES</string>
 		</dict>
 		<dict>
 			<key>Image</key>

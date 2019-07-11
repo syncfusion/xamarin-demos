@@ -100,7 +100,7 @@
 			<key>IsNew</key>
 			<string>NO</string>
 			<key>IsUpdated</key>
-			<string>NO</string>
+			<string>YES</string>
 			<key>IsPreview</key>
 			<string>NO</string>
 		</dict>
@@ -340,7 +340,7 @@
 			<key>IsNew</key>
 			<string>NO</string>
 			<key>IsUpdated</key>
-			<string>NO</string>
+			<string>YES</string>
 			<key>IsPreview</key>
 			<string>NO</string>
 		</dict>
@@ -388,7 +388,7 @@
 			<key>IsNew</key>
 			<string>NO</string>
 			<key>IsUpdated</key>
-			<string>YES</string>
+			<string>NO</string>
 			<key>IsPreview</key>
 			<string>NO</string>
 		</dict>
@@ -400,7 +400,7 @@
 			<key>IsNew</key>
 			<string>NO</string>
 			<key>IsUpdated</key>
-			<string>NO</string>
+			<string>YES</string>
 			<key>IsPreview</key>
 			<string>NO</string>
 		</dict>
@@ -424,7 +424,7 @@
 			<key>IsNew</key>
 			<string>NO</string>
 			<key>IsUpdated</key>
-			<string>YES</string>
+			<string>NO</string>
 			<key>IsPreview</key>
 			<string>NO</string>
 		</dict>

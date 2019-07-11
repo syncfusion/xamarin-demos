@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+    x:Class="SampleBrowser.SfSchedule.LoadOnDemand"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:samplelocal="clr-namespace:SampleBrowser.SfSchedule"
+    xmlns:schedule="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.SfSchedule.XForms">
+    <local:SampleView.Content>
+        <Grid x:Name="grid_layout">
+            <schedule:SfSchedule
+                x:Name="Schedule"
+                HorizontalOptions="FillAndExpand"
+                ScheduleView="WeekView"  
+                VerticalOptions="FillAndExpand">
+            </schedule:SfSchedule>
+        </Grid>
+    </local:SampleView.Content>   
+  <local:SampleView.Behaviors>
+    <samplelocal:LoadOnDemandBehavior/>
+  </local:SampleView.Behaviors>
+</local:SampleView>

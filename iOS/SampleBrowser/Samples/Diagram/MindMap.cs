@@ -899,14 +899,15 @@ namespace SampleBrowser
 
         void ShowInfo()
         {
+            int iconSize = 30;
+            int notifierHeight = 50;
+            int iconMargin = 85;
             diagram.PageSettings.BackgroundColor = UIColor.DarkGray;
             diagram.Layer.Opacity = 0.2f;
 
             InfoNotifier = new UIView();
-            //InfoNotifier.Frame = new CGRect(UIScreen.MainScreen.Bounds.Width / 2 - 150, UIScreen.MainScreen.Bounds.Height / 2 - 270, 300, 250);
             InfoNotifier.Frame = new CGRect(0, 0, UIScreen.MainScreen.Bounds.Width, UIScreen.MainScreen.Bounds.Height - 200);
-            InfoNotifier.Layer.CornerRadius = 7;
-            InfoNotifier.BackgroundColor = UIColor.White;
+            InfoNotifier.BackgroundColor = UIColor.FromRGB(39, 144, 249);
             this.AddSubview(InfoNotifier);
 
             UILabel title = new UILabel();
@@ -915,15 +916,13 @@ namespace SampleBrowser
                 title.Text = " Add Note";
             else
                 title.Text = " Edit Note";
-            title.TextColor = UIColor.Black;
-            title.Font = UIFont.BoldSystemFontOfSize(16);
+            title.TextColor = UIColor.White;
+            title.Font = UIFont.BoldSystemFontOfSize(18);
             InfoNotifier.AddSubview(title);
 
             UITextView CommentBoxEntry = new UITextView();
             CommentBoxEntry.BecomeFirstResponder();
-            CommentBoxEntry.Layer.BorderWidth = 1.5f;
-            CommentBoxEntry.Layer.BorderColor = UIColor.LightGray.CGColor;
-            CommentBoxEntry.Frame = new CGRect(10, 40, InfoNotifier.Frame.Width - 20, InfoNotifier.Frame.Height - 120);
+            CommentBoxEntry.Frame = new CGRect(0, notifierHeight, InfoNotifier.Frame.Width, InfoNotifier.Frame.Height);
             if (SelectedNode.Content == null)
             {
                 CommentBoxEntry.Text = "";
@@ -933,18 +932,15 @@ namespace SampleBrowser
             InfoNotifier.AddSubview(CommentBoxEntry);
 
             UIButton ok = new UIButton();
-            ok.Frame = new CGRect(InfoNotifier.Frame.Width - 60, 2, 50, 50);
-            ok.SetTitleColor(UIColor.Black, UIControlState.Normal);
-            ok.SetTitle("OK", UIControlState.Normal);
-            ok.TouchUpInside+= Ok_TouchUpInside1;
+            ok.Frame = new CGRect(InfoNotifier.Frame.Width - (iconMargin / 2), (notifierHeight / 2) - (iconSize / 2), iconSize, iconSize);
+            ok.SetImage(new UIImage("Images/Diagram/MindMapImages/diagramTick.png"), UIControlState.Normal);
+            ok.TouchUpInside += Ok_TouchUpInside1;
             InfoNotifier.AddSubview(ok);
 
             UIButton cancel = new UIButton();
-            //ok.Frame = new CGRect(0, 150, InfoNotifier.Frame.Width, 50);
-            cancel.Frame = new CGRect(InfoNotifier.Frame.Width - 180, 2, 100, 50);
-            cancel.SetTitleColor(UIColor.Black, UIControlState.Normal);
-            cancel.SetTitle("CANCEL", UIControlState.Normal);
-            cancel.TouchUpInside += Cancel_TouchUpInside;;
+            cancel.Frame = new CGRect(InfoNotifier.Frame.Width - iconMargin, (notifierHeight / 2) - (iconSize / 2), iconSize, iconSize);
+            cancel.SetImage(new UIImage("Images/Diagram/MindMapImages/diagramCross.png"), UIControlState.Normal);
+            cancel.TouchUpInside += Cancel_TouchUpInside; 
             InfoNotifier.AddSubview(cancel);
         }
 

@@ -47,10 +47,10 @@ namespace SampleBrowser
                 var s = new SalesByDate
                 {
                     Name = _salesParsonNames[r.Next(5)],
-                    QS1 = (10000 - i) * (i + 1),
-                    QS2 = (10000 - i) * (i + 1),
-                    QS3 = (10000 - i) * (i + 1),
-                    QS4 = (100000 - i) * (i + 1),
+                    QS1 = ((1000 - i) * (i + 1)) / 10,
+                    QS2 = ((1000 - i) * (i + 1)) / 20,
+                    QS3 = ((1000 - i) * (i + 1)) / 30,
+                    QS4 = ((1000 - i) * (i + 1)) / 10,
                 };
                 s.Total = s.QS1 + s.QS2 + s.QS3 + s.QS4;
                 s.Date = dt.AddDays(-1 * i);

@@ -272,6 +272,7 @@ namespace SampleBrowser
             parent.textAnnotationToolbar.RemoveFromSuperview();
             parent.colorToolbar.RemoveFromSuperview();
             parent.highlightToolbar.RemoveFromSuperview();
+            parent.editStampAnnotationToolbar.RemoveFromSuperview();
             parent.strikeOutToolbar.RemoveFromSuperview();
             parent.underlineToolbar.RemoveFromSuperview();
             parent.opacityPanel.RemoveFromSuperview();

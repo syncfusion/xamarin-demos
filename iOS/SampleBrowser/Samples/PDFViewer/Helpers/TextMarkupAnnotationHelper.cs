@@ -254,6 +254,28 @@ namespace SampleBrowser
             parent.isAnnotationToolbarVisible = false;
             parent.annotation = null;
         }
+
+        internal void PdfViewerControl_StampAnnotationDeselected(object sender, StampAnnotationDeselectedEventArgs args)
+        {
+            parent.editStampAnnotationToolbar.RemoveFromSuperview();
+            parent.colorToolbar.RemoveFromSuperview();
+            parent.textAnnotationToolbar.RemoveFromSuperview();
+            parent.isAnnotationToolbarVisible = false;
+            parent.annotation = null;
+        }
+
+        internal void PdfViewerControl_StampAnnotationSelected(object sender, StampAnnotationSelectedEventArgs args)
+        {
+            parent.editStampAnnotationToolbar = CreateSeparateAnnotationToolbar(parent.editStampAnnotationToolbar, parent.editStampButton, "\ue701", true, null);
+            parent.Add(parent.editStampAnnotationToolbar);
+            parent.annotation = sender as IAnnotation;
+            parent.toolbarBackbutton.RemoveFromSuperview();
+            parent.textAnnotationToolbar.RemoveFromSuperview();
+            parent.colorToolbar.RemoveFromSuperview();
+            parent.isAnnotationToolbarVisible = true;
+        }
+
+
         internal UIView CreateSeparateAnnotationToolbar(UIView separateToolbar, UIButton enableLabel, string imageName, bool isSelected, UIColor colorButtonColor)
         {
             parent.isOpacityNeeded = false;
@@ -265,7 +287,10 @@ namespace SampleBrowser
 
             enableLabel.Frame = new CGRect(45, 7, 35, 35);
             enableLabel.HorizontalAlignment = UIControlContentHorizontalAlignment.Center;
-            enableLabel.Font = parent.highFont;
+            if (separateToolbar != parent.editStampAnnotationToolbar)
+                enableLabel.Font = parent.highFont;
+            else
+                enableLabel.Font = parent.stampFont;
             enableLabel.SetTitle(imageName, UIControlState.Normal);
             enableLabel.SetTitleColor(UIColor.FromRGB(0, 118, 255), UIControlState.Normal);
             separateToolbar.Add(enableLabel);
@@ -279,7 +304,8 @@ namespace SampleBrowser
                 parent.textToolbarBackButton.SetTitle("\ue715", UIControlState.Normal);
                 parent.textToolbarBackButton.SetTitleColor(UIColor.FromRGB(0, 118, 255), UIControlState.Normal);
                 separateToolbar.Add(parent.textToolbarBackButton);
-                parent.colorButton.Frame = new CGRect(parent.parentView.Frame.Width - 130, 7, 30, 30);
+                if(colorButtonColor != null)
+                    parent.colorButton.Frame = new CGRect(parent.parentView.Frame.Width - 130, 7, 30, 30);
             }
             else
             {
@@ -290,11 +316,15 @@ namespace SampleBrowser
                 parent.deleteButton.SetTitle("\ue714", UIControlState.Normal);
                 parent.deleteButton.SetTitleColor(UIColor.FromRGB(0, 118, 255), UIControlState.Normal);
                 separateToolbar.Add(parent.deleteButton);
-                parent.colorButton.Frame = new CGRect(parent.parentView.Frame.Width - 55, 7, 30, 30);
+                if(colorButtonColor != null)
+                    parent.colorButton.Frame = new CGRect(parent.parentView.Frame.Width - 55, 7, 30, 30);
             }
-            parent.colorButton.HorizontalAlignment = UIControlContentHorizontalAlignment.Center;
-            parent.colorButton.BackgroundColor = colorButtonColor;
-            separateToolbar.Add(parent.colorButton);
+            if (colorButtonColor != null)
+            {
+                parent.colorButton.HorizontalAlignment = UIControlContentHorizontalAlignment.Center;
+                parent.colorButton.BackgroundColor = colorButtonColor;
+                separateToolbar.Add(parent.colorButton);
+            }
             separateToolbar = parent.UpdateToolbarBorder(separateToolbar, parent.separateAnnotationFrame);
             return separateToolbar;
         }

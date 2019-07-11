@@ -116,4 +116,4 @@ If you download the samples using the "Download ZIP" option then please follow t
 
 * To renew the subscription, click [here](https://www.syncfusion.com/sales/products?utm_source=github&utm_medium=listing) or contact our sales team at <salessupport@syncfusion.com>.
   
-<p>Copyright © 2001-19 Syncfusion, Inc. Updated on 2019-06-25 at precisely 20:23:20 EST.</p>
+<p>Copyright © 2001- Syncfusion, Inc. Updated on 2019-07-11 at precisely 18:20:40 EST.</p>

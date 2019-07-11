@@ -19,11 +19,11 @@ namespace SampleBrowser
 
         private string name;
         private DateTime date;
-        private double qS1;
-        private double qS2;
-        private double qS3;
-        private double qS4;
-        private double total;
+        private int qS1;
+        private int qS2;
+        private int qS3;
+        private int qS4;
+        private int total;
 
         #endregion
 
@@ -36,7 +36,8 @@ namespace SampleBrowser
         public string Name
         {
             get { return name; }
-            set {
+            set
+            {
                 name = value;
                 RaisePropertyChanged("Name");
             }
@@ -49,7 +50,8 @@ namespace SampleBrowser
         public DateTime Date
         {
             get { return date; }
-            set {
+            set
+            {
                 date = value;
                 RaisePropertyChanged("Date");
             }
@@ -59,23 +61,25 @@ namespace SampleBrowser
         /// Gets or sets the Q s1.
         /// </summary>
         /// <value>The Q s1.</value>
-        public double QS1
+        public int QS1
         {
             get { return qS1; }
-            set {
+            set
+            {
                 qS1 = value;
                 RaisePropertyChanged("QS1");
             }
-        }        
+        }
 
         /// <summary>
         /// Gets or sets the Q s2.
         /// </summary>
         /// <value>The Q s2.</value>
-        public double QS2
+        public int QS2
         {
             get { return qS2; }
-            set {
+            set
+            {
                 qS2 = value;
                 RaisePropertyChanged("QS2");
             }
@@ -85,10 +89,11 @@ namespace SampleBrowser
         /// Gets or sets the Q s3.
         /// </summary>
         /// <value>The Q s3.</value>
-        public double QS3
+        public int QS3
         {
             get { return qS3; }
-            set {
+            set
+            {
                 qS3 = value;
                 RaisePropertyChanged("QS3");
             }
@@ -98,10 +103,11 @@ namespace SampleBrowser
         /// Gets or sets the Q s4.
         /// </summary>
         /// <value>The Q s4.</value>
-        public double QS4
+        public int QS4
         {
             get { return qS4; }
-            set {
+            set
+            {
                 qS4 = value;
                 RaisePropertyChanged("QS4");
             }
@@ -111,7 +117,7 @@ namespace SampleBrowser
         /// Gets or sets the total.
         /// </summary>
         /// <value>The total.</value>
-        public double Total
+        public int Total
         {
             get { return total; }
             set
@@ -122,5 +128,5 @@ namespace SampleBrowser
         }
 
         #endregion
-    }   
+    }
 }

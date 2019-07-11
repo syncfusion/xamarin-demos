@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sunburst="clr-namespace:Syncfusion.SfSunburstChart.XForms;assembly=Syncfusion.SfSunburstChart.XForms"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:sample="clr-namespace:SampleBrowser.SfSunburstChart"
+             x:Class="SampleBrowser.SfSunburstChart.GettingStarted">
+
+    <local:SampleView.BindingContext>
+        <sample:SunburstViewModel/>
+    </local:SampleView.BindingContext>
+
+    <local:SampleView.Content>
+
+        <Grid x:Name="grid" Padding="0,25,0,15">
+
+            <sunburst:SfSunburstChart ItemsSource="{Binding Data}" EnableAnimation="True"
+                                 ValueMemberPath="Sales">
+        <sunburst:SfSunburstChart.Title>
+          <sunburst:SunburstChartTitle x:Name="title" Text="Sales Performance"></sunburst:SunburstChartTitle>
+        </sunburst:SfSunburstChart.Title>
+
+        <sunburst:SfSunburstChart.Legend>
+          <sunburst:SunburstChartLegend x:Name="legend" IsVisible="True" LegendPosition="Bottom" IconHeight="12" IconWidth="12">
+             <sunburst:SunburstChartLegend.LabelStyle>
+                            <sunburst:SunburstLegendLabelStyle x:Name="legendStyle"></sunburst:SunburstLegendLabelStyle>
+             </sunburst:SunburstChartLegend.LabelStyle>
+          </sunburst:SunburstChartLegend>
+        </sunburst:SfSunburstChart.Legend>
+
+        <sunburst:SfSunburstChart.DataLabel>
+          <sunburst:SunburstChartDataLabel x:Name="dataLabel" ShowLabel="True"></sunburst:SunburstChartDataLabel>
+        </sunburst:SfSunburstChart.DataLabel>
+
+           <sunburst:SfSunburstChart.TooltipSettings >
+             <sunburst:SunburstTooltipSettings x:Name="tooltip" ShowTooltip="True">
+
+             </sunburst:SunburstTooltipSettings>
+           </sunburst:SfSunburstChart.TooltipSettings>
+
+        <sunburst:SfSunburstChart.Levels>
+          <sunburst:SunburstHierarchicalLevel GroupMemberPath="Quarter"/>
+          <sunburst:SunburstHierarchicalLevel GroupMemberPath="Month"/>
+          <sunburst:SunburstHierarchicalLevel GroupMemberPath="Week"/>
+        </sunburst:SfSunburstChart.Levels>
+
+      </sunburst:SfSunburstChart>
+
+      
+      </Grid>
+     
+    </local:SampleView.Content>
+</local:SampleView>

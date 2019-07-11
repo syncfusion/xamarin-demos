@@ -20,6 +20,7 @@ namespace SampleBrowser
     {
         CustomToolbar parent;
         internal const float DefaultToolbarHeight = 50f;
+        private const int numberOfButtonsInAnnotationToolbar = 6;
         public AnnotationHelper(CustomToolbar customtoolbar)
         {
             parent = customtoolbar;
@@ -51,6 +52,8 @@ namespace SampleBrowser
             }
             if (!parent.isAnnotationToolbarVisible)
             {
+                int buttonSpacing = (int)((parent.annotationToolbar.Frame.Width - 100) / numberOfButtonsInAnnotationToolbar);
+                int left = 80;
                 parent.thicknessToolbar.RemoveFromSuperview();
                 parent.toolBar.RemoveFromSuperview();
                 parent.toolbar = parent.toolBar;
@@ -63,9 +66,9 @@ namespace SampleBrowser
                 parent.annotationToolbar.Frame = parent.annotationFrame;
                 parent.annotationToolbar.BackgroundColor = UIColor.FromRGB(249, 249, 249);
                 if ((UIDevice.CurrentDevice).UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
-                    parent.textMarkupAnnotationButton.Frame = new CGRect((parent.annotationToolbar.Frame.Width - 450) / 2, 7, 35, 35);
+                    parent.textMarkupAnnotationButton.Frame = new CGRect(left, 7, 35, 35);
                 else
-                    parent.textMarkupAnnotationButton.Frame = new CGRect(20, 7, 35, 35);
+                    parent.textMarkupAnnotationButton.Frame = new CGRect(0, 7, 35, 35);
                 parent.textMarkupAnnotationButton.HorizontalAlignment = UIControlContentHorizontalAlignment.Center;
                 parent.textMarkupAnnotationButton.TouchUpInside += parent.helper.TextMarkupAnnotationButton_TouchUpInside;
                 parent.textMarkupAnnotationButton.Font = parent.highFont;
@@ -74,9 +77,9 @@ namespace SampleBrowser
                 parent.annotationToolbar.Add(parent.textMarkupAnnotationButton);
 
                 if ((UIDevice.CurrentDevice).UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
-                    parent.inkAnnotationButton.Frame = new CGRect((parent.annotationToolbar.Frame.Width - 175), 7, 35, 35);
+                    parent.inkAnnotationButton.Frame = new CGRect(left + 4 * buttonSpacing, 7, 35, 35);
                 else
-                    parent.inkAnnotationButton.Frame = new CGRect(140, 7, 35, 35);
+                    parent.inkAnnotationButton.Frame = new CGRect(105, 7, 35, 35);
                 parent.inkAnnotationButton.HorizontalAlignment = UIControlContentHorizontalAlignment.Center;
                 parent.inkAnnotationButton.Font = parent.highFont;
                 parent.inkAnnotationButton.SetTitle("\ue704", UIControlState.Normal);
@@ -84,9 +87,9 @@ namespace SampleBrowser
                 parent.annotationToolbar.Add(parent.inkAnnotationButton);
 
                 if ((UIDevice.CurrentDevice).UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
-                    parent.editTextAnnotationButton.Frame = new CGRect((parent.annotationToolbar.Frame.Width - 250) / 2, 7, 35, 35);
+                    parent.editTextAnnotationButton.Frame = new CGRect(left + buttonSpacing, 7, 35, 35);
                 else
-                    parent.editTextAnnotationButton.Frame = new CGRect((200), 7, 35, 35);
+                    parent.editTextAnnotationButton.Frame = new CGRect((165), 7, 35, 35);
                 parent.editTextAnnotationButton.HorizontalAlignment = UIControlContentHorizontalAlignment.Center;
                 parent.editTextAnnotationButton.TouchUpInside += parent.edittextHelper.EditTextAnnotationButton_TouchUpInside;
                 parent.editTextAnnotationButton.Font = parent.highFont;
@@ -95,9 +98,9 @@ namespace SampleBrowser
                 parent.annotationToolbar.Add(parent.editTextAnnotationButton);
                 
                 if ((UIDevice.CurrentDevice).UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
-                    parent.shapeAnnotationButton.Frame = new CGRect((parent.annotationToolbar.Frame.Width / 2), 7, 35, 35);
+                    parent.shapeAnnotationButton.Frame = new CGRect(left + 2*buttonSpacing, 7, 35, 35);
                 else
-                    parent.shapeAnnotationButton.Frame = new CGRect(80, 7, 35, 35);
+                    parent.shapeAnnotationButton.Frame = new CGRect(45, 7, 35, 35);
                 parent.shapeAnnotationButton.HorizontalAlignment = UIControlContentHorizontalAlignment.Center;
                 parent.shapeAnnotationButton.TouchUpInside += parent.shapeHelper.ShapeAnnotationButton_TouchUpInside;
                 parent.shapeAnnotationButton.Font = parent.highFont;
@@ -107,9 +110,9 @@ namespace SampleBrowser
 
 
                 if ((UIDevice.CurrentDevice).UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
-                    parent.signatureButton.Frame = new CGRect((parent.annotationToolbar.Frame.Width + 250) / 2, 7, 35, 35);
+                    parent.signatureButton.Frame = new CGRect(left + 3 * buttonSpacing, 7, 35, 35);
                 else
-                    parent.signatureButton.Frame = new CGRect(260, 7, 35, 35);
+                    parent.signatureButton.Frame = new CGRect(225, 7, 35, 35);
                 parent.signatureButton.HorizontalAlignment = UIControlContentHorizontalAlignment.Center;
                 parent.signatureButton.VerticalAlignment = UIControlContentVerticalAlignment.Top;
 				parent.signatureButton.TouchUpInside += SignatureButton_TouchUpInside;
@@ -117,6 +120,19 @@ namespace SampleBrowser
                 parent.signatureButton.SetTitle("\ue702", UIControlState.Normal);
                 parent.signatureButton.SetTitleColor(UIColor.FromRGB(0, 118, 255), UIControlState.Normal);
                 parent.annotationToolbar.Add(parent.signatureButton);
+
+                if ((UIDevice.CurrentDevice).UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
+                    parent.stampButton.Frame = new CGRect(left + 5 * buttonSpacing, 7, 35, 35);
+                else
+                    parent.stampButton.Frame = new CGRect(275, 7, 35, 35);
+                parent.stampButton.HorizontalAlignment = UIControlContentHorizontalAlignment.Center;
+                parent.stampButton.VerticalAlignment = UIControlContentVerticalAlignment.Top;
+                parent.stampButton.TouchUpInside += StampButton_TouchUpInside;
+                parent.stampButton.Font = parent.stampFont;
+                parent.stampButton.SetTitle("\ue701", UIControlState.Normal);
+                parent.stampButton.SetTitleColor(UIColor.FromRGB(0, 118, 255), UIControlState.Normal);
+                parent.annotationToolbar.Add(parent.stampButton);
+
                 parent.annotationToolbar = parent.UpdateToolbarBorder(parent.annotationToolbar, parent.annotationFrame);
 
                 parent.annotationToolbar = parent.UpdateToolbarBorder(parent.annotationToolbar, parent.annotationFrame);
@@ -124,6 +140,7 @@ namespace SampleBrowser
                 parent.Add(parent.annotationToolbar);
                 parent.isAnnotationToolbarVisible = true;
                 parent.highlightToolbar.RemoveFromSuperview();
+                parent.editStampAnnotationToolbar.RemoveFromSuperview();
                 parent.strikeOutToolbar.RemoveFromSuperview();
                 parent.underlineToolbar.RemoveFromSuperview();
                 parent.colorToolbar.RemoveFromSuperview();
@@ -135,6 +152,13 @@ namespace SampleBrowser
                 parent.isAnnotationToolbarVisible = false;
             }
         }
+        private void StampButton_TouchUpInside(object sender, EventArgs e)
+        {
+            if(parent.stampView == null)
+                parent.stampView = new StampAnnotationView(parent);
+            parent.AddSubview(parent.stampView);
+            parent.isStampViewVisible = true;
+        }
 
         internal void RemoveAllToolbars(bool isBackButton)
         {
@@ -145,6 +169,7 @@ namespace SampleBrowser
                 parent.highlightToolbar.RemoveFromSuperview();
                 parent.strikeOutToolbar.RemoveFromSuperview();
                 parent.underlineToolbar.RemoveFromSuperview();
+                parent.editStampAnnotationToolbar.RemoveFromSuperview();
                 parent.opacityPanel.RemoveFromSuperview();
                 parent.inkAnnotationSessionToolbar.RemoveFromSuperview();
                 parent.textAnnotationToolbar.RemoveFromSuperview();
