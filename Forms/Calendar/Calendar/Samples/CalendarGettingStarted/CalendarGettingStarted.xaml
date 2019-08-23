@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" 
+	xmlns:CalendarSample="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="SampleBrowser.SfCalendar.CalendarGettingStarted">
+	<local:SampleView.Content>		
+			<CalendarSample:SfCalendar HorizontalOptions="FillAndExpand" ViewMode="MonthView" x:Name="cal" VerticalOptions="FillAndExpand"/>
+	</local:SampleView.Content>
+	<local:SampleView.PropertyView></local:SampleView.PropertyView>
+</local:SampleView>
+

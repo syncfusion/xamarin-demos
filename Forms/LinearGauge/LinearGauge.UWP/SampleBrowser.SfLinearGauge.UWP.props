@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\High.png">
+      <Link>High.png</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\lineargaugestar.png">
+      <Link>lineargaugestar.png</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Low.png">
+      <Link>Low.png</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Moderate.png">
+      <Link>Moderate.png</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

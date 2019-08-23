@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\yahoo.png">
+            <Link>Resources\yahoo.png</Link>
+        </BundleResource>
+    </ItemGroup>
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Maps.png">
+            <Link>Resources\Maps.png</Link>
+        </BundleResource>
+    </ItemGroup>
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\MicrosoftPowerPoint.png">
+            <Link>Resources\MicrosoftPowerPoint.png</Link>
+        </BundleResource>
+    </ItemGroup>
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\MicrosoftWord.png">
+            <Link>Resources\MicrosoftWord.png</Link>
+        </BundleResource>
+    </ItemGroup>
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Skype.png">
+            <Link>Resources\Skype.png</Link>
+        </BundleResource>
+    </ItemGroup>
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Talk.png">
+            <Link>Resources\Talk.png</Link>
+        </BundleResource>
+    </ItemGroup>
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Twitter.png">
+            <Link>Resources\Twitter.png</Link>
+        </BundleResource>
+    </ItemGroup>
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Instagram.png">
+            <Link>Resources\Instagram.png</Link>
+        </BundleResource>
+    </ItemGroup>
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Calculator.png">
+            <Link>Resources\Calculator.png</Link>
+        </BundleResource>
+    </ItemGroup>
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Camera.png">
+            <Link>Resources\Camera.png</Link>
+        </BundleResource>
+    </ItemGroup>
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\CDMusic.png">
+            <Link>Resources\CDMusic.png</Link>
+        </BundleResource>
+    </ItemGroup>
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\DND.png">
+            <Link>Resources\DND.png</Link>
+        </BundleResource>
+    </ItemGroup>
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Download2.png">
+            <Link>Resources\Download2.png</Link>
+        </BundleResource>
+    </ItemGroup>
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Excel.png">
+            <Link>Resources\Excel.png</Link>
+        </BundleResource>
+    </ItemGroup>
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\GMail.png">
+            <Link>Resources\GMail.png</Link>
+        </BundleResource>
+    </ItemGroup>
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\GoogleChrome.png">
+            <Link>Resources\GoogleChrome.png</Link>
+        </BundleResource>
+    </ItemGroup>
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\icon.png">
+            <Link>Resources\icon.png</Link>
+        </BundleResource>
+    </ItemGroup>
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\icon_512x512.png">
+            <Link>Resources\icon_512x512.png</Link>
+        </BundleResource>
+    </ItemGroup>
+</Project>

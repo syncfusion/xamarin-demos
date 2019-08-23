@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/editorPopUp"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f2f2f2"
+    android:orientation="vertical"
+    android:padding="10dp">
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Save as"
+        android:textColor="#808080"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <EditText
+        android:id="@+id/editTextDialogUserInput"
+        android:layout_width="match_parent"
+        android:hint="eg..Item"
+        android:textColorHint="#D3D3D3"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="#f2f2f2"
+        android:id="@+id/visibility_layout"
+        android:orientation="horizontal">
+        <Button
+            android:layout_marginRight="10dp"
+            android:id="@+id/Savebutton"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="false"
+            android:layout_weight="0.5"
+            android:text="Save"
+            android:background="#1E90FF"
+            android:textColor="#000000" />
+        <Button
+            android:id="@+id/Cancelbutton"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="0.5"
+            android:text="Cancel"
+            android:textColor="#000000"
+            android:background="#808080" />
+    </LinearLayout>
+</LinearLayout>

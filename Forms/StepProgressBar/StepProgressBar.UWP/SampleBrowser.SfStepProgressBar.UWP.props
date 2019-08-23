@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\User.scale-100.png">
+      <Link>User.scale-100.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\User.scale-125.png">
+      <Link>User.scale-125.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\User.scale-150.png">
+      <Link>User.scale-150.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\User.scale-200.png">
+      <Link>User.scale-200.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\User.scale-400.png">
+      <Link>User.scale-400.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\UserSelection.scale-100.png">
+      <Link>UserSelection.scale-100.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\UserSelection.scale-125.png">
+      <Link>UserSelection.scale-125.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\UserSelection.scale-150.png">
+      <Link>UserSelection.scale-150.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\UserSelection.scale-200.png">
+      <Link>UserSelection.scale-200.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\UserSelection.scale-400.png">
+      <Link>UserSelection.scale-400.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\UserWhite.scale-100.png">
+      <Link>UserWhite.scale-100.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\UserWhite.scale-125.png">
+      <Link>UserWhite.scale-125.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\UserWhite.scale-150.png">
+      <Link>UserWhite.scale-150.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\UserWhite.scale-200.png">
+      <Link>UserWhite.scale-200.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\UserWhite.scale-400.png">
+      <Link>UserWhite.scale-400.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\Account.scale-100.png">
+      <Link>Account.scale-100.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\Account.scale-125.png">
+      <Link>Account.scale-125.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\Account.scale-150.png">
+      <Link>Account.scale-150.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\Account.scale-200.png">
+      <Link>Account.scale-200.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\Account.scale-400.png">
+      <Link>Account.scale-400.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\AccountSelection.scale-100.png">
+      <Link>AccountSelection.scale-100.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\AccountSelection.scale-125.png">
+      <Link>AccountSelection.scale-125.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\AccountSelection.scale-150.png">
+      <Link>AccountSelection.scale-150.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\AccountSelection.scale-200.png">
+      <Link>AccountSelection.scale-200.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\AccountSelection.scale-400.png">
+      <Link>AccountSelection.scale-400.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\AccountWhite.scale-100.png">
+      <Link>AccountWhite.scale-100.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\AccountWhite.scale-125.png">
+      <Link>AccountWhite.scale-125.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\AccountWhite.scale-150.png">
+      <Link>AccountWhite.scale-150.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\AccountWhite.scale-200.png">
+      <Link>AccountWhite.scale-200.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\AccountWhite.scale-400.png">
+      <Link>AccountWhite.scale-400.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\Personal.scale-100.png">
+      <Link>Personal.scale-100.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\Personal.scale-125.png">
+      <Link>Personal.scale-125.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\Personal.scale-150.png">
+      <Link>Personal.scale-150.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\Personal.scale-400.png">
+      <Link>Personal.scale-200.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\Personal.scale-400.png">
+      <Link>Personal.scale-400.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\PersonalSelection.scale-100.png">
+      <Link>PersonalSelection.scale-100.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\PersonalSelection.scale-125.png">
+      <Link>PersonalSelection.scale-125.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\PersonalSelection.scale-150.png">
+      <Link>PersonalSelection.scale-150.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\PersonalSelection.scale-200.png">
+      <Link>PersonalSelection.scale-200.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\PersonalSelection.scale-400.png">
+      <Link>PersonalSelection.scale-400.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\PersonalWhite.scale-100.png">
+      <Link>PersonalWhite.scale-100.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\PersonalWhite.scale-125.png">
+      <Link>PersonalWhite.scale-125.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\PersonalWhite.scale-150.png">
+      <Link>PersonalWhite.scale-150.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\PersonalWhite.scale-200.png">
+      <Link>PersonalWhite.scale-200.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\PersonalWhite.scale-400.png">
+      <Link>PersonalWhite.scale-400.png</Link>
+    </Content>
+  </ItemGroup>
+  </Project>

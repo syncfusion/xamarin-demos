@@ -1,0 +1,34 @@
+﻿<Project>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+      <Link>Samples\StepProgressBar\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\ShipmentTracking\ShipmentTracking.xaml.cs">
+      <Link>Samples\StepProgressBar\Samples\ShipmentTracking\ShipmentTracking.xaml.cs</Link>
+	  <DependentUpon>ShipmentTracking.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ShipmentTracking\ShipmentTracking.xaml">
+      <Link>Samples\StepProgressBar\Samples\ShipmentTracking\ShipmentTracking.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\GettingStarted.xaml.cs">
+      <Link>Samples\StepProgressBar\Samples\GettingStarted\GettingStarted.xaml.cs</Link>
+	  <DependentUpon>GettingStarted.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\GettingStarted.xaml">
+      <Link>Samples\StepProgressBar\Samples\GettingStarted\GettingStarted.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\UserRegistration\UserRegistration.xaml.cs">
+      <Link>Samples\StepProgressBar\Samples\UserRegistration\UserRegistration.xaml.cs</Link>
+	  <DependentUpon>UserRegistration.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\UserRegistration\UserRegistration.xaml">
+      <Link>Samples\StepProgressBar\Samples\UserRegistration\UserRegistration.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

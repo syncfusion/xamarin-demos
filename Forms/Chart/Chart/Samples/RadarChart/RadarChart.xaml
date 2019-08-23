@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.RadarChart" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+  <local:SampleView.Content>
+    <StackLayout x:Name="layout">
+      <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <chart:SfChart.BindingContext>
+          <sampleBrowser:RadarSeriesViewModel />
+        </chart:SfChart.BindingContext>
+        <chart:SfChart.Margin>
+          <OnPlatform x:TypeArguments="Thickness" WinPhone="0,0,0,10" />
+        </chart:SfChart.Margin>
+        <chart:SfChart.Title>
+          <chart:ChartTitle Text="Average Sales Comparison"  />
+        </chart:SfChart.Title>
+        <chart:SfChart.PrimaryAxis>
+          <chart:CategoryAxis>
+          </chart:CategoryAxis>
+        </chart:SfChart.PrimaryAxis>
+        <chart:SfChart.SecondaryAxis>
+          <chart:NumericalAxis x:Name="secondary">
+            <chart:NumericalAxis.LabelStyle>
+              <chart:ChartAxisLabelStyle x:Name="secondaryAxisLabelSyle"/>
+            </chart:NumericalAxis.LabelStyle>
+          </chart:NumericalAxis>
+        </chart:SfChart.SecondaryAxis>
+        <chart:SfChart.Legend>
+          <chart:ChartLegend IconHeight="14" IconWidth="14"  />
+        </chart:SfChart.Legend>
+        <chart:SfChart.ColorModel>
+          <chart:ChartColorModel Palette="Natural" />
+        </chart:SfChart.ColorModel>
+        <chart:SfChart.Series>
+          <chart:RadarSeries x:Name="series1" StrokeWidth="3" ItemsSource="{Binding PolarData1}" Opacity="0.5" Label="Product A" LegendIcon="Circle" EnableTooltip="True" EnableAnimation="True" XBindingPath="Name" YBindingPath="Value" >
+                <chart:RadarSeries.StrokeDashArray>
+                     <x:Array Type="{x:Type sys:Double}"> 
+                        <sys:Double>4</sys:Double> 
+                        <sys:Double>7</sys:Double>
+                    </x:Array>
+                </chart:RadarSeries.StrokeDashArray>
+          </chart:RadarSeries>     
+          <chart:RadarSeries x:Name="series2" StrokeWidth="3" ItemsSource="{Binding PolarData2}" Opacity="0.5" Label="Product B" LegendIcon="Circle" EnableTooltip="True" EnableAnimation="True" XBindingPath="Name" YBindingPath="Value" >
+                <chart:RadarSeries.StrokeDashArray>
+                     <x:Array Type="{x:Type sys:Double}"> 
+                        <sys:Double>4</sys:Double> 
+                        <sys:Double>7</sys:Double>
+                    </x:Array>
+                </chart:RadarSeries.StrokeDashArray>
+          </chart:RadarSeries>     
+          <chart:RadarSeries x:Name="series3" StrokeWidth="3" ItemsSource="{Binding PolarData3}" Opacity="0.5" Label="Product C" LegendIcon="Circle" EnableTooltip="True" EnableAnimation="True" XBindingPath="Name" YBindingPath="Value" >
+                <chart:RadarSeries.StrokeDashArray>
+                     <x:Array Type="{x:Type sys:Double}"> 
+                        <sys:Double>4</sys:Double> 
+                        <sys:Double>7</sys:Double>
+                    </x:Array>
+                </chart:RadarSeries.StrokeDashArray>
+          </chart:RadarSeries>     
+        </chart:SfChart.Series>
+      </chart:SfChart>
+    </StackLayout>
+  </local:SampleView.Content>
+  <local:SampleView.PropertyView>
+    <StackLayout x:Name="stack">
+      <StackLayout.Padding>
+        <OnPlatform x:TypeArguments="Thickness" Android="10,10,0,0" iOS="10,10,0,0" WinPhone="20,20,20,20" />
+      </StackLayout.Padding>
+      <StackLayout.WidthRequest>
+        <OnPlatform x:TypeArguments="x:Double" WinPhone="200" />
+      </StackLayout.WidthRequest>
+      <StackLayout.HorizontalOptions>
+        <OnPlatform x:TypeArguments="LayoutOptions" iOS="FillAndExpand" Android="FillAndExpand" WinPhone="Center" />
+      </StackLayout.HorizontalOptions>
+      <StackLayout.VerticalOptions>
+        <OnPlatform x:TypeArguments="LayoutOptions" iOS="FillAndExpand" Android="FillAndExpand" WinPhone="Center" />
+      </StackLayout.VerticalOptions>
+      <Label Text="Angle" HorizontalOptions="FillAndExpand" />
+      <Picker HorizontalOptions="FillAndExpand" VerticalOptions="Center" x:Name="angle" WidthRequest="400">
+        <Picker.Items>
+          <x:String>Rotate0</x:String>
+          <x:String>Rotate90</x:String>
+          <x:String>Rotate180</x:String>
+          <x:String>Rotate270</x:String>
+        </Picker.Items>
+      </Picker>
+      <Label Text="Draw Type" HorizontalOptions="FillAndExpand" />
+      <Picker HorizontalOptions="FillAndExpand" VerticalOptions="Center" x:Name="radarDrawType" WidthRequest="400">
+        <Picker.Items>
+           <x:String>Line</x:String>
+           <x:String>Area</x:String>
+        </Picker.Items>
+      </Picker>
+    </StackLayout>
+  </local:SampleView.PropertyView>
+</local:SampleView>
