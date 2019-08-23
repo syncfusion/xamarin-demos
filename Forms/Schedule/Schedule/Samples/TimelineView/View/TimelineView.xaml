@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+    x:Class="SampleBrowser.SfSchedule.TimelineView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:samplelocal="clr-namespace:SampleBrowser.SfSchedule"
+    xmlns:schedule="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.SfSchedule.XForms">
+    <local:SampleView.Content>
+        <Grid x:Name="grid_layout">
+            <schedule:SfSchedule
+                x:Name="Schedule"
+                HorizontalOptions="FillAndExpand"
+                ScheduleView="TimelineView"
+                VerticalOptions="FillAndExpand"
+              DataSource="{Binding ListOfMeeting}">
+                <schedule:SfSchedule.AppointmentMapping>
+                    <schedule:ScheduleAppointmentMapping
+                        ColorMapping="Color"
+                        EndTimeMapping="To"
+                        IsAllDayMapping="IsAllDay"
+                        StartTimeMapping="From"
+                        SubjectMapping="EventName"
+                        MinHeightMapping="MinimumHeight"
+                        StartTimeZoneMapping="StartTimeZone"
+                        EndTimeZoneMapping="EndTimeZone"/>
+                </schedule:SfSchedule.AppointmentMapping>
+            </schedule:SfSchedule>
+        </Grid>
+    </local:SampleView.Content>
+
+    <local:SampleView.PropertyView>
+        <Grid  BackgroundColor="White"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label  Grid.Row="0"
+                    x:Name="scheduleViewLabel"
+                    Text="Change the view type"
+                    FontSize="15"
+                    TextColor="Gray" />
+            <Picker  x:Name="viewPicker"
+                     Grid.Row="1"
+                     VerticalOptions="Start"
+                     HorizontalOptions="FillAndExpand">
+                <Picker.Items>
+                    <x:String> Timeline Day</x:String>
+                    <x:String>Timeline Week</x:String>
+                    <x:String>Timeline Work Week</x:String>
+                </Picker.Items>
+            </Picker>
+        </Grid>
+    </local:SampleView.PropertyView>
+    <local:SampleView.BindingContext>
+        <samplelocal:TimelineViewModel/>
+    </local:SampleView.BindingContext>
+    <local:SampleView.Behaviors>
+        <samplelocal:TimelineViewBehavior/>
+    </local:SampleView.Behaviors>
+</local:SampleView>

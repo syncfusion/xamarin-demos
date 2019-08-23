@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfDiagram.AddNote"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms">
+    
+   
+    <ContentPage.Content>
+        <Grid x:Name="ParentGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid x:Name="HeaderGrid" Grid.Row="0" BackgroundColor="#177de6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition x:Name="crossIconCol" Width="30"/>
+                    <ColumnDefinition x:Name="tickIconCol" Width="30"/>
+                </Grid.ColumnDefinitions>
+                <Label Margin="10,0,0,0" VerticalOptions="Center" FontSize="Medium" x:Name="NotesLabel" Text="Add Note" TextColor="White" Grid.ColumnSpan="3" Grid.Column="0"/>
+                
+              <Image x:Name="crossImage" BackgroundColor="Transparent" Source="diagramCross.png"  Grid.Column="5" Aspect="AspectFit">
+              <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                Tapped="CancelNote"
+                NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                
+                <Image x:Name="tickImage" BackgroundColor="Transparent" Source="diagramTick.png"  Grid.Column="6" Aspect="AspectFit">
+              <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                Tapped="AddNodeNote"
+                NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+              
+            </Grid>
+            <Grid Grid.Row="1">
+                <Editor x:Name="note" Placeholder="Add Note"/>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

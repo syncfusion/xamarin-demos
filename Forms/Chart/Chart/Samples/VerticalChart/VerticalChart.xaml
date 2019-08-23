@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.VerticalChart" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+    <local:SampleView.Content>
+        <chart:SfChart x:Name="chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <chart:SfChart.Margin>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="0,0,15,0" />
+            </chart:SfChart.Margin>
+            <chart:SfChart.BindingContext>
+                <sampleBrowser:VerticalChartViewModel />
+            </chart:SfChart.BindingContext>
+            <chart:SfChart.Title>
+                <chart:ChartTitle Text="Seismograph analysis of country" />
+            </chart:SfChart.Title>
+            <chart:SfChart.Legend>
+                <chart:ChartLegend IconWidth="14" IconHeight="14" DockPosition="Bottom" />
+            </chart:SfChart.Legend>
+            <chart:SfChart.PrimaryAxis>
+                <chart:NumericalAxis ShowMajorGridLines="False">
+                    <chart:NumericalAxis.Title>
+                        <chart:ChartAxisTitle Text="Time (s)" />
+                    </chart:NumericalAxis.Title>
+                </chart:NumericalAxis>
+            </chart:SfChart.PrimaryAxis>
+            <chart:SfChart.SecondaryAxis>
+                <chart:NumericalAxis ShowMajorGridLines="False" Maximum="15" Minimum="-15">
+                    <chart:NumericalAxis.Title>
+                        <chart:ChartAxisTitle Text="Velocity (m/s)">
+                            <chart:ChartAxisTitle.Margin>
+                                <OnPlatform x:TypeArguments="Thickness" Android="0,0,10,0" />
+                            </chart:ChartAxisTitle.Margin>
+                        </chart:ChartAxisTitle>
+                    </chart:NumericalAxis.Title>
+                </chart:NumericalAxis>
+            </chart:SfChart.SecondaryAxis>
+            <chart:SfChart.ColorModel>
+                <chart:ChartColorModel Palette="Natural" />
+            </chart:SfChart.ColorModel>
+            <chart:SfChart.Series>
+                <chart:FastLineSeries x:Name="fastlineseries" Label="Indonesia" ItemsSource="{Binding verticalChart}" XBindingPath="Value" YBindingPath="Size" IsTransposed="True" />
+            </chart:SfChart.Series>
+        </chart:SfChart>
+    </local:SampleView.Content>
+</local:SampleView>

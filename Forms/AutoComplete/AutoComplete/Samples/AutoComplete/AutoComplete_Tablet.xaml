@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:auto="clr-namespace:SampleBrowser.SfAutoComplete"
+                  	xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms" 
+					xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+                  x:Class="SampleBrowser.SfAutoComplete.AutoComplete_Tablet">
+  <local:SampleView.Content>
+	<ScrollView>
+    <Grid Padding="10">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="7*"/>
+        <RowDefinition Height="6*"/>
+      </Grid.RowDefinitions>
+      <ScrollView x:Name="sampleLayout"  Grid.Row="0" Padding="10, 0, 30,0" IsClippedToBounds="true">
+        <Grid x:Name="sampleLayout1">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+
+          </Grid.RowDefinitions>
+          <StackLayout x:Name="layout1">
+            <Label Text="Job Search" x:Name="jobSearchLabel" Grid.Row="0" FontSize="22"  FontAttributes="Bold"  HorizontalOptions="Start" VerticalOptions="Center"/>
+          </StackLayout>
+          <StackLayout Orientation="Vertical" Grid.Row="1" x:Name="countryLayout" >
+			<inputLayout:SfTextInputLayout x:Name="countryTextInputLayout" Hint="Country" ContainerType="Filled">
+				<autocomplete:SfAutoComplete Watermark="Enter  Country Name" PopupDelay="0" x:Name="countryAutoComplete" SuggestionMode="StartsWith" AutoCompleteMode="Suggest" WidthRequest="40" MinimumPrefixCharacters="1" MaximumDropDownHeight="150"  HighlightedTextColor="Red" TextHighlightMode="FirstOccurrence"  AutoCompleteSource="{Binding }" >
+                    <autocomplete:SfAutoComplete.HeightRequest>
+                        <OnPlatform
+                                x:TypeArguments="x:Double"
+                                        Android="60"
+                                        WinPhone="60"
+                                        iOS="30" />
+                    </autocomplete:SfAutoComplete.HeightRequest>
+               </autocomplete:SfAutoComplete>
+			</inputLayout:SfTextInputLayout>
+		  </StackLayout>
+                    
+          <StackLayout Orientation="Vertical" Grid.Row="2" Padding="0,20,0,0" x:Name="jobLayout" >
+            <inputLayout:SfTextInputLayout x:Name="jobTextInputLayout" Hint="Job Field" ContainerType="Filled">
+					<autocomplete:SfAutoComplete Watermark="Enter 'B' , 'S' , 'M' to start" PopupDelay="0" WatermarkColor="#adb2bb" TextSize="16" Margin="0,0,0,0" x:Name="jobFieldAutoComplete" SuggestionMode="StartsWith" AutoCompleteMode="Suggest" MinimumPrefixCharacters="1" MaximumDropDownHeight="150"
+						HighlightedTextColor="Red" TextHighlightMode="FirstOccurrence" AutoCompleteSource="{Binding }" DropDownItemHeight="35" >
+                        <autocomplete:SfAutoComplete.HeightRequest>
+                                    <OnPlatform
+                                        x:TypeArguments="x:Double"
+                                        Android="60"
+                                        WinPhone="60"
+                                        iOS="30" />
+                        </autocomplete:SfAutoComplete.HeightRequest>
+                   </autocomplete:SfAutoComplete>
+				</inputLayout:SfTextInputLayout>
+            </StackLayout>
+          <StackLayout Orientation="Vertical" Grid.Row="3"  x:Name="searchlayout" Padding="0,20,0,0">
+			<inputLayout:SfTextInputLayout
+                        ContainerType="Filled"
+                        Hint="Experience">
+				<autocomplete:SfAutoComplete x:Name="experienceAutoComplete" ShowSuggestionsOnFocus="true" SelectionChanged="Handle_SelectionChanged">
+                            <autocomplete:SfAutoComplete.HeightRequest>
+                                    <OnPlatform
+                                        x:TypeArguments="x:Double"
+                                        Android="60"
+                                        WinPhone="60"
+                                        iOS="30" />
+                                </autocomplete:SfAutoComplete.HeightRequest>
+                            </autocomplete:SfAutoComplete>
+			</inputLayout:SfTextInputLayout>
+          </StackLayout>
+          <StackLayout Grid.Row="4" Padding="0,20,0,0" x:Name="buttonLayout">
+            <Button Text="Search" x:Name="searchButton" Clicked="Handle_Clicked"/>
+          </StackLayout>
+
+        </Grid>
+      </ScrollView>
+      <ScrollView Grid.Row="1" IsClippedToBounds="true">
+
+        <StackLayout x:Name="Property_Windows" >
+          <StackLayout Orientation="Horizontal" Padding="10,0,0,0" x:Name="temp"  HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
+            <!--<Label Text="OPTIONS" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="150" FontSize="18"  FontFamily="Helvetica"/>
+            <Button x:Name="Property_Button" HorizontalOptions="EndAndExpand" ></Button>-->
+          </StackLayout>
+        </StackLayout>
+      </ScrollView>
+
+    </Grid>
+	</ScrollView>
+  </local:SampleView.Content>
+
+    <local:SampleView.PropertyView>
+
+    <StackLayout x:Name="optionLayout" Spacing="10">
+      <StackLayout Spacing="3">
+        <Label x:Name="suggestionModeLabel" Text="Suggestion Mode" FontSize="16" HeightRequest="20" YAlign="End" TextColor="#666666" />
+        <StackLayout x:Name="pickerLayout1">
+          <Picker x:Name="suggestionModepicker" HeightRequest="40" SelectedIndex="1" BackgroundColor="White" TextColor="Red"/>
+        </StackLayout>
+      </StackLayout>
+      <StackLayout Spacing="5">
+        <Label x:Name="autoCompleteModeLabel" Text="AutoComplete Mode" FontSize="16" HeightRequest="20" YAlign="End" TextColor="#666666" />
+        <StackLayout x:Name="pickerLayout2">
+          <Picker x:Name="autoCompleteModepicker" HeightRequest="40" SelectedIndex="1" BackgroundColor="White" TextColor="Red"/>
+        </StackLayout>
+      </StackLayout>
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="2*" x:Name="minprefixcolumn1" />
+          <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Label TextColor="#666666" x:Name="minimumPrefixCharacterLabel" Text="Minimum Prefix Character" VerticalOptions="Center" HorizontalOptions="Start" FontFamily="Helvetica" FontSize="16" />
+        <Entry x:Name="minPrefixCharacterText" HorizontalOptions="End" Grid.Column="1" Text="1" WidthRequest="150" VerticalOptions="Center" TextColor="#333333"/>
+      </Grid>
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="2*" x:Name="maxdropdowncolumn1" />
+          <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Label TextColor="#666666" x:Name="maximumDropDownHeightLabel" Text="Maximum Dropdown Height" VerticalOptions="Center" HorizontalOptions="Start" FontFamily="Helvetica" FontSize="16" />
+        <Entry x:Name="maximumDropDownHeightText" HorizontalOptions="End" Grid.Column="1" Text="150" WidthRequest="150" VerticalOptions="Center" TextColor="#333333"/>
+      </Grid>
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="2*" x:Name="popupdelaycolumn1" />
+          <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Label TextColor="#666666" x:Name="popupDelayLabel" Text="Popup Delay" VerticalOptions="Center" HorizontalOptions="Start" FontFamily="Helvetica" FontSize="16" />
+        <Entry x:Name="PopupDelayText" HorizontalOptions="End" Grid.Column="1" Text="0" WidthRequest="150" VerticalOptions="Center" TextColor="#333333"/>
+      </Grid>
+    </StackLayout>
+
+  </local:SampleView.PropertyView>
+  </local:SampleView>
+
+

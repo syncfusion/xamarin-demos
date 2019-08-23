@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\UnHappy_Unselected.png" >
+	<Link>Resources\UnHappy_Unselected.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\movie.png" >
+	<Link>Resources\movie.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Neutral_selected.png" >
+	<Link>Resources\Neutral_selected.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Neutral_Unselected.png" >
+	<Link>Resources\Neutral_Unselected.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\UnHappy_selected.png" >
+	<Link>Resources\UnHappy_selected.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\icon_512x512.png" >
+	<Link>Resources\icon_512x512.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Angry_selected.png" >
+	<Link>Resources\Angry_selected.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Angry_Unselected.png" >
+	<Link>Resources\Angry_Unselected.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Excited_selected.png" >
+	<Link>Resources\Excited_selected.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Excited_Unselected.png" >
+	<Link>Resources\Excited_Unselected.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Happy_selected.png" >
+	<Link>Resources\Happy_selected.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Happy_Unselected.png" >
+	<Link>Resources\Happy_Unselected.png</Link>
+	</BundleResource>
+  </ItemGroup>
+</Project>

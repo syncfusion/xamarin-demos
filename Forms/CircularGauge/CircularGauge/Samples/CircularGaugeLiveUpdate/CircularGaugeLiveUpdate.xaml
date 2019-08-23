@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:sample="clr-namespace:SampleBrowser.SfCircularGauge"
+             x:Class="SampleBrowser.SfCircularGauge.CircularGaugeLiveUpdate">
+	
+  <local:SampleView.BindingContext>
+    <sample:CircularGaugeViewModel x:Name="viewModel"/>
+  </local:SampleView.BindingContext>
+
+  <local:SampleView.Content BackgroundColor="White">
+    <StackLayout  x:Name="main_layout"  VerticalOptions="FillAndExpand" Orientation="Vertical" >
+      <gauge:SfCircularGauge x:Name="circularGauge" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+        <gauge:SfCircularGauge.Scales>
+          <gauge:Scale x:Name="scale1" StartAngle="180" SweepAngle="180"
+                     StartValue="0" EndValue="100" Interval="50" MinorTicksPerInterval="0"
+                     ShowLabels="False" ShowRim="False" ShowTicks="False" RimThickness="3">
+
+            <gauge:Scale.Pointers>
+              <gauge:NeedlePointer x:Name="pointer1" Value="{Binding PointerValue}" Color="#4472c4" LengthFactor="0.7" KnobRadius="0" Type="Triangle" Thickness="10" />
+              <gauge:RangePointer x:Name="pointer2" Value="{Binding PointerValue}" Color="#4472c4" Offset="0.7" Thickness="10" />
+            </gauge:Scale.Pointers>
+
+          </gauge:Scale>
+        </gauge:SfCircularGauge.Scales>
+      </gauge:SfCircularGauge>
+    </StackLayout>
+  </local:SampleView.Content>
+</local:SampleView>
+

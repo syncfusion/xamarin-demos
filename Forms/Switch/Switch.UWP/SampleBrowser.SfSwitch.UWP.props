@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+     <Content Include="$(MSBuildThisFileDirectory)\Assets\Fonts\switch.ttf">
+            <Link>Assets\Fonts\switch.ttf</Link>
+        </Content>
+  </ItemGroup>
+<ItemGroup>   
+  <Content Include="$(MSBuildThisFileDirectory)\switchBalance.png">
+         <Link>switchBalance.png</Link>
+  </Content>
+
+  <Content Include="$(MSBuildThisFileDirectory)\switchbalanced.png">
+         <Link>switchbalanced.png</Link>
+   </Content>
+
+  <Content Include="$(MSBuildThisFileDirectory)\switchCenter.png">
+         <Link>switchCenter.png</Link>
+   </Content>
+
+  <Content Include="$(MSBuildThisFileDirectory)\switchOff.png">
+         <Link>switchOff.png</Link>
+   </Content>
+
+  <Content Include="$(MSBuildThisFileDirectory)\switchoffState.png">
+         <Link>switchoffState.png</Link>
+   </Content>
+
+  <Content Include="$(MSBuildThisFileDirectory)\switchOn.png">
+         <Link>switchOn.png</Link>
+   </Content>
+   
+    <Content Include="$(MSBuildThisFileDirectory)\switchonState.png">
+         <Link>switchonState.png</Link>
+   </Content>
+
+  <Content Include="$(MSBuildThisFileDirectory)\switchlaugh.png">
+    <Link>switchlaugh.png</Link>
+  </Content>
+
+  <Content Include="$(MSBuildThisFileDirectory)\switchsad.png">
+    <Link>switchsad.png</Link>
+  </Content>
+
+  <Content Include="$(MSBuildThisFileDirectory)\switchbg.png">
+    <Link>switchbg.png</Link>
+  </Content>
+  
+   <Content Include="$(MSBuildThisFileDirectory)\switchbg2.png">
+    <Link>switchbg2.png</Link>
+  </Content>
+
+  <Content Include="$(MSBuildThisFileDirectory)\switchmoon.png">
+    <Link>switchmoon.png</Link>
+  </Content>
+
+  <Content Include="$(MSBuildThisFileDirectory)\switchsun.png">
+    <Link>switchsun.png</Link>
+  </Content>
+
+</ItemGroup>
+</Project>

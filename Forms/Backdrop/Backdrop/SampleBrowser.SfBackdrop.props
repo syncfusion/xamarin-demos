@@ -1,0 +1,90 @@
+<Project>
+
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>Samples\Backdrop\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Backdrop\Backdrop.xaml">
+
+      <Link>Samples\Backdrop\Samples\Backdrop\Backdrop.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+
+      <SubType>Designer</SubType>
+
+    </EmbeddedResource>
+
+
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Backdrop\BackdropViewModel.cs" >
+      <Link>Samples\Backdrop\Samples\Backdrop\BackdropViewModel.cs</Link>
+    </Compile>
+
+
+
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Backdrop\Backdrop.xaml.cs">
+
+      <Link>Samples\Backdrop\Samples\Backdrop\Backdrop.xaml.cs</Link>
+      <DependentUpon>Backdrop.xaml</DependentUpon>
+
+    </Compile>
+
+
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Backdrop\BackdropModel.cs" >
+      <Link>Samples\Backdrop\Samples\Backdrop\BackdropModel.cs</Link>
+    </Compile>
+
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <Compile Include="$(MSBuildThisFileDirectory)\Behaviors\SelectionBehavior.cs" >
+      <Link>Behaviors\SelectionBehavior.cs</Link>
+    </Compile>
+
+    <Compile Include="$(MSBuildThisFileDirectory)\Behaviors\SliderBehavior.cs" >
+      <Link>Behaviors\SliderBehavior.cs</Link>
+    </Compile>
+
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <Compile Include="$(MSBuildThisFileDirectory)\Converter\TitleConverter.cs" >
+      <Link>Converter\TitleConverter.cs</Link>
+    </Compile>
+
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Images\Biscuits.png">
+      <Link>Images\Biscuits.png</Link>
+    </EmbeddedResource>
+
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Images\Brownie.png">
+      <Link>Images\Brownie.png</Link>
+    </EmbeddedResource>
+
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Images\Cake.png">
+      <Link>Images\Cake.png</Link>
+    </EmbeddedResource>
+
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Images\Cookie.png">
+      <Link>Images\Cookie.png</Link>
+    </EmbeddedResource>
+
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Images\Cupcake.png">
+      <Link>Images\Cupcake.png</Link>
+    </EmbeddedResource>
+
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Images\Icecake.png">
+      <Link>Images\Icecake.png</Link>
+    </EmbeddedResource>
+
+  </ItemGroup>
+
+</Project>

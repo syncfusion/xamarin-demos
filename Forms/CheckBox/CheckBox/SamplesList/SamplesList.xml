@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Samples>
+  <Sample Title="CheckBox" Name="CheckBox" SearchTags="CheckBox, SfCheckBox, Buttons" Description = "Represents a control that a user can select and clear." />
+</Samples>
