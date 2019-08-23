@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
-<Samples>
-	<Sample Title = "Getting Started" Name = "PickerGettingStarted"   />
-  <Sample Title = "Dialog" Name = "PopupPicker" SearchTags="popup,dialog,modal"  />
-  <Sample Title = "Date/Time" Name = "DateTimePicker" SearchTags="datepicker,timepicker"  />
-  <Sample Title = "Cascading" Name = "Cascading" SearchTags="drilldown" />
-</Samples>  
