@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<Samples>
-  <Sample Title="Getting Started" IsNew="true" Name="GettingStartedSample" SearchTags="Switch, SfSwitch, Switches" Description = "Represents the  switch control"/>
-  <Sample Title="Features" IsNew="true" Name="VisualType" SearchTags="Switch, SfSwitch, Switches" Description = "Represents the different types of switch customizations" />
-  <!--<Sample Title="Customization" IsUpdated="true" Name="Appearance" SearchTags="Switch, SfSwitch, Switches" Description = "Represents a control that a user can show a customized switch." />-->
-</Samples>
