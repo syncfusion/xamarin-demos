@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SampleBrowser.SfDataForm"
+             xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:sync="clr-namespace:Syncfusion.XForms.DataForm;assembly=Syncfusion.SfDataForm.XForms"
+             x:Class="SampleBrowser.SfDataForm.GettingStarted">
+    <sample:SampleView.BindingContext>
+        <local:RecipientInfoViewModel/>
+    </sample:SampleView.BindingContext>
+    <sample:SampleView.Content>
+        <Grid Margin="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <sync:SfDataForm x:Name="dataForm" LayoutOptions="TextInputLayout" ValidationMode="Explicit" DataObject="{Binding RecipientInfo}">
+              <sync:SfDataForm.Behaviors>
+                <local:SfDataFormGettingStartedBehavior/>
+              </sync:SfDataForm.Behaviors>
+            </sync:SfDataForm>
+            <Button x:Name="transferMoney" Grid.Row="1"  Text="Transfer Money" TextColor="#FFFFFF"
+                  WidthRequest="150" HeightRequest="40" BackgroundColor="#2196F3" HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                  Command="{Binding Path=BindingContext.CommitCommand, Source={x:Reference Name=dataForm}}"                   
+                                                CommandParameter="{Binding Source={x:Reference Name=dataForm}}"
+                     IsVisible="{Binding IsVisible, Mode=TwoWay}"/>
+        </Grid>
+    </sample:SampleView.Content>
+</sample:SampleView>

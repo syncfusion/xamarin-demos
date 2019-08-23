@@ -1,0 +1,38 @@
+<Project>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+	<Link>Samples\Barcode\SamplesList\SamplesList.xml</Link>
+	</EmbeddedResource>
+  </ItemGroup> 
+  <ItemGroup>
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Codabar\Codabar.xaml">
+	<Link>Samples\Barcode\Samples\Codabar\Codabar.xaml</Link>
+	<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+	</EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DataMatrix\DataMatrix.xaml">
+	<Link>Samples\Barcode\Samples\DataMatrix\DataMatrix.xaml</Link>
+	<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+	</EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\QRCode\QRCode.xaml">
+	<Link>Samples\Barcode\Samples\QRCode\QRCode.xaml</Link>
+	<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+	</EmbeddedResource>	
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Codabar\Codabar.xaml.cs">
+	<Link>Samples\Barcode\Samples\Codabar\Codabar.xaml.cs</Link>
+	<DependentUpon>Codabar.xaml</DependentUpon>
+	</Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataMatrix\DataMatrix.xaml.cs">
+	<Link>Samples\Barcode\Samples\DataMatrix\DataMatrix.xaml.cs</Link>
+	<DependentUpon>DataMatrix.xaml</DependentUpon>
+	</Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\QRCode\QRCode.xaml.cs">
+	<Link>Samples\Barcode\Samples\QRCode\QRCode.xaml.cs</Link>
+	<DependentUpon>QRCode.xaml</DependentUpon>
+	</Compile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,20 @@
+﻿<Project>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\BusyIndicator\BusyIndicator.xaml.cs">
+	    <Link>Samples\BusyIndicator\BusyIndicator.xaml.cs</Link>
+      <DependentUpon>BusyIndicator.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml" >
+	    <Link>Samples\BusyIndicator\SamplesList\SamplesList.xml</Link>
+	  </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\BusyIndicator\BusyIndicator.xaml">
+	    <Link>Samples\BusyIndicator\BusyIndicator.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

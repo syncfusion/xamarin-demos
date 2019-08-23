@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+        <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\switch.ttf">
+            <Link>Assets\switch.ttf</Link>
+        </AndroidAsset>
+  </ItemGroup>
+  <ItemGroup>
+        
+	<AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\switchBalance.png">
+            		
+		<Link>Resources\drawable\switchBalance.png</Link>
+        
+	</AndroidResource>
+    
+  </ItemGroup>
+
+  <ItemGroup>
+        
+	<AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\switchbalanced.png">
+            
+		<Link>Resources\drawable\switchbalanced.png</Link>
+ 
+       </AndroidResource>
+  
+  </ItemGroup>
+
+  <ItemGroup>
+        
+	<AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\switchCenter.png">
+            
+		<Link>Resources\drawable\switchCenter.png</Link>
+ 
+       </AndroidResource>
+  
+  </ItemGroup>
+
+  <ItemGroup>
+        
+	<AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\switchOff.png">
+            
+		<Link>Resources\drawable\switchOff.png</Link>
+ 
+       </AndroidResource>
+  
+  </ItemGroup>
+
+  <ItemGroup>
+        
+	<AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\switchoffState.png">
+            
+		<Link>Resources\drawable\switchoffState.png</Link>
+ 
+       </AndroidResource>
+  
+  </ItemGroup>
+
+  <ItemGroup>
+        
+	<AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\switchOn.png">
+            
+		<Link>Resources\drawable\switchOn.png</Link>
+ 
+       </AndroidResource>
+  
+  </ItemGroup>
+  
+  <ItemGroup>
+        
+	<AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\switchonState.png">
+            
+		<Link>Resources\drawable\switchonState.png</Link>
+ 
+       </AndroidResource>
+  
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\switchlaugh.png">
+
+      <Link>Resources\drawable\switchlaugh.png</Link>
+
+    </AndroidResource>
+
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\switchsad.png">
+
+      <Link>Resources\drawable\switchsad.png</Link>
+
+    </AndroidResource>
+
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\switchbg.png">
+
+      <Link>Resources\drawable\switchbg.png</Link>
+
+    </AndroidResource>
+
+  </ItemGroup>
+  
+  <ItemGroup>
+
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\switchbg2.png">
+
+      <Link>Resources\drawable\switchbg2.png</Link>
+
+    </AndroidResource>
+
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\switchmoon.png">
+
+      <Link>Resources\drawable\switchmoon.png</Link>
+
+    </AndroidResource>
+
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\switchsun.png">
+
+      <Link>Resources\drawable\switchsun.png</Link>
+
+    </AndroidResource>
+
+  </ItemGroup>
+
+</Project>

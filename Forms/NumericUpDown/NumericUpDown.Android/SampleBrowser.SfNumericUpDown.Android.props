@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\strawberry.jpg" >
+    <Link>Resources\drawable\strawberry.jpg</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\peach.jpg" >
+    <Link>Resources\drawable\peach.jpg</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\greenapple.jpg" >
+    <Link>Resources\drawable\greenapple.jpg</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\cartimage.png" >
+    <Link>Resources\drawable\cartimage.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\kiwi.jpg" >
+    <Link>Resources\drawable\kiwi.jpg</Link>
+    </AndroidResource>
+  </ItemGroup>
+</Project>

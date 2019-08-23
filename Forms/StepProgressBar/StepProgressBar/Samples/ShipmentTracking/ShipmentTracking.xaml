@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local1="clr-namespace:SampleBrowser.SfStepProgressBar"
+    xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
+    x:Class="SampleBrowser.SfStepProgressBar.ShipmentTracking">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local1:SwitchToColorConverter x:Key="myConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentView.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Text="Track your Package" FontFamily="HelveticNeue - Medium" Margin="0,20,0,0" FontSize="15" HorizontalTextAlignment= "Center" FontAttributes=" None" TextColor="Black" Grid.Row="0"/>
+            <ScrollView Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                <progressBar:SfStepProgressBar TitleAlignment="Start" BackgroundColor="Transparent" Orientation="Vertical" x:Name="stepProgress" Margin="16,16,0,0">
+                    <progressBar:StepView x:Name="stepView1">
+                        <progressBar:StepView.PrimaryFormattedText>
+                            <FormattedString>
+                                <Span x:Name="span1" ClassId="1" Text="Ordered and Approved" FontSize="13" FontAttributes="Bold" TextColor="{Binding Source={x:Reference stepView1},Path=Status,ConverterParameter={x:Reference Name=span1} ,Converter={StaticResource myConverter}}"/>
+                                <Span x:Name="span2" ClassId="2" Text="&#10;&#10;Your Order has been placed." FontSize="12" TextColor="Transparent"/>
+                                <Span x:Name="span3" ClassId="3" Text="&#10;Sat, 27th Oct&#10;" FontSize="12" TextColor="Transparent"/>
+                            </FormattedString>
+                        </progressBar:StepView.PrimaryFormattedText>
+                    </progressBar:StepView>
+
+                    <progressBar:StepView x:Name="stepView2">
+                        <progressBar:StepView.PrimaryFormattedText>
+                            <FormattedString>
+                                <Span x:Name="span21" ClassId="1" Text="Packed" FontSize="13" FontAttributes="Bold" TextColor="{Binding Source={x:Reference stepView2},Path=Status,ConverterParameter={x:Reference Name=span21} ,Converter={StaticResource myConverter}}"/>
+                                <Span x:Name="span22" ClassId="2" Text="&#10;&#10;Your item has been picked up by courier partner." FontSize="12" TextColor="Transparent"/>
+                                <Span x:Name="span23" ClassId="3" Text="&#10;Mon, 29th Oct" FontSize="12" TextColor="Transparent"/>
+                            </FormattedString>
+                        </progressBar:StepView.PrimaryFormattedText>
+                    </progressBar:StepView>
+
+                    <progressBar:StepView x:Name="stepView3">
+                        <progressBar:StepView.PrimaryFormattedText>
+                            <FormattedString>
+                                <Span x:Name="span31" ClassId="1" Text="Shipped" FontSize="13" FontAttributes="Bold" TextColor="{Binding Source={x:Reference stepView3},Path=Status,ConverterParameter={x:Reference Name=span31} ,Converter={StaticResource myConverter}}"/>
+                            </FormattedString>
+                        </progressBar:StepView.PrimaryFormattedText>
+                    </progressBar:StepView>
+
+                    <progressBar:StepView x:Name="stepView4">
+                        <progressBar:StepView.PrimaryFormattedText>
+                            <FormattedString>
+                                <Span x:Name="span41" ClassId="1" Text="Delivered" FontSize="13" FontAttributes="Bold" TextColor="{Binding Source={x:Reference stepView4},Path=Status,ConverterParameter={x:Reference Name=span41} ,Converter={StaticResource myConverter}}"/>
+                            </FormattedString>
+                        </progressBar:StepView.PrimaryFormattedText>
+                    </progressBar:StepView>
+
+                </progressBar:SfStepProgressBar>
+            </ScrollView>
+            <Button x:Name="TrackButton" Text="Track Status" TextColor="Black" Grid.Row="2" Clicked="Handle_Clicked" WidthRequest="150" HeightRequest="40" HorizontalOptions="Center" BackgroundColor="#FFEAEAEA" Margin="0,0,0,10" FontFamily="Roboto-Medium" FontSize="Default"/>
+        </Grid>
+    </ContentView.Content>
+</local:SampleView>

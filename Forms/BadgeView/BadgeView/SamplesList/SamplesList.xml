@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Samples>
+
+  <Sample Name = "Notification" Platforms="Android,iOS,UWP" Title = "Notification"   SearchTags= "Notification, badge" 
+          Description = "Showcases a simple listview with badgeview" />
+  <Sample Name = "Customization" Platforms="Android,iOS,UWP" Title = "Customization"   SearchTags= "custombadge, badgecustom"
+        Description = "Showcases a simple badgeview customization" />
+</Samples>

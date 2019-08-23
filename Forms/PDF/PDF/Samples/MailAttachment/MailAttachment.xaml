@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+              xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+              xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="SampleBrowser.PDF.MailAttachment">
+
+  <local:SampleView.Content>
+    <StackLayout x:Name="stackLayout1" Padding="10">
+      
+      <Label x:Name="Description" Text="This sample illustrates how to send a filled PDF form as an email attachmet." FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center">
+      </Label>
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <ScrollView Grid.Row="0">
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="0.5*" />
+              <RowDefinition Height="*" />
+              <RowDefinition Height="0.5*" />
+              <RowDefinition Height="*" />
+              <RowDefinition Height="0.5*" />
+              <RowDefinition Height="*" />
+              <RowDefinition Height="0.5*" />
+              <RowDefinition Height="*" />
+              <RowDefinition Height="0.5*" />
+              <RowDefinition Height="*" />
+              <RowDefinition Height="*" />
+              <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width = "*"/>
+              <ColumnDefinition Width = "*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.ColumnSpan="2" VerticalOptions="End">Name </Label>
+            <Entry x:Name="name" Grid.Row="1" Grid.ColumnSpan="2" VerticalOptions="Center" ></Entry>
+            <Label Grid.Row="2" Grid.ColumnSpan="2" VerticalOptions="End">Gender</Label>
+            <Picker x:Name="gender" Grid.ColumnSpan="2" Grid.Row="3" VerticalOptions="Center"/>
+            <Label Grid.Row="4" Grid.ColumnSpan="2" VerticalOptions="End">Date of Birth</Label>
+            <DatePicker x:Name="dob" Grid.ColumnSpan="2" Grid.Row="5" VerticalOptions="Center"></DatePicker>
+            <Label Grid.Row="6" Grid.ColumnSpan="2" VerticalOptions="End">Email ID</Label>
+            <Entry x:Name="emailID" Keyboard="Email" Grid.Row="7" Grid.ColumnSpan="2" VerticalOptions="Center"></Entry>
+            <Label Grid.Row="8" Grid.ColumnSpan="2" VerticalOptions="End">Coming from</Label>
+            <Picker x:Name="country" Grid.Row="9" VerticalOptions="Center" Grid.ColumnSpan="2"></Picker>
+            <Label Grid.Row="10" Grid.Column="0" VerticalOptions="Center">Would you like to receive our Newsletter?</Label>
+            <Switch x:Name="newsLetter" Grid.Row="10" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center"></Switch>
+            <Button Grid.Row="11" x:Name="btnGenerate" Grid.Column="0" Text="Email PDF" Clicked="OnButtonClicked" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Button Grid.Row="11" x:Name="btnTemplate" Grid.Column="1"  Text="View Template" Clicked="OnTemplateButtonClicked" HorizontalOptions="Center" VerticalOptions="Center"/>
+          </Grid>
+        </ScrollView>
+      </Grid>
+      <Label></Label>
+    </StackLayout>
+  </local:SampleView.Content>
+  <local:SamplePage.PropertyView>
+  </local:SamplePage.PropertyView>
+</local:SampleView>

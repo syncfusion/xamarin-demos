@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SampleBrowser.SfDataForm"
+             xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+             xmlns:combo="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+             xmlns:dataForm="clr-namespace:Syncfusion.XForms.DataForm;assembly=Syncfusion.SfDataForm.XForms"
+             x:Class="SampleBrowser.SfDataForm.DynamicFormPage">
+    <sample:SampleView.BindingContext>
+        <local:ViewModel/>
+    </sample:SampleView.BindingContext>
+    <sample:SampleView.Behaviors>
+        <local:DynamicFormBehavior/>
+    </sample:SampleView.Behaviors>
+    <sample:SampleView.Content>
+        <Grid>
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.1*"/>
+                    <RowDefinition Height="0.9*"/>
+                </Grid.RowDefinitions>
+                <combo:SfComboBox x:Name="combo" BackgroundColor="#EBEBEB" TextColor="#454545" DataSource="{Binding SelectedForm}"  DropDownTextSize="16" DropDownTextColor="#1976d2" Grid.Row="0">
+                </combo:SfComboBox>
+                <dataForm:SfDataForm x:Name="dataForm" LayoutOptions="TextInputLayout" Grid.Row="1">
+                    <dataForm:SfDataForm.Behaviors>
+                        <local:SfDataFormDynamicFormBehavior/>
+                    </dataForm:SfDataForm.Behaviors>
+                </dataForm:SfDataForm>
+            </Grid>
+        </Grid>
+    </sample:SampleView.Content>
+</sample:SampleView>

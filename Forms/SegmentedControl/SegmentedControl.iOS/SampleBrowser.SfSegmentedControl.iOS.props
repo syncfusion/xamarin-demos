@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+   <Compile Include="$(MSBuildThisFileDirectory)\Renderer\Renderer.cs" >
+		<Link>Renderer\Renderer.cs</Link>
+	</Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\segment2.ttf" >
+		<Link>Resources\segment2.ttf</Link>
+	</BundleResource>
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Segmented.ttf" >
+		<Link>Resources\Segmented.ttf</Link>
+	</BundleResource>
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\SegmentIcon.ttf" >
+		<Link>Resources\SegmentIcon.ttf</Link>
+	</BundleResource>
+	
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Segoe_MDL2_Assets.ttf" >
+		<Link>Resources\Segoe_MDL2_Assets.ttf</Link>
+	</BundleResource>
+  </ItemGroup>
+ 
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\angry.png" >
+		<Link>Resources\angry.png</Link>
+	</BundleResource>
+	
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\cancelsearch.png" >
+		<Link>Resources\cancelsearch.png</Link>
+	</BundleResource>
+	
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\cat.png" >
+		<Link>Resources\cat.png</Link>
+	</BundleResource>
+	
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\ellana.png" >
+		<Link>Resources\ellana.png</Link>
+	</BundleResource>
+	
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\flower.jpeg" >
+		<Link>Resources\flower.jpeg</Link>
+	</BundleResource>
+	
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\heart.png" >
+		<Link>Resources\heart.png</Link>
+	</BundleResource>
+	
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\laugh.png" >
+		<Link>Resources\laugh.png</Link>
+	</BundleResource>
+	
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\like.png" >
+		<Link>Resources\like.png</Link>
+	</BundleResource>
+	
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\likes.png" >
+		<Link>Resources\likes.png</Link>
+	</BundleResource>
+	
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\love.png" >
+		<Link>Resources\love.png</Link>
+	</BundleResource>
+	
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\sad.png" >
+		<Link>Resources\sad.png</Link>
+	</BundleResource>
+	
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\wow.png" >
+		<Link>Resources\wow.png</Link>
+	</BundleResource>
+  </ItemGroup>
+</Project>
