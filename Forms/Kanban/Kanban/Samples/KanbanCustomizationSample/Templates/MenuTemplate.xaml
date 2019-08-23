@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+		  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		  x:Class="SampleBrowser.SfKanban.MenuTemplate"
+		  xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms">
+
+	<Frame Padding="10" HasShadow="true" BackgroundColor="White" CornerRadius="0" >
+		<Grid>
+			
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="60" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+			
+			<Image Grid.Column="0" HeightRequest="60" WidthRequest="60" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Source="{Binding ImageURL}"></Image>
+
+			<StackLayout Grid.Column="1" Spacing="2" >
+				<StackLayout Orientation="Horizontal" >
+					<Label Text="{Binding Title}" FontSize="16" LineBreakMode="NoWrap" FontAttributes="Bold" VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" />
+					<rating:SfRating Value="{Binding Rating}" ReadOnly="true" ItemSize="12" VerticalOptions="Center" 
+									 HorizontalOptions="EndAndExpand" Precision="Exact" >
+						<rating:SfRating.RatingSettings>
+							<rating:SfRatingSettings RatedStrokeWidth="0" UnRatedStrokeWidth="0" UnRatedFill="Silver"  />
+						</rating:SfRating.RatingSettings>
+					</rating:SfRating>
+				</StackLayout>
+				
+				<Label FontSize="12" TextColor="Gray" HeightRequest="60" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+			   		Text="{Binding Description}" LineBreakMode="WordWrap" VerticalTextAlignment="Center" 
+			   		HorizontalTextAlignment="Start"/>
+			</StackLayout>
+		   
+	   </Grid>
+	</Frame>
+	
+</ViewCell>

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\plus.png">
+      <Link>plus.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Straight.png">
+      <Link>Straight.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Curve.png">
+      <Link>Curve.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Edge.png">
+      <Link>Edge.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Straight1.png">
+      <Link>Straight1.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Curve1.png">
+      <Link>Curve1.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Edge1.png">
+      <Link>Edge1.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\sub.png">
+      <Link>sub.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\DClayton.png">
+      <Link>DClayton.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Diagram\FlowDiagram.png">
+      <Link>Diagram\FlowDiagram.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Diagram\HierarchicalLayout.png">
+      <Link>Diagram\HierarchicalLayout.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Diagram\NodeAnnotation.png">
+      <Link>Diagram\NodeAnnotation.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Diagram\OrganizationalLayout.png">
+      <Link>Diagram\OrganizationalLayout.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Diagram\Ports.png">
+      <Link>Diagram\Ports.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Diagram\Stencil.png">
+      <Link>Diagram\Stencil.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Demp.png">
+      <Link>Demp.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Deric.png">
+      <Link>Deric.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\DImage17.png">
+      <Link>DImage17.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\DImage23.png">
+      <Link>DImage23.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Dimage57.png">
+      <Link>Dimage57.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\DImage9.png">
+      <Link>DImage9.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Dimages12.png">
+      <Link>Dimages12.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Dimages2.png">
+      <Link>Dimages2.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Dimages3.png">
+      <Link>Dimages3.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Dimages9.png">
+      <Link>Dimages9.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\DJenny.png">
+      <Link>DJenny.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\DMaria.png">
+      <Link>DMaria.png</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\DPaul.png">
+      <Link>DPaul.png</Link>
+    </Content>
+  </ItemGroup>
+</Project>

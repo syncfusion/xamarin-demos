@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup> 
+     <Compile Include="$(MSBuildThisFileDirectory)\CustomFrameRenderer.cs" > 
+	 <Link>TabView\CustomFrameRenderer.cs</Link> 
+	 </Compile> 
+   </ItemGroup> 
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\a0.png" >
+	<Link>a0.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\a1.png" >
+	<Link>a1.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\a2.png" >
+	<Link>a2.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\a3.png" >
+	<Link>a3.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\a4.png" >
+	<Link>a4.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\a5.png" >
+	<Link>a5.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\allmail.png" >
+	<Link>allmail.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\apple.png" >
+	<Link>apple.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\b0.png" >
+	<Link>b0.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\b1.png" >
+	<Link>b1.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\b10.png" >
+	<Link>b10.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\b11.png" >
+	<Link>b11.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\b12.png" >
+	<Link>b12.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\b13.png" >
+	<Link>b13.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\b2.png" >
+	<Link>b2.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\b3.png" >
+	<Link>b3.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\b4.png" >
+	<Link>b4.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\b5.png" >
+	<Link>b5.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\b6.png" >
+	<Link>b6.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\b7.png" >
+	<Link>b7.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\b8.png" >
+	<Link>b8.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\b9.png" >
+	<Link>b9.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\banana.png" >
+	<Link>banana.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\blackshoe.png" >
+	<Link>blackshoe.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\blueberry.png" >
+	<Link>blueberry.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\boots.png" >
+	<Link>boots.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\canvas.png" >
+	<Link>canvas.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\chair.png" >
+	<Link>chair.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Compose.png" >
+	<Link>Compose.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\edit.png" >
+	<Link>edit.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\friends.png" >
+	<Link>friends.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\graycanvas.png" >
+	<Link>graycanvas.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\hall.png" >
+	<Link>hall.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\hall2.png" >
+	<Link>hall2.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\leather.png" >
+	<Link>leather.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\minion.png" >
+	<Link>minion.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\orange.png" >
+	<Link>orange.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\tabviewphone.png" >
+	<Link>tabviewphone.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\redcoat.png" >
+	<Link>redcoat.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\robot.png" >
+	<Link>robot.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Send.png" >
+	<Link>Send.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\shirt.png" >
+	<Link>shirt.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\silvercoat.png" >
+	<Link>silvercoat.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\sofa.png" >
+	<Link>sofa.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\sofa2.png" >
+	<Link>sofa2.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\strawberry.png" >
+	<Link>strawberry.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\tab1.png" >
+	<Link>tab1.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\tab2.png" >
+	<Link>tab2.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\tab3.png" >
+	<Link>tab3.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\tab4.png" >
+	<Link>tab4.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\train.png" >
+	<Link>train.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\tshirt.png" >
+	<Link>tshirt.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\van.png" >
+	<Link>van.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\whiteshirt.png" >
+	<Link>whiteshirt.png</Link>
+	</Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\Assets\Fonts\NestedTab.ttf" >
+	<Link>Assets\Fonts\NestedTab.ttf</Link>
+	</Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\Assets\Fonts\Segoe MDL2 Assets.ttf" >
+	<Link>Assets\Fonts\Segoe MDL2 Assets.ttf</Link>
+	</Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\Assets\Fonts\TabIcons.ttf" >
+	<Link>Assets\Fonts\TabIcons.ttf</Link>
+	</Content>
+  </ItemGroup>
+  
+</Project>

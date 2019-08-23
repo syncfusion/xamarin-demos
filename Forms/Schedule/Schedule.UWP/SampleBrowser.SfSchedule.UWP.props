@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    
+    <ItemGroup>
+        <Content Include="$(MSBuildThisFileDirectory)\cake_schedule.png">
+            <Link>cake_schedule.png</Link>
+        </Content>
+        <Content Include="$(MSBuildThisFileDirectory)\Checkup.png">
+            <Link>Checkup.png</Link>
+        </Content>
+        <Content Include="$(MSBuildThisFileDirectory)\Conference.png">
+            <Link>Conference.png</Link>
+        </Content>
+        <Content Include="$(MSBuildThisFileDirectory)\conference_schedule.png">
+            <Link>conference_schedule.png</Link>
+        </Content>
+        <Content Include="$(MSBuildThisFileDirectory)\schedule_editor.png">
+            <Link>schedule_editor.png</Link>
+        </Content>
+        <Content Include="$(MSBuildThisFileDirectory)\scheduleview.png">
+            <Link>scheduleview.png</Link>
+        </Content>
+        <Content Include="$(MSBuildThisFileDirectory)\stethoscope_schedule.png">
+            <Link>stethoscope_schedule.png</Link>
+        </Content>
+        <Content Include="$(MSBuildThisFileDirectory)\troubleshoot_schedule.png">
+            <Link>troubleshoot_schedule.png</Link>
+        </Content>
+		<Content Include="$(MSBuildThisFileDirectory)\Schedule_Resource0.png">
+            <Link>Schedule_Resource0.png</Link>
+        </Content>
+		<Content Include="$(MSBuildThisFileDirectory)\Schedule_Resource1.png">
+            <Link>Schedule_Resource1.png</Link>
+        </Content>
+		<Content Include="$(MSBuildThisFileDirectory)\Schedule_Resource2.png">
+            <Link>Schedule_Resource2.png</Link>
+        </Content>
+		<Content Include="$(MSBuildThisFileDirectory)\Schedule_Resource3.png">
+            <Link>Schedule_Resource3.png</Link>
+        </Content>
+		<Content Include="$(MSBuildThisFileDirectory)\Schedule_Resource4.png">
+            <Link>Schedule_Resource4.png</Link>
+        </Content>
+		<Content Include="$(MSBuildThisFileDirectory)\Schedule_Resource5.png">
+            <Link>Schedule_Resource5.png</Link>
+        </Content>
+		<Content Include="$(MSBuildThisFileDirectory)\Schedule_Resource6.png">
+            <Link>Schedule_Resource6.png</Link>
+        </Content>
+		<Content Include="$(MSBuildThisFileDirectory)\Schedule_Resource7.png">
+            <Link>Schedule_Resource7.png</Link>
+        </Content>
+		<Content Include="$(MSBuildThisFileDirectory)\Schedule_Resource8.png">
+            <Link>Schedule_Resource8.png</Link>
+        </Content>
+    </ItemGroup>
+    
+</Project>
+

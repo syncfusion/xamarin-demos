@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Samples>
+    <Sample Title = "Getting Started" Name = "TabViewGettingStarted" />
+    <Sample Title = "Center Button" Name = "CenterButton" />
+	<Sample Title = "Nested Tabs" Name = "NestedTab" />
+    <Sample Title = "Custom Header" Name = "CustomView" />
+</Samples>  

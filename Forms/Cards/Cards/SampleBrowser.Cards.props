@@ -1,0 +1,74 @@
+<Project>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\CardLayout\CardLayout.xaml.cs">
+      <Link>Samples\Cards\Samples\CardLayout\CardLayout.xaml.cs</Link>
+      <DependentUpon>CardLayout.xaml</DependentUpon>
+    </Compile>
+
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\CardLayout\CardViewContent.xaml.cs">
+      <Link>Samples\Cards\Samples\CardLayout\CardViewContent.xaml.cs</Link>
+      <DependentUpon>ViewTemplate.xaml</DependentUpon>
+    </Compile>
+    
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\CardView\CardView.xaml.cs">
+      <Link>Samples\Cards\Samples\CardView\CardView.xaml.cs</Link>
+      <DependentUpon>CardView.xaml</DependentUpon>
+    </Compile>
+    
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\CardView\CardViewTemplate.xaml.cs">
+      <Link>Samples\Cards\Samples\CardView\CardViewTemplate.xaml.cs</Link>
+      <DependentUpon>CardView.xaml</DependentUpon>
+    </Compile>
+    
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\CardLayout\CardData.cs">
+      <Link>Samples\Cards\Samples\CardLayout\CardData.cs</Link>
+    </Compile>
+    
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\CardLayout\CardLayoutViewModel.cs">
+      <Link>Samples\Cards\Samples\CardLayout\CardLayoutViewModel.cs</Link>
+    </Compile>
+    
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\CardView\CardViewModel.cs">
+      <Link>Samples\Cards\Samples\CardView\CardViewModel.cs</Link>
+    </Compile>
+  
+     <Compile Include="$(MSBuildThisFileDirectory)\Samples\CardView\CardViewData.cs">
+      <Link>Samples\Cards\Samples\CardView\CardViewData.cs</Link>
+    </Compile>
+  
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>Samples\Cards\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CardLayout\CardLayout.xaml">
+      <Link>Samples\Cards\Samples\CardLayout\CardLayout.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CardLayout\CardViewContent.xaml">
+      <Link>Samples\Cards\Samples\CardLayout\CardViewContent.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CardView\CardView.xaml">
+      <Link>Samples\Cards\Samples\CardView\CardView.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CardView\CardViewTemplate.xaml">
+      <Link>Samples\Cards\Samples\CardView\CardViewTemplate.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

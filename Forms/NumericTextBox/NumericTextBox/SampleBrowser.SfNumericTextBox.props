@@ -1,0 +1,56 @@
+﻿<Project>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\NumericTextBox\NumericTextBox.xaml.cs">
+	<Link>Samples\NumericTextBox\NumericTextBox\NumericTextBox.xaml.cs</Link>
+      <DependentUpon>NumericTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\NumericTextBox\NumericTextBox_Default.xaml.cs">
+	<Link>Samples\NumericTextBox\NumericTextBox\NumericTextBox_Default.xaml.cs</Link>
+      <DependentUpon>NumericTextBox_Default.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\NumericTextBox\NumericTextBox_Tablet.xaml.cs">
+	<Link>Samples\NumericTextBox\NumericTextBox\NumericTextBox_Tablet.xaml.cs</Link>
+      <DependentUpon>NumericTextBox_Tablet.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml" >
+	<Link>Samples\NumericTextBox\SamplesList\SamplesList.xml</Link>
+	</EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml.cs">
+	    <Link>Samples\NumericTextBox\Samples\Themes\Themes.xaml.cs</Link>
+      <DependentUpon>Themes.xaml</DependentUpon>
+  </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\NumericTextBox\NumericTextBox.xaml">
+	<Link>Samples\NumericTextBox\NumericTextBox\NumericTextBox.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\NumericTextBox\NumericTextBox_Default.xaml">
+	<Link>Samples\NumericTextBox\NumericTextBox\NumericTextBox_Default.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\NumericTextBox\NumericTextBox_Tablet.xaml">
+	<Link>Samples\NumericTextBox\NumericTextBox\NumericTextBox_Tablet.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+   <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml">
+	    <Link>Samples\NumericTextBox\Samples\Themes\Themes.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

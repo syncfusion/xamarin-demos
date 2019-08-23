@@ -1,0 +1,72 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+     <Configurations>Debug;Release;Release-xml</Configurations>
+	 <RootNamespace>SampleBrowser.SfBackdrop</RootNamespace>
+     <AssemblyName>SampleBrowser.SfBackdrop</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;NETSTANDARD1_0;INDIVIDUALSB</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType></DebugType>
+    <DefineConstants>TRACE;RELEASE;NETSTANDARD;INDIVIDUALSB;NETSTANDARD1_0</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Images\Biscuits.png" />
+    <None Remove="Images\Brownie.png" />
+    <None Remove="Images\Cake.png" />
+    <None Remove="Images\Cookie.png" />
+    <None Remove="Images\Cupcake.png" />
+    <None Remove="Images\Icecake.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Biscuits.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\Brownie.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\Cake.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\Cookie.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\Cupcake.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\Icecake.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SamplesList\SamplesList.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SampleBrowser.Core" Version="17.2.0.46" />
+    <PackageReference Include="Syncfusion.Licensing" Version="17.2.0.46" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="17.2.0.46" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="17.2.0.46" />
+	 <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="17.2.0.46" />
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="17.2.0.46" />
+    <PackageReference Include="Syncfusion.Xamarin.SfBackdrop" Version="17.2.0.46" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="17.2.0.46" />
+	
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>
