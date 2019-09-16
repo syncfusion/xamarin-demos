@@ -1,13 +1,13 @@
-# Syncfusion Xamarin samples
+# Syncfusion Xamarin examples
  
-This repository contains the demos of [Syncfusion Xamarin UI controls](https://www.syncfusion.com/products/xamarin?utm_source=github&utm_medium=listing). This is the best place to check our controls to get more insight about the usage of APIs. You can also check our controls by installing the complete Xamarin.Forms sample browser from [ Google Play Store](https://play.google.com/store/apps/details?id=com.syncfusion.samplebrowser) or [Microsoft Store](https://www.microsoft.com/en-in/p/syncfusion-essential-studio-for-xamarin/9nn069tldzf4), in which you can browse the demo for all the controls and view the source code of each sample within the app itself.
+This repository contains awesome demos of [Syncfusion Xamarin UI controls](https://www.syncfusion.com/products/xamarin?utm_source=github&utm_medium=listing). This is the best place to check our controls to get more insight about the usage of APIs. You can also check our controls by installing the complete Xamarin.Forms sample browser from [ Google Play Store](https://play.google.com/store/apps/details?id=com.syncfusion.samplebrowser) or [Microsoft Store](https://www.microsoft.com/en-in/p/syncfusion-essential-studio-for-xamarin/9nn069tldzf4), in which you can browse the demo for all the controls and view the source code of each sample within the app itself.
 
-This section guides you to use the Syncfusion Xamarin samples in your applications.
+This section guides you to use the Syncfusion Xamarin examples in your applications.
 
 * [Requirements to run the demo](#requirements-to-run-the-demo)
 * [Repository Structure](#repository-structure)
 * [License](#license)
-* [Using the samples](#using-the-samples)
+* [Using the examples](#using-the-examples)
 * [Controls Catalog](#controls-catalog)
 * [Support and Feedback](#support-and-feedback)
 
@@ -18,29 +18,29 @@ This section guides you to use the Syncfusion Xamarin samples in your applicatio
 
 ## <a name="repository-structure"></a>Repository Structure ##
 
-The <b>"Forms"</b> directory contains the demo samples for each control such as Charts, DataGrid, etc. All the samples can be deployed in Android, iOS, and UWP platforms. Additionally, Charts, DataGrid, and ListView samples can be deployed in macOS platform also. 
+The <b>"Forms"</b> directory contains the Xamarin.Forms examples for each control such as Charts, DataGrid, etc. All the examples can be deployed in Android, iOS, and UWP platforms. Additionally, Charts, DataGrid, and ListView examples can be deployed in macOS platform also. 
 
-The <b>"Android/SampleBrowser"</b> directory contains Xamarin.Android sample browser project. Run this project to see the demo samples of all the Xamarin.Android controls in single application.
+The <b>"Android/SampleBrowser"</b> directory contains Xamarin.Android sample browser project. Run this project to see the Xamarin.Android examples for all the controls in single application.
 
-The <b>"iOS/SampleBrowser"</b> directory contains Xamarin.iOS sample browser project. Run this project to see the demo samples of all the Xamarin.iOS controls in single application.
+The <b>"iOS/SampleBrowser"</b> directory contains Xamarin.iOS sample browser project. Run this project to see the Xamarin.iOS examples for all the controls in single application.
 
 ## <a name="license"></a>License ##
 
-Syncfusion has no liability for any damage or consequence that may arise by the use or viewing of the samples. The samples are for demonstrative purposes and if you choose to use or access the samples you agree to not hold Syncfusion liable, in any form, for any damage that is related to use, accessing or otherwise viewing the samples. By accessing, viewing, or otherwise seeing the samples you acknowledge and agree Syncfusion’s samples will not allow you to seek injunctive relief in any form for any claim related to the sample. If you do not agree to this, do not view, access, utilize or otherwise do anything with Syncfusion’s samples.
+Syncfusion has no liability for any damage or consequence that may arise by the use or viewing of the examples. The examples are for demonstrative purposes and if you choose to use or access the examples you agree to not hold Syncfusion liable, in any form, for any damage that is related to use, accessing or otherwise viewing the examples. By accessing, viewing, or otherwise seeing the examples you acknowledge and agree Syncfusion’s examples will not allow you to seek injunctive relief in any form for any claim related to the sample. If you do not agree to this, do not view, access, utilize or otherwise do anything with Syncfusion’s examples.
 
-## <a name="using-the-samples"></a>Using the samples ##
+## <a name="using-the-examples"></a>Using the examples ##
 
-If you download the samples using the "Download ZIP" option then please follow the instructions below
+If you download the examples using the "Download ZIP" option then please follow the instructions below
 
 **Notes:**
 
 * Before you unzip the archive, right-click it, select Properties, and then select Unblock.
-* Be sure to unzip the entire archive, and not just individual samples. The samples all depend on the SharedContent folder in the archive.
+* Be sure to unzip the entire archive, and not just individual examples. The samples depend on the SharedContent folder in the archive.
 
-**To use the Syncfusion Xamarin samples, Syncfusion license key should be registered in samples. Refer [this](https://www.syncfusion.com/kb/9002?utm_source=github&utm_medium=listing) link for more information.**
+**To use the Syncfusion Xamarin examples, Syncfusion license key should be registered in examples. Refer [this](https://www.syncfusion.com/kb/9002?utm_source=github&utm_medium=listing) link for more information.**
 
 
-**Reminder:** If you unzip individual samples, they will not build due to references to other portions of the ZIP file that were not unzipped. You must unzip the entire archive if you intend to build the samples.
+**Reminder:** If you unzip individual examples, they will not build due to references to other portions of the ZIP file that were not unzipped. You must unzip the entire archive if you intend to build the examples.
 
 
 ## Controls Catalog
@@ -104,9 +104,13 @@ If you download the samples using the "Download ZIP" option then please follow t
 | [Calculate](Forms/Calculate) | [Calculate](Android/SampleBrowser/Samples/Calculate) | [Calculate](iOS/SampleBrowser/Samples/Calculate) |
 | [Data Source](Forms/DataSource) | [Data Source](Android/SampleBrowser/Samples/DataSource) | [Data Source](iOS/SampleBrowser/Samples/DataSource) |
 
+## <a name="syncfusion-xamarin-ui-template"></a>Syncfusion Xamarin UI Template ##
+
+The Syncfusion item templates extension provides predefined UI designs for Xamarin.Forms. Refer to [Syncfusion Project Templates](https://help.syncfusion.com/xamarin/visual-studio-integration/visual-studio-extensions/item-templates) for more details.
+
 ## <a name="support-and-feedback"></a>Support and Feedback ##
 
-* For using the Syncfusion controls, refer the following User Guide links.
+* If you’re interested in Xamarin development using Syncfusion Xamarin UI components, refer to the below guides that will help you building your own application.
 
    * [Xamarin Forms](https://help.syncfusion.com/xamarin/introduction/overview?utm_source=github&utm_medium=listing)
    * [Xamarin-Android](https://help.syncfusion.com/xamarin-android/introduction/overview?utm_source=github&utm_medium=listing)
