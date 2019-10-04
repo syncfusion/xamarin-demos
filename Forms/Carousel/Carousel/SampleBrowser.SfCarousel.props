@@ -1,0 +1,89 @@
+<Project>
+
+<ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Converter\Converters.cs">
+	 <Link>Samples\Carousel\Converter\Converters.cs</Link>
+    </Compile>
+	
+	<Compile Include="$(MSBuildThisFileDirectory)\Model\CarouselModel.cs">
+	 <Link>Samples\Carousel\Model\CarouselModel.cs</Link>
+    </Compile>
+	
+	<Compile Include="$(MSBuildThisFileDirectory)\SampleViewClass\Carousel_LoadMore.cs">
+	 <Link>Samples\Carousel\SampleViewClass\Carousel_LoadMore.cs</Link>
+    </Compile>
+	
+	<Compile Include="$(MSBuildThisFileDirectory)\SampleViewClass\Carousel_View.cs">
+	 <Link>Samples\Carousel\SampleViewClass\Carousel_View.cs</Link>
+    </Compile>
+	
+	<Compile Include="$(MSBuildThisFileDirectory)\SampleViewClass\Carousel_Virtualization.cs">
+	 <Link>Samples\Carousel\SampleViewClass\Carousel_Virtualization.cs</Link>
+    </Compile>
+
+	<Compile Include="$(MSBuildThisFileDirectory)\ViewModel\CarouselViewModel.cs">
+	 <Link>Samples\Carousel\ViewModel\Carousel_Virtualization.cs</Link>
+    </Compile>
+	
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\Carousel_LoadMore\LoadMore_Default.xaml.cs">
+	<Link>Samples\Carousel\Samples\Carousel_LoadMore\LoadMore_Default.xaml.cs</Link>
+      <DependentUpon>LoadMore_Default.xaml</DependentUpon>
+    </Compile>
+	
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\Carousel_View\Carousel_Default.xaml.cs">
+	<Link>Samples\Carousel\Samples\Carousel_View\Carousel_Default.xaml.cs</Link>
+      <DependentUpon>Carousel_Default.xaml</DependentUpon>
+    </Compile>
+	
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\Carousel_View\Carousel_Tablet.xaml.cs">
+	<Link>Samples\Carousel\Samples\Carousel_View\Carousel_Tablet.xaml.cs</Link>
+      <DependentUpon>Carousel_Tablet.xaml</DependentUpon>
+    </Compile>
+	
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\Carousel_Virtualization\Virtualization_Default.xaml.cs">
+	<Link>Samples\Carousel\Samples\Carousel_Virtualization\Virtualization_Default.xaml.cs</Link>
+      <DependentUpon>Virtualization_Default.xaml</DependentUpon>
+    </Compile>
+	
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Carousel_LoadMore\LoadMore_Default.xaml">
+	<Link>Samples\Carousel\Samples\Carousel_LoadMore\LoadMore_Default.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Carousel_View\Carousel_Default.xaml">
+	<Link>Samples\Carousel\Samples\Carousel_View\Carousel_Default.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Carousel_View\Carousel_Tablet.xaml">
+	<Link>Samples\Carousel\Samples\Carousel_View\Carousel_Tablet.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Carousel_Virtualization\Virtualization_Default.xaml">
+	<Link>Samples\Carousel\Samples\Carousel_Virtualization\Virtualization_Default.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  
+    
+    <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\CustomSearch.txt" >
+	<Link>Samples\Carousel\CustomSearch.txt</Link>
+	</EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml" >
+	<Link>Samples\Carousel\SamplesList\SamplesList.xml</Link>
+	</EmbeddedResource>
+  </ItemGroup>
+  
+  
+</Project>

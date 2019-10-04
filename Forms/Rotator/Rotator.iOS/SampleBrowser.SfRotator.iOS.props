@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\cartImg.png">
+            <Link>Resources\cartImg.png</Link>
+        </BundleResource>
+    </ItemGroup>
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\icon_512x512.png">
+            <Link>Resources\icon_512x512.png</Link>
+        </BundleResource>
+    </ItemGroup>
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\movie1.png">
+            <Link>Resources\movie1.png</Link>
+        </BundleResource>
+    </ItemGroup>
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\movie2.png">
+            <Link>Resources\movie2.png</Link>
+        </BundleResource>
+    </ItemGroup>
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\movie3.png">
+            <Link>Resources\movie3.png</Link>
+        </BundleResource>
+    </ItemGroup>
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\movie5.png">
+            <Link>Resources\movie5.png</Link>
+        </BundleResource>
+    </ItemGroup>
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\movie4.png">
+            <Link>Resources\movie4.png</Link>
+        </BundleResource>
+    </ItemGroup>
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\movie6.png">
+            <Link>Resources\movie6.png</Link>
+        </BundleResource>
+    </ItemGroup>
+</Project>

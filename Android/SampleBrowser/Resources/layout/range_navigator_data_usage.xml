@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <TextView
+        android:id="@+id/date_time_range_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" android:gravity="center_horizontal"/>
+
+    <SampleBrowser.CustomRangeNavigator
+        android:id="@+id/range_navigator_datausage"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="10dp">
+    </SampleBrowser.CustomRangeNavigator>
+
+  <TextView
+      android:id="@+id/date_time_usage_mb"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:textAlignment="center"
+  android:gravity="center_horizontal" />
+
+</LinearLayout>

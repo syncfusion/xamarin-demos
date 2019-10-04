@@ -1,0 +1,48 @@
+<Project>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\EffectsGettingStarted\GettingStarted.xaml.cs">
+      <Link>Samples\EffectsView\Samples\EffectsGettingStarted\GettingStarted.xaml.cs</Link>
+      <DependentUpon>GettingStarted.xaml</DependentUpon>
+    </Compile>
+
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>Samples\EffectsView\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\EffectsGettingStarted\GettingStarted.xaml">
+      <Link>Samples\EffectsView\Samples\EffectsGettingStarted\GettingStarted.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Images\Person1.jpg">
+      <Link>Images\Person1.jpg</Link>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Images\Person2.jpg">
+      <Link>Images\Person2.jpg</Link>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Images\Person3.jpg">
+      <Link>Images\Person3.jpg</Link>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Images\Person4.jpg">
+      <Link>Images\Person4.jpg</Link>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Images\Person5.jpg">
+      <Link>Images\Person5.jpg</Link>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Images\Person6.jpg">
+      <Link>Images\Person6.jpg</Link>
+    </EmbeddedResource>
+	
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Images\Selection.png">
+      <Link>Images\Selection.png</Link>
+    </EmbeddedResource>
+
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Images\Person.png">
+      <Link>Images\Person.png</Link>
+    </EmbeddedResource>
+
+
+  </ItemGroup>
+</Project>

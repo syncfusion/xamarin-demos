@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<card:SfCardView
+    x:Class="SampleBrowser.Cards.CardViewTemplate"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+    xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+    xmlns:card="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
+    xmlns:sampleBrowser="clr-namespace:SampleBrowser.Cards"
+    x:Name="cardView"
+    Grid.Row="0"
+    BorderColor="#D1D1D1"
+    BorderWidth="1"
+    CornerRadius="{Binding CornerRadius}"
+    Dismissed="OnCardViewDismissed"
+    FadeOutOnSwiping="{Binding EnableFadeOutOnSwiping}"
+    IndicatorThickness="{Binding IndicatorThickness}"
+    SwipeToDismiss="{Binding EnableSwipToDismiss}">
+    <card:SfCardView.HasShadow>
+        <OnPlatform
+            x:TypeArguments="x:Boolean"
+            Android="False"
+            iOS="False" />
+    </card:SfCardView.HasShadow>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="60" />
+            <RowDefinition Height="200" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+
+        <Grid Margin="6,10,6,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label
+                x:Name="label"
+                Margin="10,0,0,0"
+                FontSize="16"
+                Text="&#xe700;"
+                VerticalOptions="Start"
+                WidthRequest="20">
+                <Label.FontFamily>
+                    <OnPlatform
+                        x:TypeArguments="x:String"
+                        Android="Font Offer icon.ttf#Font Offer icon"
+                        WinPhone="Assets/Font Offer icon.ttf#Font Offer icon"
+                        iOS="Font Offer icon" />
+
+                </Label.FontFamily>
+            </Label>
+
+            <Label
+                Grid.Column="1"
+                Opacity="0.8"
+                Text="Offer"
+                VerticalOptions="Start" />
+        </Grid>
+
+        <StackLayout Grid.Row="1" Padding="7,0,7,7">
+            <Label
+                Margin="9,0,0,0"
+                FontFamily="Arial Narrow"
+                FontSize="20"
+                Text="{Binding Name}"
+                TextColor="Black" />
+
+            <StackLayout Margin="9,0,0,0" Orientation="Horizontal">
+                <Label
+                    FontSize="13"
+                    HeightRequest="20"
+                    Text="{Binding Price}"
+                    TextColor="#689517"
+                    VerticalOptions="Center"
+                    WidthRequest="30" />
+
+                <Label
+                    FontSize="13"
+                    HeightRequest="20"
+                    Text="{Binding Offer}"
+                    TextColor="#689517"
+                    VerticalOptions="Center"
+                    WidthRequest="100" />
+            </StackLayout>
+        </StackLayout>
+
+        <Image
+            Grid.Row="2"
+            Aspect="Fill"
+            HeightRequest="200"
+            Source="{Binding ImagePath}" />
+
+        <StackLayout Grid.Row="3" Orientation="Horizontal">
+            <button:SfButton
+                Margin="5,0,0,5"
+                BackgroundColor="Transparent"
+                FontAttributes="Bold"
+                FontFamily="Arial Narrow"
+                Text="Explore"
+                TextColor="#4496EC"
+                WidthRequest="80" />
+            <button:SfButton
+                Margin="0,0,10,5"
+                BackgroundColor="Transparent"
+                FontAttributes="Bold"
+                FontFamily="Arial Narrow"
+                HorizontalOptions="EndAndExpand"
+                Text="Add to Cart"
+                TextColor="#4496EC" />
+        </StackLayout>
+
+    </Grid>
+
+</card:SfCardView>

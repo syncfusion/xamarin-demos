@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfDataGrid.ContextMenu"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.SfDataGrid"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:sfgrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
+                  xmlns:sfPopup="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms">
+
+  <sample:SampleView.Behaviors>
+    <local:ContextMenuBehavior/>
+  </sample:SampleView.Behaviors>
+
+  <sample:SampleView.BindingContext>
+    <local:SortingViewModel x:Name="viewModel" />
+  </sample:SampleView.BindingContext>
+
+    <sample:SampleView.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="headerText"
+                        x:TypeArguments="x:String">
+                <On Platform="Android,UWP,iOS">
+                    <OnIdiom x:TypeArguments="x:String"
+                             Phone="Product"
+                             Tablet="Product Name"/>
+                </On>
+            </OnPlatform>
+            <OnPlatform x:Key="opacity"
+                      x:TypeArguments="x:Double">
+            <On Platform="iOS,Android" Value="87" />
+            <On Platform="UWP" Value="80" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="padding"
+                   x:TypeArguments="Thickness">
+                <On Platform="Android,iOS" Value="8, 12, 8, 12" />
+                <On Platform="UWP" Value="8, 12, 8, 16" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="textSize"
+                  x:TypeArguments="x:Double">
+                <On Platform="iOS,UWP" Value="14" />
+                <On Platform="Android" Value="13" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="font"
+                  x:TypeArguments="x:String">
+                <On Platform="Android" Value="Roboto-Regular" />
+                <On Platform="iOS" Value="SFProText-Regular" />
+                <On Platform="UWP" Value="SegoeUI" />
+            </OnPlatform>
+
+        </ResourceDictionary>
+    </sample:SampleView.Resources>
+
+    <sample:SampleView.Content>
+    <sfPopup:SfPopupLayout x:Name="popUpLayout" >
+      <sfPopup:SfPopupLayout.Content>
+                <Grid x:Name="customLayout">
+                    <sfgrid:SfDataGrid x:Name="dataGrid"
+                           AllowSorting="False"
+                           ItemsSource="{Binding Products}"
+                           AutoGenerateColumns="false"
+                           ColumnSizer="Star"
+                           GridStyle="{local:DefaultStyle}"
+                           HeaderRowHeight="52"
+                           RowHeight="48">
+
+          <sfgrid:SfDataGrid.Columns>
+                        <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                   HeaderText="Product ID"
+                                   HeaderTextAlignment="Start"
+                                   LineBreakMode="TailTruncation"
+                                   MappingName="ProductID"
+                                   Padding="5,0,5,0"
+                                   HeaderCellTextSize="{StaticResource textSize}"
+                                   CellTextSize="{StaticResource textSize}"
+                                   TextAlignment="End">
+                        </sfgrid:GridTextColumn>
+                        <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                   HeaderTextAlignment="Start"
+                                   LineBreakMode="TailTruncation"
+                                   MappingName="ProductName"
+                                   Padding="5,0,5,0"
+                                   TextAlignment="Start"
+                                   HeaderText="{StaticResource headerText}"
+                                   HeaderCellTextSize="{StaticResource textSize}"
+                                   CellTextSize="{StaticResource textSize}">
+                        </sfgrid:GridTextColumn>
+
+            <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                   HeaderText="Supplier ID"
+                                   HeaderTextAlignment="Start"
+                                   LineBreakMode="TailTruncation"
+                                   MappingName="SupplierID"
+                                   Padding="5,0,5,0"
+                                   HeaderCellTextSize="{StaticResource textSize}"
+                                   CellTextSize="{StaticResource textSize}"
+                                   TextAlignment="End">
+            </sfgrid:GridTextColumn>
+
+                        <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                   HeaderText="Quantity"
+                                   HeaderTextAlignment="Start"
+                                   LineBreakMode="TailTruncation"
+                                   MappingName="Quantity"
+                                   Padding="5,0,5,0"
+                                   HeaderCellTextSize="{StaticResource textSize}"
+                                   CellTextSize="{StaticResource textSize}"
+                                   TextAlignment="End">
+                        </sfgrid:GridTextColumn>
+                        <sfgrid:GridTextColumn Format="C"
+                                   HeaderFontAttribute="Bold"
+                                   HeaderText="Unit Price"
+                                   HeaderTextAlignment="Start"
+                                   LineBreakMode="TailTruncation"
+                                   MappingName="UnitPrice"
+                                   Padding="5,0,5,0"
+                                   HeaderCellTextSize="{StaticResource textSize}"
+                                   CellTextSize="{StaticResource textSize}"
+                                   TextAlignment="End">
+                        </sfgrid:GridTextColumn>
+          </sfgrid:SfDataGrid.Columns>
+        </sfgrid:SfDataGrid>
+                    <Grid x:Name="transparent"
+                  BackgroundColor="Black"
+                  Opacity="0.8" />
+                </Grid>
+            </sfPopup:SfPopupLayout.Content>
+    </sfPopup:SfPopupLayout>
+  </sample:SampleView.Content>
+</sample:SampleView>

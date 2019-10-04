@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:SyncfusionButton="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+                  xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+                  xmlns:RangeSlider="clr-namespace:Syncfusion.SfRangeSlider.XForms;assembly=Syncfusion.SfRangeSlider.XForms"
+                  x:Class="SampleBrowser.SfBorder.GettingStartedSample">
+    <local:SampleView.Resources>
+        <ResourceDictionary>
+            <Style  TargetType="Label">
+                <Setter Property="TextColor" Value="#787878"/>
+                <Setter Property="FontFamily" Value="Roboto" />
+                <Setter Property="FontSize" Value="15"/>
+            </Style>
+            <Style x:Key="RadioButtonNormalStyle"  TargetType="SyncfusionButton:SfRadioButton">
+                <Setter Property="TextColor" Value="#007DE4"/>
+                <Setter Property="FontSize" Value="15"/>
+            </Style>
+
+            <Style x:Key="SegmentedNormalStyle"  TargetType="SyncfusionButton:SfSegmentedControl">
+                <Setter Property="DisplayMode" Value="Image"/>
+                <Setter Property="CornerRadius" Value="0"/>
+                <Setter Property="SegmentHeight" Value="45"/>
+                <Setter Property="SegmentWidth" Value="50"/>
+                <Setter Property="Margin" Value="10,0,10,0"/>
+                <Setter Property="Color" Value="Transparent"/>
+                <Setter Property="FontIconFontColor" Value="Black"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="BorderColor" Value="#EEEEEE"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="VisibleSegmentsCount" Value="5"/>
+                <Setter Property="SegmentCornerRadius" Value="15"/>
+                <Setter Property="VisibleSegmentsCount" Value="5"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+
+            </Style>
+        </ResourceDictionary>
+    </local:SampleView.Resources>
+    <local:SampleView.Content>
+        <Grid Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="130"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>        
+                <ColumnDefinition>
+                    <ColumnDefinition.Width>
+                        <OnPlatform x:TypeArguments="GridLength">
+                            <On Platform="UWP">
+                                <OnIdiom x:TypeArguments="GridLength" Desktop="420" Tablet="400" Phone="*" />
+                            </On>
+                            <On Platform="Android">
+                                <OnIdiom x:TypeArguments="GridLength" Desktop="420" Tablet="400" Phone="*"/>
+                            </On>
+                            <On Platform="iOS">
+                                <OnIdiom x:TypeArguments="GridLength" Desktop="420" Tablet="400" Phone="*"/>
+                            </On>
+                        </OnPlatform>
+                    </ColumnDefinition.Width>
+                </ColumnDefinition>
+
+                <ColumnDefinition>
+                    <ColumnDefinition.Width>
+                        <OnPlatform x:TypeArguments="GridLength">
+                            <On Platform="UWP">
+                                <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="140"/>
+                            </On>
+                            <On Platform="Android">
+                                <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="140"/>
+                            </On>
+                            <On Platform="iOS">
+                                <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="140"/>
+                            </On>
+                        </OnPlatform>
+                    </ColumnDefinition.Width>
+                </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+		  <Grid Padding="10">
+                <border:SfBorder  x:Name="border" Grid.Row="0"
+                                           HeightRequest="123"
+                                 WidthRequest="305"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center"
+                                           CornerRadius="{Binding CornerRadius,Mode=TwoWay}"
+                                           BorderWidth="{Binding BorderWidth}"
+                                           BorderColor="{Binding BorderColor}"
+                                           HasShadow="{Binding EnableShadow}"
+                                           BackgroundColor="{Binding BackgroundColor}">
+                   
+                        <Grid>
+                        <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="85"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid>
+                        <StackLayout VerticalOptions="Center" HorizontalOptions="End" >
+                            <border:SfBorder VerticalOptions="Center"
+                                         HorizontalOptions="End"
+                                         WidthRequest="75"
+                                         HeightRequest="75"
+                                         CornerRadius="38"
+                                         BorderColor="LightGray"
+                                         BorderWidth="2"
+                               >
+                                <Image 
+                               Source="border_man2.png"/>
+                            </border:SfBorder>
+                        </StackLayout>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <StackLayout VerticalOptions="Center" HorizontalOptions="Start" Margin="10,0,0,0">
+
+                            <StackLayout>
+                                <Label Text="John Doe"
+                                           FontAttributes="Bold"
+                                           FontSize="14"
+                                           TextColor="White"/>
+                                <Label Text="Sales Representative"
+                                           FontAttributes="Bold"
+                                           FontSize="12"
+                                           TextColor="White"/>
+                            </StackLayout>
+                            <StackLayout >
+                                <Label Text="john@gmail.com    011-232-221"
+                                           FontSize="12"
+                                           TextColor="White"/>
+                                <Label Text="www.google.com"
+                                           FontSize="12"
+                                           TextColor="White"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Grid>
+                </Grid>
+                    
+                </border:SfBorder>
+         </Grid>
+            <Grid Grid.Row="1" Padding="10">
+                <ScrollView Padding="10" VerticalScrollBarVisibility="Never">
+                    <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+
+                        <Label Text="Border Thickness"/>
+
+                        <Grid  HeightRequest="35" HorizontalOptions="Center">
+                            <Grid.Margin>
+                                <OnPlatform x:TypeArguments="Thickness">
+                                    <On Platform="UWP" Value="10,0,0,0" />
+
+                                    <On Platform="Android" Value="0" />
+
+                                    <On Platform="iOS" Value="0" />
+
+                                </OnPlatform>
+                            </Grid.Margin>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="25"/>
+                            </Grid.ColumnDefinitions>
+                            <RangeSlider:SfRangeSlider x:Name="borderSlider" Grid.Column="0" 
+                                                       HeightRequest="50"
+                                                   HorizontalOptions="Center"
+                                                   Orientation="Horizontal"
+                                                   ShowValueLabel="False"
+                                                   ShowRange="False"
+                                                   Minimum="0"
+                                                   StepFrequency="1"
+                                                   Maximum="10"
+                                                   SnapsTo="StepValues"
+                                                   TrackSelectionColor="Accent"
+                                                   KnobColor="Accent"
+                                                   Value="{Binding BorderWidth}"
+                                                   ToolTipPlacement="None"
+                                                   TickPlacement="None"/>
+                            <Label Text="{Binding Source={x:Reference borderSlider},Path=Value}" Grid.Column="1"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"/>
+                        </Grid>
+                        <Label Text="Border Color"/>
+                        
+                        <Grid Margin="0,5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="10"/>
+                            </Grid.RowDefinitions>
+                            <SyncfusionButton:SfSegmentedControl Grid.Row="1" SegmentPadding="0"
+                                                                             x:Name="BorderColorSegment"
+                                                                             SelectionTextColor="#000000"
+                                                                             Style="{StaticResource SegmentedNormalStyle}"                  
+                                                                            SelectionChanged="Handle_SelectionChanged" >
+                                <SyncfusionButton:SfSegmentedControl.SelectionIndicatorSettings>
+                                    <SyncfusionButton:SelectionIndicatorSettings 
+                                                    Color="#EEEEEE"
+                                                    Position="Fill">
+                                    </SyncfusionButton:SelectionIndicatorSettings>
+                                </SyncfusionButton:SfSegmentedControl.SelectionIndicatorSettings>
+                            </SyncfusionButton:SfSegmentedControl>
+                        </Grid>
+
+                        <Label Text="Corner Radius"/>
+                        
+                        <StackLayout>
+                            <Label FontSize="12" Text="Top Left" Margin="10,10,0,0" HorizontalTextAlignment="Start"
+                                   VerticalTextAlignment="Center"/>
+                        <Grid HeightRequest="35"  HorizontalOptions="Center">
+                                <Grid.Margin>
+                                    <OnPlatform x:TypeArguments="Thickness">
+                                        <On Platform="UWP" Value="10,0,0,0" />
+
+                                        <On Platform="Android" Value="0,-2,0,5" />
+
+                                        <On Platform="iOS" Value="0,-2,0,5" />
+
+                                    </OnPlatform>
+                                </Grid.Margin>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="25"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <RangeSlider:SfRangeSlider  
+                                                       x:Name="leftCornerRadius"
+                                                       HeightRequest="50"
+                                                   HorizontalOptions="Center"
+                                                   Orientation="Horizontal"
+                                                   ShowValueLabel="False"
+                                                   ShowRange="False"
+                                                   Minimum="0"
+                                                   StepFrequency="2"
+                                                   Maximum="25"
+                                                   TrackSelectionColor="Accent"
+                                                   KnobColor="Accent"
+                                                   Value="{Binding LeftSliderValue}"
+                                                   SnapsTo="StepValues"
+                                                   ToolTipPlacement="None"
+                                                   TickPlacement="None"/>
+                            <Label FontSize="10" Text="{Binding Source={x:Reference leftCornerRadius},Path=Value}" Grid.Column="1"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"/>
+                        </Grid>
+                            <Label FontSize="12" Margin="10,0,0,0" Text="Top Right" HorizontalTextAlignment="Start"
+                                   VerticalTextAlignment="Center"/>
+                            <Grid HeightRequest="35" HorizontalOptions="Center">
+                                <Grid.Margin>
+                                    <OnPlatform x:TypeArguments="Thickness">
+                                        <On Platform="UWP" Value="10,-2,0,0" />
+
+                                        <On Platform="Android" Value="0,-2,0,5" />
+
+                                        <On Platform="iOS" Value="0,-2,0,5" />
+
+                                    </OnPlatform>
+                                </Grid.Margin>
+                                <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="25"/>
+                            </Grid.ColumnDefinitions>
+                           
+                            <RangeSlider:SfRangeSlider  
+                                                       x:Name="rightCornerRadius"
+                                                       HeightRequest="50"
+                                                   HorizontalOptions="Center"
+                                                   Orientation="Horizontal"
+                                                   ShowValueLabel="False"
+                                                   ShowRange="False"
+                                                   Minimum="0"
+                                                   StepFrequency="2"
+                                                   Maximum="25"
+                                                   TrackSelectionColor="Accent"
+                                                   KnobColor="Accent"
+                                                   SnapsTo="StepValues"
+                                                   Value="{Binding RightSliderValue}"
+                                                   ToolTipPlacement="None"
+                                                   TickPlacement="None"/>
+                            <Label FontSize="10" Text="{Binding Source={x:Reference rightCornerRadius},Path=Value}" Grid.Column="1"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"/>
+                        </Grid>
+                            <Label Text="Bottom Right" FontSize="12" Margin="10,0,0,0" HorizontalTextAlignment="Start"
+                                   VerticalTextAlignment="Center"/>
+                            <Grid  HeightRequest="35" HorizontalOptions="Center">
+                                <Grid.Margin>
+                                    <OnPlatform x:TypeArguments="Thickness">
+                                        <On Platform="UWP" Value="10,-2,0,0" />
+
+                                        <On Platform="Android" Value="0,-2,0,5" />
+
+                                        <On Platform="iOS" Value="0,-2,0,5" />
+
+                                    </OnPlatform>
+                                </Grid.Margin>
+                                <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="25"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <RangeSlider:SfRangeSlider 
+                                                       x:Name="bottomrightCornerRadius"
+                                                       HeightRequest="50"
+                                                   HorizontalOptions="Center"
+                                                   Orientation="Horizontal"
+                                                   ShowValueLabel="False"
+                                                   ShowRange="False"
+                                                   Minimum="0"
+                                                   StepFrequency="2"
+                                                   Maximum="25"
+                                                   TrackSelectionColor="Accent"
+                                                   KnobColor="Accent"
+                                                   SnapsTo="StepValues"
+                                                   Value="{Binding BottomRightSliderValue}"
+                                                   ToolTipPlacement="None"
+                                                   TickPlacement="None"/>
+                            <Label FontSize="10" Text="{Binding Source={x:Reference bottomrightCornerRadius},Path=Value}" Grid.Column="1"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"/>
+                        </Grid>
+                            <Label Text="Bottom Left" FontSize="12" Margin="10,0,0,0" HorizontalTextAlignment="Start"
+                                   VerticalTextAlignment="Center"/>
+                            <Grid  HeightRequest="35" HorizontalOptions="Center">
+                                <Grid.Margin>
+                                    <OnPlatform x:TypeArguments="Thickness">
+                                        <On Platform="UWP" Value="10,0,0,0" />
+
+                                        <On Platform="Android" Value="0,-2,0,5" />
+
+                                        <On Platform="iOS" Value="0" />
+
+                                    </OnPlatform>
+                                </Grid.Margin>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="25"/>
+                                </Grid.ColumnDefinitions>
+
+                                <RangeSlider:SfRangeSlider  
+                                                       x:Name="bottomleftCornerRadius"
+                                                       HeightRequest="50"
+                                                   HorizontalOptions="Center"
+                                                   Orientation="Horizontal"
+                                                   ShowValueLabel="False"
+                                                   ShowRange="False"
+                                                   Minimum="0"
+                                                   StepFrequency="2"
+                                                   Maximum="25"
+                                                   TrackSelectionColor="Accent"
+                                                   KnobColor="Accent"
+                                                   SnapsTo="StepValues"
+                                                   Value="{Binding BottomLeftSliderValue}"
+                                                   ToolTipPlacement="None"
+                                                   TickPlacement="None"/>
+                                <Label FontSize="10" Text="{Binding Source={x:Reference bottomleftCornerRadius},Path=Value}" Grid.Column="1"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"/>
+                            </Grid>
+                        </StackLayout>
+
+                        <Grid x:Name="shadow">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Enable Shadow" />
+
+                            <Switch IsToggled="{Binding EnableShadow}" Grid.Column="1" HorizontalOptions="End" />
+                        </Grid>
+
+                        <Grid x:Name="dottedBorder">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="45" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Enable Dotted Border (10,5)" />
+
+                            <Switch Toggled="BorderTypeToggled" x:Name="dottedArraySwitch" Grid.Column="1" HorizontalOptions="End" />
+                        </Grid>
+
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+        </Grid>
+    </local:SampleView.Content>
+</local:SampleView>

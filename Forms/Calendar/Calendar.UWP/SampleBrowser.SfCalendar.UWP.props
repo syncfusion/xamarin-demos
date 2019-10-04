@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+ <ItemGroup>
+        <Content Include="$(MSBuildThisFileDirectory)\Calendar_sun.png">
+            <Link>Calendar_sun.png</Link>
+        </Content>
+        <Content Include="$(MSBuildThisFileDirectory)\Calendar_sun1.png">
+            <Link>Calendar_sun1.png</Link>
+        </Content>
+        <Content Include="$(MSBuildThisFileDirectory)\Calendar_sunrain.png">
+            <Link>Calendar_sunrain.png</Link>
+        </Content>
+        <Content Include="$(MSBuildThisFileDirectory)\Calendar_Checkup.png">
+            <Link>Calendar_Checkup.png</Link>
+        </Content>
+        <Content Include="$(MSBuildThisFileDirectory)\Calendar_Conference.png">
+            <Link>Calendar_Conference.png</Link>
+        </Content>
+        <Content Include="$(MSBuildThisFileDirectory)\Calendar_Consulting.png">
+            <Link>Calendar_Consulting.png</Link>
+        </Content>
+        <Content Include="$(MSBuildThisFileDirectory)\Calendar_Exercise.png">
+            <Link>Calendar_Exercise.png</Link>
+        </Content>
+        <Content Include="$(MSBuildThisFileDirectory)\Calendar_Meeting.png">
+            <Link>Calendar_Meeting.png</Link>
+        </Content>
+    </ItemGroup>
+</Project>

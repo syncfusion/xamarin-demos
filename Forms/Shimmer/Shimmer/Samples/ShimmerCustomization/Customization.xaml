@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:namespace="clr-namespace:SampleBrowser.SfShimmer"
+                  xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+                  xmlns:shimmer="clr-namespace:Syncfusion.XForms.Shimmer;assembly=Syncfusion.Core.XForms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  x:Class="SampleBrowser.SfShimmer.Customization">
+    <local:SampleView.BindingContext>
+        <namespace:ViewModel x:Name="viewModel"/>
+    </local:SampleView.BindingContext>
+    
+    <local:SampleView.Resources>
+        <ResourceDictionary>
+            <Style x:Key="SegmentedNormalStyle"  TargetType="button:SfSegmentedControl">
+                <Setter Property="CornerRadius" Value="0"/>
+                <Setter Property="SegmentHeight" Value="40"/>
+                <Setter Property="SegmentWidth" Value="40"/>
+                <Setter Property="Margin" Value="10,0,10,0"/>
+                <Setter Property="Color" Value="Transparent"/>
+                <Setter Property="SegmentBorderThickness" Value="0"/>
+                <Setter Property="SegmentPadding" Value="10"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="VisibleSegmentsCount" Value="5"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+        </ResourceDictionary>
+    </local:SampleView.Resources>
+    
+    <local:SampleView.Content>
+        <ScrollView>
+            <StackLayout Padding="10">
+                <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                    <StackLayout.HeightRequest>
+                        <OnPlatform 
+                            x:TypeArguments="x:Double"
+                            Android="300"
+                            iOS="400"/>
+                    </StackLayout.HeightRequest>
+                    <shimmer:SfShimmer x:Name="shimmer" VerticalOptions="FillAndExpand"
+                           WaveWidth="{Binding WaveWidth}"
+                           AnimationDuration="{Binding Duration}"
+                           Color="{Binding ShimmerColor}"
+                           WaveColor="{Binding WaveColor}">
+                        <shimmer:SfShimmer.Content>
+                            <StackLayout>
+                                <Label Text="Content is loaded!" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </shimmer:SfShimmer.Content>
+                    </shimmer:SfShimmer>
+                </StackLayout>
+
+                <StackLayout>
+                    <StackLayout.Spacing>
+                        <OnPlatform
+                            x:TypeArguments="x:Double"
+                            Android="10"
+                            iOS="20" />
+                    </StackLayout.Spacing>
+
+                    <Label Text="Properties" Margin="10,0,10,0" FontAttributes="Bold"/>
+                   
+                    <Grid>
+                        <Grid.Margin>
+                            <OnPlatform x:TypeArguments="Thickness" Android="10,0,10,0" iOS="10,0,10,0"/>
+                        </Grid.Margin>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="6*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Shimmer type" VerticalTextAlignment="Center" />
+                        <Picker
+                            x:Name="picker"
+                            Grid.Column="1"
+                            ItemsSource="{Binding ShimmerTypes}"
+                            HorizontalOptions="FillAndExpand"
+                            TextColor="Gray"
+                            SelectedIndexChanged="OnPickerSelectedIndexChanged"
+                            >
+                            <Picker.FontSize>
+                                <OnPlatform
+                                    x:TypeArguments="x:Double"
+                                    Android="14"
+                                    iOS="16" />
+                            </Picker.FontSize>
+                        </Picker>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.Margin>
+                            <OnPlatform x:TypeArguments="Thickness" Android="10,0,10,0" iOS="10,0,10,0" />
+                        </Grid.Margin>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="6*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Wave direction" VerticalTextAlignment="Center" />
+                        <Picker
+                            x:Name="waveDirectionPicker"
+                            Grid.Column="1"
+                            ItemsSource="{Binding WaveDirectionTypes}"
+                            HorizontalOptions="FillAndExpand"
+                            TextColor="Gray"
+                            SelectedIndexChanged="OnWaveDirectionPickerSelectedIndexChanged"
+                            >
+                            <Picker.FontSize>
+                                <OnPlatform
+                                    x:TypeArguments="x:Double"
+                                    Android="14"
+                                    iOS="16" />
+                            </Picker.FontSize>
+                        </Picker>
+                    </Grid>
+
+                    <Label  Margin="10,0,10,0"
+                            Text="Wave width"
+                            VerticalTextAlignment="Center" ></Label>
+
+                    <Grid>
+                        <Grid.Margin>
+                            <OnPlatform x:TypeArguments="Thickness" Android="10,0,10,0" iOS="10,0,10,0" />
+                        </Grid.Margin>
+                        <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="9*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <Slider
+                                x:Name="sliderWaveWidth"
+                                HorizontalOptions="FillAndExpand"
+                                Maximum="300"
+                                MaximumTrackColor="Gray"
+                                Minimum="0"
+                                MinimumTrackColor="#007DE6" 
+                                ThumbColor="#007DE6"
+                                VerticalOptions="Center"
+                                Value="{Binding WaveWidth}">
+                                <Slider.Margin>
+                                    <OnPlatform x:TypeArguments="Thickness" Android="-11,0,0,0"/>
+                                </Slider.Margin>
+                            </Slider>
+                            <Label Grid.Column="1"
+                                x:Name="waveWidth"
+                                HorizontalOptions="End"
+                                Text="{Binding WaveWidth}" HorizontalTextAlignment="End"
+                                VerticalTextAlignment="Center" >
+                                <Label.WidthRequest>
+                                    <OnPlatform x:TypeArguments="x:Double"
+                                                Android="32" iOS="45"/>
+                                </Label.WidthRequest>
+                            </Label>
+                    </Grid>
+
+                    <Label  Margin="10,0,10,0"
+                            Text="Animation duration"
+                            VerticalTextAlignment="Center" />
+                    
+                    <Grid>
+                        <Grid.Margin>
+                            <OnPlatform x:TypeArguments="Thickness" Android="10,0,10,0" iOS="10,0,10,0"/>
+                        </Grid.Margin>
+                        <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="9*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <Slider
+                                    x:Name="sliderAnimationDuration"
+                                    HorizontalOptions="FillAndExpand"
+                                    Maximum="2000"
+                                    MaximumTrackColor="Gray"
+                                    Minimum="0"
+                                    MinimumTrackColor="#007DE6"
+                                    ThumbColor="#007DE6"
+                                    VerticalOptions="Center"
+                                    Value="{Binding Duration}">
+                                <Slider.Margin>
+                                        <OnPlatform x:TypeArguments="Thickness" Android="-11,0,0,0" />
+                                </Slider.Margin>
+                            </Slider>
+                            <Label  Grid.Column="1"
+                                    x:Name="animationDuration"
+                                    Margin="-10,0,0,0"
+                                    HorizontalOptions="End"
+                                    Text="{Binding Duration}" HorizontalTextAlignment="End"
+                                    VerticalTextAlignment="Center">
+                                  <Label.WidthRequest>
+                                    <OnPlatform x:TypeArguments="x:Double"
+                                                Android="32" iOS="45"/>
+                                </Label.WidthRequest>
+                            </Label>
+                    </Grid>
+
+                    <Label Text="Shimmer and wave color" Margin="10,0,10,0"
+                           VerticalTextAlignment="Center" />
+
+                    <button:SfSegmentedControl  
+                                               x:Name="shimmerColorSegmentedControl"  
+                                               Style="{StaticResource SegmentedNormalStyle}"
+                                               SelectionChanged="OnShimmerColorSelectionChanged" >
+                        <button:SfSegmentedControl.SelectionIndicatorSettings>
+                            <button:SelectionIndicatorSettings
+                                                    Color="#007DE6" CornerRadius="20"
+                                                    Position="Border">
+                            </button:SelectionIndicatorSettings>
+                        </button:SfSegmentedControl.SelectionIndicatorSettings>
+                    </button:SfSegmentedControl>
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </local:SampleView.Content>
+</local:SampleView>

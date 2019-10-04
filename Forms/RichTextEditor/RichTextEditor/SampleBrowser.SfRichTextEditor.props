@@ -1,0 +1,19 @@
+﻿<Project>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+      <Link>Samples\RichTextEditor\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\MailPage\MailPage.xaml.cs">
+      <Link>Samples\RichTextEditor\Samples\MailPage\MailPage.xaml.cs</Link>
+	  <DependentUpon>MailPage.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\MailPage\MailPage.xaml">
+      <Link>Samples\RichTextEditor\Samples\MailPage\MailPage.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\RTECustomEntry.cs">
+      <Link>Samples\RichTextEditor\Samples\RTECustomEntry.cs</Link>
+    </Compile>
+  </ItemGroup>
+</Project>

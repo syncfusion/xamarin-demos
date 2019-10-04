@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataSourceGettingStarted\DataSourceGettingStarted.xaml.cs">
+      <Link>Samples\DataSource\Samples\DataSourceGettingStarted\DataSourceGettingStarted.xaml.cs</Link>
+      <DependentUpon>DataSourceGettingStarted.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataSourceGettingStarted\DataSourceGettingStartedViewModel.cs">
+      <Link>Samples\DataSource\Samples\DataSourceGettingStarted\DataSourceGettingStartedViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataSourceGettingStarted\Model\BookDetails.cs">
+      <Link>Samples\DataSource\Samples\DataSourceGettingStarted\Model\BookDetails.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataSourceGettingStarted\Model\BookDetailsRepository.cs">
+      <Link>Samples\DataSource\Samples\DataSourceGettingStarted\Model\BookDetailsRepository.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataSourceGrouping\ContactsViewModel.cs">
+      <Link>Samples\DataSource\Samples\DataSourceGrouping\ContactsViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataSourceGrouping\DataSourceGrouping.xaml.cs">
+      <Link>Samples\DataSource\Samples\DataSourceGrouping\DataSourceGrouping.xaml.cs</Link>
+      <DependentUpon>DataSourceGrouping.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataSourceGrouping\Model\Contacts.cs">
+      <Link>Samples\DataSource\Samples\DataSourceGrouping\Model\Contacts.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataSourceGrouping\Model\ContactsList.cs">
+      <Link>Samples\DataSource\Samples\DataSourceGrouping\Model\ContactsList.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataSourceSorting\DataSourceSorting.xaml.cs">
+      <Link>Samples\DataSource\Samples\DataSourceSorting\DataSourceSorting.xaml.cs</Link>
+      <DependentUpon>DataSourceSorting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helper\CustomView.cs">
+      <Link>Samples\DataSource\Samples\Helper\CustomView.cs</Link>
+    </Compile>
+
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image0.png">
+      <Link>Icons\Image0.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image1.png">
+      <Link>Icons\Image1.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image10.png">
+      <Link>Icons\Image10.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image11.png">
+      <Link>Icons\Image11.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image12.png">
+      <Link>Icons\Image12.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image13.png">
+      <Link>Icons\Image13.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image14.png">
+      <Link>Icons\Image14.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image15.png">
+      <Link>Icons\Image15.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image16.png">
+      <Link>Icons\Image16.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image17.png">
+      <Link>Icons\Image17.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image18.png">
+      <Link>Icons\Image18.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image19.png">
+      <Link>Icons\Image19.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image2.png">
+      <Link>Icons\Image2.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image20.png">
+      <Link>Icons\Image20.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image21.png">
+      <Link>Icons\Image21.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image22.png">
+      <Link>Icons\Image22.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image23.png">
+      <Link>Icons\Image23.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image24.png">
+      <Link>Icons\Image24.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image25.png">
+      <Link>Icons\Image25.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image26.png">
+      <Link>Icons\Image26.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image27.png">
+      <Link>Icons\Image27.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image28.png">
+      <Link>Icons\Image28.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image3.png">
+      <Link>Icons\Image3.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image4.png">
+      <Link>Icons\Image4.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image5.png">
+      <Link>Icons\Image5.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image6.png">
+      <Link>Icons\Image6.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image7.png">
+      <Link>Icons\Image7.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image8.png">
+      <Link>Icons\Image8.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Image9.png">
+      <Link>Icons\Image9.png</Link>
+    </EmbeddedResource>
+
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DataSourceGettingStarted\DataSourceGettingStarted.xaml">
+      <Link>Samples\DataSource\Samples\DataSourceGettingStarted\DataSourceGettingStarted.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DataSourceGrouping\DataSourceGrouping.xaml">
+      <Link>Samples\DataSource\Samples\DataSourceGrouping\DataSourceGrouping.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DataSourceSorting\DataSourceSorting.xaml">
+      <Link>Samples\DataSource\Samples\DataSourceSorting\DataSourceSorting.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+      <Link>Samples\DataSource\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

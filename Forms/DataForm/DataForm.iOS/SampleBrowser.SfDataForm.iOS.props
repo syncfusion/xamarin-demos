@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Add.png">
+            <Link>Resources\Add.png</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Address.png">
+            <Link>Resources\Address.png</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\BirthDate.png">
+            <Link>Resources\BirthDate.png</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\DataForm_Contact0.png">
+            <Link>Resources\DataForm_Contact0.png</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\DataForm_Contact1.png">
+            <Link>Resources\DataForm_Contact1.png</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\DataForm_Contact2.png">
+            <Link>Resources\DataForm_Contact2.png</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\DataForm_Contact3.png">
+            <Link>Resources\DataForm_Contact3.png</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\DataForm_Contact4.png">
+            <Link>Resources\DataForm_Contact4.png</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\DataForm_Contact5.png">
+            <Link>Resources\DataForm_Contact5.png</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\DataForm_Contact6.png">
+            <Link>Resources\DataForm_Contact6.png</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\DataForm_Contact7.png">
+            <Link>Resources\DataForm_Contact7.png</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\DataForm_Contact8.png">
+            <Link>Resources\DataForm_Contact8.png</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\ContactForm.png">
+            <Link>Resources\ContactForm.png</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\DataFormGettingStarted.png">
+            <Link>Resources\DataFormGettingStarted.png</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Email.png">
+            <Link>Resources\Email.png</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Group.png">
+            <Link>Resources\Group.png</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\LabelContactName.png">
+            <Link>Resources\LabelContactName.png</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\DataForm_Phone.png">
+            <Link>Resources\DataForm_Phone.png</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\TapEditIllustration.png">
+            <Link>Resources\TapEditIllustration.png</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Notes.png">
+            <Link>Resources\Notes.png</Link>
+        </BundleResource>
+		<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\ContactsIcons.ttf">
+		<Link>Resources\ContactsIcons.ttf</Link>
+		</BundleResource>
+    </ItemGroup>
+    
+</Project>

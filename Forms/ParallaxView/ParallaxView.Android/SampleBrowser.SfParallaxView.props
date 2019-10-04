@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+   <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\weather_1.png">
+    <Link>Resources\drawable\weather_1.png</Link>
+    </AndroidResource>
+    
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\weather_2.png">
+    <Link>Resources\drawable\weather_2.png</Link>
+    </AndroidResource>
+    
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\weather_3.png">
+    <Link>Resources\drawable\weather_3.png</Link>
+    </AndroidResource>
+    
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\weather_4.png">
+    <Link>Resources\drawable\weather_4.png</Link>
+    </AndroidResource>
+    
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\weather_5.png">
+    <Link>Resources\drawable\weather_5.png</Link>
+    </AndroidResource>
+    
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\weather_6.png">
+    <Link>Resources\drawable\weather_6.png</Link>
+    </AndroidResource>
+    
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\weather_7.png">
+    <Link>Resources\drawable\weather_7.png</Link>
+    </AndroidResource>  
+     
+      <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ParallaxGuitar0.png">
+    <Link>Resources\drawable\ParallaxGuitar0.png</Link>
+    </AndroidResource>  
+
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ParallaxGuitar1.png">
+    <Link>Resources\drawable\ParallaxGuitar1.png</Link>
+    </AndroidResource>  
+
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ParallaxGuitar2.png">
+    <Link>Resources\drawable\ParallaxGuitar2.png</Link>
+    </AndroidResource>  
+
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ParallaxGuitar3.png">
+    <Link>Resources\drawable\ParallaxGuitar3.png</Link>
+    </AndroidResource>  
+
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ParallaxGuitar4.png">
+    <Link>Resources\drawable\ParallaxGuitar4.png</Link>
+    </AndroidResource>  
+
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ParallaxGuitar5.png">
+    <Link>Resources\drawable\ParallaxGuitar5.png</Link>
+    </AndroidResource>  
+
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ParallaxGuitar6.png">
+    <Link>Resources\drawable\ParallaxGuitar6.png</Link>
+    </AndroidResource>  
+
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ParallaxGuitar7.png">
+    <Link>Resources\drawable\ParallaxGuitar7.png</Link>
+    </AndroidResource>  
+
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ParallaxGuitar8.png">
+    <Link>Resources\drawable\ParallaxGuitar8.png</Link>
+    </AndroidResource>  
+
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ParallaxGuitar9.png">
+    <Link>Resources\drawable\ParallaxGuitar9.png</Link>
+    </AndroidResource>  
+
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ParallaxGuitar10.png">
+    <Link>Resources\drawable\ParallaxGuitar10.png</Link>
+    </AndroidResource>  
+
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ParallaxGuitar11.png">
+    <Link>Resources\drawable\ParallaxGuitar11.png</Link>
+    </AndroidResource>  
+
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ParallaxGuitar12.png">
+    <Link>Resources\drawable\ParallaxGuitar12.png</Link>
+    </AndroidResource>  
+
+         <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ParallaxWallpaper.png">
+    <Link>Resources\drawable\ParallaxWallpaper.png</Link>
+    </AndroidResource>  
+
+        <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\pxcloud.png">
+    <Link>Resources\drawable\pxcloud.png</Link>
+    </AndroidResource>  
+        
+  </ItemGroup>
+
+</Project>

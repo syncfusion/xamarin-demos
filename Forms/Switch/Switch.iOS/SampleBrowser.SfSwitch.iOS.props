@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\switch.ttf">
+            <Link>Resources\switch.ttf</Link>
+        </BundleResource>
+  </ItemGroup> 
+  
+  <ItemGroup>
+
+   <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\switchBalance.png">
+
+         <Link>Resources\switchBalance.png</Link>  
+
+   </BundleResource>
+
+  </ItemGroup>
+
+<ItemGroup>
+
+   <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\switchbalanced.png">
+
+         <Link>Resources\switchbalanced.png</Link>  
+
+   </BundleResource>
+
+  </ItemGroup>
+
+<ItemGroup>
+
+   <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\switchCenter.png">
+
+         <Link>Resources\switchCenter.png</Link>  
+
+   </BundleResource>
+
+  </ItemGroup>
+
+<ItemGroup>
+
+   <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\switchOff.png">
+
+         <Link>Resources\switchOff.png</Link>  
+
+   </BundleResource>
+
+  </ItemGroup>
+
+<ItemGroup>
+
+   <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\switchoffState.png">
+
+         <Link>Resources\switchoffState.png</Link>  
+
+   </BundleResource>
+
+  </ItemGroup>
+
+<ItemGroup>
+
+   <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\switchOn.png">
+
+         <Link>Resources\switchOn.png</Link>  
+
+   </BundleResource>
+
+  </ItemGroup>
+
+<ItemGroup>
+
+   <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\switchonState.png">
+
+         <Link>Resources\switchonState.png</Link>  
+
+   </BundleResource>
+
+  </ItemGroup>
+
+  <ItemGroup>
+
+       <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\switchlaugh.png">
+
+               <Link>Resources\switchlaugh.png</Link>  
+
+         
+    </BundleResource>
+
+      
+  </ItemGroup>
+
+  <ItemGroup>
+
+       <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\switchsad.png">
+
+               <Link>Resources\switchsad.png</Link>  
+
+         
+    </BundleResource>
+
+      
+  </ItemGroup>
+
+  <ItemGroup>
+
+       <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\switchbg.png">
+
+               <Link>Resources\switchbg.png</Link>  
+
+         
+    </BundleResource>
+
+      
+  </ItemGroup>
+  
+   <ItemGroup>
+
+       <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\switchbg2.png">
+
+               <Link>Resources\switchbg2.png</Link>  
+
+         
+    </BundleResource>
+
+      
+  </ItemGroup>
+
+  <ItemGroup>
+
+       <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\switchmoon.png">
+
+               <Link>Resources\switchmoon.png</Link>  
+
+         
+    </BundleResource>
+
+      
+  </ItemGroup>
+
+  <ItemGroup>
+
+       <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\switchsun.png">
+
+               <Link>Resources\switchsun.png</Link>  
+
+         
+    </BundleResource>
+
+      
+  </ItemGroup>
+
+</Project>

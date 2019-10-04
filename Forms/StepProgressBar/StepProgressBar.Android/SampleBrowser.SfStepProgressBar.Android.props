@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\User.png">
+      <Link>Resources\drawable\User.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-hdpi\User.png">
+      <Link>Resources\drawable-hdpi\User.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xhdpi\User.png">
+      <Link>Resources\drawable-xhdpi\User.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxhdpi\User.png">
+      <Link>Resources\drawable-xxhdpi\User.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxxhdpi\User.png">
+      <Link>Resources\drawable-xxxhdpi\User.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\UserSelection.png">
+      <Link>Resources\drawable\UserSelection.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-hdpi\UserSelection.png">
+      <Link>Resources\drawable-hdpi\UserSelection.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xhdpi\UserSelection.png">
+      <Link>Resources\drawable-xhdpi\UserSelection.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxhdpi\UserSelection.png">
+      <Link>Resources\drawable-xxhdpi\UserSelection.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxxhdpi\UserSelection.png">
+      <Link>Resources\drawable-xxxhdpi\UserSelection.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\UserWhite.png">
+      <Link>Resources\drawable\UserWhite.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-hdpi\UserWhite.png">
+      <Link>Resources\drawable-hdpi\UserWhite.png</Link>
+    </AndroidResource>
+  </ItemGroup> 
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xhdpi\UserWhite.png">
+      <Link>Resources\drawable-xhdpi\UserWhite.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxhdpi\UserWhite.png">
+      <Link>Resources\drawable-xxhdpi\UserWhite.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxxhdpi\UserWhite.png">
+      <Link>Resources\drawable-xxxhdpi\UserWhite.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Account.png">
+      <Link>Resources\drawable\Account.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-hdpi\Account.png">
+      <Link>Resources\drawable-hdpi\Account.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xhdpi\Account.png">
+      <Link>Resources\drawable-xhdpi\Account.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxhdpi\Account.png">
+      <Link>Resources\drawable-xxhdpi\Account.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxxhdpi\Account.png">
+      <Link>Resources\drawable-xxxhdpi\Account.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\AccountSelection.png">
+      <Link>Resources\drawable\AccountSelection.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-hdpi\AccountSelection.png">
+      <Link>Resources\drawable-hdpi\AccountSelection.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xhdpi\AccountSelection.png">
+      <Link>Resources\drawable-xhdpi\AccountSelection.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxhdpi\AccountSelection.png">
+      <Link>Resources\drawable-xxhdpi\AccountSelection.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxxhdpi\AccountSelection.png">
+      <Link>Resources\drawable-xxxhdpi\AccountSelection.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\AccountWhite.png">
+      <Link>Resources\drawable\AccountWhite.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-hdpi\AccountWhite.png">
+      <Link>Resources\drawable-hdpi\AccountWhite.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xhdpi\AccountWhite.png">
+      <Link>Resources\drawable-xhdpi\AccountWhite.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxhdpi\AccountWhite.png">
+      <Link>Resources\drawable-xxhdpi\AccountWhite.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxxhdpi\AccountWhite.png">
+      <Link>Resources\drawable-xxxhdpi\AccountWhite.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Personal.png">
+      <Link>Resources\drawable\Personal.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-hdpi\Personal.png">
+      <Link>Resources\drawable-hdpi\Personal.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xhdpi\Personal.png">
+      <Link>Resources\drawable-xhdpi\Personal.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxhdpi\Personal.png">
+      <Link>Resources\drawable-xxhdpi\Personal.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxxhdpi\Personal.png">
+      <Link>Resources\drawable-xxxhdpi\Personal.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\PersonalSelection.png">
+      <Link>Resources\drawable\PersonalSelection.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-hdpi\PersonalSelection.png">
+      <Link>Resources\drawable-hdpi\PersonalSelection.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xhdpi\PersonalSelection.png">
+      <Link>Resources\drawable-xhdpi\PersonalSelection.png</Link>
+    </AndroidResource>
+  </ItemGroup> 
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxhdpi\PersonalSelection.png">
+      <Link>Resources\drawable-xxhdpi\PersonalSelection.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxxhdpi\PersonalSelection.png">
+      <Link>Resources\drawable-xxxhdpi\PersonalSelection.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\PersonalWhite.png">
+      <Link>Resources\drawable\PersonalWhite.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-hdpi\PersonalWhite.png">
+      <Link>Resources\drawable-hdpi\PersonalWhite.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xhdpi\PersonalWhite.png">
+      <Link>Resources\drawable-xhdpi\PersonalWhite.png</Link>
+    </AndroidResource>
+  </ItemGroup> 
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxhdpi\PersonalWhite.png">
+      <Link>Resources\drawable-xxhdpi\PersonalWhite.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable-xxxhdpi\PersonalWhite.png">
+      <Link>Resources\drawable-xxxhdpi\PersonalWhite.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  </Project>
