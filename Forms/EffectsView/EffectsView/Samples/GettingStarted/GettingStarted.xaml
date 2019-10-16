@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sfSampleView:SampleView
+    x:Class="SampleBrowser.SfEffectsView.GettingStarted"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sfEffectsView="clr-namespace:Syncfusion.XForms.EffectsView;assembly=Syncfusion.Core.XForms"
+    xmlns:sfBorder="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+    xmlns:sfSampleView="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+	xmlns:sfGradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+	xmlns:local="clr-namespace:SampleBrowser.SfEffectsView"
+	mc:Ignorable="d">
+	<sfSampleView:SampleView.BindingContext>
+		<local:EffectsViewModel x:Name="view"/>
+	</sfSampleView:SampleView.BindingContext>
+	<sfSampleView:SampleView.Content>
+		<ScrollView>
+			<StackLayout Padding="10">
+				<StackLayout.WidthRequest>
+					<OnPlatform x:TypeArguments="x:Double">
+						<On Platform="Android">
+							<OnIdiom x:TypeArguments="x:Double" Desktop="510" Tablet="450" Phone="344"/>
+						</On>
+						<On Platform="iOS">
+							<OnIdiom x:TypeArguments="x:Double" Desktop="510" Tablet="450" Phone="344"/>
+						</On>
+					</OnPlatform>
+				</StackLayout.WidthRequest>
+				<StackLayout.HorizontalOptions>
+					<OnPlatform x:TypeArguments="LayoutOptions">
+						<On Platform="Android">
+							<OnIdiom x:TypeArguments="LayoutOptions" Desktop="CenterAndExpand" Tablet="CenterAndExpand" Phone="FillAndExpand"/>
+						</On>
+						<On Platform="iOS">
+							<OnIdiom x:TypeArguments="LayoutOptions" Desktop="CenterAndExpand" Tablet="CenterAndExpand" Phone="FillAndExpand"/>
+						</On>
+					</OnPlatform>
+				</StackLayout.HorizontalOptions>
+				<StackLayout.Spacing>
+					<OnPlatform
+                            x:TypeArguments="x:Double"
+                            Android="10"
+                            iOS="20" />
+				</StackLayout.Spacing>
+				<!--Ripple effect-->
+
+				<Label Text="Ripple effect" FontAttributes="Bold"
+						   FontFamily="Roboto-Medium" TextColor=" #757575" 
+                           VerticalOptions="Center" Margin="0,10,10,10" FontSize="16"/>
+
+				<sfEffectsView:SfEffectsView x:Name="EffectsView" TouchDownEffects="Ripple" WidthRequest="344" 
+												 Margin="0,0,0,10" CornerRadius="5" HeightRequest="148" >
+					<Grid>
+							<sfGradient:SfGradientView >
+								<sfGradient:SfGradientView.BackgroundBrush>
+									<sfGradient:SfLinearGradientBrush>
+										<sfGradient:SfLinearGradientBrush.GradientStops>
+											<sfGradient:SfGradientStop Color="#0eddeb" Offset="0.0" />
+											<sfGradient:SfGradientStop Color="#006ed9" Offset="1" />
+										</sfGradient:SfLinearGradientBrush.GradientStops>
+									</sfGradient:SfLinearGradientBrush>
+								</sfGradient:SfGradientView.BackgroundBrush>
+							</sfGradient:SfGradientView>
+							<sfBorder:SfBorder BackgroundColor="Transparent" BorderColor="Transparent" 
+											   BorderWidth="0" VerticalOptions="Center">
+								<Grid>
+
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="3*"/>
+									<ColumnDefinition Width="7*"/>
+								</Grid.ColumnDefinitions>
+
+								<Image x:Name="cardImage" Margin="7" VerticalOptions="Center"
+									   WidthRequest="80" HeightRequest="80"/>
+								<StackLayout Grid.Column="1" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+									<Label Text="Laura Steffi"  TextColor="#FFFFFF" 
+                                       Grid.Row="0"  VerticalTextAlignment="Center"
+                                       Margin="15,0,0,0" Font="18" FontFamily="Roboto-Medium"/>
+									<Label Text="Data Science Analyst"  TextColor="#FFFFFF" 
+                                       VerticalTextAlignment="Center" FontFamily="Roboto-Regular" 
+                                       Margin="15,0,0,0" Font="12"/>
+									<Label Text="laurasteffi@gmail.com"  TextColor="#FFFFFF" 
+										   FontFamily="Roboto-Regular" 
+                                       VerticalTextAlignment="Center" Margin="15,0,0,0" Font="12" />
+									<Label Text="011-253-321"  TextColor="#FFFFFF" FontFamily="Roboto-Regular" 
+                                       VerticalTextAlignment="Center" Margin="15,0,0,0" Font="12"/>
+								</StackLayout>
+							</Grid>
+							</sfBorder:SfBorder>
+						</Grid>
+					</sfEffectsView:SfEffectsView>
+
+				<Label Text="Animation duration in milliseconds" TextColor="#757575" FontFamily="Roboto-Regular"
+                               HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="14" HeightRequest="16"
+                               LineBreakMode="NoWrap" Margin="0,0,10,0" WidthRequest="218" />
+
+				<Grid>
+					<Grid.Margin>
+						<OnPlatform x:TypeArguments="Thickness" Android="-10,0,10,0" iOS="0,0,10,0" />
+					</Grid.Margin>
+					<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="9*"/>
+					<ColumnDefinition Width="1*"/>
+				</Grid.ColumnDefinitions>
+
+					<Slider Maximum="2000" Minimum="100" BindingContext="{x:Reference EffectsView}" 
+                                    Value="{Binding RippleAnimationDuration}" 
+							x:Name="AnimationDurationSlider" MinimumWidthRequest="100" 
+                                    MinimumTrackColor="#007DE6 " MaximumTrackColor="#BDBDBD" ThumbColor="#007DE6">
+					
+					</Slider>
+
+					<Label BindingContext="{x:Reference AnimationDurationSlider}" Grid.Column="1"
+                                   Text="{Binding Value, StringFormat='{0:0}'}" FontFamily="Roboto-Regular" 
+								   VerticalTextAlignment="Center" FontSize="14" HorizontalTextAlignment="End"
+                                   LineBreakMode="NoWrap" TextColor="#212121">
+						<Label.WidthRequest>
+							<OnPlatform x:TypeArguments="x:Double"
+                                                Android="32" iOS="45"/>
+						</Label.WidthRequest>
+					</Label>
+				</Grid>
+
+				<!--Scale and selection effect-->
+
+				<Label Text="Scale and selection effects" Grid.Row="0" FontFamily="Roboto-Medium"
+                           HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontAttributes="Bold"
+						   TextColor="#757575" Margin="0,25,10,10" FontSize="16"/>
+
+				<!-- <Label Text="Animation duration in milliseconds" FontSize="14" FontFamily="Roboto-Regular"
+                               HorizontalTextAlignment="Start" Margin="0,0,10,0"
+					   VerticalTextAlignment="Center" TextColor="#757575 "
+                               LineBreakMode="NoWrap" />
+
+				<Grid>
+					<Grid.Margin>
+						<OnPlatform x:TypeArguments="Thickness" Android="-10,0,10,0" iOS="0,0,10,0" />
+					</Grid.Margin>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="9*"/>
+						<ColumnDefinition Width="1*"/>
+					</Grid.ColumnDefinitions>
+
+					<Slider Maximum="2000" 
+                                    Value="200" Minimum="100"  Grid.Row="0" ValueChanged="AnimationDurationSlider2_ValueChanged"
+                                    Grid.Column="0" x:Name="AnimationDurationSlider2" MinimumWidthRequest="100" 
+                                    MinimumTrackColor="#007DE6 " MaximumTrackColor="#BDBDBD" ThumbColor="#007DE6">
+					</Slider>
+
+					<Label BindingContext="{x:Reference AnimationDurationSlider2}" 
+                                   Text="{Binding Value, StringFormat='{0:0}'}" 
+								   FontFamily="Roboto-Regular" HorizontalTextAlignment="End"
+								   VerticalTextAlignment="Center" FontSize="14"
+                                   LineBreakMode="NoWrap" Grid.Column="1" TextColor="#212121">
+						<Label.WidthRequest>
+							<OnPlatform x:TypeArguments="x:Double"
+                                                Android="32" iOS="45"/>
+						</Label.WidthRequest>
+					</Label>
+				</Grid> -->
+
+				<Label Text="* Long press to select a photo." FontFamily="Roboto-Regular" 
+                           HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontAttributes="Italic"
+                           TextColor="#757575"  Margin="0,10,10,10" FontSize="14"/>
+
+				<local:CustomBorder CornerRadius="5" BackgroundColor="#FFFFFF" Padding="5" x:Name="border"
+											 BorderColor="#D3D3D3"
+											 VerticalOptions="FillAndExpand" HasShadow="False" BorderWidth="0.5">
+					<local:CustomBorder.HorizontalOptions>
+						<OnPlatform x:TypeArguments="LayoutOptions">
+							<On Platform="Android">
+								<OnIdiom x:TypeArguments="LayoutOptions" Desktop="CenterAndExpand" Tablet="CenterAndExpand" Phone="FillAndExpand"/>
+							</On>
+							<On Platform="iOS">
+								<OnIdiom x:TypeArguments="LayoutOptions" Desktop="CenterAndExpand" Tablet="CenterAndExpand" Phone="FillAndExpand"/>
+							</On>
+						</OnPlatform>
+					</local:CustomBorder.HorizontalOptions>
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition>
+									<RowDefinition.Height>
+									<OnPlatform x:TypeArguments="GridLength">
+										<On Platform="Android">
+											<OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="120"/>
+										</On>
+										<On Platform="iOS">
+											<OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="110"/>
+										</On>
+									</OnPlatform>
+								</RowDefinition.Height>
+								</RowDefinition>
+								<RowDefinition>
+									<RowDefinition.Height>
+									<OnPlatform x:TypeArguments="GridLength">
+										<On Platform="Android">
+											<OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="120"/>
+										</On>
+										<On Platform="iOS">
+											<OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="110"/>
+										</On>
+									</OnPlatform>
+								</RowDefinition.Height>
+								</RowDefinition>
+							</Grid.RowDefinitions>
+
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition>
+									<ColumnDefinition.Width>
+										<OnPlatform x:TypeArguments="GridLength">
+											<On Platform="Android">
+												<OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="*"/>
+											</On>
+											<On Platform="iOS">
+												<OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="*"/>
+											</On>
+										</OnPlatform>
+									</ColumnDefinition.Width>
+								</ColumnDefinition>
+								<ColumnDefinition>
+									<ColumnDefinition.Width>
+										<OnPlatform x:TypeArguments="GridLength">
+											<On Platform="Android">
+												<OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="*"/>
+											</On>
+											<On Platform="iOS">
+												<OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="*"/>
+											</On>
+										</OnPlatform>
+									</ColumnDefinition.Width>
+								</ColumnDefinition>
+								<ColumnDefinition>
+									<ColumnDefinition.Width>
+										<OnPlatform x:TypeArguments="GridLength">
+											<On Platform="Android">
+												<OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="*"/>
+											</On>
+											<On Platform="iOS">
+												<OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="*"/>
+											</On>
+										</OnPlatform>
+									</ColumnDefinition.Width>
+								</ColumnDefinition>
+							</Grid.ColumnDefinitions>
+
+							<sfEffectsView:SfEffectsView x:Name="firstView" Grid.Row="0" Grid.Column="0" 
+														 SelectionColor="Transparent" SelectionChanged="FirstView_SelectionChanged" 
+														 LongPressEffects="{Binding LongPressEffectsValue}"  
+														 ScaleFactor="{Binding ScaleFactorValue}" BackgroundColor="AliceBlue"
+														 TouchDownEffects="{Binding TouchDownEffectsValue}" 
+														 TouchUpEffects="None" ScaleAnimationDuration="{Binding ScaleDuration}">
+								<Image x:Name="person1" Aspect="AspectFill"  HorizontalOptions="FillAndExpand" 
+									   VerticalOptions="FillAndExpand"/>
+							</sfEffectsView:SfEffectsView>
+							<Image x:Name="first" Grid.Row="0" Grid.Column="0" 
+								  Margin="0,12,12,0" BindingContext="{x:Reference firstView}"
+									   IsVisible="{Binding Path=IsSelected}" HeightRequest="20" WidthRequest="20"
+								  HorizontalOptions="End" VerticalOptions="Start"/>
+
+							<sfEffectsView:SfEffectsView x:Name="secondView" Grid.Row="0" Grid.Column="1" 
+												 SelectionColor="Transparent" SelectionChanged="FirstView_SelectionChanged"  
+												 LongPressEffects="{Binding LongPressEffectsValue}"
+												  ScaleFactor="{Binding ScaleFactorValue}" BackgroundColor="AliceBlue"  
+												 TouchDownEffects="{Binding TouchDownEffectsValue}" TouchUpEffects="None" ScaleAnimationDuration="{Binding ScaleDuration}">
+								<Image x:Name="person2" Aspect="AspectFill"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+							</sfEffectsView:SfEffectsView>
+							<Image x:Name="second"  Grid.Row="0" Grid.Column="1" 
+									   Margin="0,12,12,0" BindingContext="{x:Reference secondView}" IsVisible="{Binding Path=IsSelected}" HeightRequest="20" WidthRequest="20"
+								  HorizontalOptions="End" VerticalOptions="Start"/>
+
+							<sfEffectsView:SfEffectsView x:Name="thirdView" Grid.Row="0" Grid.Column="2"
+												 SelectionColor="Transparent" SelectionChanged="FirstView_SelectionChanged"  
+												 LongPressEffects="{Binding LongPressEffectsValue}"
+												  ScaleFactor="{Binding ScaleFactorValue}" BackgroundColor="AliceBlue"  
+												 TouchDownEffects="{Binding TouchDownEffectsValue}" TouchUpEffects="None" ScaleAnimationDuration="{Binding ScaleDuration}">
+								<Image x:Name="person3" Aspect="AspectFill"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+							</sfEffectsView:SfEffectsView>
+							<Image x:Name="third"  Grid.Row="0" Grid.Column="2" 
+								 Margin="0,12,12,0" BindingContext="{x:Reference thirdView}" 
+									   IsVisible="{Binding Path=IsSelected}" HeightRequest="20" WidthRequest="20"
+								  HorizontalOptions="End" VerticalOptions="Start"/>
+
+							<sfEffectsView:SfEffectsView x:Name="fourthView" Grid.Row="1" Grid.Column="0" 
+												 SelectionColor="Transparent" SelectionChanged="FirstView_SelectionChanged"  
+												 LongPressEffects="{Binding LongPressEffectsValue}"
+												  ScaleFactor="{Binding ScaleFactorValue}" BackgroundColor="AliceBlue"  
+												 TouchDownEffects="{Binding TouchDownEffectsValue}" TouchUpEffects="None" ScaleAnimationDuration="{Binding ScaleDuration}">
+								<Image x:Name="person4" Aspect="AspectFill"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+							</sfEffectsView:SfEffectsView>
+							<Image x:Name="fourth" Grid.Row="1" Grid.Column="0" 
+								  Margin="0,12,12,0" BindingContext="{x:Reference fourthView}" 
+									   IsVisible="{Binding Path=IsSelected}" HeightRequest="20" WidthRequest="20"
+								  HorizontalOptions="End" VerticalOptions="Start"/>
+
+							<sfEffectsView:SfEffectsView x:Name="fifthView" Grid.Row="1" Grid.Column="1" 
+												 SelectionColor="Transparent" SelectionChanged="FirstView_SelectionChanged"  
+												 LongPressEffects="{Binding LongPressEffectsValue}"
+												  ScaleFactor="{Binding ScaleFactorValue}" BackgroundColor="AliceBlue"  
+												 TouchDownEffects="{Binding TouchDownEffectsValue}" TouchUpEffects="None" ScaleAnimationDuration="{Binding ScaleDuration}">
+								<Image x:Name="person5" Aspect="AspectFill"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+							</sfEffectsView:SfEffectsView>
+							<Image x:Name="fifth"  Grid.Row="1" Grid.Column="1" 
+								  Margin="0,12,12,0" BindingContext="{x:Reference fifthView}" 
+									   IsVisible="{Binding Path=IsSelected}" HeightRequest="20" WidthRequest="20"
+								  HorizontalOptions="End" VerticalOptions="Start"/>
+
+							<sfEffectsView:SfEffectsView Grid.Row="1" Grid.Column="2" x:Name="sixthView"
+												 SelectionColor="Transparent" SelectionChanged="FirstView_SelectionChanged"  
+												 LongPressEffects="{Binding LongPressEffectsValue}" 
+												  ScaleFactor="{Binding ScaleFactorValue}" BackgroundColor="AliceBlue"  
+												 TouchDownEffects="{Binding TouchDownEffectsValue}" TouchUpEffects="None" ScaleAnimationDuration="{Binding ScaleDuration}">
+								<Image x:Name="person6" Aspect="AspectFill"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+							</sfEffectsView:SfEffectsView>
+							<Image x:Name="sixth" Grid.Row="1" Grid.Column="2" 
+								  BindingContext="{x:Reference sixthView}" 
+									   IsVisible="{Binding Path=IsSelected}" HeightRequest="20" WidthRequest="20" Margin="0,12,12,0"
+								  HorizontalOptions="End" VerticalOptions="Start" />
+
+						</Grid>
+				</local:CustomBorder>
+
+				<!--Rotation effect-->
+
+				<Label Text="Highlight and rotation effects"  FontAttributes="Bold"
+                           HorizontalTextAlignment="Start" VerticalTextAlignment="Center"
+                           FontFamily="Roboto-Medium" TextColor=" #757575" 
+                           VerticalOptions="Center" Margin="0,25,10,10" FontSize="16"/>
+
+				<!-- <Label Text="Animation duration in milliseconds" Margin="0,0,10,0"
+						   TextColor="#757575" FontFamily="Roboto-Regular"
+                           HorizontalTextAlignment="Start" VerticalTextAlignment="Center"
+                           LineBreakMode="NoWrap" FontSize="14"/>
+
+				<Grid>
+					<Grid.Margin>
+						<OnPlatform x:TypeArguments="Thickness" Android="-10,0,10,0" iOS="0,0,10,0" />
+					</Grid.Margin>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="9*"/>
+						<ColumnDefinition Width="1*"/>
+					</Grid.ColumnDefinitions>
+
+					<Slider Maximum="1500" Minimum="100"
+                                Value="600" Grid.Row="0" 
+                                Grid.Column="0"   MinimumTrackColor="#007DE6 " ValueChanged="AnimationDurationSlider3_ValueChanged"
+								MaximumTrackColor="#BDBDBD" ThumbColor="#007DE6" 
+								x:Name="AnimationDurationSlider3" 
+                                MinimumWidthRequest="100" >
+					</Slider>
+
+					<Label BindingContext="{x:Reference AnimationDurationSlider3}" FontSize="14" 
+                               Text="{Binding Value, StringFormat='{0:0}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="End" 
+                               LineBreakMode="NoWrap" Grid.Column="1" TextColor="#212121" 
+							   FontFamily="Roboto-Regular" >
+						<Label.WidthRequest>
+							<OnPlatform x:TypeArguments="x:Double"
+                                                Android="32" iOS="45"/>
+						</Label.WidthRequest>
+					</Label>
+				</Grid>-->
+				
+				<Label Text="* Touch the icon to rotate it." FontFamily="Roboto-Regular" 
+                           HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontAttributes="Italic"
+                           TextColor="#757575"  Margin="0,10,10,10" FontSize="14"/>
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+
+					<sfEffectsView:SfEffectsView x:Name="RotationEffectsView" Margin="12"  Angle="180" 
+                                                     TouchDownEffects="Highlight" RippleAnimationDuration="150" 
+												 RotationAnimationDuration="150"
+                                                     TouchUpEffects="Rotation" LongPressEffects="None" CornerRadius="35"
+                                                     WidthRequest="70" HeightRequest="70" InitialRippleFactor="0"
+                                                     HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                                     AnimationCompleted="RotationEffectsView_AnimationCompleted">
+
+						<Label Text="&#xe701;"  TextColor="Black"
+                                   HorizontalOptions="CenterAndExpand"
+                                   VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center" FontSize="40" WidthRequest="70" HeightRequest="70"
+                                   >
+							<Label.FontFamily>
+								<OnPlatform Android="Font Effect View icon.ttf#Font Effect View icon" 
+                                                iOS="Font Effect View icon"/>
+							</Label.FontFamily>
+						</Label>
+
+					</sfEffectsView:SfEffectsView>
+
+					<Button HeightRequest="40" WidthRequest="160" VerticalOptions="CenterAndExpand" HorizontalOptions="Start"  
+                                x:Name="ApplyRotationEffectButton" Grid.Column="1" Text="Rotate to 180°" 
+                                Clicked="ApplyRotationEffectButton_Clicked"  
+                                BackgroundColor="#2196F3" TextColor="White"/>
+				</Grid>
+			</StackLayout>
+		</ScrollView>
+	</sfSampleView:SampleView.Content>
+</sfSampleView:SampleView>
