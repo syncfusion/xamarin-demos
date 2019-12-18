@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sample:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:local="clr-namespace:SampleBrowser.SfTreeView"
+                   xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                   xmlns:sfTreeView="clr-namespace:Syncfusion.XForms.TreeView;assembly=Syncfusion.SfTreeView.XForms"
+                   xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+                   xmlns:treeviewengine="clr-namespace:Syncfusion.TreeView.Engine;assembly=Syncfusion.SfTreeView.XForms"
+                   x:Class="SampleBrowser.SfTreeView.AutoFitContent"
+                   x:Name="autoFitView">
+    <sample:SampleView.Resources>
+        <ResourceDictionary>
+            <local:RepliesTextConverter x:Key="RepliesTextConverter"/>
+            <local:RepliesCountConverter x:Key="RepliesCountConverter"/>
+            <local:DateConverter x:Key="DateConverter"/>
+        </ResourceDictionary>
+    </sample:SampleView.Resources>
+    <sample:SampleView.Content>
+        <Grid >
+            <Grid.BindingContext>
+                <local:ChatInfo/>
+            </Grid.BindingContext>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <sfTreeView:SfTreeView x:Name="treeView"
+                                   Indentation="52"
+                                   ExpanderWidth="0"
+                                   SelectionMode="None"
+                                   NotificationSubscriptionMode="PropertyChange,CollectionChange"
+                                   ItemTemplateContextType="Node" NodeSizeMode="Dynamic"
+                                   AutoExpandMode="AllNodesExpanded" ItemsSource="{Binding Conversations}">
+                <sfTreeView:SfTreeView.ItemTemplate>
+                    <local:ItemTemplateSelector>
+                        <local:ItemTemplateSelector.ConversationTemplate>
+                            <DataTemplate>
+                                <Grid Padding="0,1,0,1">
+                                    <Grid.Resources>
+                                    </Grid.Resources>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Margin="7,8,0,8"
+                   Source="{Binding Content.ProfileIcon}"
+                   HeightRequest="42" WidthRequest="42"
+                   HorizontalOptions="Center" VerticalOptions="Start"/>
+                                    <StackLayout Grid.Column="1">
+                                        <Frame BackgroundColor="#E3F6FF" HasShadow="False" CornerRadius="5" Margin="0, 8, 8, 0" Padding="8">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+                                                <Label Text="{Binding Content.Name}" WidthRequest="60"
+                           TextColor="{Binding Content.TextColor}" Grid.Column="0"
+                           VerticalOptions="Start" Grid.Row="0"
+                           Font="Bold" FontSize="12"/>
+                                                <Label Text="{Binding Content.Message}" Grid.Row="1"
+                           TextColor="#212121" 
+                           FontSize="13"/>
+                                            </Grid>
+                                        </Frame>
+                                        <Grid Padding="5,5,15,0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="20"/>
+                                            </Grid.RowDefinitions>
+                                            <Label Text="{Binding Content.Date, Converter={StaticResource DateConverter}}"
+                           Grid.Column="0" TextColor="#757575" VerticalOptions="Start"
+                           Font="Regular" FontSize="12"/>
+                                            <Grid Grid.Column="1" HorizontalOptions="End">
+                                                <Image HeightRequest="18" Grid.Column="0" WidthRequest="18" HorizontalOptions="End" VerticalOptions="Center">
+                                                    <Image.Source>
+                                                        <FontImageSource FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" Glyph="&#xe710;" Color="#757575"/>
+                                                    </Image.Source>
+                                                </Image>
+                                                <Label Text="Reply" TextColor="#757575" FontSize="12" Grid.Column="1" VerticalOptions="Center"/>
+                                                <Grid.GestureRecognizers>
+                                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.ReplyEditCommand, Source={x:Reference treeView}}" CommandParameter="{Binding .}"/>
+                                                </Grid.GestureRecognizers>
+                                            </Grid>
+                                        </Grid>
+                                        <Grid Padding="5,2,0,0" x:Name="replyGrid" RowSpacing="0" ColumnSpacing="0" IsVisible="{Binding Content.IsNeedExpand}">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Label Grid.Column="0" FontAttributes="Bold" TextColor="#212121" Text="{Binding IsExpanded, Converter={StaticResource RepliesTextConverter}}" FontSize="12" VerticalOptions="Fill"/>
+                                            <Label FontAttributes="Bold" Grid.Column="1" TextColor="#212121" Text="{Binding Content.Replies, Converter={StaticResource RepliesCountConverter}}" FontSize="12" VerticalOptions="Fill"/>
+                                            <Grid.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding Path=BindingContext.ExpandActionCommand, Source={x:Reference treeView}}" CommandParameter="{Binding .}"/>
+                                            </Grid.GestureRecognizers>
+                                        </Grid>
+                                        <inputLayout:SfTextInputLayout TrailingViewPosition="Inside"
+                                                                       ReserveSpaceForAssistiveLabels="False"
+                                                                       BackgroundColor="Transparent" 
+																	   UnfocusedColor="#E4E4E4"
+                                                                       ContainerType="Outlined"
+                                                                       OutlineCornerRadius="22"
+                                                                       IsVisible="{Binding Content.IsInEditMode}" 
+                                                                       Margin="0, 0, 8, 0">
+                                            <Entry x:Name="conversationEntry" 
+                                                   Placeholder="Enter the reply" 
+                                                   FontSize="12"
+                                                   Text="{Binding Content.ReplyMessage}">
+                                                <Entry.Triggers>
+                                                    <DataTrigger TargetType="Entry"
+                                                             Binding="{Binding Content.IsInEditMode}"
+                                                             Value="True">
+                                                        <DataTrigger.EnterActions>
+                                                            <local:FocusTriggerAction/>
+                                                        </DataTrigger.EnterActions>
+                                                    </DataTrigger>
+                                                </Entry.Triggers>
+                                            </Entry>
+                                            <inputLayout:SfTextInputLayout.TrailingView>
+                                                <Image x:Name="sendimagename" HeightRequest="28" WidthRequest="28">
+                                                    <Image.Source>
+                                                        <FontImageSource Color="#757575" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" Glyph="&#xe745;" />
+                                                    </Image.Source>
+                                                    <Image.GestureRecognizers>
+                                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.NewReplyCommand, Source={x:Reference treeView}}" CommandParameter="{Binding .}"/>
+                                                    </Image.GestureRecognizers>
+                                                </Image>
+                                            </inputLayout:SfTextInputLayout.TrailingView>
+                                        </inputLayout:SfTextInputLayout>
+                                    </StackLayout>
+                                </Grid>
+                            </DataTemplate>
+                        </local:ItemTemplateSelector.ConversationTemplate>
+                        <local:ItemTemplateSelector.ReplyTemplate>
+                            <DataTemplate>
+                                <Grid Padding="0,1,0,1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Margin="7,8,0,8"
+                   Source="{Binding Content.ProfileIcon}"
+                   HeightRequest="36" WidthRequest="36"
+                   HorizontalOptions="Center" VerticalOptions="Start"/>
+                                    <StackLayout Grid.Column="1">
+                                        <Frame BackgroundColor="#EFF6FF" HasShadow="False" CornerRadius="5" Margin="0, 8, 8, 0" Padding="8">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+                                                <Label Text="{Binding Content.Name}" WidthRequest="60"
+                           TextColor="{Binding Content.TextColor}" Grid.Column="0" VerticalOptions="Start" Grid.Row="0"
+                           Font="Bold" FontSize="12"/>
+                                                <Label Text="{Binding Content.Message}" Grid.Row="1"
+                           TextColor="#212121" 
+                           FontSize="13"/>
+                                            </Grid>
+                                        </Frame>
+                                        <Grid Padding="5,5,15,0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="20"/>
+                                            </Grid.RowDefinitions>
+                                            <Label Text="{Binding Content.Date, Converter={StaticResource DateConverter}}"
+                           Grid.Column="0" TextColor="#757575" VerticalOptions="Start"
+                           Font="Regular" FontSize="12"/>
+                                            <Grid Grid.Column="1" HorizontalOptions="End">
+                                                <Image HeightRequest="18" Grid.Column="0" WidthRequest="18" HorizontalOptions="End" VerticalOptions="Center">
+                                                    <Image.Source>
+                                                        <FontImageSource Color="#757575" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" Glyph="&#xe710;"/>
+                                                    </Image.Source>
+                                                </Image>
+                                                <Label Text="Reply" TextColor="#757575" FontSize="12" Grid.Column="1" VerticalOptions="Center"/>
+                                                <Grid.GestureRecognizers>
+                                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.ReplyEditCommand, Source={x:Reference treeView}}" CommandParameter="{Binding .}"/>
+                                                </Grid.GestureRecognizers>
+                                            </Grid>
+                                        </Grid>
+                                        <inputLayout:SfTextInputLayout TrailingViewPosition="Inside"
+                                                                       ReserveSpaceForAssistiveLabels="False"
+                                                                       BackgroundColor="Transparent"
+																	   UnfocusedColor="#E4E4E4"
+                                                                       ContainerType="Outlined"
+                                                                       OutlineCornerRadius="22"
+                                                                       IsVisible="{Binding Content.IsInEditMode}"
+                                                                       Margin="0, 0, 8, 0">
+                                            <Entry Placeholder="Enter the reply" 
+                                                   FontSize="12" 
+                                                   Text="{Binding Content.ReplyMessage}">
+                                                <Entry.Triggers>
+                                                    <DataTrigger TargetType="Entry"
+                                                             Binding="{Binding Content.IsInEditMode}"
+                                                             Value="True">
+                                                        <DataTrigger.EnterActions>
+                                                            <local:FocusTriggerAction/>
+                                                        </DataTrigger.EnterActions>
+                                                    </DataTrigger>
+                                                </Entry.Triggers>
+                                            </Entry>
+                                            <inputLayout:SfTextInputLayout.TrailingView>
+                                                <Image  x:Name="sendimagename" 
+                                                        HeightRequest="28" 
+                                                        WidthRequest="28">
+                                                    <Image.Source>
+                                                        <FontImageSource Color="#757575" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" Glyph="&#xe745;"/>
+                                                    </Image.Source>
+                                                    <Image.GestureRecognizers>
+                                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.NewReplyCommand, Source={x:Reference treeView}}" CommandParameter="{Binding .}"/>
+                                                    </Image.GestureRecognizers>
+                                                </Image>
+                                            </inputLayout:SfTextInputLayout.TrailingView>
+                                        </inputLayout:SfTextInputLayout>
+                                    </StackLayout>
+                                </Grid>
+                            </DataTemplate>
+                        </local:ItemTemplateSelector.ReplyTemplate>
+                    </local:ItemTemplateSelector>
+                </sfTreeView:SfTreeView.ItemTemplate>
+                <sfTreeView:SfTreeView.Behaviors>
+                    <local:AutoFitTreeViewBehavior/>
+                </sfTreeView:SfTreeView.Behaviors>
+                <sfTreeView:SfTreeView.HierarchyPropertyDescriptors>
+                    <treeviewengine:HierarchyPropertyDescriptor TargetType="{x:Type local:Conversation}" ChildPropertyName="Replies"/>
+                </sfTreeView:SfTreeView.HierarchyPropertyDescriptors>
+            </sfTreeView:SfTreeView>
+            <BoxView HeightRequest="1" BackgroundColor="#E4E4E4" Grid.Row="1"/>
+            <inputLayout:SfTextInputLayout Grid.Row="2" 
+                                           TrailingViewPosition="Inside"
+                                           ReserveSpaceForAssistiveLabels="False"
+                                           ContainerType="Outlined"
+										   UnfocusedColor="#E4E4E4"
+                                           BackgroundColor="White"
+                                           OutlineCornerRadius="22"
+                                           Padding="8,0,8,8">
+                <Entry Placeholder="Type a new conversation"
+                       FontSize="13"
+                       Text="{Binding ConversationMessage}">
+                </Entry>
+                <inputLayout:SfTextInputLayout.TrailingView>
+                    <Image x:Name="sendimagename"
+                            HeightRequest="40" 
+                            WidthRequest="40">
+                        <Image.Source>
+                            <FontImageSource Color="#757575" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" Glyph="&#xe745;"/>
+                        </Image.Source>
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding NewConversationCommand}"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </inputLayout:SfTextInputLayout.TrailingView>
+            </inputLayout:SfTextInputLayout>
+        </Grid>
+    </sample:SampleView.Content>
+
+</sample:SampleView>

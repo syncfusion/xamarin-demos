@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<local:SampleView
+    x:Class="SampleBrowser.SfSchedule.AppointmentEditor"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:samplelocal="clr-namespace:SampleBrowser.SfSchedule"
+    xmlns:schedule="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.SfSchedule.XForms">
+    <local:SampleView.Content>
+        <Grid x:Name="grid_layout">
+          <Grid.Resources>
+            <ResourceDictionary>
+              <local:ImagePathConverter x:Key="imagePathConverter"/>
+            </ResourceDictionary>
+          </Grid.Resources>
+
+          <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.9*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" BackgroundColor="#F7F7F7">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="0.8*" />
+                    <ColumnDefinition Width="0.2*" />
+                </Grid.ColumnDefinitions>
+                <Button
+                    x:Name="scheduleView_Button"
+                    Grid.Column="0"
+                    BackgroundColor="#F7F7F7"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center" 
+                    FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons, WPF=Assets/Fonts/Sync FontIcons.ttf#Sync FontIcons}"
+                    Text="&#xe71c;"
+                    TextColor="Black"
+                    BorderColor="Transparent"
+                    FontSize="Large">
+                </Button>
+                <Label
+                    x:Name="Month_Button"
+                    Grid.Column="1"
+                    BackgroundColor="#F7F7F7"
+                    FontSize="Medium"
+                    HorizontalOptions="Start"
+                    TextColor="Black"
+                    VerticalOptions="Center" />
+                <Button
+                    x:Name="Editor_Button"
+                    Grid.Column="2"
+                    BackgroundColor="#F7F7F7"
+                    HorizontalOptions="End"
+                    VerticalOptions="Center"
+                    FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons, WPF=Assets/Fonts/Sync FontIcons.ttf#Sync FontIcons}"
+                    Text="&#xe70a;"
+                    TextColor="Black"
+                    FontSize="Large"
+                    BorderColor="Transparent"
+                    >
+                </Button>
+            </Grid>
+            <schedule:SfSchedule
+                x:Name="Schedule"
+                Grid.Row="1"
+                Margin="0,-10,0,0"
+                DataSource="{Binding ListOfMeeting}"
+                HeaderHeight="0"
+                HorizontalOptions="FillAndExpand"
+                ScheduleView="WeekView"
+                ShowAppointmentsInline="True"
+                VerticalOptions="FillAndExpand">
+                <schedule:SfSchedule.WorkWeekViewSettings>
+                    <schedule:WorkWeekViewSettings WorkEndHour="16" WorkStartHour="8" />
+                </schedule:SfSchedule.WorkWeekViewSettings>
+                <schedule:SfSchedule.AppointmentMapping>
+                    <schedule:ScheduleAppointmentMapping
+                        ColorMapping="Color"
+                        EndTimeMapping="To"
+                        IsAllDayMapping="IsAllDay"
+                        StartTimeMapping="From"
+                        SubjectMapping="EventName"
+                        MinHeightMapping="MinimumHeight"
+                        StartTimeZoneMapping="StartTimeZone"
+                        EndTimeZoneMapping="EndTimeZone"/>
+                </schedule:SfSchedule.AppointmentMapping>
+                <schedule:SfSchedule.BindingContext>
+                    <samplelocal:AppointmentEditorViewModel />
+                </schedule:SfSchedule.BindingContext>
+
+            </schedule:SfSchedule>
+            <ListView
+                x:Name="scheduleview_list"
+                Grid.Row="1"
+                BackgroundColor="White"
+                BindingContext="{Binding}"
+                HasUnevenRows="False"
+                HeightRequest="200"
+                HorizontalOptions="Start"
+                ItemsSource="{Binding ScheduleTypeCollection}"
+                RowHeight="45"
+                SelectedItem="0"
+                SeparatorVisibility="None"
+                VerticalOptions="Start"
+                WidthRequest="200">
+                <ListView.BindingContext>
+                    <samplelocal:AppointmentEditorViewModel />
+                </ListView.BindingContext>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid Margin="20,10,0,0">
+                                    <Label Text="{Binding ScheduleType}" TextColor="Black" />
+                                </Grid>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <samplelocal:EditorLayout
+                x:Name="editor"
+                Grid.RowSpan="2"
+                IsVisible="False" />
+        </Grid>
+    </local:SampleView.Content>
+
+    <local:SampleView.PropertyView>
+        <Grid BackgroundColor="White" 
+                HorizontalOptions="FillAndExpand" 
+                VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" x:Name="scheduleTimeZoneLabel" 
+                    VerticalOptions="Center"                 
+                    Text="Time Zone" 
+                    FontSize="15" TextColor="Gray" />
+            <Picker x:Name="timeZonePicker" Grid.Row="1" 
+                        VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand">
+            </Picker>
+        </Grid>
+    </local:SampleView.PropertyView>
+    
+    <local:SampleView.Behaviors>
+        <samplelocal:AppointmentEditorBehavior />
+    </local:SampleView.Behaviors>
+</local:SampleView>

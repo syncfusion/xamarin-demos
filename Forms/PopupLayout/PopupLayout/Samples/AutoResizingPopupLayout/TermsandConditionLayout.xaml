@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SampleBrowser.SfPopupLayout"
+             x:Class="SampleBrowser.SfPopupLayout.TermsandConditionLayout">
+
+    <ContentPage.BindingContext>
+        <local:TicketBookingViewModel x:Name="viewModel"/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+            <Grid BackgroundColor="White" Padding="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" 
+                                           Grid.Row="0" 
+                                           TextColor="Gray" 
+                                           Opacity="54" 
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        iOS={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        UWP={OnIdiom Phone=14, Tablet=18, Desktop=18}}"     
+                                           BackgroundColor="White" 
+                                           Text="1."/>
+                <Label Grid.Column="0" 
+                                           Grid.Row="1" 
+                                           TextColor="Gray" 
+                                           Opacity="54" 
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        iOS={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        UWP={OnIdiom Phone=14, Tablet=18, Desktop=18}}" 
+                                           BackgroundColor="White" 
+                                           Text="2."/>
+                <Label Grid.Column="0" 
+                                           Grid.Row="2" 
+                                           TextColor="Gray" 
+                                           Opacity="54" 
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        iOS={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        UWP={OnIdiom Phone=14, Tablet=18, Desktop=18}}" 
+                                           BackgroundColor="White" 
+                                           Text="3."/>
+                <Label Grid.Column="0" 
+                                           Grid.Row="3" 
+                                           TextColor="Gray" 
+                                           Opacity="54" 
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        iOS={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        UWP={OnIdiom Phone=14, Tablet=18, Desktop=18}}" 
+                                           BackgroundColor="White" 
+                                           Text="4."/>
+                <Label Grid.Column="1" 
+                                           Grid.Row="0" 
+                                           TextColor="Gray" 
+                                           Opacity="54" 
+                                           MinimumWidthRequest="{OnPlatform UWP=270, iOS=300, Android=300}" 
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        iOS={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        UWP={OnIdiom Phone=14, Tablet=18, Desktop=18}}" 
+                                           BackgroundColor="White" 
+                                           Text="Children below the age of 18 cannot be admitted for movies certified A."/>
+                <Label Grid.Column="1" 
+                                           Grid.Row="1" 
+                                           TextColor="Gray" 
+                                           Opacity="54" 
+                                           MinimumWidthRequest="{OnPlatform UWP=270, iOS=300, Android=300}" 
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        iOS={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        UWP={OnIdiom Phone=14, Tablet=18, Desktop=18}}" 
+                                           BackgroundColor="White" 
+                                           Text="Please carry proof of age for movies certified A."/>
+                <Label Grid.Column="1" 
+                                           Grid.Row="2" 
+                                           TextColor="Gray" 
+                                           Opacity="54" 
+                                           MinimumWidthRequest="{OnPlatform UWP=270, iOS=300, Android=300}" 
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        iOS={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        UWP={OnIdiom Phone=14, Tablet=18, Desktop=18}}" 
+                                           BackgroundColor="White" 
+                                           Text="Drinking and alcohol is strictly prohibited inside the premises."/>
+                <Label Grid.Column="1" 
+                                           Grid.Row="3" 
+                                           TextColor="Gray" 
+                                           Opacity="54" 
+                                           MinimumWidthRequest="{OnPlatform UWP=270, iOS=300, Android=300}" 
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        iOS={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        UWP={OnIdiom Phone=14, Tablet=18, Desktop=18}}" 
+                                           BackgroundColor="White" 
+                                           Text="Please purchase tickets for children above age of 3."/>
+            </Grid>
+    </ContentPage.Content>
+</ContentPage>

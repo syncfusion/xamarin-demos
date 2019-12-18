@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:SampleView xmlns:list="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms" xmlns:sample="clr-namespace:SampleBrowser.SfParallaxView" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfParallaxView.ParallaxView" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:parallax="clr-namespace:Syncfusion.XForms.ParallaxView;assembly=Syncfusion.SfParallaxView.XForms">
+    <local:SampleView.BindingContext>
+        <sample:ParallaxViewViewModel x:Name="viewModel" Speed="0.3" />
+    </local:SampleView.BindingContext>
+    <local:SampleView.Content>
+        <Grid BackgroundColor="Transparent">
+            <parallax:SfParallaxView x:Name="parallaxview" Speed="{Binding Speed, Mode=TwoWay}">
+                <parallax:SfParallaxView.Content>
+                    <Image x:Name="image" BackgroundColor="Transparent" HorizontalOptions="Fill" VerticalOptions="Fill" Aspect="AspectFill" />
+                </parallax:SfParallaxView.Content>
+            </parallax:SfParallaxView>
+            <list:SfListView SelectionBackgroundColor="Transparent" x:Name="listview" BackgroundColor="Transparent">
+                <list:SfListView.ItemSize>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <OnPlatform.WinPhone>
+                            <OnIdiom x:TypeArguments="x:Double" Desktop="140" Tablet="140" />
+                        </OnPlatform.WinPhone>
+                        <OnPlatform.Android>
+                            <OnIdiom x:TypeArguments="x:Double" Phone="120" Tablet="140" />
+                        </OnPlatform.Android>
+                        <OnPlatform.iOS>
+                            <OnIdiom x:TypeArguments="x:Double" Phone="120" Tablet="140" />
+                        </OnPlatform.iOS>
+                    </OnPlatform>
+                </list:SfListView.ItemSize>
+                <list:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid ColumnSpacing="5" RowSpacing="20" Padding="20,10,20,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="0.99*" />
+                                    <RowDefinition Height="1" />
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition>
+                                            <ColumnDefinition.Width>
+                                                <OnPlatform x:TypeArguments="GridLength">
+                                                    <On Platform="UWP">
+                                                        <OnIdiom x:TypeArguments="GridLength" Desktop="0.1*" Tablet="0.2*" Phone="0.3*" />
+                                                    </On>
+                                                    <On Platform="Android">
+                                                        <OnIdiom x:TypeArguments="GridLength" Desktop="0.1*" Tablet="0.2*" Phone="0.3*" />
+                                                    </On>
+                                                    <On Platform="iOS">
+                                                        <OnIdiom x:TypeArguments="GridLength" Desktop="0.1*" Tablet="0.2*" Phone="0.3*" />
+                                                    </On>
+                                                </OnPlatform>
+                                            </ColumnDefinition.Width>
+                                        </ColumnDefinition>
+                                        <ColumnDefinition>
+                                            <ColumnDefinition.Width>
+                                                <OnPlatform x:TypeArguments="GridLength">
+                                                    <On Platform="UWP">
+                                                        <OnIdiom x:TypeArguments="GridLength" Desktop="0.8*" Tablet="0.8*" Phone="0.7*" />
+                                                    </On>
+                                                    <On Platform="Android">
+                                                        <OnIdiom x:TypeArguments="GridLength" Desktop="0.8*" Tablet="0.8*" Phone="0.7*" />
+                                                    </On>
+                                                    <On Platform="iOS">
+                                                        <OnIdiom x:TypeArguments="GridLength" Desktop="0.8*" Tablet="0.8*" Phone="0.7*" />
+                                                    </On>
+                                                </OnPlatform>
+                                            </ColumnDefinition.Width>
+                                        </ColumnDefinition>
+                                        <ColumnDefinition>
+                                            <ColumnDefinition.Width>
+                                                <OnPlatform x:TypeArguments="GridLength">
+                                                    <On Platform="UWP">
+                                                        <OnIdiom x:TypeArguments="GridLength" Desktop="0.1*" Tablet="0.1*" Phone="0.1*" />
+                                                    </On>
+                                                    <On Platform="Android">
+                                                        <OnIdiom x:TypeArguments="GridLength" Desktop="0.1*" Tablet="0.1*" Phone="0.1*" />
+                                                    </On>
+                                                    <On Platform="iOS">
+                                                        <OnIdiom x:TypeArguments="GridLength" Desktop="0.1*" Tablet="0.1*" Phone="0.1*" />
+                                                    </On>
+                                                </OnPlatform>
+                                            </ColumnDefinition.Width>
+                                        </ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Image BackgroundColor="Transparent" HeightRequest="450" WidthRequest="450" Source="{Binding Image}" Grid.Column="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Aspect="AspectFit" />
+                                    <StackLayout BackgroundColor="Transparent" Grid.Column="1" Padding="10,0,0,0" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical">
+                                        <Label HorizontalOptions="Start" TextColor="White" Text="{Binding Name}">
+                                            <Label.FontSize>
+                                                <OnPlatform x:TypeArguments="x:Double">
+                                                    <OnPlatform.WinPhone>
+                                                        <OnIdiom x:TypeArguments="x:Double" Desktop="20" Phone="18" Tablet="20" />
+                                                    </OnPlatform.WinPhone>
+                                                    <OnPlatform.Android>
+                                                        <OnIdiom x:TypeArguments="x:Double" Desktop="20" Phone="18" Tablet="20" />
+                                                    </OnPlatform.Android>
+                                                    <OnPlatform.iOS>
+                                                        <OnIdiom x:TypeArguments="x:Double" Desktop="20" Phone="18" Tablet="20" />
+                                                    </OnPlatform.iOS>
+                                                </OnPlatform>
+                                            </Label.FontSize>
+                                        </Label>
+                                        <Label HorizontalOptions="Start" Text="{Binding Author}" TextColor="#E4E4E4">
+                                            <Label.FontSize>
+                                                <OnPlatform x:TypeArguments="x:Double">
+                                                    <OnPlatform.WinPhone>
+                                                        <OnIdiom x:TypeArguments="x:Double" Desktop="15" Phone="12" Tablet="15" />
+                                                    </OnPlatform.WinPhone>
+                                                    <OnPlatform.Android>
+                                                        <OnIdiom x:TypeArguments="x:Double" Desktop="15" Phone="12" Tablet="15" />
+                                                    </OnPlatform.Android>
+                                                    <OnPlatform.iOS>
+                                                        <OnIdiom x:TypeArguments="x:Double" Desktop="15" Phone="12" Tablet="15" />
+                                                    </OnPlatform.iOS>
+                                                </OnPlatform>
+                                            </Label.FontSize>
+                                        </Label>
+                                    </StackLayout>
+                                </Grid>
+                                <StackLayout Opacity="0.15" BackgroundColor="White" HeightRequest="1" Margin="5,0,5,0" Grid.Row="1" HorizontalOptions="FillAndExpand" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </list:SfListView.ItemTemplate>
+            </list:SfListView>
+        </Grid>
+    </local:SampleView.Content>
+    <local:SampleView.PropertyView>
+        <StackLayout Padding="10" BackgroundColor="Transparent">
+            <StackLayout BackgroundColor="White" Orientation="Horizontal">
+                <Label x:Name="pointer_text" Text="Change speed value" FontAttributes="Bold" TextColor="Black" />
+                <Label x:Name="speed_value" FontAttributes="Bold" TextColor="Black" Text="{Binding Value, StringFormat='{0:N}'}" />
+            </StackLayout>
+            <Slider x:Name="speed_slider" MinimumTrackColor="#177CE7" ThumbColor="#1a1aff" MaximumTrackColor="DarkGray" Value="{Binding Speed, Mode=TwoWay}" BackgroundColor="Transparent" Minimum="0" Maximum="1" />
+        </StackLayout>
+    </local:SampleView.PropertyView>
+</local:SampleView>

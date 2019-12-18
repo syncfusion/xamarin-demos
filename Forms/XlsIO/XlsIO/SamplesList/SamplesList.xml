@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Samples>
+	<Sample EnableStoragePermission="true" Name="CreateSpreadsheetPage"  Title="Create Spreadsheet" Description ="XlsIO supports to create an Excel document without any dependency of Microsoft Excel in few lines of code." SearchTags ="create,sheet"/>
+    <Sample EnableStoragePermission="true" Name="ChartsPage" Title="Charts" Description ="Create and manipulate all types of Excel charts with elements like chart title, legend, axis title, data labels, line styles, etc." SearchTags ="chart,legend,axis,data"/>
+    <Sample EnableStoragePermission="true" Name="ImportCollectionObjectsPage"  Title="Collection Objects" Description ="Collection objects usually holds a set of instance variables or properties, also known as attributes. XlsIO allows to import data directly from Collection objects." SearchTags ="collection object,import,export" />
+	<Sample EnableStoragePermission="true" Name="ImportNestedCollectionPage"  Title="Import Nested Collection" Description ="XlsIO allows to import data directly from nested collection objects with layout and group options." SearchTags ="nested collection,import,export" />
+    <Sample EnableStoragePermission="true" Name="DataTablePage" Title="DataTable" Description ="XlsIO supports import/export DataTables from/to Excel worksheets." SearchTags ="data,table,export,import,DataTable,datatable"/>
+    <Sample EnableStoragePermission="true" Name="PerformancePage" Title="Performance" Description ="XlsIO supports importing DataTables to worksheets with performance optimiziation." SearchTags ="data,table,import,DataTable,performance" />
+	<Sample EnableStoragePermission="true" Name="ExcelToPDFPage" Title="Excel to PDF" Description ="XlsIO supports Excel to PDF conversion" SearchTags ="conversion,PDF" />
+    <Sample EnableStoragePermission="true" Name="FormulasPage" Title="Formulas" Description ="XlsIO has support to read, write and calculate formulas. The built-in calculation engine can quickly evaluate formula cell values at runtime." SearchTags ="formula,calculation,calculate"/>
+    <Sample EnableStoragePermission="true" Name="FiltersPage" Title="Filters" Description ="XlsIO supports data filtering based on text, date and custom options." SearchTags ="filter,date filter,text filter,filtering"/>
+    <Sample EnableStoragePermission="true" Name="FindAndReplacePage" Title="Find and Replace" Description ="XlsIO supports to find the range of a value in the worksheet and replace it with a new value." SearchTags ="find,replace,modify,edit"/>
+    <Sample EnableStoragePermission="true" Name="ImportXMLPage" Title="Import XML Data" Description ="XlsIO supports single line of code to import XML data into an Excel worksheet." SearchTags ="xml,import"/>
+    <Sample EnableStoragePermission="true" Name="WorksheetToHTMLPage" Title="Worksheet To HTML" Description ="XlsIO supports conversion of worksheets to HTML files." SearchTags ="export,HTML,worksheet,tohtml"/>
+    <Sample EnableStoragePermission="true" Name="WorksheetToImagePage" Title="Worksheet To Image" Description ="XlsIO supports conversion of worksheets to images." SearchTags ="export,image,worksheet,toimage"/>
+</Samples>

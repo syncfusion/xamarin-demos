@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfExpander.Themes"
+             xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:expander="clr-namespace:Syncfusion.XForms.Expander;assembly=Syncfusion.Expander.XForms"
+             xmlns:local="clr-namespace:SampleBrowser.SfExpander"
+             xmlns:sflistview="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:core="clr-namespace:Syncfusion.XForms.Themes;assembly=Syncfusion.Core.XForms">
+    <sample:SampleView.BindingContext>
+        <local:InvoiceViewModel/>
+    </sample:SampleView.BindingContext>
+    <sample:SampleView.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Invoice: #FRU037020142097" Grid.Row="0" HeightRequest="40" FontSize="16" Opacity="1.0" VerticalTextAlignment="Center" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                <expander:SfExpander HeaderIconPosition="End"  IsExpanded="True">
+                    <expander:SfExpander.Header>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="35"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="InvoiceCalendar.png" Margin="3" Aspect="AspectFit"/>
+                            <Label TextColor="{DynamicResource SfExpanderIconColor}" Text="Invoice Date" FontSize="16" Grid.Column="1" VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                    </expander:SfExpander.Header>
+                    <expander:SfExpander.Content>
+                        <Grid BackgroundColor="{DynamicResource SfExpanderHeaderBackgroundColor}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1"/>
+                                <RowDefinition Height="50"/>
+                            </Grid.RowDefinitions>
+                            <BoxView Color="{DynamicResource SfExpanderIconColor}"/>
+                            <Grid Padding="15,0,0,0" Grid.Row="1">
+                                <Label TextColor="{DynamicResource SfExpanderIconColor}" Text="11.03 AM, 15 January 2019" FontSize="16" VerticalOptions="CenterAndExpand"/>
+                            </Grid>
+                        </Grid>
+                    </expander:SfExpander.Content>
+                </expander:SfExpander>
+                <expander:SfExpander HeaderIconPosition="End" IsExpanded="False">
+                    <expander:SfExpander.Header>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="35"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="InvoiceItem.png" Margin="3" HeightRequest="30" Aspect="AspectFit"/>
+                            <Label TextColor="{DynamicResource SfExpanderIconColor}" Text="Item (s)" FontSize="16" Grid.Column="1" VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                    </expander:SfExpander.Header>
+                    <expander:SfExpander.Content>
+                        <Grid BackgroundColor="{DynamicResource SfExpanderHeaderBackgroundColor}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1"/>
+                                <RowDefinition Height="232"/>
+                            </Grid.RowDefinitions>
+                            <BoxView Color="{DynamicResource SfExpanderIconColor}"/>
+                            <sflistview:SfListView BackgroundColor="{DynamicResource SfExpanderHeaderBackgroundColor}" ItemSize="25" Grid.Row="1" HeightRequest="232" ItemSpacing="3" SelectionMode="None" ItemsSource="{Binding ItemInfo}">
+                                <sflistview:SfListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <ViewCell.View>
+                                                <Grid>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="25"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid Padding="15,0,10,0">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="Auto"/>
+                                                        </Grid.RowDefinitions>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="*"/>
+                                                            <ColumnDefinition Width="*"/>
+                                                        </Grid.ColumnDefinitions>
+                                                        <Label Text="{Binding ItemName}" VerticalTextAlignment="End" TextColor="{DynamicResource SfExpanderIconColor}" FontSize="16"/>
+                                                        <Label Text="{Binding ItemPrice}" VerticalTextAlignment="End" HorizontalTextAlignment="End" FontSize="16" Grid.Column="1" TextColor="{DynamicResource SfExpanderIconColor}"/>
+                                                    </Grid>
+                                                </Grid>
+                                            </ViewCell.View>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </sflistview:SfListView.ItemTemplate>
+                                <sflistview:SfListView.FooterTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <ViewCell.View>
+                                                <Grid Padding="15,0,10,0">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="25"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Label Text="Total Amount" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="{DynamicResource SfExpanderIconColor}" FontSize="16"/>
+                                                    <Label Text="$36,220.00" HorizontalTextAlignment="End" FontAttributes="Bold" VerticalTextAlignment="Center" FontSize="16" Grid.Column="1" TextColor="{DynamicResource SfExpanderIconColor}"/>
+                                                </Grid>
+                                            </ViewCell.View>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </sflistview:SfListView.FooterTemplate>
+                            </sflistview:SfListView>
+                        </Grid>
+                    </expander:SfExpander.Content>
+                </expander:SfExpander>
+                <expander:SfExpander HeaderIconPosition="End" IsExpanded="False">
+                    <expander:SfExpander.Header>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="35"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="InvoicePaidDetails.png" Margin="3" HeightRequest="30" Aspect="AspectFit"/>
+                            <Label Text="Payment Details" FontSize="16" TextColor="{DynamicResource SfExpanderIconColor}" Grid.Column="1" VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                    </expander:SfExpander.Header>
+                    <expander:SfExpander.Content>
+                        <Grid BackgroundColor="{DynamicResource SfExpanderHeaderBackgroundColor}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <BoxView Color="{DynamicResource SfExpanderIconColor}"/>
+                            <Grid Padding="15,0,10,10" Grid.Row="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label TextColor="{DynamicResource SfExpanderIconColor}" FontSize="16" Text="Card Payment"/>
+                                <Label TextColor="{DynamicResource SfExpanderIconColor}" FontSize="16" Text="Third-Party coupons" Grid.Row="1"/>
+                                <Label TextColor="{DynamicResource SfExpanderIconColor}" FontSize="16" Text="Total Amount Paid" FontAttributes="Bold" Grid.Row="2"/>
+                                <Label TextColor="{DynamicResource SfExpanderIconColor}" FontSize="16" HorizontalOptions="End" Text="$31,200.00" Grid.Column="1"/>
+                                <Label TextColor="{DynamicResource SfExpanderIconColor}" FontSize="16" HorizontalOptions="End" Text="$5,000.00" Grid.Row="1" Grid.Column="1"/>
+                                <Label TextColor="{DynamicResource SfExpanderIconColor}" FontSize="16" HorizontalOptions="End" Text="$36,200.00" FontAttributes="Bold" Grid.Row="2" Grid.Column="1"/>
+                            </Grid>
+                        </Grid>
+                    </expander:SfExpander.Content>
+                </expander:SfExpander>
+                <expander:SfExpander HeaderIconPosition="End" IsExpanded="True">
+                    <expander:SfExpander.Header>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="35"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="InvoiceLocation.png" Margin="3" HeightRequest="30" Aspect="AspectFit"/>
+                            <Label TextColor="{DynamicResource SfExpanderIconColor}" FontSize="16" Text="Address" Grid.Column="1" VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                    </expander:SfExpander.Header>
+                    <expander:SfExpander.Content>
+                        <Grid BackgroundColor="{DynamicResource SfExpanderHeaderBackgroundColor}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <BoxView Color="{DynamicResource SfExpanderIconColor}"/>
+                            <Grid Padding="15,0,10,10" Grid.Row="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label TextColor="{DynamicResource SfExpanderIconColor}" FontSize="16" Text="Alex" FontAttributes="Bold"/>
+                                <Label TextColor="{DynamicResource SfExpanderIconColor}" FontSize="16" Text="No.8 Blossom St, Washington, DC 20019" Grid.Row="1"/>
+                                <Label TextColor="{DynamicResource SfExpanderIconColor}" FontSize="16" Text="(202) 547-3555" Grid.Row="2"/>
+                            </Grid>
+                        </Grid>
+                    </expander:SfExpander.Content>
+                </expander:SfExpander>
+            </StackLayout>
+        </ScrollView>
+    </sample:SampleView.Content>
+</sample:SampleView>
