@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:SfRadio="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.XlsIO.WorksheetToImagePage">
+
+
+  <local:SampleView.Content>
+    <StackLayout Padding="10">
+            <Label x:Name="Content_1" Text="This sample illustrates the conversion of a simple Excel document to an image."
+        FontSize="Medium" VerticalOptions="Center"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label FontSize="Medium" Text="Image Format:" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                <SfRadio:SfRadioGroup Grid.Column="1" Grid.Row="0" HeightRequest="30" Orientation="Horizontal">
+                    <SfRadio:SfRadioButton FontSize="13" WidthRequest="70" x:Name="pngButton" Text="PNG"/>
+                    <SfRadio:SfRadioButton FontSize="13" WidthRequest="70" x:Name="jpegButton" Text="JPEG"/>
+                </SfRadio:SfRadioGroup>
+                <Button Grid.Row="2" Grid.Column="0" x:Name="btnInput" Clicked ="OnInputButtonClicked" Text ="Input Template" WidthRequest="150" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Button Grid.Row="2" Grid.Column="1" x:Name="btnGenerate" Clicked ="OnButtonClicked" Text ="Convert" WidthRequest="150" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Grid>
+    </StackLayout>
+  </local:SampleView.Content>
+  <local:SampleView.PropertyView>
+
+  </local:SampleView.PropertyView>
+
+</local:SampleView>

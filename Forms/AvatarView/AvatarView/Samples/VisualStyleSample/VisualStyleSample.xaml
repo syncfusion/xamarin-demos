@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:avatar="clr-namespace:Syncfusion.XForms.AvatarView;assembly=Syncfusion.Core.XForms"
+                  x:Class="SampleBrowser.SfAvatarView.VisualStyleSample">
+    <local:SampleView.Resources>
+        <ResourceDictionary>
+            <Style x:Key="AvatarViewStyle"  TargetType="avatar:SfAvatarView">
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="ImageSource" Value="People_Square30.png"/>
+                <Setter Property="AvatarName" Value="SF"/>
+                <Setter Property="BackgroundColor" Value="#FF5490CC"/>
+                <Setter Property="InitialsColor" Value="White"/>
+                <Setter Property="AvatarCharacter" Value="Avatar1"/>
+                <Setter Property="ImageSourceMemberPath" Value="Image"/>
+                <Setter Property="InitialsMemberPath" Value="Name"/>
+                <Setter Property="ContentType" Value="{Binding AvatarType}"/>
+                <Setter Property="GroupSource" Value="{Binding TotalPeople}"/>
+            </Style>
+            <Style x:Key="MenuAvatarViewStyle"  TargetType="avatar:SfAvatarView">
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="BorderWidth" Value="0"/>
+                <Setter Property="AvatarShape" Value="Circle"/>
+                <Setter Property="AvatarSize" Value="Large"/>
+            </Style>
+        </ResourceDictionary>
+    </local:SampleView.Resources>
+    
+    <local:SampleView.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                 
+                </Grid.ColumnDefinitions>
+                <avatar:SfAvatarView x:Name="InitialAvatar"
+                                     Style="{StaticResource MenuAvatarViewStyle}"
+                                     ContentType="Initials"
+                                     AvatarName="SF"
+                                     InitialsColor="White"
+                                     BackgroundColor="#FF5490CC"/>
+                <avatar:SfAvatarView x:Name="DefaultAvatar"
+                                     Grid.Column="1"
+                                     Style="{StaticResource MenuAvatarViewStyle}"
+                                     ContentType="AvatarCharacter"
+                                     AvatarCharacter="Avatar1"/>
+                <avatar:SfAvatarView x:Name="CustomAvatar"
+                                      Grid.Column="2"
+                                     Style="{StaticResource MenuAvatarViewStyle}"
+                                     ContentType="Custom"
+                                     ImageSource="People_Square30.png"/>
+                <avatar:SfAvatarView x:Name="GroupAvatar"
+                                     Style="{StaticResource MenuAvatarViewStyle}"
+                                     ContentType="Group"
+                                     Grid.Column="3"
+                                     InitialsColor="White"
+                                     BackgroundColor="#FF5490CC"
+                                     InitialsMemberPath="Name"
+                                     ImageSourceMemberPath="Image"
+                                     BackgroundColorMemberPath="ProfileColor"
+                                     GroupSource="{Binding TotalPeople}"/>
+            </Grid>
+            <ScrollView Grid.Row="1" Margin="10">
+                <StackLayout x:Name="mainstack" Orientation="Horizontal">
+                    <StackLayout Orientation="Vertical">
+
+                        <Label Text="Shape Customization"
+                               FontSize="14"/>
+                        <StackLayout Orientation="Horizontal" Spacing="10">
+                            <avatar:SfAvatarView x:Name="customavatar" 
+                                             AvatarShape="Custom"  
+                                             Style="{StaticResource AvatarViewStyle}"
+                                             HorizontalOptions="Center"
+                                             WidthRequest="100"
+                                             HeightRequest="75"
+                                             BorderColor="LightBlue"
+                                             BorderWidth="5"
+                                             CornerRadius="0,20,0,20"/>
+                            <avatar:SfAvatarView
+                                             x:Name="customavatar1" 
+                                             AvatarShape="Custom"  
+                                             Style="{StaticResource AvatarViewStyle}"
+                                             HorizontalOptions="Center"
+                                             WidthRequest="75"
+                                             HeightRequest="75"
+                                             BorderColor="LightBlue"
+                                             BorderWidth="5"
+                                             CornerRadius="0,0,37,37"/>
+                        </StackLayout>
+
+                        <Grid HeightRequest="10"/>
+                        <Label Text="Default Visual Types"
+                               FontSize="14"/>
+                        <StackLayout Padding="0,10,0,0" Orientation="Horizontal">
+                            <StackLayout Orientation="Vertical">
+
+                                <avatar:SfAvatarView x:Name="ExtraLargeCircleAvatar" 
+                                                    AvatarShape="Circle"
+                                                     AvatarSize="ExtraLarge" 
+                                             Style="{StaticResource AvatarViewStyle}"/>
+                                <Label Text="Extra Large Circle"
+                               FontSize="10"/>
+                                <Grid HeightRequest="10"/>
+
+                                <avatar:SfAvatarView x:Name="LargeCircleAvatar" 
+                                                    AvatarShape="Circle"
+                                                     AvatarSize="Large"
+                                             Style="{StaticResource AvatarViewStyle}"/>
+                                <Label Text="Large Circle"
+                               FontSize="10"/>
+                                <Grid HeightRequest="10"/>
+
+                                <avatar:SfAvatarView x:Name="MediumCircleAvatar"
+                                                     AvatarShape="Circle"
+                                                     AvatarSize="Medium" 
+                                             Style="{StaticResource AvatarViewStyle}"/>
+                                <Label Text="Medium Circle"
+                               FontSize="10"/>
+                                <Grid HeightRequest="10"/>
+
+                                <avatar:SfAvatarView x:Name="SmallCircleAvatar"
+                                                     AvatarShape="Circle"
+                                                     AvatarSize="Small" 
+                                             Style="{StaticResource AvatarViewStyle}"/>
+                                <Label Text="Small Circle"
+                               FontSize="10"/>
+                                <Grid HeightRequest="10"/>
+
+                                <avatar:SfAvatarView x:Name="ExtraSmallCircleAvatar"
+                                                     AvatarShape="Circle"
+                                                     AvatarSize="ExtraSmall" 
+                                             Style="{StaticResource AvatarViewStyle}"/>
+                                <Label Text="Extra Small Circle"
+                               FontSize="10"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical" Margin="20,0,0,0">
+
+                                <avatar:SfAvatarView x:Name="ExtraLargeSquareAvatar"
+                                                     AvatarShape="Square"
+                                                     AvatarSize="ExtraLarge" 
+                                             Style="{StaticResource AvatarViewStyle}"/>
+                                <Label Text="Extra Large Square"
+                               FontSize="10"/>
+                                <Grid HeightRequest="10"/>
+
+                                <avatar:SfAvatarView x:Name="LargeSquareAvatar"
+                                                     AvatarShape="Square"
+                                                     AvatarSize="Large"
+                                             Style="{StaticResource AvatarViewStyle}"/>
+                                <Label Text="Large Square"
+                               FontSize="10"/>
+                                <Grid HeightRequest="10"/>
+
+                                <avatar:SfAvatarView x:Name="MediumSqaureAvatar"
+                                                     AvatarShape="Square"
+                                                     AvatarSize="Medium"
+                                             Style="{StaticResource AvatarViewStyle}"/>
+                                <Label Text="Medium Square"
+                               FontSize="10"/>
+                                <Grid HeightRequest="10"/>
+
+                                <avatar:SfAvatarView x:Name="SmallSqaureAvatar"
+                                                     AvatarShape="Square"
+                                                     AvatarSize="Small"
+                                             Style="{StaticResource AvatarViewStyle}"/>
+                                <Label Text="Small Square"
+                               FontSize="10"/>
+                                <Grid HeightRequest="10"/>
+
+                                <avatar:SfAvatarView x:Name="ExtraSmallSqaureAvatar"
+                                                     AvatarShape="Square"
+                                                     AvatarSize="ExtraSmall"
+                                             Style="{StaticResource AvatarViewStyle}"/>
+                                <Label Text="Extra Small Square"
+                               FontSize="10"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </local:SampleView.Content>
+</local:SampleView>

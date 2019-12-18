@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Samples>
+	<Sample Name = "CardView"  Title = "Card View" />
+  <Sample Name = "CardLayout"  Title = "Card Layout" />
+</Samples>

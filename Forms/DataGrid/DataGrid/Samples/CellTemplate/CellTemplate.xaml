@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfDataGrid.CellTemplate"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.SfDataGrid"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:sfgrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
+                  xmlns:sftextBox="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
+                  xmlns:sfMaskedEdit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion.SfMaskedEdit.XForms">
+
+  <sample:SampleView.BindingContext>
+        <local:CellTemplateViewModel x:Name="viewModel" />
+    </sample:SampleView.BindingContext>
+
+    <sample:SampleView.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="size"
+                        x:TypeArguments="x:Double">
+                <On Platform="UWP">
+                    <OnIdiom x:TypeArguments="x:Double"
+                        Phone="10"
+                        Tablet="12"/>
+                </On>
+                <On Platform="iOS,Android,macOS">
+                    <OnIdiom x:TypeArguments="x:Double"
+                       Phone ="14"
+                       Tablet="15"
+                       Desktop="15"/>
+                </On>
+            </OnPlatform>
+            <OnPlatform x:Key="opacity"
+                      x:TypeArguments="x:Double">
+                <On Platform="iOS,Android,macOS" Value="87" />
+                <On Platform="UWP" Value="80" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="padding"
+                   x:TypeArguments="Thickness">
+                <On Platform="Android,iOS,macOS" Value="8, 12, 8, 12" />
+                <On Platform="UWP" Value="8, 12, 8, 16" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="textSize"
+                  x:TypeArguments="x:Double">
+                <On Platform="iOS,UWP" Value="14" />
+                <On Platform="Android,macOS" Value="13" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="font"
+                  x:TypeArguments="x:String">
+                <On Platform="Android" Value="Roboto-Regular" />
+                <On Platform="iOS" Value="SFProText-Regular" />
+                <On Platform="UWP" Value="SegoeUI" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="visibility"
+                  x:TypeArguments="x:Boolean">
+                <On Platform="Android,iOS,UWP" Value="True" />
+                <On Platform="macOS" Value="False" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="visibilityForEditor"
+                  x:TypeArguments="x:Boolean">
+                <On Platform="Android,iOS,UWP" Value="False" />
+                <On Platform="macOS" Value="True" />
+            </OnPlatform>
+
+        </ResourceDictionary>
+    </sample:SampleView.Resources>
+    <sample:SampleView.Behaviors>
+        <local:CellTemplateBehavior/>
+    </sample:SampleView.Behaviors>
+    <sample:SampleView.Content>
+        <Grid x:Name="customLayout">
+            <sfgrid:SfDataGrid x:Name="dataGrid"
+                           AutoGenerateColumns="false"
+                           ItemsSource="{Binding EmployeeInformation}"
+                           ColumnSizer="Star"
+                           HeaderRowHeight="52"
+                           RowHeight="170"
+                           SelectionMode="Single"
+                           AllowEditing="True"
+                           NavigationMode="Cell"
+                           Opacity="{StaticResource opacity}"
+                           VerticalOverScrollMode="None">
+
+                <sfgrid:SfDataGrid.Columns>
+
+                    <sfgrid:GridTemplateColumn HeaderCellTextSize="16"
+                                           HeaderFontAttribute="Bold"
+                                           HeaderText="Employee Details"
+                                           LineBreakMode="TailTruncation"
+                                           MappingName="Name"
+                                           HeaderFont="{StaticResource font}">
+
+                        <sfgrid:GridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid ColumnSpacing="10"
+                                  RowSpacing="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="170" />
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <ContentView Grid.Row="0"
+                                             Grid.Column="0"
+                                             Padding="16, 10, 16, 25"
+                                             VerticalOptions="FillAndExpand">
+                                        <local:SfImage Source="{Binding Image}" />
+                                    </ContentView>
+                                    <Grid Grid.Row="0"
+                                      Grid.Column="1"
+                                      HeightRequest="130"
+                                      RowSpacing="1"
+                                      Padding="0, 10, 16, 0"
+                                      VerticalOptions="Start"
+                                      >
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Grid.Row="0"
+                                           Grid.Column="0"
+                                           LineBreakMode="WordWrap"
+                                           FontSize="{StaticResource size}"
+                                           Text="{Binding Name}"
+                                           TextColor="Black">
+                                        </Label>
+                                        <Label Grid.Row="1"
+                                           Grid.Column="0"
+                                           LineBreakMode="WordWrap"
+                                           FontSize="{StaticResource size}"
+                                           Text="{Binding EmployeeID}"
+                                           TextColor="Black">
+                                        </Label>
+                                        <Label Grid.Row="2"
+                                           Grid.Column="0"
+                                           LineBreakMode="WordWrap"
+                                           FontSize="{StaticResource size}"
+                                           Text="{Binding Country}"
+                                           TextColor="Black">
+                                        </Label>
+                                        <Label Grid.Row="3"
+                                           Grid.Column="0"
+                                           LineBreakMode="TailTruncation"
+                                           FontSize="{StaticResource size}"
+                                           Text="{Binding Telephone}"
+                                           TextColor="Black">
+                                        </Label>
+                                    </Grid>
+
+                                    <Label Grid.Row="0"
+                                       Grid.Column="2"
+                                       Margin ="0,5,16,0"
+                                       LineBreakMode="WordWrap"
+                                       VerticalTextAlignment="Center"
+                                       FontSize="{StaticResource size}"
+                                       Text="{Binding About}"
+                                       TextColor="Black">
+                                    </Label>
+                                </Grid>
+                            </DataTemplate>
+
+                        </sfgrid:GridTemplateColumn.CellTemplate>
+
+                        <sfgrid:GridTemplateColumn.EditTemplate>
+                            <DataTemplate>
+                                <Grid ColumnSpacing="10"
+                                  RowSpacing="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="170" />
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <ContentView Grid.Row="0"
+                                             Grid.Column="0"
+                                             Padding="16, 10, 16, 25"
+                                             VerticalOptions="FillAndExpand">
+                                        <local:SfImage Source="{Binding Image}" />
+                                    </ContentView>
+                                    <Grid Grid.Row="0"
+                                          Grid.Column="1"
+                                          HeightRequest="160"
+                                          RowSpacing="5"
+                                          Padding="0, 5, 16, 0"
+                                          VerticalOptions="Start">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Editor Grid.Row="0"
+                                           Grid.Column="0"
+                                           
+                                           FontSize="14"
+                                           Text="{Binding Name}"
+                                           TextColor="Black">
+                                        </Editor>
+                                        <sftextBox:SfNumericTextBox Grid.Row="1"
+                                           Grid.Column="0"
+                                           FontSize="14"
+                                           MaximumNumberDecimalDigits="0"
+                                           Value="{Binding EmployeeID}"
+                                           ValueChangeMode="OnKeyFocus"
+                                           TextColor="Black"
+                                           IsVisible="{StaticResource visibility}">
+                                        </sftextBox:SfNumericTextBox>
+                                        <Editor Grid.Row="1"
+                                           Grid.Column="0"
+                                           FontSize="14"
+                                           Text="{Binding EmployeeID}"
+                                           TextColor="Black"
+                                           IsVisible="{StaticResource visibilityForEditor}">
+                                        </Editor>
+                                        <Editor Grid.Row="2"
+                                           Grid.Column="0"
+                                           FontSize="14"
+                                           Text="{Binding Country}"
+                                           TextColor="Black">
+                                        </Editor>
+                                        <sfMaskedEdit:SfMaskedEdit Grid.Row="3"
+                                           Grid.Column="0"
+                                           FontSize="14"
+                                           MaskType="Text"
+                                           Mask="(000) 000-0000"
+                                           Keyboard="Numeric"
+                                           ValidationMode="KeyPress"
+                                           Value="{Binding Telephone}"
+                                           TextColor="Black"
+                                           IsVisible="{StaticResource visibility}">
+                                        </sfMaskedEdit:SfMaskedEdit>
+                                        <Editor Grid.Row="3"
+                                           Grid.Column="0"
+                                           FontSize="14"
+                                           Text="{Binding Telephone}"
+                                           TextColor="Black"
+                                           IsVisible="{StaticResource visibilityForEditor}">
+                                        </Editor>
+                                    </Grid>
+
+                                    <Editor Grid.Row="0" Grid.Column="2"
+                                            FontSize="14"
+                                            Margin="0,5,16,5"
+                                            Text="{Binding About}"
+                                            TextColor="Black">
+                                    </Editor>
+                                </Grid>
+                            </DataTemplate>
+
+                        </sfgrid:GridTemplateColumn.EditTemplate>
+                    </sfgrid:GridTemplateColumn>
+
+                </sfgrid:SfDataGrid.Columns>
+            </sfgrid:SfDataGrid>
+            <Grid x:Name="transparent"
+                  BackgroundColor="Black"
+                  Opacity="0.8" />
+        </Grid>
+    </sample:SampleView.Content>
+
+</sample:SampleView>

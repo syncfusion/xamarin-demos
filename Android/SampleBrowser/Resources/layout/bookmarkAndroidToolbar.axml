@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/bookmarkborder"
+    android:paddingLeft="0.5dip">
+    <LinearLayout
+        android:id="@+id/bookmarkTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:background="#F6F6F6">
+        <Button
+            android:id="@+id/backToViewerButton"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="&#xE709;"
+            android:textSize="24dp"
+            android:textColor="#808080" />
+        <FrameLayout
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="6">
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="#000000"
+                android:text="Bookmarks" />
+        </FrameLayout>
+        <Button
+            android:id="@+id/bookmarkCloseButton"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/pdfviewer_icon_cancel"
+            android:textSize="24dp"
+            android:textColor="#808080" />
+    </LinearLayout>
+    <FrameLayout
+        android:layout_height="0.5dip"
+        android:layout_width="match_parent"
+        android:background="@android:color/darker_gray" />
+    <ListView
+        android:id="@+id/bookmarkListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

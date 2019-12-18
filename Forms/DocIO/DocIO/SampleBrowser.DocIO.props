@@ -1,0 +1,212 @@
+<Project>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+	    <Link>Samples\DocIO\SamplesList\SamplesList.xml</Link>
+	</EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\BkmkDocumentPart_Template.doc">
+	    <Link>Samples\DocIO\Samples\Templates\BkmkDocumentPart_Template.doc</Link>
+	</EmbeddedResource> 	
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\Bookmark_Template.doc">
+	    <Link>Samples\DocIO\Samples\Templates\Bookmark_Template.doc</Link>
+	</EmbeddedResource> 
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\ContentControlTemplate.docx">
+	    <Link>Samples\DocIO\Samples\Templates\ContentControlTemplate.docx</Link>
+	</EmbeddedResource>     
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\Excel_Template.xlsx">
+	    <Link>Samples\DocIO\Samples\Templates\Excel_Template.xlsx</Link>
+	</EmbeddedResource>  
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\Letter Formatting.docx">
+	    <Link>Samples\DocIO\Samples\Templates\Letter Formatting.docx</Link>
+	</EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\Employees.xml">
+	    <Link>Samples\DocIO\Samples\Templates\Employees.xml</Link>
+	</EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\Mountain-200.jpg">
+	    <Link>Samples\DocIO\Samples\Templates\Mountain-200.jpg</Link>
+	</EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\Mountain-300.jpg">
+	    <Link>Samples\DocIO\Samples\Templates\Mountain-300.jpg</Link>
+	</EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\Northwind.png">
+	    <Link>Samples\DocIO\Samples\Templates\Northwind.png</Link>
+	</EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\Products.xml">
+	    <Link>Samples\DocIO\Samples\Templates\Products.xml</Link>
+	</EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\Road-550-W.jpg">
+	    <Link>Samples\DocIO\Samples\Templates\Road-550-W.jpg</Link>
+	</EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\AdventureCycle.jpg">
+	    <Link>Samples\DocIO\Samples\Templates\AdventureCycle.jpg</Link>
+	</EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\WordtoHTML.doc">
+	    <Link>Samples\DocIO\Samples\Templates\WordtoHTML.doc</Link>
+	</EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\WordtoPDF.docx">
+	    <Link>Samples\DocIO\Samples\Templates\WordtoPDF.docx</Link>
+	</EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\EmployeesReportDemo.doc">
+	    <Link>Samples\DocIO\Samples\Templates\EmployeesReportDemo.doc</Link>
+	</EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\SampleImage.png">
+	    <Link>Samples\DocIO\Samples\Templates\SampleImage.png</Link>
+	</EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\Template.doc">
+	    <Link>Samples\DocIO\Samples\Templates\Template.doc</Link>
+	</EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\Template_Letter.doc">
+	    <Link>Samples\DocIO\Samples\Templates\Template_Letter.doc</Link>
+	</EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\BookmarkNavigation\BookmarkNavigation.xaml">
+	  <Link>Samples\DocIO\Samples\BookmarkNavigation\BookmarkNavigation.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+  </EmbeddedResource>
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\BuiltInStyle\BuiltInStyle.xaml">
+	  <Link>Samples\DocIO\Samples\BuiltInStyle\BuiltInStyle.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+  </EmbeddedResource>
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CustomStyle\CustomStyle.xaml">
+	  <Link>Samples\DocIO\Samples\CustomStyle\CustomStyle.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+  </EmbeddedResource>
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DocIO_BarChart\DocIO_BarChart.xaml">
+	  <Link>Samples\DocIO\Samples\DocIO_BarChart\DocIO_BarChart.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+  </EmbeddedResource>
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\GroupShapes\GroupShapes.xaml">
+	  <Link>Samples\DocIO\Samples\GroupShapes\GroupShapes.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+  </EmbeddedResource>
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DocIO_PieChart\DocIO_PieChart.xaml">
+	  <Link>Samples\DocIO\Samples\DocIO_PieChart\DocIO_PieChart.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+  </EmbeddedResource>
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\FormFillingAndProtection\FormFillingAndProtection.xaml">
+	  <Link>Samples\DocIO\Samples\FormFillingAndProtection\FormFillingAndProtection.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+  </EmbeddedResource>
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\GettingStartedDocIO\GettingStarted.xaml">
+	  <Link>Samples\DocIO\Samples\GettingStartedDocIO\GettingStarted.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+  </EmbeddedResource>
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\MailMerge\MailMerge.xaml">
+	  <Link>Samples\DocIO\Samples\MailMerge\MailMerge.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+  </EmbeddedResource>
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\EmployeeList_MailMerge\EmployeeList_MailMerge.xaml">
+	  <Link>Samples\DocIO\Samples\EmployeeList_MailMergee\EmployeeList_MailMerge.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+  </EmbeddedResource>
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\NestedMailMerge\NestedMailMerge.xaml">
+	  <Link>Samples\DocIO\Samples\NestedMailMerge\NestedMailMerge.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+  </EmbeddedResource>
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\WordToHTML\WordToHTML.xaml">
+	  <Link>Samples\DocIO\Samples\WordToHTML\WordToHTML.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+  </EmbeddedResource>
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\WordToPDF\WordToPDF.xaml">
+	  <Link>Samples\DocIO\Samples\WordToPDF\WordToPDF.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+  </EmbeddedResource>
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\XMLMapping\XMLMapping.xaml">
+	  <Link>Samples\DocIO\Samples\XMLMapping\XMLMapping.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+  </EmbeddedResource>
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CreateEquation\CreateEquation.xaml">
+	  <Link>Samples\DocIO\Samples\CreateEquation\CreateEquation.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+  </EmbeddedResource>
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\FormatTable\FormatTable.xaml">
+	  <Link>Samples\DocIO\Samples\FormatTable\FormatTable.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+  </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\BookmarkNavigation\BookmarkNavigation.xaml.cs">
+	  <Link>Samples\DocIO\Samples\BookmarkNavigation\BookmarkNavigation.xaml.cs</Link>
+	  <DependentUpon>BookmarkNavigation.xaml</DependentUpon>
+  </Compile>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\BuiltInStyle\BuiltInStyle.xaml.cs">
+	  <Link>Samples\DocIO\Samples\BuiltInStyle\BuiltInStyle.xaml.cs</Link>
+	  <DependentUpon>BuiltInStyle.xaml</DependentUpon>
+  </Compile>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\GroupShapes\GroupShapes.xaml.cs">
+	  <Link>Samples\DocIO\Samples\GroupShapes\GroupShapes.xaml.cs</Link>
+	  <DependentUpon>GroupShapes.xaml</DependentUpon>
+  </Compile>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\CustomStyle\CustomStyle.xaml.cs">
+	  <Link>Samples\DocIO\Samples\CustomStyle\CustomStyle.xaml.cs</Link>
+	  <DependentUpon>CustomStyle.xaml</DependentUpon>
+  </Compile>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\DocIO_BarChart\DocIO_BarChart.xaml.cs">
+	  <Link>Samples\DocIO\Samples\DocIO_BarChart\DocIO_BarChart.xaml.cs</Link>
+	  <DependentUpon>DocIO_BarChart.xaml</DependentUpon>
+  </Compile>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\DocIO_PieChart\DocIO_PieChart.xaml.cs">
+	  <Link>Samples\DocIO\Samples\DocIO_PieChart\DocIO_PieChart.xaml.cs</Link>
+	  <DependentUpon>DocIO_PieChart.xaml</DependentUpon>
+  </Compile>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\FormFillingAndProtection\FormFillingAndProtection.xaml.cs">
+	  <Link>Samples\DocIO\Samples\FormFillingAndProtection\FormFillingAndProtection.xaml.cs</Link>
+	  <DependentUpon>FormFillingAndProtection.xaml</DependentUpon>
+  </Compile>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStartedDocIO\GettingStarted.xaml.cs">
+	  <Link>Samples\DocIO\Samples\GettingStartedDocIO\GettingStarted.xaml.cs</Link>
+	  <DependentUpon>GettingStarted.xaml</DependentUpon>
+  </Compile>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\MailMerge\MailMerge.xaml.cs">
+	  <Link>Samples\DocIO\Samples\MailMerge\MailMerge.xaml.cs</Link>
+	  <DependentUpon>MailMerge.xaml</DependentUpon>
+  </Compile>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\EmployeeList_MailMerge\EmployeeList_MailMerge.xaml.cs">
+	  <Link>Samples\DocIO\Samples\EmployeeList_MailMerge\EmployeeList_MailMerge.xaml.cs</Link>
+	  <DependentUpon>EmployeeList_MailMerge.xaml</DependentUpon>
+  </Compile>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\NestedMailMerge\NestedMailMerge.xaml.cs">
+	  <Link>Samples\DocIO\Samples\NestedMailMerge\NestedMailMerge.xaml.cs</Link>
+	  <DependentUpon>NestedMailMerge.xaml</DependentUpon>
+  </Compile>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\WordToHTML\WordToHTML.xaml.cs">
+	  <Link>Samples\DocIO\Samples\WordToHTML\WordToHTML.xaml.cs</Link>
+	  <DependentUpon>WordToHTML.xaml</DependentUpon>
+  </Compile>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\WordToPDF\WordToPDF.xaml.cs">
+	  <Link>Samples\DocIO\Samples\WordToPDF\WordToPDF.xaml.cs</Link>
+	  <DependentUpon>WordToPDF.xaml</DependentUpon>
+  </Compile>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\XMLMapping\XMLMapping.xaml.cs">
+	  <Link>Samples\DocIO\Samples\XMLMapping\XMLMapping.xaml.cs</Link>
+	  <DependentUpon>XMLMapping.xaml</DependentUpon>
+  </Compile>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\CreateEquation\CreateEquation.xaml.cs">
+	  <Link>Samples\DocIO\Samples\CreateEquation\CreateEquation.xaml.cs</Link>
+	  <DependentUpon>CreateEquation.xaml</DependentUpon>
+  </Compile>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\FormatTable\FormatTable.xaml.cs">
+	  <Link>Samples\DocIO\Samples\FormatTable\FormatTable.xaml.cs</Link>
+	  <DependentUpon>FormatTable.xaml</DependentUpon>
+  </Compile>
+   <Compile Include="$(MSBuildThisFileDirectory)\ISave.cs">
+	  <Link>Samples\DocIO\ISave.cs</Link>
+  </Compile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,24 @@
+<Project>
+  <ItemGroup>
+    
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ShimmerCustomization\Customization.xaml.cs">
+      <Link>Samples\Shimmer\Samples\ShimmerCustomization\Customization.xaml.cs</Link>
+      <DependentUpon>Customization.xaml</DependentUpon>
+    </Compile> 
+	
+	 <Compile Include="$(MSBuildThisFileDirectory)\Samples\ShimmerCustomization\ViewModel.cs">
+      <Link>Samples\Shimmer\Samples\ShimmerCustomization\ViewModel.cs</Link>
+    </Compile> 
+
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>Samples\Shimmer\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+    
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ShimmerCustomization\Customization.xaml">
+      <Link>Samples\Shimmer\Samples\ShimmerCustomization\Customization.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

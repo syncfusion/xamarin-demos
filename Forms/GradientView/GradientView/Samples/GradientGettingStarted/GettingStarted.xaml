@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             x:Class="SampleBrowser.SfGradientView.GettingStarted"
+             xmlns:samplelocal="clr-namespace:SampleBrowser.SfGradientView"
+             xmlns:gradient ="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms">
+
+    <local:SampleView.BindingContext>
+        <samplelocal:GettingStartedViewModel></samplelocal:GettingStartedViewModel>
+    </local:SampleView.BindingContext>
+
+    <local:SampleView.Content>
+
+        <Grid x:Name="grid" SizeChanged="Grid_SizeChanged">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <gradient:SfGradientView  x:Name="gradientView" Grid.Row="0" Grid.RowSpan="2" BackgroundBrush="{Binding BackgroundGradient}"/>
+
+
+            <StackLayout Grid.Row="1"  BackgroundColor="#30444444"   Orientation="Vertical" >
+                
+                <BoxView HeightRequest="1" Opacity="0.3"  Color="#000000"/>
+
+                <buttons:SfChipGroup x:Name="chipControl" SelectionIndicatorColor="White" HorizontalOptions="Center" VerticalOptions="Center" 
+                                 Margin="0,10,0,0" >
+
+                    <buttons:SfChipGroup.Items>
+                        <buttons:SfChip x:Name="chip1" BackgroundGradient="{Binding LinearGradientBrushes[0]}" 
+                                    HeightRequest="40" WidthRequest="40" CornerRadius="20" Clicked="Chip1_Clicked" BorderColor="White" BorderWidth="2"></buttons:SfChip>
+                        <buttons:SfChip x:Name="chip2" BackgroundGradient="{Binding LinearGradientBrushes[1]}"  
+                                    HeightRequest="40" WidthRequest="40" CornerRadius="20" BorderWidth="0.3" Clicked="Chip1_Clicked"></buttons:SfChip>
+                        <buttons:SfChip x:Name="chip3" BackgroundGradient="{Binding LinearGradientBrushes[2]}" 
+                                    HeightRequest="40" WidthRequest="40" CornerRadius="20" BorderWidth="0.3" Clicked="Chip1_Clicked"></buttons:SfChip>
+                        <buttons:SfChip x:Name="chip4" BackgroundGradient="{Binding LinearGradientBrushes[3]}" 
+                                    HeightRequest="40" WidthRequest="40" CornerRadius="20" BorderWidth="0.3" Clicked="Chip1_Clicked"></buttons:SfChip>
+                        <buttons:SfChip x:Name="chip5" BackgroundGradient="{Binding LinearGradientBrushes[4]}" 
+                                    HeightRequest="40" WidthRequest="40" CornerRadius="20" BorderWidth="0.3" Clicked="Chip1_Clicked"></buttons:SfChip>
+                        <buttons:SfChip x:Name="chip6" BackgroundGradient="{Binding LinearGradientBrushes[5]}" 
+                                    HeightRequest="40" WidthRequest="40" CornerRadius="20" BorderWidth="0.3" Clicked="Chip1_Clicked"></buttons:SfChip>
+
+                    </buttons:SfChipGroup.Items>
+
+                </buttons:SfChipGroup>
+
+
+                <StackLayout Orientation="Horizontal"  HorizontalOptions="Center" VerticalOptions="Center">
+
+                    <buttons:SfSegmentedControl x:Name="toggleButton" HorizontalOptions="Center"  BorderThickness="0" 
+                                                BackgroundColor="White" SelectedIndex="0"
+                                        SegmentWidth="100" CornerRadius="20" SegmentHeight="40"  SegmentBackgroundColor="White" 
+                                            SegmentPadding="0" 
+                                       ItemsSource="{Binding ToggleItems}"  VisibleSegmentsCount="2"
+                                        SelectionTextColor="White" DisabledTextColor="White"
+                                       SelectionChanged="ToggleButton_SelectionChanged" SegmentCornerRadius="20"  Margin="0,15,0,0">
+                        <buttons:SfSegmentedControl.SelectionIndicatorSettings>
+                            <buttons:SelectionIndicatorSettings x:Name="indicatorSettings" StrokeThickness="5" CornerRadius="20"
+                                                                Color="#007DEE" Position="Fill" >
+                            </buttons:SelectionIndicatorSettings>
+                        </buttons:SfSegmentedControl.SelectionIndicatorSettings>
+
+                    </buttons:SfSegmentedControl>
+
+                    <buttons:SfButton x:Name="gradientAngle" HeightRequest="40" WidthRequest="40" CornerRadius="20"
+                                      HorizontalOptions="Center" VerticalOptions="Center"
+                                      BackgroundColor="#0060FF" Margin="10,15,0,0"   Clicked="GradientAngle_Clicked">
+                        <buttons:SfButton.FontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="iOS" Value="Font Gradient" />
+                                <On Platform="UWP" Value="Assets/Font Gradient.ttf#Font Gradient" />
+                                <On Platform="Android" Value="Font Gradient.ttf#Font Gradient" />
+                                <On Platform="WPF" Value="Assets/Font Gradient.ttf#Font Gradient" />
+                            </OnPlatform>
+                        </buttons:SfButton.FontFamily>
+
+                    </buttons:SfButton>
+
+                </StackLayout>
+
+            </StackLayout>
+        </Grid>
+
+    </local:SampleView.Content>
+</local:SampleView>
