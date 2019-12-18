@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="SampleBrowser.SfRangeNavigator.SimpleRangeNavigator"
+		xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+		xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+	  xmlns:rangenavigator="clr-namespace:Syncfusion.RangeNavigator.XForms;assembly=Syncfusion.SfChart.XForms" 
+    xmlns:sb="clr-namespace:SampleBrowser.SfRangeNavigator">
+	
+	<local:SampleView.Content>
+
+		 <StackLayout >
+      <chart:SfChart x:Name="chart" HorizontalOptions="FillAndExpand" 
+                     VerticalOptions="FillAndExpand">
+        
+      <chart:SfChart.BindingContext>
+        <sb:RangeNavViewModel />
+      </chart:SfChart.BindingContext>
+          
+        <chart:SfChart.PrimaryAxis>
+          <chart:DateTimeAxis x:Name="dateTimeAxis" Minimum="5/1/2015" Maximum="8/1/2015">
+            <chart:DateTimeAxis.LabelStyle>
+              <chart:ChartAxisLabelStyle LabelFormat="MMM/dd"/>
+            </chart:DateTimeAxis.LabelStyle>
+          </chart:DateTimeAxis>
+        </chart:SfChart.PrimaryAxis>
+
+        <chart:SfChart.SecondaryAxis>
+          <chart:NumericalAxis/>
+        </chart:SfChart.SecondaryAxis>
+
+            <chart:SfChart.Series>
+        <chart:SplineAreaSeries x:Name="series" ItemsSource="{Binding DateTimeRangeData}"
+                          XBindingPath="XValue" YBindingPath="YValue"/>
+      </chart:SfChart.Series>
+      
+      </chart:SfChart>
+      
+      <rangenavigator:SfDateTimeRangeNavigator x:Name="RangeNavigator" RangeChanged="nac_RangeChanged" HorizontalOptions="FillAndExpand" ViewRangeStart="5/1/2015" ViewRangeEnd ="8/1/2015" ItemsSource="{Binding DateTimeRangeData}"
+                          XBindingPath="XValue" YBindingPath="YValue" HeightRequest = "200">
+        
+       <rangenavigator:SfDateTimeRangeNavigator.BindingContext>
+        <sb:RangeNavViewModel />
+      </rangenavigator:SfDateTimeRangeNavigator.BindingContext>
+      
+      </rangenavigator:SfDateTimeRangeNavigator>
+
+    </StackLayout>
+	</local:SampleView.Content>
+</local:SampleView>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Samples>
+  <Group ImageId = "AllControlls/AutoComplete.png" Title = "AutoComplete" SearchTags="SfAutoComplete,Filter,Suggestion,Searchbox,Editors"
+                Description = "Provide useful suggestions to users based on the already typed content." >
+
+    <Sample Title="AutoComplete" Name="AutoComplete" Icon="AllControlls/AutoComplete.png"/>
+	<Sample Title="Multiple Selection" Name = "MultiSelect"/>
+    <Sample Title="Tolerating Typos" Name = "ToleratingTypos"/>
+    <Sample Title="Avoiding Popup" Name = "CustomSearchPage" />
+    <Sample Title="Diacritic Sensitivity" Name = "MusicSearch" />
+    <Sample Platforms="Android,iOS" Title="Performance" Name = "Performance"/>
+    <Sample Title="Header / Footer" Name = "HeaderFooterSample" />
+  </Group>
+</Samples>  

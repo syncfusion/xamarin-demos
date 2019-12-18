@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion.SfMaskedEdit.XForms"
+             x:Class="SampleBrowser.SfMaskedEdit.MaskedEdit_Default">
+  <local:SampleView.Content>
+    <ScrollView IsClippedToBounds="true">
+      <Grid Padding="10" x:Name="sampleLayout">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="35" x:Name="row0"/>
+          <RowDefinition Height="*" x:Name="row1"/>
+          <RowDefinition Height="0" x:Name="row2"/>
+          <RowDefinition Height="*" x:Name="row3"/>
+          <RowDefinition Height="*" x:Name="row4"/>
+          <RowDefinition Height="0" x:Name="row5"/>
+          <RowDefinition Height="*" x:Name="row6"/>
+          <RowDefinition Height="0" x:Name="row7"/>
+          <RowDefinition Height="*" x:Name="row8"/>
+          <RowDefinition Height="0" x:Name="row9"/>
+          <RowDefinition Height="*" x:Name="row10"/>
+          <RowDefinition Height="*" x:Name="row11"/>
+          <RowDefinition Height="*" x:Name="row12"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="headingLabel" Grid.Row="0" Text="Funds Transfer" FontSize="20" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="Center" TextColor="Black"/>
+        <StackLayout Grid.Row="1">
+          <Label Text="To Account" x:Name="lblToAccount"  VerticalOptions="Start" HorizontalOptions="Start" FontSize="16" TextColor="#6d6d72"/>
+          <StackLayout x:Name="maskEdit1">
+                        <maskededit:SfMaskedEdit x:Name="sfToAccount"  AutomationId="sfToAccount" Mask="0000 0000 0000 0000" Watermark="1234 1234 1234 1234" HorizontalTextAlignment="Start" WatermarkColor="#adb2bb" FontSize="16" ValueMaskFormat="ExcludePromptAndLiterals" />
+          </StackLayout>
+        </StackLayout>
+        <StackLayout Grid.Row="2" x:Name="ErrorToAccount">
+          <Label Text="" x:Name="lblToAccountError" VerticalOptions="Start" HorizontalOptions="Start" FontSize="10" TextColor="#FF0000"/>
+        </StackLayout>
+        <StackLayout Grid.Row="3">
+          <Label Text="Description" x:Name="lblDesc" VerticalOptions="Start" HorizontalOptions="Start" FontSize="16" TextColor="#6d6d72"/>
+          <StackLayout x:Name="maskEdit3">
+                        <maskededit:SfMaskedEdit x:Name="sfDesc" AutomationId="sfDesc"  Mask="" Watermark="Enter description"  HorizontalTextAlignment="Start" WatermarkColor="#adb2bb" FontSize="16" ValueMaskFormat="ExcludePromptAndLiterals" />
+          </StackLayout>
+        </StackLayout>
+        <StackLayout Grid.Row="4">
+          <Label Text="Amount" x:Name="lblAmount" VerticalOptions="Start" HorizontalOptions="Start" FontSize="16" TextColor="#6d6d72"/>
+          <StackLayout x:Name="maskEdit2">
+                        <maskededit:SfMaskedEdit x:Name="sfAmount" AutomationId="sfAmount" Mask="$ 0,000.00" Watermark="$ 3,874.00" HorizontalTextAlignment="Start" WatermarkColor="#adb2bb" FontSize="16" ValueMaskFormat="IncludeLiterals" />
+          </StackLayout>
+        </StackLayout>
+        <StackLayout Grid.Row="5" x:Name="ErrorAmount">
+          <Label Text="" x:Name="lblAmountError" VerticalOptions="Start" HorizontalOptions="Start" FontSize="10" TextColor="#FF0000"/>
+        </StackLayout>
+        <StackLayout Grid.Row="6">
+          <Label Text="Email ID" x:Name="lblEmail" VerticalOptions="Start" HorizontalOptions="Start" FontSize="16" TextColor="#6d6d72"/>
+          <StackLayout x:Name="maskEdit4">
+                        <maskededit:SfMaskedEdit x:Name="sfEmail" AutomationId="sfEmail" Mask="\w+@\w+\.\w+" MaskType="RegEx" Watermark="david@syncfusion.com" HorizontalTextAlignment="Start" WatermarkColor="#adb2bb" FontSize="16" ValueMaskFormat="ExcludePromptAndLiterals" />
+          </StackLayout>
+        </StackLayout>
+        <StackLayout Grid.Row="7" x:Name="ErrorEmail">
+          <Label Text="" x:Name="lblEmailError" VerticalOptions="Start" HorizontalOptions="Start" FontSize="10" TextColor="#FF0000"/>
+        </StackLayout>
+        <StackLayout Grid.Row="8">
+          <Label Text="Mobile Number " x:Name="lblPhone" VerticalOptions="Start" HorizontalOptions="Start" FontSize="16" TextColor="#6d6d72"/>
+          <StackLayout x:Name="maskEdit5">
+                        <maskededit:SfMaskedEdit x:Name="sfPhone" AutomationId="sfPhone" Mask="+1 000 000 0000" Watermark="+1 323 339 3392"  HorizontalTextAlignment="Start" WatermarkColor="#adb2bb" FontSize="16" ValueMaskFormat="ExcludePromptAndLiterals" />
+          </StackLayout>
+        </StackLayout>
+        <StackLayout Grid.Row="9" x:Name="ErrorPhone">
+          <Label Text="" x:Name="lblPhoneError" VerticalOptions="Start" HorizontalOptions="Start" FontSize="10" TextColor="#FF0000"/>
+        </StackLayout>
+        <StackLayout Padding="0,20,0,0" x:Name="buttonaStack" Grid.Row="10">
+                    <Button x:Name="submitButton" AutomationId="submitButton" VerticalOptions="Center" BorderWidth="1" Text="Transfer Money" FontSize="Medium" Clicked="Handle_Clicked" BorderColor="#007aff" TextColor="#007aff" />
+        </StackLayout>
+      </Grid>
+    </ScrollView>
+  </local:SampleView.Content>
+  <local:SampleView.PropertyView>
+    <StackLayout Spacing="10" x:Name="optionLayout" >
+      <StackLayout Spacing="3">
+        <Label x:Name="lblCutCopy" Text="Validation On" FontSize="16" HeightRequest="20" YAlign="End" TextColor="#666666" />
+        <StackLayout x:Name="pickerLayout1">
+          <Picker x:Name="validationPicker" HeightRequest="40" BackgroundColor="White" TextColor="#333333"/>
+        </StackLayout>
+      </StackLayout>
+            <StackLayout Spacing="3">
+                <Label x:Name="lblCulture" Text="Culture" FontSize="16" HeightRequest="20" YAlign="End" TextColor="#666666" />
+                <StackLayout x:Name="pickerLayout2">
+                    <Picker x:Name="localePicker" HeightRequest="40" BackgroundColor="White" TextColor="#333333"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Spacing="3" x:Name="visibilityStack">
+                <Label x:Name="visibility" Text="Clear Button Visibility" FontSize="16" HeightRequest="20" YAlign="End" TextColor="#666666" />
+                <StackLayout x:Name="pickerLayout3">
+                    <Picker x:Name="visibilityPicker" HeightRequest="40" BackgroundColor="White" TextColor="#333333"/>
+                </StackLayout>
+            </StackLayout>
+            <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="2*" x:Name="column1" />
+          <ColumnDefinition Width="2*" x:Name="column2"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*" />
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Label TextColor="#666666" Grid.Row="0" x:Name="lblHidePromt" Text="Hide Prompt On Leave" VerticalOptions="Center" HorizontalOptions="Start" FontFamily="Helvetica" FontSize="16" />
+        <Switch x:Name="hidePromptToggle" Grid.Row="0" Grid.Column="1" HorizontalOptions="End" WidthRequest="50" IsToggled="false" VerticalOptions="Center" />
+
+        <Label Grid.Row="1" TextColor="#666666" x:Name="lblPrompt" Text="Prompt Character" VerticalOptions="Center" HorizontalOptions="Start" FontFamily="Helvetica" FontSize="16" />
+        <!--<StackLayout Grid.Row="1" x:Name="pickerLayout3" HorizontalOptions="End">-->
+        <Picker x:Name="promptPicker" Grid.Row="1" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="End" WidthRequest="40" HeightRequest="40" BackgroundColor="White" TextColor="#333333"/>
+        <!--</StackLayout>-->
+      </Grid>
+    </StackLayout>
+
+
+  </local:SampleView.PropertyView>
+</local:SampleView>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfListView.GridLayout"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.SfListView"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:datasource="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable"
+                  xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+                  xmlns:syncbuttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms">
+
+  <sample:SampleView.Resources>
+      <OnPlatform x:TypeArguments="x:String" x:Key="ListViewFontIconFamily">
+        <On Platform="Android" Value="UIFontIcons.ttf#UIFontIcons"/>
+        <On Platform="UWP" Value="Assets/UIFontIcons.ttf#UIFontIcons" />
+        <On Platform="WPF" Value="Assets/Fonts/UIFontIcons.ttf#UIFontIcons" />
+        <On Platform="iOS" Value="UIFontIcons" />
+      </OnPlatform>
+      <local:ListViewMultiSelectionConverter x:Key="MultiSelectionConverter"/>
+      <local:FavoriteIconConverter x:Key="favoriteIconConverter"/>
+    </sample:SampleView.Resources>
+  <sample:SampleView.BindingContext>
+    <local:ListViewGridLayoutViewModel/>
+  </sample:SampleView.BindingContext>
+
+  <sample:SampleView.Content>
+    <sync:SfListView x:Name="listView" FocusBorderThickness="0" SelectionMode="Multiple" IsStickyGroupHeader="True" ItemSpacing="3"
+                     ItemsSource="{Binding Gallerynfo}" SelectedItems="{Binding SelectedItems}"
+                     ItemSize="{OnPlatform Default=300, Android={OnIdiom Phone=150,Tablet=170}, iOS={OnIdiom Phone=150,Tablet=170}}">
+
+      <sync:SfListView.DataSource>
+        <datasource:DataSource>
+          <datasource:DataSource.GroupDescriptors>
+            <datasource:GroupDescriptor PropertyName="CreatedDate"/>
+          </datasource:DataSource.GroupDescriptors>
+        </datasource:DataSource>
+      </sync:SfListView.DataSource>
+
+      <sync:SfListView.LayoutManager>
+        <sync:GridLayout>
+          <sync:GridLayout.SpanCount>
+            <OnPlatform Default="4" Android="{OnIdiom Phone=2}" iOS="{OnIdiom Phone=2}">
+            </OnPlatform>
+          </sync:GridLayout.SpanCount>
+        </sync:GridLayout>
+      </sync:SfListView.LayoutManager>
+
+      <sync:SfListView.HeaderTemplate>
+        <DataTemplate>
+          <Grid x:Name="headerGrid" BackgroundColor="#FFEEEEF2" HeightRequest="45">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />
+              <ColumnDefinition Width="40" />
+            </Grid.ColumnDefinitions>
+
+            <Label LineBreakMode="NoWrap" Margin="10,0,0,0" Text="{Binding HeaderStatus}"
+                 FontSize="16" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center"/>
+
+            <Grid Grid.Column="1">
+                            <Label Text="&#xe735;" HeightRequest="40" WidthRequest="40" FontSize="Medium"
+                                   FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons, WPF=Assets/Fonts/Sync FontIcons.ttf#Sync FontIcons}"
+                      Margin="5,10,5,5" HorizontalOptions="End" VerticalOptions="Center"/>
+                            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding DeleteImageCommand}"/>
+              </Grid.GestureRecognizers>
+            </Grid>
+          </Grid>
+        </DataTemplate>
+      </sync:SfListView.HeaderTemplate>
+
+      <sync:SfListView.ItemTemplate>
+        <DataTemplate>
+          <Grid>
+            <Image Source="{Binding Image}" Aspect="AspectFill"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+            <syncbuttons:SfCheckBox CornerRadius="10" WidthRequest="28" HeightRequest="28" HorizontalOptions="End" VerticalOptions="Start"
+                                    IsChecked="{Binding Path=IsSelected}" InputTransparent="True"
+                                    IsVisible="{Binding Path=SelectedItem, Converter={StaticResource MultiSelectionConverter}, Source={x:Reference listView}}" />
+
+            <Grid VerticalOptions="End" BackgroundColor="#80000000"
+                    HeightRequest="{OnPlatform Android={OnIdiom Phone=30, Tablet=40},iOS={OnIdiom Phone=30, Tablet=40}, UWP={OnIdiom Phone=30, Tablet=40, Desktop=40}, macOS=40, WPF=40}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="40" />
+              </Grid.ColumnDefinitions>
+
+              <Label Text="{Binding ImageTitle}"  TextColor="White" VerticalTextAlignment="Center" Margin="20,0"
+                                              FontSize="{OnPlatform Android={OnIdiom Phone=10, Tablet=14}, iOS={OnIdiom Phone=10, Tablet=14}, macOS=14 , UWP={OnIdiom Phone=12, Tablet=14, Desktop=14}, WPF=14}"/>
+              <local:GridExt Grid.Column="1" VerticalOptions="FillAndExpand">
+                <local:GridExt.GestureRecognizers>
+                  <TapGestureRecognizer Command="{Binding Path=BindingContext.FavoriteImageCommand, Source={x:Reference listView}}" CommandParameter="{Binding .}" />
+                </local:GridExt.GestureRecognizers>
+                <Label FontFamily="{StaticResource ListViewFontIconFamily}" Text="{Binding IsFavorite, Converter={StaticResource favoriteIconConverter}}"
+                        FontSize="Medium" TextColor="White"
+                        VerticalOptions="Center"  HorizontalOptions="Center">
+                </Label>
+              </local:GridExt>
+            </Grid>
+          </Grid>
+        </DataTemplate>
+      </sync:SfListView.ItemTemplate>
+
+      <sync:SfListView.GroupHeaderTemplate>
+        <DataTemplate>
+          <Grid BackgroundColor="#FAFAFA">
+            <Label Text="{Binding Key}" FontSize="15" TextColor="#80000000" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Margin="20,0,0,0" />
+          </Grid>
+        </DataTemplate>
+      </sync:SfListView.GroupHeaderTemplate>
+    </sync:SfListView>
+  </sample:SampleView.Content>
+</sample:SampleView>

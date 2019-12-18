@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Samples>
+  <Group Title = "ComboBox" SearchTags="SfComboBox,Filter,Suggestion,Searchbox,Editors"
+                Description = "The SfComboBox control allows the user to select an item either type a value directly or select a value from the list." >
+	<Sample Title="Getting Started" Name = "GettingStartedSample" />
+	<Sample Title="Multiple Selection" Name = "ToleratingTypos"/>
+  </Group>
+</Samples>  

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/titleRelativeLayout" android:gravity="center" 
+    android:layout_width="match_parent" android:layout_gravity="center"  
+    android:layout_height="50dip">  
+    <Button
+        android:id="@+id/label"
+        android:layout_width="180dip"   android:layout_gravity="center" 
+        android:layout_height="32dip"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" android:gravity="center"
+        Text="TRANSFER MONEY"     android:textSize="14dip"    
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>
