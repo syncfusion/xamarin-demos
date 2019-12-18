@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Samples>
-  <Sample Title="Getting Started" IsNew="true" Name="AvatarGettingStartedSample" SearchTags="avatar" Description = " " />
-  <Sample Title="Group View" IsNew="true" Name="GroupView" SearchTags="avatar" Description = " " />
-  <Sample Title="Visual Styles" IsNew="true" Name="VisualStyleSample" SearchTags="avatar"  Description = " " /> 
-</Samples>
