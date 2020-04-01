@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+    x:Class="SampleBrowser.SfTabView.TabViewGettingStarted"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+	BackgroundColor="#2196F3">
+    <local:SampleView.Content>
+
+    </local:SampleView.Content>
+<local:SampleView.PropertyView>
+  <Grid Padding="3" RowSpacing="15">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+  <Label 
+    Grid.Row="0"
+    Text="Choose the type of tab display mode" />
+  <Picker 
+    Grid.Row="1"
+    Title="ImageWithText"
+    x:Name="HeaderTypePicker" 
+    SelectedIndexChanged="HeaderTypePicker_OnSelectedIndexChanged"
+    SelectedIndex="2">
+    <Picker.Items>
+      <x:String>Text Only</x:String>
+      <x:String>Image Only</x:String>
+      <x:String>Image with text</x:String>
+      <x:String>No Header</x:String>
+    </Picker.Items>
+  </Picker>
+  <Label 
+          Grid.Row="2"
+          Text="Choose the position of the header" />
+  <Picker 
+          Grid.Row="3"
+          Title="Top"
+          x:Name="HeaderPositionPicker" 
+          SelectedIndexChanged="HeaderPositionPicker_OnSelectedIndexChanged"
+          SelectedIndex="0">
+          <Picker.Items>
+              <x:String>Top</x:String>
+              <x:String>Bottom</x:String>
+          </Picker.Items>
+  </Picker>
+  <Label 
+          Grid.Row="4"
+          Text="Choose the position of selection indicator strip" />
+  <Picker 
+          Grid.Row="5"
+          Title="Bottom"
+          x:Name="SelectionIndicatorPositionPicker" 
+          SelectedIndexChanged="SelectionIndicatorPositionPicker_OnSelectedIndexChanged"
+          SelectedIndex="0">
+          <Picker.Items>
+              <x:String>Top</x:String>
+              <x:String>Bottom</x:String>
+          </Picker.Items>
+  </Picker>
+  <Label 
+          Grid.Row="6"
+          Text="Choose the Overflow Mode" />
+  <Picker 
+          Grid.Row="7"
+          Title="Scroll"
+          x:Name="OverflowModePicker" 
+          SelectedIndexChanged="Handle_SelectedIndexChanged"
+          SelectedIndex="0">
+          <Picker.Items>
+              <x:String>Scroll</x:String>
+              <x:String>DropDown</x:String>
+          </Picker.Items>
+  </Picker>
+    <Grid Grid.Row="8">
+      <StackLayout Orientation="Horizontal">
+                    <Label Text="Enable scroll button" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"  />
+                    <Switch x:Name="EnableScrollSwitch" IsToggled="False" HorizontalOptions="CenterAndExpand"  VerticalOptions="CenterAndExpand" />
+                </StackLayout>
+    </Grid>
+  </Grid>
+</local:SampleView.PropertyView>
+</local:SampleView>

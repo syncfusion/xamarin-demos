@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+	              xmlns:numerictext="clr-namespace:SampleBrowser.SfNumericTextBox"
+                  xmlns:numeric="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
+             x:Class="SampleBrowser.SfNumericTextBox.NumericTextBox_Default">
+  <local:SampleView.Content>
+    <ScrollView  IsClippedToBounds="true">
+      <Grid Padding="10" x:Name="sampleLayout">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="35" />
+          <RowDefinition Height="20" />
+          <RowDefinition Height="20" />
+          <RowDefinition Height="*" />
+          <RowDefinition Height="*" />
+          <RowDefinition Height="*" />
+          <RowDefinition Height="*" />
+          <RowDefinition Height="*" />
+
+        </Grid.RowDefinitions>
+        <Label x:Name="simpleInterestCalculatorLabel" Grid.Row="0" Text="Simple Interest Calculator" HeightRequest="40" FontSize="22" FontAttributes="None" HorizontalOptions="Start" TextColor="Black"/>
+        <Label x:Name="findingSimpleInterestLabel" Grid.Row="1" Text="The formula for finding simple interest is:" FontSize="14" TextColor="#666666" HeightRequest="50" HorizontalOptions="Start" />
+        <Label x:Name="formulaLabel" Margin="0,-5,0,0" Text="Amount = Principal * Interest rate * Term" Grid.Row="2" FontAttributes="Italic" FontSize="14" TextColor="#666666" HeightRequest="40" HorizontalOptions="Start" />
+        <StackLayout Grid.Row="3">
+          <Label x:Name="principalLabel" Text="Principal" VerticalOptions="Start" HorizontalOptions="Start" FontSize="16" HeightRequest="30" TextColor="#666666"/>
+          <StackLayout x:Name="numericTextBox1">
+            <numerictext:NumericTextBoxRenderer2 MaximumNumberDecimalDigits="2" Margin="0,-10,0,0" FontSize="16" HeightRequest="45" x:Name="principalNumericTextBox" AllowNull="true" ValueChangeMode="OnKeyFocus" FormatString="c" Watermark="Enter the Principal" Value="1000" TextColor="#333333" ClearButtonVisibility="WhileEditing"/>
+          </StackLayout>
+        </StackLayout>
+        <StackLayout Grid.Row="4">
+          <Label x:Name="interestRateLabel" Text="Interest rate" VerticalOptions="Start" HorizontalOptions="Start" FontSize="16" HeightRequest="30" TextColor="#666666"/>
+          <StackLayout x:Name="numericTextBox2">
+            <numerictext:NumericTextBoxRenderer2 MaximumNumberDecimalDigits="1" Margin="0,-10,0,0" HeightRequest="45" FontSize="16" ValueChangeMode="OnKeyFocus" PercentDisplayMode="Compute" x:Name="interestRateNumericTextBox" AllowNull="true" FormatString="p" Watermark="Enter the RI" Value="0.2"
+                ParserMode="Decimal" TextColor="#333333" ClearButtonVisibility="WhileEditing"/>
+          </StackLayout>
+        </StackLayout>
+        <StackLayout Grid.Row="5">
+          <Label x:Name="termLabel" Text="Term (in years)" HeightRequest="30" VerticalOptions="Start" HorizontalOptions="Start" FontSize="16" TextColor="#666666"/>
+          <StackLayout x:Name="numericTextBox3">
+            <numerictext:NumericTextBoxRenderer2 MaximumNumberDecimalDigits="0" Margin="0,-10,0,0" HeightRequest="45" ValueChangeMode="OnKeyFocus" FontSize="16" x:Name="termNumericTextBox" AllowNull="true" Watermark="Enter the Year" Value="20" TextColor="#333333" ClearButtonVisibility="WhileEditing"/>
+          </StackLayout>
+
+        </StackLayout>
+        <StackLayout Padding="0,20,0,0" Grid.Row="6">
+          <Button x:Name="calculateButton" VerticalOptions="Center" BorderWidth="1" Text="Calculate" FontSize="Medium" Clicked="Handle_Clicked" BorderColor="#007aff" TextColor="#007aff" />
+        </StackLayout>
+        <StackLayout x:Name="interestLayout" IsVisible="false" Grid.Row="7" >
+          <Label x:Name="interestLabel" Text=" Amount" VerticalOptions="Start" HorizontalOptions="Start" HeightRequest="30" FontSize="16" WidthRequest="200" TextColor="#666666"/>
+          <StackLayout x:Name="numericTextBox4">
+            <numerictext:NumericTextBoxRenderer MaximumNumberDecimalDigits="0" Margin="0,-20,0,0" HeightRequest="50" FontSize="22" IsEnabled="false" ValueChangeMode="OnKeyFocus" x:Name="interestNumericTextBox" AllowNull="false" FormatString="c"
+                Watermark="Enter a number" Value="4000" TextColor="#007aff" ClearButtonVisibility="WhileEditing"/>
+          </StackLayout>
+        </StackLayout>
+      </Grid>
+    </ScrollView>
+  </local:SampleView.Content>
+  <local:SampleView.PropertyView>
+    <StackLayout Spacing="10" x:Name="optionLayout" >
+      <StackLayout Spacing="3">
+        <Label Text="Culture" FontSize="16" YAlign="End" TextColor="#666666" />
+        <StackLayout x:Name="pickerLayout3">
+          <Picker x:Name="localePicker" SelectedIndex="1" BackgroundColor="White" TextColor="#333333"/>
+        </StackLayout>
+      </StackLayout>
+            <StackLayout Spacing="3">
+                <StackLayout.IsVisible>
+                    <OnPlatform UWP="False" iOS="True" Android="True"></OnPlatform>
+                </StackLayout.IsVisible>
+                <Label Text="Clear button visibility" FontSize="16" YAlign="End" TextColor="#666666" />
+                <StackLayout x:Name="pickerLayout4">
+                    <Picker x:Name="clearButtonPicker" BackgroundColor="White" TextColor="#333333" SelectedIndexChanged="OnClearButtonPicker_SelectedIndexChanged">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>WhileEditing</x:String>
+                                <x:String>Never</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </StackLayout>
+            </StackLayout>
+            <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="2*" x:Name="column1" />
+          <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Label TextColor="#666666" x:Name="allowNullLabel" Text="Allow Null" VerticalOptions="Center" HorizontalOptions="Start" FontFamily="Helvetica" FontSize="16" />
+        <Switch x:Name="allowNullToggle" Grid.Column="1" HorizontalOptions="End" WidthRequest="150" IsToggled="true" VerticalOptions="Center" />
+      </Grid>
+    </StackLayout>
+
+  </local:SampleView.PropertyView>
+</local:SampleView>

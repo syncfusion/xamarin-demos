@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:til="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+                  xmlns:badge="clr-namespace:Syncfusion.XForms.BadgeView;assembly=Syncfusion.SfBadgeView.XForms"
+                  xmlns:avatar="clr-namespace:Syncfusion.XForms.AvatarView;assembly=Syncfusion.Core.XForms"
+                  x:Class="SampleBrowser.SfAvatarView.GroupView">
+
+    <local:SampleView.Content>
+        <Grid>
+            <Grid Margin="10">
+                <ListView ItemsSource="{Binding GroupCollection}" RowHeight="60"
+                       SelectedItem="{Binding SelectedGroup, Mode=TwoWay}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <avatar:SfAvatarView GroupSource="{Binding PeopleCollection}"
+                                                     Margin="5"
+                                                     VerticalOptions="Center"
+                                                     HorizontalOptions="Center"
+                                                     ContentType="Group"
+                                                     AvatarShape="Circle"
+                                                     AvatarSize="Small"
+                                                     ImageSourceMemberPath="Image"
+                                                         BackgroundColorMemberPath="Backgroundcolor"
+                                                     InitialsMemberPath="Name"/>
+                                    <Grid Grid.Column="1" VerticalOptions="Center">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Label Text="{Binding GroupName}"
+                                           VerticalOptions="Center"
+                                           VerticalTextAlignment="Center"
+                                           FontSize="14"
+                                           TextColor="Black"/>
+                                        <Label Grid.Row="1" 
+                                           Text="{Binding TotalParticipants}"
+                                           VerticalOptions="Center"
+                                           VerticalTextAlignment="Center"
+                                           FontSize="11"
+                                           TextColor="Gray"/>
+                                    </Grid>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+            <Grid BackgroundColor="#77000000"       
+                  x:Name="PeopleListView" 
+              IsVisible="False">
+                <Grid WidthRequest="300" 
+                      Margin="50"
+                      VerticalOptions="Center"
+                      HorizontalOptions="Center"
+                  BackgroundColor="White">
+                    <StackLayout Orientation="Vertical">
+                        <Grid>
+                            <StackLayout Orientation="Vertical">
+                                <Grid BackgroundColor="LightGray"
+                          HeightRequest="150">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <avatar:SfAvatarView GroupSource="{Binding SelectedGroup.PeopleCollection}"
+                                                     Margin="5"
+                                                     VerticalOptions="Center"
+                                                     HorizontalOptions="Center"                                                   
+                                                     AvatarShape="Circle"
+                                                     AvatarSize="Small"
+                                                     ContentType="Group"
+                                                     BackgroundColorMemberPath="Backgroundcolor"
+                                                     ImageSourceMemberPath="Image"
+                                                     InitialsMemberPath="Name"/>
+                                    <Grid Grid.Column="1" VerticalOptions="Center">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Label Text="{Binding SelectedGroup.GroupName}"
+                                           VerticalOptions="Center"
+                                           VerticalTextAlignment="Center"
+                                           FontSize="14"
+                                           TextColor="Black"/>
+                                        <Label Grid.Row="1" 
+                                           Text="{Binding SelectedGroup.TotalParticipants}"
+                                           VerticalOptions="Center"
+                                           VerticalTextAlignment="Center"
+                                           FontSize="11"
+                                           TextColor="Gray"/>
+                                    </Grid>
+                                </Grid>
+                                <ListView Margin="20,0" RowHeight="60"
+                                      SelectedItem="{Binding SelectedPerson, Mode=TwoWay}"
+                                          ItemsSource="{Binding SelectedGroup.PeopleCollection}">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <ViewCell>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <avatar:SfAvatarView     Margin="5"
+                                                     VerticalOptions="Center"
+                                                     ImageSource="{Binding Image}"
+                                                     BackgroundColor="{Binding Backgroundcolor}"
+                                                     AvatarName="{Binding Name}"
+                                                     HorizontalOptions="Center"
+                                                     ContentType="Default"
+                                                     AvatarShape="Circle"
+                                                     AvatarSize="Small"/>
+                                                    <Grid Grid.Column="1" VerticalOptions="Center">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="Auto"/>
+                                                            <RowDefinition Height="Auto"/>
+                                                        </Grid.RowDefinitions>
+                                                        <Label Text="{Binding Name}"
+                                           VerticalOptions="Center"
+                                           VerticalTextAlignment="Center"
+                                           FontSize="14"
+                                           TextColor="Black"/>
+                                                    </Grid>
+                                                </Grid>
+                                            </ViewCell>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </StackLayout>
+                            <Grid x:Name="PersonView" 
+                                  IsVisible="False"
+                              BackgroundColor="White">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="100"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <StackLayout Margin="20"
+                                         Orientation="Vertical">
+                                    <Label HorizontalTextAlignment="Center"
+                                       FontSize="18"
+                                       Text="{Binding SelectedPerson.Name}"/>
+                                    <Label HorizontalTextAlignment="Center"
+                                       FontSize="12"
+                                       Text="{Binding SelectedGroup.GroupName}"/>
+                                </StackLayout>
+                                <Grid Grid.Row="1">
+                                    <avatar:SfAvatarView Margin="5"
+                                                         VerticalOptions="Center"
+                                                         BackgroundColor="{Binding SelectedPerson.Backgroundcolor}"
+                                                         ImageSource="{Binding SelectedPerson.Image}"
+                                                         AvatarName="{Binding SelectedPerson.Name}"
+                                                         HorizontalOptions="Center"
+                                                         FontSize="100"
+                                                         ContentType="Default"
+                                                         WidthRequest="200"
+                                                         HeightRequest="200"
+                                                         CornerRadius="100"/>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        <Button x:Name="ExtButton" Text="Close"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </Grid>
+    </local:SampleView.Content>
+</local:SampleView>

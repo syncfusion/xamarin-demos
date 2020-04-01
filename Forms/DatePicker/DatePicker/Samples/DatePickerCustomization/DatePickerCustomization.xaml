@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView  xmlns:datePicker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms"
+                   xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                   xmlns:localSample="clr-namespace:SampleBrowser.SfDatePicker"
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+                   x:Class="SampleBrowser.SfDatePicker.DatePickerCustomization">
+    <local:SampleView.Content>
+        <ScrollView>
+            <Grid Padding="20" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+                <Grid.BindingContext>
+                    <localSample:DatePickerTaskObjectViewModel x:Name="viewModel"/>
+                </Grid.BindingContext>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <datePicker:SfDatePicker      x:Name="CustomizePicker"
+                                                  ShowHeader="{Binding ShowHeader}"
+                                                  Format="{Binding Source={Reference picker},Path=SelectedItem,Mode=TwoWay}"
+                                                  ShowColumnHeader="{Binding ShowColumnHeader}"
+                                                  EnableLooping="True"
+                                                  SelectedItemFontSize="20"
+                                                  UnselectedItemFontSize="20"
+                                                  HeaderText="{Binding HeaderText,Mode=TwoWay}"
+                                                  PickerWidth="300" 
+                                                  PickerMode="Default"/>
+                </Grid>
+                <Grid Grid.Row="1"  Padding="0,20,0,0">
+                    <StackLayout VerticalOptions="CenterAndExpand">
+                        <inputLayout:SfTextInputLayout Hint="Change header text" ContainerType="Outlined">
+                            <Entry Text="{Binding HeaderText,Mode=TwoWay}" HorizontalTextAlignment="Start" />
+                        </inputLayout:SfTextInputLayout>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <StackLayout VerticalOptions="CenterAndExpand">
+                        <inputLayout:SfTextInputLayout Hint="Change date format" ContainerType="Outlined">
+                            <Picker x:Name="picker" SelectedItem="{Binding SelectedDateFormat}" ItemsSource="{Binding DateFormatcollections}" />
+                        </inputLayout:SfTextInputLayout>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="3">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                        <Label Text="Show header" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <Switch x:Name="header_switch" 
+                                IsToggled="{Binding ShowHeader,Mode=TwoWay}" 
+                                HorizontalOptions="EndAndExpand" 
+                                VerticalOptions="EndAndExpand"/>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="4">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                        <Label Text="Show column header" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <Switch x:Name="Column_header_switch" 
+                                IsToggled="{Binding ShowColumnHeader,Mode=TwoWay}" 
+                                HorizontalOptions="EndAndExpand" 
+                                VerticalOptions="EndAndExpand"/>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="5">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                        <Label Text="Enable looping" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <Switch IsToggled="{Binding Source={x:Reference CustomizePicker}, Path=EnableLooping, Mode=TwoWay}" 
+                                HorizontalOptions="EndAndExpand" 
+                                VerticalOptions="EndAndExpand"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </local:SampleView.Content>
+</local:SampleView>

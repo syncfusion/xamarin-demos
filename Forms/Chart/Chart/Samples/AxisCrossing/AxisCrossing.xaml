@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.AxisCrossing" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+    <local:SampleView.Content>
+        <chart:SfChart HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" x:Name="chart">
+            <chart:SfChart.Margin>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="0,0,15,0" />
+            </chart:SfChart.Margin>
+            <chart:SfChart.BindingContext>
+                <sampleBrowser:AxisCrossingViewModel />
+            </chart:SfChart.BindingContext>
+            <chart:SfChart.Title>
+                <chart:ChartTitle Text="Profit/loss percentage comparison " />
+            </chart:SfChart.Title>
+            <chart:SfChart.PrimaryAxis>
+                <chart:CategoryAxis PlotOffset="7" CrossesAt="0" Interval="2" EdgeLabelsDrawingMode="Shift" Name="XAxis" ShowMajorGridLines="false" AxisLineOffset="7">                   
+                </chart:CategoryAxis>
+            </chart:SfChart.PrimaryAxis>
+            <chart:SfChart.SecondaryAxis>
+                <chart:NumericalAxis  Maximum="-100" Minimum="100"  EdgeLabelsDrawingMode="Shift" CrossesAt="8" Name="YAxis" ShowMajorGridLines="false">
+                    <chart:NumericalAxis.LabelStyle>
+                        <chart:ChartAxisLabelStyle x:Name="secondaryAxisLabelStyle"/>
+                    </chart:NumericalAxis.LabelStyle>
+                </chart:NumericalAxis>
+            </chart:SfChart.SecondaryAxis>
+            <chart:SfChart.ChartBehaviors>
+                <chart:ChartZoomPanBehavior />
+            </chart:SfChart.ChartBehaviors>
+            <chart:SfChart.Series>
+                <chart:ScatterSeries x:Name="series1" ScatterWidth="15" ScatterHeight="15" ItemsSource="{Binding Data}" XBindingPath="XValue" YBindingPath="YValue" EnableTooltip="true">
+                    <chart:ScatterSeries.ColorModel>
+                        <chart:ChartColorModel Palette="Natural" />
+                    </chart:ScatterSeries.ColorModel>
+                </chart:ScatterSeries>
+            </chart:SfChart.Series>
+        </chart:SfChart>
+    </local:SampleView.Content>
+</local:SampleView>

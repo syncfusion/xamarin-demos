@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sunburst="clr-namespace:Syncfusion.SfSunburstChart.XForms;assembly=Syncfusion.SfSunburstChart.XForms"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:sample="clr-namespace:SampleBrowser.SfSunburstChart"
+             x:Class="SampleBrowser.SfSunburstChart.Selection">
+
+    <local:SampleView.BindingContext>
+        <sample:SunburstViewModel/>
+    </local:SampleView.BindingContext>
+
+    <local:SampleView.Content BackgroundColor="White">
+        
+      <Grid BackgroundColor="White" Padding="0,15,0,15">
+        
+         <Grid.RowDefinitions>
+                <RowDefinition />
+               <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+        <sunburst:SfSunburstChart x:Name="sunburstChart" ItemsSource="{Binding Population_Data}" Grid.Row="0"
+                                  ValueMemberPath="Population" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <sunburst:SfSunburstChart.Title>
+                <sunburst:SunburstChartTitle x:Name="title" Text="Population Data"></sunburst:SunburstChartTitle>
+            </sunburst:SfSunburstChart.Title>
+
+            <sunburst:SfSunburstChart.Legend>
+                <sunburst:SunburstChartLegend x:Name="legend" IsVisible="True" LegendPosition="Top">
+                </sunburst:SunburstChartLegend>
+            </sunburst:SfSunburstChart.Legend>
+
+            <sunburst:SfSunburstChart.DataLabel>
+                <sunburst:SunburstChartDataLabel x:Name="dataLabel" ShowLabel="True"></sunburst:SunburstChartDataLabel>
+            </sunburst:SfSunburstChart.DataLabel>
+
+            <sunburst:SfSunburstChart.SelectionSettings>
+                <sunburst:SelectionSettings   EnableSelection="True"></sunburst:SelectionSettings>
+            </sunburst:SfSunburstChart.SelectionSettings>
+
+            <sunburst:SfSunburstChart.Levels>
+                <sunburst:SunburstHierarchicalLevel GroupMemberPath="Continent"/>
+                <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country"/>
+                <sunburst:SunburstHierarchicalLevel GroupMemberPath="State"/>              
+            </sunburst:SfSunburstChart.Levels>
+
+        </sunburst:SfSunburstChart>
+        
+        <StackLayout  x:Name="stackLayout" IsVisible="false" Orientation="Vertical" Spacing="0" Opacity="0.5" BackgroundColor="Black"  Grid.Row="1" Padding="10" HorizontalOptions="Center" VerticalOptions="End" >
+                <Label  x:Name="countryLabel"  FontSize="12"  TextColor="White"/>
+                <Label x:Name="populationLabel"  FontSize="12"  TextColor="White"/>
+        </StackLayout>
+        
+     </Grid>      
+
+    </local:SampleView.Content>
+
+    <local:SampleView.PropertyView>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>               
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center"
+                   TextColor="Black" FontAttributes="Bold"
+                  Text="Selection mode"></Label>
+            <Picker SelectedIndexChanged="selectionMode_SelectedIndexChanged" 
+                    x:Name="selectionMode" Grid.Row="0" Grid.Column="1">
+                <Picker.Items>
+                    <x:String>Opacity</x:String>
+                    <x:String>Color</x:String>
+                    <x:String>Stroke</x:String>                  
+                </Picker.Items>
+            </Picker>
+
+            <Label Grid.Row="1" Grid.Column="0" 
+                   VerticalTextAlignment="Center" TextColor="Black" FontAttributes="Bold"
+                   Text="Selection type"></Label>
+            <Picker SelectedIndexChanged="selectionType_SelectedIndexChanged" 
+                    x:Name="selectionType" Grid.Row="1" Grid.Column="1">
+                <Picker.Items>
+                    <x:String>Child</x:String>
+                    <x:String>Group</x:String>
+                    <x:String>Parent</x:String>
+                    <x:String>Single</x:String>
+                </Picker.Items>
+            </Picker>            
+            
+        </Grid>
+        
+    </local:SampleView.PropertyView>
+</local:SampleView>

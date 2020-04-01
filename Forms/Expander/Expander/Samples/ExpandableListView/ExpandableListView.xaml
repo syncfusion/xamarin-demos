@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SampleBrowser.SfExpander"
+             xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             x:Class="SampleBrowser.SfExpander.ExpandableListView"
+             xmlns:sflistview="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:expander="clr-namespace:Syncfusion.XForms.Expander;assembly=Syncfusion.Expander.XForms">
+
+    <sample:SampleView.BindingContext>
+        <local:ViewModel />
+    </sample:SampleView.BindingContext>
+
+    <sample:SampleView.Content>
+        <Grid x:Name="mainGrid" BackgroundColor="#F0F0F0" Padding="4">
+            <sflistview:SfListView x:Name="listView" FocusBorderThickness="0" IsScrollBarVisible="False"
+                                   ItemSpacing="0" SelectionMode="None" AutoFitMode="DynamicHeight" ItemsSource="{Binding ContactsInfo}">
+                <sflistview:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Frame x:Name="frame" CornerRadius="2" Padding="{OnPlatform Android=1, iOS=1,  UWP=0}" Margin="{OnPlatform Android=1, iOS=1,  UWP=0}" OutlineColor="White" HasShadow="{OnPlatform Android=true, iOS=false, UWP=true}">
+                                    <Grid Padding="{OnPlatform Android=2, iOS=2,  UWP=0}" Margin="{OnPlatform Android=1, iOS=1,  UWP=0}" BackgroundColor="White" >
+
+                                            <expander:SfExpander HeaderIconPosition="None"  IsExpanded="{Binding IsExpanded,Mode=TwoWay}">
+                                                <expander:SfExpander.Header>
+                                                <Grid x:Name="grid" VerticalOptions="FillAndExpand" BackgroundColor="White" HorizontalOptions="FillAndExpand" RowSpacing="0">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="60" />
+                                                    </Grid.RowDefinitions>
+                                                    <Grid RowSpacing="0">
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="60" />
+                                                            <ColumnDefinition Width="*" />
+                                                            <ColumnDefinition Width="60" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <Grid Grid.Row="0" Grid.Column="0">
+                                                            <Image HeightRequest="45" Margin="5,0,0,0" WidthRequest="45" Source="{Binding ContactImage}" VerticalOptions="Center" HorizontalOptions="Center" />
+                                                        </Grid>
+                                                        <Grid Grid.Row="0" Grid.Column="1" RowSpacing="1" Padding="5" VerticalOptions="Center">
+                                                            <Grid.RowDefinitions>
+                                                                <RowDefinition Height="*" />
+                                                                <RowDefinition Height="*" />
+                                                            </Grid.RowDefinitions>
+                                                            <Label Grid.Row="0" LineBreakMode="NoWrap" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="#474747" Text="{Binding ContactName}" 
+                                                               FontSize="{OnPlatform Android={OnIdiom Phone=16, Tablet=18}, iOS={OnIdiom Phone=16, Tablet=18}, UWP={OnIdiom Phone=18, Tablet=20, Default=20}}"/>
+                                                            <Label Grid.Row="1" TextColor="#474747" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" LineBreakMode="NoWrap" Text="{Binding CallTime}"
+                                                               FontSize="{OnPlatform Android={OnIdiom Phone=12, Tablet=14}, iOS={OnIdiom Phone=12, Tablet=14},  UWP={OnIdiom Phone=12, Tablet=12, Default=12}}"/>
+                                                        </Grid>
+                                                        <Grid Grid.Row="0" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center">
+                                                            <Image HeightRequest="20" WidthRequest="20" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand">
+                                                                <Image.Source>
+                                                                    <FontImageSource Glyph="&#xe766;" Color="#757575" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"/>
+                                                                </Image.Source>
+                                                            </Image>
+                                                        </Grid>
+                                                    </Grid>
+                                                </Grid>
+                                            </expander:SfExpander.Header>
+                                                <expander:SfExpander.Content>
+                                                    <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="1" BackgroundColor="White"
+                                                  HorizontalOptions="FillAndExpand" Padding="{OnPlatform Android=5, iOS=5,  UWP=0}" VerticalOptions="FillAndExpand">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="1" />
+                                                            <RowDefinition Height="40" />
+                                                            <RowDefinition Height="40" />
+                                                            <RowDefinition Height="40" />
+                                                            <RowDefinition Height="40" />
+                                                            <RowDefinition Height="40" />
+                                                        </Grid.RowDefinitions>
+                                                        <Grid.ColumnDefinitions >
+                                                            <ColumnDefinition Width="50" />
+                                                            <ColumnDefinition Width="*" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <BoxView Grid.Row="0" Grid.Column="0" BackgroundColor="LightGray" />
+                                                    <Image Grid.Row="1" Grid.Column="0" WidthRequest="20" HeightRequest="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                                        <Image.Source>
+                                                            <FontImageSource Glyph="&#xe761;" Color="#757575" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"/>
+                                                        </Image.Source>
+                                                    </Image>
+                                                    <Image Grid.Row="2" Grid.Column="0" WidthRequest="20" HeightRequest="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                                        <Image.Source>
+                                                            <FontImageSource Glyph="&#xe72a;" Color="#757575" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"/>
+                                                        </Image.Source>
+                                                    </Image>
+                                                    <Image Grid.Row="3" Grid.Column="0" WidthRequest="20" HeightRequest="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                                        <Image.Source>
+                                                            <FontImageSource Glyph="&#xe746;" Color="#757575" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"/>
+                                                        </Image.Source>
+                                                    </Image>
+                                                    <Image Grid.Row="4" Grid.Column="0" WidthRequest="20" HeightRequest="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                                        <Image.Source>
+                                                            <FontImageSource Glyph="&#xe722;" Color="#757575" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"/>
+                                                        </Image.Source>
+                                                    </Image>
+                                                    <Image Grid.Row="5" Grid.Column="0" WidthRequest="20" HeightRequest="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                                        <Image.Source>
+                                                            <FontImageSource Glyph="&#xe767;" Color="#757575" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"/>
+                                                        </Image.Source>
+                                                    </Image>
+                                                        <BoxView Grid.Row="0" Grid.Column="1" BackgroundColor="LightGray" />
+                                                        <Label Grid.Row="1" Grid.Column="1" Text="Create new contact" TextColor="#000000" FontSize="14" HorizontalOptions="Start"
+                                                       VerticalOptions="Center" Opacity="87"/>
+                                                        <Label Grid.Row="2" Grid.Column="1" Text="Add to a contact" TextColor="#000000" FontSize="14" HorizontalOptions="Start"
+                                                       VerticalOptions="Center" Opacity="87"/>
+                                                        <Label Grid.Row="3" Grid.Column="1" Text="Send a message" TextColor="#000000" FontSize="14" HorizontalOptions="Start"
+                                                       VerticalOptions="Center" Opacity="87"/>
+                                                        <Label Grid.Row="4" Grid.Column="1" Text="Block/report Spam" TextColor="#000000" FontSize="14" HorizontalOptions="Start"
+                                                       VerticalOptions="Center" Opacity="87"/>
+                                                        <Label Grid.Row="5" Grid.Column="1" Text="Call details" TextColor="#000000" FontSize="14" HorizontalOptions="Start"
+                                                       VerticalOptions="Center" Opacity="87"/>
+                                                    </Grid>
+                                                </expander:SfExpander.Content>
+                                            </expander:SfExpander>
+
+                                        </Grid>
+                                    </Frame>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </sflistview:SfListView.ItemTemplate>
+            </sflistview:SfListView>
+        </Grid>
+    </sample:SampleView.Content>
+</sample:SampleView>

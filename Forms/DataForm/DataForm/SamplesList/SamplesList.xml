@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Samples>
+  <Sample Title = "Getting Started" Name = "GettingStarted"
+            Description = "This sample showcases simple DataForm by loading a set of fields." />
+  <Sample Title = "Contact Form" Name = "ContactForm"
+          Description = "This sample showcases read only and layout customization capabilities of DataForm." />
+  <Sample Title = "Dynamic Forms" Name = "DynamicFormPage" IsUpdated="true"
+        Description = "This sample showcases read only and layout customization capabilities of DataForm." />
+</Samples>
+  

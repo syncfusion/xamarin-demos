@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+     xmlns:listview="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+    xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+    x:Class="SampleBrowser.SfAutoComplete.Performance">
+      <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" x:Name="AutocompleteRow"/>
+                <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+            <Grid BackgroundColor="Black">
+                <Label VerticalOptions="Center"
+               Margin="10,0,0,0"
+               HorizontalOptions="Start"
+               Text="High Performance"
+                   FontAttributes="Bold"
+               TextColor="White"/>
+            </Grid>
+
+            <Grid Grid.Row="1" Padding="10">
+
+                <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+              <Label 
+                     Margin="3,0,0,0"
+                     VerticalOptions="Center"
+                     TextColor="Black"
+                     FontSize="15"
+                       x:Name="loadedItem"/>
+              <Switch Grid.Column="1" 
+                      IsToggled="{Binding IsToggled}"/>
+            </Grid>
+
+            <autocomplete:SfAutoComplete Grid.Row="2"
+                                     TextSize="18"
+                                     Margin="10,0"
+                                     SuggestionBoxPlacement="None"
+                                     SuggestionMode="Contains"
+                                     VerticalOptions="Center"
+                                     HeightRequest="50"
+                                     IgnoreDiacritic="true"
+                                     ShowSuggestionsOnFocus="false"
+                                     MaximumSuggestion="10"
+                                     MaximumDropDownHeight="200"
+                                     FilteredItems="{Binding FilteredCollection, Mode=TwoWay}"
+                                     DataSource="{Binding AllWords}"
+                                     ValueChanged="auto_ValueChanged"
+                                     Watermark="Type here Ex: Select"
+                                     x:Name="autoComplete">
+                <autocomplete:SfAutoComplete.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding}"/>
+                    </DataTemplate>
+                </autocomplete:SfAutoComplete.ItemTemplate>
+            </autocomplete:SfAutoComplete>
+
+            <Grid Grid.Row="3" Margin="10,0">
+                <StackLayout Orientation="Horizontal" 
+                           VerticalOptions="CenterAndExpand">
+                  <Label Text="About "
+                        Margin="3,0,0,0"
+                         FontAttributes="Bold"
+                             />
+                    <Label Text="0"
+                           Margin="0"
+                           TextColor="Black"
+                            FontAttributes="Bold"
+                             x:Name="SearchedItem"/>
+                    <Label Text="results from "
+                           Margin="0"
+                            FontAttributes="Bold"
+                             />
+                  <Label Text="0"
+                         Margin="0"
+                         TextColor="Black"
+                          FontAttributes="Bold"
+                         x:Name="SearchedLoadedItem"/>
+                    <Label Text="(0 Sec)"
+                           Margin="0"
+                        TextColor="Black"
+                            FontAttributes="Bold"
+                             x:Name="SearchTime"/>
+                </StackLayout>
+
+            </Grid>
+          <Button 
+                  Grid.Row="4"
+                  HeightRequest="50"
+                  x:Name="loadMoreButton"
+                  Text="Load More"
+                   Clicked="LoadMore_Clicked"/>
+            <ListView Grid.Row="5"
+                  x:Name="listView"
+                  ItemsSource="{Binding FilteredCollection}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding}"
+                                   VerticalOptions="Center"
+                               Margin="10,0,0,0"
+                               FontSize="15"
+                               FontAttributes="Bold"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </Grid>
+
+        <Button VerticalOptions="Fill"
+                Text="Click here to load 100K items."
+                FontSize="18"
+                BackgroundColor="White"
+                FontAttributes="Bold"
+                Clicked="Load_Clicked"/>
+      
+      
+    </Grid>
+</local:SampleView>

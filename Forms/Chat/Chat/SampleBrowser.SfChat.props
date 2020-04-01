@@ -1,0 +1,53 @@
+  <Project >
+    <ItemGroup>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\GettingStarted.xaml.cs">
+        <Link>Samples\Chat\Samples\GettingStarted\GettingStarted.xaml.cs</Link>
+       <DependentUpon>GettingStarted.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\GettingStartedViewModel.cs">
+        <Link>Samples\Chat\Samples\ViewModel\GettingStartedViewModel.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\FlightBooking\FlightBooking.xaml.cs">
+        <Link>Samples\Chat\Samples\FlightBooking\FlightBooking.xaml.cs</Link>
+        <DependentUpon>FlightBooking.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\FlightBooking\FlightBookingBehavior.cs">
+        <Link>Samples\Chat\Samples\FlightBooking\FlightBookingBehavior.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\FlightBooking\BotService.cs">
+        <Link>Samples\Chat\Samples\FlightBooking\BotService.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\FlightBookingViewModel.cs">
+        <Link>Samples\Chat\Samples\ViewModel\FlightBookingViewModel.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\FlightBookingModel.cs">
+        <Link>Samples\Chat\Samples\Model\FlightBookingModel.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml.cs">
+        <Link>Samples\Chat\Samples\Themes\Themes.xaml.cs</Link>
+        <DependentUpon>Themes.xaml</DependentUpon>
+      </Compile>
+    </ItemGroup>
+<ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\GettingStarted.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+        <Link>Samples\Chat\Samples\GettingStarted\GettingStarted.xaml.cs</Link>
+    </EmbeddedResource>
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\FlightBooking\FlightBooking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+        <Link>Samples\Chat\Samples\FlightBooking\FlightBooking.xaml.cs</Link>
+    </EmbeddedResource>
+</ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml" >
+	   <Link>Samples\Chat\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml">
+      <Link>Samples\Chat\Samples\Themes\Themes.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource> 
+  </ItemGroup>
+</Project>

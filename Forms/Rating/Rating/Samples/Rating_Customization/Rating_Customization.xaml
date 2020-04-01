@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms"
+                  xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" 
+                  xmlns:custom="clr-namespace:SampleBrowser.SfRating" 
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  x:Class="SampleBrowser.SfRating.Rating_Customization">
+	<local:SampleView.Content >
+     <ScrollView Margin="10" >
+            <Grid x:Name="sampleLayout" >
+                <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" x:Name="moviePic"/>
+            <RowDefinition Height="Auto"/>
+         </Grid.RowDefinitions>
+        <Label WidthRequest="300" x:Name="title"  FontSize="20" Text="Movie Rating" HorizontalOptions="Start" />
+        <Grid x:Name="mainGrid" Grid.Row="1" >
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="Auto" x:Name="column1"/>
+                <ColumnDefinition Width="2*" x:Name="column2" />
+            </Grid.ColumnDefinitions>
+            <Image x:Name="movieImage" Aspect="Fill" WidthRequest="150" HeightRequest="150" Source="movie.png" />
+            <StackLayout x:Name="descStack" Orientation="Vertical" Grid.Column="1" Padding="0,0,0,10">
+                <Label   FontSize="18" Text="The Walk ( 2015 )" HorizontalOptions="Start" />
+                <StackLayout Orientation="Vertical">
+                    <Label x:Name="time"   FontSize="10" Text="PG | 2h 20min" HorizontalOptions="Start" />
+                  </StackLayout>
+                    <Label   x:Name="description" FontSize="14"  HorizontalOptions="Start" >
+                        In 1973, French street performer Philippe Petit is trying to make a living in Paris with juggling acts and wire walking, much to the chagrin of his father. During one performance, he eats a hard candy which was given to him by an audience member and injures his tooth.
+                    </Label>
+
+            </StackLayout>
+        </Grid>
+                <Grid x:Name="bottomStack" RowSpacing="10"  Grid.Row="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label    FontSize="17" Text="Feedback" HorizontalOptions="Start" />
+                    <rating:SfRating Grid.Row="1"  ItemSpacing="10"   EnableCustomView="true" x:Name="rating" />
+                    <Button Grid.Row="2" TextColor="Black" BorderColor="#4d4d4d"  x:Name="mButton" WidthRequest="120" Clicked="Handle_Clicked" BorderWidth="0.75" FontSize="15" Text="Submit" HorizontalOptions="Center" VerticalOptions="Center" />
+
+                </Grid>
+            </Grid>
+   </ScrollView>     	
+  </local:SampleView.Content>
+</local:SampleView>

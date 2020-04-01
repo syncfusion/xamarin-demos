@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:listview="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms" xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:core="clr-namespace:SampleBrowser.SfAutoComplete" x:Class="SampleBrowser.SfAutoComplete.CustomSearchPage">
+    <local:SampleView.Resources>
+        <ResourceDictionary>
+            <core:NullToBoolConveter x:Key="nulltovisibility" />
+            <core:TextToValueConveter x:Key="texttovalue" />
+            <core:TextToProperConveter x:Key="texttopropertext" />
+        </ResourceDictionary>
+    </local:SampleView.Resources>
+    <local:SampleView.Content>
+	 <ScrollView>
+        <Grid BackgroundColor="#FFECEBEA" Padding="10">
+             <Grid.RowDefinitions>
+                <RowDefinition Height="75" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" HeightRequest="75" BackgroundColor="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label  Margin="10,0,0,-10" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="22">
+                    <Label.Text>
+                          <OnPlatform x:TypeArguments="x:String" iOS="A" Android="A" WinPhone="&#xe11a;"  />
+                        </Label.Text>
+                        <Label.FontFamily>
+                          <OnPlatform x:TypeArguments="x:String" iOS="icon" Android="icon.ttf#icon" WinPhone="Segoe MDL2 Assets"  />
+                        </Label.FontFamily>
+                </Label>
+                <Grid Grid.Column="1" x:Name="FirstColumn" Padding="0,0,0,10" >
+                <autocomplete:SfAutoComplete  Margin="0,10,0,0" VerticalOptions="Center" TextSize="18" HeightRequest="50" DisplayMemberPath="Name" ShowSuggestionsOnFocus="false" MaximumDropDownHeight="200" SuggestionMode="Custom" SuggestionBoxPlacement="None" ShowBorder="false"
+                    Text="{Binding CustomText}" FilteredItems="{Binding FilteredCollection,Mode=TwoWay}" DropDownItemHeight="10" IsFocused="{Binding ShowFullPage, Mode=TwoWay}" DataSource="{Binding DataCollection}" Watermark="{Binding Watermark}" x:Name="autoComplete">
+                </autocomplete:SfAutoComplete>
+                </Grid>
+            </Grid>
+            <StackLayout Grid.Row="1">
+            <StackLayout>
+                <Label Text="{Binding ResultsCount}" FontAttributes="Bold" Margin="5,10" />
+            </StackLayout>
+            <Grid VerticalOptions="Fill">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <listview:SfListView 
+                ItemsSource="{Binding FilteredCollection}" 
+                SelectedItem="{Binding SelectedItem, Mode=TwoWay}" 
+                HeightRequest="500" WidthRequest="300" 
+                VerticalOptions="Fill" 
+                HorizontalOptions="Center" 
+                x:Name="listView"
+                ItemSize="74">
+                    <listview:SfListView.LayoutManager>
+                        <listview:GridLayout SpanCount="4" />
+                    </listview:SfListView.LayoutManager>
+                    <listview:SfListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid BackgroundColor="{Binding BackColor}" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="70" HeightRequest="70">
+                                <Label VerticalOptions="Center" HorizontalOptions="Center"  TextColor="White" >
+                                   <Label.FontSize>
+                                      <OnPlatform x:TypeArguments="x:Double" iOS="50" Android="50" WinPhone="15"/>
+                                </Label.FontSize>
+                                  <Label.Text>
+                                            <OnPlatform  x:TypeArguments="BindingBase" Android="{Binding Unicode}" iOS="{Binding Unicode}" WinPhone="{Binding Name,Converter={StaticResource texttopropertext}}"/>
+                                        </Label.Text>
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String" iOS="Sample" Android="Sample.ttf#Sample"  />
+                                    </Label.FontFamily>
+                                </Label>
+                            </Grid>
+                        </DataTemplate>
+                    </listview:SfListView.ItemTemplate>
+                </listview:SfListView>
+                <Grid Grid.Row="1" IsVisible="{Binding SelectedItem, Converter={StaticResource nulltovisibility}}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="1" Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid BackgroundColor="{Binding SelectedItem.BackColor}" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="180" HeightRequest="180">
+                            <Label  VerticalOptions="Center" HorizontalOptions="Center"  TextColor="White">
+                                <Label.FontSize>
+                                      <OnPlatform x:TypeArguments="x:Double" iOS="75" Android="75" WinPhone="25"/>
+                                </Label.FontSize>
+                               <Label.Text>
+                                       <OnPlatform  x:TypeArguments="BindingBase" Android="{Binding SelectedItem.Unicode}" iOS="{Binding SelectedItem.Unicode}" WinPhone="{Binding SelectedItem.Name,Converter={StaticResource texttopropertext}}"/>
+                               </Label.Text>
+                                <Label.FontFamily>
+                                       <OnPlatform x:TypeArguments="x:String" iOS="Sample" Android="Sample.ttf#Sample" />
+                                </Label.FontFamily>
+                            </Label>
+                        </Grid>
+                        <StackLayout Grid.Column="1" Orientation="Vertical">
+                            <Label Text="Name:" FontAttributes="Bold" />
+                            <Label Text="{Binding SelectedItem.Name, Converter={StaticResource texttopropertext}}" />
+                            <Label Text="Refered as:" FontAttributes="Bold" />
+                            <Label Text="{Binding SelectedItem.Tag}" />
+                            <Label Text="Icon Type:" FontAttributes="Bold" />
+                            <Label Text="{Binding SelectedItem.Name, Converter={StaticResource texttovalue}}" />
+                        </StackLayout>
+                    </Grid>
+                </Grid>
+            </Grid>
+          </StackLayout>
+        </Grid>
+	  </ScrollView>
+    </local:SampleView.Content>
+</local:SampleView>

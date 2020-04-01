@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Samples>
+  <Sample Title="MaskedEdit" Name="MaskedEdit"  SearchTags="SfMaskedEdit, MaskedEdit, Mask" Description = "The MaskedEdit control allows the user to restrict the input to certain types of characters/text/numbers using a mask pattern." />
+</Samples>

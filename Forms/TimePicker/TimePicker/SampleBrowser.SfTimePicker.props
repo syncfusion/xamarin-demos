@@ -1,0 +1,48 @@
+﻿<Project>
+  
+  <ItemGroup>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\TimePickerGettingStarted\TimePickerGettingStarted.xaml.cs">
+            <Link>Samples\TimePicker\TimePickerGettingStarted\TimePickerGettingStarted.xaml.cs</Link>
+            <DependentUpon>TimePickerGettingStarted.xaml</DependentUpon>
+        </Compile>
+
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\TimePickerCustomization\TimePickerCustomization.xaml.cs">
+            <Link>Samples\TimePicker\TimePickerCustomization\TimePickerCustomization.xaml.cs</Link>
+            <DependentUpon>TimePickerCustomization.xaml</DependentUpon>
+        </Compile>
+
+
+        <Compile Include="$(MSBuildThisFileDirectory)\ViewModel\TimePickerAlarmObject.cs">  
+            <Link>Samples\TimePicker\ViewModel\TimePickerAlarmObject.cs</Link>
+        </Compile>
+
+        <Compile Include="$(MSBuildThisFileDirectory)\ViewModel\TimePickerAlarmObjectViewModel.cs">  
+            <Link>Samples\TimePicker\ViewModel\TimePickerAlarmObjectViewModel.cs</Link>
+        </Compile>
+
+  </ItemGroup>
+
+  <ItemGroup>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml" >
+        <Link>Samples\TimePicker\SamplesList\SamplesList.xml</Link>
+        </EmbeddedResource>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\TimePickerGettingStarted\TimePickerGettingStarted.xaml">
+      <Link>Samples\TimePicker\TimePickerGettingStarted\TimePickerGettingStarted.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+
+<ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\TimePickerCustomization\TimePickerCustomization.xaml">
+      <Link>Samples\TimePicker\TimePickerCustomization\TimePickerCustomization.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  
+  </Project>

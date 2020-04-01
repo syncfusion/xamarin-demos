@@ -1,0 +1,182 @@
+﻿<Project>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+      <Link>Samples\Presentation\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\HelloWorld.pptx">
+      <Link>Samples\Presentation\Samples\Templates\HelloWorld.pptx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\Images.pptx">
+      <Link>Samples\Presentation\Samples\Templates\Images.pptx</Link>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\Transition.pptx">
+      <Link>Samples\Presentation\Samples\Templates\Transition.pptx</Link>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\HeaderFooter.pptx">
+      <Link>Samples\Presentation\Samples\Templates\HeaderFooter.pptx</Link>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\Template.pptx">
+      <Link>Samples\Presentation\Samples\Templates\Template.pptx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\NewCharts.pptx">
+      <Link>Samples\Presentation\Samples\Templates\NewCharts.pptx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\Slides.pptx">
+      <Link>Samples\Presentation\Samples\Templates\Slides.pptx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\ShapeWithAnimation.pptx">
+      <Link>Samples\Presentation\Samples\Templates\ShapeWithAnimation.pptx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\Animation.pptx">
+      <Link>Samples\Presentation\Samples\Templates\Animation.pptx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\Products.xml">
+      <Link>Samples\Presentation\Samples\Templates\Products.xml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\SlideTableData.xml">
+      <Link>Samples\Presentation\Samples\Templates\SlideTableData.xml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\TableData.xml">
+      <Link>Samples\Presentation\Samples\Templates\TableData.xml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Templates\tablet.jpg">
+      <Link>Samples\Presentation\Samples\Templates\tablet.jpg</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PPTXToImage\PPTXToImage.xaml.cs">
+      <Link>Samples\Presentation\Samples\PPTXToImage\PPTXToImage.xaml.cs</Link>
+      <DependentUpon>PPTXToImage.xaml</DependentUpon>
+    </Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\PPTXToPDF\PPTXToPDF.xaml.cs">
+      <Link>Samples\Presentation\Samples\PPTXToPDF\PPTXToPDF.xaml.cs</Link>
+      <DependentUpon>PPTXToPDF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Charts\Charts.xaml.cs">
+      <Link>Samples\Presentation\Samples\Charts\Charts.xaml.cs</Link>
+      <DependentUpon>Charts.xaml</DependentUpon>
+    </Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\WriteProtection\WriteProtection.xaml.cs">
+      <Link>Samples\Presentation\Samples\WriteProtection\WriteProtection.xaml.cs</Link>
+      <DependentUpon>WriteProtection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Comments\Comments.xaml.cs">
+      <Link>Samples\Presentation\Samples\Comments\Comments.xaml.cs</Link>
+      <DependentUpon>Comments.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\CreateAnimation\CreateAnimation.xaml.cs">
+      <Link>Samples\Presentation\Samples\CreateAnimation\CreateAnimation.xaml.cs</Link>
+      <DependentUpon>CreateAnimation.xaml</DependentUpon>
+    </Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\SlideTransition\SlideTransition.xaml.cs">
+      <Link>Samples\Presentation\Samples\SlideTransition\SlideTransition.xaml.cs</Link>
+      <DependentUpon>SlideTransition.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\GettingStarted.xaml.cs">
+      <Link>Samples\Presentation\Samples\GettingStarted\GettingStarted.xaml.cs</Link>
+      <DependentUpon>GettingStarted.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Images\Images.xaml.cs">
+      <Link>Samples\Presentation\Samples\Images\Images.xaml.cs</Link>
+      <DependentUpon>Images.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ModifyAnimation\ModifyAnimation.xaml.cs">
+      <Link>Samples\Presentation\Samples\ModifyAnimation\ModifyAnimation.xaml.cs</Link>
+      <DependentUpon>ModifyAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Slides\Slides.xaml.cs">
+      <Link>Samples\Presentation\Samples\Slides\Slides.xaml.cs</Link>
+      <DependentUpon>Slides.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Tables\Tables.xaml.cs">
+      <Link>Samples\Presentation\Samples\Tables\Tables.xaml.cs</Link>
+      <DependentUpon>Tables.xaml</DependentUpon>
+    </Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\Connectors\Connectors.xaml.cs">
+      <Link>Samples\Presentation\Samples\Connectors\Connectors.xaml.cs</Link>
+      <DependentUpon>Connectors.xaml</DependentUpon>
+    </Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\HeaderAndFooter\HeaderAndFooter.xaml.cs">
+      <Link>Samples\Presentation\Samples\HeaderAndFooter\HeaderAndFooter.xaml.cs</Link>
+      <DependentUpon>HeaderAndFooter.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\PPTXToImage\PPTXToImage.xaml">
+      <Link>Samples\Presentation\Samples\PPTXToImage\PPTXToImage.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\PPTXToPDF\PPTXToPDF.xaml">
+      <Link>Samples\Presentation\Samples\PPTXToPDF\PPTXToPDF.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\WriteProtection\WriteProtection.xaml">
+      <Link>Samples\Presentation\Samples\WriteProtection\WriteProtection.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Charts\Charts.xaml">
+      <Link>Samples\Presentation\Samples\Charts\Charts.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Comments\Comments.xaml">
+      <Link>Samples\Presentation\Samples\Comments\Comments.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CreateAnimation\CreateAnimation.xaml">
+      <Link>Samples\Presentation\Samples\CreateAnimation\CreateAnimation.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\SlideTransition\SlideTransition.xaml">
+      <Link>Samples\Presentation\Samples\SlideTransition\SlideTransition.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\GettingStarted.xaml">
+      <Link>Samples\Presentation\Samples\GettingStarted\GettingStarted.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Images\Images.xaml">
+      <Link>Samples\Presentation\Samples\Images\Images.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ModifyAnimation\ModifyAnimation.xaml">
+      <Link>Samples\Presentation\Samples\ModifyAnimation\ModifyAnimation.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Slides\Slides.xaml">
+      <Link>Samples\Presentation\Samples\Slides\Slides.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Tables\Tables.xaml">
+      <Link>Samples\Presentation\Samples\Tables\Tables.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Connectors\Connectors.xaml">
+      <Link>Samples\Presentation\Samples\Connectors\Connectors.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>	
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\HeaderAndFooter\HeaderAndFooter.xaml">
+      <Link>Samples\Presentation\Samples\HeaderAndFooter\HeaderAndFooter.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+	<Compile Include="$(MSBuildThisFileDirectory)\ISave.cs">
+	<Link>Samples\Presentation\ISave.cs</Link>
+	</Compile>	
+  </ItemGroup>
+
+</Project>

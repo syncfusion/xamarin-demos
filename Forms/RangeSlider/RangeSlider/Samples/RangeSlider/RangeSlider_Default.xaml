@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView  xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                                      xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:range="clr-namespace:Syncfusion.SfRangeSlider.XForms;assembly=Syncfusion.SfRangeSlider.XForms"
+  x:Class="SampleBrowser.SfRangeSlider.RangeSlider_Default">
+  <local:SampleView.Content>
+   <ScrollView>
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="35" />
+        <RowDefinition Height="20" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="20" />
+        <RowDefinition Height="35" />
+        <RowDefinition Height="20" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <StackLayout x:Name="departureHeaderStack" Spacing="0" Grid.Row="0" Orientation="Horizontal">
+        <Label Text="&#xe704;" FontSize="35" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" TextColor="#061c99"/>
+        <Label x:Name="departureLabel" Text="Departure" XAlign="Start" YAlign="End" FontSize="16" TextColor="#666666"/>
+        <Label x:Name="timeLabel1" Text=" (in Hours)" FontSize="10" HeightRequest="22" YAlign="End" XAlign="Start" TextColor="#666666" />
+      </StackLayout>
+      <StackLayout x:Name="departureTimerStack" Grid.Row="1" Orientation="Horizontal">
+        <Label x:Name="timeLabel5" Text="Time:" YAlign="Center" TextColor="#666666"/>
+        <Label x:Name="timeLabel3" FontSize="12" Text="12 AM - 12 PM" HeightRequest="22" YAlign="Center" XAlign="Start" TextColor="#666666" />
+      </StackLayout>
+      <StackLayout  x:Name="departureRangeStack" Grid.Row="2" Spacing="0" Padding="10">
+        <range:SfRangeSlider  x:Name="sfRangeSlider1" WidthRequest="200" Minimum="0" Maximum="12" RangeStart="0" RangeEnd="12" TickFrequency="2" SnapsTo="StepValues" StepFrequency="1" ToolTipPlacement="TopLeft"
+            Orientation="Horizontal" TickPlacement="BottomRight" ShowValueLabel="True" />
+      </StackLayout>
+      <StackLayout x:Name="arrivalHeaderStack" Grid.Row="4" Spacing="0" Orientation="Horizontal">
+        <Label Text="&#xe76a;" FontSize="35" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" TextColor="#00ba79"/>
+        <Label x:Name="arrivalLabel" Text="Arrival" XAlign="Start" YAlign="End" FontSize="16" TextColor="#666666"/>
+        <Label x:Name="timeLabel2" Text=" (in Hours)" FontSize="10" HeightRequest="22" YAlign="End" XAlign="Start" TextColor="#666666"/>
+      </StackLayout>
+      <StackLayout x:Name="arrivalTimerStack" Grid.Row="5" Orientation="Horizontal">
+        <Label x:Name="timeLabel6" Text="Time:" YAlign="Center" TextColor="#666666"/>
+        <Label x:Name="timeLabel4" FontSize="12" Text="12 AM - 12 PM" HeightRequest="22" YAlign="Center" XAlign="Start" TextColor="#666666" />
+      </StackLayout>
+      <StackLayout x:Name="arrivalRangeStack" Grid.Row="6" Padding="10">
+        <range:SfRangeSlider x:Name="sfRangeSlider2" WidthRequest="200" Minimum="0" Maximum="12" RangeStart="0" RangeEnd="12" TickFrequency="2" Orientation="Horizontal"
+            ToolTipPlacement="TopLeft" TickPlacement="BottomRight" SnapsTo="StepValues" StepFrequency="1" ShowValueLabel="True"/>
+      </StackLayout>
+    </Grid>
+   </ScrollView>
+  </local:SampleView.Content>
+  <local:SampleView.PropertyView>
+        <Grid x:Name="page4" RowSpacing="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackLayout x:Name="pickerLayout1" Grid.Row="0" Grid.ColumnSpan="2" >
+                <Label x:Name="placementLabel" Text="Label Placement" FontSize="16"  YAlign="End" TextColor="#666666" />
+                <Picker x:Name="positionPicker1"  SelectedIndex="1" BackgroundColor="White" TextColor="#333333"/>
+            </StackLayout>
+
+            <StackLayout  x:Name="pickerLayout2" Grid.Row="1" Grid.ColumnSpan="2"  >
+                <Label Text="Tick Placement" FontSize="16"  YAlign="End" TextColor="#666666" />
+                <Picker x:Name="positionPicker2"  SelectedIndex="1" BackgroundColor="White" TextColor="#333333"/>
+            </StackLayout>
+            <Grid Grid.Row="2" Grid.ColumnSpan="2" >
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" x:Name="labelColumn1" />
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label TextColor="#666666" x:Name="emptyLabel" Text="Show Label" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"  FontFamily="Helvetica" FontSize="16" />
+            <Switch x:Name="toggleButton" IsToggled="True" Grid.Column="1" HorizontalOptions="CenterAndExpand" />
+          </Grid>
+          <Grid Grid.Row="3" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" x:Name="snapsToColumn1" />
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label TextColor="#666666" x:Name="snapsToLabel" Text="Snaps to Tick" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"  FontFamily="Helvetica" FontSize="16" />
+                <Switch x:Name="toggleButton2" IsToggled="false" Grid.Column="1" HorizontalOptions="CenterAndExpand"   />
+          </Grid>
+
+        </Grid>
+    </local:SampleView.PropertyView>
+</local:SampleView>

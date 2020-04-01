@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:til="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+                  xmlns:badge="clr-namespace:Syncfusion.XForms.BadgeView;assembly=Syncfusion.SfBadgeView.XForms"
+                  xmlns:avatar="clr-namespace:Syncfusion.XForms.AvatarView;assembly=Syncfusion.Core.XForms"
+                  x:Class="SampleBrowser.SfAvatarView.AvatarGettingStartedSample">
+
+    <local:SampleView.Resources>
+        <ResourceDictionary>
+            <Style x:Key="MainAvatarStyle"  TargetType="avatar:SfAvatarView">
+                <Setter Property="AvatarShape" Value="Circle"/>
+                <Setter Property="AvatarSize" Value="ExtraLarge"/>
+                <Setter Property="InitialsType" Value="DoubleCharacter"/>
+                <Setter Property="VerticalOptions" Value="Start"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="ImageSource" Value="People_Square30.png"/>
+                <Setter Property="AvatarName" Value="{Binding UserName}"/>
+                <Setter Property="BorderColor" Value="#9E9E9E"/>
+                <Setter Property="BackgroundGradient" Value="{Binding GradientBrush}"/>
+                <Setter Property="BackgroundColor" Value="{Binding ProfileColor}"/>
+                <Setter Property="InitialsColor" Value="{Binding TextColor}"/>
+                <Setter Property="AvatarCharacter" Value="{Binding DefinedAvatarItem}"/>
+                <Setter Property="ContentType" Value="{Binding ContentType}"/>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+        </ResourceDictionary>
+    </local:SampleView.Resources>
+    <local:SampleView.Content>
+        <Grid 
+              Margin="10,15"
+            VerticalOptions="FillAndExpand"
+              HorizontalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Text="{Binding TitleText}"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Start"/>
+            <badge:SfBadgeView x:Name="StatusBadge" 
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               HeightRequest="65"
+                               WidthRequest="65">
+                <badge:SfBadgeView.Content>
+                    <avatar:SfAvatarView Style="{StaticResource MainAvatarStyle}"/>
+                </badge:SfBadgeView.Content>
+                <badge:SfBadgeView.BadgeSettings>
+                    <badge:BadgeSetting Offset="-10,-10" 
+                                        BadgeAnimation="Scale"
+                                        BadgePosition="BottomRight" 
+                                        BadgeType="Success"
+                                        BadgeIcon="Available"/>
+                </badge:SfBadgeView.BadgeSettings>
+            </badge:SfBadgeView>
+            <Grid Grid.Row="1"
+                  IsVisible="{Binding EditionIsVisible}">
+                <ScrollView>
+                    <StackLayout Orientation="Vertical">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <til:SfTextInputLayout Hint="First Name">
+                                <Entry Text="{Binding FirstName}"/>
+                            </til:SfTextInputLayout>
+                            <til:SfTextInputLayout Hint="Last Name"
+                                               Grid.Column="1">
+                                <Entry Text="{Binding LastName}"/>
+                            </til:SfTextInputLayout>
+                        </Grid>
+                        <Grid>
+                            <Label HorizontalOptions="Start"
+                                   Text="Show status indicator"/>
+                            <Switch x:Name="StatusIndicatorSwitch" 
+                                    IsToggled="True"
+                                    HorizontalOptions="End"/>
+                        </Grid>
+                        <Grid>
+                            <Label HorizontalOptions="Start"
+                                   Text="Use custom picture"/>
+                            <Switch HorizontalOptions="End"
+                                    IsToggled="{Binding UseCustomAvatar}"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid>
+                                <Label HorizontalOptions="Start"
+                                   Text="Use defined avatar"/>
+                                <Switch HorizontalOptions="End"
+                                    IsToggled="{Binding UseDefinedAvatar}"/>
+                            </Grid>
+                            <FlexLayout Grid.Row="1"
+                                        x:Name="definedcollection"
+                                        Margin="10"
+                                        Wrap="Wrap"
+                                        IsVisible="{Binding UseDefinedAvatar}" 
+                               BindableLayout.ItemsSource="{Binding DefinedAvatarCollection}">
+                                <BindableLayout.ItemTemplate>
+                                    <DataTemplate>
+                                        <ContentView Content="{Binding }"
+                                                     Margin="10"/>
+                                    </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+                            </FlexLayout>
+
+                        </Grid>
+                        <Grid IsEnabled="{Binding UseInitialAvatar}"
+                              Opacity="{Binding ColorPickerOpacity}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid >
+                                <Label HorizontalOptions="Start"
+                                   Text="Use gradients"/>
+                                <Switch HorizontalOptions="End"
+                                    IsToggled="{Binding UseGradients}"/>
+                            </Grid>
+                            
+                            <FlexLayout Grid.Row="2" 
+                                        x:Name="gradientcollection"
+                                        Margin="10" Wrap="Wrap"
+                                  BindableLayout.ItemsSource="{Binding ColorItemCollection}">
+
+                                <BindableLayout.ItemTemplate>
+                                    <DataTemplate>
+                                        <ContentView Content="{Binding}"
+                                                     Margin="10"/>
+                                    </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+                            </FlexLayout>
+
+                        </Grid>
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+            <Button x:Name="cmdButton"
+                    Text="Done"
+                    Grid.Row="2"/>
+        </Grid>
+    </local:SampleView.Content>
+</local:SampleView>

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Samples>
+	<Sample Title = "Getting Started" IsNew="false"  Name = "DatePickerGettingStarted" />
+    <Sample Title = "Customization" IsUpdated="True" IsNew="false"  Name = "DatePickerCustomization" />
+</Samples>  

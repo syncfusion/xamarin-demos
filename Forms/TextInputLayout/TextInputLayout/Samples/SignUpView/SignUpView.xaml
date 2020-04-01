@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<local:SampleView
+    x:Class="SampleBrowser.SfTextInputLayout.SignUpView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:autoComplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms"
+    xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:sftextinputlayout="clr-namespace:SampleBrowser.SfTextInputLayout"
+    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <local:SampleView.Resources>
+        <ResourceDictionary>
+            <sftextinputlayout:ContainerTypeConverter x:Key="ContainerTypeConverter" />
+        </ResourceDictionary>
+    </local:SampleView.Resources>
+
+    <local:SampleView.BindingContext>
+        <sftextinputlayout:SignUpViewModel x:Name="signUpViewModel" />
+    </local:SampleView.BindingContext>
+
+    <local:SampleView.Content>
+        <ScrollView Margin="0,20,0,20" Padding="0,0,0,20" VerticalScrollBarVisibility="Never">
+            <ScrollView.Resources>
+                <sftextinputlayout:FontFamilyConverter x:Key="fontFamilyConverter" />
+                <sftextinputlayout:FontSizeConverter x:Key="fontSizeConverter" />
+            </ScrollView.Resources>
+            <ScrollView.HorizontalOptions>
+                <OnIdiom
+                    x:TypeArguments="LayoutOptions"
+                    Desktop="Center"
+                    Phone="FillAndExpand"
+                    Tablet="FillAndExpand" />
+            </ScrollView.HorizontalOptions>
+
+            <ScrollView.WidthRequest>
+                <OnIdiom x:TypeArguments="x:Double" Desktop="400" />
+            </ScrollView.WidthRequest>
+
+            <StackLayout Margin="0,0,20,20" Spacing="10">
+                <inputLayout:SfTextInputLayout
+                    x:Name="nameLayout"
+                    ContainerType="{Binding SelectedItem, Source={x:Reference picker}, Converter={StaticResource ContainerTypeConverter}}"
+                    ErrorText="Enter your name"
+                    HasError="{Binding IsNameEmpty}"
+                    HelperText="Enter your name"
+                    Hint="Name"
+                    IsHintAlwaysFloated="{Binding EnableHintAlwaysFloated}"
+                    LeadingViewPosition="Outside">
+
+                    <inputLayout:SfTextInputLayout.HintLabelStyle>
+                        <inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize}" />
+                    </inputLayout:SfTextInputLayout.HintLabelStyle>
+                    <inputLayout:SfTextInputLayout.HelperLabelStyle>
+                        <inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize, Converter={StaticResource fontSizeConverter}}" />
+                    </inputLayout:SfTextInputLayout.HelperLabelStyle>
+                    <inputLayout:SfTextInputLayout.ErrorLabelStyle>
+                        <inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize, Converter={StaticResource fontSizeConverter}}" />
+                    </inputLayout:SfTextInputLayout.ErrorLabelStyle>
+
+					<Entry x:Name="name" Text="{Binding Name}" FontSize="{Binding ContainerLabelFontSize}"/>
+
+                    <inputLayout:SfTextInputLayout.LeadingView>
+                        <Label
+                            FontSize="18"
+                            Text="F"
+                            TextColor="{Binding Path=CurrentActiveColor, Source={x:Reference Name=nameLayout}}"
+                            VerticalTextAlignment="Center">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="InputLayoutIcons" />
+                                    <On Platform="Android" Value="InputLayoutIcons.ttf#InputLayoutIcons" />
+                                    <On Platform="UWP" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+                                    <On Platform="WPF" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                    </inputLayout:SfTextInputLayout.LeadingView>
+                </inputLayout:SfTextInputLayout>
+
+				<inputLayout:SfTextInputLayout
+                    x:Name="genderLayout" IsVisible="{OnPlatform Android=True, iOS=True, UWP=False, WPF=False}"
+                    ContainerType="{Binding SelectedItem, Source={x:Reference picker}, Converter={StaticResource ContainerTypeConverter}}"
+                    HasError="{Binding IsGenderEmpty}"
+					ErrorText="Please select your sex"
+                    Hint="Sex"  HelperText="Select your sex"
+                    IsHintAlwaysFloated="{Binding EnableHintAlwaysFloated}"
+                    LeadingViewPosition="Outside">
+
+					<inputLayout:SfTextInputLayout.HintLabelStyle>
+						<inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize}" />
+					</inputLayout:SfTextInputLayout.HintLabelStyle>
+					<inputLayout:SfTextInputLayout.HelperLabelStyle>
+						<inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize, Converter={StaticResource fontSizeConverter}}" />
+					</inputLayout:SfTextInputLayout.HelperLabelStyle>
+					<inputLayout:SfTextInputLayout.ErrorLabelStyle>
+						<inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize, Converter={StaticResource fontSizeConverter}}" />
+					</inputLayout:SfTextInputLayout.ErrorLabelStyle>
+
+					<Picker x:Name="gender" SelectedIndexChanged="GenderPicker_SelectedIndexChanged"
+						FontSize="{Binding ContainerLabelFontSize}">
+						<Picker.ItemsSource>
+							<x:Array Type="{x:Type x:String}">
+								<x:String>Male</x:String>
+								<x:String>Female</x:String>
+								<x:String>Other</x:String>
+							</x:Array>
+						</Picker.ItemsSource>
+					</Picker>
+
+					<inputLayout:SfTextInputLayout.LeadingView>
+						<Label
+                            FontSize="25"
+                            Text="&#xe700;"
+                            TextColor="{Binding Path=CurrentActiveColor, Source={x:Reference Name=genderLayout}}"
+                            VerticalTextAlignment="Center">
+							<Label.FontFamily>
+								<OnPlatform x:TypeArguments="x:String">
+									<On Platform="iOS" Value="Gender" />
+									<On Platform="Android" Value="Gender.ttf#Gender" />
+									<On Platform="UWP" Value="/Assets/Fonts/Gender.ttf#Gender" />
+									<On Platform="WPF" Value="/Assets/Fonts/Gender.ttf#Gender" />
+								</OnPlatform>
+							</Label.FontFamily>
+						</Label>
+					</inputLayout:SfTextInputLayout.LeadingView>
+				</inputLayout:SfTextInputLayout>
+
+                <inputLayout:SfTextInputLayout
+                    x:Name="mobileLayout"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    ContainerType="{Binding SelectedItem, Source={x:Reference picker}, Converter={StaticResource ContainerTypeConverter}}"
+                    ErrorText="Enter your phone number"
+                    HasError="{Binding IsMobileNumberEmpty}"
+                    HelperText="Don't include country code"
+                    Hint="Phone number"
+                    IsHintAlwaysFloated="{Binding EnableHintAlwaysFloated}"
+                    LeadingViewPosition="Outside">
+
+                    <inputLayout:SfTextInputLayout.HintLabelStyle>
+                        <inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize}" />
+                    </inputLayout:SfTextInputLayout.HintLabelStyle>
+                    <inputLayout:SfTextInputLayout.HelperLabelStyle>
+                        <inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize, Converter={StaticResource fontSizeConverter}}" />
+                    </inputLayout:SfTextInputLayout.HelperLabelStyle>
+                    <inputLayout:SfTextInputLayout.ErrorLabelStyle>
+                        <inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize, Converter={StaticResource fontSizeConverter}}" />
+                    </inputLayout:SfTextInputLayout.ErrorLabelStyle>
+
+                    <Entry
+                        x:Name="phoneNumber"
+                        Keyboard="Telephone" FontSize="{Binding ContainerLabelFontSize}"
+                        Text="{Binding PhoneNumber}" />
+
+                    <inputLayout:SfTextInputLayout.LeadingView>
+                        <Label
+                            FontSize="18"
+                            Text="E"
+                            TextColor="{Binding Path=CurrentActiveColor, Source={x:Reference Name=mobileLayout}}"
+                            VerticalTextAlignment="Center">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="InputLayoutIcons" />
+                                    <On Platform="Android" Value="InputLayoutIcons.ttf#InputLayoutIcons" />
+                                    <On Platform="UWP" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+                                    <On Platform="WPF" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                    </inputLayout:SfTextInputLayout.LeadingView>
+                </inputLayout:SfTextInputLayout>
+
+                <inputLayout:SfTextInputLayout
+                    x:Name="addressLayout"
+                    ContainerType="{Binding SelectedItem, Source={x:Reference picker}, Converter={StaticResource ContainerTypeConverter}}"
+                    ErrorText="Enter your address"
+                    HasError="{Binding IsAddressEmpty}"
+                    HelperText="Enter your address"
+                    Hint="Address"
+                    IsHintAlwaysFloated="{Binding EnableHintAlwaysFloated}"
+                    LeadingViewPosition="Outside">
+
+                    <inputLayout:SfTextInputLayout.HintLabelStyle>
+                        <inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize}" />
+                    </inputLayout:SfTextInputLayout.HintLabelStyle>
+                    <inputLayout:SfTextInputLayout.HelperLabelStyle>
+                        <inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize, Converter={StaticResource fontSizeConverter}}" />
+                    </inputLayout:SfTextInputLayout.HelperLabelStyle>
+                    <inputLayout:SfTextInputLayout.ErrorLabelStyle>
+                        <inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize, Converter={StaticResource fontSizeConverter}}" />
+                    </inputLayout:SfTextInputLayout.ErrorLabelStyle>
+
+                    <Editor
+                        x:Name="address"
+                        AutoSize="TextChanges" FontSize="{Binding ContainerLabelFontSize}"
+                        Text="{Binding Address}" />
+
+                    <inputLayout:SfTextInputLayout.LeadingView>
+                        <Label
+                            FontSize="18"
+                            Text="C"
+                            TextColor="{Binding Path=CurrentActiveColor, Source={x:Reference Name=addressLayout}}"
+                            VerticalTextAlignment="Center">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="InputLayoutIcons" />
+                                    <On Platform="Android" Value="InputLayoutIcons.ttf#InputLayoutIcons" />
+                                    <On Platform="UWP" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+                                    <On Platform="WPF" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                    </inputLayout:SfTextInputLayout.LeadingView>
+                </inputLayout:SfTextInputLayout>
+
+                <inputLayout:SfTextInputLayout
+                    x:Name="stateLayout"
+                    ContainerType="{Binding SelectedItem, Source={x:Reference picker}, Converter={StaticResource ContainerTypeConverter}}"
+                    ErrorText="Enter your state"
+                    HasError="{Binding IsStateEmpty}"
+                    HelperText="Enter your state"
+                    Hint="State"
+                    IsHintAlwaysFloated="{Binding EnableHintAlwaysFloated}"
+                    LeadingViewPosition="Outside">
+
+                    <inputLayout:SfTextInputLayout.HintLabelStyle>
+                        <inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize}" />
+                    </inputLayout:SfTextInputLayout.HintLabelStyle>
+                    <inputLayout:SfTextInputLayout.HelperLabelStyle>
+                        <inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize, Converter={StaticResource fontSizeConverter}}" />
+                    </inputLayout:SfTextInputLayout.HelperLabelStyle>
+                    <inputLayout:SfTextInputLayout.ErrorLabelStyle>
+                        <inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize, Converter={StaticResource fontSizeConverter}}" />
+                    </inputLayout:SfTextInputLayout.ErrorLabelStyle>
+
+                    <autoComplete:SfAutoComplete
+                        x:Name="state" 
+                        DataSource="{Binding State}"
+                        HighlightedTextColor="#0d5fa3"
+                        SuggestionMode="Contains"
+                        Text="{Binding SelectedState}"
+						TextSize="{Binding ContainerLabelFontSize}"
+                        TextHighlightMode="FirstOccurrence">
+                        <autoComplete:SfAutoComplete.HeightRequest>
+                            <OnPlatform
+                                x:TypeArguments="x:Double"
+                                Android="60"
+                                WinPhone="20"
+                                iOS="21" />
+                        </autoComplete:SfAutoComplete.HeightRequest>
+                    </autoComplete:SfAutoComplete>
+
+                    <inputLayout:SfTextInputLayout.LeadingView>
+                        <Label
+                            FontSize="18"
+                            Text="C"
+                            TextColor="{Binding Path=CurrentActiveColor, Source={x:Reference Name=stateLayout}}"
+                            VerticalTextAlignment="Center">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="InputLayoutIcons" />
+                                    <On Platform="Android" Value="InputLayoutIcons.ttf#InputLayoutIcons" />
+                                    <On Platform="UWP" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+                                    <On Platform="WPF" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                    </inputLayout:SfTextInputLayout.LeadingView>
+                </inputLayout:SfTextInputLayout>
+
+                <inputLayout:SfTextInputLayout
+                    x:Name="mailLayout"
+                    ContainerType="{Binding SelectedItem, Source={x:Reference picker}, Converter={StaticResource ContainerTypeConverter}}"
+                    ErrorText="Enter a valid email address"
+                    HasError="{Binding HasError}"
+                    HelperText="Enter your email address"
+                    Hint="Email"
+                    IsHintAlwaysFloated="{Binding EnableHintAlwaysFloated}"
+                    LeadingViewPosition="Outside">
+
+                    <inputLayout:SfTextInputLayout.HintLabelStyle>
+                        <inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize}" />
+                    </inputLayout:SfTextInputLayout.HintLabelStyle>
+                    <inputLayout:SfTextInputLayout.HelperLabelStyle>
+                        <inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize, Converter={StaticResource fontSizeConverter}}" />
+                    </inputLayout:SfTextInputLayout.HelperLabelStyle>
+                    <inputLayout:SfTextInputLayout.ErrorLabelStyle>
+                        <inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize, Converter={StaticResource fontSizeConverter}}" />
+                    </inputLayout:SfTextInputLayout.ErrorLabelStyle>
+
+					<Entry x:Name="mail" Text="{Binding Mail}" FontSize="{Binding ContainerLabelFontSize}"/>
+
+                    <inputLayout:SfTextInputLayout.LeadingView>
+                        <Label
+                            FontSize="18"
+                            Text="G"
+                            TextColor="{Binding Path=CurrentActiveColor, Source={x:Reference Name=mailLayout}}"
+                            VerticalTextAlignment="Center">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="InputLayoutIcons" />
+                                    <On Platform="Android" Value="InputLayoutIcons.ttf#InputLayoutIcons" />
+                                    <On Platform="UWP" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+                                    <On Platform="WPF" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                    </inputLayout:SfTextInputLayout.LeadingView>
+                </inputLayout:SfTextInputLayout>
+
+                <inputLayout:SfTextInputLayout
+                    x:Name="passwordLayout"
+                    CharMaxLength="8"
+                    ContainerType="{Binding SelectedItem, Source={x:Reference picker}, Converter={StaticResource ContainerTypeConverter}}"
+                    EnablePasswordVisibilityToggle="true"
+                    ErrorText="Enter 5 to 8 characters"
+                    HasError="{Binding IsPasswordEmpty}"
+                    HelperText="Enter 5 to 8 characters"
+                    Hint="Password"
+                    IsHintAlwaysFloated="{Binding EnableHintAlwaysFloated}"
+                    ShowCharCount="true">
+
+                    <inputLayout:SfTextInputLayout.HintLabelStyle>
+                        <inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize}" />
+                    </inputLayout:SfTextInputLayout.HintLabelStyle>
+                    <inputLayout:SfTextInputLayout.HelperLabelStyle>
+                        <inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize, Converter={StaticResource fontSizeConverter}}" />
+                    </inputLayout:SfTextInputLayout.HelperLabelStyle>
+                    <inputLayout:SfTextInputLayout.ErrorLabelStyle>
+                        <inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize, Converter={StaticResource fontSizeConverter}}" />
+                    </inputLayout:SfTextInputLayout.ErrorLabelStyle>
+                    <inputLayout:SfTextInputLayout.CounterLabelStyle>
+                        <inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize, Converter={StaticResource fontSizeConverter}}" />
+                    </inputLayout:SfTextInputLayout.CounterLabelStyle>
+
+                    <Entry
+                        x:Name="password"
+                        IsPassword="true"
+                        Text="{Binding Password}" FontSize="{Binding ContainerLabelFontSize}"/>
+
+                    <inputLayout:SfTextInputLayout.LeadingView>
+                        <Label
+                            FontSize="18"
+                            Text="K"
+                            TextColor="{Binding Path=CurrentActiveColor, Source={x:Reference Name=passwordLayout}}"
+                            VerticalTextAlignment="Center">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="InputLayoutIcons" />
+                                    <On Platform="Android" Value="InputLayoutIcons.ttf#InputLayoutIcons" />
+                                    <On Platform="UWP" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+                                    <On Platform="WPF" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                    </inputLayout:SfTextInputLayout.LeadingView>
+                </inputLayout:SfTextInputLayout>
+
+                <inputLayout:SfTextInputLayout
+                    x:Name="confirmPasswordLayout"
+                    ContainerType="{Binding SelectedItem, Source={x:Reference picker}, Converter={StaticResource ContainerTypeConverter}}"
+                    ErrorText="Re-enter your password"
+                    HasError="{Binding IsConfirmPasswordEmpty}"
+                    HelperText="Re-enter your password"
+                    Hint="Confirm password"
+                    IsEnabled="{Binding IsEnabled}"
+                    IsHintAlwaysFloated="{Binding EnableHintAlwaysFloated}">
+
+                    <inputLayout:SfTextInputLayout.HintLabelStyle>
+                        <inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize}" />
+                    </inputLayout:SfTextInputLayout.HintLabelStyle>
+                    <inputLayout:SfTextInputLayout.HelperLabelStyle>
+                        <inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize, Converter={StaticResource fontSizeConverter}}" />
+                    </inputLayout:SfTextInputLayout.HelperLabelStyle>
+                    <inputLayout:SfTextInputLayout.ErrorLabelStyle>
+                        <inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize, Converter={StaticResource fontSizeConverter}}" />
+                    </inputLayout:SfTextInputLayout.ErrorLabelStyle>
+
+                    <Entry
+                        x:Name="confirmPassword"
+                        IsPassword="true"
+                        Text="{Binding ConfirmPassword}" FontSize="{Binding ContainerLabelFontSize}"/>
+
+                    <inputLayout:SfTextInputLayout.LeadingView>
+                        <Label
+                            FontSize="18"
+                            Text="K"
+                            TextColor="{Binding Path=CurrentActiveColor, Source={x:Reference Name=confirmPasswordLayout}}"
+                            VerticalTextAlignment="Center">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="InputLayoutIcons" />
+                                    <On Platform="Android" Value="InputLayoutIcons.ttf#InputLayoutIcons" />
+                                    <On Platform="UWP" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+                                    <On Platform="WPF" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                    </inputLayout:SfTextInputLayout.LeadingView>
+                </inputLayout:SfTextInputLayout>
+
+				<inputLayout:SfTextInputLayout
+                        x:Name="birthdayLayout_1" IsVisible="{OnPlatform Android=True, iOS=True, UWP=False, WPF=False}"
+                        ContainerType="{Binding SelectedItem, Source={x:Reference picker}, Converter={StaticResource ContainerTypeConverter}}"
+                        HelperText="Enter your date of birth"
+                        Hint="Birth date"
+                        IsHintAlwaysFloated="{Binding EnableHintAlwaysFloated}"
+                        LeadingViewPosition="Outside"
+                        TrailingViewPosition="Inside">
+
+					<inputLayout:SfTextInputLayout.HintLabelStyle>
+						<inputLayout:LabelStyle
+                                FontAttributes="{Binding ContainerLabelFontAttribute}"
+                                FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                                FontSize="{Binding ContainerLabelFontSize}" />
+					</inputLayout:SfTextInputLayout.HintLabelStyle>
+					<inputLayout:SfTextInputLayout.HelperLabelStyle>
+						<inputLayout:LabelStyle
+                                FontAttributes="{Binding ContainerLabelFontAttribute}"
+                                FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                                FontSize="{Binding ContainerLabelFontSize, Converter={StaticResource fontSizeConverter}}" />
+					</inputLayout:SfTextInputLayout.HelperLabelStyle>
+					<inputLayout:SfTextInputLayout.ErrorLabelStyle>
+						<inputLayout:LabelStyle
+                                FontAttributes="{Binding ContainerLabelFontAttribute}"
+                                FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                                FontSize="{Binding ContainerLabelFontSize, Converter={StaticResource fontSizeConverter}}" />
+					</inputLayout:SfTextInputLayout.ErrorLabelStyle>
+
+					<DatePicker
+                        x:Name="date_Picker"
+                        Date="{Binding DateTime}"
+                        MaximumDate="{x:Static system:DateTime.Now}" FontSize="{Binding ContainerLabelFontSize}"
+                        Opacity="0"/>
+
+					<inputLayout:SfTextInputLayout.LeadingView>
+						<Label
+                                FontSize="18"
+                                Text="H"
+                                TextColor="{Binding Path=CurrentActiveColor, Source={x:Reference Name=birthdayLayout}}"
+                                VerticalTextAlignment="Center">
+							<Label.FontFamily>
+								<OnPlatform x:TypeArguments="x:String">
+									<On Platform="iOS" Value="InputLayoutIcons" />
+									<On Platform="Android" Value="InputLayoutIcons.ttf#InputLayoutIcons" />
+									<On Platform="UWP" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+									<On Platform="WPF" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+								</OnPlatform>
+							</Label.FontFamily>
+						</Label>
+					</inputLayout:SfTextInputLayout.LeadingView>
+					<inputLayout:SfTextInputLayout.TrailingView>
+						<Label
+                                FontSize="18"
+                                Text="D"
+                                TextColor="{Binding Path=CurrentActiveColor, Source={x:Reference Name=birthdayLayout}}"
+                                VerticalTextAlignment="Center">
+
+							<Label.GestureRecognizers>
+								<TapGestureRecognizer x:Name="labelGesture" Tapped="GestureRecognizer_Tapped" />
+							</Label.GestureRecognizers>
+
+							<Label.FontFamily>
+								<OnPlatform x:TypeArguments="x:String">
+									<On Platform="iOS" Value="InputLayoutIcons" />
+									<On Platform="Android" Value="InputLayoutIcons.ttf#InputLayoutIcons" />
+									<On Platform="UWP" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+									<On Platform="WPF" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+								</OnPlatform>
+							</Label.FontFamily>
+						</Label>
+					</inputLayout:SfTextInputLayout.TrailingView>
+					
+				</inputLayout:SfTextInputLayout>
+
+				<Grid x:Name="birthdayLayoutGrid" IsVisible="{OnPlatform Android=False,iOS=False,UWP=True}">
+					<inputLayout:SfTextInputLayout
+                        x:Name="birthdayLayout"
+                        ContainerType="{Binding SelectedItem, Source={x:Reference picker}, Converter={StaticResource ContainerTypeConverter}}"
+                        HelperText="Enter your date of birth"
+                        Hint="Birth date"
+                        IsHintAlwaysFloated="{Binding EnableHintAlwaysFloated}"
+                        LeadingViewPosition="Outside"
+                        TrailingViewPosition="Inside">
+
+						<inputLayout:SfTextInputLayout.HintLabelStyle>
+							<inputLayout:LabelStyle
+                                FontAttributes="{Binding ContainerLabelFontAttribute}"
+                                FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                                FontSize="{Binding ContainerLabelFontSize}" />
+						</inputLayout:SfTextInputLayout.HintLabelStyle>
+						<inputLayout:SfTextInputLayout.HelperLabelStyle>
+							<inputLayout:LabelStyle
+                                FontAttributes="{Binding ContainerLabelFontAttribute}"
+                                FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                                FontSize="{Binding ContainerLabelFontSize, Converter={StaticResource fontSizeConverter}}" />
+						</inputLayout:SfTextInputLayout.HelperLabelStyle>
+						<inputLayout:SfTextInputLayout.ErrorLabelStyle>
+							<inputLayout:LabelStyle
+                                FontAttributes="{Binding ContainerLabelFontAttribute}"
+                                FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                                FontSize="{Binding ContainerLabelFontSize, Converter={StaticResource fontSizeConverter}}" />
+						</inputLayout:SfTextInputLayout.ErrorLabelStyle>
+
+						<Entry x:Name="dateOfBirth" Text="{Binding DateOfBirth}" FontSize="{Binding ContainerLabelFontSize}"/>
+
+						<inputLayout:SfTextInputLayout.LeadingView>
+							<Label
+                                FontSize="18"
+                                Text="H"
+                                TextColor="{Binding Path=CurrentActiveColor, Source={x:Reference Name=birthdayLayout}}"
+                                VerticalTextAlignment="Center">
+								<Label.FontFamily>
+									<OnPlatform x:TypeArguments="x:String">
+										<On Platform="iOS" Value="InputLayoutIcons" />
+										<On Platform="Android" Value="InputLayoutIcons.ttf#InputLayoutIcons" />
+										<On Platform="UWP" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+										<On Platform="WPF" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+									</OnPlatform>
+								</Label.FontFamily>
+							</Label>
+						</inputLayout:SfTextInputLayout.LeadingView>
+						<inputLayout:SfTextInputLayout.TrailingView>
+							<Label
+                                FontSize="18"
+                                Text="D"
+                                TextColor="{Binding Path=CurrentActiveColor, Source={x:Reference Name=birthdayLayout}}"
+                                VerticalTextAlignment="Center">
+
+								<Label.FontFamily>
+									<OnPlatform x:TypeArguments="x:String">
+										<On Platform="iOS" Value="InputLayoutIcons" />
+										<On Platform="Android" Value="InputLayoutIcons.ttf#InputLayoutIcons" />
+										<On Platform="UWP" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+										<On Platform="WPF" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+									</OnPlatform>
+								</Label.FontFamily>
+							</Label>
+						</inputLayout:SfTextInputLayout.TrailingView>
+						
+					</inputLayout:SfTextInputLayout>
+
+					<DatePicker
+                        Date="{Binding DateTime}"
+                        MaximumDate="{x:Static system:DateTime.Now}"
+                        Opacity="0"
+                        VerticalOptions="CenterAndExpand" />
+				</Grid>
+
+				<inputLayout:SfTextInputLayout
+                    x:Name="notesLayout"
+                    CharMaxLength="50"
+                    ContainerType="{Binding SelectedItem, Source={x:Reference picker}, Converter={StaticResource ContainerTypeConverter}}"
+                    Hint="Notes"
+                    IsHintAlwaysFloated="{Binding EnableHintAlwaysFloated}"
+                    LeadingViewPosition="Outside"
+                    ShowCharCount="True">
+
+                    <inputLayout:SfTextInputLayout.HintLabelStyle>
+                        <inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize}" />
+                    </inputLayout:SfTextInputLayout.HintLabelStyle>
+                    <inputLayout:SfTextInputLayout.CounterLabelStyle>
+                        <inputLayout:LabelStyle
+                            FontAttributes="{Binding ContainerLabelFontAttribute}"
+                            FontFamily="{Binding ContainerLabelFontFamily, Converter={StaticResource fontFamilyConverter}}"
+                            FontSize="{Binding ContainerLabelFontSize, Converter={StaticResource fontSizeConverter}}" />
+                    </inputLayout:SfTextInputLayout.CounterLabelStyle>
+
+                    <Editor
+                        x:Name="notes"
+                        HeightRequest="80"
+                        Text="{Binding Notes}" FontSize="{Binding ContainerLabelFontSize}"/>
+
+                    <inputLayout:SfTextInputLayout.LeadingView>
+                        <Label
+                            FontSize="18"
+                            Text="B"
+                            TextColor="{Binding Path=CurrentActiveColor, Source={x:Reference Name=notesLayout}}"
+                            VerticalTextAlignment="Center">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="InputLayoutIcons" />
+                                    <On Platform="Android" Value="InputLayoutIcons.ttf#InputLayoutIcons" />
+                                    <On Platform="UWP" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+                                    <On Platform="WPF" Value="/Assets/Fonts/InputLayoutIcons.ttf#InputLayoutIcons" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                    </inputLayout:SfTextInputLayout.LeadingView>
+                </inputLayout:SfTextInputLayout>
+
+                <StackLayout
+                    Padding="25,0,0,0"
+                    HorizontalOptions="Center"
+                    Orientation="Horizontal">
+                    <Button
+                        x:Name="submitButton"
+                        BackgroundColor="#0d5fa3"
+                        Command="{Binding SubmitCommand}"
+                        CommandParameter="{Binding Source={x:Reference state}, Path=Text}"
+                        Text="Submit"
+                        TextColor="White"
+                        WidthRequest="100" />
+
+                    <Button
+                        x:Name="resetButton"
+                        Margin="10,0,0,0"
+                        BackgroundColor="#90979b"
+                        Command="{Binding ResetCommand}"
+                        CommandParameter="{Binding Source={x:Reference state}}"
+                        Text="Reset"
+                        TextColor="White"
+                        WidthRequest="100" />
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </local:SampleView.Content>
+
+    <local:SampleView.PropertyView>
+        <ScrollView BindingContext="{x:Reference signUpViewModel}">
+
+            <StackLayout Padding="0,10,0,0">
+
+                <StackLayout.Padding>
+                    <OnPlatform
+                        x:TypeArguments="Thickness"
+                        Android="0,10,0,0"
+                        WinPhone="10,10,0,0"
+                        iOS="0,10,0,0" />
+                </StackLayout.Padding>
+
+                <StackLayout.Spacing>
+                    <OnPlatform
+                        x:TypeArguments="x:Double"
+                        Android="10"
+                        WinPhone="10"
+                        iOS="20" />
+                </StackLayout.Spacing>
+
+                <Grid IsVisible="{OnPlatform true, WPF=false}">
+
+                    <Label Text="Is hint always floated" VerticalTextAlignment="Center" />
+
+                    <Switch
+                        Grid.Column="1"
+                        HorizontalOptions="EndAndExpand"
+                        IsToggled="{Binding EnableHintAlwaysFloated}" />
+
+                </Grid>
+
+                <Grid>
+                    <Label Text="Layout type" VerticalTextAlignment="Center" />
+
+                    <Picker
+                        x:Name="picker"
+                        Grid.Column="1"
+                        HorizontalOptions="FillAndExpand">
+
+                        <Picker.Items>
+                            <x:String>Filled</x:String>
+                            <x:String>Outlined</x:String>
+                            <x:String>None</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Grid>
+
+                <Grid x:Name="fontSizeGrid">
+                    <Label Text="Hint font size" VerticalTextAlignment="Center" />
+                    <Picker
+                        x:Name="picker1"
+                        Grid.Column="1"
+                        HorizontalOptions="FillAndExpand"
+                        ItemsSource="{Binding FontSizeCollection}"
+                        SelectedIndex="{Binding SelectedFontSize}" />
+                </Grid>
+
+                <Grid x:Name="fontFamilyGrid" IsVisible="{OnPlatform true, WPF=false}">
+                    <Label Text="Font family" VerticalTextAlignment="Center" />
+                    <Picker
+                        x:Name="picker2"
+                        Grid.Column="1"
+                        HorizontalOptions="FillAndExpand"
+                        ItemsSource="{Binding FontFamilyCollection}"
+                        SelectedIndex="{Binding SelectedFontFamily}" />
+                </Grid>
+
+                <Grid x:Name="fontAttributeGrid">
+                    <Label
+                        x:Name="fontAttributeLabel"
+                        Text="Font attribute"
+                        VerticalTextAlignment="Center" />
+                    <Picker
+                        x:Name="picker3"
+                        Grid.Column="1"
+                        HorizontalOptions="FillAndExpand"
+                        ItemsSource="{Binding FontAttributeCollection}"
+                        SelectedIndex="{Binding SelectedFontAttribute}" />
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </local:SampleView.PropertyView>
+</local:SampleView> 

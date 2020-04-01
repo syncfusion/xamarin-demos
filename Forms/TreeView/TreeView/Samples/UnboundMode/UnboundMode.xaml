@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<sample:SampleView x:Class="SampleBrowser.SfTreeView.UnboundMode"
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:local="clr-namespace:SampleBrowser.SfTreeView"
+                   xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                   xmlns:node="clr-namespace:Syncfusion.TreeView.Engine;assembly=Syncfusion.SfTreeView.XForms"
+                   xmlns:sfTreeView="clr-namespace:Syncfusion.XForms.TreeView;assembly=Syncfusion.SfTreeView.XForms">
+    <sample:SampleView.Content>
+        <Grid Margin="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <sfTreeView:SfTreeView x:Name="treeView"
+                                   ItemHeight="45"
+                                   Indentation="10"
+                                   ExpanderWidth="40"
+                                   IsAnimationEnabled="True"
+                                   AutoExpandMode="AllNodesExpanded">
+                <sfTreeView:SfTreeView.Nodes>
+                    <node:TreeViewNode Content="Chairman and CEO" IsExpanded="True">
+                        <node:TreeViewNode.ChildNodes>
+                            <node:TreeViewNode Content="COO and Director">
+                                <node:TreeViewNode.ChildNodes>
+                                    <node:TreeViewNode Content="Human Resources"/>
+                                    <node:TreeViewNode Content="Platform, EMEA"/>
+                                    <node:TreeViewNode Content="Mobile"/>
+                                    <node:TreeViewNode Content="Mid Market sales EMED"/>
+                                    <node:TreeViewNode Content="EMEA Regional Director"/>
+                                    <node:TreeViewNode Content="Advertising and Global Operations"/>
+                                    <node:TreeViewNode Content="Growth,EngageMent and Moblie"/>
+                                    <node:TreeViewNode Content="Global Marketing and Solutions"/>
+                                </node:TreeViewNode.ChildNodes>
+                            </node:TreeViewNode>
+                            <node:TreeViewNode Content="CIO"/>
+                            <node:TreeViewNode Content="Security">
+                                <node:TreeViewNode.ChildNodes>
+                                    <node:TreeViewNode Content="Security Services"/>
+                                </node:TreeViewNode.ChildNodes>
+                            </node:TreeViewNode>
+                            <node:TreeViewNode Content="Corporate Development"/>
+                            <node:TreeViewNode Content="Product" IsExpanded="True">
+                                <node:TreeViewNode.ChildNodes>
+                                    <node:TreeViewNode Content="Product Advertising"/>
+                                </node:TreeViewNode.ChildNodes>
+                            </node:TreeViewNode>
+                            <node:TreeViewNode Content="Communication and Marketing" IsExpanded="True">
+                                <node:TreeViewNode.ChildNodes>
+                                    <node:TreeViewNode Content="Consumer Marketing"/>
+                                    <node:TreeViewNode Content="Platforms,Partners and PR"/>
+                                </node:TreeViewNode.ChildNodes>
+                            </node:TreeViewNode>
+                            <node:TreeViewNode Content="Legal" IsExpanded="True">
+                                <node:TreeViewNode.ChildNodes>
+                                    <node:TreeViewNode Content="Public Policy"/>
+                                </node:TreeViewNode.ChildNodes>
+                            </node:TreeViewNode>
+                            <node:TreeViewNode Content="Patnership and Marketing"/>
+                            <node:TreeViewNode Content="Engineering" IsExpanded="True">
+                                <node:TreeViewNode.ChildNodes>
+                                    <node:TreeViewNode Content="Engineering"/>
+                                    <node:TreeViewNode Content="Software Development"/>
+                                    <node:TreeViewNode Content="Engineering and products"/>
+                                    <node:TreeViewNode Content="Infrastructure Engineering"/>
+                                </node:TreeViewNode.ChildNodes>
+                            </node:TreeViewNode>
+                            <node:TreeViewNode Content="CFO" IsExpanded="True">
+                                <node:TreeViewNode.ChildNodes>
+                                    <node:TreeViewNode Content="Treasurer"/>
+                                </node:TreeViewNode.ChildNodes>
+                            </node:TreeViewNode>
+                            <node:TreeViewNode Content="Brand Design"/>
+                        </node:TreeViewNode.ChildNodes>
+                    </node:TreeViewNode>
+                </sfTreeView:SfTreeView.Nodes>
+            </sfTreeView:SfTreeView>
+        </Grid>
+    </sample:SampleView.Content>
+</sample:SampleView>

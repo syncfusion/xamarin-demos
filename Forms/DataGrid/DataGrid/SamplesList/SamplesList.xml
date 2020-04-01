@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<Samples>
+  <Group Title="DataGrid" ImageId="AllControlls/DataGrid.png" SearchTags="grid, data grid, list, table, pager, collection view, binding list"
+       Description="Full-featured grid control with advanced features like grouping, sorting, filtering and export to excel.">
+    <Sample Title = "Getting Started" Name = "GridGettingStarted" SearchTags="data grid sample, getting started, table, row, column, data"
+                Description = "This sample showcases the DataGrid with ObservableCollection as the data source." />
+    <Sample Title = "Data Binding" Name = "DataBinding" SearchTags="collection type, data binding, datatable, observable collection"
+                Description = "This sample showcases the DataGrid with ObservableCollection and DataTable as the data source."/>
+    <Sample Title = "Sorting" Name = "Sorting" SearchTags="sort, order, ascending, descending, arrange, sort order"
+                Description = "This sample showcases the sorting capabilities of data in DataGrid that allows you to sort against one or more columns and also provides tri-state sorting functionality." />
+    <Sample Title = "Custom Sorting" Name = "CustomSorting" SearchTags="sort, order, custom sort, ascending, descending, arrange"
+                Description = "This sample showcases the custom sorting capabilities in DataGrid that enables you to implement custom sorting logic." />
+    <Sample Title = "Filtering" Name = "Filtering" SearchTags="filter, search, custom filter, find"
+                Description = "This sample showcases the filtering capabilities of data in DataGrid." />
+    <Sample Title = "Frozen Row" Name = "FrozenRow" SearchTags="freeze, frozen row, unfreeze, freeze view, freeze panes"
+                 Description = "This sample showcases the freeze panes capability of DataGrid which provides support to freeze rows at the top." />
+    <Sample Platforms = "Android,iOS,UWP,macOS" Title = "Cell Template" Name = "CellTemplate" SearchTags="template, template column, cell customize, templating"
+            Description = "This sample showcases the template column feature of DataGrid which provides support for loading templates to the column." />
+    <Sample Title = "Grouping" Name = "Grouping" SerachTags="group, expand groups,collapse groups,multi grouping,column grouping"
+            Description = "This sample showcases the grouping capabilities of data in DataGrid that allows you to group by one or more columns with option to expand/collapse the groups." />
+    <Sample Title = "Custom Grouping" Name = "CustomGrouping" SearchTags="custom group, group, column grouping, expand groups,collapse groups"
+            Description = "This sample showcases the custom grouping capabilities in DataGrid which enables you to implement custom grouping logic." />
+    <Sample Title = "Selection" Name = "Selection" SearchTags="select, single select, multi select, row selection"
+            Description = "This sample showcases the selection capability of DataGrid which provides selection mode options like single, multiple, single-deselect and none." />
+    <Sample Title = "Editing"  Name = "Editing" SearchTags="edit, cell edit, begin edit, in-place edit"
+            Description = "This sample showcases the editing capabilities of DataGrid which provides support to edit GridTextColumn, GridNumericColumn, GridPickerColumn and GridDateTimeColumn."/>
+    <Sample Title = "Resizing" Name = "Resizing" SearchTags="resize, column resize, width customization, grid resizing"
+            Description = "This sample showcases the resizing capabilities of DataGrid which provides resizing mode options like on-moved and on-touch-up." />
+    <Sample Title = "Grid Columns" Name = "GridColumns" SearchTags="columns, column types, types of columns, grid columns, switch column,image column"
+            Description = "This sample showcases the columns capability of DataGrid which provides support for text, image and switch columns." />
+    <Sample Platforms = "Android,iOS,UWP,macOS,WPF" Title = "Drag And Drop" Name = "DragAndDrop" SearchTags="drag and drop, dragging, reordering, column reorder, row reorder, row dragging, column dragging"
+            Description = "This sample showcases the column and row drag and drop capabilities of DataGrid which provide user flexibility when interacting with the grid rows and grid columns." />
+    <Sample Title = "Stacked Header" Name = "StackedHeaderRow" SearchTags="header, stacked, stacked header, stackedheaderow, stackedheader,merged column, merged header, grouped header, header grouped, column grouped"
+                Description = "This sample showcases the stacked header capability of DataGrid which provides support of grouping the header column under a particular category"/>
+    <Sample Platforms = "Android,iOS" Title = "Context Menu" Name = "ContextMenu" SearchTags="data grid sample, getting started, table, row, column, data"
+                Description = "This sample showcases the context menu behavior for the DataGrid using our popup layout control which provides options to group and sort a column and to clear sorting and grouping." />
+    <Sample Platforms = "Android,iOS,UWP,WPF" Title = "Unbound Views" Name = "UnboundViews" SearchTags="column, unbound, grid columns, expression, custom column, row, unbound rows, custom row"
+                Description = "This sample showcases the unbound rows and unbound columns capability of DataGrid. Unbound rows and Unbound columns are extra rows and columns that do not belong to the data source." />
+    <Sample Platforms = "Android,iOS,UWP,WPF" Title = "Conditional Styling" Name = "ConditionalFormatting" SearchTags="querystyle,queryrowstyle,querycolumnstyle,style,cellstyle,rowstyle,cellbackground,cellforeground"
+                Description = "This sample showcases the conditional styling capabilities of the DataGrid based on which individual cells and rows in the grid can be styles based on conditions." />
+    <Sample Platforms = "Android,iOS,UWP,WPF" Title = "Styles" Name = "DataGridStyles"  SearchTags="style, theme, conditional style, appearance, visualization"
+                Description = "This sample showcases the styling capabilities of DataGrid. Styling allows you to change the visual appearance of the DataGrid and its inner elements." />
+    <Sample Platforms = "Android,iOS,UWP,WPF" Title = "Auto Row Height" Name = "AutoRowHeight" SearchTags="height, auto fit, query row height, auto row height, row height customization"
+                Description = "This sample showcases the auto row height feature of DataGrid which renders grid rows based on its content to improve the readability and occurs on-demand basis." />
+    <Sample Platforms = "Android,iOS" Title = "Diagonal Scrolling" Name = "DiagonalScrolling" SearchTags="scrolling, scroll modes, vertical scroll,horizontal scroll, fling"
+        Description = "This sample showcases the diagonal scrolling feature of DataGrid which enables to scroll the grid diagonally in all directions."/>
+    <Sample Platforms = "macOS,UWP" Title = "Horizontal Scrolling" Name = "DiagonalScrolling" SearchTags="scrolling, scroll modes, vertical scroll,horizontal scroll, fling"
+          Description = "This sample showcases the horizontal scrolling feature of DataGrid which enables to scroll the grid horizontally." />
+    <Sample Title = "Load More" Name = "LoadMore" SearchTags="load more, incremental loading, runtime load, dynamic loading, data binding"
+                Description = "This sample showcases the load more capability of DataGrid that allows you to load a subset of data to the bound data source using built-in UI." />
+    <Sample Platforms = "Android,iOS,UWP" Title = "Pull To Refresh" Name = "PullToRefresh" SearchTags="pull, refresh, pull to refresh, refresh view, runtime refresh"
+                Description = "This sample showcases the pull-to-refresh capability of DataGrid which allows you to refresh the data source upon pull-to-refresh action." />
+    <Sample Title = "Paging" Name = "Paging" SearchTags="page, paging, large data sets, on demand paging, pager, data pager"
+                Description = "This sample showcases the paging capabilities of DataGrid using our DataPager control which allows you to load the data from the data source in an efficient way." />
+    <Sample Platforms = "Android,iOS,macOS,UWP" Title = "Swiping" Name = "Swiping" SearchTags="swipe, swipe buttons, swipe template, form editing, edit row, delete row"
+                Description = "This sample showcases the swiping capabilities of DataGrid which allow you to load swipe views and associate them with custom actions." />
+    <Sample Title = "Rendering Dynamic Data" Name = "RenderingDynamicData" SearchTags="dynamic, dynamic loading, real time update, dynamic updates, rendering dynamic data"
+                Description = "This sample illustrates the real time updates capabilibilies of the DataGrid by frequent updates that occur in random cells across the grid by keeping processor usage to a minimum." />
+    <Sample Title = "Exporting" EnableStoragePermission="true" Name = "Exporting" SearchTags="export, excel, pdf, exporting"
+                Description = "This sample showcases the excel and pdf exporting capabilities of DataGrid. DataGrid also provides you various customization options for exporting." />
+  </Group>
+</Samples>

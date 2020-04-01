@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:core="clr-namespace:SampleBrowser.SfComboBox"
+    xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+    x:Class="SampleBrowser.SfComboBox.GettingStartedSample">
+     <local:SampleView.Resources>
+        <ResourceDictionary>
+            <core:booltofontConverter x:Key="booltofont"/>
+            <core:booltocolorConverter x:Key="booltocolor"/>
+            <core:ComboBoxImageConverter x:Key="ComboBoxImageConverter" />
+            <core:StringToColorConverter x:Key="stringtocolor" />
+            <core:StringToColorConverter2 x:Key="stringtocolor2" />
+            <core:StringToComboBoxModeConverter x:Key="ComboBoxModeConverter"/>
+        </ResourceDictionary>
+    </local:SampleView.Resources>
+    
+    <StackLayout Padding="10" Spacing="10">
+        <StackLayout Padding="0,5,0,0">
+        <Label x:Name="ScaleValueLayout" 
+               Text= "Scale and layout" 
+               TextColor="#6d6d72"
+               FontAttributes="Bold" 
+               FontSize="17"/>
+        </StackLayout> 
+        <StackLayout Padding="0,5,0,5">
+        <inputLayout:SfTextInputLayout Hint="Change the size of text">
+            <combobox:SfComboBox x:Name="comboBox1" 
+                                     Text="150% (Recommended)"
+                                     IsEditableMode="{Binding IsEditableComboBox,Mode=TwoWay}"
+                                     IgnoreDiacritic="{Binding IsIgnoreDiacritic,Mode=TwoWay}"
+                                     BackgroundColor="{Binding Source={x:Reference BackColorPicker},SelectedItem,Converter={StaticResource stringtocolor2}}"
+                                     TextColor="{Binding Source={x:Reference ColorPicker},SelectedItem,Converter={StaticResource stringtocolor}}"
+                                     DataSource="{Binding Source1}"
+                                     TextSize="{Binding TextSize}"
+				                     DropDownTextSize="{Binding TextSize}"
+                                     Watermark="{Binding Watermark,Mode=TwoWay}"
+                                     ComboBoxMode="{Binding Source={x:Reference ComboBoxModePicker},SelectedItem,Converter={StaticResource ComboBoxModeConverter}}">
+                    <combobox:SfComboBox.HeightRequest>
+                                    <OnPlatform
+                                        x:TypeArguments="x:Double"
+                                        Android="75"
+                                        WinPhone="60"
+                                        iOS="30" />
+                   </combobox:SfComboBox.HeightRequest>
+            </combobox:SfComboBox>
+           </inputLayout:SfTextInputLayout>
+          </StackLayout> 
+        <StackLayout Padding="0,5,0,5">   
+         <inputLayout:SfTextInputLayout Hint="Resolution">
+                <combobox:SfComboBox x:Name ="comboBox2"
+                                       MaximumDropDownHeight="160"
+                                       Text="1920 x 1080 (Recommended)"
+                                       SuggestionMode="StartsWith"
+                                       DataSource="{Binding Source2}"
+                                       IsEditableMode="{Binding IsEditableComboBox,Mode=TwoWay}"
+                                       IgnoreDiacritic="{Binding IsIgnoreDiacritic,Mode=TwoWay}"
+                                       BackgroundColor="{Binding Source={x:Reference BackColorPicker},SelectedItem,Converter={StaticResource stringtocolor2}}"
+                                       TextColor="{Binding Source={x:Reference ColorPicker},SelectedItem,Converter={StaticResource stringtocolor}}"
+                                       Watermark="{Binding Watermark}"
+                                       ComboBoxMode="{Binding Source={x:Reference ComboBoxModePicker},SelectedItem,Converter={StaticResource ComboBoxModeConverter}}"
+                                       TextSize="{Binding TextSize}">
+                   <combobox:SfComboBox.HeightRequest>
+                                    <OnPlatform
+                                        x:TypeArguments="x:Double"
+                                        Android="75"
+                                        WinPhone="60"
+                                        iOS="30" />
+                   </combobox:SfComboBox.HeightRequest>
+                </combobox:SfComboBox>
+           </inputLayout:SfTextInputLayout>
+         </StackLayout> 
+        <StackLayout Padding="0,5,0,5">
+        <inputLayout:SfTextInputLayout Hint="Orientation">
+                <combobox:SfComboBox x:Name ="comboBox3"
+                                       Text="Landscape"
+                                       DataSource="{Binding Source3}"
+                                       SuggestionMode="StartsWith"
+                                       Watermark="{Binding Watermark}"
+                                       IsEditableMode="{Binding IsEditableComboBox,Mode=TwoWay}"
+                                       IgnoreDiacritic="{Binding IsIgnoreDiacritic,Mode=TwoWay}"
+                                       BackgroundColor="{Binding Source={x:Reference BackColorPicker},SelectedItem,Converter={StaticResource stringtocolor2}}"
+                                       TextColor="{Binding Source={x:Reference ColorPicker},SelectedItem,Converter={StaticResource stringtocolor}}"
+                                       ComboBoxMode="{Binding Source={x:Reference ComboBoxModePicker},SelectedItem,Converter={StaticResource ComboBoxModeConverter}}"
+                                       TextSize="{Binding TextSize}">
+                    <combobox:SfComboBox.HeightRequest>
+                                    <OnPlatform
+                                        x:TypeArguments="x:Double"
+                                        Android="75"
+                                        WinPhone="60"
+                                        iOS="30" />
+                   </combobox:SfComboBox.HeightRequest>
+                </combobox:SfComboBox>
+           </inputLayout:SfTextInputLayout>
+        </StackLayout>         
+       </StackLayout>
+    
+   <local:SampleView.PropertyView>
+        <Grid  x:Name="optionLayout" RowSpacing="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+      
+    <Grid HeightRequest="30" Grid.Row="0" Grid.ColumnSpan="2">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="2*" x:Name="IsEditableColumn" />
+          <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>                
+        <Label x:Name="isEditableLable" 
+                Text="IsEditable" 
+                TextColor="#666666"
+                FontSize="16" />
+        <Switch x:Name="isEditableToggle" 
+                Grid.Column="1" 
+                HorizontalOptions="End" 
+                WidthRequest="50" 
+                IsToggled="{Binding IsEditableComboBox,Mode=TwoWay}" 
+                VerticalOptions="Center" />
+    </Grid>
+
+            <Grid HeightRequest="30" Grid.Row="1" Grid.ColumnSpan="2">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="2*" x:Name="EnableDiacritic" />
+          <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="EnableDiacritics"
+                TextColor="#666666"
+                Text="Enable Diacritics" 
+                FontSize="16" />
+        <Switch x:Name="EnableDiacriticsToggle" 
+                Grid.Column="1" 
+                HorizontalOptions="End" 
+                WidthRequest="50" 
+                IsToggled="{Binding IsIgnoreDiacritic,Mode=TwoWay}" 
+                VerticalOptions="Center" />
+    </Grid>
+
+            <StackLayout Orientation="Vertical" Grid.Row="2" Grid.ColumnSpan="2"  Spacing="0">
+        <Label x:Name="CornerRadiuslabel" 
+                Text="ComboBoxMode"
+                TextColor="#666666"
+                FontSize="16" 
+                HorizontalOptions="Start" 
+                VerticalOptions="StartAndExpand" />
+        <Picker x:Name="ComboBoxModePicker" >
+          <Picker.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String> Suggest </x:String>
+                <x:String> SuggestAppend </x:String>
+                <x:String> Append </x:String>                           
+            </x:Array>
+          </Picker.ItemsSource>
+      </Picker>
+   </StackLayout>
+
+            <StackLayout Orientation="Vertical" Grid.Row="3" Grid.ColumnSpan="2"  Spacing="0"> 
+        <Label TextColor="#666666" 
+                x:Name="TextSizeLabel" 
+                Text="Size" 
+                HorizontalOptions="Start" 
+                VerticalOptions="StartAndExpand"
+                FontSize="16" />
+        <Picker x:Name="SizePicker" >
+          <Picker.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String> Small </x:String>
+                <x:String> Medium </x:String>
+                <x:String> Large </x:String>                           
+            </x:Array>
+      </Picker.ItemsSource>
+      </Picker>
+    </StackLayout>
+
+
+            <StackLayout Orientation="Vertical" Grid.Row="4" Grid.ColumnSpan="2" Spacing="0"> 
+        <Label x:Name="TextColorlabel" 
+                Text="Text Color" 
+                FontSize="16"
+                HorizontalOptions="Start" 
+                VerticalOptions="StartAndExpand"
+                TextColor="#666666"/>
+        <Picker x:Name="ColorPicker" >
+          <Picker.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String> Black </x:String>
+                <x:String> Blue </x:String>
+                <x:String> Red </x:String>
+                <x:String> Yellow </x:String>                           
+            </x:Array>
+      </Picker.ItemsSource>
+      </Picker>
+    </StackLayout>
+
+            <StackLayout Orientation="Vertical" Grid.Row="5" Grid.ColumnSpan="2"  Spacing="0">
+        <Label x:Name="BackColorlabel" 
+                Text="Back Color" 
+                HorizontalOptions="Start" 
+                VerticalOptions="StartAndExpand"
+                TextColor="#666666"
+                FontSize="16"/>
+        <Picker x:Name="BackColorPicker" >
+          <Picker.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String> Transparent </x:String>
+                <x:String> Blue </x:String>
+                <x:String> Red </x:String>
+                <x:String> Yellow </x:String>                           
+            </x:Array>
+        </Picker.ItemsSource>
+      </Picker>
+    </StackLayout>
+
+            <StackLayout Orientation="Vertical" Grid.Row="6" Grid.ColumnSpan="2"  Spacing="0">
+        <Label x:Name="WatermarkLabel" 
+                Text="Watermark"
+                TextColor="#666666"              
+                FontSize="16" 
+                HorizontalOptions="Start" 
+                VerticalOptions="StartAndExpand" />
+        <Entry x:Name="WatermarkText"                
+                Text="{Binding Watermark,Mode=TwoWay}"
+                VerticalOptions="Center" />
+        </StackLayout>
+          
+        </Grid>
+    </local:SampleView.PropertyView>   
+</local:SampleView>

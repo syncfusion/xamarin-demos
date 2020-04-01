@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                xmlns:radialMenu="clr-namespace:Syncfusion.SfRadialMenu.XForms;assembly=Syncfusion.SfRadialMenu.XForms"
+                xmlns:slider="clr-namespace:Syncfusion.SfRangeSlider.XForms;assembly=Syncfusion.SfRangeSlider.XForms"
+                  x:Class="SampleBrowser.SfRadialMenu.GettingStarted_RadialMenu">
+        <local:SampleView.Resources>
+    <ResourceDictionary>
+      <OnPlatform x:TypeArguments="x:String" x:Key="customfontfamily" iOS="Segoe MDL2 Assets" Android="radialmenu_Segoe MDL2 Assets.ttf" WinPhone="radialmenu_Segoe_MDL2_Assets.ttf#Segoe MDL2 Assets"  />
+    </ResourceDictionary>
+  </local:SampleView.Resources>
+  <local:SampleView.Content>
+    <Grid BackgroundColor="White">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="3*"/>
+        <RowDefinition Height="0.5"/>
+        <RowDefinition Height="2*"/>
+      </Grid.RowDefinitions>
+     <Grid Grid.Row="0"  x:Name="firstRow">
+      <radialMenu:SfRadialMenu x:Name="radial_Menu" CenterButtonText="" CenterButtonBackText="" CenterButtonFontFamily="{StaticResource customfontfamily}" CenterButtonRadius="32" EnableCenterButtonAnimation="false" CenterButtonBackFontFamily="{StaticResource customfontfamily}" CenterButtonBorderColor="White" CenterButtonBackTapped="Radial_Menu_CenterButtonTapped" Opening="Radial_Menu_Opening" Opened="Radial_Menu_Opened" SelectionColor="#FF007ACC"
+          Closing="Radial_Menu_Closing" Closed="Radial_Menu_Closed" DragBegin="Handle_DragBegin" DragEnd="Handle_DragEnd" Navigating="Radial_Menu_Navigating" Navigated="Radial_Menu_Navigated">
+        <radialMenu:SfRadialMenu.Items>
+          <radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" FontIconText="" IconFontFamily="{StaticResource customfontfamily}">
+            <radialMenu:SfRadialMenuItem.Items>
+              <radialMenu:SfRadialMenuItem x:Name="Wifi1" ItemTapped="Handle_ItemTapped" FontIconText="" IconFontFamily="{StaticResource customfontfamily}" >
+                
+            </radialMenu:SfRadialMenuItem>
+            <radialMenu:SfRadialMenuItem x:Name="Wifi2" ItemTapped="Handle_ItemTapped" FontIconText="" IconFontFamily="{StaticResource customfontfamily}" />
+              <radialMenu:SfRadialMenuItem x:Name="Wifi3" ItemTapped="Handle_ItemTapped" FontIconText="" IconFontFamily="{StaticResource customfontfamily}" />
+              <radialMenu:SfRadialMenuItem x:Name="Wifi4"  ItemTapped="Handle_ItemTapped" FontIconText="" IconFontFamily="{StaticResource customfontfamily}" />
+            </radialMenu:SfRadialMenuItem.Items>
+          </radialMenu:SfRadialMenuItem>
+          <radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" FontIconText="" IconFontFamily="{StaticResource customfontfamily}">
+            <radialMenu:SfRadialMenuItem.Items>
+              <radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" FontIconText="" IconFontFamily="{StaticResource customfontfamily}" />
+              <radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" FontIconText="" IconFontFamily="{StaticResource customfontfamily}" />
+              <radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" FontIconText="" IconFontFamily="{StaticResource customfontfamily}" />
+              <radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" FontIconText="" IconFontFamily="{StaticResource customfontfamily}" />
+            </radialMenu:SfRadialMenuItem.Items>
+          </radialMenu:SfRadialMenuItem>
+          <radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" FontIconText="" IconFontFamily="{StaticResource customfontfamily}">
+            <radialMenu:SfRadialMenuItem.Items>
+              <radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" FontIconText="" IconFontFamily="{StaticResource customfontfamily}" />
+              <radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" FontIconText="" IconFontFamily="{StaticResource customfontfamily}" />
+              <radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" FontIconText="" IconFontFamily="{StaticResource customfontfamily}" />
+            </radialMenu:SfRadialMenuItem.Items>
+          </radialMenu:SfRadialMenuItem>
+          <radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" FontIconText="" IconFontFamily="{StaticResource customfontfamily}">
+            <radialMenu:SfRadialMenuItem.Items>
+              <radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" IconFontSize="16" FontIconText="" IconFontFamily="{StaticResource customfontfamily}" />
+              <radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" IconFontSize="18" FontIconText="" IconFontFamily="{StaticResource customfontfamily}" />
+              <radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" IconFontSize="20" FontIconText="" IconFontFamily="{StaticResource customfontfamily}" />
+            </radialMenu:SfRadialMenuItem.Items>
+          </radialMenu:SfRadialMenuItem>
+          <radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" FontIconText="" IconFontFamily="{StaticResource customfontfamily}">
+            <radialMenu:SfRadialMenuItem.Items>
+              <radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" FontIconText="" IconFontFamily="{StaticResource customfontfamily}" />
+              <radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" FontIconText="" IconFontFamily="{StaticResource customfontfamily}" />
+              <radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" FontIconText="" IconFontFamily="{StaticResource customfontfamily}" />
+            </radialMenu:SfRadialMenuItem.Items>
+          </radialMenu:SfRadialMenuItem>
+          <radialMenu:SfRadialMenuItem FontIconText="" ItemTapped="Handle_ItemTapped" IconFontFamily="{StaticResource customfontfamily}">
+            <radialMenu:SfRadialMenuItem.Items>
+              <radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" FontIconText="" IconFontFamily="{StaticResource customfontfamily}" />
+              <radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" FontIconText="" IconFontFamily="{StaticResource customfontfamily}" />
+              <radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" FontIconText="" IconFontFamily="{StaticResource customfontfamily}" />
+            </radialMenu:SfRadialMenuItem.Items>
+          </radialMenu:SfRadialMenuItem>
+        </radialMenu:SfRadialMenu.Items>
+      </radialMenu:SfRadialMenu>
+      </Grid>
+      <Grid Grid.Row="1" Padding="10,0,10,0" IsVisible="{Binding Visible}">
+        <BoxView BackgroundColor="#e5e0e0" />
+      </Grid>
+      <Grid Grid.Row="2" Padding="10,10,10,10" IsVisible="{Binding Visible}">
+        <Grid.RowDefinitions>
+          <RowDefinition x:Name="logRow" Height="30" />
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label Text="Event Logs:" x:Name="eventLogsLabel" FontSize="16" YAlign="Center" HorizontalOptions="Start" FontAttributes="Bold" />
+        <Button Text="Clear Logs"  x:Name="clearLogsButton" Padding="3,1,1,3"  BackgroundColor="White" BorderWidth="1" VerticalOptions="Center" BorderColor="#007aff" TextColor="#007aff" WidthRequest="100" HeightRequest="30" HorizontalOptions="End" Clicked="Handle_Clicked"  />
+        <ContentView Grid.Row="1" Padding="3,1,1,3">
+          <ContentView VerticalOptions="Fill">
+            <ScrollView x:Name="scrollView" IsClippedToBounds="true">
+              <StackLayout x:Name="eventLogLayout" Margin="5" />
+            </ScrollView>
+          </ContentView>
+        </ContentView>
+      </Grid>
+    </Grid>
+  </local:SampleView.Content>
+  <local:SampleView.PropertyView>
+        <Grid RowSpacing="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+        <StackLayout Grid.Row="0" Grid.ColumnSpan="2">
+          <Label Text="RimRadius" />
+          <slider:SfRangeSlider x:Name="slider" ToolTipPlacement="None" HeightRequest="75" SnapsTo="None" ShowRange="false" Orientation="Horizontal" TickPlacement="None" ShowValueLabel="false" Minimum="60" Maximum="100" />
+            </StackLayout>
+                  
+            <Label Grid.Row="1" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Grid.Column="0" Text="Enable Dragging" />
+            <Switch Grid.Row="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Column="1" x:Name="dragSwitch" IsToggled="true" />
+            <Label Grid.Row="2" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Grid.Column="0" Text="Enable Rotation" />
+            <Switch Grid.Row="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Column="1" x:Name="rotationSwitch" IsToggled="true" />
+        </Grid>
+
+    </local:SampleView.PropertyView>
+</local:SampleView>

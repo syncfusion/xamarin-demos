@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Presentation</key>
+	<array>
+		<dict>
+			<key>Image</key>
+			<string>Images/Presentation/gettingstartedsample.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create a PowerPoint presentation by adding text with simple text formatting.</string>
+			<key>SampleName</key>
+			<string>GettingStartedPresentation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+      <key>Image</key>
+      <string>Images/Presentation/slidesample.png</string>
+      <key>Description</key>
+      <string>This sample demonstrates how to convert the PowerPoint slide to an image.</string>
+      <key>SampleName</key>
+      <string>PPTXToImage</string>
+      <key>IsNew</key>
+      <string>NO</string>
+      <key>IsUpdated</key>
+      <string>NO</string>
+    </dict>
+    <dict>
+      <key>Image</key>
+      <string>Images/Presentation/slidesample.png</string>
+      <key>Description</key>
+      <string>This sample demonstrates how to convert a PowerPoint presentation to PDF.</string>
+      <key>SampleName</key>
+      <string>PPTXToPDF</string>
+      <key>IsNew</key>
+      <string>NO</string>
+      <key>IsUpdated</key>
+      <string>NO</string>
+    </dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Presentation/slidesample.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to set write protection for a Microsoft PowerPoint.</string>
+			<key>SampleName</key>
+			<string>WriteProtection</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Presentation/slidesample.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create a slide with predefined layouts, like Microsoft PowerPoint.</string>
+			<key>SampleName</key>
+			<string>SlidesPresentation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Presentation/imagesample.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to add an image in PowerPoint presentation.</string>
+			<key>SampleName</key>
+			<string>ImagesPresentation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Presentation/tablesample.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create a table with specified number of rows and columns in PowerPoint presentation for displaying tabular data.</string>
+			<key>SampleName</key>
+			<string>TablesPresentation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Presentation/chartssample.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create a pie chart in PowerPoint presentation.</string>
+			<key>SampleName</key>
+			<string>ChartsPresentation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Presentation/commentssample.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to add comments in PowerPoint presentation for reviewing and updating feedbacks.</string>
+			<key>SampleName</key>
+			<string>CommentsPresentation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Presentation/connectorssample.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to insert a connectors in a PowerPoint slide.</string>
+			<key>SampleName</key>
+			<string>ConnectorsPresentation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Presentation/connectorssample.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to insert a header and footer in a PowerPoint Presentation.</string>
+			<key>SampleName</key>
+			<string>HeaderAndFooterPresentation</string>
+			<key>IsNew</key>
+			<string>YES</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Presentation/createanimationsample.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create animation in PowerPoint presentation.</string>
+			<key>SampleName</key>
+			<string>CreateAnimationPresentation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Presentation/modifyanimationsample.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to modify the animation in PowerPoint presentation.</string>
+			<key>SampleName</key>
+			<string>ModifyAnimationPresentation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Presentation/slidetransitionsample.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create the transition effects in PowerPoint presentation slides.</string>
+			<key>SampleName</key>
+			<string>SlideTransitionPresentation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>XlsIO</key>
+	<array>
+		<dict>
+			<key>Image</key>
+			<string>Images/XlsIO/createspreadsheet.png</string>
+			<key>Description</key>
+			<string>XlsIO supports to create an Excel document without any dependency of Microsoft Excel in few lines of code.</string>
+			<key>SampleName</key>
+			<string>Create Spreadsheet</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/XlsIO/chart.png</string>
+			<key>Description</key>
+			<string>Create and manipulate all types of Excel charts with elements like chart title, legend, axis title, data labels, line styles, etc.</string>
+			<key>SampleName</key>
+			<string>Charts</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/XlsIO/formulas.png</string>
+			<key>Description</key>
+			<string>XlsIO has support to read, write and calculate formulas. The built-in calculation engine can quickly evaluate formula cell values at runtime.</string>
+			<key>SampleName</key>
+			<string>Formulas</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/XlsIO/importCLRobject.png</string>
+			<key>Description</key>
+			<string>Collection objects usually holds a set of instance variables or properties, also known as attributes. XlsIO allows to import data directly from Collection objects.</string>
+			<key>SampleName</key>
+			<string>Collection Objects</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/XlsIO/importCLRobject.png</string>
+			<key>Description</key>
+			<string>XlsIO allows to import data directly from Nested Collection objects with Layout and Group options.</string>
+			<key>SampleName</key>
+			<string>Import Nested Collection</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+        <dict>
+			<key>Image</key>
+			<string>Images/XlsIO/datatable.png</string>
+			<key>Description</key>
+			<string>XlsIO supports import/export DataTable from/to Excel worksheets.</string>
+			<key>SampleName</key>
+			<string>DataTable</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/XlsIO/datatable.png</string>
+			<key>Description</key>
+			<string>XlsIO supports optimizing performance while importing large Excel data.</string>
+			<key>SampleName</key>
+			<string>Performance</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/XlsIO/datatable.png</string>
+			<key>Description</key>
+			<string>XlsIO supports conversion of Excel to PDF.</string>
+			<key>SampleName</key>
+			<string>Excel To PDF</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/XlsIO/importxml.png</string>
+			<key>Description</key>
+			<string>XlsIO supports single line of code to import XML data into an Excel worksheet.</string>
+			<key>SampleName</key>
+			<string>Import XML Data</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/XlsIO/filters.png</string>
+			<key>Description</key>
+			<string>XlsIO supports data filtering based on text, date and custom options.</string>
+			<key>SampleName</key>
+			<string>Filters</string>
+			<key>IsNew</key>
+			<string>No</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/XlsIO/findandreplace.png</string>
+			<key>Description</key>
+			<string>XlsIO supports to find the range of a value in the worksheet and replace it with a new value.</string>
+			<key>SampleName</key>
+			<string>Find and Replace</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/XlsIO/worksheettoimage.png</string>
+			<key>Description</key>
+			<string>XlsIO supports conversion of worksheets to Images.</string>
+			<key>SampleName</key>
+			<string>Worksheet To Image</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/XlsIO/worksheettohtml.png</string>
+			<key>Description</key>
+			<string>XlsIO supports conversion of worksheets to HTML files.</string>
+			<key>SampleName</key>
+			<string>Worksheet To HTML</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>DocIO</key>
+	<array>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/generateword.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create simple Word document with text, images and tables.</string>
+			<key>SampleName</key>
+			<string>HelloWorld</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/builtinstyle.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to format the Word document contents with the built-in styles.</string>
+			<key>SampleName</key>
+			<string>BuiltIn Style</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/customstyle.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to format the Word document contents with user defined styles.</string>
+			<key>SampleName</key>
+			<string>Custom Style</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/bookmarknavigation.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to insert, retrieve, replace and delete the contents of a specified bookmark using BookmarkNavigator functionality of DocIO.</string>
+			<key>SampleName</key>
+			<string>Bookmark Navigation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/letterformat.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create a letter format document by filling the data using Mail merge functionality of DocIO.</string>
+			<key>SampleName</key>
+			<string>Mail Merge</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/letterformat.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create a employee report using Mail merge functionality of DocIO.</string>
+			<key>SampleName</key>
+			<string>Employee Report</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/letterformat.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to perform Mail merge for nested groups using Mail merge functionality of DocIO.</string>
+			<key>SampleName</key>
+			<string>Nested Mail Merge</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/protectionandformfilling.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to fill data and protect the content controls in an existing Word document.</string>
+			<key>SampleName</key>
+			<string>Form Filling and Protection</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/xmlmapping.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to map custom XML part to content controls in the Word document.</string>
+			<key>SampleName</key>
+			<string>XML Mapping</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/wordtohtml.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to convert a Word document into HTML file.</string>
+			<key>SampleName</key>
+			<string>Word To HTML</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/wordtopdf.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to convert a Word document into PDF.</string>
+			<key>SampleName</key>
+			<string>Word To PDF</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>YES</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/formulas.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create a Word document with mathematical equations.</string>
+			<key>SampleName</key>
+			<string>Create Equation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/builtinstyle.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to format the tables in the Word document.</string>
+			<key>SampleName</key>
+			<string>Format Table</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>YES</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/groupshapes.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create a Word document with Group shapes.</string>
+			<key>SampleName</key>
+			<string>Group Shapes</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>PDF</key>
+	<array>
+		<dict>
+			<key>Image</key>
+			<string>Images/pdf/gettingstarted.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create a simple PDF document with text and images.</string>
+			<key>DisplayName</key>
+			<string>Getting Started</string>
+			<key>SampleName</key>
+			<string>GettingStartedPDF</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/pdf/barcode.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create various barcodes on PDF document.</string>
+			<key>SampleName</key>
+			<string>Barcode</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/pdf/stamp.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to stamp or watermark an existing PDF document.</string>
+			<key>SampleName</key>
+			<string>Stamping</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/pdf/booklet.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create a booklet from an existing PDF document.</string>
+			<key>SampleName</key>
+			<string>Booklet</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/pdf/table.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create borderless table in a PDF document.</string>
+			<key>SampleName</key>
+			<string>Table Features</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/pdf/imageinsertion.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to insert images in a PDF document.</string>
+			<key>SampleName</key>
+			<string>Image Insertion</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/pdf/DigitalSignature.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to digitally sign PDF document using a .pfx certificate.</string>
+			<key>SampleName</key>
+			<string>Digital Signature</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/pdf/DigitalSignature.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to validate digitally signed PDF document signature.</string>
+			<key>SampleName</key>
+			<string>Digital Signature Validation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/pdf/encryption.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create secure PDF document.</string>
+			<key>SampleName</key>
+			<string>Encryption</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/pdf/rtlsupport.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates drawing right-to-left language text in the PDF document.</string>
+			<key>DisplayName</key>
+			<string>RTL Text</string>
+			<key>SampleName</key>
+			<string>RTLSupport</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/pdf/rtlsupport.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates various PDF conformance support in Essential PDF.</string>
+			<key>DisplayName</key>
+			<string>PDF Conformance</string>
+			<key>SampleName</key>
+			<string>Conformance</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/pdf/rtlsupport.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create a ZUGFeRD PDF document.</string>
+			<key>DisplayName</key>
+			<string>ZUGFeRD Invoice</string>
+			<key>SampleName</key>
+			<string>ZugFerd</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/pdf/rtlsupport.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to draw a text with OpenType font in a PDF document.</string>
+			<key>DisplayName</key>
+			<string>OpenType Font</string>
+			<key>SampleName</key>
+			<string>OpenTypeFont</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>PDFViewer</key>
+	<array>
+		<dict>
+			<key>Image</key>
+			<string>Images/PDFViewer/pdfviewer.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to view the PDF document in Xamarin iOS application.</string>
+			<key>DisplayName</key>
+			<string>Getting Started</string>
+			<key>SampleName</key>
+			<string>PdfViewerDemo</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/PDFViewer/pdfviewer.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to view the PDF document in Xamarin iOS application with custom toolbar.</string>
+			<key>DisplayName</key>
+			<string>Custom Toolbar</string>
+			<key>SampleName</key>
+			<string>CustomToolbar</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+</dict>
+</plist>

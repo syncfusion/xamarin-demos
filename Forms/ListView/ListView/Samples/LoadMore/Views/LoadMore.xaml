@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfListView.LoadMore"
+                   x:Name="sampleView"
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:local="clr-namespace:SampleBrowser.SfListView"
+                   xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                   xmlns:numeric="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms"
+                   xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
+    
+    <sample:SampleView.Resources>
+      <ResourceDictionary>
+        <local:InverseZeroVisibilityConverter x:Key="inverseZeroVisibilityConverter"/>
+        <local:ZeroVisibilityConverter x:Key="zeroVisibilityConverter"/>
+        <local:CurrencyFormatConverter x:Key="currencyFormatConverter"/>
+        <sample:ImagePathConverter x:Key="ImagePathConverter"/>
+      </ResourceDictionary>
+    </sample:SampleView.Resources>
+    
+    <sample:SampleView.BindingContext>
+        <local:LoadMoreViewModel/>
+    </sample:SampleView.BindingContext>
+    
+    <sample:SampleView.Content>
+        <Grid x:Name="sampleLayout" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Frame BackgroundColor="White" HasShadow="True" Padding="0" Margin="0">
+                <Grid Padding="0" HeightRequest="{OnPlatform Default=48, Android=56}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Grid x:Name="grid" Grid.Column="0" Margin="16,0,8,0">
+                        <Label Text="Product List" FontAttributes="Bold" VerticalOptions="Center" FontSize="16" 
+                               TextColor="{OnPlatform Default=#333333, Android=#000000}"
+                               Opacity="{OnPlatform Default=1, Android=0.87}" />
+                    </Grid>
+                    <Grid Grid.Column="1" Margin="0" RowSpacing="0" ColumnSpacing="0" BackgroundColor="White" 
+                          HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" Padding="20, 0, 0, 0" >
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding OrderListCommand}"
+                                                  CommandParameter="{Binding Source={x:Reference Name=sampleView}}"/>
+                        </Grid.GestureRecognizers>
+                        <Label InputTransparent="True" Text="&#xe706;" FontSize="{OnPlatform Android=Medium, iOS=Large, UWP=Medium}" TextColor="#808080" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"
+                               VerticalOptions="Center" HeightRequest="20" WidthRequest="20" Margin="0,0,16,0"/>
+                        <Frame InputTransparent="True" Margin="0,12,6,0" Padding="0" HasShadow="False"
+                               VerticalOptions="Start" HorizontalOptions="End" CornerRadius="8"
+                               HeightRequest="14" WidthRequest="20" OutlineColor="Transparent"
+                               IsVisible="{Binding TotalOrderedItems, Mode=OneWay, Converter={StaticResource inverseZeroVisibilityConverter}}"
+                               BackgroundColor="{OnPlatform Default=#1C73F2, Android=#009688, UWP=#0078D7}">
+                            <Label InputTransparent="True" Margin="0" TextColor="White" Text="{Binding TotalOrderedItems}" FontSize="11"
+                                   VerticalOptions="Center" HorizontalOptions="Center"/>
+                        </Frame>
+                    </Grid>
+                </Grid>
+            </Frame>
+            <BoxView x:Name="boxView" Grid.Row="1" BackgroundColor="#EAEAEA" HeightRequest="{OnPlatform Default=0, UWP=1}" />
+            <sync:SfListView x:Name="listView" Grid.Row="2"
+                             ItemSize="120"
+                             LoadMoreOption="Auto"
+                             LoadMoreCommand="{Binding LoadMoreItemsCommand}"
+                             LoadMoreCommandParameter="{Binding Source={x:Reference Name=listView}}"
+                             ItemsSource="{Binding Products}">
+                <sync:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid HeightRequest="120" Margin="0" Padding="0" RowSpacing="0" BackgroundColor="White">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="1"/>
+                            </Grid.RowDefinitions>
+                            <Grid Padding="0" ColumnSpacing="0" Margin='{OnPlatform Default="15,12,15,12", Android=16}'>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.4*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <local:SfImage Source="{Binding Image}" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="Center" />
+                                <Grid Grid.Column="1" Padding="0" RowSpacing="0" Margin='{OnPlatform Default="12,0,0,0", Android="16,0,0,0"}'>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Label Text="{Binding Name}" HorizontalOptions="Start" Margin="0,0,0,4" FontSize="16"
+                                            TextColor="{OnPlatform Default=#333333, Android=#000000}"
+                                           Opacity="{OnPlatform Default=1, Android=0.87}" />
+                                    <Label Text="{Binding Weight}" FontSize="14" Grid.Row="1" HorizontalOptions="Start"
+                                           TextColor="{OnPlatform Default=#757575, Android=#000000, UWP=#4C4C4C}"
+                                           Opacity="{OnPlatform Default=1, Android=0.54}" />
+                                    <Grid Grid.Row="2" Padding="0" ColumnSpacing="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Text="{Binding Price, Converter={StaticResource currencyFormatConverter}}" VerticalOptions="Start" FontAttributes="Bold" 
+                                               HorizontalOptions="Start" FontSize="16"
+                                               Margin='{OnPlatform Default="0,12,0,0", Android="0,16,0,0"}'
+                                                TextColor="{OnPlatform Default=#1C73F2, Android=#009688, UWP=#0078D7}" />
+                                        <numeric:SfNumericUpDown Grid.Column="1"  x:Name="numericUpDown" MaximumDecimalDigits="0"
+                                                               IsEditable="False" Minimum="0" Maximum="9" HorizontalOptions="End" VerticalOptions="Center"
+                                                                AllowNull="false" FormatString="n" Watermark="Units" TextAlignment="Center"
+                                                               SpinButtonAlignment="Both" UpDownButtonColor="White"
+                                                               Value="{Binding Quantity, Mode=TwoWay}"
+                                                               IsVisible="{Binding Quantity, Converter={StaticResource inverseZeroVisibilityConverter}}"
+                                                                 TextColor="{OnPlatform Default=#1C73F2, Android=#FFFFFF, UWP=#0078D7}"
+                                                                 BackgroundColor="{OnPlatform Default=#FFFFFF, Android=#009688, UWP=#C9C9C9}"
+                                                                 WidthRequest="{OnPlatform Default=150}" />
+                                        <Button Grid.Column="1" x:Name="addButton" FontSize="16" Text="ADD" BorderWidth="1"  WidthRequest="80"
+                                                VerticalOptions="CenterAndExpand" HorizontalOptions="End" 
+                                                Command="{Binding Path=BindingContext.AddCommand, Source={x:Reference Name=listView}}"
+                                                CommandParameter="{Binding .}"
+                                                IsVisible="{Binding Quantity, Converter={StaticResource zeroVisibilityConverter}}"
+                                                BackgroundColor="{OnPlatform Default=#FFFFFF, Android=#009688, UWP=#C9C9C9}"
+                                                BorderColor="{OnPlatform Default=#1C73F2, Android=#009688, UWP=#C9C9C9}"
+                                                TextColor="{OnPlatform Default=#1C73F2, Android=#FFFFFF, UWP=#000000}" />
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                            <BoxView x:Name="boxView" Grid.Row="1" BackgroundColor="#EAEAEA"/>
+                        </Grid>
+                    </DataTemplate>                    
+                </sync:SfListView.ItemTemplate>
+            </sync:SfListView>
+        </Grid>
+    </sample:SampleView.Content>
+</sample:SampleView>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             x:Class="SampleBrowser.SfPopupLayout.Themes"
+             xmlns:local="clr-namespace:SampleBrowser.SfPopupLayout"
+             xmlns:popuplayout="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms">
+    
+    <sample:SampleView.Behaviors>
+        <local:PopupThemeBehavior />
+    </sample:SampleView.Behaviors>
+
+    <sample:SampleView.Content>
+        <popuplayout:SfPopupLayout x:Name="popupLayout">
+            <popuplayout:SfPopupLayout.Content>
+                <ScrollView x:Name="parentLayout">
+                    <StackLayout Orientation="Vertical" Spacing="20" Padding="40,230,40,20">
+
+                        <Button x:Name="AlertTitle" 
+                            Text="ALERT WITH TITLE" 
+                            CornerRadius="5"                    
+                            BackgroundColor="#0059ff" 
+                            TextColor="White" 
+                            HeightRequest="40"/>
+
+                    </StackLayout>
+                </ScrollView>
+            </popuplayout:SfPopupLayout.Content>
+        </popuplayout:SfPopupLayout>
+    </sample:SampleView.Content>
+</sample:SampleView>
