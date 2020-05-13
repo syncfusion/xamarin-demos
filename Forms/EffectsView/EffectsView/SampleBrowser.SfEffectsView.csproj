@@ -1,0 +1,71 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <Configurations>Debug;Release;Release-xml</Configurations>
+    <RootNamespace>SampleBrowser.SfEffectsView</RootNamespace>
+    <AssemblyName>SampleBrowser.SfEffectsView</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;RELEASE;NETSTANDARD;INDIVIDUALSB;NETSTANDARD1_0</DefineConstants>
+  </PropertyGroup>
+    
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DefineConstants>TRACE;RELEASE;NETSTANDARD;INDIVIDUALSB;NETSTANDARD1_0</DefineConstants>
+  </PropertyGroup>
+    
+  <ItemGroup>
+    <Compile Remove="LoginBackground.png\**" />
+    <EmbeddedResource Remove="LoginBackground.png\**" />
+    <None Remove="LoginBackground.png\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SampleBrowser.Core" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="18.1.0.52" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
+  </ItemGroup>
+
+  <ItemGroup>   
+    <None Remove="SampleBrowser.SfEffectsView.props" />
+    <None Remove="SampleBrowser.SfEffectsView.nuspec" />
+    <None Remove="SamplesList\SamplesList.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SamplesList\SamplesList.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Samples\GettingStarted\GettingStarted.xaml.cs">
+      <DependentUpon>GettingStarted.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+    
+  <ItemGroup>
+    <None Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Samples\GettingStarted\GettingStarted.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Samples\GettingStarted\GettingStarted.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms" x:Class="SampleBrowser.SfAutoComplete.Themes">
+     <ScrollView>   
+    <Grid x:Name="sampleLayout" Padding="30">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <Label x:Name="jobSearchLabel" Text="Job Search" Grid.Row="0" FontSize="20" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="Center" />
+      <StackLayout Orientation="Vertical" Grid.Row="1">
+        <Label x:Name="countryLabel" Text="Country" HeightRequest="30" FontSize="16"  HorizontalOptions="Start" />
+        <StackLayout x:Name="countryAutoCompleteLayout">
+          <autocomplete:SfAutoComplete Watermark="Enter Country Name" TextHighlightMode="FirstOccurrence" PopupDelay="0"  TextSize="16" x:Name="countryAutoComplete" Margin="0,-10,0,0" DropDownCornerRadius="5" SuggestionMode="StartsWith" AutoCompleteMode="Suggest" HeightRequest="45" MinimumPrefixCharacters="1" MaximumDropDownHeight="150"
+               AutoCompleteSource="{Binding }" DropDownItemHeight="35"/>
+        </StackLayout>
+      </StackLayout>
+      <StackLayout Orientation="Vertical" Grid.Row="2">
+        <Label x:Name="jobFieldLabel" Text="Job Field" HeightRequest="30" FontSize="16" HorizontalOptions="Start" />
+        <StackLayout x:Name="jobAutoCompleteLayout">
+          <autocomplete:SfAutoComplete Watermark="Enter 'B' , 'S' , 'M' to start" TextHighlightMode="FirstOccurrence" PopupDelay="0"  TextSize="16" Margin="0,-10,0,0" x:Name="jobFieldAutoComplete" DropDownCornerRadius="5" SuggestionMode="StartsWith" AutoCompleteMode="Suggest" HeightRequest="45" MinimumPrefixCharacters="1" MaximumDropDownHeight="150"
+               AutoCompleteSource="{Binding }" DropDownItemHeight="35"/>
+        </StackLayout>
+      </StackLayout>
+     </Grid>
+   </ScrollView>
+</local:SampleView>

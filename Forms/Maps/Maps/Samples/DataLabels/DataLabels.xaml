@@ -1,0 +1,63 @@
+﻿<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfMaps.DataLabels"
+              xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfMaps"
+              xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+              xmlns:maps="clr-namespace:Syncfusion.SfMaps.XForms;assembly=Syncfusion.SfMaps.XForms">
+    <local:SampleView.BindingContext>
+        <sampleBrowser:DataLabelsViewModel />
+    </local:SampleView.BindingContext>
+    <local:SampleView.Content>
+        <Grid>
+            <maps:SfMaps HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  x:Name="Map" >
+                <maps:SfMaps.Layers >
+                    <maps:ShapeFileLayer x:Name="layer" ShowMapItems="True" Uri="usa_state.shp" ShapeIDPath="Name" ShapeIDTableField="STATE_NAME"
+                                     ItemsSource="{Binding DataSource}">
+                        <maps:ShapeFileLayer.ShapeSettings>
+                            <maps:ShapeSetting   ShapeValuePath="Name" ShapeColorValuePath="Type" >
+                            </maps:ShapeSetting>
+                        </maps:ShapeFileLayer.ShapeSettings>
+                        <maps:ShapeFileLayer.DataLabelSettings>
+                            <maps:DataLabelSetting IntersectionAction="None" SmartLabelMode="Trim"/>
+                        </maps:ShapeFileLayer.DataLabelSettings>
+						<maps:ShapeFileLayer.TooltipSettings>
+                            <maps:TooltipSetting ShowTooltip="True" ValuePath="Name"/>
+                        </maps:ShapeFileLayer.TooltipSettings>
+                    </maps:ShapeFileLayer>
+                </maps:SfMaps.Layers>
+            </maps:SfMaps>
+        </Grid>
+        
+    </local:SampleView.Content>
+
+    <local:SampleView.PropertyView>
+            <StackLayout Orientation="Vertical" >
+
+                <StackLayout Orientation="Vertical" >
+                <Label  x:Name="smartLabel" Text="SmartLabel" TextColor="Black" FontAttributes="Bold"/>
+                    <Picker x:Name="smartLabelPicker" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                        <Picker.Items>
+                        <x:String>None</x:String>
+                        <x:String>Trim</x:String>
+                        <x:String>Hide</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+            <StackLayout Orientation="Vertical" >
+                <Label  x:Name="intersectAction" Text="IntersectAction" TextColor="Black" FontAttributes="Bold"/>
+                <Picker x:Name="intersectActionPicker" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                    <Picker.Items>
+                        <x:String>None</x:String>
+                        <x:String>Trim</x:String>
+                        <x:String>Hide</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+        </StackLayout>
+        </local:SampleView.PropertyView>
+</local:SampleView>
+
+              
+             
+              
+              

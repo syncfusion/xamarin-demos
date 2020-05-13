@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:syncfusion="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPicker.XForms" x:Class="SampleBrowser.SfPicker.Themes">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Padding="20,10,20,0">
+        <syncfusion:SfPicker x:Name="picker" PickerWidth="300" SelectedItemFontSize="20" UnSelectedItemFontSize="20" HorizontalOptions="FillAndExpand" ShowHeader="true" HeaderText="SELECT A SPORT" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}" />
+    </StackLayout>
+</local:SampleView>

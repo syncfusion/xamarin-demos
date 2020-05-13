@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SampleList>
+  <FeatureSamples>
+    <Sample Name="Grouping" ImageId="datagridgrouping" Title="DataGrid Grouping"/>
+    <Sample Name="TooltipCustomization" ImageId="charttooltipcustomization" Title="Chart Tooltip"/>
+    <Sample Name="Configuration" ImageId="scheduleconfiguration" Title="Configuration" />
+    <Sample Name="DataSourceGettingStarted" ImageId="datasourcegettingstarted" Title="DataSource Getting Started"/>
+    <Sample Name="KanbanCustomization" ImageId="kanbancustomization" Title ="Kanban"/>
+    <Sample Name="DataUsage" ImageId="rangenavigatorcustomization"  Title="RangeNavigator"/>
+  </FeatureSamples>
+
+  <ControlSamples>
+    <Group Title="Chart" Type="Updated" Description="The Chart control can plot over 30 chart types ranging from line charts to specialized financial charts." ImageId="chart">
+      <Samples>
+        <Sample ImageId="line" Name="Line" Title="Line"/>
+        <Sample ImageId="stepline" Name="StepLine" Title="Step Line"/>
+        <Sample ImageId="spline" Name="Spline" Title="Spline"/>
+        <Sample ImageId="column" Name="Column" Title="Column"/>
+        <Sample ImageId="column" Name="Histogram" Title="Histogram"/>
+        <Sample ImageId="bar" Name="Bar" Title="Bar"/>
+        <Sample ImageId="area" Name="Area" Title="Area"/>
+        <Sample ImageId="steparea" Name="StepArea" Title="Step Area"/>
+        <Sample ImageId="splinearea" Name="SplineArea" Title="Spline Area"/>
+        <Sample ImageId="pie" Name="Pie" Title="Pie"/>
+        <Sample ImageId="semi_pie" Name="SemiPie" Title="Semi Pie"/>
+        <Sample ImageId="donut" Name="Doughnut" Title="Doughnut"/>
+        <Sample ImageId="semi_donut" Name="SemiDoughnut" Title="Semi Doughnut"/>
+        <Sample ImageId="pyramid" Name="Pyramid" Title="Pyramid"/>
+        <Sample ImageId="funnel" Name="Funnel" Title="Funnel"/>
+        <Sample ImageId="buble" Name="Bubble" Title="Bubble"/>
+        <Sample ImageId="scatter" Name="Scatter" Title="Scatter"/>
+        <Sample ImageId="rangecolumn" Name="RangeColumn" Title="Range Column"/>
+        <Sample ImageId="rangebar" Name="RangeBar" Title="Range Bar"/>
+        <Sample ImageId="rangearea" Name="RangeArea" Title="Range Area"/>
+        <Sample ImageId="splinerangearea" Name="SplineRangeArea" Title="Spline Range Area"/>
+        <Sample ImageId="candle" Name="Candle" Title="Candle"/>
+        <Sample ImageId="ohlc" Name="OHLC" Title="OHLC"/>
+        <Sample ImageId="polar" Name="Polar" Title="Polar"/>
+        <Sample ImageId="radar" Name="Radar" Title="Radar"/>
+        <Sample Name="StackingLine" Title="Stacked Line" />
+        <Sample Name="StackingLine100" Title="100% Stacked Line"/>
+        <Sample ImageId="stacked_col" Name="StackingColumn" Title="Stacked Column"/>
+        <Sample ImageId="col100" Name="StackingColumn100" Title="100% Stacked Column"/>
+        <Sample ImageId="stacked_bar" Name="StackingBar" Title="Stacked Bar"/>
+        <Sample ImageId="bar100" Name="StackingBar100" Title="100% Stacked Bar"/>
+        <Sample ImageId="stacked_area" Name="StackingArea" Title="Stacked Area"/>
+        <Sample ImageId="area100" Name="StackingArea100" Title="100% Stacked Area"/>
+      </Samples>
+      <Features>
+        <Feature ImageId="gradient" Name="GradientChart" Title="Gradient Color" Description="This sample showcases the Gradient feature."/>
+        <Feature ImageId="line" Name="Trendlines" Title="Trendlines" Description ="This sample showcases how to add trendlines to the chart." Type="New"/>
+        <Feature ImageId="annotation1" Name="AnnotationCustomization" Title="Annotation" Description ="Annotations used to display metadata about a chart or series at a specific point of interest in the plotting area."/>
+        <Feature ImageId="axiscrossing1" Name="AxisCrossing" Title="Axis Crossing" Description ="AxisCrossing feature changes the location at which the x-axis crosses the y-axis and vice versa."/>
+        <Feature ImageId="cataxis" Name="Category" Title="Category Axis" Description="This sample showcases the use of category axis in chart. Category axis is an indexed based axis that plots values based on its index in the data source."/>
+        <Feature ImageId="dateaxis" Name="Date" Title="DateTime Axis" Description="This sample showcases the use of date time axis."/>
+        <Feature ImageId="numaxis" Name="Numerical" Title="Numerical Axis" Description="This sample showcases the use of numerical axis in chart. Numerical axis is used to plot numeric values."/>
+        <Feature ImageId="logaxis" Name="Logarithmic" Title="Logarithmic Axis" Description="This sample showcases the use of logarithmic axis in chart."/>
+        <Feature ImageId="mulcircle" Name="StackedDoughnut" Title="Stacked Doughnut" Description="This sample showcases the use of stacked doughnut in chart."/>
+        <Feature ImageId="mulaxis" Name="MultipleAxis" Title="Multiple Axes" Description="This sample showcases the use of multiple axes in chart."/>
+        <Feature ImageId="stripline" Name="StripLines" Title="Strip Lines" Description="Strip lines are used to highlight specific range in the chart. They can be horizontal or vertical, and also be made to optionally repeat at specific intervals."/>
+        <Feature ImageId="trackball" Name="Trackball" Title="Trackball" Description="This sample showcases the trackball feature. Trackball displays the tooltip for the data points that are closer to the point where you touch on the chart area."/>
+        <Feature ImageId="tooltip" Name="TooltipCustomization" Title="Tooltip" Description ="This sample showcases tooltip capabilities in chart. Tooltip feature is used to show information about the segment, when you tap on the segment."/>
+        <Feature ImageId="datamarker" Name="DataMarkerCustomization" Title="Data Marker" Description="This sample showcases the customization of data markers. Data markers are used to provide information about the data points to the user."/>
+        <Feature ImageId="datapointsel" Name="DataPointSelection" Title="Data Point Selection" Description="Selection allows you to highlight a data point. You can select a data point by tapping on it."/>
+        <Feature ImageId="zoom" Name="ZoomingandPanning" Title="Zooming and Panning" Description="This sample showcases the zooming and panning capabilities of chart."/>
+        <Feature ImageId="techindicator" Name="TechnicalIndicators" Title="Technical Indicators" Description="Technical indicators are the base for technical analysis, which is used to determine the future of financial, stock or economic trends."/>
+        <Feature ImageId="autoscroll" Name="AutoScrolling" Title="Auto Scrolling" Description="This sample demonstrates the automatic scrolling of axis during real time updates."/>
+        <Feature ImageId="liveupdates" Name="LiveUpdate" Title="Live Update" Description="This sample illustrates the performance of SfChart in real time update scenario."/>
+        <Feature ImageId="verchart" Name="VerticalChart" Title="Vertical Chart" Description="This sample showcases vertical charts feature."/>
+      </Features>
+    </Group>
+
+    <Group Title="DataGrid" ImageId="datagrid" Description="The data grid control is a high-performance grid component that is used to display the data in a tabular format.">
+      <Samples>
+        <Sample Name="GridGettingStarted" Title="Getting Started"
+                Description="This sample showcases the SfDataGrid with ObservableCollection as the data source."/>
+        <Sample Name="Sorting" Title="Sorting"
+                Description="This sample showcases the sorting capabilities of data in SfDataGrid that allows you to sort against one or more columns and also provides Tri-state sorting functionality."/>
+        <Sample Name="Filtering" Title="Filtering"
+                Description="This sample showcases the filtering capabilities of data in SfDataGrid."/>
+        <Sample Name="FrozenView" Title="Frozen View"
+                Description="This sample showcases the freeze panes capability of SfDataGrid which provides support to freeze rows at the top and columns at the left."/>
+        <Sample Name="Grouping" Title="Grouping"
+                Description="This sample showcases the grouping capability of data in SfDataGrid."/>
+        <Sample Name="Selection" Title="Selection"
+                Description="This sample showcases the selection capability of SfDataGrid which provides selection mode options like Single, Multiple, SingleDeselect and None."/>
+        <Sample Name="Editing" Title="Editing"
+                Description="This sample showcases the editing capabilities of SfDataGrid which provides support to edit GridTextColumn, GridNumericColumn, GridPickerColumn and GridDateTimeColumn."/>
+        <Sample Name="Formatting" Title="Formatting"
+                Description="This sample showcases the columns capability of SfDataGrid which provides support for text and UserCellType columns."/>
+        <Sample Name="DragAndDrop" Title="Drag And Drop"
+                Description="This sample showcases the column and row drag and drop capabilities of SfDataGrid which provide user flexibility when interacting with the grid rows and grid columns."/>
+		<Sample Name="ContextMenu" Title="ContextMenu"
+                Description ="This sample showcases the ability to show a context menu using SfPopup in the SfDataGrid with options for sorting and grouping."/>   
+        <Sample Name="UnboundColumn" Title="Unbound Views" 
+                Description="This sample showcases the unbound column and unbound row capability of SfDataGrid. Unbound columns / rows are extra columns / rows that are generated but do not belong to the data source."/>
+        <Sample Name="Styles" Title="Styles"
+                Description="This sample showcases the styling capabilities of SfDataGrid. Styling allows you to change the visual appearance of the SfDataGrid and its inner elements."/>
+        <Sample Name="AutoRowHeight" Title="Auto Row Height"
+                Description="This sample showcases the auto row height feature of SfDataGrid which renders grid rows based on its content to improve the readability and occurs on-demand basis."/>
+        <Sample Name="LoadMore" Title="Load More"
+                Description="This sample showcases the load more capability of SfDataGrid that allows you to load a subset of data to the bound data source using built-in UI."/>
+        <Sample Name="PullToRefresh" Title="Pull To Refresh"
+                Description="This sample showcases the pull-to-refresh capability of SfDataGrid which allows you to refresh the data source upon pull-to-refresh action."/>
+        <Sample Name="Paging" Title="Paging"
+                Description="This sample showcases the paging capabilities of SfDataGrid using SfDataPager which allows you to load the data from the data source in an efficient way."/>
+        <Sample Name="Swiping" Title="Swiping"
+                Description="This sample showcases the swiping capabilities of SfDataGrid which allow you to load swipe views and associate them with custom actions."/>
+        <Sample Name="RenderingDynamicData" Title="Rendering Dynamic Data"
+                Description="This sample illustrates the frequent updates that occur in random cells across the Grid while keeping processor usage to a minimum in the SfDataGrid."/>
+        <Sample Name="IncrementalLoading" Title="Incremental Loading"
+                Description="This sample showcases the incremental loading capability of SfDataGrid in which a subset of data is fetched from the services in runtime when reaching the end of the list."/>
+        <Sample Name="Exporting" Title="Exporting"
+                Description="This sample showcases the excel and pdf exporting capabilities of SfDataGrid. SfDataGrid also provides you various customization options for exporting."/>
+      </Samples>
+    </Group>
+
+    <Group Title="TreeView" ImageId="treeview" Description="TreeView is a data-oriented control that displays data in a hierarchical structure with expanding and collapsing nodes.">
+      <Samples>
+        <Sample Name="TreeGettingStarted" Title="Getting Started" 
+                Description="This sample showcases the basic view of SfTreeView with some nodes added in unbound mode."/>
+        <Sample Name="TreeNodeImages" Title="Node with Images"
+                   Description="This sample showcases tree nodes with images."/>
+        <Sample Name="TreeSelection" Title="Selection" 
+                Description="This sample showcases the selection feature of SfTreeView."/>
+        <Sample Name="TreeTemplate" Title="Template" />
+      </Samples>
+    </Group>
+    
+   <Group Title="AutoComplete"  ImageId="autocomplete" Description ="AutoComplete functionality provides suggestions to the user while typing. ">
+      <Samples>
+        <Sample Name="AutoComplete" Title="Getting Started"/>
+        <Sample Name="TokensSamplePage" Title="Multiple Selection"/>
+        <Sample Name="ToleratingTyposSamplePage" Title="Tolerating Typos"/>
+        <Sample Name="DiacriticSamplePage" Title="Diacritics Sense"/>
+      </Samples>
+    </Group>
+
+	<Group Title="ComboBox"  ImageId="combobox" Description ="The SfComboBox control allows the user to select an item either type a value directly or select a value from the list.">
+      <Samples>
+        <Sample Name="ComboBox" Title="Getting Started"/>
+      </Samples>
+    </Group>
+
+    <Group Title="CircularGauge" Description="Visualize numeric data using circular gauge control." ImageId="circulargauge" >
+      <Samples>
+        <Sample Name="CircularGauge" Title="Circular Gauge" />
+        <Sample Name="CustomizationSample" Title="Customization" />
+        <Sample Name="DirectionCompass" Title="Direction Compass" />
+        <Sample Name="GradientRange" Title="Gradient Range" />
+        <Sample Name="Pointers" Title="Pointer Customization" />
+        <Sample Name="MultipleScale" Title="Multiple Scales" />
+        <Sample Name="CircularGaugeAnnotation" Title="Annotation"/>
+      </Samples>
+    </Group>
+
+    <Group Title="Schedule" Description="The Schedule control is used to schedule and manage the appointments through an intuitive user interface to plan and manage the events or appointments in an efficient way." ImageId="schedule" >
+      <Samples>
+        <Sample Name="ScheduleGettingStarted" Title="Getting Started" Description="Showcases a simple schedule with data source displayed in day, workweek, week, and month views."/>
+        <Sample Name="ScheduleTypes" Title="Schedule View" Description="Showcases the date navigation support with appointment editing such as start time, end time, subject, time zone, and more. " />
+        <Sample Name="Recurrence" Title="Recurrence" Description="Showcases the recurring appointments."  />
+        <Sample Name="Timetable" Title="Timetable" Description="Showcases the working hours with blocking timeslots." />
+        <Sample Name="AgendaView" Title="Agenda View" Description="Showcases the agenda view support of schedule where specific date appointments can be viewed below the month view."  />
+        <Sample Name="DragDrop" Title="Drag and Drop" Description="Showcases the capability of rescheduling appointment through drag-and-drop operations." />
+        <Sample Name="Customization" Title="Customization" Description="Showcases the capability of appointment customization using custom view." />
+        <Sample Name="Configuration" Title="Configuration" Description="Showcases the separation of working and non-working hours with different colors with blocking timeslots in day, week, and workweek views. It shows the blackout of a particular date and week number support in month view." />
+        <Sample Name="Localization" Title="Localization" Description="Showcases the localization support of schedule." />
+      </Samples>
+    </Group>
+
+    <Group Title="ImageEditor" Description="ImageEditor allows user to editing the images like adding shapes, text and rotating." ImageId="imageeditor" >
+      <Samples>
+        <Sample Name="ImageEditor" Title="Image Editor" />
+        <Sample Name="Serialization" Title="Serialization" />
+        <Sample Name="BannerCreator" Title="Banner Creator"  />
+        <Sample Name="ImageEditorCustomization" Title="Customization"/>
+        <Sample Name="ImageEditorCustomView" Title="CustomView"/>
+      </Samples>
+    </Group>
+
+    <Group Title="PDFViewer" Description="PDF viewer is a new control that allows PDF documents to be viewed within your Xamarin Android application." ImageId="pdfviewer">
+      <Samples>
+        <Sample Name="PdfViewerDemo" Title="Getting Started" />
+        <Sample Name="CustomToolBarPdfViewerDemo" Title="Custom Toolbar"  />
+        <Sample Name="PageByPage" Title="Single Page View"  />
+        <Sample Name="FillAndSign" Title="Fill And Sign" />
+      </Samples>
+    </Group>
+
+    <Group Title="Diagram" Description="The diagram control allows to create different types of diagrams such as flow charts, use case diagrams, workflow process diagrams, and more." ImageId="diagram">
+      <Samples>
+        <Sample Name="OrganizationChart" Title="Organization Chart" />
+        <Sample Name="MindMap" Title="Mind Map" />
+        <Sample Name="FlowDiagram" Title="Flow Diagram"/>
+        <Sample Name="NodeAnnotation" Title="Node Customization"/>
+        <Sample Name="Connectors" Title="Connectors"/>
+      </Samples>
+    </Group>
+
+    <Group Title="TabView" Description="Tab view control allows the user to navigate and switch between tabs " ImageId="tabview"  >
+      <Samples>
+        <Sample Name="TabViewGettingStarted" Title="Getting Started" />
+      </Samples>
+    </Group>
+
+	<Group Title="SegmentedControl" ImageId="segmentedview" Description ="The segmented control provides option to choose from a linear set of two or more segments, each of which functions as a mutually exclusive button.">
+      <Samples>
+        <Sample Name="SegmentViewGettingStarted" Title="Getting Started" />
+      </Samples>
+    </Group>
+
+    <Group Title="Popup" ImageId="popuplayout" Description="SfPopupLayout allows the user to display an alert message with the customizable buttons or load any desired view inside the pop-up.">
+      <Samples>
+        <Sample Name="PopupGettingStarted" Title="Onboard Help"
+                Description="This sample showcases the SfPopup used as overlays to instruct the users using the app for the first time."/>
+        <Sample Name="PopupCustomizations" Title="Popup Customization" 
+                Description="This sample showcases the various layouts of the SfPopup that comes in handy in a sleek ticket booking app."/>
+        <Sample Name="DetailsView" Title="Popup Menu" 
+                  Description="This sample showcases the relative positioning capalitites of the SfPopup that comes in handy in a dialer application."/>
+      </Samples>
+    </Group>
+
+    <Group Title="NavigationDrawer"  Description="NavigationDrawer is a sliding panel menu that comes out from the edge of the window and allows to have the contents in a hidden panel." ImageId="navigationdrawer">
+      <Samples>
+        <Sample Name="NavigationDrawer" Title="Getting Started" />
+      </Samples>
+    </Group>
+
+    <Group Title="Carousel" ImageId="carousel"  Description ="Carousel control allows navigating through image data in an interactive way so that they can be viewed or selected">
+      <Samples>
+        <Sample Name="Carousel" Title="Getting Started" />
+        <Sample Name="LoadMore_Sample" Title="LoadMore" />
+      </Samples>
+    </Group>
+
+    <Group Title="DataForm" ImageId="dataform" Description="The DataForm control helps to develop various forms such as login, reservation and data entry, etc.It displays properties in list or grid layout.">
+      <Samples>
+        <Sample Name="DataFormGettingStarted" Title="Getting Started" Description="This sample showcases simple DataForm by loading a set of fields."/>
+        <Sample Name="ContactForm" Title="Contact Form" Description="This sample showcases read only and layout customization capabilities of DataForm."/>
+      </Samples>
+    </Group>
+
+    <Group Title="Calendar" ImageId="calendar"  Description ="Calendar is a user interface component that displays Gregorian calendar. This component allows the user to select a date. It also provides a gesture-friendly UI to perform operations such as navigations, events, and more. " >
+      <Samples>
+        <Sample Name="CalendarGettingStarted" ImageId="view" Title="Getting Started" Description ="Showcases different view modes support: month and year views." />
+        <Sample Name="CalendarBlackOutDates" ImageId="blackout" Title="Blackout dates" Description ="Showcases the specific date blackout capability of calendar."/>
+        <Sample Name="InlineEvents" ImageId="Inline" Title="Inline Events" Description ="Showcases the inline events in inline view mode and agenda view mode in a specific date of the month."/>
+        <Sample Name="CalendarLocalization" ImageId="localization" Title="Localization" Description ="Showcases localization and globalization."/>
+        <Sample Name="CalendarConfiguration" ImageId="custom" Title="Customization" Description ="Showcases the month cell customization using custom view with restriction support to navigate beyond the specified minimum and maximum dates." />
+      </Samples>
+    </Group>
+
+    <Group Title="NumericTextBox" ImageId="numerictextbox" Description ="NumericTextBox is an advanced version of the EditText control that restricts input to numeric values">
+      <Samples>
+        <Sample Name="NumericTextBox" Title="Getting Started" />
+      </Samples>
+    </Group>
+
+    <Group Title="Picker" Description="A SfPicker control allows user to pick an item among a list of Items that can be customize or template with custom view." ImageId="picker">
+      <Samples>
+        <Sample Name="Picker" Title="Getting Started"/>
+      </Samples>
+    </Group>
+
+    <Group Title="MaskedEdit" Description="The MaskedEdit control allows the user to restrict the input to certain types of characters/text/numbers using a mask pattern." ImageId="maskededit">
+      <Samples>
+        <Sample Name="SfMaskedEditText" Title="MaskedEdit" />
+      </Samples>
+    </Group>
+
+    <Group Title="CheckBox" Description="The check box is a selection control that allows users to select one or more options from a set." ImageId="checkbox">
+      <Samples>
+        <Sample  Name="CheckBoxSample" Title="CheckBox" />
+      </Samples>
+    </Group>
+	
+    <Group Title="NumericUpDown" ImageId="numericupdown" Description="Similar to NumericTextBox control, NumericUpDown control restricts input to numeric values and provides up, down repeat buttons to increase or decrease numerical values">
+      <Samples>
+        <Sample Name="NumericUpDown" Title="Getting Started" />
+      </Samples>
+    </Group>
+
+    <Group Title="Kanban" Description="The Kanban control is an efficient way to visualize a workflow at each stage of its completion." ImageId="kanban">
+      <Samples>
+        <Sample Name="KanbanGettingStarted" Title="Getting Started"/>
+        <Sample Name="KanbanCustomization" Title ="Customization"/>
+      </Samples>
+    </Group>
+
+    <Group Title="RangeNavigator" ImageId="rangenavigator" Description="The Range Navigator control provides an intuitive interface for selecting a smaller range from a larger collection.">
+      <Samples>
+        <Sample Name="RangeNavigator" Title="Getting Started"/>
+        <Sample Name="DataUsage" Title="Customization"/>
+      </Samples>
+    </Group>
+
+    <Group Title="LinearGauge" Description="Visualize numeric data using linear gauge control." ImageId="lineargauge" >
+      <Samples>
+        <Sample Name="LinearGauge" Title="Linear Gauge" />
+        <Sample Name="ScalesAndPointers" Title="Scales and Pointers" />
+        <Sample Name="Ranges" Title="Ranges" />
+        <Sample Name="Annotations" Title="Annotations" />
+      </Samples>
+    </Group>
+
+    <Group Title="DigitalGauge" Description="Visualize numeric data using digital gauge control." ImageId="digitalgauge" >
+      <Samples>
+        <Sample Name="DigitalGauge" Title="DigitalGauge"/>
+      </Samples>
+    </Group>
+
+    <Group Title="SunburstChart" Description="Sunburst Chart is useful for visualizing hierarchical data." ImageId="sunburst">
+      <Samples>
+        <Sample Name="SunburstChart" Title="Getting Started"/>
+       <Sample Name="DrillDown" Title="Drill down" />
+       <Sample Name="SunburstSelection" Title="Selection"/>
+      </Samples>
+    </Group>
+
+    <Group Title="Maps" Description="Maps provides a graphical representation of geographical data. It is used to represent the statistical data of a particular geographical area on Earth." ImageId="maps" >
+      <Samples>
+        <Sample Name="BubbleVisualization" Title="BubbleVisualization" />
+        <Sample Name="ColorMappings" Title="ColorMappings" />
+        <Sample Name="DataMarkers" Title="DataMarkers"/>               
+        <Sample Name="TicketBooking" Title="TicketBooking" />
+        <Sample Name="OSM" Title="Open Street Map" />
+        <Sample Name="Sublayer" Title="Sublayer"/>
+        <Sample Name="DataLabels" Title="DataLabels"/>
+        <Sample Name="Drilldown" Title="Drilldown" />
+      </Samples>
+    </Group>
+
+    <Group Title="TreeMap" Description="TreeMap is ideal for visualizing large amounts of data. TreeMap holds a set of nested nodes to display hierarchical data." ImageId="treemap"  >
+      <Samples>
+        <Sample Name="FlatCollection" Title="FlatCollection" />
+        <Sample Name="Hierarchical" Title="Hierarchical" />
+        <Sample Name="DataLabel" Title="DataLabel" />
+        <Sample Name="TreeMapDrilldown" Title="Drilldown"/>
+      </Samples>
+    </Group>
+
+    <Group Title="Barcode" Description="Barcode provides a perfect approach to encode texts by using supported symbol types that comprises one dimensional Barcodes and two dimensional Barcodes." ImageId="barcode">
+      <Samples>
+        <Sample Name="QRCode" Title="QRCode"/>
+        <Sample Name="DataMatrix" Title="DataMatrix"/>
+        <Sample Name="Code39" Title="Code39"/>
+        <Sample Name="Code39Extended" Title="Code39Extended"/>
+        <Sample Name="Code93" Title="Code93"/>
+        <Sample Name="Code93Extended" Title="Code93Extended"/>
+        <Sample Name="Codabar" Title="Codabar"/>
+        <Sample Name="Code11" Title="Code11"/>
+        <Sample Name="Code32" Title="Code32"/>
+        <Sample Name="Code128A" Title="Code128A"/>
+        <Sample Name="Code128B" Title="Code128B"/>
+        <Sample Name="UpcBarcode" Title="UpcBarcode"/>
+        <Sample Name="Code128C" Title="Code128C"/>
+      </Samples>
+    </Group>
+
+    <Group Title="SparkLine" ImageId="sparkline" Description="The sparkline control presents trends and variations associated with a measurement, such as average temperature or stock market activity, in a simple, light-weighted, condensed form." >
+      <Samples>
+        <Sample Name="SparkLine" Title="SparkLine"/>
+      </Samples>
+    </Group>
+
+    <Group Title="XlsIO" ImageId="xlsio" Description="XlsIO is a .NET class library that can read, write and modify Microsoft Excel documents.">
+      <Samples>
+        <Sample Name="CreateSpreadsheetPage"  Title="Create Spreadsheet" ImageId="createspreadsheet" Description ="XlsIO supports to create an Excel document without any dependency of Microsoft Excel in few lines of code." />
+        <Sample Name="ChartsPage" Title="Charts" ImageId="excelchart" Description ="Create and manipulate all types of Excel charts with elements like chart title, legend, axis title, data labels, line styles, etc." />
+        <Sample Name="ImportCollectionObjectsPage" Title="Collection Objects" ImageId="importCLRobject" Description ="Collection objects usually holds a set of instance variables or properties, also known as attributes. XlsIO allows to import data directly from Collection objects." />
+        <Sample Name="ImportNestedCollectionPage" Title="Import Nested CollectionPage" ImageId="importCLRobject" Description ="XlsIO allows to import data directly from Nested Collection with Layout and Group options." />
+        <Sample Name="DataTablePage" Title="DataTable" ImageId="datatable" Description ="XlsIO supports import/export DataTable from/to an Excel worksheet." />
+		<Sample Name="PerformancePage" Title="Performance" ImageId="performance" Description ="XlsIO supports performance optimization for large data." />
+        <Sample Name="ExcelToPDFPage" Title="Excel to PDF" ImageId="exceltopdf" Description ="XlsIO supports conversion of excel to PDF." />
+        <Sample Name="FiltersPage" Title="Filters" ImageId="filters" Description ="XlsIO supports data filtering based on text, date and custom options." />
+        <Sample Name="FindAndReplace" Title="Find and Replace" ImageId="findandreplace" Description ="XlsIO supports to find the range of a value in the worksheet and replace it with a new value." />
+        <Sample Name="FormulasPage" Title="Formulas" ImageId="formulas" Description ="XlsIO has support to read, write and calculate formulas. The built-in calculation engine can quickly evaluate formula cell values at runtime." />        
+        <Sample Name="ImportXMLPage" Title="Import XML Data" ImageId="importxml" Description ="XlsIO supports single line of code to import XML data into an Excel worksheet." />      
+		<Sample Name="WorksheetToImagePage" Title="Worksheet To Image" ImageId="worksheettoimage" Description ="XlsIO supports conversion of worksheets to images." />
+        <Sample Name="WorksheetToHTMLPage" Title="Worksheet To HTML" ImageId="worksheettohtml" Description ="XlsIO supports conversion of worksheets to HTML pages." />
+      </Samples>
+    </Group>
+
+    <Group Title="DocIO" ImageId="docio" Description="DocIO is a .NET class library that can read, write and modify Microsoft Word documents." Type ="Updated">
+      <Samples>
+        <Sample Name="GettingStartedDocIO" Title="Getting Started" ImageId = "generateword"  Description = "" />
+        <Sample Name="BuiltInStyle" Title="Built-in Style" ImageId = "builtinstyle" Description = "" />
+        <Sample Name="CustomStyle" Title="Custom Style" ImageId = "customstyle" Description = "" />
+        <Sample Name="BookmarkNavigation" Title="Bookmark Navigation" ImageId = "bookmarknavigation" Description = "" />
+        <Sample Name="PieChart" Title="Pie Chart" ImageId = "piechart" Description = ""/>
+        <Sample Name="BarChart" Title="Bar Chart" ImageId = "barchart" Description = ""/>
+        <Sample Name="MailMerge" Title="Mail Merge" ImageId = "letterformat" Description = ""/>
+        <Sample Name="EmployeeList_MailMerge" Title="Employee Report" ImageId = "datasourcegettingstarted" Description = ""/>
+        <Sample Name="NestedMailMerge" Title="Nested Mail Merge" ImageId = "letterformat" Description = "" />
+        <Sample Name="WordToHTML" Title="Word to HTML" ImageId = "wordtohtml" Description = "" />
+        <Sample Name="FormFillingAndProtection" Title="Form Filling and Protection" ImageId = "protectionandformfilling" Description = "" />
+        <Sample Name="XMLMapping" Title="XML Mapping" ImageId = "xmlmapping" Description = "" />
+		<Sample Name="WordToPDF" Title="Word to PDF" ImageId = "wordtopdf" Description = "" Type ="Updated"/>
+		<Sample Name="CreateEquation" Title="Create Equation" ImageId = "Equation" Description = ""/>
+		<Sample Name="FormatTable" Title="Format Table" ImageId = "builtinstyle" Description = "" />
+		<Sample Name="GroupShapes" Title="Group Shapes" ImageId = "groupshapes" Description = "" />
+      </Samples>
+    </Group>
+
+    <Group Title="Presentation" ImageId="presentation" Description="Presentation is a .NET class library that can read, write and modify Microsoft PowerPoint files (*.pptx only)." Type ="Updated" >
+      <Samples>
+        <Sample Name="GettingStartedPresentation" Title="Getting Started" ImageId="gettingstartedsample" Description ="This sample demonstrates how to create a PowerPoint presentation by adding text with simple text formatting." />
+        <Sample Name="PPTXToImage" Title="PPTX To Image" ImageId="tablesample" Description ="This sample demonstrates how to convert the PowerPoint slide to an image." />
+        <Sample Name="PPTXToPDF" Title="PPTX To PDF" ImageId="tablesample" Description ="This sample demonstrates how to convert a PowerPoint presentation to PDF." />
+		<Sample Name="WriteProtection" Title="Write Protection" ImageId="imagesample" Description ="This sample demonstrates how to set a write protection for a PowerPoint presentation."/>
+        <Sample Name="ImagesPresentation" Title="Images" ImageId="imagesample" Description ="This sample demonstrates how to add an image in PowerPoint presentation." />
+        <Sample Name="SlidesPresentation" Title="Slides" ImageId="slidesample" Description ="This sample demonstrates how to create a slide with predefined layouts, like Microsoft PowerPoint." />
+        <Sample Name="TablesPresentation" Title="Tables" ImageId="tablesample" Description ="This sample demonstrates how to create a table with specified number of rows and columns in PowerPoint presentation for displaying tabular data." />
+        <Sample Name="ChartsPresentation" Title="Charts" ImageId="chartssample" Description ="This sample demonstrates how to create a pie chart in PowerPoint presentation." />
+        <Sample Name="CommentsPresentation" Title="Comments" ImageId="commentssample" Description ="This sample demonstrates how to add comments in PowerPoint presentation for reviewing and updating feedbacks." />
+		<Sample Name="ConnectorsPresentation" Title="Connectors" ImageId="connectorsssample" Description ="This sample demonstrates how to insert a connectors in a PowerPoint slide." />
+		<Sample Name="HeaderAndFooterPresentation" Title="Header And Footer" ImageId="HeaderAndFootersample" Description ="This sample demonstrates how to insert a header and footer in a PowerPoint presentation."  Type ="New" />
+		<Sample Name="CreateAnimationPresentation" Title="CreateAnimation" ImageId="createanimationsample" Description ="This sample demonstrates how to create animation in PowerPoint presentation"  />
+		<Sample Name="ModifyAnimationPresentation" Title="ModifyAnimation" ImageId="modifyanimationsample" Description ="This sample demonstrates how to modify the animation in PowerPoint presentation" />
+		<Sample Name="SlideTransitionPresentation" Title="SlideTransition" ImageId="slidetransitionsample" Description ="This sample demonstrates how to create the transition effects in PowerPoint presentation slides" />
+      </Samples>
+    </Group>
+
+    <Group Title="PDF" ImageId="pdf" Description="PDF is a .NET class library that can create and modify PDF files.">
+      <Samples>
+        <Sample Name="GettingStartedPDF" Title="Getting Started" ImageId="gettingstartedpdf" Description="This sample demonstrates how to create a simple PDF document with text and images." />
+        <Sample Name="Barcode" Title="Barcode" ImageId="barcodepdf" Description="This sample demonstrates how to create various barcode in a PDF document." />
+        <Sample Name="Stamping" Title="Stamping" ImageId="stamppdf" Description ="This sample demonstrates how to stamp or watermark an existing PDF document." />
+        <Sample Name="Booklet" Title="Booklet" ImageId="bookletpdf" Description="This sample demonstrates how to create a booklet from an existing PDF document." />
+        <Sample Name="TableFeatures" Title="Table Features" ImageId="tablepdf" Description="This sample demonstrates how to create borderless tables in a PDF document." />
+        <Sample Name="ImageInsertion" Title="Image Insertion" ImageId="tablepdf" Description="This sample demonstrates how to insert images in a PDF document." />
+        <Sample Name="DigitalSignature" Title="Digital Signature" ImageId="digitalsignaturepdf" Description="This sample demonstrates how to digitally sign PDF document using a .pfx certificate."/>
+        <Sample Name="DigitalSignatureValidation" Title="Digital Signature Validation" ImageId="digitalsignaturepdf" Description="This sample illustrates how to validate the digitally signed PDF document signature." />
+        <Sample Name="Encryption" Title="Encryption" ImageId="digitalsignaturepdf" Description="This sample demonstrates how to create a secure PDF document." />
+		<Sample Name="RTLSupport" Title="RTL Text" ImageId="digitalsignaturepdf" Description="This sample demonstrates drawing right-to-left language text in the PDF document." />
+		<Sample Name="Conformance" Title="PDF Conformance" ImageId="digitalsignaturepdf" Description="This sample demonstrates various PDF conformance support in Essential PDF."/>
+		<Sample Name="ZugFerd" Title="ZUGFeRD Invoice" ImageId="digitalsignaturepdf" Description="This sample demonstrates how o create a ZUGFeRD PDF document."/>
+		<Sample Name="OpenTypeFont" Title="OpenType Font" ImageId="digitalsignaturepdf" Description="This sample demonstrates how to draw a text with OpenType font in a PDF document."  />
+      </Samples>
+    </Group>
+
+    <Group Title="RadialMenu" ImageId="radialmenu" Description="RadialMenu displays menu in a circular layout. It can expose more menu items in the same space than traditional menus" >
+      <Samples>
+        <Sample Name="RadialMenuGettingStarted" Title="Getting Started" />
+        <Sample Name="RadialMenuCustomization" Title="Customization" />
+        <Sample Name="RadialShare" Title="Contextual Menu" />
+      </Samples>
+    </Group>
+
+    <Group Title="PullToRefresh" ImageId="pulltorefresh" Description="SfPullToRefresh is a pullable panel which on pulling down the main content in order to refresh the data in the application."  >
+      <Samples>
+        <Sample Name="PullToRefreshDemo" Title="Weather Data" />
+        <Sample Name="ListViewInPullToRefresh" Title="ListView Refresh" />
+        <Sample Name="SfDataGridInPullToRefresh" Title="SfDataGrid Refresh" />
+      </Samples>
+    </Group>
+
+    <Group Title="ProgressBar" Description="Customizable visual indicating the progress of the operation." ImageId="progressbar">
+      <Samples>
+        <Sample Name="Circular" Title="Circular"/>
+        <Sample Name="Linear" Title ="Linear"/>
+      </Samples>
+    </Group>
+
+    <Group Title="BusyIndicator" ImageId="busyindicator" Description ="Animated controls can be used to indicate busy status during application loading, data processing/validation, etc" >
+      <Samples>
+        <Sample Name="BusyIndicator" Title="Getting Started" />
+      </Samples>
+    </Group>
+
+    <Group Title="Rating" ImageId="rating" Description ="Rating control provides the number of stars that represents a rating." >
+      <Samples>
+        <Sample Name="Rating" Title="Getting Started" />
+      </Samples>
+    </Group>
+
+    <Group Title="Rotator" ImageId="rotator"  Description ="Rotator is a data control used to display image data and navigate through them. The images can be selected either by Thumbnail or by Dots support.">
+      <Samples>
+        <Sample Name="Rotator" Title="Getting Started" />
+      </Samples>
+    </Group>
+
+    <Group Title="RangeSlider" ImageId="rangeslider" Description ="RangeSlider control allows you to select the range of value within the specified minimum and maximum limits. he range can be selected by moving the Thumb control along a track">
+      <Samples>
+        <Sample Name="GettingStarted" Title="Getting Started" />
+        <Sample Name="Slider" Title="SliderView" />
+        <Sample Name="Equalizer" Title="Equalizer" />
+      </Samples>
+    </Group>
+
+    <Group Title="DataSource" ImageId="datasource"
+           Description="The DataSource is a non-UI component that consumes raw data and processes data operations such as sorting, filtering, and grouping.">
+      <Samples>
+        <Sample Name="DataSourceGettingStarted" Title="Getting Started" Description="This sample showcases the DataSource control bound with ObservableCollection."/>
+        <Sample Name="DataSourceSorting" Title="Sorting" Description="This sample showcases the sorting capabilities of the DataSource control."/>
+        <Sample Name="DataSourceGrouping" Title="Grouping" Description="This sample showcases the grouping capabilities of the DataSource control."/>
+      </Samples>
+    </Group>
+
+    <Group Title="Calculate" ImageId="calculate" Description="Calculate is an independent class library that allows you to provide extensive calculation support to your business objects.">
+      <Samples>
+        <Sample Name="FunctionsLibrary" Title="Functions Library" />
+        <Sample Name="CalcQuick" Title="CalcQuick Calculation" />
+      </Samples>
+    </Group>
+  </ControlSamples>
+</SampleList>

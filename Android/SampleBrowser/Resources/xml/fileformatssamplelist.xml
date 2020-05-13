@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SampleList>
+  <FeatureSamples>
+    <Sample Name="Grouping" ImageId="datagridgrouping" Title="DataGrid Grouping"/>
+    <Sample Name="TooltipCustomization" ImageId="charttooltipcustomization" Title="Chart Tooltip"/>
+    <Sample Name="Configuration" ImageId="scheduleconfiguration" Title="Configuration" />
+    <Sample Name="DataSourceGettingStarted" ImageId="datasourcegettingstarted" Title="DataSource Getting Started"/>
+    <Sample Name="KanbanCustomization" ImageId="kanbancustomization" Title ="Kanban"/>
+    <Sample Name="DataUsage" ImageId="rangenavigatorcustomization"  Title="RangeNavigator"/>
+  </FeatureSamples>
+
+  <ControlSamples>
+    <Group Title="PDFViewer" Description="PDF viewer is a new control that allows PDF documents to be viewed within your Xamarin Android application." ImageId="pdfviewer">
+      <Samples>
+        <Sample Name="PdfViewerDemo" Title="Getting Started" />
+        <Sample Name="CustomToolBarPdfViewerDemo" Title="Custom Toolbar" />
+      </Samples>
+    </Group>
+
+    <Group Title="XlsIO" ImageId="xlsio" Description="XlsIO is a .NET class library that can read, write and modify Microsoft Excel documents.">
+      <Samples>
+        <Sample Name="CreateSpreadsheetPage"  Title="Create Spreadsheet" ImageId="createspreadsheet" Description ="XlsIO supports to create an Excel document without any dependency of Microsoft Excel in few lines of code." />
+        <Sample Name="ChartsPage" Title="Charts" ImageId="excelchart" Description ="Create and manipulate all types of Excel charts with elements like chart title, legend, axis title, data labels, line styles, etc." />
+        <Sample Name="FormulasPage" Title="Formulas" ImageId="formulas" Description ="XlsIO has support to read, write and calculate formulas. The built-in calculation engine can quickly evaluate formula cell values at runtime." />
+        <Sample Name="ImportCollectionObjectsPage" Title="Collection Objects" ImageId="importCLRobject" Description ="CLR objects usually holds a set of instance variables or properties, also known as attributes. XlsIO allows to import data directly from CLR objects." />
+		<Sample Name="ImportNestedCollectionPage" Title="Import Nested CollectionPage" ImageId="importCLRobject" Description ="XlsIO allows to import data directly from Nested Collection with Layout and Group options." />
+        <Sample Name="DataTablePage" Title="DataTable" ImageId="datatable" Description ="XlsIO supports import/export DataTable from/to an Excel worksheet."/>
+		<Sample Name="PerformancePage" Title="Performance" ImageId="performance" Description ="XlsIO supports performance optimization for large data." />
+		<Sample Name="ExcelToPDFPage" Title="Excel to PDF" ImageId="exceltopdf" Description ="XlsIO supports conversion of excel to PDF." />
+        <Sample Name="ImportXMLPage" Title="Import XML Data" ImageId="importxml" Description ="XlsIO supports single line of code to import XML data into an Excel worksheet." />
+        <Sample Name="FiltersPage" Title="Filters" ImageId="filters" Description ="XlsIO supports data filtering based on text, date and custom options." />
+        <Sample Name="FindAndReplace" Title="Find and Replace" ImageId="findandreplace" Description ="XlsIO supports to find the range of a value in the worksheet and replace it with a new value." />
+		<Sample Name="WorksheetToImagePage" Title="Worksheet To Image" ImageId="worksheettoimage" Description ="XlsIO supports conversion of worksheets to images."/>
+        <Sample Name="WorksheetToHTMLPage" Title="Worksheet To HTML" ImageId="worksheettohtml" Description ="XlsIO supports conversion of worksheets to HTML pages."/>
+      </Samples>
+    </Group>
+
+    <Group Title="DocIO" ImageId="docio" Description="DocIO is a .NET class library that can read, write and modify Microsoft Word documents." Type ="Updated">
+      <Samples>
+        <Sample Name="GettingStartedDocIO" Title="Getting Started" ImageId = "generateword"  Description = "" />
+        <Sample Name="BuiltInStyle" Title="Built-in Style" ImageId = "builtinstyle" Description = "" />
+        <Sample Name="CustomStyle" Title="Custom Style" ImageId = "customstyle" Description = "" />
+        <Sample Name="BookmarkNavigation" Title="Bookmark Navigation" ImageId = "bookmarknavigation" Description = "" />
+        <Sample Name="PieChart" Title="Pie Chart" ImageId = "piechart" Description = ""/>
+        <Sample Name="BarChart" Title="Bar Chart" ImageId = "barchart" Description = ""/>
+        <Sample Name="MailMerge" Title="Mail Merge" ImageId = "letterformat" Description = ""/>
+		<Sample Name="EmployeeList_MailMerge" Title="Employee Report" ImageId = "datasourcegettingstarted" Description = ""/>
+        <Sample Name="NestedMailMerge" Title="Nested Mail Merge" ImageId = "letterformat" Description = "" />
+        <Sample Name="WordToHTML" Title="Word to HTML" ImageId = "wordtohtml" Description = "" />
+        <Sample Name="FormFillingAndProtection" Title="Form Filling and Protection" ImageId = "protectionandformfilling" Description = "" />
+        <Sample Name="XMLMapping" Title="XML Mapping" ImageId = "xmlmapping" Description = "" />
+		<Sample Name="WordToPDF" Title="Word to PDF" ImageId = "wordtopdf" Description = "" Type ="Updated"/>
+		<Sample Name="CreateEquation" Title="Create Equation" ImageId = "Equation" Description = "" />
+		<Sample Name="FormatTable" Title="Format Table" ImageId = "builtinstyle" Description = "" Type ="Updated" />
+		<Sample Name="GroupShapes" Title="Group Shapes" ImageId = "groupshapes" Description = "" />
+      </Samples>
+    </Group>
+
+    <Group Title="Presentation" ImageId="presentation" Description="Presentation is a .NET class library that can read, write and modify Microsoft PowerPoint files (*.pptx only)." Type ="Updated" >
+      <Samples>
+        <Sample Name="GettingStartedPresentation" Title="Getting Started" ImageId="gettingstartedsample" Description ="This sample demonstrates how to create a PowerPoint presentation by adding text with simple text formatting." />
+        <Sample Name="PPTXToImage" Title="PPTX To Image" ImageId="tablesample" Description ="This sample demonstrates how to convert the PowerPoint slide to an image." />
+        <Sample Name="PPTXToPDF" Title="PPTX To PDF" ImageId="tablesample" Description ="This sample demonstrates how to convert a PowerPoint presentation to PDF." />
+		<Sample Name="WriteProtection" Title="Write Protection" ImageId="imagesample" Description ="This sample demonstrates how to set a write protection for a PowerPoint presentation."/>
+        <Sample Name="ImagesPresentation" Title="Images" ImageId="imagesample" Description ="This sample demonstrates how to add an image in PowerPoint presentation." />
+        <Sample Name="SlidesPresentation" Title="Slides" ImageId="slidesample" Description ="This sample demonstrates how to create a slide with predefined layouts, like Microsoft PowerPoint." />
+        <Sample Name="TablesPresentation" Title="Tables" ImageId="tablesample" Description ="This sample demonstrates how to create a table with specified number of rows and columns in PowerPoint presentation for displaying tabular data." />
+        <Sample Name="ChartsPresentation" Title="Charts" ImageId="chartssample" Description ="This sample demonstrates how to create a pie chart in PowerPoint presentation." />
+        <Sample Name="CommentsPresentation" Title="Comments" ImageId="commentssample" Description ="This sample demonstrates how to add comments in PowerPoint presentation for reviewing and updating feedbacks." />
+		<Sample Name="ConnectorsPresentation" Title="Connectors" ImageId="connectorsssample" Description ="This sample demonstrates how to insert a connectors in a PowerPoint slide." />
+		<Sample Name="HeaderAndFooterPresentation" Title="Header And Footer" ImageId="HeaderAndFootersample" Description ="This sample demonstrates how to insert a header and footer in a PowerPoint presentation."  Type ="New" />
+		<Sample Name="CreateAnimationPresentation" Title="CreateAnimation" ImageId="createanimationsample" Description ="This sample demonstrates how to create animation in PowerPoint presentation"  />
+		<Sample Name="ModifyAnimationPresentation" Title="ModifyAnimation" ImageId="modifyanimationsample" Description ="This sample demonstrates how to modify the animation in PowerPoint presentation" />
+		<Sample Name="SlideTransitionPresentation" Title="SlideTransition" ImageId="slidetransitionsample" Description ="This sample demonstrates how to create the transition effects in PowerPoint presentation slides" />
+      </Samples>
+    </Group>
+
+    <Group Title="PDF" ImageId="pdf" Description="PDF is a .NET class library that can create and modify PDF files.">
+      <Samples>
+        <Sample Name="GettingStartedPDF" Title="Getting Started" ImageId="gettingstartedpdf" Description="This sample demonstrates how to create a simple PDF document with text and images." />
+        <Sample Name="Barcode" Title="Barcode" ImageId="barcodepdf" Description="This sample demonstrates how to create various barcode in a PDF document." />
+        <Sample Name="Stamping" Title="Stamping" ImageId="stamppdf" Description ="This sample demonstrates how to stamp or watermark an existing PDF document." />
+        <Sample Name="Booklet" Title="Booklet" ImageId="bookletpdf" Description="This sample demonstrates how to create a booklet from an existing PDF document." />
+        <Sample Name="TableFeatures" Title="Table Features" ImageId="tablepdf" Description="This sample demonstrates how to create borderless tables in a PDF document." />
+        <Sample Name="ImageInsertion" Title="Image Insertion" ImageId="tablepdf" Description="This sample demonstrates how to insert images in a PDF document." />
+        <Sample Name="DigitalSignature" Title="Digital Signature" ImageId="digitalsignaturepdf" Description="This sample demonstrates how to digitally sign PDF document using a .pfx certificate."/>
+        <Sample Name="DigitalSignatureValidation" Title="Digital Signature Validation" ImageId="digitalsignaturepdf" Description="This sample illustrates how to validate the digitally signed PDF document signature." />
+        <Sample Name="Encryption" Title="Encryption" ImageId="digitalsignaturepdf" Description="This sample demonstrates how to create a secure PDF document." />
+		<Sample Name="RTLSupport" Title="RTL Text" ImageId="digitalsignaturepdf" Description="This sample demonstrates drawing right-to-left language text in the PDF document." />
+		<Sample Name="Conformance" Title="PDF Conformance" ImageId="digitalsignaturepdf" Description="This sample demonstrates various PDF conformance support in Essential PDF."/>
+		<Sample Name="ZugFerd" Title="ZUGFeRD Invoice" ImageId="digitalsignaturepdf" Description="This sample demonstrates how o create a ZUGFeRD PDF document."/>
+		<Sample Name="OpenTypeFont" Title="OpenType Font" ImageId="digitalsignaturepdf" Description="This sample demonstrates how to draw a text with OpenType font in a PDF document."  />
+      </Samples>
+    </Group>
+  </ControlSamples>
+</SampleList>

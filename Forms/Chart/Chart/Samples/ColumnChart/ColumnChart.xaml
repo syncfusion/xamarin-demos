@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.ColumnChart" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+    <local:SampleView.BindingContext>
+        <sampleBrowser:ColumnSeriesViewModel />
+    </local:SampleView.BindingContext>
+  <local:SampleView.Content>
+    <StackLayout x:Name="stack">
+      <StackLayout.Resources>
+        <ResourceDictionary>
+          <DataTemplate x:Key="toolTipTemplate1">
+            <StackLayout BackgroundColor="#404041">
+              <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="3,3,3,3" />
+              </StackLayout.Padding>
+              <Label Text="Gold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,4,0,0'}" FontSize="12" Grid.Row="0"/>
+                            <BoxView Grid.Row="1" Color="White" HeightRequest="0.75" Margin="{OnPlatform Default='0', WPF='4,0,4,0'}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+              <StackLayout Orientation="Horizontal"  VerticalOptions="FillAndExpand" BackgroundColor="#404041" Spacing="0" Padding="3" Margin="0">
+                <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="#CCCCCC" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" Margin="{OnPlatform Default='0', WPF='3,0,0,0'}"/>
+                <Label Text="{Binding Value,StringFormat=' :  {0}'}" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,0,3,0'}" FontSize="12" />
+              </StackLayout>
+            </StackLayout>
+          </DataTemplate>
+          <DataTemplate x:Key="toolTipTemplate2">
+            <StackLayout BackgroundColor="#404041">
+              <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="3,3,3,3" />
+              </StackLayout.Padding>
+              <Label Text="Silver" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,4,0,0'}" FontSize="12" Grid.Row="0" />
+                            <BoxView Grid.Row="1" Color="White" HeightRequest="0.75" Margin="{OnPlatform Default='0', WPF='4,0,4,0'}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+              <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" BackgroundColor="#404041" Spacing="0" Padding="3" Margin="0">
+                <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="#CCCCCC" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" Margin="{OnPlatform Default='0', WPF='3,0,0,0'}"/>
+                <Label Text="{Binding Value,StringFormat=' :  {0}'}" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,0,3,0'}" FontSize="12" />
+              </StackLayout>
+            </StackLayout>
+          </DataTemplate>
+          <DataTemplate x:Key="toolTipTemplate3">
+            <StackLayout BackgroundColor="#404041">
+              <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="3,3,3,3" />
+              </StackLayout.Padding>
+              <Label Text="Bronze" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,4,0,0'}" FontSize="12" Grid.Row="0" />
+                            <BoxView Grid.Row="1" Color="White" HeightRequest="0.75" Margin="{OnPlatform Default='0', WPF='4,0,4,0'}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+              <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" BackgroundColor="#404041" Spacing="0" Padding="3" Margin="0">
+                <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="#CCCCCC" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" Margin="{OnPlatform Default='0', WPF='3,0,0,0'}"/>
+                <Label Text="{Binding Value,StringFormat=' :  {0}'}" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,0,3,0'}" FontSize="12" />
+              </StackLayout>
+            </StackLayout>
+          </DataTemplate>
+        </ResourceDictionary>
+      </StackLayout.Resources>
+      <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <chart:SfChart.ColorModel>
+          <chart:ChartColorModel Palette="Natural" />
+        </chart:SfChart.ColorModel>
+        <chart:SfChart.Title>
+          <chart:ChartTitle Text="Olympic Medal Counts - RIO"  />
+        </chart:SfChart.Title>
+        <chart:SfChart.BindingContext>
+          <sampleBrowser:ColumnSeriesViewModel />
+        </chart:SfChart.BindingContext>
+        <chart:SfChart.ChartBehaviors>
+          <chart:ChartTooltipBehavior BackgroundColor="#404041" />
+        </chart:SfChart.ChartBehaviors>
+        <chart:SfChart.PrimaryAxis>
+          <chart:CategoryAxis EdgeLabelsDrawingMode="Shift" LabelPlacement="BetweenTicks" IsVisible="true" ShowMajorGridLines="false" >
+          </chart:CategoryAxis>
+        </chart:SfChart.PrimaryAxis>
+        <chart:SfChart.SecondaryAxis>
+          <chart:NumericalAxis IsVisible="false" ShowMajorGridLines="false" ShowMinorGridLines="false">
+            <chart:NumericalAxis.Title>
+              <chart:ChartAxisTitle Text="Medals">
+                <chart:ChartAxisTitle.Font>
+                  <OnPlatform x:TypeArguments="Font" iOS="12" />
+                </chart:ChartAxisTitle.Font>
+                <chart:ChartAxisTitle.Margin>
+                  <OnPlatform x:TypeArguments="Thickness" Android="0,0,10,0" />
+                </chart:ChartAxisTitle.Margin>
+              </chart:ChartAxisTitle>
+            </chart:NumericalAxis.Title>
+          </chart:NumericalAxis>
+        </chart:SfChart.SecondaryAxis>
+        <chart:SfChart.Legend>
+          <chart:ChartLegend ToggleSeriesVisibility="True" DockPosition="Bottom" IconWidth="14" IconHeight="14" />
+        </chart:SfChart.Legend>
+        <chart:SfChart.Series>
+          <chart:ColumnSeries x:Name="columnSeries1" ItemsSource="{Binding ColumnData1}" XBindingPath="Name" YBindingPath="Value" LegendIcon="SeriesType" Label="Gold" EnableTooltip="true" EnableAnimation="True" TooltipTemplate="{StaticResource toolTipTemplate1}">
+            <chart:ColumnSeries.DataMarker>
+              <chart:ChartDataMarker ShowLabel="True">
+                <chart:ChartDataMarker.LabelStyle>
+                  <chart:DataMarkerLabelStyle LabelPosition="Inner" >
+                    <chart:DataMarkerLabelStyle.Font>
+                      <OnPlatform x:TypeArguments="Font" iOS="12" />
+                    </chart:DataMarkerLabelStyle.Font>
+                  </chart:DataMarkerLabelStyle>
+                </chart:ChartDataMarker.LabelStyle>
+              </chart:ChartDataMarker>
+            </chart:ColumnSeries.DataMarker>
+          </chart:ColumnSeries>
+          <chart:ColumnSeries x:Name="columnSeries2" ItemsSource="{Binding ColumnData2}" XBindingPath="Name" YBindingPath="Value" LegendIcon="SeriesType" Label="Silver" EnableTooltip="true" EnableAnimation="True" TooltipTemplate="{StaticResource toolTipTemplate2}">
+            <chart:ColumnSeries.DataMarker>
+              <chart:ChartDataMarker ShowLabel="True">
+                <chart:ChartDataMarker.LabelStyle>
+                  <chart:DataMarkerLabelStyle LabelPosition="Inner" >
+                    <chart:DataMarkerLabelStyle.Font>
+                      <OnPlatform x:TypeArguments="Font" iOS="12" />
+                    </chart:DataMarkerLabelStyle.Font>
+                  </chart:DataMarkerLabelStyle>
+                </chart:ChartDataMarker.LabelStyle>
+              </chart:ChartDataMarker>
+            </chart:ColumnSeries.DataMarker>
+          </chart:ColumnSeries>
+          <chart:ColumnSeries x:Name="columnSeries3" ItemsSource="{Binding ColumnData3}" XBindingPath="Name" YBindingPath="Value" LegendIcon="SeriesType" Label="Bronze" EnableTooltip="true" EnableAnimation="True" TooltipTemplate="{StaticResource toolTipTemplate3}">
+            <chart:ColumnSeries.DataMarker>
+              <chart:ChartDataMarker ShowLabel="True">
+                <chart:ChartDataMarker.LabelStyle>
+                  <chart:DataMarkerLabelStyle LabelPosition="Inner" >
+                    <chart:DataMarkerLabelStyle.Font>
+                      <OnPlatform x:TypeArguments="Font" iOS="12" />
+                    </chart:DataMarkerLabelStyle.Font>
+                  </chart:DataMarkerLabelStyle>
+                </chart:ChartDataMarker.LabelStyle>
+              </chart:ChartDataMarker>
+            </chart:ColumnSeries.DataMarker>
+          </chart:ColumnSeries>
+        </chart:SfChart.Series>
+      </chart:SfChart>
+    </StackLayout>
+  </local:SampleView.Content>
+    <local:SampleView.PropertyView>
+        <StackLayout>
+            <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="20,20,20,20" />
+            </StackLayout.Padding>
+            <StackLayout.WidthRequest>
+                <OnPlatform x:TypeArguments="x:Double" WinPhone="200" />
+            </StackLayout.WidthRequest>
+            <StackLayout.HorizontalOptions>
+                <OnPlatform x:TypeArguments="LayoutOptions" iOS="FillAndExpand" Android="FillAndExpand" WinPhone="Center" />
+            </StackLayout.HorizontalOptions>
+            <StackLayout.VerticalOptions>
+                <OnPlatform x:TypeArguments="LayoutOptions" iOS="FillAndExpand" Android="FillAndExpand" WinPhone="Center" />
+            </StackLayout.VerticalOptions>
+            <Label x:Name="ColumnWidthValue" VerticalOptions="Center" Text="Width : 0.8" />
+            <Slider x:Name="ColumnWidth" VerticalOptions="Center" Value="0.8" ValueChanged="ColumnWidth_ValueChanged" />
+            <Label x:Name="SpacingValue" VerticalOptions="Center" Text="Spacing : 0.0" />
+            <Slider x:Name="Spacing" VerticalOptions="Center" Value="0.0" ValueChanged="Spacing_ValueChanged" />
+            <Label x:Name="cornerRadiusValue" VerticalOptions="Center" Text="Corner Radius : 0.0" />
+            <Slider x:Name="cornerRadius" Maximum="10" Minimum="0" VerticalOptions="Center" Value="0.0" ValueChanged="cornerRadius_ValueChanged" />
+        </StackLayout>
+    </local:SampleView.PropertyView>
+</local:SampleView>

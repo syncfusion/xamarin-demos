@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          xmlns:local="clr-namespace:SampleBrowser.SfListView"
+          x:Class="SampleBrowser.SfListView.OutgoingTextTemplate">
+    <Grid Margin="60,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="gridLayout" Margin="12,16,0,16" 
+              VerticalOptions="Center" HorizontalOptions="End"
+              ColumnSpacing="{OnPlatform Android={OnIdiom Phone=-12, Tablet=-12}, iOS={OnIdiom Phone=-12, Tablet=-12}, macOS=-12 }">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <local:OutgoingCustomContentView x:Name="Customcontentview" Grid.Column="0" Grid.Row="0">
+                <local:OutgoingCustomContentView.Content>
+                   <Frame x:Name="frame" Margin="{OnPlatform Android=-1,iOS=-1,macOS=-1}" CornerRadius="5" HasShadow="{OnPlatform Android=false, iOS=false, macOS=false, UWP=true}">                        
+                       <Frame.Content>
+                            <Grid Margin="{OnPlatform Android=-3,iOS=-3,macOS=-3}">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label  Text="{Binding Text}" Opacity="84"
+                                        HorizontalOptions="Center" VerticalOptions="Center"
+                                        TextColor="Black" FontSize="14"/>
+                            </Grid>
+                        </Frame.Content>
+                    </Frame>
+                </local:OutgoingCustomContentView.Content>
+            </local:OutgoingCustomContentView>
+            <Grid Grid.Row="1" Grid.Column="0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="{Binding DateTime}" TextColor="Gray" Margin="0,0,-4,0"
+                       HorizontalOptions="End" VerticalOptions="Start" Opacity="54"
+                       FontSize="12"/>
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="0">
+                <Label TextColor="#e5f5fb" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"
+                     Text="&#xe728;" VerticalOptions="Start" FontSize="30"
+                     HeightRequest="20" WidthRequest="20"
+                     Margin='{OnPlatform UWP="-12,10,0,0", Android="0,10,0,0", iOS="0,10,0,0", macOS="0,10,0,0"}'>
+                </Label>
+            </Grid>
+        </Grid>
+    </Grid>
+</ViewCell>

@@ -1,0 +1,642 @@
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Annotations\Annotations.xaml.cs">
+      <DependentUpon>Annotations.xaml</DependentUpon>
+      <Link>Samples\Chart\Samples\Annotations\Annotations.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\AxisCrossing\AxisCrossing.xaml.cs">
+      <DependentUpon>AxisCrossing.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\AxisCrossing\AxisCrossing.xaml.cs</Link>
+    </Compile>
+     <Compile Include="$(MSBuildThisFileDirectory)\Samples\AxisCrossing\AxisCrossingViewModel.cs" >
+         <Link>Samples\Chart\Samples\AxisCrossing\AxisCrossingViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\SplineRangeAreaChart\SplineRangeAreaChart.xaml.cs">
+      <DependentUpon>SplineRangeAreaChart.xaml</DependentUpon>
+      <Link>Samples\Chart\Samples\SplineRangeAreaChart\SplineRangeAreaChart.xaml.cs</Link>
+    </Compile>
+     <Compile Include="$(MSBuildThisFileDirectory)\Samples\SplineRangeAreaChart\SplineRangeAreaSeriesViewModel.cs">
+         <Link>Samples\Chart\Samples\SplineRangeAreaChart\SplineRangeAreaSeriesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\AreaChart\AreaChart.xaml.cs">
+      <DependentUpon>AreaChart.xaml</DependentUpon>
+      <Link>Samples\Chart\Samples\AreaChart\AreaChart.xaml.cs</Link>
+    </Compile>
+     <Compile Include="$(MSBuildThisFileDirectory)\Samples\AreaChart\AreaSeriesViewModel.cs" >
+         <Link>Samples\Chart\Samples\AreaChart\AreaSeriesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\AutoScrolling\AutoScrolling.xaml.cs">
+      <DependentUpon>AutoScrolling.xaml</DependentUpon>
+      <Link>Samples\Chart\Samples\AutoScrolling\AutoScrolling.xaml.cs</Link>
+    </Compile>
+     <Compile Include="$(MSBuildThisFileDirectory)\Samples\AutoScrolling\AutoScrollingViewModel.cs" >
+        <Link>Samples\Chart\Samples\AutoScrolling\AutoScrollingViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\BarChart\BarChart.xaml.cs">
+      <DependentUpon>BarChart.xaml</DependentUpon>
+          <Link>Samples\Chart\Samples\BarChart\BarChart.xaml.cs</Link>
+    </Compile>
+     <Compile Include="$(MSBuildThisFileDirectory)\Samples\BarChart\BarSeriesViewModel.cs" >
+        <Link>Samples\Chart\Samples\BarChart\BarSeriesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\BubbleChart\BubbleChart.xaml.cs">
+      <DependentUpon>BubbleChart.xaml</DependentUpon>
+      <Link>Samples\Chart\Samples\BubbleChart\BubbleChart.xaml.cs</Link>
+    </Compile>
+     <Compile Include="$(MSBuildThisFileDirectory)\Samples\BubbleChart\BubbleSeriesViewModel.cs" >
+         <Link>Samples\Chart\Samples\BubbleChart\BubbleSeriesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\CandleChart\CandleChart.xaml.cs">
+      <DependentUpon>CandleChart.xaml</DependentUpon>
+      <Link>Samples\Chart\Samples\CandleChart\CandleChart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\CandleChart\CandleSeriesViewModel.cs" >
+         <Link>Samples\Chart\Samples\CandleChart\CandleSeriesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\CategoryAxis\CategoryAxis.xaml.cs">
+      <DependentUpon>CategoryAxis.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\CategoryAxis\CategoryAxis.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\CategoryAxis\CategoryAxisViewModel.cs" >
+         <Link>Samples\Chart\Samples\CategoryAxis\CategoryAxisViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ColumnChart\ColumnChart.xaml.cs">
+      <DependentUpon>ColumnChart.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\ColumnChart\ColumnChart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ColumnChart\ColumnSeriesViewModel.cs" >
+         <Link>Samples\Chart\Samples\ColumnChart\ColumnSeriesViewModel.cs</Link>
+     </Compile>
+     <Compile Include="$(MSBuildThisFileDirectory)\Samples\HistogramChart\HistogramChart.xaml.cs">
+       <DependentUpon>HistogramChart.xaml</DependentUpon>
+       <Link>Samples\Chart\Samples\HistogramChart\HistogramChart.xaml.cs</Link>
+     </Compile>
+     <Compile Include="$(MSBuildThisFileDirectory)\Samples\HistogramChart\HistogramSeriesViewModel.cs" >
+       <Link>Samples\Chart\Samples\HistogramChart\HistogramSeriesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataMarkerCustomization\DataMarkerCustomization.xaml.cs">
+      <DependentUpon>DataMarkerCustomization.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\DataMarkerCustomization\DataMarkerCustomization.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataMarkerCustomization\DataMarkerCustomizationViewModel.cs" >
+         <Link>Samples\Chart\Samples\DataMarkerCustomization\DataMarkerCustomizationViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataPointSelection\DataPointSelection.xaml.cs">
+      <DependentUpon>DataPointSelection.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\DataPointSelection\DataPointSelection.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataPointSelection\DataPointSelectionViewModel.cs" >
+         <Link>Samples\Chart\Samples\DataPointSelection\DataPointSelectionViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DateTimeAxis\DateTimeAxis.xaml.cs">
+      <DependentUpon>DateTimeAxis.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\DateTimeAxis\DateTimeAxis.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DateTimeAxis\DateTimeAxisViewModel.cs">
+         <Link>Samples\Chart\Samples\DateTimeAxis\DateTimeAxisViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DoughnutChart\DoughnutChart.xaml.cs">
+      <DependentUpon>DoughnutChart.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\DoughnutChart\DoughnutChart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DoughnutChart\DoughnutSeriesViewModel.cs" >
+         <Link>Samples\Chart\Samples\DoughnutChart\DoughnutSeriesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\FunnelChart\FunnelChart.xaml.cs">
+      <DependentUpon>FunnelChart.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\FunnelChart\FunnelChart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\FunnelChart\FunnelSeriesViewModel.cs" >
+         <Link>Samples\Chart\Samples\FunnelChart\FunnelSeriesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\LineChart\LineChart.xaml.cs">
+      <DependentUpon>LineChart.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\LineChart\LineChart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\LineChart\LineSeriesViewModel.cs" >
+         <Link>Samples\Chart\Samples\LineChart\LineSeriesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\LiveUpdate\LiveUpdate.xaml.cs">
+      <DependentUpon>LiveUpdate.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\LiveUpdate\LiveUpdate.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\LiveUpdate\LiveUpdateViewModel.cs" >
+         <Link>Samples\Chart\Samples\LiveUpdate\LiveUpdateViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\LogarithmicAxis\LogarithmicAxis.xaml.cs">
+      <DependentUpon>LogarithmicAxis.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\LogarithmicAxis\LogarithmicAxis.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\LogarithmicAxis\LogarithmicAxisViewModel.cs" >
+         <Link>Samples\Chart\Samples\LogarithmicAxis\LogarithmicAxisViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\Model.cs">
+         <Link>Samples\Chart\Samples\Model\Model.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\MultipleCircle\MultipleCircleViewModel.cs" >
+        <Link>Samples\Chart\Samples\MultipleCircle\MultipleCircleViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\MultipleCircle\MultipleCircle.xaml.cs">
+        <DependentUpon>MultipleCircle.xaml</DependentUpon>
+       <Link>Samples\Chart\Samples\MultipleCircle\MultipleCircle.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\MultipleAxes\MultipleAxesViewModel.cs" >
+         <Link>Samples\Chart\Samples\MultipleAxes\MultipleAxesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\MultipleAxes\MultipleAxis.xaml.cs">
+      <DependentUpon>MultipleAxes.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\MultipleAxes\MultipleAxes.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\NumericAxis\NumericAxis.xaml.cs">
+      <DependentUpon>NumericAxis.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\NumericAxis\NumericAxis.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\NumericAxis\NumericAxisViewModel.cs" >
+         <Link>Samples\Chart\Samples\NumericAxis\NumericAxisViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\OHLCChart\OHLCChart.xaml.cs">
+      <DependentUpon>OHLCChart.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\OHLCChart\OHLCChart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\OHLCChart\OHLCSeriesViewModel.cs" >
+         <Link>Samples\Chart\Samples\OHLCChart\OHLCSeriesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PieChart\PieChart.xaml.cs">
+      <DependentUpon>PieChart.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\PieChart\PieChart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PieChart\PieSeriesViewModel.cs" >
+         <Link>Samples\Chart\Samples\PieChart\PieSeriesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PolarChart\PolarChart.xaml.cs">
+      <DependentUpon>PolarChart.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\PolarChart\PolarChart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PolarChart\PolarSeriesViewModel.cs" >
+         <Link>Samples\Chart\Samples\PolarSeriesViewModel\PolarSeriesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PyramidChart\PyramidChart.xaml.cs">
+      <DependentUpon>PyramidChart.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\PyramidChart\PyramidChart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PyramidChart\PyramidSeriesViewModel.cs" >
+         <Link>Samples\Chart\Samples\PyramidChart\PyramidSeriesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\RadarChart\RadarChart.xaml.cs">
+      <DependentUpon>RadarChart.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\RadarChart\RadarChart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\RadarChart\RadarSeriesViewModel.cs" >
+         <Link>Samples\Chart\Samples\RadarChart\RadarSeriesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\RangeAreaChart\RangeAreaChart.xaml.cs">
+      <DependentUpon>RangeAreaChart.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\RangeAreaChart\RangeAreaChart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\RangeAreaChart\RangeAreaSeriesViewModel.cs" >
+         <Link>Samples\Chart\Samples\RangeAreaChart\RangeAreaSeriesViewModel.cs</Link>
+     </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\RangeColumnChart\RangeColumnChart.xaml.cs">
+      <DependentUpon>RangeColumnChart.xaml</DependentUpon>
+         <Link>Samples\Chart\Samples\RangeColumnChart\RangeColumnChart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\RangeColumnChart\RangeColumnSeriesViewModel.cs" >
+         <Link>Samples\Chart\Samples\RangeColumnChart\RangeColumnSeriesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\RangeColumnChart\RangeSeriesBaseModel.cs" >
+         <Link>Samples\Chart\Samples\RangeColumnChart\RangeSeriesBaseModel.cs</Link>
+     </Compile>
+ <Compile Include="$(MSBuildThisFileDirectory)\Samples\RangeBarChart\RangeBarChart.xaml.cs">
+      <DependentUpon>RangeBarChart.xaml</DependentUpon>
+         <Link>Samples\Chart\Samples\RangeBarChart\RangeBarChart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\RangeBarChart\RangeBarViewModel.cs" >
+         <Link>Samples\Chart\Samples\RangeBarChart\RangeBarViewModel.cs</Link>
+     </Compile>
+
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ScatterChart\ScatterChart.xaml.cs">
+      <DependentUpon>ScatterChart.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\ScatterChart\ScatterChart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ScatterChart\ScatterSeriesViewModel.cs" >
+         <Link>Samples\Chart\Samples\ScatterChart\ScatterSeriesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\SemiDoughnutChart\SemiDoughnutChart.xaml.cs">
+      <DependentUpon>SemiDoughnutChart.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\SemiDoughnutChart\SemiDoughnutChart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\SemiDoughnutChart\SemiDoughnutSeriesViewModel.cs" >
+         <Link>Samples\Chart\Samples\SemiDoughnutChart\SemiDoughnutSeriesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\SemiPieChart\SemiPieChart.xaml.cs">
+      <DependentUpon>SemiPieChart.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\SemiPieChart\SemiPieChart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\SemiPieChart\SemiPieSeriesViewModel.cs" >
+         <Link>Samples\Chart\Samples\SemiPieChart\SemiPieSeriesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\SplineAreaChart\SplineAreaChart.xaml.cs">
+      <DependentUpon>SplineAreaChart.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\SplineAreaChart\SplineAreaChart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\SplineAreaChart\SplineAreaSeriesViewModel.cs" >
+         <Link>Samples\Chart\Samples\SplineAreaChart\SplineAreaSeriesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\SplineChart\SplineChart.xaml.cs">
+      <DependentUpon>SplineChart.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\SplineChart\SplineChart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\SplineChart\SplineSeriesViewModel.cs" >
+         <Link>Samples\Chart\Samples\SplineChart\SplineSeriesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\StackedArea100Chart\StackedArea100Chart.xaml.cs">
+      <DependentUpon>StackedArea100Chart.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\StackedArea100Chart\StackedArea100Chart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\StackedArea100Chart\StackedArea100SeriesViewModel.cs">
+         <Link>Samples\Chart\Samples\StackedArea100Chart\StackedArea100SeriesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\StackedAreaChart\StackedAreaChart.xaml.cs">
+      <DependentUpon>StackedAreaChart.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\StackedAreaChart\StackedAreaChart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\StackedAreaChart\StackedAreaSeriesViewModel.cs">
+         <Link>Samples\Chart\Samples\StackedAreaChart\StackedAreaSeriesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\StackedBar100Chart\StackedBar100Chart.xaml.cs">
+      <DependentUpon>StackedBar100Chart.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\StackedBar100Chart\StackedBar100Chart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\StackedBar100Chart\StackedBar100SeriesViewModel.cs" >
+         <Link>Samples\Chart\Samples\StackedBar100Chart\StackedBar100SeriesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\StackedBarChart\StackedBarChart.xaml.cs">
+      <DependentUpon>StackedBarChart.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\StackedBarChart\StackedBarChart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\StackedBarChart\StackedBarSeriesViewModel.cs" >
+         <Link>Samples\Chart\Samples\StackedBarChart\StackedBarSeriesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\StackedColumn100Chart\StackedColumn100Chart.xaml.cs">
+      <DependentUpon>StackedColumn100Chart.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\StackedColumn100Chart\StackedColumn100Chart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\StackedColumn100Chart\StackedColumn100SeriesViewModel.cs">
+         <Link>Samples\Chart\Samples\StackedColumn100Chart\StackedColumn100SeriesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\StackedColumnChart\StackedColumnChart.xaml.cs">
+      <DependentUpon>StackedColumnChart.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\StackedColumnChart\StackedColumnChart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\StackedColumnChart\StackedColumnSeriesViewModel.cs" >
+         <Link>Samples\Chart\Samples\StackedColumnChart\StackedColumnSeriesViewModel.cs</Link>
+     </Compile>
+     <Compile Include="$(MSBuildThisFileDirectory)\Samples\StackedLine100Chart\StackedLine100Chart.xaml.cs">
+       <DependentUpon>StackedLine100Chart.xaml</DependentUpon>
+       <Link>Samples\Chart\Samples\StackedLine100Chart\StackedLine100Chart.xaml.cs</Link>
+     </Compile>
+     <Compile Include="$(MSBuildThisFileDirectory)\Samples\StackedLine100Chart\StackedLine100SeriesViewModel.cs">
+       <Link>Samples\Chart\Samples\StackedLine100Chart\StackedLine100SeriesViewModel.cs</Link>
+     </Compile>
+     <Compile Include="$(MSBuildThisFileDirectory)\Samples\StackedLineChart\StackedLineChart.xaml.cs">
+       <DependentUpon>StackedLineChart.xaml</DependentUpon>
+       <Link>Samples\Chart\Samples\StackedLineChart\StackedLineChart.xaml.cs</Link>
+     </Compile>
+     <Compile Include="$(MSBuildThisFileDirectory)\Samples\StackedLineChart\StackedLineChartViewModel.cs" >
+       <Link>Samples\Chart\Samples\StackedLineChart\StackedLineChartViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\StepAreaChart\StepAreaChart.xaml.cs">
+      <DependentUpon>StepAreaChart.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\StepAreaChart\StepAreaChart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\StepAreaChart\StepAreaSeriesViewModel.cs" >
+         <Link>Samples\Chart\Samples\StepAreaChart\StepAreaSeriesViewModel.cs</Link>
+     </Compile>
+     <Compile Include="$(MSBuildThisFileDirectory)\Samples\GradientChart\GradientChart.xaml.cs">
+      <DependentUpon>GradientChart.xaml</DependentUpon>
+      <Link>Samples\Chart\Samples\GradientChart\GradientChart.xaml.cs</Link>
+    </Compile>
+     <Compile Include="$(MSBuildThisFileDirectory)\Samples\Legend\Legend.xaml.cs">
+      <DependentUpon>Legend.xaml</DependentUpon>
+      <Link>Samples\Chart\Samples\Legend\Legend.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\StepLineChart\StepLineChart.xaml.cs">
+      <DependentUpon>StepLineChart.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\StepLineChart\StepLineChart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\StepLineChart\StepLineSeriesViewModel.cs" >
+         <Link>Samples\Chart\Samples\StepLineChart\StepLineSeriesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\StripLines\StripLines.xaml.cs">
+      <DependentUpon>StripLines.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\StripLines\StripLines.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\StripLines\StripLinesViewModel.cs" >
+         <Link>Samples\Chart\Samples\StripLines\StripLinesViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\TechnicalIndicator\TechnicalIndicator.xaml.cs">
+      <DependentUpon>TechnicalIndicator.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\TechnicalIndicator\TechnicalIndicator.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\TechnicalIndicator\TechnicalIndicatorViewModel.cs">
+         <Link>Samples\Chart\Samples\TechnicalIndicator\TechnicalIndicatorViewModel.cs</Link>
+     </Compile>
+     <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml.cs">
+       <DependentUpon>Themes.xaml</DependentUpon>
+       <Link>Samples\Chart\Samples\Themes\Themes.xaml.cs</Link>
+     </Compile>
+     <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\ThemesViewModel.cs">
+       <Link>Samples\Chart\Samples\Themes\ThemesViewModel.cs</Link>
+     </Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\Tooltip\Tooltip.xaml.cs">
+      <DependentUpon>Tooltip.xaml</DependentUpon>
+   <Link>Samples\Chart\Samples\Tooltip\Tooltip.xaml.cs</Link>
+    </Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\Tooltip\TooltipViewModel.cs" >
+         <Link>Samples\Chart\Samples\Tooltip\TooltipViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Trackball\Trackball.xaml.cs">
+      <DependentUpon>Trackball.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\Trackball\Trackball.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Trackball\TrackballViewModel.cs" >
+         <Link>Samples\Chart\Samples\Trackball\TrackballViewModel.cs</Link>
+     </Compile>
+         <Compile Include="$(MSBuildThisFileDirectory)\Samples\Trendlines\ChartTrendlines.xaml.cs">
+      <DependentUpon>ChartTrendlines.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\Trendlines\ChartTrendlines.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Trendlines\TrendlineViewModel.cs" >
+         <Link>Samples\Chart\Samples\Trendlines\TrendlineViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\VerticalChart\VerticalChart.xaml.cs">
+      <DependentUpon>VerticalChart.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\VerticalChart\VerticalChart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\VerticalChart\VerticalChartViewModel.cs">
+         <Link>Samples\Chart\Samples\VerticalChart\VerticalChartViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\ViewModel.cs" >
+         <Link>Samples\Chart\Samples\ViewModel\ViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ZoomingAndPanning\ZoomingAndPanning.xaml.cs">
+      <DependentUpon>ZoomingAndPanning.xaml</DependentUpon>
+     <Link>Samples\Chart\Samples\ZoomingAndPanning\ZoomingAndPanning.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ZoomingAndPanning\ZoomingAndPanningViewModel.cs">
+         <Link>Samples\Chart\Samples\ZoomingAndPanning\ZoomingAndPanningViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\GradientChart\GradientChartViewModel.cs">
+         <Link>Samples\Chart\Samples\GradientChart\GradientChartViewModel.cs</Link>
+     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Legend\LegendViewModel.cs" >
+         <Link>Samples\Chart\Samples\Legend\LegendViewModel.cs</Link>
+     </Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\WaterfallChart\WaterfallChart.xaml.cs">
+      <DependentUpon>WaterfallChart.xaml</DependentUpon>
+      <Link>Samples\Chart\Samples\WaterfallChart\WaterfallChart.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\WaterfallChart\WaterFallSeriesViewModel.cs">
+         <Link>Samples\Chart\Samples\WaterfallChart\WaterFallSeriesViewModel.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Legend\Legend.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <Link>Samples\Chart\Samples\Legend\Legend.xaml</Link>
+    </EmbeddedResource>
+      <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\GradientChart\GradientChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <Link>Samples\Chart\Samples\GradientChart\GradientChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\AreaChart\AreaChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\AreaChart\AreaChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\AutoScrolling\AutoScrolling.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\AutoScrolling\AutoScrolling.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\BarChart\BarChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\BarChart\BarChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\BubbleChart\BubbleChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\BubbleChart\BubbleChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CandleChart\CandleChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\CandleChart\CandleChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CategoryAxis\CategoryAxis.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\CategoryAxis\CategoryAxis.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ColumnChart\ColumnChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\ColumnChart\ColumnChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\HistogramChart\HistogramChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <Link>Samples\Chart\Samples\HistogramChart\HistogramChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DataMarkerCustomization\DataMarkerCustomization.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\DataMarkerCustomization\DataMarkerCustomization.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DataPointSelection\DataPointSelection.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\DataPointSelection\DataPointSelection.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DateTimeAxis\DateTimeAxis.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\DateTimeAxis\DateTimeAxis.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DoughnutChart\DoughnutChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\DoughnutChart\DoughnutChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\FunnelChart\FunnelChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\FunnelChart\FunnelChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\LineChart\LineChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\LineChart\LineChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\LiveUpdate\LiveUpdate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\LiveUpdate\LiveUpdate.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\LogarithmicAxis\LogarithmicAxis.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\LogarithmicAxis\LogarithmicAxis.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\MultipleAxes\MultipleAxes.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\MultipleAxes\MultipleAxes.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\MultipleCircle\MultipleCircle.xaml">
+        <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+            <Link>Samples\Chart\Samples\MultipleCircle\MultipleCircle.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\NumericAxis\NumericAxis.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\NumericAxis\NumericAxis.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\OHLCChart\OHLCChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\OHLCChart\OHLCChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\PieChart\PieChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\PieChart\PieChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\PolarChart\PolarChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\PolarChart\PolarChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\PyramidChart\PyramidChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\PyramidChart\PyramidChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\RadarChart\RadarChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\RadarChart\RadarChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\RangeAreaChart\RangeAreaChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\RangeAreaChart\RangeAreaChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\RangeColumnChart\RangeColumnChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\RangeColumnChart\RangeColumnChart.xaml</Link>
+    </EmbeddedResource>
+     <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\RangeBarChart\RangeBarChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\RangeBarChart\RangeBarChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ScatterChart\ScatterChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\ScatterChart\ScatterChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\SemiDoughnutChart\SemiDoughnutChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\SemiDoughnutChart\SemiDoughnutChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\SemiPieChart\SemiPieChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\SemiPieChart\SemiPieChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\SplineAreaChart\SplineAreaChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\SplineAreaChart\SplineAreaChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\SplineChart\SplineChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\SplineChart\SplineChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\StackedArea100Chart\StackedArea100Chart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\StackedArea100Chart\StackedArea100Chart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\StackedAreaChart\StackedAreaChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\StackedAreaChart\StackedAreaChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\StackedBar100Chart\StackedBar100Chart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\StackedBar100Chart\StackedBar100Chart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\StackedBarChart\StackedBarChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\StackedBarChart\StackedBarChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\StackedColumn100Chart\StackedColumn100Chart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\StackedColumn100Chart\StackedColumn100Chart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\StackedColumnChart\StackedColumnChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\StackedColumnChart\StackedColumnChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\StackedLine100Chart\StackedLine100Chart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\StackedLine100Chart\StackedLine100Chart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\StackedLineChart\StackedLineChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\StackedLineChart\StackedLineChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\StepAreaChart\StepAreaChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\StepAreaChart\StepAreaChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\StepLineChart\StepLineChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\StepLineChart\StepLineChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\StripLines\StripLines.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\StripLines\StripLines.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\TechnicalIndicator\TechnicalIndicator.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\TechnicalIndicator\TechnicalIndicator.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <Link>Samples\Chart\Samples\Themes\Themes.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Tooltip\Tooltip.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\Tooltip\Tooltip.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Trackball\Trackball.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\Trackball\Trackball.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\VerticalChart\VerticalChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\VerticalChart\VerticalChart.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Trendlines\ChartTrendlines.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <Link>Samples\Chart\Samples\Trendlines\ChartTrendlines.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ZoomingAndPanning\ZoomingAndPanning.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\ZoomingAndPanning\ZoomingAndPanning.xaml</Link>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\WaterfallChart\WaterfallChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\WaterfallChart\WaterfallChart.xaml</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+      <Link>Samples\Chart\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Annotations\Annotations.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+       <Link>Samples\Chart\Samples\Annotations\Annotations.xaml</Link>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\AxisCrossing\AxisCrossing.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+         <Link>Samples\Chart\Samples\AxisCrossing\AxisCrossing.xaml</Link>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\SplineRangeAreaChart\SplineRangeAreaChart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <Link>Samples\Chart\Samples\SplineRangeAreaChart\SplineRangeAreaChart.xaml</Link>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

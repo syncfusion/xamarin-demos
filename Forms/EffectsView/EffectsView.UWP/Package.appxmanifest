@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  IgnorableNamespaces="uap mp">
+
+  <Identity
+    Name="9caca525-234f-4c9e-9a11-88a78ed0129a"
+    Publisher="CN=IyyappanMani"
+    Version="1.0.0.0" />
+
+  <mp:PhoneIdentity PhoneProductId="9caca525-234f-4c9e-9a11-88a78ed0129a" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>SampleBrowser.SfEffectsView</DisplayName>
+    <PublisherDisplayName>Syncfusion</PublisherDisplayName>
+    <Logo>SampleBrowser.Core.UWP\Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="SampleBrowser.SfEffectsView.UWP.App">
+      <uap:VisualElements
+        DisplayName="SampleBrowser.SfEffectsView"
+        Square150x150Logo="SampleBrowser.Core.UWP\Assets\Square150x150Logo.png" 
+	    Square44x44Logo="SampleBrowser.Core.UWP\Assets\Square44x44Logo.png"
+        Description="SampleBrowser.SfEffectsView.UWP"
+        BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="SampleBrowser.Core.UWP\Assets\Wide310x150Logo.png"/>
+        <uap:SplashScreen Image="SampleBrowser.Core.UWP\Assets\SplashScreen.png" BackgroundColor="blue"/>
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

@@ -1,0 +1,40 @@
+<Samples>
+  
+	<Sample Name = "GettingStarted" Platforms="Android,iOS,UWP,WPF" IsUpdated= "true" Title = "Getting Started"   SearchTags= "views, type, Week, Month, day, appointment" 
+          Description = "Showcases a simple schedule with data source displayed in day, workweek, week, and month views." />
+
+  <Sample Name = "TimelineView" Platforms="Android,iOS,UWP,WPF" Title = "Timeline View"  SearchTags= "timeline, horizontal view, resourecs, schedule resources"
+    Description = "Showcases the time line view to displaying appointments."/>
+  
+  <Sample Name = "Resource" Platforms="Android,iOS,UWP,WPF" Title = "Resources"  SearchTags= "resourecs, schedule resources"
+      Description = "Showcases the resources and displaying appointments."/>
+  
+  <Sample Name = "DayViewConfigurations" Platforms="Android,iOS,UWP,WPF"  Title = "Day View Configurations"  SearchTags= "workhour, moveto, nonaccessibleblocks, endhour" 
+          Description = "Showcases the separation of working and non-working hours with different colors and date navigation capability of schedule with blocking timeslots in  day, week, and workweek views." />
+
+  <Sample Name = "AppointmentEditor" Platforms="Android,iOS,UWP,WPF" Title = "Appointment Editor"  SearchTags= "allday, celltapped, event, timezone"  
+          Description = "Showcases date navigation capability with appointment editing such as start time, end time, subject, time zone, and more."/>
+
+  <Sample Name = "RecursiveAppointments" Platforms="Android,iOS,UWP,WPF" IsUpdated= "true" Title = "Recurring Appointments" SearchTags= "occurrence, indicator, inline"
+          Description = "Showcases the recurring appointments."/> 
+
+  <Sample Name = "ViewCustomization" Platforms="Android,iOS,UWP,WPF" Title = "View Customization"  SearchTags= "loadedevent, template"
+          Description = "Showcases the customization of month cell and appointment through templates." />
+
+  <Sample Name = "AgendaView" Platforms="Android,iOS,UWP,WPF" Title = "Agenda View"   SearchTags= "showinline, blackoutdate, tapped"
+           Description = "Showcases the agenda view support of schedule where specific date appointments can be viewed below the month view."/>
+
+  <Sample Name = "Timetable" Platforms="Android,iOS,UWP,WPF" Title = "Timetable"  SearchTags= "work, end, hour, timeslot"
+         Description = "Showcases the working hours with blocking timeslots." />
+
+  <Sample Name = "DragDrop" Platforms="Android,iOS,UWP,WPF" Title = "Drag and Drop"  SearchTags= "appointment, allday"  
+      Description = "Showcases the capability of rescheduling appointment through drag-and-drop operations." />
+ 
+  <Sample Name = "LoadOnDemand" Platforms="Android,iOS,UWP,WPF" Title = "Load On Demand"  SearchTags= "load, runtime"
+         Description = "Showcases the on-demand data processing for better performance while loading large amounts of data." />
+
+  <Sample Name = "Localization" Platforms="Android,iOS,UWP,WPF" Title = "Localization"  SearchTags= "locale, language"  
+          Description = "Showcases the localization support of schedule." />
+</Samples>
+
+

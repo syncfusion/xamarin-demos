@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+	 <RootNamespace>SampleBrowser.SfGradientView</RootNamespace>
+     <AssemblyName>SampleBrowser.SfGradientView</AssemblyName>
+	 <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SamplesList\SamplesList.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SampleBrowser.Core" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="18.1.0.52" />
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
+  </ItemGroup> 
+</Project>

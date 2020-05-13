@@ -1,0 +1,144 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Icons\Chart.txt" />
+    <None Remove="Icons\FreeHand.txt" />
+    <None Remove="Icons\Summer.txt" />
+    <None Remove="Icons\Venn.txt" />
+	<None Remove="Icons\AddIcon.png" />
+    <None Remove="SamplesList\SamplesList.xml" />
+    <None Remove="Syncfusion.lic" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Icons\Chart.txt" />
+    <EmbeddedResource Include="Icons\FreeHand.txt" />
+    <EmbeddedResource Include="Icons\Summer.txt" />
+    <EmbeddedResource Include="Icons\Venn.txt" />
+    <EmbeddedResource Include="SamplesList\SamplesList.xml" />
+    <EmbeddedResource Include="..\..\Resources\Image\Others\EditorBuilding1.png">
+        <Link>Icons\EditorBuilding1.png</Link>  
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Resources\Image\Others\EditorBuilding2.png">
+        <Link>Icons\EditorBuilding2.png</Link>  
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Resources\Image\Others\EditorChart.jpg">
+        <Link>Icons\EditorChart.jpg</Link>  
+    </EmbeddedResource>   
+    <EmbeddedResource Include="..\..\Resources\Image\Others\EditorDashboard.jpg">
+        <Link>Icons\EditorDashboard.jpg</Link>  
+    </EmbeddedResource> 
+    <EmbeddedResource Include="..\..\Resources\Image\Others\EditorFreeHand.jpg">
+        <Link>Icons\EditorFreeHand.jpg</Link>  
+    </EmbeddedResource> 
+    <EmbeddedResource Include="..\..\Resources\Image\Others\EditorTable.jpg">
+        <Link>Icons\EditorTable.jpg</Link>  
+    </EmbeddedResource>  
+    <EmbeddedResource Include="..\..\Resources\Image\Others\EditorTwitter.jpeg">
+        <Link>Icons\EditorTwitter.jpeg</Link>  
+    </EmbeddedResource> 
+    <EmbeddedResource Include="..\..\Resources\Image\Others\EditorVenn.jpg">
+        <Link>Icons\EditorVenn.jpg</Link>  
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Resources\Image\Others\EditorPerson1.png">
+        <Link>Icons\EditorPerson1.png</Link>  
+    </EmbeddedResource>  
+    <EmbeddedResource Include="..\..\Resources\Image\Others\EditorPerson2.png">
+        <Link>Icons\EditorPerson2.png</Link>  
+    </EmbeddedResource> 
+    <EmbeddedResource Include="..\..\Resources\Image\Others\EditorPerson3.png">
+        <Link>Icons\EditorPerson3.png</Link>  
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Resources\Image\Others\EditorSuccinity.png">
+        <Link>Icons\EditorSuccinity.png</Link>  
+    </EmbeddedResource>     
+    <EmbeddedResource Include="..\..\Resources\Image\Others\EditorTablet.png">
+        <Link>Icons\EditorTablet.png</Link>  
+    </EmbeddedResource>         
+    <EmbeddedResource Include="..\..\Resources\Image\Others\ITypogy1.png">
+        <Link>Icons\ITypogy1.png</Link>  
+    </EmbeddedResource>         
+    <EmbeddedResource Include="..\..\Resources\Image\Others\ITypogy2.png">
+        <Link>Icons\ITypogy2.png</Link>  
+    </EmbeddedResource>    
+    <EmbeddedResource Include="..\..\Resources\Image\Others\ITypogy3.png">
+        <Link>Icons\ITypogy3.png</Link>  
+    </EmbeddedResource>         
+    <EmbeddedResource Include="..\..\Resources\Image\Others\ITypogy4.png">
+        <Link>Icons\ITypogy4.png</Link>  
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Resources\Image\Others\ITypogy5.png">
+        <Link>Icons\ITypogy5.png</Link>  
+    </EmbeddedResource>         
+    <EmbeddedResource Include="..\..\Resources\Image\Others\ITypogy6.png">
+        <Link>Icons\ITypogy6.png</Link>  
+    </EmbeddedResource> 
+    <EmbeddedResource Include="..\..\Resources\Image\Others\ReplaceIcon.png">
+        <Link>Icons\ReplaceIcon.png</Link>  
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Resources\Image\Others\Editor_CreateNew.png">
+      <Link>Icons\Editor_CreateNew.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Resources\Image\Others\Editor_Plain.png">
+      <Link>Icons\Editor_Plain.png</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SampleBrowser.Core" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.SfImageEditor" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="18.1.0.52" />
+	<PackageReference Include="Syncfusion.Xamarin.Core" Version="18.1.0.52" /> 
+    <PackageReference Include="System.ComponentModel" Version="4.3.0" /> 
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Samples\CustomViewSample\CustomViewHomePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+  <PropertyGroup>
+    <PrepareResourceNamesDependsOn>
+      IncludeFilesInDroid;
+      $(PrepareResourceNamesDependsOn)
+    </PrepareResourceNamesDependsOn>
+  </PropertyGroup>
+  <Target Name="IncludeFilesInDroid">
+    <ItemGroup>
+      <FilesToDelete Include="..\ImageEditor.Android\Resources\CodeFiles\**\*" />
+      <FilesToDelete Include="..\ImageEditor.iOS\Resources\CodeFiles\**\*" />
+      <FilesToDelete Include="..\ImageEditor.UWP\Resources\CodeFiles\**\*" />
+    </ItemGroup>
+    <Delete Files="@(FilesToDelete)" />
+    <RemoveDir Directories="..\ImageEditor.Android\Resources\CodeFiles\" />
+    <RemoveDir Directories="..\ImageEditor.iOS\Resources\CodeFiles\" />
+    <RemoveDir Directories="..\ImageEditor.UWP\Resources\CodeFiles\" />
+    <ItemGroup>
+      <SourceResourceFiles Include="Samples\**\*">
+        <DroidFiles>..\ImageEditor.Android\Resources\CodeFiles\</DroidFiles>
+        <iOSFiles>..\ImageEditor.iOS\Resources\CodeFiles\</iOSFiles>
+        <UWPFiles>..\ImageEditor.UWP\Resources\CodeFiles\</UWPFiles>
+      </SourceResourceFiles>
+    </ItemGroup>
+    <Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(DroidFiles)\%(RecursiveDir)" />
+    <Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(iOSFiles)\%(RecursiveDir)" />
+    <Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(UWPFiles)\%(RecursiveDir)" />
+  </Target>
+</Project>

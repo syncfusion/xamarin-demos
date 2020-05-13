@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>SampleBrowser.SfBorder</AssemblyName>
+    <RootNamespace>SampleBrowser.SfBorder</RootNamespace>
+  </PropertyGroup>
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+	</PropertyGroup>
+  <ItemGroup>
+    <None Remove="SampleBrowser.SfBorder.nuspec" />
+    <None Remove="SampleBrowser.SfBorder.props" />
+    <None Remove="SamplesList\SamplesList.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SamplesList\SamplesList.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SampleBrowser.Core" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="18.1.0.52" />
+    <PackageReference Include="System.ComponentModel" Version="4.3.0" />
+    <PackageReference Include="Xamarin.Forms">
+      <Version>3.6.0.344457</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.1.0.52" />
+	<PackageReference Include="Syncfusion.Xamarin.Buttons" Version="18.1.0.52" />
+	<PackageReference Include="Syncfusion.Xamarin.SfRangeSlider" Version="18.1.0.52" />
+    
+  </ItemGroup>
+  
+</Project>

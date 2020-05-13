@@ -1,0 +1,48 @@
+<Project>
+
+
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Link>Samples\DigitalGauge\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+
+<ItemGroup>
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DigitalGaugeSample\DigitalGaugeSample.xaml">
+    <Link>Samples\DigitalGauge\Samples\DigitalGaugeSample\DigitalGaugeSample.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+<ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DigitalGauge_Default\DigitalGauge_Default.xaml">
+    <Link>Samples\DigitalGauge\Samples\DigitalGauge_Default\DigitalGauge_Default.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DigitalGauge_Tablet\DigitalGauge_Tablet.xaml">
+    <Link>Samples\DigitalGauge\Samples\DigitalGauge_Tablet\DigitalGauge_Tablet.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  
+  <ItemGroup>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\DigitalGaugeSample\DigitalGaugeSample.xaml.cs">
+        <Link>Samples\DigitalGauge\Samples\DigitalGaugeSample\DigitalGaugeSample.xaml.cs</Link>
+      <DependentUpon>DigitalGaugeSample.xaml</DependentUpon>
+    </Compile>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\DigitalGauge_Default\DigitalGauge_Default.xaml.cs">
+        <Link>Samples\DigitalGauge\Samples\DigitalGauge_Default\DigitalGaugeSample.xaml.cs</Link>
+      <DependentUpon>DigitalGauge_Default.xaml</DependentUpon>
+    </Compile>
+   <Compile Include="$(MSBuildThisFileDirectory)\Samples\DigitalGauge_Tablet\DigitalGauge_Tablet.xaml.cs">
+        <Link>Samples\DigitalGauge\Samples\DigitalGauge_Tablet\DigitalGaugeSample.xaml.cs</Link>
+      <DependentUpon>DigitalGauge_Tablet.xaml</DependentUpon>
+    </Compile>
+</ItemGroup>
+
+</Project>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1A778E45-EA8F-4327-9DA0-38BF8A9D4FFD}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SampleBrowser.SfKanban.Droid</RootNamespace>
+    <AssemblyName>SampleBrowser.SfKanban.Android</AssemblyName>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
+    <AndroidSupportedAbis>armeabi-v7a;x86;</AndroidSupportedAbis>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidSupportedAbis>armeabi-v7a;x86;</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+    <AndroidSupportedAbis>armeabi-v7a;x86;</AndroidSupportedAbis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="SampleBrowser.Core">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.Core">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.DataSource">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfKanban">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfListView">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfRating">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Forms">
+      <Version>3.6.0.344457</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SplashScreenActivity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Tabbar.axml" />
+    <AndroidResource Include="Resources\layout\Toolbar.axml" />
+    <AndroidResource Include="Resources\values\styles.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Kanban\SampleBrowser.SfKanban.csproj">
+      <Project>{dc035847-ac56-4be2-b6b1-87fa6400ef4f}</Project>
+      <Name>SampleBrowser.SfKanban</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\..\Resources\Image\Food\bucolicpie.png">
+      <Link>Resources\drawable\bucolicpie.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\Food\bumpercrop.png">
+      <Link>Resources\drawable\bumpercrop.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\Food\doublecheesemargherita.png">
+      <Link>Resources\drawable\doublecheesemargherita.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\Food\margherita.png">
+      <Link>Resources\drawable\margherita.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\Food\SaladDaze.png">
+      <Link>Resources\drawable\SaladDaze.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\Food\SpiceOfLife.png">
+      <Link>Resources\drawable\SpiceOfLife.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\Food\VeryNicoise.png">
+      <Link>Resources\drawable\VeryNicoise.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\People\People_Circle1.png">
+      <Link>Resources\drawable\People_Circle1.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\People\People_Circle2.png">
+      <Link>Resources\drawable\People_Circle2.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\People\People_Circle3.png">
+      <Link>Resources\drawable\People_Circle3.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\People\People_Circle4.png">
+      <Link>Resources\drawable\People_Circle4.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\People\People_Circle5.png">
+      <Link>Resources\drawable\People_Circle5.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\People\People_Circle6.png">
+      <Link>Resources\drawable\People_Circle6.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\People\People_Circle7.png">
+      <Link>Resources\drawable\People_Circle7.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\People\People_Circle8.png">
+      <Link>Resources\drawable\People_Circle8.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\People\People_Circle9.png">
+      <Link>Resources\drawable\People_Circle9.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\People\People_Circle10.png">
+      <Link>Resources\drawable\People_Circle10.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\People\People_Circle11.png">
+      <Link>Resources\drawable\People_Circle11.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\People\People_Circle12.png">
+      <Link>Resources\drawable\People_Circle12.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\People\People_Circle13.png">
+      <Link>Resources\drawable\People_Circle13.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\People\People_Circle14.png">
+      <Link>Resources\drawable\People_Circle14.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\People\People_Circle15.png">
+      <Link>Resources\drawable\People_Circle15.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\People\People_Circle16.png">
+      <Link>Resources\drawable\People_Circle16.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\People\People_Circle17.png">
+      <Link>Resources\drawable\People_Circle17.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\People\People_Circle18.png">
+      <Link>Resources\drawable\People_Circle18.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\People\People_Circle19.png">
+      <Link>Resources\drawable\People_Circle19.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\People\People_Circle20.png">
+      <Link>Resources\drawable\People_Circle20.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\People\People_Circle21.png">
+      <Link>Resources\drawable\People_Circle21.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\People\People_Circle22.png">
+      <Link>Resources\drawable\People_Circle22.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\People\People_Circle23.png">
+      <Link>Resources\drawable\People_Circle23.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\..\Resources\Image\Icons\Kanban_Time.png">
+      <Link>Resources\drawable\Kanban_Time.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="..\..\Resources\Font\SB Icons.ttf">
+      <Link>Assets\SB Icons.ttf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\Resources\Font\Sync FontIcons.ttf">
+      <Link>Assets\Sync FontIcons.ttf</Link>
+    </AndroidAsset>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>

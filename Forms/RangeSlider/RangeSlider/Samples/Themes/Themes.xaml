@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:range="clr-namespace:Syncfusion.SfRangeSlider.XForms;assembly=Syncfusion.SfRangeSlider.XForms" x:Class="SampleBrowser.SfRangeSlider.Themes">
+        <Grid Padding="0,20,0,0">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="20" />
+        <RowDefinition Height="20" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="20" />
+        <RowDefinition Height="35" />
+        <RowDefinition Height="20" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <StackLayout x:Name="departureHeaderStack" Spacing="0" Grid.Row="0" Orientation="Horizontal" Padding="15,0,0,0">
+        <Label x:Name="departureLabel" Text="Departure" XAlign="Start" YAlign="End" FontSize="16"/>
+        <Label x:Name="timeLabel1" Text=" (in Hours)" FontSize="10" HeightRequest="22" YAlign="End" XAlign="Start" />
+      </StackLayout>
+      <StackLayout x:Name="departureTimerStack" Grid.Row="1" Orientation="Horizontal" Padding="15,0,0,0">
+        <Label x:Name="timeLabel5" Text="Time:" YAlign="Center"/>
+        <Label x:Name="timeLabel3" FontSize="12" Text="12 AM - 12 PM" HeightRequest="22" YAlign="Center" XAlign="Start"/>
+      </StackLayout>
+      <StackLayout  x:Name="departureRangeStack" Grid.Row="2" Spacing="0" Padding="10">
+        <range:SfRangeSlider  x:Name="sfRangeSlider1" WidthRequest="200" Minimum="0" Maximum="12" RangeStart="0" RangeEnd="12" TickFrequency="2" SnapsTo="StepValues" StepFrequency="1" ToolTipPlacement="None"
+            Orientation="Horizontal" TickPlacement="BottomRight" ShowValueLabel="True"/>
+      </StackLayout>
+      <StackLayout x:Name="arrivalHeaderStack" Grid.Row="4" Spacing="0" Orientation="Horizontal" Padding="15,0,0,0">
+        <Label x:Name="arrivalLabel" Text="Arrival" XAlign="Start" YAlign="End" FontSize="16"/>
+        <Label x:Name="timeLabel2" Text=" (in Hours)" FontSize="10" HeightRequest="22" YAlign="End" XAlign="Start"/>
+      </StackLayout>
+      <StackLayout x:Name="arrivalTimerStack" Grid.Row="5" Orientation="Horizontal" Padding="15,0,0,0">
+        <Label x:Name="timeLabel6" Text="Time:" YAlign="Center"/>
+        <Label x:Name="timeLabel4" FontSize="12" Text="12 AM - 12 PM" HeightRequest="22" YAlign="Center" XAlign="Start"/>
+      </StackLayout>
+      <StackLayout x:Name="arrivalRangeStack" Grid.Row="6" Padding="10">
+        <range:SfRangeSlider x:Name="sfRangeSlider2" WidthRequest="200" Minimum="0" Maximum="12" RangeStart="0" RangeEnd="12" TickFrequency="2" Orientation="Horizontal"
+            ToolTipPlacement="None" TickPlacement="BottomRight" SnapsTo="StepValues" StepFrequency="1" ShowValueLabel="True"/>
+      </StackLayout>
+    </Grid>
+</local:SampleView>

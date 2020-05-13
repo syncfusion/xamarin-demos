@@ -1,0 +1,641 @@
+  <Project >
+    <ItemGroup>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\AutoRowHeight\AutoRowHeight.xaml.cs">
+        <Link>Samples\DataGrid\Samples\AutoRowHeight\AutoRowHeight.xaml.cs</Link>
+       <DependentUpon>AutoRowHeight.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\AutoRowHeight\AutoRowHeightBehaviors.cs">
+        <Link>Samples\DataGrid\Samples\AutoRowHeight\AutoRowHeightBehaviors.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\CellTemplate\CellTemplate.xaml.cs">
+        <Link>Samples\DataGrid\Samples\CellTemplate\CellTemplate.xaml.cs</Link>
+       <DependentUpon>CellTemplate.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\CellTemplate\CellTemplateBehavior.cs">
+        <Link>Samples\DataGrid\Samples\CellTemplate\CellTemplateBehavior.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\ConditionalFormatting\ConditionalFormattingBehaviors.cs">
+        <Link>Samples\DataGrid\Samples\ConditionalFormatting\ConditionalFormattingBehaviors.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\ConditionalFormatting\ConditionalFormatting.xaml.cs">
+        <Link>Samples\DataGrid\Samples\ConditionalFormatting\ConditionalFormatting.xaml.cs</Link>
+       <DependentUpon>ConditionalFormatting.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\ContextMenu\ContextMenuBehavior.cs">
+        <Link>Samples\DataGrid\Samples\ContextMenu\ContextMenuBehavior.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\ContextMenu\ContextMenu.xaml.cs">
+        <Link>Samples\DataGrid\Samples\ContextMenu\ContextMenu.xaml.cs</Link>
+       <DependentUpon>ContextMenu.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\CustomGrouping\CustomGroupingBehavior.cs">
+        <Link>Samples\DataGrid\Samples\CustomGrouping\CustomGroupingBehavior.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\CustomGrouping\CustomGrouping.xaml.cs">
+        <Link>Samples\DataGrid\Samples\CustomGrouping\CustomGrouping.xaml.cs</Link>
+       <DependentUpon>CustomGrouping.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\CustomSorting\CustomSorting.xaml.cs">
+        <Link>Samples\DataGrid\Samples\DatagridGrouping\CustomSorting.xaml.cs</Link>
+       <DependentUpon>CustomSorting.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataGridStyles\DataGridStylesBehaviors.cs">
+        <Link>Samples\DataGrid\Samples\DataGridStyles\DataGridStylesBehaviors.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataGridStyles\DataGridStyles.xaml.cs">
+        <Link>Samples\DataGrid\Samples\DataGridStyles\DataGridStyles.xaml.cs</Link>
+       <DependentUpon>DataGridStyles.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataVirtualization\DataVirtualization.xaml.cs">
+        <Link>Samples\DataGrid\Samples\DataVirtualization\DataVirtualization.xaml.cs</Link>
+       <DependentUpon>DataVirtualization.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\DiagonalScrolling\DiagonalScrollingBehaviors.cs">
+        <Link>Samples\DataGrid\Samples\DiagonalScrolling\DiagonalScrollingBehaviors.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\DiagonalScrolling\DiagonalScrolling.xaml.cs">
+        <Link>Samples\DataGrid\Samples\DiagonalScrolling\DiagonalScrolling.xaml.cs</Link>
+       <DependentUpon>DiagonalScrolling.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\DragAndDrop\DragAndDropBehaviors.cs">
+        <Link>Samples\DataGrid\Samples\DragAndDrop\DragAndDropBehaviors.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\DragAndDrop\DragAndDrop.xaml.cs">
+        <Link>Samples\DataGrid\Samples\DragAndDrop\DragAndDrop.xaml.cs</Link>
+       <DependentUpon>DragAndDrop.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Editing\EditingBehaviors.cs">
+        <Link>Samples\DataGrid\Samples\Editing\EditingBehaviors.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Editing\Editing.xaml.cs">
+        <Link>Samples\DataGrid\Samples\Editing\Editing.xaml.cs</Link>
+       <DependentUpon>Editing.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Exporting\ExportingBehaviors.cs">
+        <Link>Samples\DataGrid\Samples\Exporting\ExportingBehaviors.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Exporting\Exporting.xaml.cs">
+        <Link>Samples\DataGrid\Samples\Exporting\Exporting.xaml.cs</Link>
+       <DependentUpon>Exporting.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Filtering\FilteringBehaviors.cs">
+        <Link>Samples\DataGrid\Samples\Filtering\FilteringBehaviors.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Filtering\Filtering.xaml.cs">
+        <Link>Samples\DataGrid\Samples\Filtering\Filtering.xaml.cs</Link>
+       <DependentUpon>Filtering.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\FrozenRow\FrozenRowBehavior.cs">
+        <Link>Samples\DataGrid\Samples\FrozenRow\FrozenRowBehavior.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\FrozenRow\FrozenRow.xaml.cs">
+        <Link>Samples\DataGrid\Samples\FrozenRow\FrozenRow.xaml.cs</Link>
+       <DependentUpon>FrozenRow.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\GridColumns\GridColumns.xaml.cs">
+        <Link>Samples\DataGrid\Samples\GridColumns\GridColumns.xaml.cs</Link>
+       <DependentUpon>GridColumns.xaml</DependentUpon>
+      </Compile>
+	  <Compile Include="$(MSBuildThisFileDirectory)\Samples\GridGettingStarted\GettingStartedBehavior.cs">
+        <Link>Samples\DataGrid\Samples\GridGettingStarted\GettingStartedBehavior.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\GridGettingStarted\GridGettingStarted.xaml.cs">
+        <Link>Samples\DataGrid\Samples\GridGettingStarted\GridGettingStarted.xaml.cs</Link>
+       <DependentUpon>GridGettingStarted.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataBinding\DataBinding.xaml.cs">
+        <Link>Samples\DataGrid\Samples\DataBinding\DataBinding.xaml.cs</Link>
+       <DependentUpon>DataBinding.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataBinding\DataBindingBehavior.cs">
+        <Link>Samples\DataGrid\Samples\DataBinding\DataBindingBehavior.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Grouping\GroupingBehaviors.cs">
+        <Link>Samples\DataGrid\Samples\Grouping\GroupingBehaviors.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Grouping\Grouping.xaml.cs">
+        <Link>Samples\DataGrid\Samples\Grouping\Grouping.xaml.cs</Link>
+       <DependentUpon>Grouping.xaml</DependentUpon>
+      </Compile>
+       <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\CellTemplateConverter.cs">
+        <Link>Samples\DataGrid\Samples\Helpers\CellTemplateConverter.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\ChangeBackgroundConverter.cs">
+        <Link>Samples\DataGrid\Samples\Helpers\ChangeBackgroundConverter.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\ChangeForegroundConverter.cs">
+        <Link>Samples\DataGrid\Samples\Helpers\ChangeForegroundConverter.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\CustomLayout.cs">
+        <Link>Samples\DataGrid\Samples\Helpers\CustomLayout.cs</Link>
+      </Compile>
+       <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\CustomSortComparer.cs">
+        <Link>Samples\DataGrid\Samples\Helpers\CustomSortComparer.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\GroupCaptionRenderer.cs">
+        <Link>Samples\DataGrid\Samples\Helpers\GroupCaptionRenderer.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\CustomerInfo.cs">
+        <Link>Samples\DataGrid\Samples\Helpers\CustomerInfo.cs</Link>
+      </Compile>
+       <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\ForegroundConverter.cs">
+        <Link>Samples\DataGrid\Samples\Helpers\ForegroundConverter.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\FormsView.cs">
+        <Link>Samples\DataGrid\Samples\Helpers\FormsView.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\GridCustomEntry.cs">
+        <Link>Samples\DataGrid\Samples\Helpers\GridCustomEntry.cs</Link>
+      </Compile>
+       <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\GroupDataTimeConverter.cs">
+        <Link>Samples\DataGrid\Samples\Helpers\GroupDataTimeConverter.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\IDataGridDependencyService.cs">
+        <Link>Samples\DataGrid\Samples\Helpers\IDataGridDependencyService.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\ImageConverter.cs">
+        <Link>Samples\DataGrid\Samples\Helpers\ImageConverter.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\RowTemplate.cs">
+        <Link>Samples\DataGrid\Samples\Helpers\RowTemplate.cs</Link>
+      </Compile>
+       <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\SfImage.cs">
+        <Link>Samples\DataGrid\Samples\Helpers\SfImage.cs</Link>
+      </Compile>
+       <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\StyleConverterforQS1.cs">
+        <Link>Samples\DataGrid\Samples\Helpers\StyleConverterforQS1.cs</Link>
+      </Compile>
+       <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\StyleConverterforQS2.cs">
+        <Link>Samples\DataGrid\Samples\Helpers\StyleConverterforQS2.cs</Link>
+      </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\StyleConverterforQS3.cs">
+        <Link>Samples\DataGrid\Samples\Helpers\StyleConverterforQS3.cs</Link>
+      </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\StyleConverterforQS4.cs">
+        <Link>Samples\DataGrid\Samples\Helpers\StyleConverterforQS4.cs</Link>
+      </Compile>
+       <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\TableSummaryRenderer.cs">
+        <Link>Samples\DataGrid\Samples\Helpers\TableSummaryRenderer.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\ImageResourceExtension.cs">
+        <Link>Samples\DataGrid\Samples\Helpers\ImageResourceExtension.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\PickerExt.cs">
+        <Link>Samples\DataGrid\Samples\Helpers\PickerExt.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\SearchBarExt.cs">
+        <Link>Samples\DataGrid\Samples\Helpers\SearchBarExt.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\SelectionController.cs">
+        <Link>Samples\DataGrid\Samples\Helpers\SelectionController.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\ItemSourceSelector.cs">
+        <Link>Samples\DataGrid\Samples\Helpers\ItemSourceSelector.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\LoadMore\LoadMoreBehaviors.cs">
+        <Link>Samples\DataGrid\Samples\LoadMore\LoadMoreBehaviors.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\LoadMore\LoadMore.xaml.cs">
+        <Link>Samples\DataGrid\Samples\LoadMore\LoadMore.xaml.cs</Link>
+       <DependentUpon>LoadMore.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\BookInfo.cs">
+        <Link>Samples\DataGrid\Samples\Model\BookInfo.cs</Link>
+      </Compile>
+	  <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\ChartModel.cs">
+        <Link>Samples\DataGrid\Samples\Model\ChartModel.cs</Link>
+      </Compile>
+	 <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\GettingStartedModel.cs">
+        <Link>Samples\DataGrid\Samples\Model\GettingStartedModel.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\BookRepository.cs">
+        <Link>Samples\DataGrid\Samples\Model\BookRepository.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\CellTemplateModel.cs">
+        <Link>Samples\DataGrid\Samples\Model\CellTemplateModel.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\CellTemplateModelRepository.cs">
+        <Link>Samples\DataGrid\Samples\Model\CellTemplateModelRepository.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\CustomerDetails.cs">
+        <Link>Samples\DataGrid\Samples\Model\CustomerDetails.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\CustomersRepository.cs">
+        <Link>Samples\DataGrid\Samples\Model\CustomersRepository.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\DealerInfo.cs">
+        <Link>Samples\DataGrid\Samples\Model\DealerInfo.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\DealerRepository.cs">
+        <Link>Samples\DataGrid\Samples\Model\DealerRepository.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\Employee.cs">
+        <Link>Samples\DataGrid\Samples\Model\Employee.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\EmployeeDetails.cs">
+        <Link>Samples\DataGrid\Samples\Model\EmployeeDetails.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\EmployeeInfo.cs">
+        <Link>Samples\DataGrid\Samples\Model\EmployeeInfo.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\EmployeeInfoRepository.cs">
+        <Link>Samples\DataGrid\Samples\Model\EmployeeInfoRepository.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\EmployeeInformation.cs">
+        <Link>Samples\DataGrid\Samples\Model\EmployeeInformation.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\EmployeeInformationRepository.cs">
+        <Link>Samples\DataGrid\Samples\Model\EmployeeInformationRepository.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\OrderInfo.cs">
+        <Link>Samples\DataGrid\Samples\Model\OrderInfo.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\OrderInfoRepository.cs">
+        <Link>Samples\DataGrid\Samples\Model\OrderInfoRepository.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\Product.cs">
+        <Link>Samples\DataGrid\Samples\Model\Product.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\ProductInfo.cs">
+        <Link>Samples\DataGrid\Samples\Model\ProductInfo.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\ProductInfoRepository.cs">
+        <Link>Samples\DataGrid\Samples\Model\ProductInfoRepository.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\ProductRepository.cs">
+        <Link>Samples\DataGrid\Samples\Model\ProductRepository.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\ReleaseInfo.cs">
+        <Link>Samples\DataGrid\Samples\Model\ReleaseInfo.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\ReleaseInfoRepository.cs">
+        <Link>Samples\DataGrid\Samples\Model\ReleaseInfoRepository.cs</Link>
+      </Compile>
+       <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\SalesByDate.cs">
+        <Link>Samples\DataGrid\Samples\Model\SalesByDate.cs</Link>
+      </Compile>
+       <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\SalesRepository.cs">
+        <Link>Samples\DataGrid\Samples\Model\SalesRepository.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\SalesInfoRepository.cs">
+        <Link>Samples\DataGrid\Samples\Model\SalesInfoRepository.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\StockData.cs">
+        <Link>Samples\DataGrid\Samples\Model\StockData.cs</Link>
+      </Compile>
+       <Compile Include="$(MSBuildThisFileDirectory)\Samples\Paging\PagerAppearance.cs">
+        <Link>Samples\DataGrid\Samples\Paging\PagerAppearance.cs</Link>
+      </Compile>
+       <Compile Include="$(MSBuildThisFileDirectory)\Samples\Paging\PagingBehavior.cs">
+        <Link>Samples\DataGrid\Samples\Paging\PagingBehavior.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Paging\Paging.xaml.cs">
+        <Link>Samples\DataGrid\Samples\Paging\Paging.xaml.cs</Link>
+       <DependentUpon>Paging.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\PullToRefresh\PullToRefreshBehavior.cs">
+        <Link>Samples\DataGrid\Samples\PullToRefresh\PullToRefreshBehavior.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\PullToRefresh\PullToRefresh.xaml.cs">
+        <Link>Samples\DataGrid\Samples\PullToRefresh\PullToRefresh.xaml.cs</Link>
+       <DependentUpon>PullToRefresh.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\RenderingDynamicData\RenderingDynamicData.xaml.cs">
+        <Link>Samples\DataGrid\Samples\RenderingDynamicData\RenderingDynamicData.xaml.cs</Link>
+       <DependentUpon>RenderingDynamicData.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Resizing\ResizingBehaviors.cs">
+        <Link>Samples\DataGrid\Samples\Resizing\ResizingBehaviors.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Resizing\Resizing.xaml.cs">
+        <Link>Samples\DataGrid\Samples\Resizing\Resizing.xaml.cs</Link>
+       <DependentUpon>Resizing.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\RowDragAndDrop\RowDragAndDrop.xaml.cs">
+        <Link>Samples\DataGrid\Samples\RowDragAndDrop\RowDragAndDrop.xaml.cs</Link>
+       <DependentUpon>RowDragAndDrop.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Selection\SelectionBehaviors.cs">
+        <Link>Samples\DataGrid\Samples\Selection\SelectionBehaviors.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Selection\Selection.xaml.cs">
+        <Link>Samples\DataGrid\Samples\Selection\Selection.xaml.cs</Link>
+       <DependentUpon>Selection.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Sorting\SortingBehaviors.cs">
+        <Link>Samples\DataGrid\Samples\Sorting\SortingBehaviors.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Sorting\Sorting.xaml.cs">
+        <Link>Samples\DataGrid\Samples\Sorting\Sorting.xaml.cs</Link>
+       <DependentUpon>Sorting.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Styles\Blue.cs">
+        <Link>Samples\DataGrid\Samples\Styles\Blue.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Styles\CellTemplateStyle.cs">
+        <Link>Samples\DataGrid\Samples\Styles\CellTemplateStyle.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Styles\Dark.cs">
+        <Link>Samples\DataGrid\Samples\Styles\Dark.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Styles\UnboundRowStyle.cs">
+        <Link>Samples\DataGrid\Samples\Styles\UnboundRowStyle.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Styles\DefaultStyle.cs">
+        <Link>Samples\DataGrid\Samples\Styles\DefaultStyle.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Styles\DragAndDropStyle.cs">
+        <Link>Samples\DataGrid\Samples\Styles\DragAndDropStyle.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Styles\Green.cs">
+        <Link>Samples\DataGrid\Samples\Styles\Green.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Styles\LoadMoreViewStyle.cs">
+        <Link>Samples\DataGrid\Samples\Styles\LoadMoreViewStyle.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Styles\PagingStyle.cs">
+        <Link>Samples\DataGrid\Samples\Styles\PagingStyle.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Styles\Purple.cs">
+        <Link>Samples\DataGrid\Samples\Styles\Purple.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Styles\Red.cs">
+        <Link>Samples\DataGrid\Samples\Styles\Red.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Styles\SelectionStyle.cs">
+        <Link>Samples\DataGrid\Samples\Styles\SelectionStyle.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Styles\SwipeStyle.cs">
+        <Link>Samples\DataGrid\Samples\Styles\SwipeStyle.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Styles\StackedHeaderStyle.cs">
+        <Link>Samples\DataGrid\Samples\Styles\StackedHeaderStyle.cs</Link>
+      </Compile>
+            <Compile Include="$(MSBuildThisFileDirectory)\Samples\Styles\GettingStartedStyle.cs">
+        <Link>Samples\DataGrid\Samples\Styles\GettingStartedStyle.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\SwipeDelete\SwipeDelete.xaml.cs">
+        <Link>Samples\DataGrid\Samples\SwipeDelete\SwipeDelete.xaml.cs</Link>
+       <DependentUpon>SwipeDelete.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Swiping\SwipingBehaviors.cs">
+        <Link>Samples\DataGrid\Samples\Swiping\SwipingBehaviors.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Swiping\Swiping.xaml.cs">
+        <Link>Samples\DataGrid\Samples\Swiping\Swiping.xaml.cs</Link>
+       <DependentUpon>Swiping.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\UnboundViews\UnBoundviewsBehaviors.cs">
+        <Link>Samples\DataGrid\Samples\UnboundViews\UnBoundviewsBehaviors.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\UnboundViews\UnBoundviews.xaml.cs">
+        <Link>Samples\DataGrid\Samples\UnboundViews\UnBoundviews.xaml.cs</Link>
+       <DependentUpon>UnBoundviews.xaml</DependentUpon>
+      </Compile>
+	  <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml.cs">
+        <Link>Samples\DataGrid\Samples\Themes\Themes.xaml.cs</Link>
+       <DependentUpon>Themes.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\StackedHeaderRow\StackedHeaderRow.xaml.cs">
+        <Link>Samples\DataGrid\Samples\StackedHeaderRow\StackedHeaderRow.xaml.cs</Link>
+        <DependentUpon>StackedHeaderRow.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\AutoRowHeightViewModel.cs">
+        <Link>Samples\DataGrid\Samples\ViewModel\AutoRowHeightViewModel.cs</Link>
+      </Compile>
+	  <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\RowDragAndDropViewModel.cs">
+        <Link>Samples\DataGrid\Samples\ViewModel\RowDragAndDropViewModel.cs</Link>
+      </Compile>
+       <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\CellTemplateViewModel.cs">
+        <Link>Samples\DataGrid\Samples\ViewModel\CellTemplateViewModel.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\ColumnDragAndDropViewModel.cs">
+        <Link>Samples\DataGrid\Samples\ViewModel\ColumnDragAndDropViewModel.cs</Link>
+      </Compile>
+       <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\CustomerViewModel.cs">
+        <Link>Samples\DataGrid\Samples\ViewModel\CustomerViewModel.cs</Link>
+      </Compile>
+       <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\DataPagerViewModel.cs">
+        <Link>Samples\DataGrid\Samples\ViewModel\DataPagerViewModel.cs</Link>
+      </Compile>
+       <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\DataVirtualizationViewModel.cs">
+        <Link>Samples\DataGrid\Samples\ViewModel\DataVirtualizationViewModel.cs</Link>
+      </Compile>
+       <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\EditingViewModel.cs">
+        <Link>Samples\DataGrid\Samples\ViewModel\EditingViewModel.cs</Link>
+      </Compile>
+       <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\ExportingViewModel.cs">
+        <Link>Samples\DataGrid\Samples\ViewModel\ExportingViewModel.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\FilteringViewModel.cs">
+        <Link>Samples\DataGrid\Samples\ViewModel\FilteringViewModel.cs</Link>
+      </Compile>
+       <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\FrozenRowViewModel.cs">
+        <Link>Samples\DataGrid\Samples\ViewModel\FrozenRowViewModel.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\GettingStartedViewModel.cs">
+        <Link>Samples\DataGrid\Samples\ViewModel\GettingStartedViewModel.cs</Link>
+      </Compile>
+       <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\GridColumnsViewModel.cs">
+        <Link>Samples\DataGrid\Samples\ViewModel\GridColumnsViewModel.cs</Link>
+      </Compile>
+       <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\GridViewModel.cs">
+        <Link>Samples\DataGrid\Samples\ViewModel\GridViewModel.cs</Link>
+      </Compile>
+       <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\GroupingViewModel.cs">
+        <Link>Samples\DataGrid\Samples\ViewModel\GroupingViewModel.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\LoadMoreViewModel.cs">
+        <Link>Samples\DataGrid\Samples\ViewModel\LoadMoreViewModel.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\RenderingDynamicDataViewModel.cs">
+        <Link>Samples\DataGrid\Samples\ViewModel\RenderingDynamicDataViewModel.cs</Link>
+      </Compile>
+       <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\SalesInfoViewModel.cs">
+        <Link>Samples\DataGrid\Samples\ViewModel\SalesInfoViewModel.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\SalesViewModel.cs">
+        <Link>Samples\DataGrid\Samples\ViewModel\SalesViewModel.cs</Link>
+      </Compile>
+       <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\SelectionViewModel.cs">
+        <Link>Samples\DataGrid\Samples\ViewModel\SelectionViewModel.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\SortingViewModel.cs">
+        <Link>Samples\DataGrid\Samples\ViewModel\SortingViewModel.cs</Link>
+      </Compile>
+       <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\StylesViewModel.cs">
+        <Link>Samples\DataGrid\Samples\ViewModel\StylesViewModel.cs</Link>
+      </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\SwipingViewModel.cs">
+        <Link>Samples\DataGrid\Samples\ViewModel\SwipingViewModel.cs</Link>
+      </Compile>
+	    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\DataBindingViewModel.cs">
+        <Link>Samples\DataGrid\Samples\ViewModel\DataBindingViewModel.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\ISave.cs">
+        <Link>Samples\DataGrid\ISave.cs</Link>
+      </Compile>
+    </ItemGroup>
+    <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\AutoRowHeight\AutoRowHeight.xaml">
+      <Link>Samples\DataGrid\Samples\AutoRowHeight\AutoRowHeight.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CellTemplate\CellTemplate.xaml">
+      <Link>Samples\DataGrid\Samples\CellTemplate\CellTemplate.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ConditionalFormatting\ConditionalFormatting.xaml">
+      <Link>Samples\DataGrid\Samples\ConditionalFormatting\ConditionalFormatting.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ContextMenu\ContextMenu.xaml">
+      <Link>Samples\DataGrid\Samples\ContextMenu\ContextMenu.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CustomGrouping\CustomGrouping.xaml">
+      <Link>Samples\DataGrid\Samples\CustomGrouping\CustomGrouping.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CustomSorting\CustomSorting.xaml">
+      <Link>Samples\DataGrid\Samples\DatagridGrouping\CustomSorting.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DataGridStyles\DataGridStyles.xaml">
+      <Link>Samples\DataGrid\Samples\DataGridStyles\DataGridStyles.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DataVirtualization\DataVirtualization.xaml">
+      <Link>Samples\DataGrid\Samples\DataVirtualization\DataVirtualization.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DiagonalScrolling\DiagonalScrolling.xaml">
+      <Link>Samples\DataGrid\Samples\DiagonalScrolling\DiagonalScrolling.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DragAndDrop\DragAndDrop.xaml">
+      <Link>Samples\DataGrid\Samples\DragAndDrop\DragAndDrop.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Editing\Editing.xaml">
+      <Link>Samples\DataGrid\Samples\Editing\Editing.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Exporting\Exporting.xaml">
+      <Link>Samples\DataGrid\Samples\Exporting\Exporting.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Filtering\Filtering.xaml">
+      <Link>Samples\DataGrid\Samples\Filtering\Filtering.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\FrozenRow\FrozenRow.xaml">
+      <Link>Samples\DataGrid\Samples\FrozenRow\FrozenRow.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\GridColumns\GridColumns.xaml">
+      <Link>Samples\DataGrid\Samples\GridColumns\GridColumns.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\GridGettingStarted\GridGettingStarted.xaml">
+      <Link>Samples\DataGrid\Samples\GridGettingStarted\GridGettingStarted.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DataBinding\DataBinding.xaml">
+      <Link>Samples\DataGrid\Samples\DataBinding\DataBinding.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Grouping\Grouping.xaml">
+      <Link>Samples\DataGrid\Samples\Grouping\Grouping.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\LoadMore\LoadMore.xaml">
+      <Link>Samples\DataGrid\Samples\LoadMore\LoadMore.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Paging\Paging.xaml">
+      <Link>Samples\DataGrid\Samples\Paging\Paging.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\PullToRefresh\PullToRefresh.xaml">
+      <Link>Samples\DataGrid\Samples\PullToRefresh\PullToRefresh.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\RenderingDynamicData\RenderingDynamicData.xaml">
+      <Link>Samples\DataGrid\Samples\RenderingDynamicData\RenderingDynamicData.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Resizing\Resizing.xaml">
+      <Link>Samples\DataGrid\Samples\Resizing\Resizing.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\RowDragAndDrop\RowDragAndDrop.xaml">
+      <Link>Samples\DataGrid\Samples\RowDragAndDrop\RowDragAndDrop.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Selection\Selection.xaml">
+      <Link>Samples\DataGrid\Samples\Selection\Selection.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Sorting\Sorting.xaml">
+      <Link>Samples\DataGrid\Samples\Sorting\Sorting.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\SwipeDelete\SwipeDelete.xaml">
+      <Link>Samples\DataGrid\Samples\SwipeDelete\SwipeDelete.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Swiping\Swiping.xaml">
+      <Link>Samples\DataGrid\Samples\Swiping\Swiping.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\UnboundViews\UnBoundviews.xaml">
+      <Link>Samples\DataGrid\Samples\UnboundViews\UnBoundviews.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+	 <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml">
+      <Link>Samples\DataGrid\Samples\Themes\Themes.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>    
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\StackedHeaderRow\StackedHeaderRow.xaml">
+      <Link>Samples\DataGrid\Samples\StackedHeaderRow\StackedHeaderRow.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml" >
+	   <Link>Samples\DataGrid\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

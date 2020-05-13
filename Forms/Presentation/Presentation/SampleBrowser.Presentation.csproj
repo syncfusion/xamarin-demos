@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Configurations>Debug;Release;Release-xml</Configurations>
+	<AssemblyName>SampleBrowser.Presentation</AssemblyName>
+	<RootNamespace>SampleBrowser.Presentation</RootNamespace>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="SampleBrowser.Presentation.nuspec" />
+	<None Remove="SampleBrowser.Presentation.props" />
+  </ItemGroup>
+  <ItemGroup>    
+    <PackageReference Include="SampleBrowser.Core" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.Presentation" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.PresentationRenderer" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.SkiaSharpHelper" Version="18.1.0.52" />
+	<PackageReference Include="Syncfusion.Xamarin.OfficeChart" Version="18.1.0.52" />
+	<PackageReference Include="Syncfusion.Xamarin.Compression" Version="18.1.0.52" />
+	<PackageReference Include="Syncfusion.Xamarin.PDF" Version="18.1.0.52" />
+	<PackageReference Include="SkiaSharp" version="1.59.3" />
+	<PackageReference Include="Syncfusion.Xamarin.Buttons" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="18.1.0.52" />
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
+  </ItemGroup>  
+  <ItemGroup>
+    <EmbeddedResource Include="SamplesList\SamplesList.xml" />
+    <EmbeddedResource Include="Samples\Templates\HeaderFooter.pptx" />
+    <EmbeddedResource Include="Samples\Templates\HelloWorld.pptx" />
+    <EmbeddedResource Include="Samples\Templates\Images.pptx" />
+	<EmbeddedResource Include="Samples\Templates\Transition.pptx" />
+	<EmbeddedResource Include="Samples\Templates\Template.pptx" />
+    <EmbeddedResource Include="Samples\Templates\NewCharts.pptx" />
+    <EmbeddedResource Include="Samples\Templates\Slides.pptx" />
+	<EmbeddedResource Include="Samples\Templates\ShapeWithAnimation.pptx" />
+	<EmbeddedResource Include="Samples\Templates\Animation.pptx" />  
+    <EmbeddedResource Include="Samples\Templates\Products.xml" />
+    <EmbeddedResource Include="Samples\Templates\SlideTableData.xml" />
+    <EmbeddedResource Include="Samples\Templates\TableData.xml" />
+    <EmbeddedResource Include="Samples\Templates\tablet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>  
+</Project>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="version">18.1.0.52</string>
+	<string name="hello">Hello World, Click Me!</string>
+	<string name="app_name">SampleBrowser</string>
+	 <color name="white">#ffffff</color>
+	 <string name="website"><a href="www.syncfusion.com" target="_top">www.syncfusion.com</a></string>
+    <string name="support"><a href="support@syncfusion.com" target="_top">support@syncfusion.com</a></string>
+
+    <string name ="filter_text">Text to Filter</string>
+	<string name="choose_condition">Choose Condition</string>
+	<string name="choose_column">Select Column</string>
+	<string name="defaultStyle">Default</string>
+	<string name="darkStyle">Dark</string>
+	<string name="blueStyle">Blue</string>
+	<string name="redStyle">Red</string>
+	<string name="greenStyle">Green</string>
+    <string-array name="column_array">
+        <item>All Columns</item>
+        <item>CustomerID</item>
+        <item>FirstName</item>
+        <item>LastName</item>
+        <item>BookID</item>
+        <item>BookName</item>
+        <item>Price</item>
+        <item>Country</item>
+    </string-array>
+	<string-array name="condition_array">
+        <item>Equals</item>
+        <item>NotEquals</item>
+        <item>Contains</item>
+    </string-array>
+  <string name="pdfviewer_icon_files">&#xe705;</string>
+  <string name="pdfviewer_icon_save">&#xe70a;</string>
+  <string name="pdfviewer_icon_undo">&#xe70c;</string>
+  <string name="pdfviewer_icon_redo">&#xe70f;</string>
+  <string name="pdfviewer_icon_search">&#xe708;</string>
+  <string name="pdfviewer_icon_annotation">&#xe720;</string>
+  <string name="pdfviewer_icon_annotationtick">&#xe71c;</string>
+  <string name="pdfviewer_icon_highlight">&#xe715;</string>
+  <string name="pdfviewer_icon_underline">&#xe70d;</string>
+  <string name="pdfviewer_icon_strikeout">&#xe711;</string>
+  <string name="pdfviewer_icon_back">&#xe70b;</string>
+  <string name="pdfviewer_icon_cancel">&#xe70e;</string>
+  <string name="pdfviewer_icon_searchnext">&#xe706;</string>
+  <string name="pdfviewer_icon_searchprev">&#xe716;</string>
+  <string name="pdfviewer_icon_remove">&#xe71e;</string>
+  <string name="pdfviewer_icon_textmarkupannotation">&#xe719;</string>
+  <string name="pdfviewer_icon_shapeannotation">&#xe709;</string>
+  <string name="pdfviewer_icon_inkannotation">&#xe71d;</string>
+  <string name="pdfviewer_icon_editannotation">&#xe706;</string>
+  <string name="pdfviewer_icon_rectangle">&#xe710;</string>
+  <string name="pdfviewer_icon_circle">&#xe714;</string>
+  <string name="pdfviewer_icon_line">&#xe703;</string>
+  <string name="pdfviewer_icon_arrow">&#xe701;</string>
+  <string name="pdfviewer_icon_inkannotationthickness">&#xe722;</string>
+  <string name="pdfviewer_icon_inkannotationopacity">&#xe71a;</string>
+  <string name="pdfviewer_icon_edittextannotation">&#xe706;</string>
+  <string name="pdfviewer_icon_continuousviewmode">&#xe700;</string>
+  <string name="pdfviewer_icon_pagebypageviewmode">&#xe701;</string>
+  <string name="pdfviewer_icon_bookmark">&#xe700;</string>
+  <string name="pdfviewer_icon_bookmarkBackButton">&#xe709;</string>
+</resources>

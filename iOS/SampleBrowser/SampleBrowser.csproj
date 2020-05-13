@@ -1,0 +1,2842 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{BDB40EF5-577B-4242-8930-87CE9E8AFFCC}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SampleBrowser</RootNamespace>
+    <AssemblyName>SampleBrowser</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>FxCop.ruleset</CodeAnalysisRuleSet>
+    <MtouchExtraArgs>--linkskip=System.Core --linkskip=Syncfusion.PresentationRenderer.Portable --linkskip=Syncfusion.DocIORenderer.Portable --linkskip=Syncfusion.XlsIORenderer.Portable --linkskip=SkiaSharp</MtouchExtraArgs>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>false</MtouchDebug>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <MtouchExtraArgs>--linkskip=System.Core --linkskip=Syncfusion.PresentationRenderer.Portable --linkskip=Syncfusion.DocIORenderer.Portable --linkskip=Syncfusion.XlsIORenderer.Portable --linkskip=SkiaSharp</MtouchExtraArgs>
+    <BuildIpa>true</BuildIpa>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <PlatformTarget>x86</PlatformTarget>
+    <MtouchExtraArgs>--linkskip=System.Core --linkskip=Syncfusion.PresentationRenderer.Portable --linkskip=Syncfusion.DocIORenderer.Portable --linkskip=Syncfusion.XlsIORenderer.Portable --linkskip=SkiaSharp</MtouchExtraArgs>
+    <CodeAnalysisRuleSet>FxCop.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>false</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <PlatformTarget>x86</PlatformTarget>
+    <MtouchExtraArgs>--linkskip=System.Core --linkskip=Syncfusion.PresentationRenderer.Portable --linkskip=Syncfusion.DocIORenderer.Portable --linkskip=Syncfusion.XlsIORenderer.Portable --linkskip=SkiaSharp</MtouchExtraArgs>
+    <CodeAnalysisRuleSet>FxCop.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="Syncfusion.Licensing">
+      <HintPath>packages\Syncfusion.Licensing.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.Licensing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>	
+    <Reference Include="Syncfusion.SfAutoComplete.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfAutoComplete.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfAutoComplete.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfBarcode.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfBarCode.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfBarcode.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfBusyIndicator.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfBusyIndicator.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfBusyIndicator.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfCalendar.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfCalendar.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfCalendar.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfCarousel.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfCarousel.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfCarousel.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SFChart.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfChart.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SFChart.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfGauge.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfGauge.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfGauge.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfImageEditor.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfImageEditor.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfImageEditor.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfKanban.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfKanban.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfKanban.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfNavigationDrawer.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfNavigationDrawer.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfNavigationDrawer.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfNumericUpDown.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfNumericUpDown.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfNumericUpDown.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfPullToRefresh.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfPullToRefresh.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfPullToRefresh.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfRadialMenu.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfRadialMenu.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfRadialMenu.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfPicker.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfPicker.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfPicker.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfTabView.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfTabView.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfTabView.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfRangeSlider.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfRangeSlider.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfRangeSlider.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfRating.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfRating.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfRating.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfRotator.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfRotator.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfRotator.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfSchedule.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfSchedule.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfSchedule.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfSparkline.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfSparkline.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfSparkline.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfSunburstChart.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfSunburstChart.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfSunburstChart.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfTreeMap.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfTreeMap.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfTreeMap.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfDiagram.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfDiagram.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfDiagram.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfMaskedEdit.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfMaskedEdit.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfMaskedEdit.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Buttons.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.Buttons.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.Buttons.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfTreeView.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfTreeView.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfTreeView.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+	<Reference Include="System.Data" />
+    <Reference Include="System.Data.Services.Client">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfMaps.iOS">
+      <HintPath>packages\syncfusion.Xamarin.SfMaps.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfMaps.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfGridConverter.iOS">
+      <HintPath>packages\syncfusion.Xamarin.DataGridExport.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfGridConverter.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Linq.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfDataGrid.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.Linq.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfDataGrid.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfDataGrid.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfDataGrid.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfDataForm.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfDataForm.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfDataForm.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNumericTextBox.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfNumericTextBox.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfNumericTextBox.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfPdfViewer.iOS">
+      <HintPath>packages\syncfusion.Xamarin.SfPdfViewer.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfPdfViewer.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfProgressBar.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfProgressBar.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfProgressBar.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfPopupLayout.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfPopupLayout.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfPopupLayout.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfComboBox.iOS">
+      <HintPath>packages\Syncfusion.Xamarin.SfComboBox.IOS.18.1.0.52\lib\Xamarin.iOS10\Syncfusion.SfComboBox.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Calculate.Portable">
+      <HintPath>packages\Syncfusion.Xamarin.Calculate.18.1.0.52\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.Calculate.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Compression.Portable">
+      <HintPath>packages\Syncfusion.Xamarin.Compression.18.1.0.52\lib\netstandard2.0\Syncfusion.Compression.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.XlsIO.Portable">
+      <HintPath>packages\Syncfusion.Xamarin.XlsIO.18.1.0.52\lib\netstandard2.0\Syncfusion.XlsIO.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.XlsIORenderer.Portable">
+      <HintPath>packages\Syncfusion.Xamarin.XlsIORenderer.18.1.0.52\lib\netstandard2.0\Syncfusion.XlsIORenderer.Portable.dll</HintPath>
+    </Reference>
+	<Reference Include="Syncfusion.DocIORenderer.Portable">
+      <HintPath>packages\Syncfusion.Xamarin.DocIORenderer.18.1.0.52\lib\netstandard2.0\Syncfusion.DocIORenderer.Portable.dll</HintPath>
+    </Reference>
+	<Reference Include="Syncfusion.SkiaSharpHelper.Portable">
+      <HintPath>packages\Syncfusion.Xamarin.SkiaSharpHelper.18.1.0.52\lib\netstandard2.0\Syncfusion.SkiaSharpHelper.Portable.dll</HintPath>
+    </Reference>
+	<Reference Include="SkiaSharp">
+      <HintPath>packages\SkiaSharp.1.59.3\lib\XamariniOS\SkiaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.DataSource.Portable">
+      <HintPath>packages\Syncfusion.Xamarin.DataSource.18.1.0.52\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.DataSource.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.DocIO.Portable">
+      <HintPath>packages\Syncfusion.Xamarin.DocIO.18.1.0.52\lib\netstandard2.0\Syncfusion.DocIO.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.GridCommon.Portable">
+      <HintPath>packages\Syncfusion.Xamarin.GridCommon.18.1.0.52\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.GridCommon.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.OfficeChart.Portable">
+      <HintPath>packages\Syncfusion.Xamarin.OfficeChart.18.1.0.52\lib\netstandard2.0\Syncfusion.OfficeChart.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Pdf.Portable">
+      <HintPath>packages\Syncfusion.Xamarin.Pdf.18.1.0.52\lib\netstandard2.0\Syncfusion.Pdf.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Presentation.Portable">
+      <HintPath>packages\Syncfusion.Xamarin.Presentation.18.1.0.52\lib\netstandard2.0\Syncfusion.Presentation.Portable.dll</HintPath>
+    </Reference>
+	<Reference Include="Syncfusion.PresentationRenderer.Portable">
+      <HintPath>packages\Syncfusion.Xamarin.PresentationRenderer.18.1.0.52\lib\netstandard2.0\Syncfusion.PresentationRenderer.Portable.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Contents.json">
+     <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon-167.png">
+     <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon_100x100 .png">
+     <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon_114x114.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon_120x120.png">
+     <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon_144x144.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon_152x152.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon_180x180.png">
+     <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon_29x29.png">
+     <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon_40x40.png">
+     <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon_50x50.png">
+    <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon_57x57.png">
+     <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon_58x58.png">
+     <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon_72x72.png">
+     <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon_76x76.png">
+     <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon_80x80.png">
+     <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon_87x87.png">
+     <InProject>false</InProject>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="DataSource\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Properties\" />
+    <Folder Include="CollectionViewCell\" />
+    <Folder Include="Utility\" />
+    <Folder Include="Samples\DocIO\Templates\" />
+    <Folder Include="Samples\PDF\Assets\" />
+    <Folder Include="Samples\PDFViewer\Assets\" />
+    <Folder Include="Samples\Presentation\Templates\" />
+    <Folder Include="Samples\XlsIO\Template\" />
+    <BundleResource Include="Resources\Controls\MaskedEdit.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Spline Range Area_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Spline Range Area_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Spline Range Area_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Spline Range Area.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Spline Range Area%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Spline Range Area%403x.png" />
+    <BundleResource Include="Resources\Samples\Chart\SplineRangeArea.cs" />
+    <BundleResource Include="Resources\Samples\Chart\DateTimeAxis.cs" />
+    <BundleResource Include="Resources\Samples\Chart\GradientChart.cs" />
+    <BundleResource Include="Resources\SfProgressPause.png" />
+    <BundleResource Include="Resources\SfProgressPlay.png" />
+    <BundleResource Include="Resources\a0.png" />
+    <BundleResource Include="Resources\a1.png" />
+    <BundleResource Include="Resources\a2.png" />
+    <BundleResource Include="Resources\a3.png" />
+    <BundleResource Include="Resources\a4.png" />
+    <BundleResource Include="Resources\a5.png" />
+    <BundleResource Include="Resources\b0.png" />
+    <BundleResource Include="Resources\b1.png" />
+    <BundleResource Include="Resources\b2.png" />
+    <BundleResource Include="Resources\b3.png" />
+    <BundleResource Include="Resources\b4.png" />
+    <BundleResource Include="Resources\b5.png" />
+    <BundleResource Include="Resources\b6.png" />
+    <BundleResource Include="Resources\b7.png" />
+    <BundleResource Include="Resources\b8.png" />
+    <BundleResource Include="Resources\b9.png" />
+    <BundleResource Include="Resources\b10.png" />
+    <BundleResource Include="Resources\b11.png" />
+    <BundleResource Include="Resources\b12.png" />
+    <BundleResource Include="Resources\b13.png" />
+    <BundleResource Include="Resources\Samples\AutoComplete\MultiSelection.cs" />
+    <BundleResource Include="Resources\Images\TabView\apple.png" />
+    <BundleResource Include="Resources\Images\TabView\banana.png" />
+    <BundleResource Include="Resources\Images\TabView\blackshoe.png" />
+    <BundleResource Include="Resources\Images\TabView\blueberry.png" />
+    <BundleResource Include="Resources\Images\TabView\boots.png" />
+    <BundleResource Include="Resources\Images\TabView\canvas.png" />
+    <BundleResource Include="Resources\Images\TabView\chair.png" />
+    <BundleResource Include="Resources\Images\TabView\friends.png" />
+    <BundleResource Include="Resources\Images\TabView\graycanvas.png" />
+    <BundleResource Include="Resources\Images\TabView\hall.png" />
+    <BundleResource Include="Resources\Images\TabView\hall2.png" />
+    <BundleResource Include="Resources\Images\TabView\leather.png" />
+    <BundleResource Include="Resources\Images\TabView\minion.png" />
+    <BundleResource Include="Resources\Images\TabView\NestedTab.ttf" />
+    <BundleResource Include="Resources\Images\TabView\orange.png" />
+    <BundleResource Include="Resources\Images\TabView\redcoat.png" />
+    <BundleResource Include="Resources\Images\TabView\robot.png" />
+    <BundleResource Include="Resources\Images\TabView\Segoe MDL2 Assets.ttf" />
+    <BundleResource Include="Resources\Images\TabView\shirt.png" />
+    <BundleResource Include="Resources\Images\TabView\silvercoat.png" />
+    <BundleResource Include="Resources\Images\TabView\sofa.png" />
+    <BundleResource Include="Resources\Images\TabView\sofa2.png" />
+    <BundleResource Include="Resources\Images\TabView\strawberry.png" />
+    <BundleResource Include="Resources\Images\TabView\TabIcons.ttf" />
+    <BundleResource Include="Resources\Images\TabView\TabImage0.png" />
+    <BundleResource Include="Resources\Images\TabView\TabImage1.png" />
+    <BundleResource Include="Resources\Images\TabView\TabImage2.png" />
+    <BundleResource Include="Resources\Images\TabView\TabImage3.png" />
+    <BundleResource Include="Resources\Images\TabView\TabImage4.png" />
+    <BundleResource Include="Resources\Images\TabView\train.png" />
+    <BundleResource Include="Resources\Images\TabView\tshirt.png" />
+    <BundleResource Include="Resources\Images\TabView\van.png" />
+    <BundleResource Include="Resources\Images\TabView\whiteshirt.png" />
+    <BundleResource Include="Resources\Samples\AutoComplete\Diacritics_Sense.cs" />
+    <BundleResource Include="Resources\Samples\AutoComplete\Engine.cs" />
+    <BundleResource Include="Resources\Samples\AutoComplete\ToleratingTypos.cs" />
+    <BundleResource Include="Resources\Samples\AutoComplete\ToleratingTypos_Main.cs" />
+    <BundleResource Include="Resources\Samples\AutoComplete\ToleratingTypos_Tablet.cs" />
+    <BundleResource Include="Resources\Aeroplane.png" />
+    <BundleResource Include="Resources\Book.png" />
+    <BundleResource Include="Resources\Maps1.png" />
+    <BundleResource Include="Resources\Media.png" />
+    <BundleResource Include="Resources\Music.png" />
+    <BundleResource Include="Resources\Newspaper.png" />
+    <BundleResource Include="Resources\Picture.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\annotation.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\annotation%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\annotation%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\axiscrossing.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\axiscrossing%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\axiscrossing%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Gradient.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Gradient%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Gradient%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Data-Marker.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Data-Marker%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Data-Marker%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Numeric-Axis.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Numeric-Axis%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Numeric-Axis%403x.png" />
+    <BundleResource Include="Resources\Samples\TabView\OrderDetails.cs" />
+    <BundleResource Include="Resources\Samples\TabView\TabViewGettingStarted.cs" />
+    <BundleResource Include="Resources\Samples\TabView\TabViewOptionsPage.cs" />
+    <BundleResource Include="Resources\Samples\TabView\TemplateView.cs" />
+    <BundleResource Include="Resources\all.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\WhiteImage.png" />
+    <BundleResource Include="Resources\Images\Diagram\MindMapImages\collpase.png" />
+    <BundleResource Include="Resources\Images\Diagram\MindMapImages\delete.png" />
+    <BundleResource Include="Resources\Images\Diagram\MindMapImages\expand.png" />
+    <BundleResource Include="Resources\Images\Diagram\MindMapImages\more.png" />
+    <BundleResource Include="Resources\Images\Diagram\MindMapImages\plus.png" />
+    <BundleResource Include="Resources\Images\Diagram\MindMapImages\mindmapconttree.png" />
+    <BundleResource Include="Resources\Images\Diagram\MindMapImages\mindmapDefault.png" />
+    <BundleResource Include="Resources\Images\Diagram\MindMapImages\mindmaportho.png" />
+    <BundleResource Include="Resources\Images\Diagram\MindMapImages\mindmapsimpletree.png" />
+	<BundleResource Include="Resources\Images\Diagram\MindMapImages\diagramTick.png" />
+	<BundleResource Include="Resources\Images\Diagram\MindMapImages\diagramCross.png" />
+    <BundleResource Include="Resources\Samples\Diagram\MindMap.cs" />
+    <BundleResource Include="Resources\Controls\SegmentedControl.png" />
+    <BundleResource Include="Resources\segment2.ttf" />
+    <BundleResource Include="Resources\Segmented.ttf" />
+    <BundleResource Include="Resources\Samples\SegmentedControl\SegementViewGettingStarted.cs" />
+    <BundleResource Include="Resources\Samples\ComboBox\ComboBox.cs" />
+    <BundleResource Include="Resources\Controls\ComboBox.png" />
+    <BundleResource Include="Resources\Controls\ComboBox%402x.png" />
+    <BundleResource Include="Resources\Controls\ComboBox%403x.png" />
+    <BundleResource Include="Resources\Samples\ComboBox\ComboBox_Mobile.cs" />
+    <BundleResource Include="Resources\Images\Diagram\CSCurve.png" />
+    <BundleResource Include="Resources\Images\Diagram\CSCurve1.png" />
+    <BundleResource Include="Resources\Images\Diagram\CSOrtho.png" />
+    <BundleResource Include="Resources\Images\Diagram\CSOrtho1.png" />
+    <BundleResource Include="Resources\Images\Diagram\CSStraight.png" />
+    <BundleResource Include="Resources\Images\Diagram\CSStraight1.png" />
+    <BundleResource Include="Resources\Images\Diagram\CSplus.png" />
+    <BundleResource Include="Resources\Images\Diagram\CSsub.png" />
+    <BundleResource Include="Resources\Samples\Diagram\Connectors.cs" />
+    <BundleResource Include="Resources\Samples\Schedule\AgendaView.cs" />
+    <BundleResource Include="Resources\Samples\Schedule\DragDrop.cs" />
+    <BundleResource Include="Resources\Images\Female.png" />
+    <BundleResource Include="Resources\Images\Male.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\AddIcon.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\BringFrontIcon.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\CustomViewImage1.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\CustomViewImage2.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\CustomViewImage3.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\ITypogy1.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\ITypogy2.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\ITypogy3.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\ITypogy4.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\ITypogy5.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\ITypogy6.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\ReplaceIcon.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\SendBack.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\Typogy1.svg" />
+    <BundleResource Include="Resources\Images\ImageEditor\Typogy2.svg" />
+    <BundleResource Include="Resources\Images\ImageEditor\Typogy3.svg" />
+    <BundleResource Include="Resources\Images\ImageEditor\Typogy4.svg" />
+    <BundleResource Include="Resources\Images\ImageEditor\Typogy5.svg" />
+    <BundleResource Include="Resources\Images\ImageEditor\Typogy6.svg" />
+    <BundleResource Include="Resources\Samples\ImageEditor\ImageEditorCustomView.cs" />
+    <Folder Include="Samples\SegmentedControl\" />
+    <BundleResource Include="Resources\SegmentedControl\SegementViewGettingStarted.cs" />
+    <BundleResource Include="Resources\California.dbf" />
+    <BundleResource Include="Resources\California.shp" />
+    <BundleResource Include="Resources\Custom.shx" />
+    <BundleResource Include="Resources\Texas.dbf" />
+    <BundleResource Include="Resources\Texas.shp" />
+    <BundleResource Include="Resources\africa.shp" />
+    <BundleResource Include="Resources\asia.dbf" />
+    <BundleResource Include="Resources\asia.shp" />
+    <BundleResource Include="Resources\australia.dbf" />
+    <BundleResource Include="Resources\australia.shp" />
+    <BundleResource Include="Resources\continent.dbf" />
+    <BundleResource Include="Resources\continent.shp" />
+    <BundleResource Include="Resources\europe.dbf" />
+    <BundleResource Include="Resources\europe.shp" />
+    <BundleResource Include="Resources\south-america.dbf" />
+    <BundleResource Include="Resources\south-america.shp" />
+    <BundleResource Include="Resources\toolbarBack.png" />
+    <BundleResource Include="Resources\usa_state.dbf" />
+    <BundleResource Include="Resources\world-map.dbf" />
+    <BundleResource Include="Resources\world-map.shp" />
+    <BundleResource Include="Resources\world1.dbf" />
+    <BundleResource Include="Resources\africa.dbf" />
+    <BundleResource Include="Resources\Samples\Maps\Sublayer.cs" />
+    <BundleResource Include="Resources\Samples\Maps\DataLabels.cs" />
+    <BundleResource Include="Resources\Samples\Maps\Drilldown.cs" />
+    <BundleResource Include="Resources\north-america.dbf" />
+    <BundleResource Include="Resources\north-america.shp" />
+    <BundleResource Include="Resources\Controls\TreeView.png" />
+    <BundleResource Include="Resources\Controls\TreeView%402x.png" />
+    <BundleResource Include="Resources\Controls\TreeView%403x.png" />
+    <BundleResource Include="Resources\Images\Car.png" />
+    <BundleResource Include="Resources\Images\Chart_Book.png" />
+    <BundleResource Include="Resources\Images\House.png" />
+    <BundleResource Include="Resources\Images\Person.png" />
+    <BundleResource Include="Resources\Images\Personal.png" />
+    <BundleResource Include="Resources\Samples\Chart\StackedDoughnut.cs" />
+    <BundleResource Include="Resources\Signature_PDFViewer_FONT.ttf" />
+    <BundleResource Include="Resources\Samples\Chart\RangeBar.cs" />
+    <BundleResource Include="Resources\Samples\Chart\Histogram.cs" />
+    <BundleResource Include="Resources\Samples\TreeMap\DataLabel.cs" />
+    <BundleResource Include="Resources\Samples\Chart\Trendlines.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="CollectionViewCell\ControlCell.xib" />
+    <InterfaceDefinition Include="CollectionViewCell\TextCell.xib" />
+    <InterfaceDefinition Include="CollectionViewCell\MultipleSampleCell.xib" />
+    <InterfaceDefinition Include="CollectionViewCell\ControlCell_9.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <BundleResource Include="Resources\PDFViewer_IOS.ttf" />
+    <BundleResource Include="Resources\Font Text edit stamp.ttf" />
+    <BundleResource Include="Resources\Font Page icons.ttf" />
+    <None Include="Samples\DataGrid\NorthwindService\Reference.datasvcmap" />
+    <None Include="Samples\DataGrid\NorthwindService\service.edmx" />
+    <BundleResource Include="Resources\ScheduleTimeTable.png" />
+    <BundleResource Include="Resources\TabIcons.ttf" />
+    <BundleResource Include="Resources\ScheduleTimeTable%402x.png" />
+    <BundleResource Include="Resources\ScheduleTimeTable%403x.png" />
+    <None Include="packages.config" />
+    <BundleResource Include="Resources\PdfViewer_FONT.ttf" />
+    <EmbeddedResource Include="Samples\PDFViewer\Assets\FormFillingDocument.pdf" />
+    <EmbeddedResource Include="Samples\PDFViewer\Assets\Xamarin Forms Succinctly.pdf" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\bahnschrift.ttf" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\georgiab.ttf" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\InvoiceTemplate.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Controls\MaskedEdit%402x.png" />
+    <BundleResource Include="Resources\Controls\MaskedEdit%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Controllers\HomeViewController.cs" />
+    <Compile Include="DataSource\AllControlsCollectionSource.cs" />
+    <Compile Include="CollectionViewCell\PlainSampleViewCell.cs" />
+    <Compile Include="Controllers\ChartSamplesViewController.cs" />
+    <Compile Include="Controllers\SampleViewController.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Model\ReleaseInfo.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Model\ReleaseInfoRepository.cs" />
+    <BundleResource Include="Resources\Samples\DataForm\ContactForm.cs" />
+    <BundleResource Include="Resources\Samples\DataForm\FormGettingStarted.cs" />
+    <BundleResource Include="Resources\Samples\DataForm\Helpers\ContactTableSource.cs" />
+    <BundleResource Include="Resources\Samples\DataForm\Helpers\DataFormController.cs" />
+    <BundleResource Include="Resources\Samples\DataForm\Helpers\DataFormLayoutManagerExt.cs" />
+    <BundleResource Include="Resources\Samples\DataForm\Model\ContactInfo.cs" />
+    <BundleResource Include="Resources\Samples\DataForm\Model\ContactInfoRepository.cs" />
+    <BundleResource Include="Resources\Samples\DataForm\Model\RecipientInfo.cs" />
+    <BundleResource Include="Resources\Samples\DataForm\ViewModel\ContactViewModel.cs" />
+    <BundleResource Include="Resources\Samples\Diagram\FlowDiagram.cs" />
+    <BundleResource Include="Resources\Samples\Diagram\NodeCustomization.cs" />
+    <BundleResource Include="Resources\Samples\Diagram\OrganizationalChart.cs" />
+    <BundleResource Include="Resources\Samples\ProgressBar\Circular.cs" />
+    <BundleResource Include="Resources\Samples\ProgressBar\Linear.cs" />
+    <BundleResource Include="Resources\Samples\MaskedEdit\MaskedEdit.cs" />
+    <BundleResource Include="Resources\Samples\MaskedEdit\MaskedEdit_Mobile.cs" />
+    <BundleResource Include="Resources\Samples\MaskedEdit\MaskedEdit_Tablet.cs" />
+    <BundleResource Include="Resources\Samples\CircularGauge\CircularGaugeAnnotation.cs" />
+    <BundleResource Include="Resources\Samples\CircularGauge\CircularGaugeSample.cs" />
+    <BundleResource Include="Resources\Samples\CircularGauge\DirectionCompass.cs" />
+    <BundleResource Include="Resources\Samples\CircularGauge\GradientRange.cs" />
+    <BundleResource Include="Resources\Samples\CircularGauge\MultipleScales.cs" />
+    <BundleResource Include="Resources\Samples\CircularGauge\Pointers.cs" />
+    <BundleResource Include="Resources\Samples\DigitalGauge\DigitalGauge.cs" />
+    <BundleResource Include="Resources\Samples\LinearGauge\Default.cs" />
+    <BundleResource Include="Resources\Samples\LinearGauge\Ranges.cs" />
+    <BundleResource Include="Resources\Samples\LinearGauge\ScaleandPointers.cs" />
+    <BundleResource Include="Resources\Samples\CircularGauge\GaugeCustomization.cs" />
+    <BundleResource Include="Resources\Samples\LinearGauge\LinearGaugeAnnotation.cs" />
+    <BundleResource Include="Resources\Samples\Popup\DetailsView.cs" />
+    <BundleResource Include="Resources\Samples\Popup\CustomStyles.cs" />
+    <BundleResource Include="Resources\Samples\Popup\PopupGettingStarted.cs" />
+    <BundleResource Include="Resources\Samples\Popup\MovieTile.cs" />
+    <BundleResource Include="Resources\Samples\Popup\TheaterTile.cs" />
+    <BundleResource Include="Resources\Samples\Popup\TicketBookingInfo.cs" />
+    <BundleResource Include="Resources\Samples\Popup\TicketBookingViewModel.cs" />
+    <BundleResource Include="Resources\Samples\Popup\TicketInfoRepository.cs" />
+    <BundleResource Include="Resources\Samples\Popup\PopupCustomizations.cs" />
+    <BundleResource Include="Resources\Samples\Popup\TicketBooking.cs" />
+    <BundleResource Include="Resources\Samples\Schedule\ScheduleGettingStarted.cs" />
+    <BundleResource Include="Resources\Images\Pizzaimage.png" />
+    <BundleResource Include="Resources\Controls\CheckBox.png" />
+    <BundleResource Include="Resources\Controls\CheckBox%402x.png" />
+    <BundleResource Include="Resources\Controls\CheckBox%403x.png" />
+    <BundleResource Include="Resources\Controls\RadioButton.png" />
+    <BundleResource Include="Resources\Controls\RadioButton%402x.png" />
+    <BundleResource Include="Resources\Controls\RadioButton%403x.png" />
+    <BundleResource Include="Resources\Samples\CheckBox\CheckBox.cs" />
+    <BundleResource Include="Resources\Samples\CheckBox\CheckBox_Mobile.cs" />
+    <BundleResource Include="Resources\Samples\RadioButton\RadioButton.cs" />
+    <BundleResource Include="Resources\Samples\RadioButton\RadioButton_Mobile.cs" />
+    <BundleResource Include="Resources\Samples\Schedule\ScheduleView\ScheduleEditor.cs" />
+    <BundleResource Include="Resources\Samples\Schedule\ScheduleView\ScheduleViewsViewModel.cs" />
+    <BundleResource Include="Resources\Samples\Schedule\ScheduleLocale\ScheduleLocalViewModel.cs" />
+    <BundleResource Include="Resources\Samples\Schedule\Configuration\ScheduleConfigurationViewModel.cs" />
+    <BundleResource Include="Resources\Samples\TreeView\TreeGettingStarted.cs" />
+    <BundleResource Include="Resources\Samples\TreeView\TreeSelection.cs" />
+    <BundleResource Include="Resources\Samples\TreeView\TreeTemplate.cs" />
+    <BundleResource Include="Resources\Samples\TreeView\NodeWithImage.cs" />
+    <BundleResource Include="Resources\Samples\TreeView\Helper\CustomAdapter\NodeImageAdapter.cs" />
+    <BundleResource Include="Resources\Samples\TreeView\Helper\CustomAdapter\TemplateAdapter.cs" />
+    <BundleResource Include="Resources\Samples\TreeView\Helper\CustomView\NodeImageView.cs" />
+    <BundleResource Include="Resources\Samples\TreeView\Helper\CustomView\TemplateSelectorView.cs" />
+    <BundleResource Include="Resources\Samples\TreeView\Model\FileManager.cs" />
+    <BundleResource Include="Resources\Samples\TreeView\Model\MailFolder.cs" />
+    <BundleResource Include="Resources\Samples\TreeView\ViewModel\FileManagerViewModel.cs" />
+    <BundleResource Include="Resources\Samples\TreeView\ViewModel\MailFolderViewModel.cs" />
+    <BundleResource Include="Resources\Samples\TreeView\Helper\CustomAdapter\GettingStartedAdapter.cs" />
+    <BundleResource Include="Resources\Samples\TreeView\Helper\CustomAdapter\SelectionAdapter.cs" />
+    <BundleResource Include="Resources\Samples\TreeView\Model\Countries.cs" />
+    <BundleResource Include="Resources\Samples\TreeView\Model\FoodSpecies.cs" />
+    <BundleResource Include="Resources\Samples\TreeView\ViewModel\CountriesViewModel.cs" />
+    <BundleResource Include="Resources\Samples\TreeView\ViewModel\FoodSpeciesViewModel.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\ContextMenu.cs" />
+    <Compile Include="Samples\CheckBox\CheckBox.cs" />
+    <Compile Include="Samples\CheckBox\CheckBox_Mobile.cs" />
+    <Compile Include="Samples\CircularGaugeSample.cs" />
+    <Compile Include="Samples\CircularGauge\CircularGaugeAnnotation.cs" />
+    <Compile Include="Samples\CircularGauge\CircularGaugeSample.cs" />
+    <Compile Include="Samples\CircularGauge\DirectionCompass.cs" />
+    <Compile Include="Samples\CircularGauge\GaugeCustomization.cs" />
+    <Compile Include="Samples\CircularGauge\GradientRange.cs" />
+    <Compile Include="Samples\CircularGauge\MultipleScales.cs" />
+    <Compile Include="Samples\CircularGauge\Pointers.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Helpers\CustomGridStyle.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Model\DealerInfo.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Model\DealerRepository.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Styles\Purple.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\ViewModel\EditingViewModel.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Editing.cs" />
+    <Compile Include="Samples\PDFViewer\FillAndSign.cs" />
+    <Compile Include="Samples\PDFViewer\SinglePageView.cs" />
+    <Compile Include="Samples\PDFViewer\Helpers\BookmarkHelper.cs" />
+    <Compile Include="Samples\Diagram\DataModel.cs" />
+    <Compile Include="Samples\Diagram\FlowDiagram.cs" />
+    <Compile Include="Samples\DataGrid\ContextMenu.cs" />
+    <BundleResource Include="Resources\Samples\PDFViewer\FillAndSign.cs" />
+	 <BundleResource Include="Resources\Samples\PDFViewer\SinglePageView.cs" />
+    <Compile Include="Samples\DataGrid\ViewModel\ContextMenuViewModel.cs" />
+    <Compile Include="Samples\Diagram\NodeCustomization.cs" />
+    <Compile Include="Samples\Diagram\Organization Chart.cs" />
+    <Compile Include="Samples\Diagram\MindMap.cs" />
+    <Compile Include="Samples\DigitalGauge\DigitalGauge.cs" />
+    <Compile Include="Samples\LinearGauge\Default.cs" />
+    <Compile Include="Samples\LinearGauge\LinearGaugeAnnotation.cs" />
+    <Compile Include="Samples\LinearGauge\Ranges.cs" />
+    <Compile Include="Samples\LinearGauge\ScaleandPointers.cs" />
+    <Compile Include="Samples\MaskedEdit\MaskedEdit.cs" />
+    <Compile Include="Samples\MaskedEdit\MaskedEdit_Mobile.cs" />
+    <Compile Include="Samples\MaskedEdit\MaskedEdit_Tablet.cs" />
+    <Compile Include="Samples\PDFViewer\Helpers\DropDownDataSource.cs" />
+    <Compile Include="Samples\PDFViewer\Helpers\DropDownMenu.cs" />
+    <Compile Include="Samples\PDFViewer\Helpers\DropDownMenuItem.cs" />
+    <Compile Include="Samples\PDFViewer\Helpers\StampAnnotationView.cs" />
+    <Compile Include="Samples\ProgressBar\Circular.cs" />
+    <Compile Include="Samples\ProgressBar\Linear.cs" />
+    <Compile Include="Samples\PopupLayout\Details View\DetailsView.cs" />
+    <Compile Include="Samples\PopupLayout\Onboard Helps\CustomStyles.cs" />
+    <Compile Include="Samples\PopupLayout\Onboard Helps\PopupGettingStarted.cs" />
+    <Compile Include="Samples\PopupLayout\Popup Customizations\CustomView\MovieTile.cs" />
+    <Compile Include="Samples\PopupLayout\Popup Customizations\CustomView\TheaterTile.cs" />
+    <Compile Include="Samples\PopupLayout\Popup Customizations\Model And ViewModel\TicketBookingInfo.cs" />
+    <Compile Include="Samples\PopupLayout\Popup Customizations\Model And ViewModel\TicketBookingViewModel.cs" />
+    <Compile Include="Samples\PopupLayout\Popup Customizations\Model And ViewModel\TicketInfoRepository.cs" />
+    <Compile Include="Samples\PopupLayout\Popup Customizations\PopupCustomizations.cs" />
+    <Compile Include="Samples\Carousel\CarouselModel.cs" />
+    <Compile Include="Samples\Carousel\LoadMoreCarousel.cs" />
+    <Compile Include="Samples\Carousel\LoadMoreSample.cs" />
+    <Compile Include="Samples\RadioButton\RadioButton.cs" />
+    <Compile Include="Samples\RadioButton\RadioButton_Mobile.cs" />
+    <Compile Include="Samples\Schedule\AgendaView.cs" />
+    <Compile Include="Samples\Schedule\Configuration\ScheduleConfigurationViewModel.cs" />
+    <Compile Include="Samples\Schedule\DragDrop.cs" />
+    <Compile Include="Samples\Schedule\GettingStarted\Model\Meeting.cs" />
+    <Compile Include="Samples\Schedule\GettingStarted\ViewModel\AppointmentCollection.cs" />
+    <Compile Include="Samples\Schedule\GettingStarted\Views\ScheduleGettingStarted.cs" />
+    <Compile Include="Samples\Schedule\ScheduleLocale\ScheduleLocalViewModel.cs" />
+    <Compile Include="Samples\Schedule\ScheduleView\ScheduleEditor.cs" />
+    <Compile Include="Samples\Schedule\ScheduleView\ScheduleViews.cs" />
+    <Compile Include="Samples\Schedule\ScheduleView\ScheduleViewsViewModel.cs" />
+    <Compile Include="Samples\Sunburst\SunburstSelection.cs" />
+    <Compile Include="Samples\Sunburst\DrillDown.cs" />
+    <Compile Include="Utility\Control.cs" />
+    <Compile Include="Controllers\SampleView.cs" />
+    <Compile Include="Controllers\OptionViewController.cs" />
+    <Compile Include="Controllers\CodeViewController.cs" />
+    <Compile Include="Utility\AllControlsViewCell.cs" />
+    <Compile Include="DataSource\TableSource.cs" />
+    <Compile Include="Utility\Utility.cs" />
+    <Compile Include="Utility\UIMarginLabel.cs" />
+    <BundleResource Include="Resources\Samples\PDFViewer\GettingStartedPDFViewer.cs" />
+    <BundleResource Include="Resources\Samples\PDFViewer\CustomToolbar.cs" />
+    <BundleResource Include="Resources\Samples\PDFViewer\Helpers\AnnotationHelper.cs" />
+    <BundleResource Include="Resources\Samples\PDFViewer\Helpers\InkAnnotationHelper.cs" />
+    <BundleResource Include="Resources\Samples\PDFViewer\Helpers\TextMarkupAnnotationHelper.cs" />
+    <BundleResource Include="Resources\Samples\Presentation\CommentsPresentation.cs" />
+	<BundleResource Include="Resources\Samples\Presentation\ConnectorsPresentation.cs" />
+    <BundleResource Include="Resources\Samples\Presentation\CommentsHelper.cs" />
+	<BundleResource Include="Resources\Samples\Presentation\CreateAnimationPresentation.cs" />
+    <BundleResource Include="Resources\Samples\Presentation\ModifyAnimationPresentation.cs" />
+	<BundleResource Include="Resources\Samples\Presentation\SlideTransitionPresentation.cs" />
+	<BundleResource Include="Resources\Samples\Presentation\HeaderAndFooterPresentation.cs" />
+    <BundleResource Include="Resources\Samples\PullToRefresh\BaseView.cs" />
+    <BundleResource Include="Resources\Samples\PullToRefresh\CustomScroll.cs" />
+    <BundleResource Include="Resources\Samples\PullToRefresh\WeatherModel.cs" />
+    <BundleResource Include="Resources\Samples\PullToRefresh\WeatherView.cs" />
+    <BundleResource Include="Resources\Samples\XlsIO\Extensions.cs" />
+    <BundleResource Include="Resources\Samples\XlsIO\PreviewControllerDS.cs" />
+    <BundleResource Include="Resources\Samples\XlsIO\QLPreviewItemFileSystem.cs" />
+    <BundleResource Include="Resources\Samples\XlsIO\SaveiOS.cs" />
+    <BundleResource Include="Resources\Samples\Schedule\Timetable.cs" />
+    <BundleResource Include="Resources\Samples\Schedule\Configuration.cs" />
+    <BundleResource Include="Resources\Samples\Schedule\Customization.cs" />
+    <BundleResource Include="Resources\Samples\Schedule\Localization.cs" /> 
+    <BundleResource Include="Resources\Samples\Schedule\ScheduleViews.cs" />
+    <BundleResource Include="Resources\Samples\Calculate\CalcQuickCalculation.cs" />
+    <BundleResource Include="Resources\Samples\Calculate\FunctionsLibrary.cs" />
+	<BundleResource Include="Resources\Samples\Calculate\Helper\FunctionsHelper.cs" />
+    <BundleResource Include="Resources\Samples\Calculate\Helper\FunctionsLibraryView.cs" />
+    <BundleResource Include="Resources\Samples\Calculate\Helper\FunctionsLibraryViewModel.cs" />
+    <BundleResource Include="Resources\Samples\ImageEditor\ImageEditor.cs" />
+    <Compile Include="Samples\AutoComplete\AutoComplete.cs" />
+    <Compile Include="Samples\AutoComplete\AutoComplete_Mobile.cs" />
+    <Compile Include="Samples\AutoComplete\AutoComplete_Tablet.cs" />
+    <Compile Include="Samples\Barcode\CodaBarBarcode.cs" />
+    <Compile Include="Samples\Barcode\Code11Barcode.cs" />
+    <Compile Include="Samples\Barcode\UpcBarcode.cs" />
+    <Compile Include="Samples\Barcode\Code128ABarcode.cs" />
+    <Compile Include="Samples\Barcode\Code128BBarcode.cs" />
+    <Compile Include="Samples\Barcode\Code128CBarcode.cs" />
+    <Compile Include="Samples\Barcode\Code32Barcode.cs" />
+    <Compile Include="Samples\Barcode\Code39Barcode.cs" />
+    <Compile Include="Samples\Barcode\Code39ExtendedBarcode.cs" />
+    <Compile Include="Samples\Barcode\Code93Barcode.cs" />
+    <Compile Include="Samples\Barcode\Code93ExtendedBarcode.cs" />
+    <Compile Include="Samples\Barcode\DataMatrixBarcode.cs" />
+    <Compile Include="Samples\Barcode\QRBarcode.cs" />
+    <Compile Include="Samples\BusyIndicator\BusyIndicator.cs" />
+    <Compile Include="Samples\BusyIndicator\BusyIndicator_Mobile.cs" />
+    <Compile Include="Samples\BusyIndicator\PickerChangedEventArgs.cs" />
+    <Compile Include="Samples\BusyIndicator\PickerModel.cs" />
+    <Compile Include="Samples\Calculate\CalcQuickCalculation.cs" />
+    <Compile Include="Samples\Calculate\FunctionsLibrary.cs" />
+    <Compile Include="Samples\Calculate\Helper\FunctionsHelper.cs" />
+    <Compile Include="Samples\Calculate\Helper\FunctionsLibraryView.cs" />
+    <Compile Include="Samples\Calculate\Helper\FunctionsLibraryViewModel.cs" />
+    <Compile Include="Samples\Calendar\CalendarBlackoutDates.cs" />
+    <Compile Include="Samples\Calendar\CalendarConfiguration.cs" />
+    <Compile Include="Samples\Calendar\CalendarConfiguration_Mobile.cs" />
+    <Compile Include="Samples\Calendar\CalendarInlineEvents.cs" />
+    <Compile Include="Samples\Calendar\CalendarLocalization.cs" />
+    <Compile Include="Samples\Calendar\CalendarLocalization_Mobile.cs" />
+    <Compile Include="Samples\Calendar\CalendarViews.cs" />
+    <Compile Include="Samples\Calendar\CalendarViews_Mobile.cs" />
+    <Compile Include="Samples\Carousel\Carousel.cs" />
+    <Compile Include="Samples\Carousel\Carousel_Mobile.cs" />
+    <Compile Include="Samples\DataGrid\AutoRowHeight.cs" />
+    <Compile Include="Samples\DataGrid\CustomGrouping.cs" />
+    <Compile Include="Samples\DataGrid\CustomSorting.cs" />
+    <Compile Include="Samples\DataGrid\DragAndDrop.cs" />
+    <Compile Include="Samples\DataGrid\Exporting.cs" />
+    <Compile Include="Samples\DataGrid\Filtering.cs" />
+    <Compile Include="Samples\DataGrid\Formatting.cs" />
+    <Compile Include="Samples\DataGrid\FrozenView.cs" />
+    <Compile Include="Samples\DataGrid\GridGettingStarted.cs" />
+    <Compile Include="Samples\DataGrid\Grouping.cs" />
+    <Compile Include="Samples\DataGrid\IncrementalLoading.cs" />
+    <Compile Include="Samples\DataGrid\LoadMore.cs" />
+    <Compile Include="Samples\DataGrid\Paging.cs" />
+    <Compile Include="Samples\DataGrid\PullToRefresh.cs" />
+    <Compile Include="Samples\DataGrid\RenderingDynamicData.cs" />
+    <Compile Include="Samples\DataGrid\Selection.cs" />
+    <Compile Include="Samples\DataGrid\Sorting.cs" />
+    <Compile Include="Samples\DataGrid\Styles.cs" />
+    <Compile Include="Samples\DataGrid\SwipeDelete.cs" />
+    <Compile Include="Samples\DataGrid\Swiping.cs" />
+    <Compile Include="Samples\DataGrid\UnboundColumn.cs" />
+    <Compile Include="Samples\DataGrid\Editing.cs" />
+    <Compile Include="Samples\DataGrid\Helpers\Command.cs" />
+    <Compile Include="Samples\DataGrid\Helpers\CustomComparer.cs" />
+    <Compile Include="Samples\DataGrid\Helpers\CustomGridStyle.cs" />
+    <Compile Include="Samples\DataGrid\Model\BankInfo.cs" />
+    <Compile Include="Samples\DataGrid\Model\BankRepository.cs" />
+    <Compile Include="Samples\DataGrid\Model\BookInfo.cs" />
+    <Compile Include="Samples\DataGrid\Model\BookRepository.cs" />
+    <Compile Include="Samples\DataGrid\Model\CustomerDetails.cs" />
+    <Compile Include="Samples\DataGrid\Model\CustomersRepository.cs" />
+    <Compile Include="Samples\DataGrid\Model\Employee.cs" />
+    <Compile Include="Samples\DataGrid\Model\EmployeeDetails.cs" />
+    <Compile Include="Samples\DataGrid\Model\EmployeeInfo.cs" />
+    <Compile Include="Samples\DataGrid\Model\EmployeeInfoRespository.cs" />
+    <Compile Include="Samples\DataGrid\Model\EmployeeInformation.cs" />
+    <Compile Include="Samples\DataGrid\Model\EmployeeInformationRepository.cs" />
+    <Compile Include="Samples\DataGrid\Model\OrderDetailsRepository.cs" />
+    <Compile Include="Samples\DataGrid\Model\OrderInfo.cs" />
+    <Compile Include="Samples\DataGrid\Model\ProductInfo.cs" />
+    <Compile Include="Samples\DataGrid\Model\ProductInfoRepository.cs" />
+    <Compile Include="Samples\DataGrid\Model\ProductRepository.cs" />
+    <Compile Include="Samples\DataGrid\Model\Products.cs" />
+    <Compile Include="Samples\DataGrid\Model\ReleaseInfo.cs" />
+    <Compile Include="Samples\DataGrid\Model\ReleaseInfoRepository.cs" />
+    <Compile Include="Samples\DataGrid\Model\SalesByDate.cs" />
+    <Compile Include="Samples\DataGrid\Model\SalesInfoRepository.cs" />
+    <Compile Include="Samples\DataGrid\Model\StockData.cs" />
+    <Compile Include="Samples\DataGrid\Model\DealerInfo.cs" />
+    <Compile Include="Samples\DataGrid\Model\DealerRepository.cs" />
+    <Compile Include="Samples\DataGrid\NorthwindService\Reference.cs" />
+    <Compile Include="Samples\DataGrid\NorthwindService\Reference1.cs" />
+    <Compile Include="Samples\DataGrid\Styles\Blue.cs" />
+    <Compile Include="Samples\DataGrid\Styles\Dark.cs" />
+    <Compile Include="Samples\DataGrid\Styles\Green.cs" />
+    <Compile Include="Samples\DataGrid\Styles\Red.cs" />
+    <Compile Include="Samples\DataGrid\Styles\Purple.cs" />
+    <Compile Include="Samples\DataGrid\TemplateColumnCell\LinearGuageCell.cs" />
+    <Compile Include="Samples\DataGrid\TemplateColumnCell\StockCell.cs" />
+    <Compile Include="Samples\DataGrid\ViewModel\AutoRowHeightViewModel.cs" />
+    <Compile Include="Samples\DataGrid\ViewModel\CustomerViewModel.cs" />
+    <Compile Include="Samples\DataGrid\ViewModel\DragAndDropViewModel.cs" />
+    <Compile Include="Samples\DataGrid\ViewModel\ExportingViewModel.cs" />
+    <Compile Include="Samples\DataGrid\ViewModel\FilterOptionsTableSource.cs" />
+    <Compile Include="Samples\DataGrid\ViewModel\FilterViewModel.cs" />
+    <Compile Include="Samples\DataGrid\ViewModel\FormattingViewModel.cs" />
+    <Compile Include="Samples\DataGrid\ViewModel\FrozenViewViewModel.cs" />
+    <Compile Include="Samples\DataGrid\ViewModel\GridGettingStartedViewModel.cs" />
+    <Compile Include="Samples\DataGrid\ViewModel\GroupingViewModel.cs" />
+    <Compile Include="Samples\DataGrid\ViewModel\IncrementalLoadingViewModel.cs" />
+    <Compile Include="Samples\DataGrid\ViewModel\LoadMoreViewModel.cs" />
+    <Compile Include="Samples\DataGrid\ViewModel\OptionsTableSource.cs" />
+    <Compile Include="Samples\DataGrid\ViewModel\PagingViewModel.cs" />
+    <Compile Include="Samples\DataGrid\ViewModel\PullToRefreshViewModel.cs" />
+    <Compile Include="Samples\DataGrid\ViewModel\SalesInfoViewModel.cs" />
+    <Compile Include="Samples\DataGrid\ViewModel\SelectionViewModel.cs" />
+    <Compile Include="Samples\DataGrid\ViewModel\SortViewModel.cs" />
+    <Compile Include="Samples\DataGrid\ViewModel\StocksViewModel.cs" />
+    <Compile Include="Samples\DataGrid\ViewModel\SwipingViewModel.cs" />
+    <Compile Include="Samples\DataGrid\ViewModel\UnboundViewModel.cs" />
+    <Compile Include="Samples\DataSource\DataSourceGettingStarted.cs" />
+    <Compile Include="Samples\DataGrid\ViewModel\EditingViewModel.cs" />
+    <Compile Include="Samples\DataSource\DataSourceGrouping.cs" />
+    <Compile Include="Samples\DataSource\DataSourceSorting.cs" />
+    <Compile Include="Samples\DataSource\Helper\ContactCell.cs" />
+    <Compile Include="Samples\DataSource\Helper\CustomTableCell.cs" />
+    <Compile Include="Samples\DataSource\Helper\OptionView.cs" />
+    <Compile Include="Samples\DataSource\Helper\TableViewSource.cs" />
+    <Compile Include="Samples\DataSource\Model\BookDetails.cs" />
+    <Compile Include="Samples\DataSource\Model\BookDetailsRepository.cs" />
+    <Compile Include="Samples\DataSource\Model\Contacts.cs" />
+    <Compile Include="Samples\DataSource\Model\ContactsList.cs" />
+    <Compile Include="Samples\DataSource\ViewModel\ContactsViewModel.cs" />
+    <Compile Include="Samples\DataSource\ViewModel\DataSourceGettingStartedViewModel.cs" />
+    <Compile Include="Samples\DataForm\ContactForm.cs" />
+    <Compile Include="Samples\DataForm\FormGettingStarted.cs" />
+    <Compile Include="Samples\DataForm\Helpers\DataFormController.cs" />
+    <Compile Include="Samples\DataForm\Helpers\DataFormLayoutManagerExt.cs" />
+    <Compile Include="Samples\DataForm\Helpers\ContactTableSource.cs" />
+    <Compile Include="Samples\DataForm\Model\ContactInfo.cs" />
+    <Compile Include="Samples\DataForm\Model\ContactInfoRepository.cs" />
+    <Compile Include="Samples\DataForm\Model\RecipientInfo.cs" />
+    <Compile Include="Samples\DataForm\ViewModel\ContactViewModel.cs" />
+    <Compile Include="Samples\DocIO\BookmarkNavigation.cs" />
+    <Compile Include="Samples\DocIO\BuiltInStyle.cs" />
+    <Compile Include="Samples\DocIO\CustomStyle.cs" />
+    <Compile Include="Samples\DocIO\HelloWorld.cs" />
+    <Compile Include="Samples\DocIO\MailMerge.cs" />
+    <Compile Include="Samples\DocIO\EmployeeReport.cs" />
+    <Compile Include="Samples\DocIO\NestedMailMerge.cs" />
+    <Compile Include="Samples\DocIO\FormFillingAndProtection.cs" />
+    <Compile Include="Samples\DocIO\XMLMapping.cs" />
+    <Compile Include="Samples\DocIO\WordToHTML.cs" />
+	<Compile Include="Samples\DocIO\WordToPDF.cs" />
+    <Compile Include="Samples\DocIO\GroupShapes.cs" />
+    <Compile Include="Samples\DocIO\CreateEquation.cs" />
+    <Compile Include="Samples\DocIO\FormatTable.cs" />
+    <Compile Include="Samples\Kanban\CustomizationKanban.cs" />
+    <Compile Include="Samples\Kanban\GettingStartedKanban.cs" />
+    <Compile Include="Samples\Maps\BubbleVisualization.cs" />
+    <Compile Include="Samples\Maps\ColorMapping.cs" />
+    <Compile Include="Samples\Maps\DataMarkers.cs" />
+    <Compile Include="Samples\Maps\TicketBooking.cs" />
+    <Compile Include="Samples\Maps\OSM.cs" />
+    <BundleResource Include="Resources\Controls\ImageEditor.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\image2.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\image3.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\image4.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\about.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\settings.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\share.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\Customize.jpg" />
+    <BundleResource Include="Resources\Images\ImageEditor\pen_customization.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\rect_customization.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\redo_customization.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\reset_customization.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\share_customization.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\text_customization.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\undo_customization.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\Chart.jpg" />
+    <BundleResource Include="Resources\Images\ImageEditor\CreateNew.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\Freehand.jpg" />
+    <BundleResource Include="Resources\Images\ImageEditor\Venn.jpg" />
+    <BundleResource Include="Resources\Images\ImageEditor\dashboard.jpg" />
+    <BundleResource Include="Resources\Images\ImageEditor\Delete1.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\NotSelected.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\Selected.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\succinity.png" />
+    <BundleResource Include="Resources\Images\ImageEditor\twitter.jpeg" />
+    <BundleResource Include="Resources\Samples\ImageEditor\BannerTypes.cs" />
+    <BundleResource Include="Resources\Samples\ImageEditor\ImageEditorCustomization.cs" />
+    <BundleResource Include="Resources\Samples\ImageEditor\Serialization.cs" />
+    <Compile Include="Samples\ImageEditor\ImageEditor.cs" />
+    <Compile Include="Samples\ImageEditor\BannerTypes.cs" />
+    <Compile Include="Samples\ImageEditor\ImageEditorCustomization.cs" />
+    <Compile Include="Samples\ImageEditor\Serialization.cs" />
+    <Compile Include="Samples\NavigationDrawer\MainPageView.cs" />
+    <Compile Include="Samples\NavigationDrawer\NavigationDrawer.cs" />
+    <Compile Include="Samples\NavigationDrawer\TableSource.cs" />
+    <Compile Include="Samples\NumericTextBox\NumericTextBox.cs" />
+    <Compile Include="Samples\NumericTextBox\NumericTextBox_Mobile.cs" />
+    <Compile Include="Samples\NumericTextBox\NumericTextBox_Tablet.cs" />
+    <Compile Include="Samples\NumericUpDown\NumericUpDown.cs" />
+    <Compile Include="Samples\NumericUpDown\NumericUpDown_Mobile.cs" />
+    <Compile Include="Samples\NumericUpDown\NumericUpDown_Tablet.cs" />
+    <Compile Include="Samples\PDF\Barcode.cs" />
+    <Compile Include="Samples\PDF\Booklet.cs" />
+    <Compile Include="Samples\PDF\RTLSupport.cs" />
+	<Compile Include="Samples\PDF\OpenTypeFont.cs" />
+    <Compile Include="Samples\PDF\Conformance.cs" />
+	<Compile Include="Samples\PDF\ZugFerd.cs" />
+    <Compile Include="Samples\PDF\ZugFerd_XML\CountryCodes.cs" />
+    <Compile Include="Samples\PDF\ZugFerd_XML\CurrencyCodes.cs" />
+    <Compile Include="Samples\PDF\ZugFerd_XML\InvoiceType.cs" />
+    <Compile Include="Samples\PDF\ZugFerd_XML\Product.cs" />
+    <Compile Include="Samples\PDF\ZugFerd_XML\UserDetails.cs" />
+    <Compile Include="Samples\PDF\ZugFerd_XML\ZugFerdInvoice.cs" />
+    <Compile Include="Samples\PDF\ZugFerd_XML\ZugferdProfile.cs" />
+    <Compile Include="Samples\PDF\GettingStartedPDF.cs" />
+    <Compile Include="Samples\PDF\Stamping.cs" />
+    <Compile Include="Samples\PDF\TableFeatures.cs" />
+    <Compile Include="Samples\PDF\DigitalSignature.cs" />
+    <Compile Include="Samples\PDF\Encryption.cs" />
+	<Compile Include="Samples\PDF\DigitalSignatureValidation.cs" />
+    <Compile Include="Samples\PDF\ImageInsertion.cs" />
+    <Compile Include="Samples\PDFViewer\GettingStartedPDFViewer.cs" />
+    <Compile Include="Samples\PDFViewer\CustomToolbar.cs" />
+    <Compile Include="Samples\PDFViewer\Helpers\AnnotationHelper.cs" />
+    <Compile Include="Samples\PDFViewer\Helpers\InkAnnotationHelper.cs" />
+    <Compile Include="Samples\PDFViewer\Helpers\TextMarkupAnnotationHelper.cs" />
+    <Compile Include="Samples\PDFViewer\Helpers\ActivityIndicator.cs" />
+    <Compile Include="Samples\PDFViewer\Helpers\EditTextAnnotationHelper.cs" />
+    <Compile Include="Samples\PDFViewer\Helpers\ShapeAnnotationHelper.cs" />
+    <Compile Include="Samples\Presentation\ChartsPresentation.cs" />
+    <Compile Include="Samples\Presentation\GettingStartedPresentation.cs" />
+    <Compile Include="Samples\Presentation\ImagesPresentation.cs" />
+    <Compile Include="Samples\Presentation\SlidesPresentation.cs" />
+	<Compile Include="Samples\Presentation\PPTXToImage.cs" />
+	<Compile Include="Samples\Presentation\PPTXToPDF.cs" />
+    <Compile Include="Samples\Presentation\WriteProtection.cs" />
+    <Compile Include="Samples\Presentation\TablesPresentation.cs" />
+    <Compile Include="Samples\Presentation\CommentsPresentation.cs" />
+	<Compile Include="Samples\Presentation\ConnectorsPresentation.cs" />
+    <Compile Include="Samples\Presentation\CommentsHelper.cs" />
+    <Compile Include="Samples\Presentation\CreateAnimationPresentation.cs" />
+    <Compile Include="Samples\Presentation\ModifyAnimationPresentation.cs" />
+	<Compile Include="Samples\Presentation\SlideTransitionPresentation.cs" />
+	<Compile Include="Samples\Presentation\HeaderAndFooterPresentation.cs" />
+    <Compile Include="Samples\PullToRefresh\PullToRefreshDemo Helper\BaseView.cs" />
+    <Compile Include="Samples\PullToRefresh\PullToRefreshDemo Helper\CustomScroll.cs" />
+    <Compile Include="Samples\PullToRefresh\PullToRefreshDemo Helper\WeatherModel.cs" />
+    <Compile Include="Samples\PullToRefresh\PullToRefreshDemo Helper\WeatherView.cs" />
+    <Compile Include="Samples\PullToRefresh\PullToRefreshDemo Helper\PullableContentView.cs" />
+    <Compile Include="Samples\PullToRefresh\UICollectionView Helper\CircleView.cs" />
+    <Compile Include="Samples\PullToRefresh\UICollectionView Helper\CollectionViewSource.cs" />
+    <Compile Include="Samples\PullToRefresh\UICollectionView Helper\Inbox.cs" />
+    <Compile Include="Samples\PullToRefresh\UICollectionView Helper\InboxRepositiory.cs" />
+    <Compile Include="Samples\PullToRefresh\UICollectionView Helper\CollectionViewCell.cs" />
+    <Compile Include="Samples\PullToRefresh\OptionsView\Options.cs" />
+    <Compile Include="Samples\PullToRefresh\PullToRefreshDemo.cs" />
+    <Compile Include="Samples\PullToRefresh\SfDataGridInPullToRefresh.cs" />
+    <Compile Include="Samples\PullToRefresh\UICollectionViewInPullToRefresh.cs" />
+    <Compile Include="Samples\RadialMenu\ContextualMenu.cs" />
+    <Compile Include="Samples\RadialMenu\CustomDrawing.cs" />
+    <Compile Include="Samples\RadialMenu\RadialMenuCustomization.cs" />
+    <Compile Include="Samples\RadialMenu\RadialMenuGettingStarted.cs" />
+    <Compile Include="Samples\RadialMenu\TableSourceCollection.cs" />
+    <Compile Include="Samples\RangeSlider\Orientation.cs" />
+    <Compile Include="Samples\RangeSlider\RangeSliderGettingStarted.cs" />
+    <Compile Include="Samples\RangeSlider\RangeSliderGettingStarted_Mobile.cs" />
+    <Compile Include="Samples\RangeSlider\RangeSliderGettingStarted_Tablet.cs" />
+    <Compile Include="Samples\RangeSlider\Slider.cs" />
+    <Compile Include="Samples\Rating\Rating.cs" />
+    <Compile Include="Samples\Rating\Rating_Mobile.cs" />
+    <Compile Include="Samples\Rating\Rating_Tablet.cs" />
+    <Compile Include="Samples\Rotator\Rotator.cs" />
+    <Compile Include="Samples\Rotator\Rotator_Mobile.cs" />
+    <Compile Include="Samples\Schedule\AppointmentEditor.cs" />
+    <Compile Include="Samples\Schedule\Configuration\Configuration.cs" />
+    <Compile Include="Samples\Schedule\Customization.cs" />
+    <Compile Include="Samples\Schedule\Timetable.cs" />
+    <Compile Include="Samples\Schedule\ScheduleLocale\Localization.cs" />
+    <Compile Include="Samples\Schedule\Recurrence.cs" />
+    <Compile Include="Samples\Sparkline\Sparkline.cs" />
+    <Compile Include="Samples\TreeMap\GettingStarted.cs" />
+    <Compile Include="Samples\TreeMap\Hierarchical.cs" />
+    <Compile Include="Samples\XlsIO\Charts.cs" />
+    <Compile Include="Samples\XlsIO\CreateSpreadsheet.cs" />
+    <Compile Include="Samples\XlsIO\Extensions.cs" />
+    <Compile Include="Samples\XlsIO\Filters.cs" />
+    <Compile Include="Samples\XlsIO\FindandReplace.cs" />
+    <Compile Include="Samples\XlsIO\Formulas.cs" />
+    <Compile Include="Samples\XlsIO\CollectionObjects.cs" />
+	<Compile Include="Samples\XlsIO\ImportNestedCollection.cs" />
+	<Compile Include="Samples\XlsIO\DataTable.cs" />
+    <Compile Include="Samples\XlsIO\ExcelToPDF.cs" />
+    <Compile Include="Samples\XlsIO\ImportXMLData.cs" />
+    <Compile Include="Samples\XlsIO\WorksheetToImage.cs" />
+    <Compile Include="Samples\XlsIO\WorksheetToHTML.cs" />
+	<Compile Include="Samples\XlsIO\Performance.cs" />
+    <Compile Include="Samples\XlsIO\PreviewControllerDS.cs" />
+    <Compile Include="Samples\XlsIO\QLPreviewItemFileSystem.cs" />
+    <Compile Include="Samples\XlsIO\SaveiOS.cs" />
+    <Compile Include="Samples\Sunburst\SunburstChart.cs" />
+    <BundleResource Include="Resources\Samples\SunburstChart\SunburstChart.cs" />
+    <BundleResource Include="Resources\Samples\SunburstChart\DrillDown.cs" />
+    <BundleResource Include="Resources\Samples\SunburstChart\SunburstSelection.cs" />
+    <BundleResource Include="Resources\Images\SunburstChart.png" />
+    <Compile Include="Samples\Chart\Area.cs" />
+    <Compile Include="Samples\Chart\AutoScrolling.cs" />
+    <Compile Include="Samples\Chart\Bar.cs" />
+    <Compile Include="Samples\Chart\Bubble.cs" />
+    <Compile Include="Samples\Chart\Candle.cs" />
+    <Compile Include="Samples\Chart\Category.cs" />
+    <Compile Include="Samples\Chart\Column.cs" />
+    <Compile Include="Samples\Chart\DataMarker.cs" />
+    <Compile Include="Samples\Chart\DataPointSelection.cs" />
+    <Compile Include="Samples\Chart\DateTimeAxis.cs" />
+    <Compile Include="Samples\Chart\Doughnut.cs" />
+    <Compile Include="Samples\Chart\Funnel.cs" />
+    <Compile Include="Samples\Chart\Line.cs" />
+    <Compile Include="Samples\Chart\LiveUpdate.cs" />
+    <Compile Include="Samples\Chart\Logarithmic.cs" />
+    <Compile Include="Samples\Chart\MultipleAxes.cs" />
+    <Compile Include="Samples\Chart\Numerical.cs" />
+    <Compile Include="Samples\Chart\OHLC.cs" />
+    <Compile Include="Samples\Chart\Pie.cs" />
+    <Compile Include="Samples\Chart\Polar.cs" />
+    <Compile Include="Samples\Chart\Pyramid.cs" />
+    <Compile Include="Samples\Chart\Radar.cs" />
+    <Compile Include="Samples\Chart\RangeArea.cs" />
+    <Compile Include="Samples\Chart\RangeColumn.cs" />
+    <Compile Include="Samples\Chart\SampleControl.cs" />
+    <Compile Include="Samples\Chart\Scatter.cs" />
+    <Compile Include="Samples\Chart\SemiDoughnut.cs" />
+    <Compile Include="Samples\Chart\SemiPie.cs" />
+    <Compile Include="Samples\Chart\Spline.cs" />
+    <Compile Include="Samples\Chart\SplineArea.cs" />
+    <Compile Include="Samples\Chart\StackedDoughnut.cs" />   
+    <Compile Include="Samples\Chart\StackingArea.cs" />
+    <Compile Include="Samples\Chart\StackingArea100.cs" />
+    <Compile Include="Samples\Chart\StackingBar.cs" />
+    <Compile Include="Samples\Chart\StackingBar100.cs" />
+    <Compile Include="Samples\Chart\StackingColumn.cs" />
+    <Compile Include="Samples\Chart\StackingColumn100.cs" />
+    <BundleResource Include="Resources\Controls\Picker.png" />
+    <BundleResource Include="Resources\Controls\Picker%402x.png" />
+    <BundleResource Include="Resources\Controls\Picker%403x.png" />
+    <BundleResource Include="Resources\Controls\TabView.png" />
+    <BundleResource Include="Resources\Controls\TabView%402x.png" />
+    <BundleResource Include="Resources\Controls\TabView%403x.png" />
+    <BundleResource Include="Resources\Samples\Picker\PIckerGettingStarted.cs" />
+    <BundleResource Include="Resources\Samples\Chart\ChartAnnotation.cs" />
+    <BundleResource Include="Resources\Samples\Chart\AxisCrossing.cs" />
+    <Compile Include="Samples\Picker\PIckerGettingStarted.cs" />
+    <Compile Include="Samples\Chart\StepArea.cs" />
+    <Compile Include="Samples\Chart\StepLine.cs" />
+    <Compile Include="Samples\Chart\StripLines.cs" />
+    <Compile Include="Samples\Chart\TechnicalIndicators.cs" />
+    <Compile Include="Samples\Chart\Tooltip.cs" />
+    <Compile Include="Samples\Chart\Trackball.cs" />
+    <Compile Include="Samples\Chart\ZoomingandPanning.cs" />
+    <Compile Include="Samples\Chart\Model\Model.cs" />
+    <Compile Include="Samples\Chart\ViewModel\ChartViewModel.cs" />
+    <Compile Include="Samples\Chart\AxisCrossing.cs" />
+    <Compile Include="Samples\Chart\ChartAnnotation.cs" />
+    <Compile Include="Samples\TabView\OrderDetails.cs" />
+    <Compile Include="Samples\TabView\TabViewGettingStarted.cs" />
+    <Compile Include="Samples\TabView\TabViewOptionsPage.cs" />
+    <Compile Include="Samples\TabView\TemplateView.cs" />
+    <Compile Include="Samples\PDFViewer\Helpers\AlertViewDelegate.cs" />
+    <Compile Include="Samples\RangeNavigator\CustomizationRangeNavigator.cs" />
+    <Compile Include="Samples\RangeNavigator\GettingStartedRangeNavigator.cs" />
+    <BundleResource Include="Resources\Samples\Chart\Area.cs" />
+    <BundleResource Include="Resources\Samples\Chart\AutoScrolling.cs" />
+    <BundleResource Include="Resources\Samples\Chart\Bar.cs" />
+    <BundleResource Include="Resources\Samples\Chart\Bubble.cs" />
+    <BundleResource Include="Resources\Samples\Chart\Candle.cs" />
+    <BundleResource Include="Resources\Samples\Chart\Column.cs" />
+    <BundleResource Include="Resources\Samples\Chart\DataMarker.cs" />
+    <BundleResource Include="Resources\Samples\Chart\DataPointSelection.cs" />
+    <BundleResource Include="Resources\Samples\Chart\Doughnut.cs" />
+    <BundleResource Include="Resources\Samples\Chart\Funnel.cs" />
+    <BundleResource Include="Resources\Samples\Chart\Line.cs" />
+    <BundleResource Include="Resources\Samples\Chart\LiveUpdate.cs" />
+    <BundleResource Include="Resources\Samples\Chart\MultipleAxes.cs" />
+    <BundleResource Include="Resources\Samples\Chart\OHLC.cs" />
+    <BundleResource Include="Resources\Samples\Chart\Pie.cs" />
+    <BundleResource Include="Resources\Samples\Chart\Polar.cs" />
+    <BundleResource Include="Resources\Samples\Chart\Pyramid.cs" />
+    <BundleResource Include="Resources\Samples\Chart\Radar.cs" />
+    <BundleResource Include="Resources\Samples\Chart\RangeArea.cs" />
+    <BundleResource Include="Resources\Samples\Chart\RangeColumn.cs" />
+    <BundleResource Include="Resources\Samples\Chart\SampleControl.cs" />
+    <BundleResource Include="Resources\Samples\Chart\Scatter.cs" />
+    <BundleResource Include="Resources\Samples\Chart\SemiDoughnut.cs" />
+    <BundleResource Include="Resources\Samples\Chart\SemiPie.cs" />
+    <BundleResource Include="Resources\Samples\Chart\Spline.cs" />
+    <BundleResource Include="Resources\Samples\Chart\SplineArea.cs" />
+    <BundleResource Include="Resources\Samples\Chart\StepArea.cs" />
+    <BundleResource Include="Resources\Samples\Chart\StepLine.cs" />
+    <BundleResource Include="Resources\Samples\Chart\StripLines.cs" />
+    <BundleResource Include="Resources\Samples\Chart\TechnicalIndicators.cs" />
+    <BundleResource Include="Resources\Samples\Chart\Tooltip.cs" />
+    <BundleResource Include="Resources\Samples\Chart\Trackball.cs" />
+    <BundleResource Include="Resources\Samples\Chart\ZoomingandPanning.cs" />
+    <BundleResource Include="Resources\Samples\Chart\Model\Model.cs" />
+    <BundleResource Include="Resources\Samples\Chart\ViewModel\ChartViewModel.cs" />
+    <BundleResource Include="Resources\Samples\RangeNavigator\CustomizationRangeNavigator.cs" />
+    <BundleResource Include="Resources\Samples\RangeNavigator\GettingStartedRangeNavigator.cs" />
+    <Compile Include="Samples\Chart\Vertical Chart.cs" />
+    <BundleResource Include="Resources\Samples\Chart\CategoryAxis.cs" />
+    <BundleResource Include="Resources\Samples\Chart\LogarithmicAxis.cs" />
+    <BundleResource Include="Resources\Samples\Chart\NumericalAxis.cs" />
+    <BundleResource Include="Resources\Samples\Chart\StackedArea.cs" />
+    <BundleResource Include="Resources\Samples\Chart\StackedBar.cs" />
+    <BundleResource Include="Resources\Samples\Chart\StackedColumn.cs" />
+    <BundleResource Include="Resources\Samples\Chart\VerticalChart.cs" />
+    <BundleResource Include="Resources\Controls\SunburstChart.png" />
+    <BundleResource Include="Resources\Samples\Chart\StackingArea100.cs" />
+    <BundleResource Include="Resources\Samples\Chart\StackingBar100.cs" />
+    <BundleResource Include="Resources\Samples\Chart\StackingColumn100.cs" />
+    <BundleResource Include="Resources\Samples\Chart\StackingLine.cs" />
+    <BundleResource Include="Resources\Samples\Chart\StackingLine100.cs" />
+    <Compile Include="Samples\Chart\SplineRangeArea.cs" />
+    <Compile Include="Samples\Chart\GradientChart.cs" />
+    <Compile Include="Samples\AutoComplete\MultiSelection.cs" />
+    <Compile Include="Samples\AutoComplete\Diacritics_Sense.cs" />
+    <Compile Include="Samples\AutoComplete\Engine.cs" />
+    <Compile Include="Samples\AutoComplete\ToleratingTypos.cs" />
+    <Compile Include="Samples\AutoComplete\ToleratingTypos_Main.cs" />
+    <Compile Include="Samples\AutoComplete\ToleratingTypos_Tablet.cs" />
+    <Compile Include="Samples\ComboBox\ComboBox.cs" />
+    <Compile Include="Samples\ComboBox\ComboBox_Mobile.cs" />
+    <Compile Include="Samples\Diagram\Connectors.cs" />
+	<Compile Include="DataSource\ChartSampleDataSource.cs" />
+    <Compile Include="Samples\ImageEditor\ImageEditorCustomView.cs" />
+	<Compile Include="Samples\SegmentedControl\SegementViewGettingStarted.cs" />
+	<Compile Include="Samples\Maps\Sublayer.cs" />
+	<Compile Include="Samples\Maps\DataLabels.cs" />
+	<Compile Include="Samples\Maps\Drilldown.cs" />
+	<Compile Include="Samples\Chart\Histogram.cs" />
+    <Compile Include="Samples\TreeView\Helpers\CustomViews\TemplateSelectorView.cs" />
+    <Compile Include="Samples\TreeView\Model\FileManager.cs" />
+    <Compile Include="Samples\TreeView\Model\MailFolder.cs" />
+    <Compile Include="Samples\TreeView\ViewModel\FileManagerViewModel.cs" />
+    <Compile Include="Samples\TreeView\ViewModel\MailFolderViewModel.cs" />
+    <Compile Include="Samples\TreeView\NodeWithImage.cs" />
+    <Compile Include="Samples\TreeView\TreeGettingStarted.cs" />
+    <Compile Include="Samples\TreeView\TreeSelection.cs" />
+    <Compile Include="Samples\TreeView\TreeTemplate.cs" />
+    <Compile Include="Samples\TreeView\Helpers\CustomAdapters\NodeImageAdapter.cs" />
+    <Compile Include="Samples\TreeView\Helpers\CustomAdapters\TemplateAdapter.cs" />
+    <Compile Include="Samples\TreeView\Helpers\CustomViews\NodeImageView.cs" />
+    <Compile Include="Samples\TreeView\Helpers\CustomAdapters\GettingStartedAdapter.cs" />
+    <Compile Include="Samples\TreeView\Helpers\CustomAdapters\SelectionAdapter.cs" />
+    <Compile Include="Samples\TreeView\Helpers\TreeViewPickerModel.cs" />
+    <Compile Include="Samples\TreeView\Model\Countries.cs" />
+    <Compile Include="Samples\TreeView\Model\FoodSpecies.cs" />
+    <Compile Include="Samples\TreeView\ViewModel\CountriesViewModel.cs" />
+    <Compile Include="Samples\TreeView\ViewModel\FoodSpeciesViewModel.cs" />
+    <Compile Include="Samples\Chart\RangeBar.cs" />
+    <Compile Include="Samples\TreeMap\DataLabel.cs" />
+    <Compile Include="Samples\Chart\StackingLine.cs" />
+    <Compile Include="Samples\Chart\StackingLine100.cs" />
+    <Compile Include="Samples\Chart\Trendlines.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\image1.png" />
+    <BundleResource Include="Resources\image2.png" />
+    <BundleResource Include="Resources\image3.png" />
+    <BundleResource Include="Resources\menu.png" />
+    <BundleResource Include="Resources\river.dbf" />
+    <BundleResource Include="Resources\river.shp" />
+    <BundleResource Include="Resources\Custom.dbf" />
+    <BundleResource Include="Resources\Custom.shp" />
+    <BundleResource Include="Resources\plist\ControlList.plist">
+      <SubType>Designer</SubType>
+    </BundleResource>
+    <BundleResource Include="Resources\plist\FeatureSamples.plist" />
+    <BundleResource Include="Resources\plist\SampleList.plist">
+      <SubType>Designer</SubType>
+    </BundleResource>
+    <BundleResource Include="Resources\plist\SourceList.plist" />
+    <BundleResource Include="Resources\Images\About.png" />
+    <BundleResource Include="Resources\Images\About%402x.png" />
+    <BundleResource Include="Resources\Images\Allcontrols.png" />
+    <BundleResource Include="Resources\Images\Allcontrols%402x.png" />
+    <BundleResource Include="Resources\Images\AutoComplete.png" />
+    <BundleResource Include="Resources\Images\AutoComplete%402x.png" />
+    <BundleResource Include="Resources\Images\Barcode.png" />
+    <BundleResource Include="Resources\Images\Barcode%402x.png" />
+    <BundleResource Include="Resources\Images\BusyIndicator.png" />
+    <BundleResource Include="Resources\Images\BusyIndicator%402x.png" />
+    <BundleResource Include="Resources\Images\Calculate.png" />
+    <BundleResource Include="Resources\Images\Calculate%402x.png" />
+    <BundleResource Include="Resources\Images\Calendar.png" />
+    <BundleResource Include="Resources\Images\Calendar%402x.png" />
+    <BundleResource Include="Resources\Images\Carousel.png" />
+    <BundleResource Include="Resources\Images\Carousel%402x.png" />
+    <BundleResource Include="Resources\Images\Changefile.png" />
+    <BundleResource Include="Resources\Images\Changefile%402x.png" />
+    <BundleResource Include="Resources\Images\Chart.png" />
+    <BundleResource Include="Resources\Images\Chart%402x.png" />
+    <BundleResource Include="Resources\Images\DataGrid.png" />
+    <BundleResource Include="Resources\Images\DataGrid%402x.png" />
+    <BundleResource Include="Resources\Images\DataSource.png" />
+    <BundleResource Include="Resources\Images\DataSource%402x.png" />
+    <BundleResource Include="Resources\Images\Delete.png" />
+    <BundleResource Include="Resources\Images\Edit.png" />
+    <EmbeddedResource Include="Resources\Images\GreenUp.png" />
+    <BundleResource Include="Resources\Images\Hospital.png" />
+    <EmbeddedResource Include="Resources\Images\Image0.png" />
+    <EmbeddedResource Include="Resources\Images\Image1.png" />
+    <EmbeddedResource Include="Resources\Images\Image10.png" />
+    <EmbeddedResource Include="Resources\Images\Image11.png" />
+    <EmbeddedResource Include="Resources\Images\Image12.png" />
+    <EmbeddedResource Include="Resources\Images\Image13.png" />
+    <EmbeddedResource Include="Resources\Images\Image14.png" />
+    <EmbeddedResource Include="Resources\Images\Image15.png" />
+    <EmbeddedResource Include="Resources\Images\Image16.png" />
+    <EmbeddedResource Include="Resources\Images\Image17.png" />
+    <EmbeddedResource Include="Resources\Images\Image18.png" />
+    <EmbeddedResource Include="Resources\Images\Image19.png" />
+    <EmbeddedResource Include="Resources\Images\Image2.png" />
+    <EmbeddedResource Include="Resources\Images\Image20.png" />
+    <EmbeddedResource Include="Resources\Images\Image21.png" />
+    <EmbeddedResource Include="Resources\Images\Image22.png" />
+    <EmbeddedResource Include="Resources\Images\Image23.png" />
+    <EmbeddedResource Include="Resources\Images\Image24.png" />
+    <EmbeddedResource Include="Resources\Images\Image25.png" />
+    <EmbeddedResource Include="Resources\Images\Image26.png" />
+    <EmbeddedResource Include="Resources\Images\Image27.png" />
+    <EmbeddedResource Include="Resources\Images\Image28.png" />
+    <EmbeddedResource Include="Resources\Images\Image3.png" />
+    <EmbeddedResource Include="Resources\Images\Image4.png" />
+    <EmbeddedResource Include="Resources\Images\Image5.png" />
+    <EmbeddedResource Include="Resources\Images\Image6.png" />
+    <EmbeddedResource Include="Resources\Images\Image7.png" />
+    <EmbeddedResource Include="Resources\Images\Image8.png" />
+    <EmbeddedResource Include="Resources\Images\Image9.png" />
+    <BundleResource Include="Resources\Images\Kanban.png" />
+    <BundleResource Include="Resources\Images\Kanban%402x.png" />
+    <BundleResource Include="Resources\Images\Maps.png" />
+    <BundleResource Include="Resources\Images\Maps%402x.png" />
+    <BundleResource Include="Resources\Images\NavigationDrawer.png" />
+    <BundleResource Include="Resources\Images\NavigationDrawer%402x.png" />
+    <BundleResource Include="Resources\Images\NumericTextBox.png" />
+    <BundleResource Include="Resources\Images\NumericTextBox%402x.png" />
+    <BundleResource Include="Resources\Images\NumericUpDown.png" />
+    <BundleResource Include="Resources\Images\NumericUpDown%402x.png" />
+    <BundleResource Include="Resources\Images\Option.png" />
+    <BundleResource Include="Resources\Images\Option%402x.png" />
+    <BundleResource Include="Resources\Images\PullToRefresh.png" />
+    <BundleResource Include="Resources\Images\RangeNavigator.png" />
+    <BundleResource Include="Resources\Images\RangeNavigator%402x.png" />
+    <BundleResource Include="Resources\Images\RangeSlider.png" />
+    <BundleResource Include="Resources\Images\RangeSlider%402x.png" />
+    <BundleResource Include="Resources\Images\Rating.png" />
+    <BundleResource Include="Resources\Images\Rating%402x.png" />
+    <EmbeddedResource Include="Resources\Images\RedDown.png" />
+    <BundleResource Include="Resources\Images\Rotator.png" />
+    <BundleResource Include="Resources\Images\Rotator%402x.png" />
+    <BundleResource Include="Resources\Images\Schedule.png" />
+    <BundleResource Include="Resources\Images\Schedule%402x.png" />
+    <EmbeddedResource Include="Resources\Images\SyncfusionLogo.jpg" />
+    <BundleResource Include="Resources\Images\Team.png" />
+    <BundleResource Include="Resources\Images\Undo.png" />
+    <BundleResource Include="Resources\Images\User.png" />
+    <BundleResource Include="Resources\Images\Viewcode.png" />
+    <BundleResource Include="Resources\Images\Viewcode%402x.png" />
+    <BundleResource Include="Resources\Images\XlsIO.png" />
+    <BundleResource Include="Resources\Images\XlsIO%402x.png" />
+    <BundleResource Include="Resources\Images\checked.png" />
+    <BundleResource Include="Resources\Images\docio.png" />
+    <BundleResource Include="Resources\Images\DocIO\bookmarknavigation.png" />
+    <BundleResource Include="Resources\Images\DocIO\bookmarknavigation%402x.png" />
+    <BundleResource Include="Resources\Images\DocIO\bookmarknavigation%403x.png" />
+    <BundleResource Include="Resources\Images\DocIO\generateword.png" />
+    <BundleResource Include="Resources\Images\DocIO\generateword%402x.png" />
+    <BundleResource Include="Resources\Images\DocIO\generateword%403x.png" />
+    <BundleResource Include="Resources\Images\DocIO\letterformat.png" />
+    <BundleResource Include="Resources\Images\DocIO\protectionandformfilling.png" />
+    <BundleResource Include="Resources\Images\DocIO\xmlmapping.png" />
+    <BundleResource Include="Resources\Images\DocIO\letterformat%402x.png" />
+    <BundleResource Include="Resources\Images\DocIO\letterformat%403x.png" />
+    <BundleResource Include="Resources\Images\DocIO\builtinstyle.png" />
+    <BundleResource Include="Resources\Images\DocIO\builtinstyle%402x.png" />
+    <BundleResource Include="Resources\Images\DocIO\builtinstyle%403x.png" />
+    <BundleResource Include="Resources\Images\DocIO\customstyle.png" />
+    <BundleResource Include="Resources\Images\DocIO\customstyle%402x.png" />
+    <BundleResource Include="Resources\Images\DocIO\customstyle%403x.png" />
+    <BundleResource Include="Resources\Images\DocIO\groupshapes.png" />
+    <BundleResource Include="Resources\Images\DocIO\groupshapes%402x.png" />
+    <BundleResource Include="Resources\Images\DocIO\groupshapes%403x.png" />
+    <BundleResource Include="Resources\Images\DocIO\wordtohtml.png" />
+    <BundleResource Include="Resources\Images\DocIO\wordtohtml%402x.png" />
+    <BundleResource Include="Resources\Images\DocIO\wordtohtml%403x.png" />
+	<BundleResource Include="Resources\Images\DocIO\wordtopdf.png" />
+    <BundleResource Include="Resources\Images\DocIO\wordtopdf%402x.png" />
+    <BundleResource Include="Resources\Images\DocIO\wordtopdf%403x.png" />
+    <BundleResource Include="Resources\Images\DocIO\formulas.png" />
+    <BundleResource Include="Resources\Images\DocIO\formulas%402x.png" />
+    <BundleResource Include="Resources\Images\DocIO\formulas%403x.png" />
+    <BundleResource Include="Resources\Images\excelexport.png" />
+    <BundleResource Include="Resources\Images\family.png" />
+    <BundleResource Include="Resources\Images\grain.png" />
+    <BundleResource Include="Resources\Images\inbox.png" />
+    <BundleResource Include="Resources\Images\menu.png" />
+    <BundleResource Include="Resources\Images\menu%402x.png" />
+    <BundleResource Include="Resources\Images\mount.png" />
+    <BundleResource Include="Resources\Images\outbox.png" />
+    <BundleResource Include="Resources\Images\pdf.png" />
+    <BundleResource Include="Resources\Images\pdfexport.png" />
+    <BundleResource Include="Resources\Images\power.png" />
+    <BundleResource Include="Resources\Images\presentation.png" />
+    <BundleResource Include="Resources\Images\profile.png" />
+    <BundleResource Include="Resources\Images\sentitem.png" />
+    <BundleResource Include="Resources\Images\trash.png" />
+    <BundleResource Include="Resources\Images\unchecked.png" />
+    <BundleResource Include="Resources\Images\walk.png" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\Default-667h%402x.png" />
+    <BundleResource Include="Resources\Default-736h%403x.png" />
+    <BundleResource Include="Resources\Default-Landscape.png" />
+    <BundleResource Include="Resources\Default-Landscape%402x.png" />
+    <BundleResource Include="Resources\Default-Portrait.png" />
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\Images\chart\sample.png" />
+    <BundleResource Include="Resources\Images\pdf\gettingstarted.png" />
+    <BundleResource Include="Resources\Images\pdf\barcode.png" />
+    <BundleResource Include="Resources\Images\pdf\booklet.png" />
+    <BundleResource Include="Resources\Images\pdf\stamp.png" />
+    <BundleResource Include="Resources\Images\pdf\table.png" />
+    <BundleResource Include="Resources\Images\pdf\encryption.png" />
+    <BundleResource Include="Resources\Images\pdf\imageinsertion.png" />
+    <BundleResource Include="Resources\Samples\AutoComplete\AutoComplete.cs" />
+    <BundleResource Include="Resources\Samples\AutoComplete\AutoComplete_Mobile.cs" />
+    <BundleResource Include="Resources\Samples\AutoComplete\AutoComplete_Tablet.cs" />
+    <BundleResource Include="Resources\Samples\Barcode\CodaBarBarcode.cs" />
+    <BundleResource Include="Resources\Samples\Barcode\Code11Barcode.cs" />
+    <BundleResource Include="Resources\Samples\Barcode\UpcBarcode.cs" />
+    <BundleResource Include="Resources\Samples\Barcode\Code128ABarcode.cs" />
+    <BundleResource Include="Resources\Samples\Barcode\Code128BBarcode.cs" />
+    <BundleResource Include="Resources\Samples\Barcode\Code128CBarcode.cs" />
+    <BundleResource Include="Resources\Samples\Barcode\Code32Barcode.cs" />
+    <BundleResource Include="Resources\Samples\Barcode\Code39Barcode.cs" />
+    <BundleResource Include="Resources\Samples\Barcode\Code39ExtendedBarcode.cs" />
+    <BundleResource Include="Resources\Samples\Barcode\Code93Barcode.cs" />
+    <BundleResource Include="Resources\Samples\Barcode\Code93ExtendedBarcode.cs" />
+    <BundleResource Include="Resources\Samples\Barcode\DataMatrixBarcode.cs" />
+    <BundleResource Include="Resources\Samples\Barcode\QRBarcode.cs" />
+    <BundleResource Include="Resources\Samples\BusyIndicator\BusyIndicator.cs" />
+    <BundleResource Include="Resources\Samples\BusyIndicator\BusyIndicator_Mobile.cs" />
+    <BundleResource Include="Resources\Samples\BusyIndicator\PickerChangedEventArgs.cs" />
+    <BundleResource Include="Resources\Samples\BusyIndicator\PickerModel.cs" />
+    <BundleResource Include="Resources\Samples\Calculate\CalcQuickCalculation.cs" />
+    <BundleResource Include="Resources\Samples\Calculate\FunctionsLibrary.cs" />
+    <BundleResource Include="Resources\Samples\Calendar\CalendarBlackoutDates.cs" />
+    <BundleResource Include="Resources\Samples\Calendar\CalendarConfiguration.cs" />
+    <BundleResource Include="Resources\Samples\Calendar\CalendarConfiguration_Mobile.cs" />
+    <BundleResource Include="Resources\Samples\Calendar\CalendarInlineEvents.cs" />
+    <BundleResource Include="Resources\Samples\Calendar\CalendarLocalization.cs" />
+    <BundleResource Include="Resources\Samples\Calendar\CalendarLocalization_Mobile.cs" />
+    <BundleResource Include="Resources\Samples\Calendar\CalendarViews.cs" />
+    <BundleResource Include="Resources\Samples\Calendar\CalendarViews_Mobile.cs" />
+    <BundleResource Include="Resources\Samples\Carousel\Carousel.cs" />
+    <BundleResource Include="Resources\Samples\Carousel\Carousel_Mobile.cs" />
+    <BundleResource Include="Resources\Samples\Carousel\CarouselModel.cs" />
+    <BundleResource Include="Resources\Samples\Carousel\LoadMoreCarousel.cs" />
+    <BundleResource Include="Resources\Samples\Carousel\LoadMoreSample.cs" />
+    <BundleResource Include="Resources\CarouselIcon.ttf" />
+    <BundleResource Include="Resources\Samples\DataGrid\AutoRowHeight.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\CustomGrouping.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\CustomSorting.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Exporting.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Filtering.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Formatting.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\FrozenView.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\GridGettingStarted.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Grouping.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\IncrementalLoading.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\LoadMore.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Paging.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\PullToRefresh.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\RenderingDynamicData.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\DragAndDrop.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Selection.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Sorting.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Styles.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\SwipeDelete.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Swiping.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\UnboundColumn.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Helpers\Command.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Helpers\CustomComparer.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Model\BankInfo.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Model\BankRepository.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Model\BookInfo.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Model\BookRepository.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Model\CustomerDetails.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Model\CustomersRepository.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Model\Employee.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Model\EmployeeDetails.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Model\EmployeeInfo.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Model\EmployeeInfoRespository.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Model\EmployeeInformation.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Model\EmployeeInformationRepository.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Model\OrderDetailsRepository.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Model\OrderInfo.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Model\ProductInfo.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Model\ProductInfoRepository.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Model\ProductRepository.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Model\Products.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Model\SalesByDate.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Model\SalesInfoRepository.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Model\StockData.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\NorthwindService\Reference.cs" />
+    <BundleResource Include="Resources\Final_PDFViewer_IOS_FontUpdate.ttf" />
+    <BundleResource Include="Resources\Font size Font.ttf" />
+    <BundleResource Include="Resources\Samples\DataGrid\NorthwindService\Reference.datasvcmap" />
+    <BundleResource Include="Resources\Samples\DataGrid\NorthwindService\Reference1.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\NorthwindService\service.edmx" />
+    <BundleResource Include="Resources\Samples\DataGrid\Styles\Blue.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Styles\Dark.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Styles\Green.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\Styles\Red.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\TemplateColumnCell\LinearGuageCell.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\TemplateColumnCell\StockCell.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\ViewModel\AutoRowHeightViewModel.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\ViewModel\CustomerViewModel.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\ViewModel\ExportingViewModel.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\ViewModel\FilterOptionsTableSource.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\ViewModel\FilterViewModel.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\ViewModel\FormattingViewModel.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\ViewModel\FrozenViewViewModel.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\ViewModel\GridGettingStartedViewModel.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\ViewModel\GroupingViewModel.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\ViewModel\IncrementalLoadingViewModel.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\ViewModel\LoadMoreViewModel.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\ViewModel\OptionsTableSource.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\ViewModel\PagingViewModel.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\ViewModel\PullToRefreshViewModel.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\ViewModel\DragAndDropViewModel.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\ViewModel\SalesInfoViewModel.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\ViewModel\SelectionViewModel.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\ViewModel\SortViewModel.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\ViewModel\StocksViewModel.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\ViewModel\SwipingViewModel.cs" />
+    <BundleResource Include="Resources\Samples\DataGrid\ViewModel\UnboundViewModel.cs" />
+    <BundleResource Include="Resources\Samples\DataSource\DataSourceGettingStarted.cs" />
+    <BundleResource Include="Resources\Samples\DataSource\DataSourceGrouping.cs" />
+    <BundleResource Include="Resources\Samples\DataSource\DataSourceSorting.cs" />
+    <BundleResource Include="Resources\Samples\DataSource\Helper\ContactCell.cs" />
+    <BundleResource Include="Resources\Samples\DataSource\Helper\CustomTableCell.cs" />
+    <BundleResource Include="Resources\Samples\DataSource\Helper\OptionView.cs" />
+    <BundleResource Include="Resources\Samples\DataSource\Helper\TableViewSource.cs" />
+    <BundleResource Include="Resources\Samples\DataSource\Model\BookDetails.cs" />
+    <BundleResource Include="Resources\Samples\DataSource\Model\BookDetailsRepository.cs" />
+    <BundleResource Include="Resources\Samples\DataSource\Model\Contacts.cs" />
+    <BundleResource Include="Resources\Samples\DataSource\Model\ContactsList.cs" />
+    <BundleResource Include="Resources\Samples\DataSource\ViewModel\ContactsViewModel.cs" />
+    <BundleResource Include="Resources\Samples\DataSource\ViewModel\DataSourceGettingStartedViewModel.cs" />
+    <BundleResource Include="Resources\Samples\DocIO\BookmarkNavigation.cs" />
+    <BundleResource Include="Resources\Samples\DocIO\BuiltInStyle.cs" />
+    <BundleResource Include="Resources\Samples\DocIO\CustomStyle.cs" />
+    <BundleResource Include="Resources\Samples\DocIO\HelloWorld.cs" />
+    <BundleResource Include="Resources\Samples\DocIO\MailMerge.cs" />
+    <BundleResource Include="Resources\Samples\DocIO\EmployeeReport.cs" />
+    <BundleResource Include="Resources\Samples\DocIO\NestedMailMerge.cs" />
+    <BundleResource Include="Resources\Samples\DocIO\FormFillingandProtection.cs" />
+    <BundleResource Include="Resources\Samples\DocIO\XMLMapping.cs" />
+    <BundleResource Include="Resources\Samples\DocIO\WordToHTML.cs" />
+	<BundleResource Include="Resources\Samples\DocIO\WordToPDF.cs" />
+    <BundleResource Include="Resources\Samples\DocIO\GroupShapes.cs" />
+	<BundleResource Include="Resources\Samples\DocIO\CreateEquation.cs" />
+    <BundleResource Include="Resources\Samples\DocIO\FormatTable.cs" />
+    <BundleResource Include="Resources\Samples\Kanban\CustomizationKanban.cs" />
+    <BundleResource Include="Resources\Samples\Kanban\GettingStartedKanban.cs" />
+    <BundleResource Include="Resources\Samples\Maps\BubbleVisualization.cs" />
+    <BundleResource Include="Resources\Samples\Maps\TicketBooking.cs" />
+    <BundleResource Include="Resources\Samples\Maps\ColorMapping.cs" />
+    <BundleResource Include="Resources\Samples\Maps\DataMarkers.cs" />
+    <BundleResource Include="Resources\Samples\Maps\OSM.cs" />
+    <BundleResource Include="Resources\Samples\NavigationDrawer\MainPageView.cs" />
+    <BundleResource Include="Resources\Samples\NavigationDrawer\NavigationDrawer.cs" />
+    <BundleResource Include="Resources\Samples\NavigationDrawer\TableSource.cs" />
+    <BundleResource Include="Resources\Samples\NumericTextBox\NumericTextBox.cs" />
+    <BundleResource Include="Resources\Samples\NumericTextBox\NumericTextBox_Mobile.cs" />
+    <BundleResource Include="Resources\Samples\NumericTextBox\NumericTextBox_Tablet.cs" />
+    <BundleResource Include="Resources\Samples\NumericUpDown\NumericUpDown.cs" />
+    <BundleResource Include="Resources\Samples\NumericUpDown\NumericUpDown_Mobile.cs" />
+    <BundleResource Include="Resources\Samples\NumericUpDown\NumericUpDown_Tablet.cs" />
+    <BundleResource Include="Resources\Samples\PDF\Barcode.cs" />
+    <BundleResource Include="Resources\Samples\PDF\Booklet.cs" />
+    <BundleResource Include="Resources\Samples\PDF\RTLSupport.cs" />
+	<BundleResource Include="Resources\Samples\PDF\OpenTypeFont.cs" />
+    <BundleResource Include="Resources\Samples\PDF\Conformance.cs" />
+	<BundleResource Include="Resources\Samples\PDF\ZugFerd.cs" />
+    <BundleResource Include="Resources\Samples\PDF\ZugFerd_XML\CountryCodes.cs" />
+    <BundleResource Include="Resources\Samples\PDF\ZugFerd_XML\CurrencyCodes.cs" />
+    <BundleResource Include="Resources\Samples\PDF\ZugFerd_XML\InvoiceType.cs" />
+    <BundleResource Include="Resources\Samples\PDF\ZugFerd_XML\Product.cs" />
+    <BundleResource Include="Resources\Samples\PDF\ZugFerd_XML\UserDetails.cs" />
+    <BundleResource Include="Resources\Samples\PDF\ZugFerd_XML\ZugFerdInvoice.cs" />
+    <BundleResource Include="Resources\Samples\PDF\ZugFerd_XML\ZugferdProfile.cs" />
+    <BundleResource Include="Resources\Samples\PDF\GettingStartedPDF.cs" />
+    <BundleResource Include="Resources\Samples\PDF\Stamping.cs" />
+    <BundleResource Include="Resources\Samples\PDF\TableFeatures.cs" />
+    <BundleResource Include="Resources\Samples\PDF\DigitalSignature.cs" />
+    <BundleResource Include="Resources\Samples\PDF\Encryption.cs" />
+	<BundleResource Include="Resources\Samples\PDF\DigitalSignatureValidation.cs" />
+    <BundleResource Include="Resources\Samples\PDF\ImageInsertion.cs" />
+    <BundleResource Include="Resources\Samples\Presentation\ChartsPresentation.cs" />
+    <BundleResource Include="Resources\Samples\Presentation\GettingStartedPresentation.cs" />
+    <BundleResource Include="Resources\Samples\Presentation\ImagesPresentation.cs" />
+    <BundleResource Include="Resources\Samples\Presentation\SlidesPresentation.cs" />
+	<BundleResource Include="Resources\Samples\Presentation\PPTXToImage.cs" />
+	<BundleResource Include="Resources\Samples\Presentation\PPTXToPDF.cs" />
+    <BundleResource Include="Resources\Samples\Presentation\TablesPresentation.cs" />
+    <BundleResource Include="Resources\Samples\Presentation\WriteProtection.cs" />
+    <BundleResource Include="Resources\Samples\PullToRefresh\PullToRefreshDemo.cs" />
+    <BundleResource Include="Resources\Samples\PullToRefresh\SfDataGridInPullToRefresh.cs" />
+    <BundleResource Include="Resources\Samples\PullToRefresh\UICollectionViewInPullToRefresh.cs" />
+    <BundleResource Include="Resources\Samples\RangeSlider\Orientation.cs" />
+    <BundleResource Include="Resources\Samples\RangeSlider\RangeSliderGettingStarted.cs" />
+    <BundleResource Include="Resources\Samples\RangeSlider\RangeSliderGettingStarted_Mobile.cs" />
+    <BundleResource Include="Resources\Samples\RangeSlider\RangeSliderGettingStarted_Tablet.cs" />
+    <BundleResource Include="Resources\Samples\RangeSlider\Slider.cs" />
+    <BundleResource Include="Resources\Samples\Rating\Rating.cs" />
+    <BundleResource Include="Resources\Samples\Rating\Rating_Mobile.cs" />
+    <BundleResource Include="Resources\Samples\Rating\Rating_Tablet.cs" />
+    <BundleResource Include="Resources\Samples\Rotator\Rotator.cs" />
+    <BundleResource Include="Resources\Samples\Rotator\Rotator_Mobile.cs" />
+    <BundleResource Include="Resources\Samples\Schedule\AppointmentEditor.cs" />  
+    <BundleResource Include="Resources\Samples\Schedule\Recurrence.cs" />
+    <BundleResource Include="Resources\Samples\Sparkline\Sparkline.cs" />
+    <BundleResource Include="Resources\Samples\TreeMap\GettingStarted.cs" />
+    <BundleResource Include="Resources\Samples\TreeMap\Hierarchical.cs" />
+    <BundleResource Include="Resources\Samples\XlsIO\Charts.cs" />
+    <BundleResource Include="Resources\Samples\XlsIO\CreateSpreadsheet.cs" />
+    <BundleResource Include="Resources\Samples\XlsIO\Filters.cs" />
+    <BundleResource Include="Resources\Samples\XlsIO\FindandReplace.cs" />
+    <BundleResource Include="Resources\Samples\XlsIO\Formulas.cs" />
+    <BundleResource Include="Resources\Samples\XlsIO\CollectionObjects.cs" />
+	<BundleResource Include="Resources\Samples\XlsIO\ImportNestedCollection.cs" />
+    <BundleResource Include="Resources\Samples\XlsIO\ImportXMLData.cs" />
+	<BundleResource Include="Resources\Samples\XlsIO\DataTable.cs" />
+    <BundleResource Include="Resources\Samples\XlsIO\ExcelToPDF.cs" />
+    <BundleResource Include="Resources\Samples\XlsIO\WorksheetToImage.cs" />
+    <BundleResource Include="Resources\Samples\XlsIO\WorksheetToHTML.cs" />
+    <BundleResource Include="Resources\Images\XlsIO\chart.png" />
+    <BundleResource Include="Resources\Images\XlsIO\chart%402x.png" />
+    <BundleResource Include="Resources\Images\XlsIO\chart%403x.png" />
+    <BundleResource Include="Resources\Images\XlsIO\createspreadsheet.png" />
+    <BundleResource Include="Resources\Images\XlsIO\createspreadsheet%402x.png" />
+    <BundleResource Include="Resources\Images\XlsIO\createspreadsheet%403x.png" />
+    <BundleResource Include="Resources\Images\XlsIO\filters.png" />
+    <BundleResource Include="Resources\Images\XlsIO\filters%402x.png" />
+    <BundleResource Include="Resources\Images\XlsIO\filters%403x.png" />
+    <BundleResource Include="Resources\Images\XlsIO\findandreplace.png" />
+    <BundleResource Include="Resources\Images\XlsIO\findandreplace%402x.png" />
+    <BundleResource Include="Resources\Images\XlsIO\findandreplace%403x.png" />
+    <BundleResource Include="Resources\Images\XlsIO\formulas.png" />
+    <BundleResource Include="Resources\Images\XlsIO\formulas%402x.png" />
+    <BundleResource Include="Resources\Images\XlsIO\formulas%403x.png" />
+    <BundleResource Include="Resources\Images\XlsIO\importCLRobject.png" />
+    <BundleResource Include="Resources\Images\XlsIO\importCLRobject%402x.png" />
+    <BundleResource Include="Resources\Images\XlsIO\importCLRobject%403x.png" />
+    <BundleResource Include="Resources\Images\XlsIO\importxml.png" />
+    <BundleResource Include="Resources\Images\XlsIO\importxml%402x.png" />
+    <BundleResource Include="Resources\Images\XlsIO\importxml%403x.png" />
+    <EmbeddedResource Include="Samples\Presentation\Templates\tablet.jpg" />
+    <BundleResource Include="Resources\bucolicpie.png" />
+    <BundleResource Include="Resources\bumpercrop.png" />
+    <BundleResource Include="Resources\Cloudy-selected.png" />
+    <BundleResource Include="Resources\Cloudy.png" />
+    <BundleResource Include="Resources\doublecheesemargherita.png" />
+    <BundleResource Include="Resources\Humid-selected.png" />
+    <BundleResource Include="Resources\Humid.png" />
+    <BundleResource Include="Resources\Image0.png" />
+    <BundleResource Include="Resources\image4.png" />
+    <BundleResource Include="Resources\image5.png" />
+    <BundleResource Include="Resources\image6.png" />
+    <BundleResource Include="Resources\image7.png" />
+    <BundleResource Include="Resources\Image8.png" />
+    <BundleResource Include="Resources\Image9.png" />
+    <BundleResource Include="Resources\Image10.png" />
+    <BundleResource Include="Resources\Image11.png" />
+    <BundleResource Include="Resources\Image12.png" />
+    <BundleResource Include="Resources\Image13.png" />
+    <BundleResource Include="Resources\Image14.png" />
+    <BundleResource Include="Resources\Image15.png" />
+    <BundleResource Include="Resources\Image16.png" />
+    <BundleResource Include="Resources\Image17.png" />
+    <BundleResource Include="Resources\Image18.png" />
+    <BundleResource Include="Resources\Image19.png" />
+    <BundleResource Include="Resources\Image20.png" />
+    <BundleResource Include="Resources\Image21.png" />
+    <BundleResource Include="Resources\Image22.png" />
+    <BundleResource Include="Resources\Image23.png" />
+    <BundleResource Include="Resources\Image24.png" />
+    <BundleResource Include="Resources\Image25.png" />
+    <BundleResource Include="Resources\Image26.png" />
+    <BundleResource Include="Resources\Image27.png" />
+    <BundleResource Include="Resources\Image28.png" />
+    <BundleResource Include="Resources\Image29.png" />
+    <BundleResource Include="Resources\Image30.png" />
+    <BundleResource Include="Resources\margherita.png" />
+    <BundleResource Include="Resources\movie1.png" />
+    <BundleResource Include="Resources\movie2.png" />
+    <BundleResource Include="Resources\movie3.png" />
+    <BundleResource Include="Resources\movie4.png" />
+    <BundleResource Include="Resources\movie5.png" />
+    <BundleResource Include="Resources\movie6.png" />
+    <BundleResource Include="Resources\movie7.png" />
+    <BundleResource Include="Resources\Rainy-selected.png" />
+    <BundleResource Include="Resources\Rainy.png" />
+    <BundleResource Include="Resources\saladdaze.png" />
+    <BundleResource Include="Resources\spiceoflife.png" />
+    <BundleResource Include="Resources\verynicoise.png" />
+    <BundleResource Include="Resources\Warm-selected.png" />
+    <BundleResource Include="Resources\Warm.png" />
+    <BundleResource Include="Resources\Windy-selected.png" />
+    <BundleResource Include="Resources\Windy.png" />
+    <BundleResource Include="Resources\Images\Sparkline.png" />
+    <BundleResource Include="Resources\Images\Sparkline%402x.png" />
+    <BundleResource Include="pin.png" />
+    <BundleResource Include="Resources\usa_state.shp" />
+    <BundleResource Include="Resources\world1.shp" />
+    <BundleResource Include="Resources\Images\eficon.png" />
+    <BundleResource Include="Resources\Images\Blackoutdates.png" />
+    <BundleResource Include="Resources\Images\Blackoutdates@2x.png" />
+    <BundleResource Include="Resources\Images\Blackoutdates@3x.png" />
+    <BundleResource Include="Resources\Images\custom.png" />
+    <BundleResource Include="Resources\Images\custom@2x.png" />
+    <BundleResource Include="Resources\Images\custom@3x.png" />
+    <BundleResource Include="Resources\Images\inline.png" />
+    <BundleResource Include="Resources\Images\inline@2x.png" />
+    <BundleResource Include="Resources\Images\inline@3x.png" />
+    <BundleResource Include="Resources\Images\localisation.png" />
+    <BundleResource Include="Resources\Images\localisation@2x.png" />
+    <BundleResource Include="Resources\Images\localisation@3x.png" />
+    <BundleResource Include="Resources\Images\view.png" />
+    <BundleResource Include="Resources\Images\RadialMenu.png" />
+    <BundleResource Include="Resources\Images\RadialMenu%402x.png" />
+    <BundleResource Include="Resources\Segoe MDL2 Assets.ttf" />
+    <BundleResource Include="Resources\Schedule icons-09.png" />
+    <BundleResource Include="Resources\Schedule icons-10.png" />
+    <BundleResource Include="Resources\Schedule icons-11.png" />
+    <BundleResource Include="Resources\Samples\RadialMenu\CustomDrawing.cs" />
+    <BundleResource Include="Resources\Samples\RadialMenu\RadialMenuCustomization.cs" />
+    <BundleResource Include="Resources\Samples\RadialMenu\TableSourceCollection.cs" />
+    <BundleResource Include="Resources\Samples\RadialMenu\RadialMenuGettingStarted.cs" />
+    <BundleResource Include="Resources\ios.ttf" />
+    <BundleResource Include="Resources\Samples\RadialMenu\ContextualMenu.cs" />
+    <BundleResource Include="Resources\black-09.png" />
+    <BundleResource Include="Resources\black-10.png" />
+    <BundleResource Include="Resources\black-11.png" />
+    <BundleResource Include="Resources\blue.png" />
+    <BundleResource Include="Resources\green.png" />
+    <BundleResource Include="Resources\facebook.png" />
+    <BundleResource Include="Resources\gplus.png" />
+    <BundleResource Include="Resources\instagram.png" />
+    <BundleResource Include="Resources\linkedin.png" />
+    <BundleResource Include="Resources\pinterest.png" />
+    <BundleResource Include="Resources\twitter.png" />
+    <BundleResource Include="Resources\Controls\AutoComplete.png" />
+    <BundleResource Include="Resources\Controls\AutoComplete%402x.png" />
+    <BundleResource Include="Resources\Controls\AutoComplete%403x.png" />
+    <BundleResource Include="Resources\Controls\Barcode.png" />
+    <BundleResource Include="Resources\Controls\Barcode%402x.png" />
+    <BundleResource Include="Resources\Controls\Barcode%403x.png" />
+    <BundleResource Include="Resources\Controls\BusyIndicator.png" />
+    <BundleResource Include="Resources\Controls\BusyIndicator%402x.png" />
+    <BundleResource Include="Resources\Controls\BusyIndicator%403x.png" />
+    <BundleResource Include="Resources\Controls\Calculate.png" />
+    <BundleResource Include="Resources\Controls\Calculate%402x.png" />
+    <BundleResource Include="Resources\Controls\Calculate%403x.png" />
+    <BundleResource Include="Resources\Controls\Calendar.png" />
+    <BundleResource Include="Resources\Controls\Calendar%402x.png" />
+    <BundleResource Include="Resources\Controls\Calender%403x.png" />
+    <BundleResource Include="Resources\Controls\Carousel.png" />
+    <BundleResource Include="Resources\Controls\Carousel%402x.png" />
+    <BundleResource Include="Resources\Controls\Carousel%403x.png" />
+    <BundleResource Include="Resources\Controls\Chart.png" />
+    <BundleResource Include="Resources\Controls\Chart%402x.png" />
+    <BundleResource Include="Resources\Controls\Chart%403x.png" />
+    <BundleResource Include="Resources\Controls\DataGrid.png" />
+    <BundleResource Include="Resources\Controls\DataGrid%402x.png" />
+    <BundleResource Include="Resources\Controls\DataGrid%403x.png" />
+    <BundleResource Include="Resources\Controls\DataSource.png" />
+    <BundleResource Include="Resources\Controls\DataSource%402x.png" />
+    <BundleResource Include="Resources\Controls\DataSource%403x.png" />
+    <BundleResource Include="Resources\Controls\DocIO.png" />
+    <BundleResource Include="Resources\Controls\DocIO%402x.png" />
+    <BundleResource Include="Resources\Controls\DocIO%403x.png" />
+    <BundleResource Include="Resources\Controls\Kanban.png" />
+    <BundleResource Include="Resources\Controls\Kanban%402x.png" />
+    <BundleResource Include="Resources\Controls\Kanban%403x.png" />
+    <BundleResource Include="Resources\Controls\Maps.png" />
+    <BundleResource Include="Resources\Controls\Maps%402x.png" />
+    <BundleResource Include="Resources\Controls\Maps%403x.png" />
+    <BundleResource Include="Resources\Controls\NavigationDrawer.png" />
+    <BundleResource Include="Resources\Controls\NavigationDrawer%402x.png" />
+    <BundleResource Include="Resources\Controls\NavigationDrawer%403x.png" />
+    <BundleResource Include="Resources\Controls\NumericTextBox.png" />
+    <BundleResource Include="Resources\Controls\NumericTextBox%402x.png" />
+    <BundleResource Include="Resources\Controls\NumericTextBox%403x.png" />
+    <BundleResource Include="Resources\Controls\NumericUpDown.png" />
+    <BundleResource Include="Resources\Controls\NumericUpDown%402x.png" />
+    <BundleResource Include="Resources\Controls\NumericUpDown%403x.png" />
+    <BundleResource Include="Resources\Controls\PDF.png" />
+    <BundleResource Include="Resources\Controls\PDF%402x.png" />
+    <BundleResource Include="Resources\Controls\PDF%403x.png" />
+    <BundleResource Include="Resources\Controls\Presentation.png" />
+    <BundleResource Include="Resources\Controls\Presentation%402x.png" />
+    <BundleResource Include="Resources\Controls\Presentation%403x.png" />
+    <BundleResource Include="Resources\Controls\PullToRefresh.png" />
+    <BundleResource Include="Resources\Controls\PullToRefresh%402x.png" />
+    <BundleResource Include="Resources\Controls\PullToRefresh%403x.png" />
+    <BundleResource Include="Resources\Controls\RadialMenu.png" />
+    <BundleResource Include="Resources\Controls\RadialMenu%402x.png" />
+    <BundleResource Include="Resources\Controls\RadialMenu%403x.png" />
+    <BundleResource Include="Resources\Controls\RangeNavigator.png" />
+    <BundleResource Include="Resources\Controls\RangeNavigator%402x.png" />
+    <BundleResource Include="Resources\Controls\RangeNavigator%403x.png" />
+    <BundleResource Include="Resources\Controls\RangeSlider.png" />
+    <BundleResource Include="Resources\Controls\RangeSlider%402x.png" />
+    <BundleResource Include="Resources\Controls\RangeSlider%403x.png" />
+    <BundleResource Include="Resources\Controls\Rating.png" />
+    <BundleResource Include="Resources\Controls\Rating%402x.png" />
+    <BundleResource Include="Resources\Controls\Rating%403x.png" />
+    <BundleResource Include="Resources\Controls\Rotator.png" />
+    <BundleResource Include="Resources\Controls\Rotator%402x.png" />
+    <BundleResource Include="Resources\Controls\Rotator%403x.png" />
+    <BundleResource Include="Resources\Controls\Schedule.png" />
+    <BundleResource Include="Resources\Controls\Schedule%402x.png" />
+    <BundleResource Include="Resources\Controls\Schedule%403x.png" />
+    <BundleResource Include="Resources\Controls\Sparkline.png" />
+    <BundleResource Include="Resources\Controls\Sparkline%402x.png" />
+    <BundleResource Include="Resources\Controls\Sparkline%403x.png" />
+    <BundleResource Include="Resources\Controls\TreeMap.png" />
+    <BundleResource Include="Resources\Controls\TreeMap%402x.png" />
+    <BundleResource Include="Resources\Controls\TreeMap%403x.png" />
+    <BundleResource Include="Resources\Controls\XlsIO.png" />
+    <BundleResource Include="Resources\Controls\XlsIO%402x.png" />
+    <BundleResource Include="Resources\Controls\XlsIO%403x.png" />
+    <BundleResource Include="Resources\Controls\closeicon.png" />
+    <BundleResource Include="Resources\Controls\closeicon%402x.png" />
+    <BundleResource Include="Resources\Controls\closeicon%403x.png" />
+    <BundleResource Include="Resources\Controls\documentation.png" />
+    <BundleResource Include="Resources\Controls\documentation%402x.png" />
+    <BundleResource Include="Resources\Controls\documentation%403x.png" />
+    <BundleResource Include="Resources\Controls\productpage.png" />
+    <BundleResource Include="Resources\Controls\productpage%402x.png" />
+    <BundleResource Include="Resources\Controls\productpage%403x.png" />
+    <BundleResource Include="Resources\Controls\synclogo.png" />
+    <BundleResource Include="Resources\Controls\synclogo%402x.png" />
+    <BundleResource Include="Resources\Controls\synclogo%403x.png" />
+    <BundleResource Include="Resources\Controls\whatsnew.png" />
+    <BundleResource Include="Resources\Controls\whatsnew%402x.png" />
+    <BundleResource Include="Resources\Controls\whatsnew%403x.png" />
+    <BundleResource Include="Resources\Controls\Tags\Option.png" />
+    <BundleResource Include="Resources\Controls\Tags\Option%402x.png" />
+    <BundleResource Include="Resources\Controls\Tags\Option%403x.png" />
+    <BundleResource Include="Resources\Controls\Tags\Viewcode.png" />
+    <BundleResource Include="Resources\Controls\Tags\Viewcode%402x.png" />
+    <BundleResource Include="Resources\Controls\Tags\Viewcode%403x.png" />
+    <BundleResource Include="Resources\Controls\Tags\new.png" />
+    <BundleResource Include="Resources\Controls\Tags\new%402x.png" />
+    <BundleResource Include="Resources\Controls\Tags\new%403x.png" />
+    <BundleResource Include="Resources\Controls\Tags\preview.png" />
+    <BundleResource Include="Resources\Controls\Tags\preview%402x.png" />
+    <BundleResource Include="Resources\Controls\Tags\preview%403x.png" />
+    <BundleResource Include="Resources\Controls\Tags\updated.png" />
+    <BundleResource Include="Resources\Controls\Tags\updated%402x.png" />
+    <BundleResource Include="Resources\Controls\Tags\updated%403x.png" />
+    <BundleResource Include="Resources\Controls\Tags\x_new.png" />
+    <BundleResource Include="Resources\Controls\Tags\x_new%402x.png" />
+    <BundleResource Include="Resources\Controls\Tags\x_new%403x.png" />
+    <BundleResource Include="Resources\Controls\Tags\x_update.png" />
+    <BundleResource Include="Resources\Controls\Tags\x_update%402x.png" />
+    <BundleResource Include="Resources\Controls\Tags\x_update%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Auto-Scrolling.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Auto-Scrolling%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Auto-Scrolling%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Category-Axis.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Category-Axis%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Category-Axis%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Data-point-Selection.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Data-point-Selection%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Data-point-Selection%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Datetime-Axis.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Datetime-Axis%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Datetime-Axis%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Live-Updates.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Live-Updates%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Live-Updates%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Logarithmic-Axis.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Logarithmic-Axis%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Logarithmic-Axis%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Multiple-Axes.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Multiple-Axes%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Multiple-Axes%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Strip-Line.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Strip-Line%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Strip-Line%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Technical-Indicator.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Technical-Indicator%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Technical-Indicator%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Tooltip.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Tooltip%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Tooltip%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Trackball.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Trackball%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Trackball%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Vertical-Chart.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Vertical-Chart%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Vertical-Chart%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Zooming.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Zooming%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Features\Zooming%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\100%25 Stacked Area.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\100%25 Stacked Area%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\100%25 Stacked Area%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\100%25 Stacked Area_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\100%25 Stacked Area_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\100%25 Stacked Area_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\100%25 Stacked Bar.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\100%25 Stacked Bar%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\100%25 Stacked Bar%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\100%25 Stacked Bar_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\100%25 Stacked Bar_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\100%25 Stacked Bar_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\100%25 Stacked Column.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\100%25 Stacked Column%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\100%25 Stacked Column%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\100%25 Stacked Column_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\100%25 Stacked Column_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\100%25 Stacked Column_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Area.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Area%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Area%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Area_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Area_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Area_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Bar.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Bar%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Bar%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Bar_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Bar_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Bar_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Bubble.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Bubble%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Bubble%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Bubble_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Bubble_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Bubble_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Candle.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Candle%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Candle%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Candle_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Candle_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Candle_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Column.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Column%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Column%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Column_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Column_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Column_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Doughnut.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Doughnut%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Doughnut%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Doughnut_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Doughnut_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Doughnut_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Funnel.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Funnel%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Funnel%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Funnel_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Funnel_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Funnel_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Line.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Line%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Line%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Line_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Line_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Line_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\OHLC.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\OHLC%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\OHLC%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\OHLC_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\OHLC_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\OHLC_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Pie.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Pie%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Pie%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Pie_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Pie_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Pie_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Polar.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Polar%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Polar%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Polar_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Polar_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Polar_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Pyramid.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Pyramid%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Pyramid%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Pyramid_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Pyramid_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Pyramid_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Radar.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Radar%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Radar%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Radar_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Radar_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Radar_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Range Column.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Range Column%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Range Column%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Range Column_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Range Column_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Range Column_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Scatter.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Scatter%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Scatter%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Scatter_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Scatter_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Scatter_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Semi Doughnut.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Semi Doughnut%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Semi Doughnut%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Semi Doughnut_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Semi Doughnut_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Semi Doughnut_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Semi Pie.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Semi Pie%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Semi Pie%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Semi Pie_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Semi Pie_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Semi Pie_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Spline Area.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Spline Area%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Spline Area%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Spline Area_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Spline Area_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Spline Area_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Spline.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Spline%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Spline%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Spline_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Spline_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Spline_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Stacked  Column%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Stacked Area.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Stacked Area%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Stacked Area%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Stacked Area_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Stacked Area_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Stacked Area_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Stacked Bar.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Stacked Bar%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Stacked Bar%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Stacked Bar_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Stacked Bar_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Stacked Bar_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Stacked Column.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Stacked Column%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Stacked Column_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Stacked Column_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Stacked Column_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Step Area.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Step Area%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Step Area%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Step Area_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Step Area_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Step Area_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Step Line.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Step Line%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Step Line%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Step Line_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Step Line_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Step Line_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Range Area_selected.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Range Area_selected%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Range Area_selected%403x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Range Area.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Range Area%402x.png" />
+    <BundleResource Include="Resources\Controls\chart\Types\Range Area%403x.png" />
+    <BundleResource Include="Resources\FeaturedSamples\ChartTooltipCustomization.png" />
+    <BundleResource Include="Resources\FeaturedSamples\ChartTooltipCustomization%402x.png" />
+    <BundleResource Include="Resources\FeaturedSamples\ChartTooltipCustomization%403x.png" />
+    <BundleResource Include="Resources\FeaturedSamples\ChartTooltipCustomization_iPad.png" />
+    <BundleResource Include="Resources\FeaturedSamples\ChartTooltipCustomization_iPad%402x.png" />
+    <BundleResource Include="Resources\FeaturedSamples\ChartTooltipCustomization_iPad%403x.png" />
+    <BundleResource Include="Resources\FeaturedSamples\DataGridGrouping.png" />
+    <BundleResource Include="Resources\FeaturedSamples\DataGridGrouping%402x.png" />
+    <BundleResource Include="Resources\FeaturedSamples\DataGridGrouping%403x.png" />
+    <BundleResource Include="Resources\FeaturedSamples\DataGridGrouping_iPad.png" />
+    <BundleResource Include="Resources\FeaturedSamples\DataGridGrouping_iPad%402x.png" />
+    <BundleResource Include="Resources\FeaturedSamples\DataGridGrouping_iPad%403x.png" />
+    <BundleResource Include="Resources\FeaturedSamples\DataSourceGettingstarted.png" />
+    <BundleResource Include="Resources\FeaturedSamples\DataSourceGettingstarted%402x.png" />
+    <BundleResource Include="Resources\FeaturedSamples\DataSourceGettingstarted%403x.png" />
+    <BundleResource Include="Resources\FeaturedSamples\DataSourceGettingstarted_iPad.png" />
+    <BundleResource Include="Resources\FeaturedSamples\DataSourceGettingstarted_iPad%402x.png" />
+    <BundleResource Include="Resources\FeaturedSamples\DataSourceGettingstarted_iPad%403x.png" />
+    <BundleResource Include="Resources\FeaturedSamples\KanbanCustomization.png" />
+    <BundleResource Include="Resources\FeaturedSamples\KanbanCustomization%402x.png" />
+    <BundleResource Include="Resources\FeaturedSamples\KanbanCustomization%403x.png" />
+    <BundleResource Include="Resources\FeaturedSamples\KanbanCustomization_iPad.png" />
+    <BundleResource Include="Resources\FeaturedSamples\KanbanCustomization_iPad%402x.png" />
+    <BundleResource Include="Resources\FeaturedSamples\KanbanCustomization_iPad%403x.png" />
+    <BundleResource Include="Resources\FeaturedSamples\RangeNavigatorCustomization.png" />
+    <BundleResource Include="Resources\FeaturedSamples\RangeNavigatorCustomization%402x.png" />
+    <BundleResource Include="Resources\FeaturedSamples\RangeNavigatorCustomization%403x.png" />
+    <BundleResource Include="Resources\FeaturedSamples\RangeNavigatorCustomization_iPad.png" />
+    <BundleResource Include="Resources\FeaturedSamples\RangeNavigatorCustomization_iPad%402x.png" />
+    <BundleResource Include="Resources\FeaturedSamples\RangeNavigatorCustomization_iPad%403x.png" />
+    <BundleResource Include="Resources\FeaturedSamples\ScheduleConfiguration.png" />
+    <BundleResource Include="Resources\FeaturedSamples\ScheduleConfiguration%402x.png" />
+    <BundleResource Include="Resources\FeaturedSamples\ScheduleConfiguration%403x.png" />
+    <BundleResource Include="Resources\FeaturedSamples\ScheduleConfiguration_iPad.png" />
+    <BundleResource Include="Resources\FeaturedSamples\ScheduleConfiguration_iPad%402x.png" />
+    <BundleResource Include="Resources\FeaturedSamples\ScheduleConfiguration_iPad%403x.png" />
+    <BundleResource Include="Resources\Social.ttf" />
+    <BundleResource Include="Resources\Images\Presentation\chartssample.png" />
+    <BundleResource Include="Resources\Images\Presentation\chartssample%402x.png" />
+    <BundleResource Include="Resources\Images\Presentation\chartssample%403x.png" />
+    <BundleResource Include="Resources\Images\Presentation\gettingstartedsample.png" />
+    <BundleResource Include="Resources\Images\Presentation\gettingstartedsample%402x.png" />
+    <BundleResource Include="Resources\Images\Presentation\gettingstartedsample%403x.png" />
+    <BundleResource Include="Resources\Images\Presentation\imagesample.png" />
+    <BundleResource Include="Resources\Images\Presentation\imagesample%402x.png" />
+    <BundleResource Include="Resources\Images\Presentation\imagesample%403x.png" />
+    <BundleResource Include="Resources\Images\Presentation\slidesample.png" />
+    <BundleResource Include="Resources\Images\Presentation\slidesample%402x.png" />
+    <BundleResource Include="Resources\Images\Presentation\slidesample%403x.png" />
+    <BundleResource Include="Resources\Images\Presentation\tablesample.png" />
+    <BundleResource Include="Resources\Images\Presentation\tablesample%402x.png" />
+    <BundleResource Include="Resources\Images\Presentation\tablesample%403x.png" />
+    <BundleResource Include="Resources\Images\Presentation\commentssample.png" />
+    <BundleResource Include="Resources\Images\Presentation\commentssample%402x.png" />
+    <BundleResource Include="Resources\Images\Presentation\commentssample%403x.png" />
+	<BundleResource Include="Resources\Images\Presentation\connectorssample.png" />
+    <BundleResource Include="Resources\Images\Presentation\connectorssample%402x.png" />
+    <BundleResource Include="Resources\Images\Presentation\connectorssample%403x.png" />
+    <BundleResource Include="Resources\Images\Presentation\createanimationsample.png" />
+    <BundleResource Include="Resources\Images\Presentation\createanimationsample%402x.png" />
+    <BundleResource Include="Resources\Images\Presentation\createanimationsample%403x.png" />
+    <BundleResource Include="Resources\Images\Presentation\modifyanimationsample.png" />
+    <BundleResource Include="Resources\Images\Presentation\modifyanimationsample%402x.png" />
+    <BundleResource Include="Resources\Images\Presentation\modifyanimationsample%403x.png" />
+	<BundleResource Include="Resources\Images\Presentation\slidetransitionsample.png" />
+    <BundleResource Include="Resources\Images\Presentation\slidetransitionsample%402x.png" />
+    <BundleResource Include="Resources\Images\Presentation\slidetransitionsample%403x.png" />
+    <BundleResource Include="Resources\Shop-Closed.png" />
+    <BundleResource Include="Resources\Controls\Tags\toast_new.png" />
+    <BundleResource Include="Resources\Controls\Tags\toast_new%402x.png" />
+    <BundleResource Include="Resources\Controls\Tags\toast_new%403x.png" />
+    <BundleResource Include="Resources\Controls\Tags\toast_update.png" />
+    <BundleResource Include="Resources\Controls\Tags\toast_update%402x.png" />
+    <BundleResource Include="Resources\Controls\Tags\toast_update%403x.png" />
+    <BundleResource Include="Resources\ScheduleConfiguration.png" />
+    <BundleResource Include="Resources\ScheduleConfiguration%402x.png" />
+    <BundleResource Include="Resources\ScheduleConfiguration%403x.png" />
+    <BundleResource Include="Resources\ScheduleCustomization.png" />
+    <BundleResource Include="Resources\ScheduleCustomization%402x.png" />
+    <BundleResource Include="Resources\ScheduleCustomization%403x.png" />
+    <BundleResource Include="Resources\ScheduleLocaization.png" />
+    <BundleResource Include="Resources\ScheduleLocaization%402x.png" />
+    <BundleResource Include="Resources\ScheduleLocaization%403x.png" />
+    <BundleResource Include="Resources\ScheduleRecurrence.png" />
+    <BundleResource Include="Resources\ScheduleRecurrence%402x.png" />
+    <BundleResource Include="Resources\ScheduleRecurrence%403x.png" />
+    <BundleResource Include="Resources\Scheduleview.png" />
+    <BundleResource Include="Resources\Scheduleview%402x.png" />
+    <BundleResource Include="Resources\Scheduleview%403x.png" />
+    <BundleResource Include="Resources\Barcode.png" />
+    <BundleResource Include="Resources\barcodedata.png" />
+    <BundleResource Include="Resources\Barcode%402x.png" />
+    <BundleResource Include="Resources\barcodedata%403x.png" />
+    <BundleResource Include="Resources\barcodeqr.png" />
+    <BundleResource Include="Resources\Barcode%403x.png" />
+    <BundleResource Include="Resources\barcodeqr%402x.png" />
+    <BundleResource Include="Resources\barcodedata%402x.png" />
+    <BundleResource Include="Resources\barcodeqr%403x.png" />
+    <EmbeddedResource Include="Samples\Presentation\Templates\HelloWorld.pptx" />
+    <EmbeddedResource Include="Samples\Presentation\Templates\Products.xml" />
+    <EmbeddedResource Include="Samples\Presentation\Templates\TableData.xml" />
+    <EmbeddedResource Include="Samples\Presentation\Templates\SlideTableData.xml" />
+    <EmbeddedResource Include="Samples\Presentation\Templates\Images.pptx" />
+	<EmbeddedResource Include="Samples\Presentation\Templates\Template.pptx" />
+    <EmbeddedResource Include="Samples\Presentation\Templates\NewCharts.pptx" />
+    <EmbeddedResource Include="Samples\Presentation\Templates\Slides.pptx" />
+    <EmbeddedResource Include="Samples\Presentation\Templates\ShapeWithAnimation.pptx" />
+    <EmbeddedResource Include="Samples\Presentation\Templates\Animation.pptx" />
+	<EmbeddedResource Include="Samples\Presentation\Templates\Transition.pptx" />
+	<EmbeddedResource Include="Samples\Presentation\Templates\HeaderFooter.pptx" />
+    <EmbeddedResource Include="Samples\PDF\Assets\Product Catalog.pdf" />
+    <EmbeddedResource Include="Samples\PDF\Assets\SalesOrderDetail.pdf" />
+    <EmbeddedResource Include="Samples\PDF\Assets\JavaScript Succinctly.pdf" />
+    <BundleResource Include="Resources\color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\AutoRowHeight.png" />
+    <BundleResource Include="Resources\Images\DragAndDrop.png" />
+    <BundleResource Include="Resources\Images\Filtering.png" />
+    <BundleResource Include="Resources\Images\Formating.png" />
+    <BundleResource Include="Resources\Images\FrozenViews.png" />
+    <BundleResource Include="Resources\Images\GettingStarted.png" />
+    <BundleResource Include="Resources\Images\Grouping.png" />
+    <BundleResource Include="Resources\Images\LoadMore.png" />
+    <BundleResource Include="Resources\Images\Paging.png" />
+    <BundleResource Include="Resources\Images\DataGridPullToRefresh.png" />
+    <BundleResource Include="Resources\Images\RealTimeUpdates.png" />
+    <BundleResource Include="Resources\Images\Selection.png" />
+    <BundleResource Include="Resources\Images\Sorting.png" />
+    <BundleResource Include="Resources\Images\Style.png" />
+    <BundleResource Include="Resources\Images\SwipeDelete.png" />
+    <BundleResource Include="Resources\Images\Swiping.png" />
+    <BundleResource Include="Resources\Images\Unbound.png" />
+    <BundleResource Include="Resources\Images\Exporting.jpg" />
+    <BundleResource Include="Resources\Images\IncrementalLoading.jpg" />
+    <BundleResource Include="Resources\Images\AutoRowHeight%402x.png" />
+    <BundleResource Include="Resources\Images\AutoRowHeight%403x.png" />
+    <BundleResource Include="Resources\Images\DragAndDrop%402x.png" />
+    <BundleResource Include="Resources\Images\DragAndDrop%403x.png" />
+    <BundleResource Include="Resources\Images\Exporting%402x.png" />
+    <BundleResource Include="Resources\Images\Exporting%403x.png" />
+    <BundleResource Include="Resources\Images\Filtering%402x.png" />
+    <BundleResource Include="Resources\Images\Filtering%403x.png" />
+    <BundleResource Include="Resources\Images\Formating%402x.png" />
+    <BundleResource Include="Resources\Images\Formating%403x.png" />
+    <BundleResource Include="Resources\Images\FrozenViews%402x.png" />
+    <BundleResource Include="Resources\Images\FrozenViews%403x.png" />
+    <BundleResource Include="Resources\Images\GettingStarted%402x.png" />
+    <BundleResource Include="Resources\Images\GettingStarted%403x.png" />
+    <BundleResource Include="Resources\Images\Grouping%402x.png" />
+    <BundleResource Include="Resources\Images\Grouping%403x.png" />
+    <BundleResource Include="Resources\Images\IncrementalLoading%402x.png" />
+    <BundleResource Include="Resources\Images\IncrementalLoading%403x.png" />
+    <BundleResource Include="Resources\Images\LoadMore%402x.png" />
+    <BundleResource Include="Resources\Images\LoadMore%403x.png" />
+    <BundleResource Include="Resources\Images\Paging%402x.png" />
+    <BundleResource Include="Resources\Images\Paging%403x.png" />
+    <BundleResource Include="Resources\Images\PullToRefresh%402x.png" />
+    <BundleResource Include="Resources\Images\PullToRefresh%403x.png" />
+    <BundleResource Include="Resources\Images\RealTimeUpdates%402x.png" />
+    <BundleResource Include="Resources\Images\RealTimeUpdates%403x.png" />
+    <BundleResource Include="Resources\Images\Selection%402x.png" />
+    <BundleResource Include="Resources\Images\Selection%403x.png" />
+    <BundleResource Include="Resources\Images\Sorting%402x.png" />
+    <BundleResource Include="Resources\Images\Sorting%403x.png" />
+    <BundleResource Include="Resources\Images\Style%402x.png" />
+    <BundleResource Include="Resources\Images\Style%403x.png" />
+    <BundleResource Include="Resources\Images\Swiping%402x.png" />
+    <BundleResource Include="Resources\Images\Swiping%403x.png" />
+    <BundleResource Include="Resources\Images\Unbound%402x.png" />
+    <BundleResource Include="Resources\Images\Unbound%403x.png" />
+    <BundleResource Include="Resources\Images\pdf\barcode%402x.png" />
+    <BundleResource Include="Resources\Images\pdf\barcode%403x.png" />
+    <BundleResource Include="Resources\Images\pdf\booklet%402x.png" />
+    <BundleResource Include="Resources\Images\pdf\booklet%403x.png" />
+    <BundleResource Include="Resources\Images\pdf\gettingstarted%402x.png" />
+    <BundleResource Include="Resources\Images\pdf\gettingstarted%403x.png" />
+    <BundleResource Include="Resources\Images\pdf\stamp%402x.png" />
+    <BundleResource Include="Resources\Images\pdf\stamp%403x.png" />
+    <BundleResource Include="Resources\Images\pdf\table%402x.png" />
+    <BundleResource Include="Resources\Images\pdf\table%403x.png" />
+    <BundleResource Include="Resources\Images\pdf\DigitalSignature.png" />
+    <BundleResource Include="Resources\Images\pdf\DigitalSignature%403x.png" />
+    <BundleResource Include="Resources\Images\pdf\DigitalSignature%402x.png" />
+    <BundleResource Include="Resources\Images\pdf\rtlsupport.png" />
+    <BundleResource Include="Resources\Images\pdf\rtlsupport%403x.png" />
+    <BundleResource Include="Resources\Images\pdf\rtlsupport%402x.png" />
+    <BundleResource Include="Resources\Images\pdf\encryption%403x.png" />
+    <BundleResource Include="Resources\Images\pdf\encryption%402x.png" />
+    <BundleResource Include="Resources\Images\pdf\imageinsertion%403x.png" />
+    <BundleResource Include="Resources\Images\pdf\imageinsertion%402x.png" />
+    <BundleResource Include="Resources\Controls\PDFViewer.png" />
+    <BundleResource Include="Resources\Controls\PDFViewer%402x.png" />
+    <BundleResource Include="Resources\Controls\PDFViewer%403x.png" />
+    <BundleResource Include="Resources\Images\EditingDataGrid.png" />
+    <BundleResource Include="Resources\Images\EditingDataGrid%402x.png" />
+    <BundleResource Include="Resources\Images\EditingDataGrid%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Samples\DocIO\Templates\AdventureCycle.jpg" />
+    <EmbeddedResource Include="Samples\DocIO\Templates\BkmkDocumentPart_Template.doc" />
+    <EmbeddedResource Include="Samples\DocIO\Templates\Bookmark_Template.doc" />
+    <EmbeddedResource Include="Samples\DocIO\Templates\Excel_Template.xlsx" />
+    <EmbeddedResource Include="Samples\DocIO\Templates\Letter Formatting.docx" />
+    <EmbeddedResource Include="Samples\DocIO\Templates\ContentControlTemplate.docx" />
+    <EmbeddedResource Include="Samples\DocIO\Templates\Employees.xml" />
+    <EmbeddedResource Include="Samples\DocIO\Templates\Mountain-200.jpg" />
+    <EmbeddedResource Include="Samples\DocIO\Templates\Mountain-300.jpg" />
+    <EmbeddedResource Include="Samples\DocIO\Templates\Northwind.png" />
+    <EmbeddedResource Include="Samples\DocIO\Templates\Products.xml" />
+    <EmbeddedResource Include="Samples\DocIO\Templates\Road-550-W.jpg" />
+    <EmbeddedResource Include="Samples\DocIO\Templates\WordtoHTML.doc" />
+    <EmbeddedResource Include="Samples\DocIO\Templates\WordtoPDF.docx" />
+    <EmbeddedResource Include="Samples\DocIO\Templates\SampleImage.png" />
+    <EmbeddedResource Include="Samples\DocIO\Templates\EmployeesReportDemo.doc" />
+    <EmbeddedResource Include="Samples\DocIO\Templates\Template.doc" />
+    <EmbeddedResource Include="Samples\DocIO\Templates\Template_Letter.doc" />
+    <EmbeddedResource Include="Samples\PDF\Assets\Products.xml" />
+    <EmbeddedResource Include="Samples\PDF\Assets\Report.xml" />
+    <EmbeddedResource Include="Samples\PDF\Assets\Xamarin_bannerEdit.jpg" />
+    <EmbeddedResource Include="Samples\PDF\Assets\PDF.pfx" />
+	<EmbeddedResource Include="Samples\PDF\Assets\SignedDocument.pdf" />
+    <EmbeddedResource Include="Samples\PDF\Assets\Xamarin_JPEG.jpg" />
+    <EmbeddedResource Include="Samples\PDF\Assets\Xamarin_PNG.png" />
+    <EmbeddedResource Include="Samples\PDF\Assets\arial.ttf" />
+	<EmbeddedResource Include="Samples\PDF\Assets\NotoSerif-Black.otf" />
+    <EmbeddedResource Include="Samples\PDF\Assets\arabic.txt" />
+	<EmbeddedResource Include="Samples\PDF\Assets\InvoiceProductList.xml" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\CLRObjects.xml" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\ChartData.xlsx" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\FilterData_Color.xlsx" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\FilterData.xlsx" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\IconFilterData.xlsx" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\AdvancedFilterData.xlsx" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\ReplaceOptions.xlsx" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\ExcelToPDF.xlsx" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\ExportSales.xlsx" />
+	<EmbeddedResource Include="Samples\XlsIO\Template\ExportData.xlsx" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\ExportData.xml" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\customers.xml" />
+	<EmbeddedResource Include="Samples\XlsIO\Template\ExpenseReport.xlsx" />
+	<EmbeddedResource Include="Samples\XlsIO\Template\NorthwindTemplate.xlsx" />
+    <EmbeddedResource Include="Samples\PDFViewer\Assets\GIS Succinctly.pdf" />
+    <EmbeddedResource Include="Samples\PDFViewer\Assets\F# Succinctly.pdf" />
+    <EmbeddedResource Include="Samples\PDFViewer\Assets\Encrypted Document.pdf" />
+    <EmbeddedResource Include="Samples\PDFViewer\Assets\HTTP Succinctly.pdf" />
+    <EmbeddedResource Include="Samples\PDFViewer\Assets\JavaScript Succinctly.pdf" />
+    <EmbeddedResource Include="Resources\Images\ImageEditor\Chart.txt" />
+    <EmbeddedResource Include="Resources\Images\ImageEditor\FreeHand.txt" />
+    <EmbeddedResource Include="Resources\Images\ImageEditor\Venn.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Controls\ImageEditor%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Controls\ImageEditor%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\FileIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Controls\DataForm%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Samples\Picker\" />
+    <Folder Include="Samples\Picker\" />
+    <BundleResource Include="Resources\Controls\CircularGauge.png" />
+    <Folder Include="Resources\Images\Diagram\MindMapImages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Controls\DataForm%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ContactName1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Address.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\BirthDate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Contact0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Contact1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Contact2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Contact3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Contact4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Contact5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Contact6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Contact7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Contact8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\LabelContactName.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ContactName.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Controls\DataForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Controls\Diagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Controls\Diagram%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Controls\Diagram%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Clayton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\drilldown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\emp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\eric.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\expcoll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\FactoryFloor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\FlowChart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Hierarchical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Image0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Image10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Image11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Image12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Image13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Image14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Image15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Image16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Image17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Image18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Image19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Image20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Image21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Image22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Image23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Image24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Image25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Image26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Image27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Image28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Image29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Image30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\image43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\image50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\image51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\image53.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\image54.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\image55.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\image56.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\image57.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Image9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\images12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\images2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\images3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\images7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\images9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Jenny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\John.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Maria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\multiuser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Nodeannotation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Orgchart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Paul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Ports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Selectors.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\singleuser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\smith.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Stencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\Thomas.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Controls\ProgressBar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Controls\ProgressBar%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Controls\ProgressBar%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_BlockContact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_CallerImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_ContactInfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_DateSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_DragAndDropIllustration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_EditIllustration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_FoodCourt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_HandSymbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_InfoNotification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_Movie1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_Movie10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_Movie2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_Movie3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_Movie4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_Movie5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_Movie6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_Movie7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_Movie8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_Movie9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_MTicket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_Parking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_ResizingIllustration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_SelectSeats.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_SendMessage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_TheatrInfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\PopupLayout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\PopupLayout%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Controls\CircularGauge%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Controls\CircularGauge%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\CircularGauge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\CircularGauge%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Controls\LinearGauge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Controls\LinearGauge%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Controls\LinearGauge%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\LinearGauge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\LinearGauge%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\DigitalGauge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\DigitalGauge%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Controls\DigitalGauge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Controls\DigitalGauge%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Controls\DigitalGauge%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Controls\Popup%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\PopupImage1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\High.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Low.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Moderate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\PopupImage10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\PopupImage2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\PopupImage3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\PopupImage4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\PopupImage5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\PopupImage6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\PopupImage7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\PopupImage8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\PopupImage9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Popup_SwipeIllustration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Controls\Popup%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Controls\Popup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\Carousel\CustomSearch.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\grid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Clear_grouping_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Clear_sorting_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Grouping_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Sort_Ascending_Icons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Sort_descending_Icons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\ContextMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\CSCurve%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\CSCurve%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\CSCurve1%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\CSCurve1%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\CSOrtho%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\CSOrtho%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\CSOrtho1%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\CSOrtho1%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\CSStraight%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\CSStraight%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\CSStraight1%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Diagram\CSStraight1%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\TreeView\treeview_exe.png" />
+    <BundleResource Include="Resources\Images\TreeView\treeview_folder.png" />
+    <BundleResource Include="Resources\Images\TreeView\treeview_img0.png" />
+    <BundleResource Include="Resources\Images\TreeView\treeview_img1.png" />
+    <BundleResource Include="Resources\Images\TreeView\treeview_mp3.png" />
+    <BundleResource Include="Resources\Images\TreeView\treeview_pdf.png" />
+    <BundleResource Include="Resources\Images\TreeView\treeview_png.png" />
+    <BundleResource Include="Resources\Images\TreeView\treeview_ppt.png" />
+    <BundleResource Include="Resources\Images\TreeView\treeview_video.png" />
+    <BundleResource Include="Resources\Images\TreeView\treeview_word.png" />
+    <BundleResource Include="Resources\Images\TreeView\treeview_zip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\NotApproved.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Approved.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Confidential.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Draft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Expired.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+ </Project>

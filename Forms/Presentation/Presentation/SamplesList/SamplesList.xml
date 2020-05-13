@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Samples>
+  <Sample EnableStoragePermission="true" Title = "Getting Started" Name = "GettingStarted" Category="Types" Description ="This sample demonstrates how to create a PowerPoint presentation by adding text with simple text formatting." />
+    <Sample EnableStoragePermission="true" Title = "PPTX To Image" Name = "PPTXToImage" Category="Types" Description ="This sample demonstrates how to convert the PowerPoint slide to an image." />
+    <Sample EnableStoragePermission="true" Title = "PPTX To PDF" Name = "PPTXToPDF" Category="Types" Description ="This sample demonstrates how to convert a PowerPoint presentation to PDF." />
+    <Sample EnableStoragePermission="true" Title = "Write Protection" Name = "WriteProtection" Category="Types" Description ="This sample demonstrates how to set write protection for PowerPoint presentation." />
+    <Sample EnableStoragePermission="true" Title = "Slides" Name = "Slides" Category="Types" Description ="This sample demonstrates how to create a slide with predefined layouts, like Microsoft PowerPoint." />
+    <Sample EnableStoragePermission="true" Title = "Charts" Name = "Charts" Category="Types" Description ="This sample demonstrates how to create a pie chart in PowerPoint presentation." />
+    <Sample EnableStoragePermission="true" Title = "Tables" Name = "Tables" Category="Types" Description ="This sample demonstrates how to create a table with specified number of rows and columns in PowerPoint presentation for displaying tabular data." />
+    <Sample EnableStoragePermission="true" Title = "Images" Name = "Images" Category="Types" Description ="This sample demonstrates how to add an image in PowerPoint presentation." />
+    <Sample EnableStoragePermission="true" Title = "Comments" Name = "Comments" Category="Types" Description ="This sample demonstrates how to add comments in PowerPoint presentation for reviewing and updating feedbacks." />
+	<Sample EnableStoragePermission="true" Title = "Connectors" Name = "Connectors" Category="Types" Description ="This sample demonstrates how to insert a connectors in a PowerPoint slide." />
+  <Sample EnableStoragePermission="true" Title = "Header And Footer" Name = "HeaderFooter" Category="Types" Description ="This sample demonstrates how to insert a header and footer in a PowerPoint presentation." IsNew = "true" />
+    <Sample EnableStoragePermission="true" Title = "Create Animation" Name = "CreateAnimation" Category="Types" Description ="This sample demonstrates how to create a animation in PowerPoint presentation." />
+    <Sample EnableStoragePermission="true" Title = "Modify Animation" Name = "ModifyAnimation" Category="Types" Description ="This sample demonstrates how to modify the animation effect in PowerPoint presentation." />
+	<Sample EnableStoragePermission="true" Title = "Slide Transition" Name = "SlideTransition" Category="Types" Description ="This sample demonstrates how to create transition effects for the PowerPoint presentation slides." />
+  </Samples>

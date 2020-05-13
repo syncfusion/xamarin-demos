@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{EF56071B-E057-450F-81DB-3B19C7A4621F}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SampleBrowser.SfTabView.UWP</RootNamespace>
+    <AssemblyName>SampleBrowser.SfTabView.UWP</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.16299.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>SampleBrowser.SfTabView.UWP_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>F64F8DB2D07FB3750F262C75DBBB1BFF7254A818</PackageCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomFrameRenderer.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <Content Include="Assets\Fonts\NestedTab.ttf" />
+    <Content Include="Assets\Fonts\Segoe MDL2 Assets.ttf" />
+    <Content Include="Assets\Fonts\TabIcons.ttf" />
+    <None Include="SampleBrowser.SfTabView.UWP_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\Resources\Image\People\People_Circle23.png">
+      <Link>People_Circle23.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Clothes\Whiteshirt.jpg">
+      <Link>Whiteshirt.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Apple.jpg">
+      <Link>Apple.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Banana.jpg">
+      <Link>Banana.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Shoes\Blackshoe.jpg">
+      <Link>Blackshoe.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Blueberry.jpg">
+      <Link>Blueberry.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Strawberry.jpg">
+      <Link>Strawberry.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Shoes\Boots.jpg">
+      <Link>Boots.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Shoes\Canvas.jpg">
+      <Link>Canvas.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Furniture\Chair.jpg">
+      <Link>Chair.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Toy\Friends_Toy.jpg">
+      <Link>Friends_Toy.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Toy\Robot.jpg">
+      <Link>Robot.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Shoes\Graycanvas.jpg">
+      <Link>Graycanvas.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Furniture\TVShelf.jpg">
+      <Link>TVShelf.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Furniture\AngleSofa.jpg">
+      <Link>AngleSofa.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Shoes\Leather.jpg">
+      <Link>Leather.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Toy\Mario.jpg">
+      <Link>Mario.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Orange.jpg">
+      <Link>Orange.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Clothes\Redcoat.jpg">
+      <Link>Redcoat.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Clothes\Shirt.jpg">
+      <Link>Shirt.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Clothes\Silvercoat.jpg">
+      <Link>Silvercoat.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Furniture\GraySofa.jpg">
+      <Link>GraySofa.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Furniture\BlackSofa.jpg">
+      <Link>BlackSofa.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Toy\Train.jpg">
+      <Link>Train.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Clothes\Tshirt.jpg">
+      <Link>Tshirt.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Toy\Van.jpg">
+      <Link>Van.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Font\Sync FontIcons.ttf">
+      <Link>Sync FontIcons.ttf</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="SampleBrowser.Core">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.Core">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.DataSource">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfListView">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfTabView">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.0.12" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TabView\SampleBrowser.SfTabView.csproj">
+      <Project>{0b26c8ea-f197-4168-aba9-ef088952e356}</Project>
+      <Name>SampleBrowser.SfTabView</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-xml|ARM'">
+    <OutputPath>bin\ARM\Release-xml\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-xml|x64'">
+    <OutputPath>bin\x64\Release-xml\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-xml|x86'">
+    <OutputPath>bin\x86\Release-xml\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+</Project>

@@ -1,0 +1,98 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+  </PropertyGroup>
+ 
+  <ItemGroup>
+    <Compile Remove="MainPage.xaml.cs" />
+    <Compile Remove="Samples\ParallaxView\ParallaxView.xaml.cs" />
+     <Compile Remove="Samples\ParallaxView\ParallaxViewPage.xaml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SampleBrowser.Core" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.SfParallaxView" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRotator" Version="18.1.0.52" />
+    <PackageReference Include="System.ComponentModel" Version="4.3.0" />
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
+  </ItemGroup>
+
+ 
+  <ItemGroup>
+    <Folder Include="SamplesList\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="SamplesList\SamplesList.xml" />
+    <EmbeddedResource Remove="MainPage.xaml" />
+    <Compile Include="Samples\ParallaxView\ParallaxView.xaml.cs">
+      <DependentUpon>Samples\ParallaxView\ParallaxView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="SamplesList\SamplesList.xml" />
+    <None Remove="Images\ParallaxGuitar1.png" />
+    <None Remove="Images\ParallaxGuitar10.png" />
+    <None Remove="Images\ParallaxGuitar11.png" />
+    <None Remove="Images\ParallaxGuitar12.png" />
+    <None Remove="Images\ParallaxGuitar2.png" />
+    <None Remove="Images\ParallaxGuitar3.png" />
+    <None Remove="Images\ParallaxGuitar4.png" />
+    <None Remove="Images\ParallaxGuitar5.png" />
+    <None Remove="Images\ParallaxGuitar6.png" />
+    <None Remove="Images\ParallaxGuitar7.png" />
+    <None Remove="Images\ParallaxGuitar8.png" />
+    <None Remove="Images\ParallaxGuitar9.png" />
+    <None Remove="Images\ParallaxWallpaper.png" />
+    <None Remove="Images\pxbuilding.png" />
+    <None Remove="Images\pxcloudy.png" />
+    <None Remove="Images\pxfog.png" />
+    <None Remove="Images\pxloadMore.png" />
+    <None Remove="Images\pxrainy.png" />
+    <None Remove="Images\pxcloud.jpeg" />
+    <None Remove="Images\weather_1.png" />
+    <None Remove="Images\weather_3.png" />
+    <None Remove="Images\weather_4.png" />
+    <None Remove="Images\weather_5.png" />
+    <None Remove="Images\weather5.png" />
+    <None Remove="Images\weather4.png" />
+    <None Remove="Images\weather_2.png" />
+    <None Remove="Images\weather_6.png" />
+    <None Remove="Images\weather_7.png" />
+    <None Remove="Images\pxcloud.png" />
+    <None Remove="Images\pxcloudnew.png" />
+    <None Remove="Images\ParallaxGuitar0.png" />
+    <None Remove="Images\weather_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SamplesList\SamplesList.xml" />
+  </ItemGroup>  <ItemGroup>
+    <None Include="Samples\ParallaxView\ParallaxView.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Samples\ParallaxView\ParallaxView.xaml" />
+  </ItemGroup>
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+  <PropertyGroup>
+    <PrepareResourceNamesDependsOn>
+      IncludeFilesInDroid;
+      $(PrepareResourceNamesDependsOn)
+    </PrepareResourceNamesDependsOn>
+  </PropertyGroup>
+  <Target Name="IncludeFilesInDroid">
+    <Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(DroidFiles)\%(RecursiveDir)" />
+    <Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(iOSFiles)\%(RecursiveDir)" />
+    <Copy SourceFiles="@(SourceResourceFiles)" DestinationFolder="%(UWPFiles)\%(RecursiveDir)" />
+  </Target>
+</Project>

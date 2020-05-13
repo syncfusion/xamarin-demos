@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Grid VerticalOptions="Center" HeightRequest="40" xmlns="http://xamarin.com/schemas/2014/forms"
+      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+      xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+      x:Class="SampleBrowser.SfPicker.Itemview">
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="40" />
+        <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <Image Source="{Binding Flag}" Margin="8,0,0,0" VerticalOptions="Center" />
+    <Label Text="{Binding Name}" Grid.Column="1" HeightRequest="30" VerticalOptions="Center" />
+</Grid>

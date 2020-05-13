@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView x:Class="SampleBrowser.SfBadgeView.Customization" 
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                  xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:samplelocal="clr-namespace:SampleBrowser.SfBadgeView"
+                  xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+                  xmlns:chip="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+                  xmlns:TextInputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+                  xmlns:badge="clr-namespace:Syncfusion.XForms.BadgeView;assembly=Syncfusion.SfBadgeView.XForms">
+    <local:SampleView.BindingContext>
+        <samplelocal:CustomizationViewModel x:Name="viewModel"/>
+    </local:SampleView.BindingContext>
+
+    <local:SampleView.Resources>
+        <ResourceDictionary>
+            <samplelocal:ColorToChipConverter x:Key="ColorsToChips"/>
+        </ResourceDictionary>
+    </local:SampleView.Resources>
+    <local:SampleView.Content>
+        <ScrollView>
+            <Grid Padding="5" BackgroundColor="White" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.4*" />
+                    <RowDefinition Height="0.6*" />
+                </Grid.RowDefinitions>
+                <border:SfBorder CornerRadius="10"  BorderColor="#999999" Margin="10" x:Name="badgeIconCard">
+
+                    <Grid Padding="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition>
+                                <ColumnDefinition.Width>
+                                    <OnPlatform x:TypeArguments="GridLength">
+                                        <On Platform="UWP">
+                                            <OnIdiom x:TypeArguments="GridLength" Desktop="325" Tablet="300" Phone="*" />
+                                        </On>
+                                        <On Platform="Android">
+                                            <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="*" />
+                                        </On>
+                                        <On Platform="iOS">
+                                            <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="*" />
+                                        </On>
+                                    </OnPlatform>
+                                </ColumnDefinition.Width>
+                            </ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <badge:SfBadgeView BackgroundColor="White" HorizontalOptions="Center" x:Name="badge2" VerticalOptions="Center">
+                            <badge:SfBadgeView.Content>
+                                <Image Source="People_Circle8.png" HeightRequest="70" WidthRequest="70" HorizontalOptions="Center" VerticalOptions="Center" />
+                            </badge:SfBadgeView.Content>
+                            <badge:SfBadgeView.BadgeSettings>
+                                <badge:BadgeSetting Offset="-10,-10" Stroke="White" StrokeWidth="2" BadgePosition="BottomRight" BadgeIcon="{Binding BadgeIcon}" BadgeAnimation="{Binding BadgeAnimation}" />
+                            </badge:SfBadgeView.BadgeSettings>
+                        </badge:SfBadgeView>
+
+                        <Grid  x:Name="textBadgeIconGrid" Grid.Row="1" VerticalOptions="StartAndExpand" 
+                                                       HorizontalOptions="StartAndExpand" IsVisible="False" >
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.5*"/>
+                                <ColumnDefinition Width="0.5*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label FontSize="Micro" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" Text="Badge Icon"></Label>
+
+                            <Picker WidthRequest="160" Grid.Column="1" HorizontalOptions="StartAndExpand" x:Name="badgeIconPicker" VerticalOptions="CenterAndExpand"  SelectedIndex="0"
+                                SelectedIndexChanged="Picker1_SelectedIndexChanged" FontSize="Small" Margin="0,0,5,0">
+                                <Picker.Items>
+                                    <x:String>None</x:String>
+                                    <x:String>Busy</x:String>
+                                    <x:String>Add</x:String>
+                                    <x:String>Available</x:String>
+                                    <x:String>Prohibit1</x:String>
+                                    <x:String>Prohibit2</x:String>
+                                    <x:String>Away</x:String>
+                                    <x:String>Delete</x:String>
+                                    <x:String>Dot</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                        </Grid>
+
+                        <TextInputLayout:SfTextInputLayout x:Name="textBadgeIcon" Grid.Row="1" VerticalOptions="CenterAndExpand"
+                                                       HorizontalOptions="CenterAndExpand" Margin="3,0,3,0"
+                                                           ContainerType="Outlined"
+                        Hint="Badge icon">
+                            <Picker x:Name="badgeIcon" VerticalOptions="CenterAndExpand" Opacity="0" 
+                                SelectedIndexChanged="Picker1_SelectedIndexChanged" FontSize="Small">
+                                <Picker.Items>
+                                    <x:String>None</x:String>
+                                    <x:String>Busy</x:String>
+                                    <x:String>Add</x:String>
+                                    <x:String>Available</x:String>
+                                    <x:String>Prohibit1</x:String>
+                                    <x:String>Prohibit2</x:String>
+                                    <x:String>Away</x:String>
+                                    <x:String>Delete</x:String>
+                                    <x:String>Dot</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                        </TextInputLayout:SfTextInputLayout>
+                    </Grid>
+                </border:SfBorder>
+
+                <border:SfBorder CornerRadius="10" Grid.Row="1" BorderColor="#999999"  Margin="10" x:Name="badgeTypeCard">
+                    <Grid Padding="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition>
+                                <ColumnDefinition.Width>
+                                    <OnPlatform x:TypeArguments="GridLength">
+                                        <On Platform="UWP">
+                                            <OnIdiom x:TypeArguments="GridLength" Desktop="160" Tablet="140" Phone="*" />
+                                        </On>
+                                        <On Platform="Android">
+                                            <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="*" />
+                                        </On>
+                                        <On Platform="iOS">
+                                            <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="*" />
+                                        </On>
+                                    </OnPlatform>
+                                </ColumnDefinition.Width>
+                            </ColumnDefinition>
+                            <ColumnDefinition>
+                                <ColumnDefinition.Width>
+                                    <OnPlatform x:TypeArguments="GridLength">
+                                        <On Platform="UWP">
+                                            <OnIdiom x:TypeArguments="GridLength" Desktop="160" Tablet="140" Phone="*" />
+                                        </On>
+                                        <On Platform="Android">
+                                            <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="*" />
+                                        </On>
+                                        <On Platform="iOS">
+                                            <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="*" />
+                                        </On>
+                                    </OnPlatform>
+                                </ColumnDefinition.Width>
+                            </ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <badge:SfBadgeView BackgroundColor="White" HorizontalOptions="Center" x:Name="badge" BadgeText="99+" Margin="0,-20,0,0" VerticalOptions="Center">
+                            <badge:SfBadgeView.Content>
+                                <Image Source="WhatsappFill.png" HeightRequest="70" WidthRequest="70" HorizontalOptions="Center" VerticalOptions="Center" />
+                            </badge:SfBadgeView.Content>
+                            <badge:SfBadgeView.BadgeSettings>
+                                <badge:BadgeSetting BadgeType="{Binding BadgeType}" Offset="-2,0" BadgePosition="TopRight" BackgroundColor="{Binding BackgroundColor}" />
+                            </badge:SfBadgeView.BadgeSettings>
+                        </badge:SfBadgeView>
+                        <badge:SfBadgeView Grid.Column="1" BackgroundColor="White" HorizontalOptions="Center" x:Name="badge1" BadgeText="10" Margin="0,-20,0,0" VerticalOptions="Center">
+                            <badge:SfBadgeView.Content>
+                                <Image Source="FacebookCurve.png" HeightRequest="70" WidthRequest="70" HorizontalOptions="Center" VerticalOptions="Center" />
+                            </badge:SfBadgeView.Content>
+                            <badge:SfBadgeView.BadgeSettings>
+                                <badge:BadgeSetting BadgeType="{Binding BadgeType}" BadgeAnimation="Scale" Offset="-2,0" BadgePosition="TopRight" BackgroundColor="{Binding BackgroundColor}" />
+                            </badge:SfBadgeView.BadgeSettings>
+                        </badge:SfBadgeView>
+                        <Grid x:Name="parentGrid" Margin="0,-30,0,0" Grid.ColumnSpan="2" Grid.Row="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.3*"/>
+                                <RowDefinition Height="0.7*" />
+                            </Grid.RowDefinitions>
+
+
+                            <Grid  x:Name="textBadgeTypeGrid" Grid.Row="0" Grid.RowSpan="2" VerticalOptions="StartAndExpand"
+                                     HorizontalOptions="StartAndExpand" IsVisible="False">
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.5*"/>
+                                    <ColumnDefinition Width="0.5*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Column="0" FontSize="Micro" VerticalOptions="Center" HorizontalOptions="Center" Text="Badge Type"></Label>
+
+                                <Picker WidthRequest="160" Grid.Column="1" HorizontalOptions="StartAndExpand"
+                                        Margin="0,0,5,0"
+                                        x:Name="badgeTypePicker" FontSize="Small" VerticalOptions="CenterAndExpand"  
+                                    SelectedIndexChanged="Picker2_SelectedIndexChanged" SelectedIndex="0">
+                                    <Picker.Items>
+                                        <x:String>Primary</x:String>
+                                        <x:String>Secondary</x:String>
+                                        <x:String>Light</x:String>
+                                        <x:String>Dark</x:String>
+                                        <x:String>Success</x:String>
+                                        <x:String>Warning</x:String>
+                                        <x:String>Error</x:String>
+                                        <x:String>Info</x:String>
+                                        <x:String>None</x:String>
+                                    </Picker.Items>
+                                </Picker>
+                            </Grid>
+
+
+                            <TextInputLayout:SfTextInputLayout x:Name="textBadgeType" Grid.Row="0" Grid.RowSpan="2" 
+                                                               Margin="3,0,3,0"
+                                                               VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" ContainerType="Outlined"
+                                       Hint="Badge type">
+
+                                <Picker x:Name="badgeType" FontSize="Small" VerticalOptions="CenterAndExpand" Opacity="0" SelectedIndexChanged="Picker2_SelectedIndexChanged">
+                                    <Picker.Items>
+                                        <x:String>Primary</x:String>
+                                        <x:String>Secondary</x:String>
+                                        <x:String>Light</x:String>
+                                        <x:String>Dark</x:String>
+                                        <x:String>Success</x:String>
+                                        <x:String>Warning</x:String>
+                                        <x:String>Error</x:String>
+                                        <x:String>Info</x:String>
+                                        <x:String>None</x:String>
+                                    </Picker.Items>
+                                </Picker>
+                            </TextInputLayout:SfTextInputLayout>
+                            <Grid Grid.RowSpan="2" Grid.Row="1" Margin="0,5,0,0" VerticalOptions="CenterAndExpand" x:Name="backgroundGrid">
+                                <chip:SfChipGroup x:Name="TextColorSegment"
+                                Type="Choice" ChipBorderWidth="1" HorizontalOptions="Center" VerticalOptions="Center"
+				                ItemsSource="{Binding Colors, Converter={StaticResource ColorsToChips}}">
+                                </chip:SfChipGroup>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </border:SfBorder>
+
+            </Grid>
+        </ScrollView>
+    </local:SampleView.Content>
+</local:SampleView>

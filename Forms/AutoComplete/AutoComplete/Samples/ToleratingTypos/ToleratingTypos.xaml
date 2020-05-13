@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+     xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms"
+     xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+     xmlns:icon="clr-namespace:SampleBrowser.SfAutoComplete"
+    x:Class="SampleBrowser.SfAutoComplete.ToleratingTypos">
+     <local:SampleView.Resources>
+        <ResourceDictionary>
+            <icon:AutoCompleteImageConverter x:Key="AutoCompleteImageConverter" />
+        </ResourceDictionary>
+    </local:SampleView.Resources>
+      <Grid>
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Label VerticalOptions="Center" TextColor="Black" Text="Search by Country" FontSize="18" />
+                </Grid>
+                <autocomplete:SfAutoComplete x:Name="autoComplete" FilteredItems="{Binding FilteredCollection,Mode=TwoWay}" Grid.Row="1" MaximumDropDownHeight="150" DataSource="{Binding Source}" SelectedItem="{Binding SelectedItem,Mode=TwoWay}" SuggestionMode="Custom" DropDownItemHeight="45"  Watermark="Search Here" HeightRequest="45">
+                    <autocomplete:SfAutoComplete.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <StackLayout Margin="5" Orientation="Horizontal" VerticalOptions="Center">
+                                    <Label Margin="10,0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontFamily="icon.ttf#icon" FontSize="18">
+                                       <Label.FontFamily>
+                                      <OnPlatform x:TypeArguments="x:String" iOS="icon" Android="icon.ttf#icon" WinPhone="Segoe MDL2 Assets" />
+                                    </Label.FontFamily>
+                                       <Label.Text>
+                                           <OnPlatform x:TypeArguments="x:String" iOS="A" Android="A" WinPhone="&#xe11a;"  />
+                                       </Label.Text>
+                                    </Label>
+                                    <Label Text="{Binding}" TextColor="Black" VerticalOptions="Center" FontSize="18" />
+                                </StackLayout>
+                            </Grid>
+                        </DataTemplate>
+                    </autocomplete:SfAutoComplete.ItemTemplate>
+                </autocomplete:SfAutoComplete>
+                <StackLayout Grid.Row="2">
+                    <Label Margin="0,20,0,5" Text="Search Results" FontSize="18" />
+                    <ListView x:Name="listView" RowHeight="60" ItemsSource="{Binding ListSource}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Margin="5" Source="{Binding Image,Converter={StaticResource AutoCompleteImageConverter}}" />
+                                        <StackLayout Margin="2" Orientation="Vertical">
+                                            <Label Text="{Binding Text}" TextColor="Black" FontSize="15" VerticalOptions="Center" />
+                                            <Label Text="{Binding Count}" FontSize="12" VerticalOptions="Center" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </Grid>
+        </Grid>
+</local:SampleView>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\QLPreviewItemFileSystem.cs">
+	<Link>Presentation\QLPreviewItemFileSystem.cs</Link>
+	</Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\SaveIOS.cs">
+	<Link>Presentation\SaveIOS.cs</Link>
+	</Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\PreviewControllerDS.cs">
+	<Link>Presentation\PreviewControllerDS.cs</Link>
+	</Compile>
+  </ItemGroup> 
+</Project>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Samples>
+  <Sample Name = "CircularGaugeSample" Title = "Circular Gauge" SearchTags="NeedlePointer,GaugeShowCase" IsThemesSample="true"
+          Description ="Circular Gauge control visualizes the numerical values of scales in a circular manner. In this sample, a scale with needle pointer has been used."/>
+  <Sample Name = "CustomizationSample" Title = "Customization" SearchTags="CustomizeNeedle,CustomizeRangePointer"
+          Description ="This sample shows how to customize gauge elements. Here a needle and range pointer are added to show the current value and its appearance can be customized by using options in property setting"/>
+  <Sample Name = "DirectionCompass" Title = "Direction Compass" SearchTags="Compass,Ambit"
+          Description ="A Direction compass has been depicted by adding needles and by customizing the labels to show the direction."/>
+  <Sample Name = "GradientRange" Title = "Gradient Range" SearchTags="Gradient color, Smooth color, Gradient range"
+          Description ="This samples shows how to apply smooth color transition to range by specifying the different color based on range value."  />
+  <Sample Name = "Pointers" Title = "Pointer Customization" SearchTags="Marker,Image,Needle,Triangle"
+          Description ="This sample shows how to customize the pointer for scale in the circular gauge. Gauge supports different types of pointers like marker, image, needle, range pointer."/>
+  <!--<Sample Name = "CircularGaugeLiveUpdate" Title = "Live Update" Icon = "LiveUpdate.png" 
+          Description ="Pointer values in the gauge can be updated dynamically" />-->
+  <Sample Name = "MultipleScales" Title = "Multiple Scales" SearchTags="NumerousScales,MultifariousScales,CustomizePointers"
+          Description ="This sample shows how to render and configure multipe scales in gauge. Use scale collection to render multiple scales in gauge. Each scale can be customized with its own pointer."/>
+  <Sample Name = "CircularGaugeAnnotation" Title = "Annotation" SearchTags="Watch,Clock,Minutes,Seconds,Timer"
+          Description ="Annotations are used to mark the specific area of interest in gauge with texts, shapes or images. In this sample minutes and seconds sub gauges are achieved using annotation feature."/>
+</Samples>

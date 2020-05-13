@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{50114A8D-45DB-4EEE-A8EA-4F5670560087}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SampleBrowser.SfListView.UWP</RootNamespace>
+    <AssemblyName>SampleBrowser.SfListView.UWP</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.16299.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>15</MinimumVisualStudioVersion>
+    <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>SampleBrowser.SfListView.UWP_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>A5803F9475A4AAF31DF786AAD6A194ACD160B9AE</PackageCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-xml|ARM'">
+    <OutputPath>bin\ARM\Release-xml\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-xml|x64'">
+    <OutputPath>bin\x64\Release-xml\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\AnyCPU\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-xml|x86'">
+    <OutputPath>bin\x86\Release-xml\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTemplateRenderer\IncomingCustomContentViewRenderer.cs" />
+    <Compile Include="DataTemplateRenderer\OutgoingCustomContentViewRenderer.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\Resources\Image\Animals\BrownCat.jpg">
+      <Link>BrownCat.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Animals\Dog.jpg">
+      <Link>Dog.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Animals\Horse.jpg">
+      <Link>Horse.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Book\Book0.png">
+      <Link>Book0.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Book\Book1.png">
+      <Link>Book1.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Book\Book10.png">
+      <Link>Book10.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Book\Book11.png">
+      <Link>Book11.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Book\Book12.png">
+      <Link>Book12.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Book\Book13.png">
+      <Link>Book13.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Book\Book14.png">
+      <Link>Book14.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Book\Book15.png">
+      <Link>Book15.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Book\Book16.png">
+      <Link>Book16.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Book\Book17.png">
+      <Link>Book17.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Book\Book18.png">
+      <Link>Book18.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Book\Book19.png">
+      <Link>Book19.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Book\Book2.png">
+      <Link>Book2.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Book\Book3.png">
+      <Link>Book3.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Book\Book4.png">
+      <Link>Book4.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Book\Book5.png">
+      <Link>Book5.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Book\Book6.png">
+      <Link>Book6.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Book\Book7.png">
+      <Link>Book7.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Book\Book8.png">
+      <Link>Book8.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Book\Book9.png">
+      <Link>Book9.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Book\Novels.jpg">
+      <Link>Novels.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Food\Chocolate.jpg">
+      <Link>Chocolate.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Food\FlowerGiftCakes.jpg">
+      <Link>FlowerGiftCakes.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Food\Food.jpg">
+      <Link>Food.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Food\Pizza0.jpg">
+      <Link>Pizza0.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Food\Pizza1.jpg">
+      <Link>Pizza1.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Food\Pizza10.jpg">
+      <Link>Pizza10.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Food\Pizza11.jpg">
+      <Link>Pizza11.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Food\Pizza12.jpg">
+      <Link>Pizza12.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Food\Pizza13.jpg">
+      <Link>Pizza13.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Food\Pizza14.jpg">
+      <Link>Pizza14.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Food\Pizza15.jpg">
+      <Link>Pizza15.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Food\Pizza16.jpg">
+      <Link>Pizza16.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Food\Pizza17.jpg">
+      <Link>Pizza17.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Food\Pizza2.jpg">
+      <Link>Pizza2.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Food\Pizza3.jpg">
+      <Link>Pizza3.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Food\Pizza4.jpg">
+      <Link>Pizza4.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Food\Pizza5.jpg">
+      <Link>Pizza5.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Food\Pizza6.jpg">
+      <Link>Pizza6.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Food\Pizza7.jpg">
+      <Link>Pizza7.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Food\Pizza8.jpg">
+      <Link>Pizza8.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Food\Pizza9.jpg">
+      <Link>Pizza9.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Food\Spices1.jpg">
+      <Link>Spices1.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Food\Spices2.jpg">
+      <Link>Spices2.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Apple.jpg">
+      <Link>Apple.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Apricot.jpg">
+      <Link>Apricot.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Avacado.jpg">
+      <Link>Avacado.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Banana.jpg">
+      <Link>Banana.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Blueberry.jpg">
+      <Link>Blueberry.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Cherry.jpg">
+      <Link>Cherry.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Dragon.jpg">
+      <Link>Dragon.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Grapes.jpg">
+      <Link>Grapes.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\GreenApple.jpg">
+      <Link>GreenApple.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Guava.jpg">
+      <Link>Guava.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Jackfruit.jpg">
+      <Link>Jackfruit.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Kiwi.jpg">
+      <Link>Kiwi.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Lemon.jpg">
+      <Link>Lemon.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Lime.jpg">
+      <Link>Lime.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Mango.jpg">
+      <Link>Mango.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Orange.jpg">
+      <Link>Orange.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Papaya.jpg">
+      <Link>Papaya.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Peach.jpg">
+      <Link>Peach.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Pineapple.jpg">
+      <Link>Pineapple.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Pomegranate.jpg">
+      <Link>Pomegranate.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Raspberry.jpg">
+      <Link>Raspberry.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Strawberry.jpg">
+      <Link>Strawberry.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Fruit\Watermelon.jpg">
+      <Link>Watermelon.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Furniture\DiningTable.jpg">
+      <Link>DiningTable.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Icons\SortIcon.png">
+      <Link>SortIcon.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Icons\Sort_Ascending.png">
+      <Link>Sort_Ascending.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Icons\Sort_Decending.png">
+      <Link>Sort_Decending.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Music\BrownGuitar.jpg">
+      <Link>BrownGuitar.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Music\Guitar.jpg">
+      <Link>Guitar.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Music\Listeningmusic.jpg">
+      <Link>Listeningmusic.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Music\Radio.jpg">
+      <Link>Radio.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Music\Violin.jpg">
+      <Link>Violin.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Others\Bell.jpg">
+      <Link>Bell.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Others\Calculation.jpg">
+      <Link>Calculation.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Others\Cameras.png">
+      <Link>Cameras.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Others\City.jpg">
+      <Link>City.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Others\CollegeGirl.jpg">
+      <Link>CollegeGirl.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Others\DadSon.jpg">
+      <Link>DadSon.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Others\Electronics.jpg">
+      <Link>Electronics.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Others\Friends.jpg">
+      <Link>Friends.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Others\Hight.jpg">
+      <Link>Hight.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Others\IdealHouse.jpg">
+      <Link>IdealHouse.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Others\Jewellery.jpg">
+      <Link>Jewellery.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Others\Kids.jpg">
+      <Link>Kids.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Others\Ladybug.jpg">
+      <Link>Ladybug.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Others\Mobile.jpg">
+      <Link>Mobile.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Others\Money.jpg">
+      <Link>Money.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Others\NaughtyBoy.jpg">
+      <Link>NaughtyBoy.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Others\Openbook.jpg">
+      <Link>Openbook.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Others\Peacock.jpg">
+      <Link>Peacock.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Others\Perfumes.jpg">
+      <Link>Perfumes.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Others\Playing.jpg">
+      <Link>Playing.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Others\Shopping.jpg">
+      <Link>Shopping.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\People\People_Circle0.png">
+      <Link>People_Circle0.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\People\People_Circle1.png">
+      <Link>People_Circle1.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\People\People_Circle10.png">
+      <Link>People_Circle10.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\People\People_Circle11.png">
+      <Link>People_Circle11.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\People\People_Circle12.png">
+      <Link>People_Circle12.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\People\People_Circle13.png">
+      <Link>People_Circle13.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\People\People_Circle14.png">
+      <Link>People_Circle14.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\People\People_Circle15.png">
+      <Link>People_Circle15.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\People\People_Circle16.png">
+      <Link>People_Circle16.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\People\People_Circle17.png">
+      <Link>People_Circle17.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\People\People_Circle18.png">
+      <Link>People_Circle18.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\People\People_Circle19.png">
+      <Link>People_Circle19.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\People\People_Circle2.png">
+      <Link>People_Circle2.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\People\People_Circle3.png">
+      <Link>People_Circle3.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\People\People_Circle4.png">
+      <Link>People_Circle4.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\People\People_Circle5.png">
+      <Link>People_Circle5.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\People\People_Circle6.png">
+      <Link>People_Circle6.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\People\People_Circle7.png">
+      <Link>People_Circle7.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\People\People_Circle8.png">
+      <Link>People_Circle8.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\People\People_Circle9.png">
+      <Link>People_Circle9.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Shapes\SkyBlue.png">
+      <Link>SkyBlue.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Shoes\Graycanvas.jpg">
+      <Link>Graycanvas.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Social network\FacebookLine.png">
+      <Link>FacebookLine.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Social network\GooglePlusLine.png">
+      <Link>GooglePlusLine.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Social network\LinkedInLine.png">
+      <Link>LinkedInLine.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Social network\TwitterLine.png">
+      <Link>TwitterLine.png</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Sport\Sports.jpg">
+      <Link>Sports.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Sport\Sports_Health.jpg">
+      <Link>Sports_Health.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Toy\Car.jpg">
+      <Link>Car.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Toy\Minitoys.jpg">
+      <Link>Minitoys.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Toy\Toys.jpg">
+      <Link>Toys.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Toy\Train.jpg">
+      <Link>Train.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Toy\Van.jpg">
+      <Link>Van.jpg</Link>
+    </Content>
+    <Content Include="..\..\Resources\Image\Toy\Watches.jpg">
+      <Link>Watches.jpg</Link>
+    </Content>
+    <Content Include="ListAutofitItems.png" />
+    <Content Include="ListDataTemplateSelector.png" />
+    <Content Include="ListFiltering.png" />
+    <Content Include="ListGettingStarted.png" />
+    <Content Include="ListGridLayout.png" />
+    <Content Include="ListGrouping.png" />
+    <Content Include="ListItemReordering.png" />
+    <Content Include="ListLoadMore.png" />
+    <Content Include="ListOrientation.png" />
+    <Content Include="ListPaging.png" />
+    <Content Include="ListPullToRefresh.png" />
+    <Content Include="ListSelection.png" />
+    <Content Include="ListSwiping.png" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\UIFontIcons.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Syncfusion.Xamarin.Buttons">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="SampleBrowser.Core">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.Core">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.DataSource">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfDataGrid">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfListView">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfPullToRefresh">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfComboBox">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.0.12" />
+    <PackageReference Include="Xamarin.Forms">
+      <Version>3.6.0.344457</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ListView\SampleBrowser.SfListView.csproj">
+      <Project>{5b92368b-7e6c-49d9-bfa2-f5b0a60e3fc9}</Project>
+      <Name>SampleBrowser.SfListView</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\Resources\Font\Sync FontIcons.ttf">
+      <Link>Sync FontIcons.ttf</Link>
+    </Content>
+    <Content Include="..\..\Resources\Font\SB Icons.ttf">
+      <Link>SB Icons.ttf</Link>
+    </Content>
+    <None Include="SampleBrowser.SfListView.UWP_TemporaryKey.pfx" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '15.0' ">
+    <VisualStudioVersion>15.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+</Project>

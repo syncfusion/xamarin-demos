@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Configurations>Debug;Release;Release-xml</Configurations>
+	<AssemblyName>SampleBrowser.PDF</AssemblyName>
+	<RootNamespace>SampleBrowser.PDF</RootNamespace>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="SampleBrowser.PDF.nuspec" />
+    <None Remove="SampleBrowser.PDF.props" />
+    <None Remove="SamplesList\SamplesList.xml" />
+  </ItemGroup>
+
+  <ItemGroup>    
+    <PackageReference Include="SampleBrowser.Core" Version="18.1.0.52" />    
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="18.1.0.52" />
+	<PackageReference Include="Syncfusion.Xamarin.Compression" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.Pdf" Version="18.1.0.52" />	
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="18.1.0.52" />
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SamplesList\SamplesList.xml" />
+    <EmbeddedResource Include="Samples\Assets\AdventureCycle.jpg" />
+    <EmbeddedResource Include="Samples\Assets\arabic.txt" />
+    <EmbeddedResource Include="Samples\Assets\arial.ttf" />
+    <EmbeddedResource Include="Samples\Assets\InvoiceProductList.xml" />
+	<EmbeddedResource Include="Samples\Assets\NotoSerif-Black.otf" />
+    <EmbeddedResource Include="Samples\Assets\FormFillingDocument.pdf" />
+    <EmbeddedResource Include="Samples\Assets\JavaScript Succinctly.pdf" />
+    <EmbeddedResource Include="Samples\Assets\PDF.pfx" />
+	<EmbeddedResource Include="Samples\Assets\SignedDocument.pdf" />
+    <EmbeddedResource Include="Samples\Assets\Product Catalog.pdf" />
+    <EmbeddedResource Include="Samples\Assets\Products.xml" />
+    <EmbeddedResource Include="Samples\Assets\Report.xml" />
+    <EmbeddedResource Include="Samples\Assets\SalesOrderDetail.pdf" />
+    <EmbeddedResource Include="Samples\Assets\Xamarin_bannerEdit.jpg" />
+    <EmbeddedResource Include="Samples\Assets\Xamarin_JPEG.jpg" />
+    <EmbeddedResource Include="Samples\Assets\Xamarin_PNG.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Import Project="..\..\..\..\..\build\tools\Syncfusion.CodeAnalysis.StyleCop\tools\StyleCop.MsBuild.targets" Condition="Exists('..\..\..\..\..\build\tools\Syncfusion.CodeAnalysis.StyleCop\tools\StyleCop.MsBuild.targets')" />
+</Project>

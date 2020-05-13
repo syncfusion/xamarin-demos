@@ -1,0 +1,2915 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Sparkline</key>
+	<array>
+		<dict>
+			<key>SampleName</key>
+			<string>Sparkline</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>SunburstChart</key>
+	<array>
+		<dict>
+			<key>SampleName</key>
+			<string>SunburstChart</string>
+			<key>DisplayName</key>
+			<string>Getting Started</string>
+			<key>IsNew</key>
+			<string>No</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>DrillDown</string>
+			<key>DisplayName</key>
+			<string>Drill down</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>IsNew</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>SunburstSelection</string>
+			<key>DisplayName</key>
+			<string>Selection</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>IsNew</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>ImageEditor</key>
+	<array>
+		<dict>
+			<key>SampleName</key>
+			<string>ImageEditor</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Image Editor</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>Serialization</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Serialization</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>BannerTypes</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Banner Creator</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>ImageEditorCustomization</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Customization</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>ImageEditorCustomView</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>CustomView</string>
+		</dict>
+	</array>
+	<key>Kanban</key>
+	<array>
+		<dict>
+			<key>DisplayName</key>
+			<string>Getting Started</string>
+			<key>SampleName</key>
+			<string>GettingStartedKanban</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Pizza shop</string>
+			<key>SampleName</key>
+			<string>CustomizationKanban</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>ProgressBar</key>
+	<array>
+		<dict>
+			<key>DisplayName</key>
+			<string>Linear</string>
+			<key>SampleName</key>
+			<string>Linear</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Circular</string>
+			<key>SampleName</key>
+			<string>Circular</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>RangeNavigator</key>
+	<array>
+		<dict>
+			<key>DisplayName</key>
+			<string>Getting Started</string>
+			<key>SampleName</key>
+			<string>GettingStartedRangeNavigator</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Customization</string>
+			<key>SampleName</key>
+			<string>CustomizationRangeNavigator</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>PullToRefresh</key>
+	<array>
+		<dict>
+			<key>SampleName</key>
+			<string>PullToRefreshDemo</string>
+			<key>DisplayName</key>
+			<string>Weather Demo</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>UICollectionViewInPullToRefresh</string>
+			<key>DisplayName</key>
+			<string>CollectionView Refresh</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>SfDataGridInPullToRefresh</string>
+			<key>DisplayName</key>
+			<string>SfDataGrid Refresh</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>TabView</key>
+	<array>
+		<dict>
+			<key>SampleName</key>
+			<string>TabViewGettingStarted</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Getting Started</string>
+		</dict>
+	</array>
+	<key>Picker</key>
+	<array>
+		<dict>
+			<key>SampleName</key>
+			<string>PickerGettingStarted</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>Image</key>
+			<string>picker.png</string>
+		</dict>
+	</array>
+	<key>RangeSlider</key>
+	<array>
+		<dict>
+			<key>SampleName</key>
+			<string>RangeSliderGettingStarted</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>GettingStarted</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>Slider</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Slider</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>Orientation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Orientation</string>
+		</dict>
+	</array>
+	<key>RadialMenu</key>
+	<array>
+		<dict>
+			<key>SampleName</key>
+			<string>RadialMenuGettingStarted</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>GettingStarted</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>RadialMenuCustomization</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Customization</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>ContextualMenu</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>ContextualMenu</string>
+		</dict>
+	</array>
+	<key>Calendar</key>
+	<array>
+		<dict>
+			<key>Image</key>
+			<string>Images/view.png</string>
+			<key>Description</key>
+			<string>Showcases different view modes support: month and year views.</string>
+			<key>SampleName</key>
+			<string>CalendarViews</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>GettingStarted</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/inline.png</string>
+			<key>Description</key>
+			<string>Showcases the inline events in inline view mode and agenda view mode in a specific date of the month.</string>
+			<key>SampleName</key>
+			<string>CalendarInlineEvents</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>InlineEvents</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Blackoutdates.png</string>
+			<key>Description</key>
+			<string>Showcases the specific date blackout capability of calendar.</string>
+			<key>SampleName</key>
+			<string>CalendarBlackoutDates</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>BlackoutDates</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/localisation.png</string>
+			<key>Description</key>
+			<string>Showcases localization and globalization.</string>
+			<key>SampleName</key>
+			<string>CalendarLocalization</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Localization</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/custom.png</string>
+			<key>Description</key>
+			<string>Showcases the month cell customization using custom view with selection modes</string>
+			<key>SampleName</key>
+			<string>CalendarConfiguration</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Customization</string>
+		</dict>
+	</array>
+	<key>BusyIndicator</key>
+	<array>
+		<dict>
+			<key>SampleName</key>
+			<string>BusyIndicator</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>BusyIndicator</string>
+		</dict>
+	</array>
+	<key>CircularGauge</key>
+	<array>
+		<dict>
+			<key>DisplayName</key>
+			<string>Circular Gauge</string>
+			<key>SampleName</key>
+			<string>CircularGaugeSample</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Customization</string>
+			<key>SampleName</key>
+			<string>GaugeCustomization</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Direction Compass</string>
+			<key>SampleName</key>
+			<string>DirectionCompass</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Gradient Range</string>
+			<key>SampleName</key>
+			<string>GradientRange</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Pointer Customization</string>
+			<key>SampleName</key>
+			<string>Pointers</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Multiple Scales</string>
+			<key>SampleName</key>
+			<string>MultipleScales</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Annotation</string>
+			<key>SampleName</key>
+			<string>CircularGaugeAnnotation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>LinearGauge</key>
+	<array>
+		<dict>
+			<key>DisplayName</key>
+			<string>Linear Gauge</string>
+			<key>SampleName</key>
+			<string>Default</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Scales and Pointers</string>
+			<key>SampleName</key>
+			<string>ScaleandPointers</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>Ranges</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Annotation</string>
+			<key>SampleName</key>
+			<string>LinearGaugeAnnotation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>DigitalGauge</key>
+	<array>
+		<dict>
+			<key>SampleName</key>
+			<string>DigitalGauge</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>TreeMap</key>
+	<array>
+		<dict>
+			<key>SampleName</key>
+			<string>GettingStarted </string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>Hierarchical</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>DataLabel</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>Rating</key>
+	<array>
+		<dict>
+			<key>SampleName</key>
+			<string>Rating</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Rating</string>
+		</dict>
+	</array>
+	<key>Carousel</key>
+	<array>
+		<dict>
+			<key>SampleName</key>
+			<string>Carousel</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Carousel</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>LoadMoreCarousel</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Load More</string>
+		</dict>
+	</array>
+	<key>Maps</key>
+	<array>
+		<dict>
+			<key>SampleName</key>
+			<string>DataMarkers</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Getting Started</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>BubbleVisualization</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Bubble Visualization</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>ColorMapping</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Color Mapping</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>TicketBooking</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Ticket Booking</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>OSM</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>OSM</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>Sublayer</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Sublayer</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>DataLabels</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>DataLabels</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>Drilldown</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Drilldown</string>
+		</dict>
+	</array>
+	<key>Schedule</key>
+	<array>
+		<dict>
+			<key>SampleName</key>
+			<string>ScheduleGettingStarted</string>
+			<key>Description</key>
+			<string>Showcases a simple schedule with data source displayed in day, workweek, week, and month views.</string>
+			<key>DisplayName</key>
+			<string>Getting Started</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Scheduleview.png</string>
+			<key>DisplayName</key>
+			<string>Schedule Views</string>
+			<key>Description</key>
+			<string>Showcases the date navigation support with appointment editing such as start time, end time, subject, time zone, and more.</string>
+			<key>SampleName</key>
+			<string>Schedule Views</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>ScheduleRecurrence.png</string>
+			<key>Description</key>
+			<string>Showcases the recurring appointments.</string>
+			<key>SampleName</key>
+			<string>Recurrence</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>Showcases the working hours with blocking timeslots.</string>
+			<key>SampleName</key>
+			<string>Timetable</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>Image</key>
+			<string>ScheduleTimeTable.png</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>ScheduleConfiguration.png</string>
+			<key>DisplayName</key>
+			<string>Agenda View</string>
+			<key>Description</key>
+			<string>Showcases the agenda view support of schedule where specific date appointments can be viewed below the month view.</string>
+			<key>SampleName</key>
+			<string>AgendaView</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>ScheduleConfiguration.png</string>
+			<key>DisplayName</key>
+			<string>Drag and Drop</string>
+			<key>Description</key>
+			<string>Showcases the capability of rescheduling appointment through drag-and-drop operations.</string>
+			<key>SampleName</key>
+			<string>DragDrop</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>ScheduleCustomization.png</string>
+			<key>Description</key>
+			<string>Showcases the capability of appointment customization using custom view.</string>
+			<key>SampleName</key>
+			<string>Customization</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>ScheduleConfiguration.png</string>
+			<key>Description</key>
+			<string>Showcases the separation of working and non-working hours with different colors with blocking timeslots in day, week, and workweek views. It shows the blackout of a particular date and week number support in month view.</string>
+			<key>SampleName</key>
+			<string>Configuration</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>ScheduleLocaization.png</string>
+			<key>Description</key>
+			<string>Showcases the localization support of schedule.</string>
+			<key>SampleName</key>
+			<string>Localization</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>Barcode</key>
+	<array>
+		<dict>
+			<key>Image</key>
+			<string>barcodeqr.png</string>
+			<key>Description</key>
+			<string>QR Code is a two dimensional symbology that is popularly used in automotive industry.</string>
+			<key>SampleName</key>
+			<string>QRBarcode</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>barcodedata.png</string>
+			<key>Description</key>
+			<string>DataMatrix symbology is widely used in printed media such as labels and letters.</string>
+			<key>SampleName</key>
+			<string>DataMatrixBarcode</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Barcode.png</string>
+			<key>Description</key>
+			<string>Codabar is a discrete numeric symbology that is used in libraries and information processing applications.</string>
+			<key>SampleName</key>
+			<string>CodaBarBarcode</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Barcode.png</string>
+			<key>Description</key>
+			<string>Code11 Symbology is used mainly for labeling the telecommunications equipment.</string>
+			<key>SampleName</key>
+			<string>Code11Barcode</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Barcode.png</string>
+			<key>Description</key>
+			<string>Upc Barcode is mainly used for coding pharmaceuticals, cosmetics and dietetics.</string>
+			<key>SampleName</key>
+			<string>UpcBarcode</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Barcode.png</string>
+			<key>Description</key>
+			<string>Code32 is mainly used for coding pharmaceuticals, cosmetics and dietetics.
+
+</string>
+			<key>SampleName</key>
+			<string>Code32Barcode</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Barcode.png</string>
+			<key>Description</key>
+			<string>Code39 is a Symbology of Barcode that encodes alphanumeric characters into a series of bars.</string>
+			<key>SampleName</key>
+			<string>Code39Barcode</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Barcode.png</string>
+			<key>Description</key>
+			<string>Code39 Extended Symbology is an extended version of Code39 that supports full ASCII character set.</string>
+			<key>SampleName</key>
+			<string>Code39ExtendedBarcode</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Barcode.png</string>
+			<key>Description</key>
+			<string>Code93 represents the full ASCII character set by using the combination of 2 characters.</string>
+			<key>SampleName</key>
+			<string>Code93Barcode</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Barcode.png</string>
+			<key>Description</key>
+			<string>Code93 is designed to complement and improve upon Code 39.</string>
+			<key>SampleName</key>
+			<string>Code93ExtendedBarcode</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Barcode.png</string>
+			<key>Description</key>
+			<string>Code128A includes all the standard upper case alphanumeric characters, punctuation, and special characters.</string>
+			<key>SampleName</key>
+			<string>Code128ABarcode</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Barcode.png</string>
+			<key>Description</key>
+			<string>Code128B includes all the standard upper &amp; lower case alphanumeric characters, punctuation and special characters.</string>
+			<key>SampleName</key>
+			<string>Code128BBarcode</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Barcode.png</string>
+			<key>Description</key>
+			<string>Code128C includes a set of 100 digit pairs from 00 to 99 inclusive, as well as three special characters.</string>
+			<key>SampleName</key>
+			<string>Code128CBarcode</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>NumericTextBox</key>
+	<array>
+		<dict>
+			<key>SampleName</key>
+			<string>NumericTextBox</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>NumericTextBox</string>
+		</dict>
+	</array>
+	<key>AutoComplete</key>
+	<array>
+		<dict>
+			<key>Custom Property</key>
+			<string></string>
+			<key>SampleName</key>
+			<string>AutoComplete</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>AutoComplete</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>MultiSelection</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Multiple Selection</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>ToleratingTypos</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Tolerating Typos</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>Diacritics_Sense</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpadted</key>
+			<string>No</string>
+			<key>DisplayName</key>
+			<string>Diacritic Sensitivity</string>
+		</dict>
+	</array>
+	<key>NavigationDrawer</key>
+	<array>
+		<dict>
+			<key>SampleName</key>
+			<string>NavigationDrawer</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>NavigationDrawer</string>
+		</dict>
+	</array>
+	<key>Popup</key>
+	<array>
+		<dict>
+			<key>SampleName</key>
+			<string>PopupGettingStarted</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Onboard Help</string>
+			<key>Description</key>
+			<string>This sample showcases the SfPopup used as overlays to instruct the users using the app for the first time.</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>PopupCustomizations</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Popup Customization</string>
+			<key>Description</key>
+			<string>This sample showcases the various layouts of the SfPopup that comes in handy in a sleek ticket booking app.</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>DetailsView</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Popup Menu</string>
+			<key>Description</key>
+			<string>This sample showcases the relative positioning capabilitites of the SfPopup that comes in handy in a dialer application.</string>
+		</dict>
+	</array>
+	<key>DataGrid</key>
+	<array>
+		<dict>
+			<key>DisplayName</key>
+			<string>Getting Started</string>
+			<key>Image</key>
+			<string>Images/GettingStarted.png</string>
+			<key>Description</key>
+			<string>This sample showcases the SfDataGrid with ObservableCollection as the data source..</string>
+			<key>SampleName</key>
+			<string>Grid Getting Started</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Sorting.png</string>
+			<key>Description</key>
+			<string>This sample showcases the sorting capabilities of data in SfDataGrid that allows you to sort against one or more columns and also provides Tri-state sorting functionality.</string>
+			<key>SampleName</key>
+			<string>Sorting</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Filtering.png</string>
+			<key>Description</key>
+			<string>This sample showcases the filtering capabilities of data in SfDataGrid.</string>
+			<key>SampleName</key>
+			<string>Filtering</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/FrozenViews.png</string>
+			<key>Description</key>
+			<string>This sample showcases the freeze panes capability of SfDataGrid which provides support to freeze rows at the top and columns at the left.</string>
+			<key>SampleName</key>
+			<string>Frozen View</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Grouping.png</string>
+			<key>Description</key>
+			<string>This sample showcases the grouping capability of data in SfDataGrid.</string>
+			<key>SampleName</key>
+			<string>Grouping</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Selection.png</string>
+			<key>Description</key>
+			<string>This sample showcases the selection capability of SfDataGrid which provides selection mode options like Single, Multiple, SingleDeselect and None.</string>
+			<key>SampleName</key>
+			<string>Selection</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/EditingDataGrid.png</string>
+			<key>DisplayName</key>
+			<string>Editing</string>
+			<key>Description</key>
+			<string>This sample showcases the editing capabilities of SfDataGrid which provides support to edit GridTextColumn, GridNumericColumn, GridPickerColumn and GridDatTimeColumn.</string>
+			<key>SampleName</key>
+			<string>Editing</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Formating.png</string>
+			<key>Description</key>
+			<string>This sample showcases the columns capability of SfDataGrid which provides support for text and UserCellType columns.</string>
+			<key>SampleName</key>
+			<string>Formatting</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DragAndDrop.png</string>
+			<key>Description</key>
+			<string>This sample showcases the column and row drag and drop capabilities of SfDataGrid which provide user flexibility when interacting with the grid rows and grid columns.</string>
+			<key>SampleName</key>
+			<string>Drag And Drop</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/ContextMenu.png</string>
+			<key>Description</key>
+			<string>This sample showcases the ability to show a context menu using SfPopup in the SfDataGrid with options for sorting and grouping.</string>
+			<key>SampleName</key>
+			<string>ContextMenu</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+    <dict>
+      <key>DisplayName</key>
+      <string>Unbound Views</string>
+      <key>Image</key>
+      <string>Images/Unbound.png</string>
+      <key>Description</key>
+      <string>This sample showcases the unbound column and unbound row capability of SfDataGrid. Unbound columns / rows are extra columns / rows that are generated but do not belong to the data source.</string>
+      <key>SampleName</key>
+      <string>Unbound Column</string>
+      <key>IsNew</key>
+      <string>NO</string>
+      <key>IsUpdated</key>
+      <string>NO</string>
+    </dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Style.png</string>
+			<key>Description</key>
+			<string>This sample showcases the styling capabilities of SfDataGrid. Styling allows you to change the visual appearance of the SfDataGrid and its inner elements.</string>
+			<key>SampleName</key>
+			<string>Styles</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>No</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/AutoRowHeight.png</string>
+			<key>Description</key>
+			<string>This sample showcases the auto row height feature of SfDataGrid which renders grid rows based on its content to improve the readability and occurs on-demand basis.</string>
+			<key>SampleName</key>
+			<string>Auto Row Height</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/LoadMore.png</string>
+			<key>Description</key>
+			<string>This sample showcases the load more capability of SfDataGrid that allows you to load a subset of data to the bound data source using built-in UI.</string>
+			<key>SampleName</key>
+			<string>Load More</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DataGridPullToRefresh.png</string>
+			<key>Description</key>
+			<string>This sample showcases the pull-to-refresh capability of SfDataGrid which allows you to refresh the data source upon pull-to-refresh action.</string>
+			<key>SampleName</key>
+			<string>Pull To Refresh</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Paging.png</string>
+			<key>Description</key>
+			<string>This sample showcases the paging capabilities of SfDataGrid using SfDataPager which allows you to load the data from the data source in an efficient way.</string>
+			<key>SampleName</key>
+			<string>Paging</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Swiping.png</string>
+			<key>Description</key>
+			<string>This sample showcases the swiping capabilities of SfDataGrid which allow you to load swipe views and associate them with custom actions.</string>
+			<key>SampleName</key>
+			<string>Swiping</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/RealTimeUpdates.png</string>
+			<key>Description</key>
+			<string> This sample illustrates the frequent updates that occur in random cells across the Grid while keeping processor usage to a minimum in the SfDataGrid.</string>
+			<key>SampleName</key>
+			<string>Rendering Dynamic Data</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Exporting.jpg</string>
+			<key>Description</key>
+			<string>This sample showcases the excel and pdf exporting capabilities of SfDataGrid. SfDataGrid also provides you various customization options for exporting.</string>
+			<key>SampleName</key>
+			<string>Exporting</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>DataSource</key>
+	<array>
+		<dict>
+			<key>DisplayName</key>
+			<string>Getting Started</string>
+			<key>SampleName</key>
+			<string>DataSourceGettingStarted</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>DataSourceSorting</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>DataSourceGrouping</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>DataForm</key>
+	<array>
+		<dict>
+			<key>DisplayName</key>
+			<string>Getting Started</string>
+			<key>SampleName</key>
+			<string>FormGettingStarted</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Contact Form</string>
+			<key>SampleName</key>
+			<string>ContactForm</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>Chart</key>
+	<array>
+		<dict>
+			<key>Image</key>
+			<string>Images/chart/Sample.png</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>Line</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>Step Line</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>Spline</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>Column</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>Histogram</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>Bar</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>Area</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>Spline Area</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>Step Area</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>Pie</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>Semi Pie</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>Doughnut</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>Semi Doughnut</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>Pyramid</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>Funnel</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>Bubble</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>Scatter</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>Range Column</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Range bar sample is plots points in numerical axis against category.</string>
+			<key>SampleName</key>
+			<string>Range Bar</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>Range Area</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>Spline Range Area</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>Candle</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>OHLC</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>Polar</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>Radar</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+        <dict>
+            <key>Image</key>
+            <string>image2</string>
+            <key>Description</key>
+            <string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+            <key>SampleName</key>
+            <string>Stacked Line</string>
+            <key>IsNew</key>
+            <string>NO</string>
+            <key>IsUpdated</key>
+            <string>NO</string>
+        </dict>
+        <dict>
+            <key>Image</key>
+            <string>image2</string>
+            <key>Description</key>
+            <string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+            <key>SampleName</key>
+            <string>100% Stacked Line</string>
+            <key>IsNew</key>
+            <string>NO</string>
+            <key>IsUpdated</key>
+            <string>NO</string>
+        </dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>Stacked Column</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>100% Stacked Column</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>Stacked Bar</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>100% Stacked Bar</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>Stacked Area</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category Line sample is plots points in numerical axis against category, Line sample is plots points in numerical axis against category .</string>
+			<key>SampleName</key>
+			<string>100% Stacked Area</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Controls/chart/Features/Live-Updates</string>
+			<key>Description</key>
+			<string>This sample illustrates the performance of SfChart in real time update scenario</string>
+			<key>SampleName</key>
+			<string>Live Update</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>image2</string>
+			<key>Description</key>
+			<string>This sample showcases how to add trendlines to the chart. </string>
+			<key>SampleName</key>
+			<string>Trendlines</string>
+			<key>IsNew</key>
+			<string>YES</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Controls/chart/Features/Gradient</string>
+			<key>Description</key>
+			<string>This sample showcases the Gradient feature.</string>
+			<key>SampleName</key>
+			<string>GradientChart</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Gradient Color</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Controls/chart/Features/annotation</string>
+			<key>Description</key>
+			<string>Annotations used to display metadata about a chart or series at a specific point of interest in the plotting area</string>
+			<key>SampleName</key>
+			<string>ChartAnnotation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Annotation</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Controls/chart/Features/stackeddoughnut</string>
+			<key>Description</key>
+			<string>Annotations used to display metadata about a chart or series at a specific point of interest in the plotting area</string>
+			<key>SampleName</key>
+			<string>StackedDoughnut</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Stacked Doughnut</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Controls/chart/Features/axiscrossing</string>
+			<key>Description</key>
+			<string>Axis Crossing feature changes the location at which the x-axis crosses the y-axis and vice versa</string>
+			<key>SampleName</key>
+			<string>AxisCrossing</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Axis Crossing</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Controls/chart/Features/Category-Axis</string>
+			<key>Description</key>
+			<string>This sample showcases the use of category axis in chart. Category axis is an indexed based axis that plots values based on its index in the data source.</string>
+			<key>SampleName</key>
+			<string>Category Axis</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Controls/chart/Features/Datetime-Axis</string>
+			<key>Description</key>
+			<string>This sample showcases the use of date time axis</string>
+			<key>SampleName</key>
+			<string>DateTime Axis</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Controls/chart/Features/Numeric-Axis</string>
+			<key>Description</key>
+			<string>This sample showcases the use of numerical axis in chart. Numerical axis is used to plot numeric values.</string>
+			<key>SampleName</key>
+			<string>Numerical Axis</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Controls/chart/Features/Logarithmic-Axis</string>
+			<key>Description</key>
+			<string>This sample showcases the use of logarithmic axis in chart.</string>
+			<key>SampleName</key>
+			<string>Logarithmic Axis</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Controls/chart/Features/Strip-Line</string>
+			<key>Description</key>
+			<string>Strip lines are used to highlight specific range in the chart. They can be horizontal or vertical, and also be made to optionally repeat at specific intervals.</string>
+			<key>SampleName</key>
+			<string>Strip Lines</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Controls/chart/Features/Multiple-Axes</string>
+			<key>Description</key>
+			<string>This sample showcases the use of multiple axes in chart.</string>
+			<key>SampleName</key>
+			<string>Multiple Axes</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Controls/chart/Features/Trackball</string>
+			<key>Description</key>
+			<string>This sample showcases the trackball feature. Trackball displays the tooltip for the data points that are closer to the point where you touch on the chart area. </string>
+			<key>SampleName</key>
+			<string>Trackball</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Controls/chart/Features/Data-point-Selection</string>
+			<key>Description</key>
+			<string>Selection allows you to highlight a data point. You can select a data point by tapping on it.</string>
+			<key>SampleName</key>
+			<string>Data Point Selection</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Controls/chart/Features/Zooming</string>
+			<key>Description</key>
+			<string>This sample showcases the zooming and panning capabilities of chart</string>
+			<key>SampleName</key>
+			<string>Zooming and Panning</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Controls/chart/Features/Vertical-Chart</string>
+			<key>Description</key>
+			<string>This sample showcases vertical charts feature.</string>
+			<key>SampleName</key>
+			<string>Vertical Chart</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Controls/chart/Features/Tooltip</string>
+			<key>Description</key>
+			<string>This sample showcases tooltip capabilities in chart. Tooltip feature is used to show information about the segment, when you tap on the segment.</string>
+			<key>SampleName</key>
+			<string>Tooltip</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>Tooltip</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Controls/chart/Features/Data-Marker</string>
+			<key>Description</key>
+			<string>This sample showcases the customization of data markers. Data markers are used to provide information about the data points to the user.</string>
+			<key>SampleName</key>
+			<string>Data Marker</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Controls/chart/Features/Auto-Scrolling</string>
+			<key>Description</key>
+			<string>This sample demonstrates the automatic scrolling of axis during real time updates.</string>
+			<key>SampleName</key>
+			<string>Auto Scrolling</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Controls/chart/Features/Technical-Indicator</string>
+			<key>Description</key>
+			<string>Technical indicators are the base for technical analysis, which is used to determine the future of financial, stock or economic trends.</string>
+			<key>SampleName</key>
+			<string>Technical Indicators</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>Rotator</key>
+	<array>
+		<dict>
+			<key>SampleName</key>
+			<string>Rotator</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>NumericUpDown</key>
+	<array>
+		<dict>
+			<key>SampleName</key>
+			<string>NumericUpDown</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>Presentation</key>
+	<array>
+		<dict>
+			<key>Image</key>
+			<string>Images/Presentation/gettingstartedsample.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create a PowerPoint presentation by adding text with simple text formatting.</string>
+			<key>SampleName</key>
+			<string>GettingStartedPresentation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+    <dict>
+      <key>Image</key>
+      <string>Images/Presentation/slidesample.png</string>
+      <key>Description</key>
+      <string>This sample demonstrates how to convert the PowerPoint slide to an image.</string>
+      <key>SampleName</key>
+      <string>PPTXToImage</string>
+      <key>IsNew</key>
+      <string>NO</string>
+      <key>IsUpdated</key>
+      <string>NO</string>
+    </dict>
+    <dict>
+      <key>Image</key>
+      <string>Images/Presentation/slidesample.png</string>
+      <key>Description</key>
+      <string>This sample demonstrates how to convert a PowerPoint presentation to PDF.</string>
+      <key>SampleName</key>
+      <string>PPTXToPDF</string>
+      <key>IsNew</key>
+      <string>NO</string>
+      <key>IsUpdated</key>
+      <string>NO</string>
+    </dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Presentation/slidesample.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to set write protection for Microsoft PowerPoint.</string>
+			<key>SampleName</key>
+			<string>WriteProtection</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Presentation/slidesample.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create a slide with predefined layouts, like Microsoft PowerPoint.</string>
+			<key>SampleName</key>
+			<string>SlidesPresentation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Presentation/imagesample.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to add an image in PowerPoint presentation.</string>
+			<key>SampleName</key>
+			<string>ImagesPresentation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Presentation/tablesample.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create a table with specified number of rows and columns in PowerPoint presentation for displaying tabular data.</string>
+			<key>SampleName</key>
+			<string>TablesPresentation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Presentation/chartssample.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create a pie chart in PowerPoint presentation.</string>
+			<key>SampleName</key>
+			<string>ChartsPresentation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Presentation/commentssample.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to add comments in PowerPoint presentation for reviewing and updating feedbacks.</string>
+			<key>SampleName</key>
+			<string>CommentsPresentation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Presentation/connectorssample.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to insert a connectors in a PowerPoint slide.</string>
+			<key>SampleName</key>
+			<string>ConnectorsPresentation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Presentation/connectorssample.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to insert a header and footer in a PowerPoint Presentation.</string>
+			<key>SampleName</key>
+			<string>HeaderAndFooterPresentation</string>
+			<key>IsNew</key>
+			<string>YES</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Presentation/createanimationsample.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create animation in PowerPoint presentation.</string>
+			<key>SampleName</key>
+			<string>CreateAnimationPresentation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Presentation/modifyanimationsample.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to modify the animation in PowerPoint presentation.</string>
+			<key>SampleName</key>
+			<string>ModifyAnimationPresentation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Presentation/slidetransitionsample.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create the transition effects in PowerPoint presentation slides.</string>
+			<key>SampleName</key>
+			<string>SlideTransitionPresentation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>XlsIO</key>
+	<array>
+		<dict>
+			<key>Image</key>
+			<string>Images/XlsIO/createspreadsheet.png</string>
+			<key>Description</key>
+			<string>XlsIO supports to create an Excel document without any dependency of Microsoft Excel in few lines of code.</string>
+			<key>SampleName</key>
+			<string>Create Spreadsheet</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/XlsIO/chart.png</string>
+			<key>Description</key>
+			<string>Create and manipulate all types of Excel charts with elements like chart title, legend, axis title, data labels, line styles, etc.</string>
+			<key>SampleName</key>
+			<string>Charts</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/XlsIO/formulas.png</string>
+			<key>Description</key>
+			<string>XlsIO has support to read, write and calculate formulas. The built-in calculation engine can quickly evaluate formula cell values at runtime.</string>
+			<key>SampleName</key>
+			<string>Formulas</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/XlsIO/importCLRobject.png</string>
+			<key>Description</key>
+			<string>Collection objects usually holds a set of instance variables or properties, also known as attributes. XlsIO allows to import data directly from Collection objects.</string>
+			<key>SampleName</key>
+			<string>Collection Objects</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+        <dict>
+			<key>Image</key>
+			<string>Images/XlsIO/importCLRobject.png</string>
+			<key>Description</key>
+			<string>XlsIO allows to import data directly from Nested Collection objects with Layout and Group options.</string>
+			<key>SampleName</key>
+			<string>Import Nested Collection</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/XlsIO/datatable.png</string>
+			<key>Description</key>
+			<string>XlsIO supports import/export DataTable from/to Excel worksheets.</string>
+			<key>SampleName</key>
+			<string>DataTable</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/XlsIO/datatable.png</string>
+			<key>Description</key>
+			<string>XlsIO supports optimizing performance while importing large Excel data.</string>
+			<key>SampleName</key>
+			<string>Performance</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/XlsIO/datatable.png</string>
+			<key>Description</key>
+			<string>XlsIO supports conversion of Excel to PDF.</string>
+			<key>SampleName</key>
+			<string>Excel To PDF</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/XlsIO/importxml.png</string>
+			<key>Description</key>
+			<string>XlsIO supports single line of code to import XML data into an Excel worksheet.</string>
+			<key>SampleName</key>
+			<string>Import XML Data</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/XlsIO/filters.png</string>
+			<key>Description</key>
+			<string>XlsIO supports data filtering based on text, date and custom options.</string>
+			<key>SampleName</key>
+			<string>Filters</string>
+			<key>IsNew</key>
+			<string>No</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/XlsIO/findandreplace.png</string>
+			<key>Description</key>
+			<string>XlsIO supports to find the range of a value in the worksheet and replace it with a new value.</string>
+			<key>SampleName</key>
+			<string>Find and Replace</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/XlsIO/worksheettoimage.png</string>
+			<key>Description</key>
+			<string>XlsIO supports conversion of worksheets to Images.</string>
+			<key>SampleName</key>
+			<string>Worksheet To Image</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/XlsIO/worksheettohtml.png</string>
+			<key>Description</key>
+			<string>XlsIO supports conversion of worksheets to HTML files.</string>
+			<key>SampleName</key>
+			<string>Worksheet To HTML</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>DocIO</key>
+	<array>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/generateword.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create simple Word document with text, images and tables.</string>
+			<key>SampleName</key>
+			<string>HelloWorld</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/builtinstyle.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to format the Word document contents with the built-in styles.</string>
+			<key>SampleName</key>
+			<string>BuiltIn Style</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/customstyle.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to format the Word document contents with user defined styles.</string>
+			<key>SampleName</key>
+			<string>Custom Style</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/bookmarknavigation.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to insert, retrieve, replace and delete the contents of a specified bookmark using BookmarkNavigator functionality of DocIO.</string>
+			<key>SampleName</key>
+			<string>Bookmark Navigation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/letterformat.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create a letter format document by filling the data using Mail merge functionality of DocIO.</string>
+			<key>SampleName</key>
+			<string>Mail Merge</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+    <dict>
+      <key>Image</key>
+      <string>Images/DocIO/letterformat.png</string>
+      <key>Description</key>
+      <string>This sample demonstrates how to create a employee report using Mail merge functionality of DocIO.</string>
+      <key>SampleName</key>
+      <string>Employee Report</string>
+      <key>IsNew</key>
+      <string>NO</string>
+      <key>IsUpdated</key>
+      <string>NO</string>
+    </dict>
+    <dict>
+      <key>Image</key>
+      <string>Images/DocIO/letterformat.png</string>
+      <key>Description</key>
+      <string>This sample demonstrates how to perform Mail merge for nested groups using Mail merge functionality of DocIO.</string>
+      <key>SampleName</key>
+      <string>Nested Mail Merge</string>
+      <key>IsNew</key>
+      <string>NO</string>
+      <key>IsUpdated</key>
+      <string>NO</string>
+    </dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/protectionandformfilling.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to fill data and protect the content controls in an existing Word document.</string>
+			<key>SampleName</key>
+			<string>Form Filling and Protection</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/xmlmapping.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to map custom XML part to content controls in the Word document.</string>
+			<key>SampleName</key>
+			<string>XML Mapping</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/wordtohtml.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to convert a Word document into HTML file.</string>
+			<key>SampleName</key>
+			<string>Word To HTML</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/wordtopdf.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to convert a Word document into PDF.</string>
+			<key>SampleName</key>
+			<string>Word To PDF</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>YES</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/formulas.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create a Word document with mathematical equations.</string>
+			<key>SampleName</key>
+			<string>Create Equation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/builtinstyle.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to format the tables in the Word document.</string>
+			<key>SampleName</key>
+			<string>Format Table</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/DocIO/groupshapes.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create a Word document with Group shapes.</string>
+			<key>SampleName</key>
+			<string>Group Shapes</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>PDF</key>
+	<array>
+		<dict>
+			<key>Image</key>
+			<string>Images/pdf/gettingstarted.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create a simple PDF document with text and images.</string>
+			<key>DisplayName</key>
+			<string>Getting Started</string>
+			<key>SampleName</key>
+			<string>GettingStartedPDF</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/pdf/barcode.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create various barcodes on PDF document.</string>
+			<key>SampleName</key>
+			<string>Barcode</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/pdf/stamp.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to stamp or watermark an existing PDF document.</string>
+			<key>SampleName</key>
+			<string>Stamping</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/pdf/booklet.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create a booklet from an existing PDF document.</string>
+			<key>SampleName</key>
+			<string>Booklet</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/pdf/table.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create borderless table in a PDF document.</string>
+			<key>SampleName</key>
+			<string>Table Features</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/pdf/imageinsertion.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to insert images in a PDF document.</string>
+			<key>SampleName</key>
+			<string>Image Insertion</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/pdf/DigitalSignature.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to digitally sign PDF document using a .pfx certificate.</string>
+			<key>SampleName</key>
+			<string>Digital Signature</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/pdf/DigitalSignature.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to validate digitally signed PDF document signature.</string>
+			<key>SampleName</key>
+			<string>Digital Signature Validation</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/pdf/encryption.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create secure PDF document.</string>
+			<key>SampleName</key>
+			<string>Encryption</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/pdf/rtlsupport.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates drawing right-to-left language text in the PDF document.</string>
+			<key>DisplayName</key>
+			<string>RTL Text</string>
+			<key>SampleName</key>
+			<string>RTLSupport</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/pdf/rtlsupport.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates various PDF conformance support in Essential PDF.</string>
+			<key>DisplayName</key>
+			<string>PDF Conformance</string>
+			<key>SampleName</key>
+			<string>Conformance</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/pdf/rtlsupport.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to create a ZUGFeRD PDF document.</string>
+			<key>DisplayName</key>
+			<string>ZUGFeRD Invoice</string>
+			<key>SampleName</key>
+			<string>ZugFerd</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/pdf/rtlsupport.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to draw a text with OpenType font in a PDF document.</string>
+			<key>DisplayName</key>
+			<string>OpenType Font</string>
+			<key>SampleName</key>
+			<string>OpenTypeFont</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>PDFViewer</key>
+	<array>
+		<dict>
+			<key>Image</key>
+			<string>Images/PDFViewer/pdfviewer.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to view the PDF document in Xamarin iOS application.</string>
+			<key>DisplayName</key>
+			<string>Getting Started</string>
+			<key>SampleName</key>
+			<string>PdfViewerDemo</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/PDFViewer/pdfviewer.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to view the PDF document in Xamarin iOS application with custom toolbar.</string>
+			<key>DisplayName</key>
+			<string>Custom Toolbar</string>
+			<key>SampleName</key>
+			<string>CustomToolbar</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/PDFViewer/pdfviewer.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to view the PDF document in Xamarin iOS application with custom toolbar.</string>
+			<key>DisplayName</key>
+			<string>Single Page View</string>
+			<key>SampleName</key>
+			<string>SinglePageView</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/PDFViewer/pdfviewer.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates how to view the PDF document in Xamarin iOS application with custom toolbar.</string>
+			<key>DisplayName</key>
+			<string>FillAndSign</string>
+			<key>SampleName</key>
+			<string>FillAndSign</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>Calculate</key>
+	<array>
+		<dict>
+			<key>SampleName</key>
+			<string>FunctionsLibrary</string>
+			<key>IsNew</key>
+			<string>No</string>
+			<key>IsUpdated</key>
+			<string>No</string>
+		</dict>
+		<dict>
+			<key>SampleName</key>
+			<string>CalcQuickCalculation</string>
+			<key>IsNew</key>
+			<string>No</string>
+			<key>IsUpdated</key>
+			<string>No</string>
+		</dict>
+	</array>
+	<key>Diagram</key>
+	<array>
+		<dict>
+			<key>Image</key>
+			<string>Images/Diagram/Orgchart.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates the Organization layout of Diagram.</string>
+			<key>SampleName</key>
+			<string>Organizational Chart</string>
+			<key>IsNew</key>
+			<string>No</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>This sample demonstrates the Mind Map of Diagram.</string>
+			<key>SampleName</key>
+			<string>Mind Map</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Diagram/FlowChart.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates creating a simple flow diagram using Diagram Control.</string>
+			<key>SampleName</key>
+			<string>Flow Diagram</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Images/Diagram/Nodeannotation.png</string>
+			<key>Description</key>
+			<string>This sample demonstrates the Customization of the Node.</string>
+			<key>SampleName</key>
+			<string>Node Customization</string>
+			<key>IsNew</key>
+			<string>No</string>
+			<key>IsUpdated</key>
+			<string>No</string>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>This sample demonstrates the Connector Segement Type</string>
+			<key>SampleName</key>
+			<string>Connectors</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>MaskedEdit</key>
+	<array>
+		<dict>
+			<key>Custom Property</key>
+			<string></string>
+			<key>SampleName</key>
+			<string>MaskedEdit</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>MaskedEdit</string>
+		</dict>
+	</array>
+	<key>CheckBox</key>
+	<array>
+		<dict>
+			<key>Custom Property</key>
+			<string></string>
+			<key>SampleName</key>
+			<string>CheckBox</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>CheckBox</string>
+		</dict>
+	</array>
+	<key>RadioButton</key>
+	<array>
+		<dict>
+			<key>Custom Property</key>
+			<string></string>
+			<key>SampleName</key>
+			<string>RadioButton</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>RadioButton</string>
+		</dict>
+	</array>
+	<key>SegmentedControl</key>
+	<array>
+		<dict>
+			<key>SampleName</key>
+			<string>SegementViewGettingStarted</string>
+			<key>DisplayName</key>
+			<string>GettingStarted</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+	</array>
+	<key>ComboBox</key>
+	<array>
+		<dict>
+			<key>SampleName</key>
+			<string>ComboBox</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+			<key>DisplayName</key>
+			<string>ComboBox</string>
+			<key>Image</key>
+			<string>ComboBox.png</string>
+		</dict>
+	</array>
+	<key>TreeView</key>
+	<array>
+		<dict>
+			<key>DisplayName</key>
+			<string>Getting Started</string>
+			<key>SampleName</key>
+			<string>TreeGettingStarted</string>
+			<key>IsNew</key>
+			<string>NO</string>
+			<key>IsUpdated</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Node Images</string>
+			<key>SampleName</key>
+			<string>NodeWithImage</string>
+			<key>IsNew</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Selection</string>
+			<key>SampleName</key>
+			<string>TreeSelection</string>
+			<key>IsNew</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Template</string>
+			<key>SampleName</key>
+			<string>TreeTemplate</string>
+			<key>IsNew</key>
+			<string>NO</string>
+		</dict>
+	</array>
+</dict>
+</plist>

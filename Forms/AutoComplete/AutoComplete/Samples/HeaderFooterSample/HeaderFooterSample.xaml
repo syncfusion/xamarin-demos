@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms"
+     xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:core="clr-namespace:SampleBrowser.SfAutoComplete"
+     xmlns:icon="clr-namespace:SampleBrowser.SfAutoComplete"
+    x:Class="SampleBrowser.SfAutoComplete.HeaderFooterSample">
+     <local:SampleView.Resources>
+        <ResourceDictionary>
+            <core:booltofontConverter x:Key="booltofont"/>
+            <core:booltocolorConverter x:Key="booltocolor"/>
+             <icon:AutoCompleteImageConverter x:Key="AutoCompleteImageConverter" />
+        </ResourceDictionary>
+    </local:SampleView.Resources>
+    <Grid>
+    <Grid Margin="10" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+            <Grid>
+                <Label VerticalOptions="Center" 
+                       TextColor="Black"
+                       Text="Quick Chat"
+                       FontSize="20"/>
+            </Grid>
+            <autocomplete:SfAutoComplete x:Name="autoComplete" 
+                                     Grid.Row="1"  
+                                     MaximumDropDownHeight="150"
+                                     DisplayMemberPath="ContactName"
+                                     DataSource="{Binding Source}"
+                                     Text="{Binding SelectedItem,Mode=TwoWay}"
+                                     SuggestionMode="Contains"
+                                     DropDownItemHeight="70"
+                                     IsFocused="{Binding IsFocused,Mode=TwoWay}"
+                                     Watermark="{Binding Watermark}"
+                                     DropDownCornerRadius="0"
+                                     DropDownHeaderViewHeight="50"
+                                     DropDownFooterViewHeight="50"
+                                     NoResultsFoundText="No Results Found"
+                                     HeightRequest="45">
+                <autocomplete:SfAutoComplete.ItemTemplate>
+                    <DataTemplate>
+
+                            <StackLayout WidthRequest="350"
+                        Orientation="Horizontal">
+                                <Image Margin="7"
+                                       HeightRequest="45"
+                                       WidthRequest="45"
+                                       VerticalOptions="CenterAndExpand"
+                                       Source="{Binding ContactImage,Converter={StaticResource AutoCompleteImageConverter}}" />
+                                <StackLayout Margin="4" Orientation="Vertical">
+                                    <Label Text="{Binding ContactName}"
+                                              TextColor="Black"
+                                               FontSize="15"
+                                               VerticalOptions="Center"/>
+                                    <Label Text="{Binding ContactNumber}"
+                                       FontSize="14"
+                                       VerticalOptions="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                    </DataTemplate>
+                </autocomplete:SfAutoComplete.ItemTemplate>
+                <autocomplete:SfAutoComplete.DropDownFooterView>
+                    <StackLayout BackgroundColor="#FFFAFAFA" 
+                                 Orientation="Horizontal">
+                        <Label Margin="15,0,0,0"
+                               TextColor="Black"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                               FontSize="20">
+                       <Label.Text>
+                          <OnPlatform x:TypeArguments="x:String" iOS="B" Android="B" WinPhone="&#xe8fa;"  />
+                        </Label.Text>
+                        <Label.FontFamily>
+                          <OnPlatform x:TypeArguments="x:String" iOS="icon" Android="icon.ttf#icon" WinPhone="Segoe MDL2 Assets"  />
+                        </Label.FontFamily>
+                            </Label>
+
+                      <Label Text="Add New Contact"
+                              BackgroundColor="#FFFAFAFA"
+                             TextColor="Black"
+                             VerticalOptions="Center"
+                             FontSize="15"/>
+                    </StackLayout>
+                </autocomplete:SfAutoComplete.DropDownFooterView>
+                <autocomplete:SfAutoComplete.DropDownHeaderView>
+                      <StackLayout  BackgroundColor="#FFFAFAFA"
+                        Orientation="Horizontal">
+                        <Label Margin="15,0,0,0"
+                               TextColor="Black"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                               FontSize="20">
+                     <Label.Text>
+                          <OnPlatform x:TypeArguments="x:String" iOS="A" Android="A" WinPhone="&#xe11a;"  />
+                        </Label.Text>
+                        <Label.FontFamily>
+                          <OnPlatform x:TypeArguments="x:String" iOS="icon" Android="icon.ttf#icon" WinPhone="Segoe MDL2 Assets"  />
+                        </Label.FontFamily>
+                            </Label>
+                        <Label Text="{Binding SelectedItemValue}"
+                                BackgroundColor="#FFFAFAFA"
+                                HorizontalOptions="Fill"
+                               TextColor="Black"
+                               VerticalOptions="Center"
+                               FontSize="15"/>
+                      </StackLayout>
+                </autocomplete:SfAutoComplete.DropDownHeaderView>
+            </autocomplete:SfAutoComplete>
+            <StackLayout Grid.Row="2">
+                <Label Margin="0,20,0,5" Text="Recent"
+                       FontSize="18"/>
+                <ListView   x:Name="listView" RowHeight="60"
+                       ItemsSource="{Binding ListSource}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout 
+                        Orientation="Horizontal">
+                                    <Image Margin="5" Source="{Binding ContactImage,Converter={StaticResource AutoCompleteImageConverter}}" />
+                                    <StackLayout Margin="2" Orientation="Vertical">
+                                        <Label Text="{Binding ContactName}"
+                                              TextColor="Black"
+                                               FontSize="15"
+                                                FontAttributes="{Binding ContactReadType, Converter={StaticResource booltofont}}"
+                                               VerticalOptions="Center"/>
+                                        <Label Text="{Binding Message}"
+                                               FontAttributes="{Binding ContactReadType, Converter={StaticResource booltofont}}"
+                                               TextColor="{Binding ContactReadType, Converter={StaticResource booltocolor}}"
+                                       FontSize="12"
+                                       VerticalOptions="Center"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </Grid>
+    </Grid>
+</local:SampleView>
