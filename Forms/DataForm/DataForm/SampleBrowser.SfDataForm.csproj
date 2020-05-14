@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <Configurations>Debug;Release;Release-xml</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="SamplesList\SamplesList.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Syncfusion.lic" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SamplesList\SamplesList.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.1.0.52" />
+    <PackageReference Include="SampleBrowser.Core" Version="18.1.0.52" />
+	<PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.SfAutoComplete" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.SfDataForm" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown" Version="18.1.0.52" />
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
+  <PackageReference Include="System.ComponentModel.Annotations" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DefineConstants>TRACE;DEBUG;NETSTANDARD2_0</DefineConstants>
+    <NoWarn>1701;1702;1705;CS0436;MSB4011</NoWarn>
+  </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DefineConstants>TRACE;Release;NETSTANDARD2_0</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release-xml|AnyCPU' ">
+    <DefineConstants>TRACE;Release-xml;NETSTANDARD2_0</DefineConstants>
+  </PropertyGroup>
+</Project>

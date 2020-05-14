@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView  xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPicker.XForms"
+                   xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" 
+                   xmlns:custom="clr-namespace:SampleBrowser.SfPicker" 
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   x:Class="SampleBrowser.SfPicker.Cascading">
+	<local:SampleView.Content>
+     <ScrollView Margin="10" >
+	 	  <Grid x:Name="tempGrid" BackgroundColor="White">
+        <Grid.Resources>
+          <ResourceDictionary>
+            <local:ImagePathConverter x:Key="ImagePathConverter" />
+          </ResourceDictionary>
+        </Grid.Resources>
+        <Grid  x:Name="innerGrid" HorizontalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label Text="International Flights" x:Name="interlabel" Margin="10" HorizontalOptions="Start" FontSize="18"  />
+            <ScrollView Grid.Row="1" Margin="10"  IsClippedToBounds="true">
+                <Grid >
+                    <Grid.RowDefinitions>
+						<RowDefinition Height="150" />
+							<RowDefinition Height="auto" />
+                        <RowDefinition Height="200" />
+                   		<RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="75" />
+                            <RowDefinition Height="75" />
+                        </Grid.RowDefinitions>
+                        <StackLayout Grid.Row="0">
+                            <Label Text="From" x:Name="fromlabel" />
+                            <StackLayout x:Name="fromLayout" Orientation="Horizontal">
+                                        <custom:CustomPickerEntry IsEnabled="true" x:Name="fromPlace" WidthRequest="250" HeightRequest="30"/>
+                                        <custom:CustomButton x:Name="btn1" Clicked="Button_Click_3" BackgroundColor="Transparent" Margin="0,0,0,0" Image="{Binding Converter={StaticResource ImagePathConverter},ConverterParameter=SampleBrowser.SfPicker.picker_location.png}">
+                                        </custom:CustomButton>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Grid.Row="1">
+                            <Label Text="To" x:Name="tolabel"/>
+                            <StackLayout x:Name="toLayout" Orientation="Horizontal">
+                                    <custom:CustomPickerEntry IsEnabled="true" x:Name="toplace" WidthRequest="250" HeightRequest="30" />
+                              <custom:CustomButton x:Name="btn2" Clicked="Button_Click_2" BackgroundColor="Transparent" Margin="0,0,0,0" Image="{Binding Converter={StaticResource ImagePathConverter},ConverterParameter=SampleBrowser.SfPicker.picker_location.png}">
+                                    
+                                </custom:CustomButton>
+                            </StackLayout>
+                        </StackLayout>
+                    </Grid>
+					<Label Text="Select Range" x:Name="journeylabel" Margin="0,20,0,0" Grid.Row="1"  HorizontalOptions="Start" FontSize="18"  />
+                  	<Grid Grid.Row="2" Margin="0,10,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.5*" />
+                            <RowDefinition Height="0.5*" />
+                        </Grid.RowDefinitions>
+                        <StackLayout Grid.Row="0" Orientation="Vertical" Padding="0,10,0,0">
+                            <Label Text="Start Date Time" x:Name="departlabel"/>
+                            <StackLayout x:Name="departLayout" Orientation="Horizontal">
+                                    <custom:CustomPickerEntry IsEnabled="true" x:Name="startdate"  WidthRequest="250" HeightRequest="30"  />
+                                <Button x:Name="btn3" Clicked="Button_Click_4" BackgroundColor="Transparent" Margin="0,0,0,0" Image="{Binding Converter={StaticResource ImagePathConverter},ConverterParameter=SampleBrowser.SfPicker.date.png}">
+                                   
+                                </Button>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Grid.Row="1" Orientation="Vertical" Padding="0,10,0,0">
+                            <Label Text="End Date Time" x:Name="arrivelabel"/>
+                            <StackLayout x:Name="arrivelayout" Orientation="Horizontal">
+                                    <custom:CustomPickerEntry IsEnabled="true" x:Name="enddate"  WidthRequest="250" HeightRequest="30" />
+                                <Button x:Name="btn4" Clicked="Button_Click_5" BackgroundColor="Transparent" Margin="0,0,0,0" Image="{Binding Converter={StaticResource ImagePathConverter},ConverterParameter=SampleBrowser.SfPicker.date.png}">
+                                    
+                                </Button>
+                            </StackLayout>
+                        </StackLayout>
+                    </Grid>
+                   
+                    <Button Text="Search" x:Name="submit" Grid.Row="3" WidthRequest="150" HorizontalOptions="CenterAndExpand" BorderWidth="2" BorderRadius="5" Margin="0,20,0,0" />
+                </Grid>
+            </ScrollView>
+        </Grid>
+		 <picker:SfPicker x:Name="frompicker"
+					SelectedItem="{Binding FromPlace}"
+					HeaderHeight="40"
+					ShowHeader="true"
+					HeaderText="From"
+                    SelectedItemFontSize="20"
+                    UnSelectedItemFontSize="20"
+					ShowColumnHeader="True"
+					ColumnHeaderHeight="46"
+					PickerMode="Dialog"
+					ItemHeight="40"
+					PickerHeight="350"
+					PickerWidth="350"
+					ShowFooter="True" FooterHeight="46">
+       <picker:SfPicker.Behaviors>
+         <custom:SfPickerBehavior />
+       </picker:SfPicker.Behaviors>
+		 </picker:SfPicker>
+		<picker:SfPicker x:Name="topicker"
+					HeaderHeight="40"
+					SelectedItem="{Binding ArrivePlace}"
+					ShowHeader="true"
+					HeaderText="To"
+                    SelectedItemFontSize="20"
+                    UnSelectedItemFontSize="20"
+					ShowColumnHeader="True"
+					ColumnHeaderHeight="46"
+					PickerMode="Dialog"
+					ItemHeight="40"
+					PickerHeight="350"
+					PickerWidth="350"
+					ShowFooter="True" FooterHeight="46">
+      <picker:SfPicker.Behaviors>
+        <custom:SfPickerBehavior />
+      </picker:SfPicker.Behaviors>
+		 </picker:SfPicker>
+            <custom:CustomDateTimePicker x:Name="departpicker"
+					Closed="Startdate_OnPopUpClosed"
+					OkButtonClicked="Handle_OkButtonClicked"
+					CancelButtonClicked="Handle_CancelButtonClicked"
+					SelectedItem="{Binding StartDate,Mode=TwoWay}"
+					HeaderHeight="40"
+                    SelectedItemFontSize="20"
+                    UnSelectedItemFontSize="20"
+					ShowHeader="true"
+					HeaderText="Depart"
+					ShowColumnHeader="True"
+					ColumnHeaderHeight="46"
+					PickerMode="Dialog"
+					ItemHeight="40" PickerHeight="350" PickerWidth="350" ShowFooter="True" FooterHeight="46">
+              <custom:CustomDateTimePicker.Behaviors>
+                <custom:SfPickerBehavior />
+              </custom:CustomDateTimePicker.Behaviors>
+        </custom:CustomDateTimePicker>
+
+
+            <custom:CustomDateTimePicker 
+					x:Name="arrivepicker"
+					Closed="Enddate_OnPopUpClosed"
+					OkButtonClicked="Handle_OkButtonClicked1"
+					CancelButtonClicked="Handle_CancelButtonClicked1"
+					SelectedItem="{Binding EndDate,Mode=TwoWay}"
+					HeaderHeight="40" 
+					ShowHeader="true" 
+                    SelectedItemFontSize="20"
+                    UnSelectedItemFontSize="20"
+					HeaderText="Arrive"
+					ShowColumnHeader="True"
+					ColumnHeaderHeight="46"  PickerMode="Dialog" 
+					ItemHeight="40"
+					PickerHeight="350"
+					PickerWidth="350"
+					ShowFooter="True"
+					FooterHeight="46">
+              <custom:CustomDateTimePicker.Behaviors>
+                <custom:SfPickerBehavior />
+              </custom:CustomDateTimePicker.Behaviors>
+        </custom:CustomDateTimePicker>
+    </Grid>
+    </ScrollView>        
+	</local:SampleView.Content>
+</local:SampleView>

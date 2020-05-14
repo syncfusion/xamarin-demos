@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local1="clr-namespace:SampleBrowser.SfRichTextEditor"
+    xmlns:richTextEditor="clr-namespace:Syncfusion.XForms.RichTextEditor;assembly=Syncfusion.SfRichTextEditor.XForms"
+    x:Class="SampleBrowser.SfRichTextEditor.MailPage">
+
+    <ContentView.BindingContext>
+        <local1:ViewModel/>
+    </ContentView.BindingContext>
+    <ContentView.Content>
+        <StackLayout Orientation="Vertical" Spacing="0">
+            <Grid BackgroundColor="White" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="46"/>
+                    <RowDefinition Height="46"/>
+                </Grid.RowDefinitions>
+                <BoxView BackgroundColor="Gray" VerticalOptions="End" HeightRequest="0.5" Grid.Row="0"/>
+                <StackLayout Grid.Row="0">
+                    <local1:RTECustomEntry x:Name="EntryFieldTo" Placeholder="To" VerticalOptions="Center" TextColor="#595959" FontSize="14" Margin="16,0,16,0"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="1">
+                    <local1:RTECustomEntry x:Name="EntryFieldSubject" Placeholder="Subject" VerticalOptions="Center" TextColor="#595959" FontSize="14" Margin="16,0,16,0"/>
+                </StackLayout>
+            </Grid>
+            <Grid BackgroundColor="White" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <richTextEditor:SfRichTextEditor x:Name="RTE" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" ImageInsertCommand="{Binding ImageCommand}" FontButtonCommand="{Binding FontCommand}"/>
+            </Grid>
+        </StackLayout>
+    </ContentView.Content>
+</local:SampleView>
+    

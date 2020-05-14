@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Samples>
+  
+  <Sample Name = "ChipTypes" Platforms="Android,iOS,UWP,WPF" Title = "Getting Started"   SearchTags= "chips, chip group, arrangement,chip layout"
+        Description = "Showcases a chip group with its available types" />
+    
+   <Sample Name = "GettingStarted" Platforms="Android,iOS,UWP" Title = "Customization"   SearchTags= "chip, token" 
+          Description = "Showcases a simple chip with its customization" />
+</Samples>  

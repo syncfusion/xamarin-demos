@@ -1,0 +1,2623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{A296CA71-1A32-4427-A2D8-B5E12A1960EF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SampleBrowser</RootNamespace>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <AssemblyName>SampleBrowser</AssemblyName>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <AndroidLinkSkip />
+    <AndroidLinkMode>None</AndroidLinkMode>
+	<AndroidLinkSkip>Syncfusion.PresentationRenderer.Portable;Syncfusion.DocIORenderer.Portable;Syncfusion.XlsIORenderer.Portable;SkiaSharp</AndroidLinkSkip>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+    <ConsolePause>false</ConsolePause>
+    <CodeAnalysisRuleSet>FxCop.ruleset</CodeAnalysisRuleSet>
+	<AndroidLinkSkip>Syncfusion.PresentationRenderer.Portable;Syncfusion.DocIORenderer.Portable;Syncfusion.XlsIORenderer.Portable;SkiaSharp</AndroidLinkSkip>
+   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidEnableMultiDex>True</AndroidEnableMultiDex>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <ConsolePause>false</ConsolePause>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <AndroidSupportedAbis>armeabi-v7a;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
+    <MandroidI18n />
+    <Debugger>Xamarin</Debugger>
+    <DebugSymbols>False</DebugSymbols>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+	<AndroidLinkSkip>Syncfusion.PresentationRenderer.Portable;Syncfusion.DocIORenderer.Portable;Syncfusion.XlsIORenderer.Portable;SkiaSharp</AndroidLinkSkip>
+    <CodeAnalysisRuleSet>FxCop.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
+	<Reference Include="System.Data" />
+    <Reference Include="System.Data.Services.Client" />
+        <Reference Include="Syncfusion.Calculate.Portable">
+          <HintPath>packages\Syncfusion.Xamarin.Calculate.18.1.0.52\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.Calculate.Portable.dll</HintPath>
+        </Reference>
+        <Reference Include="Syncfusion.SfDiagram.Android">
+            <HintPath>packages\Syncfusion.Xamarin.SfDiagram.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfDiagram.Android.dll</HintPath>
+        </Reference>
+        <Reference Include="Syncfusion.SfMaskedEdit.Android">
+            <HintPath>packages\Syncfusion.Xamarin.SfMaskedEdit.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfMaskedEdit.Android.dll</HintPath>
+        </Reference>
+        <Reference Include="Syncfusion.SfPopupLayout.Android">
+            <HintPath>packages\Syncfusion.Xamarin.SfPopupLayout.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfPopupLayout.Android.dll</HintPath>
+        </Reference>
+        <Reference Include="Syncfusion.SfComboBox.Android">
+            <HintPath>packages\Syncfusion.Xamarin.SfComboBox.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfComboBox.Android.dll</HintPath>
+        </Reference>
+    <Reference Include="Syncfusion.Compression.Portable">
+      <HintPath>packages\Syncfusion.Xamarin.Compression.18.1.0.52\lib\netstandard2.0\Syncfusion.Compression.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.DataSource.Portable">
+      <HintPath>packages\Syncfusion.Xamarin.DataSource.18.1.0.52\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.DataSource.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.DocIO.Portable">
+      <HintPath>packages\Syncfusion.Xamarin.DocIO.18.1.0.52\lib\netstandard2.0\Syncfusion.DocIO.Portable.dll</HintPath>
+    </Reference>
+	<Reference Include="Syncfusion.DocIORenderer.Portable">
+	  <HintPath>packages\Syncfusion.Xamarin.DocIORenderer.18.1.0.52\lib\netstandard2.0\Syncfusion.DocIORenderer.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.OfficeChart.Portable">
+      <HintPath>packages\Syncfusion.Xamarin.OfficeChart.18.1.0.52\lib\netstandard2.0\Syncfusion.OfficeChart.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Pdf.Portable">
+      <HintPath>packages\Syncfusion.Xamarin.Pdf.18.1.0.52\lib\netstandard2.0\Syncfusion.Pdf.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Presentation.Portable">
+	  <HintPath>packages\Syncfusion.Xamarin.Presentation.18.1.0.52\lib\netstandard2.0\Syncfusion.Presentation.Portable.dll</HintPath>
+    </Reference>
+	<Reference Include="Syncfusion.PresentationRenderer.Portable">
+	  <HintPath>packages\Syncfusion.Xamarin.PresentationRenderer.18.1.0.52\lib\netstandard2.0\Syncfusion.PresentationRenderer.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfAutoComplete.Android">
+      <HintPath>packages\Syncfusion.Xamarin.SfAutoComplete.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfAutoComplete.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfBarcode.Android">
+      <HintPath>packages\Syncfusion.Xamarin.SfBarcode.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfBarcode.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfBusyIndicator.Android">
+      <HintPath>packages\Syncfusion.Xamarin.SfBusyIndicator.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfBusyIndicator.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfCalendar.Android">
+      <HintPath>packages\Syncfusion.Xamarin.SfCalendar.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfCalendar.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfCarousel.Android">
+      <HintPath>packages\Syncfusion.Xamarin.SfCarousel.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfCarousel.Android.dll</HintPath>
+    </Reference>
+        <Reference Include="Syncfusion.SfChart.Android">
+            <HintPath>packages\Syncfusion.Xamarin.SfChart.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfChart.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfDataForm.Android">
+      <HintPath>packages\Syncfusion.Xamarin.SfDataForm.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfDataForm.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfGauge.Android">
+      <HintPath>packages\Syncfusion.Xamarin.SfGauge.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfGauge.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfImageEditor.Android">
+      <HintPath>packages\Syncfusion.Xamarin.SfImageEditor.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfImageEditor.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfKanban.Android">
+      <HintPath>packages\Syncfusion.Xamarin.SfKanban.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfKanban.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfMaps.Android">
+            <HintPath>packages\Syncfusion.Xamarin.SfMaps.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfMaps.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNavigationDrawer.Android">
+            <HintPath>packages\Syncfusion.Xamarin.SfNavigationDrawer.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfNavigationDrawer.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNumericTextBox.Android">
+      <HintPath>packages\Syncfusion.Xamarin.SfNumericTextBox.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfNumericTextBox.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNumericUpDown.Android">
+      <HintPath>packages\Syncfusion.Xamarin.SfNumericUpDown.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfNumericUpDown.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfPdfViewer.Android">
+            <HintPath>packages\Syncfusion.Xamarin.SfPdfViewer.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfPdfViewer.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfPicker.Android">
+      <HintPath>packages\Syncfusion.Xamarin.SfPicker.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfPicker.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfPullToRefresh.Android">
+      <HintPath>packages\Syncfusion.Xamarin.SfPullToRefresh.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfPullToRefresh.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfRadialMenu.Android">
+      <HintPath>packages\Syncfusion.Xamarin.SfRadialMenu.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfRadialMenu.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfRangeSlider.Android">
+      <HintPath>packages\Syncfusion.Xamarin.SfRangeSlider.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfRangeSlider.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfRating.Android">
+      <HintPath>packages\Syncfusion.Xamarin.SfRating.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfRating.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfRotator.Android">
+      <HintPath>packages\Syncfusion.Xamarin.SfRotator.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfRotator.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfSchedule.Android">
+            <HintPath>packages\Syncfusion.Xamarin.SfSchedule.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfSchedule.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfSparkline.Android">
+      <HintPath>packages\Syncfusion.Xamarin.SfSparkline.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfSparkline.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfSunburstChart.Android">
+            <HintPath>packages\Syncfusion.Xamarin.SfSunburstChart.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfSunburstChart.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfTabView.Android">
+      <HintPath>packages\Syncfusion.Xamarin.SfTabView.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfTabView.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfTreeMap.Android">
+      <HintPath>packages\Syncfusion.Xamarin.SfTreeMap.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfTreeMap.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.XlsIO.Portable">
+      <HintPath>packages\Syncfusion.Xamarin.XlsIO.18.1.0.52\lib\netstandard2.0\Syncfusion.XlsIO.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.XlsIORenderer.Portable">
+      <HintPath>packages\Syncfusion.Xamarin.XlsIORenderer.18.1.0.52\lib\netstandard2.0\Syncfusion.XlsIORenderer.Portable.dll</HintPath>
+    </Reference>
+	 <Reference Include="Syncfusion.SkiaSharpHelper.Portable">
+      <HintPath>packages\Syncfusion.Xamarin.SkiaSharpHelper.18.1.0.52\lib\netstandard2.0\Syncfusion.SkiaSharpHelper.Portable.dll</HintPath>
+    </Reference>	
+	<Reference Include="SkiaSharp.dll">
+      <HintPath>packages\SkiaSharp.1.59.3\lib\MonoAndroid\SkiaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Animated.Vector.Drawable">
+      <HintPath>packages\Xamarin.Android.Support.Animated.Vector.Drawable.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.Animated.Vector.Drawable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Annotations">
+      <HintPath>packages\Xamarin.Android.Support.Annotations.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Compat">
+      <HintPath>packages\Xamarin.Android.Support.Compat.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Core.UI">
+      <HintPath>packages\Xamarin.Android.Support.Core.UI.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.Core.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Core.Utils">
+      <HintPath>packages\Xamarin.Android.Support.Core.Utils.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.Core.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Fragment">
+      <HintPath>packages\Xamarin.Android.Support.Fragment.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.Fragment.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Media.Compat">
+      <HintPath>packages\Xamarin.Android.Support.Media.Compat.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.Media.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v17.Leanback">
+      <HintPath>packages\Xamarin.Android.Support.v17.Leanback.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.v17.Leanback.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>packages\Xamarin.Android.Support.v4.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.CardView">
+      <HintPath>packages\Xamarin.Android.Support.v7.CardView.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <HintPath>packages\Xamarin.Android.Support.v7.RecyclerView.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Vector.Drawable">
+      <HintPath>packages\Xamarin.Android.Support.Vector.Drawable.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
+    </Reference>
+        <Reference Include="Syncfusion.GridCommon.Portable">
+            <HintPath>packages\Syncfusion.Xamarin.GridCommon.18.1.0.52\lib\MonoAndroid10\Syncfusion.GridCommon.Portable.dll</HintPath>
+        </Reference>
+        <Reference Include="Syncfusion.Linq.Android">
+            <HintPath>packages\Syncfusion.Xamarin.SfDataGrid.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.Linq.Android.dll</HintPath>
+        </Reference>
+        <Reference Include="Syncfusion.SfDataGrid.Android">
+            <HintPath>packages\Syncfusion.Xamarin.SfDataGrid.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfDataGrid.Android.dll</HintPath>
+        </Reference>
+        <Reference Include="Syncfusion.GridCommon.Portable">
+            <HintPath>packages\Syncfusion.Xamarin.GridCommon.18.1.0.52\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.GridCommon.Portable.dll</HintPath>
+        </Reference>
+        <Reference Include="Syncfusion.SfGridConverter.Android">
+            <HintPath>packages\Syncfusion.Xamarin.DataGridExport.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfGridConverter.Android.dll</HintPath>
+        </Reference>
+        <Reference Include="Syncfusion.Buttons.Android">
+            <HintPath>packages\Syncfusion.Xamarin.Buttons.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.Buttons.Android.dll</HintPath>
+        </Reference>
+        <Reference Include="Syncfusion.SfProgressBar.Android">
+            <HintPath>packages\Syncfusion.Xamarin.SfProgressBar.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfProgressBar.Android.dll</HintPath>
+    </Reference>
+        <Reference Include="Syncfusion.Licensing">
+          <HintPath>packages\Syncfusion.Licensing.18.1.0.52\lib\MonoAndroid10\Syncfusion.Licensing.dll</HintPath>
+        </Reference>
+	<Reference Include="Syncfusion.SfTreeView.Android">
+        <HintPath>packages\Syncfusion.Xamarin.SfTreeView.Android.18.1.0.52\lib\MonoAndroid10\Syncfusion.SfTreeView.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Adapters\RecyclerViewAdapter.cs" />
+    <Compile Include="Common\Adapters\RecyclerViewViewHolder.cs" />
+    <Compile Include="Common\Fragments\ChartFragment.cs" />
+    <Compile Include="Common\Model\SampleModel.cs" />
+    <Compile Include="Samples\Chart\Series\Histogram.cs" />
+    <Compile Include="Samples\Chart\Series\Trendlines.cs" />
+    <Compile Include="Samples\CheckBox\CheckBoxSample.cs" />
+    <Compile Include="Samples\CheckBox\CheckBox_Mobile.cs" />
+    <Compile Include="Samples\ImageEditor\ImageEditorCustomView.cs" />
+    <Compile Include="Samples\PDFViewer\BookmarkToolbar.cs" />
+    <Compile Include="Samples\PDFViewer\Form Fillings\FillAndSign.cs" />
+    <Compile Include="Samples\PDFViewer\PageByPage.cs" />
+    <Compile Include="Samples\PDFViewer\StampSelectionView.cs" />
+    <Compile Include="Samples\Schedule\ScheduleGettingStarted.cs" />
+    <Compile Include="Samples\Sunburst\DrillDown.cs" />
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Common\SamplePage.cs" />
+    <Compile Include="Samples\Diagram\DataModel.cs" />
+    <Compile Include="Samples\DataGrid\ContextMenu.cs" />
+    <Compile Include="Samples\CircularGauge\CircularGaugeAnnotation.cs" />
+    <Compile Include="Samples\CircularGauge\CustomizationSample.cs" />
+    <Compile Include="Samples\CircularGauge\DirectionCompass.cs" />
+    <Compile Include="Samples\CircularGauge\GradientRange.cs" />
+    <Compile Include="Samples\CircularGauge\MultipleScale.cs" />
+    <Compile Include="Samples\CircularGauge\Pointers.cs" />
+    <Compile Include="Samples\Diagram\FlowDiagram.cs" />
+    <Compile Include="Samples\Diagram\Connectors.cs" />
+    <Compile Include="Samples\Diagram\MindMap.cs" />
+    <Compile Include="Samples\Diagram\NodeContent.cs" />
+    <Compile Include="Samples\Diagram\OrganizationChart.cs" />
+    <Compile Include="Samples\AutoComplete\AutoComplete_Mobile.cs" />
+    <Compile Include="Samples\AutoComplete\AutoComplete_Tab.cs" />
+    <Compile Include="Samples\Barcode\Codabar.cs" />
+    <Compile Include="Samples\Barcode\Code11.cs" />
+    <Compile Include="Samples\Barcode\Code128A.cs" />
+    <Compile Include="Samples\Barcode\Code128B.cs" />
+    <Compile Include="Samples\Barcode\Code128C.cs" />
+    <Compile Include="Samples\Barcode\Code32.cs" />
+    <Compile Include="Samples\Barcode\Code39.cs" />
+    <Compile Include="Samples\Barcode\Code39Extended.cs" />
+    <Compile Include="Samples\Barcode\Code93.cs" />
+    <Compile Include="Samples\Barcode\Code93Extended.cs" />
+    <Compile Include="Samples\Barcode\UpcBarcode.cs" />
+    <Compile Include="Samples\Barcode\DataMatrix.cs" />
+    <Compile Include="Samples\Barcode\QRCode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Samples\DocIO\BarChart.cs" />
+    <Compile Include="Samples\DocIO\BookmarkNavigation.cs" />
+    <Compile Include="Samples\DocIO\BuiltInStyle.cs" />
+    <Compile Include="Samples\DocIO\CustomStyle.cs" />
+    <Compile Include="Samples\DocIO\GettingStarted.cs" />
+    <Compile Include="Samples\DocIO\MailMerge.cs" />
+    <Compile Include="Samples\DocIO\FormFillingAndProtection.cs" />
+    <Compile Include="Samples\DocIO\XMLMapping.cs" />
+    <Compile Include="Samples\DocIO\PieChart.cs" />
+    <Compile Include="Samples\DocIO\WebViewActivity.cs" />
+    <Compile Include="Samples\DocIO\WordToHTML.cs" />
+	<Compile Include="Samples\DocIO\WordToPDF.cs" />
+    <Compile Include="Samples\DocIO\CreateEquation.cs" />
+    <Compile Include="Samples\DocIO\FormatTable.cs" />
+    <Compile Include="Samples\DocIO\Groupshapes.cs" />
+    <Compile Include="Samples\DocIO\EmployeeList_MailMerge.cs" />
+    <Compile Include="Samples\DocIO\NestedMailMerge.cs" />
+    <Compile Include="Samples\LinearGauge\Annotations.cs" />
+    <Compile Include="Samples\LinearGauge\Ranges.cs" />
+    <Compile Include="Samples\LinearGauge\ScalesAndPointers.cs" />
+    <Compile Include="Samples\PDF\Barcode.cs" />
+    <Compile Include="Samples\PDF\Booklet.cs" />
+    <Compile Include="Samples\PDF\DigitalSignature.cs" />
+    <Compile Include="Samples\PDF\Encryption.cs" />
+	<Compile Include="Samples\PDF\DigitalSignatureValidation.cs" />
+    <Compile Include="Samples\PDF\GettingStartedPDF.cs" />
+    <Compile Include="Samples\PDF\ImageInsertion.cs" />
+    <Compile Include="Samples\PDF\Stamping.cs" />
+	<Compile Include="Samples\PDF\RTLSupport.cs" />
+	<Compile Include="Samples\PDF\OpenTypeFont.cs" />
+	<Compile Include="Samples\PDF\Conformance.cs" />
+    <Compile Include="Samples\PDF\TableFeatures.cs" />
+	<Compile Include="Samples\PDF\ZugFerd.cs" />
+	<Compile Include="Samples\PDF\ZugFerd_XML\CountryCodes.cs" />
+	<Compile Include="Samples\PDF\ZugFerd_XML\CurrencyCodes.cs" />
+	<Compile Include="Samples\PDF\ZugFerd_XML\InvoiceType.cs" />
+	<Compile Include="Samples\PDF\ZugFerd_XML\Product.cs" />
+	<Compile Include="Samples\PDF\ZugFerd_XML\UserDetails.cs" />
+	<Compile Include="Samples\PDF\ZugFerd_XML\ZugFerdInvoice.cs" />
+	<Compile Include="Samples\PDF\ZugFerd_XML\ZugferdProfile.cs" />
+    <Compile Include="Samples\PDFViewer\GettingStartedPDFViewer.cs" />
+    <Compile Include="Samples\BusyIndicator\BusyIndicator_Mobile.cs" />
+    <Compile Include="Samples\BusyIndicator\BusyIndicator_Tab.cs" />
+    <Compile Include="Samples\Calendar\CalendarConfiguration\CalendarConfiguration.cs" />
+    <Compile Include="Samples\Calendar\CalendarConfiguration\CalendarConfiguration_Mobile.cs" />
+    <Compile Include="Samples\Calendar\CalendarConfiguration\CalendarConfiguration_Tab.cs" />
+    <Compile Include="Samples\Calendar\CalendarGettingStarted\CalendarGettingStarted.cs" />
+    <Compile Include="Samples\Calendar\CalendarGettingStarted\CalendarGettingStarted_Mobile.cs" />
+    <Compile Include="Samples\Calendar\CalendarGettingStarted\CalendarGettingStarted_Tab.cs" />
+    <Compile Include="Samples\Calendar\CalendarLocalization\CalendarLocalization.cs" />
+    <Compile Include="Samples\Calendar\CalendarLocalization\CalendarLocalization_Mobile.cs" />
+    <Compile Include="Samples\Calendar\CalendarLocalization\CalendarLocalization_Tab.cs" />
+    <Compile Include="Samples\Carousel\Carousel_Mobile.cs" />
+    <Compile Include="Samples\Carousel\Carousel_Tab.cs" />
+    <Compile Include="Samples\Carousel\CarouselModel.cs" />
+    <Compile Include="Samples\Carousel\LoadMore_Mobile.cs" />
+    <Compile Include="Samples\Carousel\LoadMore_Sample.cs" />
+    <Compile Include="Samples\Chart\Axis\AutoScrolling.cs" />
+    <Compile Include="Samples\Chart\Axis\Category.cs" />
+    <Compile Include="Samples\Chart\Axis\Date.cs" />
+    <Compile Include="Samples\Chart\Axis\Logarithmic.cs" />
+    <Compile Include="Samples\Chart\Axis\MultipleAxis.cs" />
+    <Compile Include="Samples\Chart\Axis\Numerical.cs" />
+    <Compile Include="Samples\Chart\Axis\StripLines.cs" />
+    <Compile Include="Samples\Chart\MainPage.cs" />
+    <Compile Include="Samples\Chart\Series\Area.cs" />
+    <Compile Include="Samples\Chart\Series\Bar.cs" />
+    <Compile Include="Samples\Chart\Series\Bubble.cs" />
+    <Compile Include="Samples\Chart\Series\Candle.cs" />
+    <Compile Include="Samples\Chart\Series\Column.cs" />
+    <Compile Include="Samples\Chart\Series\CustomTooltipBehavior.cs" />
+    <Compile Include="Samples\Chart\Series\DataMarkerCustomization.cs" />
+    <Compile Include="Samples\Chart\Series\DataPointSelection.cs" />
+    <Compile Include="Samples\Chart\Series\Doughnut.cs" />
+    <Compile Include="Samples\Chart\Series\Funnel.cs" />
+    <Compile Include="Samples\Chart\Series\GradientChart.cs" />
+    <Compile Include="Samples\Chart\Series\Line.cs" />
+    <Compile Include="Samples\Chart\Series\LiveUpdate.cs" />
+    <Compile Include="Samples\Chart\Series\OHLC.cs" />
+    <Compile Include="Samples\Chart\Series\PieSeries.cs" />
+    <Compile Include="Samples\Chart\Series\Polar.cs" />
+    <Compile Include="Samples\Chart\Series\Pyramid.cs" />
+    <Compile Include="Samples\Chart\Series\Radar.cs" />
+    <Compile Include="Samples\Chart\Series\RangeArea.cs" />
+    <Compile Include="Samples\Chart\Series\SplineRangeArea.cs" />
+    <Compile Include="Samples\Chart\Series\RangeColumn.cs" />
+    <Compile Include="Samples\Chart\Series\Scatter.cs" />
+    <Compile Include="Samples\Chart\Series\SemiDoughnut.cs" />
+    <Compile Include="Samples\Chart\Series\SemiPie.cs" />
+    <Compile Include="Samples\Chart\Series\Spline.cs" />
+    <Compile Include="Samples\Chart\Series\SplineArea.cs" />
+    <Compile Include="Samples\Chart\Series\StackingArea.cs" />
+    <Compile Include="Samples\Chart\Series\StackingArea100.cs" />
+    <Compile Include="Samples\Chart\Series\StackingBar.cs" />
+    <Compile Include="Samples\Chart\Series\StackingBar100.cs" />
+    <Compile Include="Samples\Chart\Series\StackingColumn.cs" />
+    <Compile Include="Samples\Chart\Series\StackingColumn100.cs" />
+    <Compile Include="Samples\Chart\Series\StackingLine.cs" />
+    <Compile Include="Samples\Chart\Series\StackingLine100.cs" />
+    <Compile Include="Samples\Chart\Series\StepArea.cs" />
+    <Compile Include="Samples\Chart\Series\TechnicalIndicators.cs" />
+    <Compile Include="Samples\Chart\Series\TooltipCustomization.cs" />
+    <Compile Include="Samples\Chart\Series\StepLine.cs" />
+    <Compile Include="Samples\Chart\Series\Trackball.cs" />
+    <Compile Include="Samples\Chart\Series\VerticalChart.cs" />
+    <Compile Include="Samples\Chart\Series\ZoomingAndPanning.cs" />
+    <Compile Include="Samples\CircularGauge\CircularGauge.cs" />
+    <Compile Include="Samples\Calculate\FunctionsLibrary.cs" />
+    <Compile Include="Samples\Calculate\CalcQuick.cs" />
+    <Compile Include="Samples\DataForm\Model\RecipientInfo.cs" />
+    <Compile Include="Samples\DataGrid\CustomGrouping.cs" />
+    <Compile Include="Samples\DataGrid\CustomSorting.cs" />
+    <Compile Include="Samples\DataGrid\Exporting.cs" />
+    <Compile Include="Samples\DataGrid\FrozenView.cs" />
+    <Compile Include="Samples\DataGrid\Helpers\Command.cs" />
+    <Compile Include="Samples\DataGrid\Helpers\CustomComparer.cs" />
+    <Compile Include="Samples\DataGrid\Helpers\CustomView.cs" />
+    <Compile Include="Samples\DataGrid\LoadMore.cs" />
+    <Compile Include="Samples\DataGrid\Model\DealerInfo.cs" />
+    <Compile Include="Samples\DataGrid\Model\DealerRepository.cs" />
+    <Compile Include="Samples\DataGrid\Model\CustomerDetails.cs" />
+    <Compile Include="Samples\DataGrid\Model\CustomersRepository.cs" />
+    <Compile Include="Samples\DataGrid\Model\ReleaseInfo.cs" />
+    <Compile Include="Samples\DataGrid\Model\ReleaseInfoRepository.cs" />
+    <Compile Include="Samples\DataGrid\Model\SalesByDate.cs" />
+    <Compile Include="Samples\DataGrid\Model\SalesInfoRepository.cs" />
+    <Compile Include="Samples\DataGrid\Paging.cs" />
+    <Compile Include="Samples\DataGrid\PullToRefresh.cs" />
+    <Compile Include="Samples\DataGrid\DragAndDrop.cs" />
+    <Compile Include="Samples\DataGrid\SwipeDelete.cs" />
+    <Compile Include="Samples\DataGrid\Swiping.cs" />
+    <Compile Include="Samples\DataGrid\UnboundColumn.cs" />
+    <Compile Include="Samples\DataGrid\Editing.cs" />
+    <Compile Include="Samples\DataSource\DataSourceGettingStarted.cs" />
+    <Compile Include="Samples\DataSource\DataSourceGrouping.cs" />
+    <Compile Include="Samples\DataSource\DataSourceSorting.cs" />
+    <Compile Include="Samples\DataSource\Helper\ContactsAdapter.cs" />
+    <Compile Include="Samples\DataSource\Helper\CustomAdapter.cs" />
+    <Compile Include="Samples\DataSource\Helper\TemplateView.cs" />
+    <Compile Include="Samples\DataSource\Model\BookDetails.cs" />
+    <Compile Include="Samples\DataSource\Model\BookDetailsRepository.cs" />
+    <Compile Include="Samples\DataSource\Model\Contacts.cs" />
+    <Compile Include="Samples\DataSource\Model\ContactsList.cs" />
+    <Compile Include="Samples\DataSource\ViewModel\ContactsViewModel.cs" />
+    <Compile Include="Samples\DataSource\ViewModel\DataSourceGettingStartedViewModel.cs" />
+    <Compile Include="Samples\DigitalGauge\DigitalGauge_Mobile.cs" />
+    <Compile Include="Samples\DigitalGauge\DigitalGauge_Tab.cs" />
+    <Compile Include="Samples\Kanban\Customization.cs" />
+    <Compile Include="Samples\Kanban\KanbanData.cs" />
+    <Compile Include="Samples\Kanban\KanbanGettingStarted.cs" />
+    <Compile Include="Samples\NumericTextBox\NumericTextBox.cs" />
+    <Compile Include="Samples\NumericTextBox\NumericTextBox_Mobile.cs" />
+    <Compile Include="Samples\NumericTextBox\NumericTextBox_Tab.cs" />
+    <Compile Include="Samples\NumericUpDown\NumericUpDown.cs" />
+    <Compile Include="Samples\NumericUpDown\NumericUpDown_Mobile.cs" />
+    <Compile Include="Samples\NumericUpDown\NumericUpDown_Tab.cs" />
+    <Compile Include="Samples\PDFViewer\CustomToolBarGettingStartedPDFViewer.cs" />
+    <Compile Include="Samples\PopupLayout\DetailsView\DetailsView.cs" />
+    <Compile Include="Samples\PopupLayout\Onboard Helps\PopupGettingStarted.cs" />
+    <Compile Include="Samples\PopupLayout\Popup Customizations\Adapter\MovieAdapter.cs" />
+    <Compile Include="Samples\PopupLayout\Popup Customizations\Adapter\TheaterAdapter.cs" />
+    <Compile Include="Samples\PopupLayout\Popup Customizations\PopupCustomizations.cs" />
+    <Compile Include="Samples\RangeNavigator\CustomRangeNavigator.cs" />
+    <Compile Include="Samples\RangeNavigator\DataUsage.cs" />
+    <Compile Include="Samples\RangeNavigator\RangeNavigator.cs" />
+    <Compile Include="Samples\RangeSlider\GettingStarted_Mobile.cs" />
+    <Compile Include="Samples\RangeSlider\GettingStarted_Tab.cs" />
+    <Compile Include="Samples\Rating\Rating_Mobile.cs" />
+    <Compile Include="Samples\Rating\Rating_Tab.cs" />
+    <Compile Include="Samples\Rotator\Rotator_Mobile.cs" />
+    <Compile Include="Samples\Rotator\Rotator_Tab.cs" />
+    <Compile Include="Samples\SfMaskedEdit\SfMaskedEditProperties.cs" />
+    <Compile Include="Samples\SfMaskedEdit\SfMaskedEditText.cs" />
+    <Compile Include="Samples\SfMaskedEdit\SfMaskedEditText_Mobile.cs" />
+    <Compile Include="Samples\SfMaskedEdit\SfMaskedEditText_Tab.cs" />
+    <Compile Include="Samples\SparkLine\SparkLine.cs" />
+    <Compile Include="Samples\TreeMap\FlatCollection.cs" />
+    <Compile Include="Samples\TreeMap\Hierarchical.cs" />
+	<Compile Include="Samples\TreeMap\TreeMapDrilldown.cs" />	
+    <Compile Include="Samples\BusyIndicator\BusyIndicator.cs" />
+    <Compile Include="Samples\RangeSlider\Equalizer.cs" />
+    <Compile Include="Samples\RangeSlider\GettingStarted.cs" />
+    <Compile Include="Samples\RangeSlider\SeparatorView.cs" />
+    <Compile Include="Samples\RangeSlider\Slider.cs" />
+    <Compile Include="Samples\LinearGauge\LinearGauge.cs" />
+    <Compile Include="Samples\DigitalGauge\DigitalGauge.cs" />
+    <Compile Include="Samples\DataGrid\AutoRowHeight.cs" />
+    <Compile Include="Samples\DataGrid\Filtering.cs" />
+    <Compile Include="Samples\DataGrid\Formatting.cs" />
+    <Compile Include="Samples\DataGrid\GridGettingStarted.cs" />
+    <Compile Include="Samples\DataGrid\Grouping.cs" />
+    <Compile Include="Samples\DataGrid\IncrementalLoading.cs" />
+    <Compile Include="Samples\DataGrid\RenderingDynamicData.cs" />
+    <Compile Include="Samples\DataGrid\Selection.cs" />
+    <Compile Include="Samples\DataGrid\Sorting.cs" />
+    <Compile Include="Samples\DataGrid\Styles.cs" />
+    <Compile Include="Samples\DataGrid\Model\BankInfo.cs" />
+    <Compile Include="Samples\DataGrid\Model\BankRepository.cs" />
+    <Compile Include="Samples\DataGrid\Model\BookInfo.cs" />
+    <Compile Include="Samples\DataGrid\Model\BookRepository.cs" />
+    <Compile Include="Samples\DataGrid\Model\Employee.cs" />
+    <Compile Include="Samples\DataGrid\Model\EmployeeDetails.cs" />
+    <Compile Include="Samples\DataGrid\Model\EmployeeInfo.cs" />
+    <Compile Include="Samples\DataGrid\Model\EmployeeInfoRespository.cs" />
+    <Compile Include="Samples\DataGrid\Model\EmployeeInformation.cs" />
+    <Compile Include="Samples\DataGrid\Model\EmployeeInformationRepository.cs" />
+    <Compile Include="Samples\DataGrid\Model\OrderInfo.cs" />
+    <Compile Include="Samples\DataGrid\Model\OrderInfoRepository.cs" />
+    <Compile Include="Samples\DataGrid\Model\ProductInfo.cs" />
+    <Compile Include="Samples\DataGrid\Model\ProductInfoRepository.cs" />
+    <Compile Include="Samples\DataGrid\Model\ProductRepository.cs" />
+    <Compile Include="Samples\DataGrid\Model\Products.cs" />
+    <Compile Include="Samples\DataGrid\Model\StockData.cs" />
+    <Compile Include="Samples\DataGrid\NorthwindService\Reference.cs" />
+    <Compile Include="Samples\DataGrid\Styles\Blue.cs" />
+    <Compile Include="Samples\DataGrid\Styles\Dark.cs" />
+    <Compile Include="Samples\DataGrid\Styles\Green.cs" />
+    <Compile Include="Samples\DataGrid\Styles\Red.cs" />
+    <Compile Include="Samples\DataGrid\Styles\Purple.cs" />
+    <Compile Include="Samples\DataGrid\TemplateColumn\FormattedCell.cs" />
+    <Compile Include="Samples\DataGrid\TemplateColumn\StockCell.cs" />
+    <Compile Include="Samples\DataGrid\ViewModel\ViewModel.cs" />
+    <Compile Include="Samples\DataForm\ContactForm.cs" />
+    <Compile Include="Samples\DataForm\DataFormGettingStarted.cs" />
+    <Compile Include="Samples\DataForm\Helpers\DataFormLayoutManagerExt.cs" />
+    <Compile Include="Samples\DataForm\Helpers\ListViewAdapter.cs" />
+    <Compile Include="Samples\DataForm\Model\ContactsInfo.cs" />
+    <Compile Include="Samples\DataForm\Model\ContactsInfoRepository.cs" />
+    <Compile Include="Samples\DataForm\ViewModel\ListViewModel.cs" />
+    <Compile Include="Samples\ImageEditor\ImageEditor.cs" />
+    <Compile Include="Samples\Maps\BubbleVisualization.cs" />
+    <Compile Include="Samples\Maps\ColorMappings.cs" />
+    <Compile Include="Samples\Maps\DataLabels.cs" />
+    <Compile Include="Samples\Maps\DataMarkers.cs" />
+    <Compile Include="Samples\Maps\Drilldown.cs" />
+    <Compile Include="Samples\Maps\Sublayer.cs" />
+    <Compile Include="Samples\Maps\TicketBooking.cs" />
+    <Compile Include="Samples\Maps\OSM.cs" />
+    <Compile Include="Samples\AutoComplete\AutoComplete.cs" />
+    <Compile Include="Samples\Maps\Models\PopulationMarker.cs" />
+    <Compile Include="Samples\NavigationDrawer\RoundedImageView.cs" />
+    <Compile Include="Samples\NavigationDrawer\NavigationDrawer.cs" />
+    <Compile Include="Samples\AutoComplete\Countrylist.cs" />
+    <Compile Include="Samples\Schedule\Configuration.cs" />
+    <Compile Include="Samples\Schedule\WorkingHours.cs" />
+    <Compile Include="Samples\Schedule\Customization.cs" />
+    <Compile Include="Samples\Rating\Rating.cs" />
+    <Compile Include="Samples\Schedule\Localization.cs" />
+    <Compile Include="Samples\Schedule\Recurrence.cs" />
+    <Compile Include="Samples\Schedule\ScheduleTypes.cs" />
+    <Compile Include="Samples\Schedule\AgendaView.cs" />
+    <Compile Include="Samples\Schedule\DragDrop.cs" />
+    <Compile Include="Samples\Calendar\CalendarBlackOutDates.cs" />
+    <Compile Include="Samples\Calendar\InlineEvents.cs" />
+    <Compile Include="Samples\Rotator\Rotator.cs" />
+    <Compile Include="Samples\Carousel\Carousel.cs" />
+    <Compile Include="Samples\Presentation\GettingStarted.cs" />
+    <Compile Include="Samples\Presentation\Images.cs" />
+    <Compile Include="Samples\Presentation\Slides.cs" />
+    <Compile Include="Samples\Presentation\PPTXToImage.cs" />
+    <Compile Include="Samples\Presentation\PPTXToPDF.cs" />
+    <Compile Include="Samples\Presentation\Tables.cs" />
+    <Compile Include="Samples\Presentation\Charts.cs" />
+    <Compile Include="Samples\Presentation\Comments.cs" />
+	<Compile Include="Samples\Presentation\Connectors.cs" />
+	<Compile Include="Samples\Presentation\HeaderAndFooter.cs" />
+	<Compile Include="Samples\Presentation\CreateAnimation.cs" />
+	<Compile Include="Samples\Presentation\ModifyAnimation.cs" />
+	<Compile Include="Samples\Presentation\SlideTransition.cs" />
+	<Compile Include="Samples\Presentation\WriteProtection.cs" />
+    <Compile Include="Samples\ProgressBar\Circular.cs" />
+    <Compile Include="Samples\ProgressBar\Linear.cs" />
+    <Compile Include="Samples\XlsIO\CreateSpreadsheetPage.xaml.cs" />
+    <Compile Include="Samples\XlsIO\SaveAndroid.cs" />
+    <Compile Include="Samples\XlsIO\ChartsPage.xaml.cs" />
+    <Compile Include="Samples\XlsIO\FormulasPage.xaml.cs" />
+    <Compile Include="Samples\XlsIO\ImportCollectionObjectsPage.xaml.cs" />
+    <Compile Include="Samples\XlsIO\ImportNestedCollectionPage.cs" />
+    <Compile Include="Samples\XlsIO\Extensions.cs" />
+	<Compile Include="Samples\XlsIO\ExcelToPDFPage.cs" />
+    <Compile Include="Samples\XlsIO\ImportXMLPage.xaml.cs" />
+    <Compile Include="Samples\XlsIO\FiltersPage.cs" />
+	<Compile Include="Samples\XlsIO\DataTablePage.cs" />
+    <Compile Include="Samples\XlsIO\WorksheetToImagePage.cs" />
+    <Compile Include="Samples\XlsIO\WorksheetToHTMLPage.cs" />
+    <Compile Include="Samples\XlsIO\PerformancePage.xaml.cs" />
+    <Compile Include="Samples\Schedule\ScheduleAppointmentEditor.cs" />
+    <Compile Include="Samples\Schedule\ScheduleCustomHeader.cs" />
+    <Compile Include="Samples\Schedule\ScheduleViewOptionLayout.cs" />
+    <Compile Include="Samples\XlsIO\FindAndReplace.cs" />
+    <Compile Include="Samples\PullToRefresh\PullToRefresh.cs" />
+    <Compile Include="Samples\TabView\Model\TabData.cs" />
+    <Compile Include="Samples\TabView\TabViewGettingStarted.cs" />
+    <Compile Include="Samples\TabView\ViewModel\TabDataViewModel.cs" />
+    <Compile Include="Samples\TabView\View\TabContentListAdapter.cs" />
+    <Compile Include="Samples\TabView\View\TabControl.cs" />
+    <Compile Include="Samples\PullToRefresh\ListView\CircleView.cs" />
+    <Compile Include="Samples\PullToRefresh\ListView\CustomBaseAdapter.cs" />
+    <Compile Include="Samples\PullToRefresh\ListView\InboxRepositiory.cs" />
+    <Compile Include="Samples\PullToRefresh\ListView\Inbox.cs" />
+    <Compile Include="Samples\PullToRefresh\ListView\ListViewInPullToRefresh.cs" />
+    <Compile Include="Samples\PullToRefresh\SfDataGrid\SfDataGridInPullToRefresh.cs" />
+    <Compile Include="Samples\RadialMenu\RadialMenuGettingStarted.cs" />
+    <Compile Include="Samples\RadialMenu\DoodleDraw.cs" />
+    <Compile Include="Samples\RadialMenu\RadialMenuCustomization.cs" />
+    <Compile Include="Samples\RadialMenu\RadialShare.cs" />
+    <Compile Include="Samples\RadialMenu\RoundButton.cs" />
+    <Compile Include="Samples\Sunburst\SunburstSelection.cs" />
+    <Compile Include="SplashActivity.cs" />
+    <Compile Include="Samples\Sunburst\SunburstChart.cs" />
+    <Compile Include="Samples\SfPicker\GettingStarted.cs" />
+    <Compile Include="Samples\SfPicker\Picker.cs" />
+    <Compile Include="Samples\SfPicker\SfPickerDemo_Tab.cs" />
+    <Compile Include="Samples\Chart\Series\AnnotationCustomization.cs" />
+    <Compile Include="Samples\Chart\Series\AxisCrossing.cs" />
+    <Compile Include="Samples\AutoComplete\TokensSample\TokensSamplePage.cs" />
+    <Compile Include="Samples\AutoComplete\TokensSample\AutoCompleteContactsInfo.cs" />
+    <Compile Include="Samples\AutoComplete\ToleratingTyposSample\ToleratingTyposSamplePage.cs" />
+    <Compile Include="Samples\AutoComplete\ToleratingTyposSample\User.cs" />
+    <Compile Include="Samples\AutoComplete\DiacriticSample\DiacriticSamplePage.cs" />
+    <Compile Include="Samples\AutoComplete\DiacriticSample\MusicInfo.cs" />
+		<Compile Include="Samples\ImageEditor\ViewModel.cs" />
+    <Compile Include="Samples\ImageEditor\BannerCreator.cs" />
+    <Compile Include="Samples\ImageEditor\ImageEditorCustomization.cs" />
+    <Compile Include="Samples\ImageEditor\Serialization.cs" />
+    <Compile Include="Samples\ComboBox\ComboBox.cs" />
+    <Compile Include="Samples\SegmentedView\SegementViewViewModel.cs" />
+    <Compile Include="Samples\SegmentedView\SegmentViewGettingStarted.cs" />
+	<Compile Include="Samples\TreeView\Helper\CustomAdapter\NodeImageAdapter.cs" />
+    <Compile Include="Samples\TreeView\Helper\CustomAdapter\TemplateAdapter.cs" />
+    <Compile Include="Samples\TreeView\Helper\CustomViews\NodeImageView.cs" />
+    <Compile Include="Samples\TreeView\Helper\CustomViews\TemplateSelectorView.cs" />
+    <Compile Include="Samples\TreeView\Model\FileManager.cs" />
+    <Compile Include="Samples\TreeView\Model\MailFolder.cs" />
+    <Compile Include="Samples\TreeView\TreeNodeImages.cs" />
+    <Compile Include="Samples\TreeView\TreeTemplate.cs" />
+    <Compile Include="Samples\TreeView\ViewModel\FileManagerViewModel.cs" />
+    <Compile Include="Samples\TreeView\ViewModel\MailFolderViewModel.cs" />
+    <Compile Include="Samples\TreeView\TreeSelection.cs" />
+    <Compile Include="Samples\TreeView\TreeGettingStarted.cs" />
+    <Compile Include="Samples\TreeView\Helper\CustomAdapter\GettingStartedAdapter.cs" />
+    <Compile Include="Samples\TreeView\Helper\CustomAdapter\SelectionAdapter.cs" />
+    <Compile Include="Samples\TreeView\Model\Countries.cs" />
+    <Compile Include="Samples\TreeView\Model\FoodSpecies.cs" />
+    <Compile Include="Samples\TreeView\ViewModel\CountriesViewModel.cs" />
+    <Compile Include="Samples\TreeView\ViewModel\FoodSpeciesViewModel.cs" />
+    <Compile Include="Samples\Chart\Series\StackedDoughnut.cs" />
+    <Compile Include="Samples\Chart\Series\RangeBar.cs" />
+    <Compile Include="Samples\TreeMap\DataLabel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable\mindmapDefault.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable\mindmapconttree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable\mindmaportho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable\mindmapsimpletree.png" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable-hdpi\mindmapDefault.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable-hdpi\mindmapconttree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable-hdpi\mindmaportho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable-hdpi\mindmapsimpletree.png" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable-mdpi\mindmapDefault.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable-mdpi\mindmapconttree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable-mdpi\mindmaportho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable-mdpi\mindmapsimpletree.png" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable-xhdpi\mindmapDefault.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable-xhdpi\mindmapconttree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable-xhdpi\mindmaportho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable-xhdpi\mindmapsimpletree.png" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable-xxhdpi\mindmapDefault.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable-xxhdpi\mindmapconttree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable-xxhdpi\mindmaportho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable-xxhdpi\mindmapsimpletree.png" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable-xxxhdpi\mindmapDefault.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable-xxxhdpi\mindmapconttree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable-xxxhdpi\mindmaportho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable-xxxhdpi\mindmapsimpletree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\PDFViewer_Android.ttf" />
+    <AndroidAsset Include="Assets\Font size Font.ttf" />
+    <EmbeddedResource Include="Resources\CustomSearch.txt" />
+	<EmbeddedResource Include="Samples\PDFViewer\Assets\F# Succinctly.pdf" />
+    <AndroidAsset Include="Assets\PdfViewer_FONT.ttf" />
+    <EmbeddedResource Include="Samples\PDFViewer\Assets\GIS Succinctly.pdf" />
+    <EmbeddedResource Include="Samples\PDFViewer\Assets\HTTP Succinctly.pdf" />
+    <EmbeddedResource Include="Samples\PDFViewer\Assets\JavaScript Succinctly.pdf" />
+ <EmbeddedResource Include="Samples\PDFViewer\Assets\FormFillingDocument.pdf" />
+ <EmbeddedResource Include="Samples\PDFViewer\Assets\Encrypted Document.pdf" />
+    <AndroidAsset Include="Assets\asia.dbf" />
+    <AndroidAsset Include="Assets\asia.shp" />
+    <AndroidAsset Include="Assets\australia.dbf" />
+    <AndroidAsset Include="Assets\australia.shp" />
+    <AndroidAsset Include="Assets\California.dbf" />
+    <AndroidAsset Include="Assets\California.shp" />
+    <AndroidAsset Include="Assets\continent.dbf" />
+    <AndroidAsset Include="Assets\continent.shp" />
+    <AndroidAsset Include="Assets\europe.dbf" />
+    <AndroidAsset Include="Assets\europe.shp" />
+    <AndroidAsset Include="Assets\south-america.dbf" />
+    <AndroidAsset Include="Assets\south-america.shp" />
+    <AndroidAsset Include="Assets\Texas.dbf" />
+    <AndroidAsset Include="Assets\Texas.shp" />
+    <AndroidAsset Include="Assets\world-map.dbf" />
+    <AndroidAsset Include="Assets\world-map.shp" />
+    <AndroidAsset Include="Assets\north-america.dbf" />
+    <AndroidAsset Include="Assets\north-america.shp" />
+    <AndroidAsset Include="Assets\africa.dbf" />
+    <AndroidAsset Include="Assets\africa.shp" />
+    <AndroidAsset Include="Assets\Signature_PDFViewer_FONT.ttf" />
+    <AndroidAsset Include="Assets\Font Text edit stamp.ttf" />
+    <AndroidAsset Include="Assets\Android Page icons.ttf" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <AndroidResource Include="Resources\layout\ContactsLayout.axml" />
+    <AndroidResource Include="Resources\layout\DataFormLayout.axml" />
+    <AndroidResource Include="Resources\layout\ListViewRowLayout.axml" />
+    <AndroidResource Include="Resources\layout\TitleBarLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <EmbeddedResource Include="Resources\drawable\mindmapcollpase.png" />
+    <EmbeddedResource Include="Resources\drawable\mindmapdelete.png" />
+    <EmbeddedResource Include="Resources\drawable\mindmapexpand.png" />
+    <EmbeddedResource Include="Resources\drawable\mindmapmore.png" />
+    <EmbeddedResource Include="Resources\drawable\mindmapplus.png" />
+    <AndroidResource Include="Resources\drawable\facebook.png" />
+    <AndroidResource Include="Resources\drawable\gplus.png" />
+    <AndroidResource Include="Resources\drawable\instagram.png" />
+    <AndroidResource Include="Resources\drawable\linkedin.png" />
+    <AndroidResource Include="Resources\drawable\pinterest.png" />
+    <AndroidResource Include="Resources\drawable\twitter.png" />
+    <AndroidResource Include="Resources\layout\CustomListViewLayout.axml" />
+    <None Include="Samples\DataGrid\NorthwindService\Reference.datasvcmap" />
+    <None Include="Samples\DataGrid\NorthwindService\service.edmx" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+        <AndroidResource Include="Resources\drawable\picker.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\picker.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\picker.png" />
+        <AndroidResource Include="Resources\drawable\tabview.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\tabview.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\tabview.png" />
+    <AndroidResource Include="Resources\drawable\annotation1.png" />
+    <AndroidResource Include="Resources\drawable\axiscrossing1.png" />
+        <AndroidResource Include="Resources\layout\CustomListView.axml">
+            <SubType>Designer</SubType>
+        </AndroidResource>
+        <AndroidResource Include="Resources\drawable\a0.png" />
+        <AndroidResource Include="Resources\drawable\a1.png" />
+        <AndroidResource Include="Resources\drawable\a2.png" />
+        <AndroidResource Include="Resources\drawable\a3.png" />
+        <AndroidResource Include="Resources\drawable\a4.png" />
+        <AndroidResource Include="Resources\drawable\a5.png" />
+        <AndroidResource Include="Resources\drawable\b0.png" />
+        <AndroidResource Include="Resources\drawable\b1.png" />
+        <AndroidResource Include="Resources\drawable\b2.png" />
+        <AndroidResource Include="Resources\drawable\b3.png" />
+        <AndroidResource Include="Resources\drawable\b4.png" />
+        <AndroidResource Include="Resources\drawable\b5.png" />
+        <AndroidResource Include="Resources\drawable\b6.png" />
+        <AndroidResource Include="Resources\drawable\b7.png" />
+        <AndroidResource Include="Resources\drawable\b8.png" />
+        <AndroidResource Include="Resources\drawable\b9.png" />
+        <AndroidResource Include="Resources\drawable\b10.png" />
+        <AndroidResource Include="Resources\drawable\b11.png" />
+        <AndroidResource Include="Resources\drawable\b12.png" />
+        <AndroidResource Include="Resources\drawable\b13.png" />
+        <AndroidResource Include="Resources\drawable\Available.png" />
+        <AndroidResource Include="Resources\drawable\Away.png" />
+        <AndroidResource Include="Resources\drawable\Busy.png" />
+        <AndroidResource Include="Resources\drawable\DND.png" />
+        <AndroidResource Include="Resources\drawable\Image.png" />
+        <AndroidResource Include="Resources\drawable\Offline.png" />
+        <AndroidAsset Include="Assets\icon.ttf" />
+        <AndroidAsset Include="Assets\Aeroplane.png" />
+        <AndroidAsset Include="Assets\all.png" />
+        <AndroidAsset Include="Assets\Book.png" />
+        <AndroidAsset Include="Assets\Maps.png" />
+        <AndroidAsset Include="Assets\Media.png" />
+        <AndroidAsset Include="Assets\Music.png" />
+        <AndroidAsset Include="Assets\Newspaper.png" />
+        <AndroidAsset Include="Assets\Picture.png" />
+        <AndroidAsset Include="Assets\Spaceship.png" />
+        <AndroidResource Include="Resources\layout\userRow.axml" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\apple.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\banana.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\blackshoe.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\blueberry.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\boots.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\canvas.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\chair.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\friends.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\graycanvas.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\hall.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\hall2.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\leather.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\minion.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\orange.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\redcoat.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\robot.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\shirt.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\silvercoat.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\sofa.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\sofa2.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\strawberry.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\TabImage0.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\TabImage1.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\TabImage2.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\TabImage3.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\TabImage4.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\train.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\tshirt.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\van.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\whiteshirt.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\layout\GettingStartedImageEditor.xml" />
+    <AndroidResource Include="Resources\drawable\imageedit2.png" />
+    <AndroidResource Include="Resources\drawable\imageedit3.png" />
+    <AndroidResource Include="Resources\drawable\imageedit4.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\imageedit2.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\imageedit3.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\imageedit4.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\imageedit2.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\imageedit3.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\imageedit4.png" />
+    <AndroidResource Include="Resources\drawable\banner1.jpg" />
+    <AndroidResource Include="Resources\drawable\banner2.jpg" />
+    <AndroidResource Include="Resources\drawable\banner3.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\banner1.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\banner2.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\banner3.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\banner1.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\banner2.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\banner3.jpg" />
+    <AndroidResource Include="Resources\drawable\info_24.png" />
+    <AndroidResource Include="Resources\drawable\share.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\info_24.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\share.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\info_24.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\share.png" />
+    <AndroidResource Include="Resources\drawable\Ban1.txt" />
+    <AndroidResource Include="Resources\drawable\Ban2.txt" />
+    <AndroidResource Include="Resources\drawable\Ban3.txt" />
+    <AndroidResource Include="Resources\layout\ImageEditorBannercreator.xml" />
+    <AndroidResource Include="Resources\layout\EditorBannerMain.xml" />
+    <AndroidResource Include="Resources\drawable\edittext_bg.xml" />
+    <AndroidResource Include="Resources\layout\EditorCustomization.xml" />
+    <AndroidResource Include="Resources\layout\TopView.xml" />
+    <AndroidResource Include="Resources\layout\BottomView.xml" />
+    <AndroidResource Include="Resources\drawable\pen_customization.png" />
+    <AndroidResource Include="Resources\drawable\rect_customization.png" />
+    <AndroidResource Include="Resources\drawable\redo_customization.png" />
+    <AndroidResource Include="Resources\drawable\reset_customization.png" />
+    <AndroidResource Include="Resources\drawable\share_customization.png" />
+    <AndroidResource Include="Resources\drawable\text_customization.png" />
+    <AndroidResource Include="Resources\drawable\undo_customization.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\pen_customization.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\rect_customization.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\redo_customization.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\reset_customization.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\share_customization.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\text_customization.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\undo_customization.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\pen_customization.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\rect_customization.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\redo_customization.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\reset_customization.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\share_customization.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\text_customization.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\undo_customization.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\pen_customization.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\rect_customization.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\redo_customization.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\reset_customization.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\share_customization.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\text_customization.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\undo_customization.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\pen_customization.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\rect_customization.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\redo_customization.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\reset_customization.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\share_customization.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\text_customization.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\undo_customization.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\pen_customization.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\rect_customization.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\redo_customization.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\reset_customization.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\share_customization.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\text_customization.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\undo_customization.png" />
+    <AndroidResource Include="Resources\layout\RightView.xml" />
+    <AndroidResource Include="Resources\drawable\EightColorButton.xml" />
+    <AndroidResource Include="Resources\drawable\FifthColorButton.xml" />
+    <AndroidResource Include="Resources\drawable\FirstColorButton.xml" />
+    <AndroidResource Include="Resources\drawable\FourthColorButton.xml" />
+    <AndroidResource Include="Resources\drawable\NinthColorButton.xml" />
+    <AndroidResource Include="Resources\drawable\SecondColorButton.xml" />
+    <AndroidResource Include="Resources\drawable\SeventhColorButton.xml" />
+    <AndroidResource Include="Resources\drawable\SixthColorButton.xml" />
+    <AndroidResource Include="Resources\drawable\TenthColorButton.xml" />
+    <AndroidResource Include="Resources\drawable\ThirdColorButton.xml" />
+    <AndroidResource Include="Resources\layout\SerializationFirstPage.xml" />
+    <AndroidResource Include="Resources\layout\SerializationGriditem.xml" />
+    <AndroidResource Include="Resources\drawable\Customize.jpg" />
+    <AndroidResource Include="Resources\drawable\NotSelected.png" />
+    <AndroidResource Include="Resources\drawable\Selected.png" />
+    <AndroidAsset Include="Assets\Chart.txt" />
+    <AndroidAsset Include="Assets\Venn.txt" />
+    <AndroidResource Include="Resources\drawable\CreateNew.png" />
+    <AndroidResource Include="Resources\drawable\ChartImage.jpg" />
+    <AndroidResource Include="Resources\drawable\VennImage.jpg" />
+    <AndroidResource Include="Resources\layout\editorSavePopup.xml" />
+    <AndroidResource Include="Resources\drawable\Delete1.png" />
+    <AndroidAsset Include="Assets\FreeHand.txt" />
+    <AndroidResource Include="Resources\drawable\Freehand.jpg" />
+    <AndroidResource Include="Resources\drawable\editordashboard.jpg" />
+    <AndroidResource Include="Resources\drawable\editorsuccinity.png" />
+    <AndroidResource Include="Resources\drawable\editortwitter.jpeg" />
+    <AndroidAsset Include="Assets\Ban1.txt" />
+    <AndroidAsset Include="Assets\Ban2.txt" />
+    <AndroidAsset Include="Assets\Ban3.txt" />
+    <AndroidAsset Include="Assets\SegmentIcon.ttf" />
+        <AndroidResource Include="Resources\drawable\segmentedview.png" />
+    <AndroidAsset Include="Assets\Segmented.ttf" />
+        <AndroidResource Include="Resources\drawable\combobox.png" />
+	<AndroidAsset Include="Assets\CarouselIcon.ttf" />
+    <AndroidResource Include="Resources\drawable\SyncfusionLogo.png" />
+    <AndroidResource Include="Resources\drawable\Undo.png" />
+    <AndroidResource Include="Resources\drawable\calendaricon.png" />
+    <AndroidResource Include="Resources\drawable\calender.png" />
+    <AndroidResource Include="Resources\drawable\gridshadow.xml" />
+        <AndroidResource Include="Resources\drawable\listview.png" />
+        <AndroidResource Include="Resources\drawable\maps.png" />
+        <AndroidResource Include="Resources\drawable\popUp.png" />
+    <AndroidResource Include="Resources\drawable\powerpoint.png" />
+        <AndroidResource Include="Resources\drawable\radioButton.png" />
+    <AndroidResource Include="Resources\drawable\sett.png" />
+    <AndroidResource Include="Resources\drawable\smith.PNG" />
+        <AndroidResource Include="Resources\drawable-hdpi\Sunburst.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\comboBox.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\editordashboard.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\editorsuccinity.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\editortwitter.jpeg" />
+        <AndroidResource Include="Resources\drawable-hdpi\listView.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\popUp.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\radioButton.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\segmentedView.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\autoComplete.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\banner1.jpg" />
+        <AndroidResource Include="Resources\drawable-mdpi\banner2.jpg" />
+        <AndroidResource Include="Resources\drawable-mdpi\banner3.jpg" />
+        <AndroidResource Include="Resources\drawable-mdpi\barcode.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\busyIndicator.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\calculate.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\calendar.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\carousel.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\chart.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\checkBox.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\comboBox.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\dataForm.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\dataGrid.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\dataSource.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\docIO.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\documentation.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\editordashboard.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\editorsuccinity.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\editortwitter.jpeg" />
+        <AndroidResource Include="Resources\drawable-mdpi\imageEditor.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\imageedit2.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\imageedit3.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\imageedit4.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\info_24.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\kanban.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\listView.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\maps.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\maskedEdit.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\navigationDrawer.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\numericTextBox.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\numericUpDown.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\pdf.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\pdfViewer.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\picker.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\popUp.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\presentation.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\productpage.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\progressBar.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\pullToRefresh.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\radialMenu.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\radioButton.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\rangeNavigator.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\rangeSlider.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\rating.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\rotator.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\schedule.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\segmentedView.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\share.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\sparkline.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\splash.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\sunburst.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\tabView.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\treeMap.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\whatsnew.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\xlsIO.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\Sunburst.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\calendar.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\carousel.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\comboBox.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\editordashboard.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\editorsuccinity.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\editortwitter.jpeg" />
+        <AndroidResource Include="Resources\drawable-xhdpi\listView.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\popUp.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\radioButton.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\segmentedView.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\sett.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\Sunburst.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\autoComplete.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\barcode.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\busyIndicator.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\calculate.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\calender.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\carousel.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\chart.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\comboBox.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\dataForm.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\dataGrid.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\dataSource.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\docIO.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\editordashboard.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\editorsuccinity.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\editortwitter.jpeg" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\imageEditor.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\kanban.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\listView.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\maps.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\navigationDrawer.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\numericTextBox.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\numericUpDown.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\pdf.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\pdfViewer.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\picker.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\popUp.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\presentation.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\progressBar.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\pullToRefresh.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\radialMenu.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\rangeNavigator.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\rangeSlider.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\rating.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\rotator.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\schedule.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\segmentedView.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\sparkline.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\splash.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\tabView.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\treeMap.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\xlsIO.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Calender.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\Sunburst.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\autoComplete.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\banner1.jpg" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\banner2.jpg" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\banner3.jpg" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\barcode.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\busyIndicator.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\calculate.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\calendar.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\carousel.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\chart.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\checkBox.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\comboBox.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\dataForm.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\dataGrid.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\dataSource.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\docIO.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\editordashboard.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\editorsuccinity.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\editortwitter.jpeg" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\imageEditor.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\imageedit2.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\imageedit3.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\imageedit4.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\info_24.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\kanban.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\listView.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\maps.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\maskedEdit.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\navigationDrawer.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\numericTextBox.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\numericUpDown.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\pdf.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\pdfViewer.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\picker.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\popUp.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\presentation.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\productpage.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\progressBar.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\pullToRefresh.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\radialMenu.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\radioButton.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\rangeNavigator.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\rangeSlider.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\rating.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\rotator.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\schedule.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\segmentedView.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\sett.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\share.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\sparkline.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\splash.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\tabView.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\treeMap.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\whatsnew.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\xlsIO.png" />
+        <AndroidResource Include="Resources\layout\listviewborder.xml" />
+        <AndroidResource Include="Resources\drawable\Typogy5.xml" />
+        <AndroidResource Include="Resources\drawable\Typogy6.xml" />
+        <AndroidResource Include="Resources\drawable\ITypogy5.png" />
+        <AndroidResource Include="Resources\drawable\ITypogy6.png" />
+        <AndroidResource Include="Resources\drawable\AddContact.png" />
+        <AndroidResource Include="Resources\drawable\Car.png" />
+        <AndroidResource Include="Resources\drawable\Chart_Book.png" />
+        <AndroidResource Include="Resources\drawable\House.png" />
+        <AndroidResource Include="Resources\drawable\Person.png" />
+        <AndroidResource Include="Resources\drawable\Personal.png" />
+    <EmbeddedResource Include="Samples\PDFViewer\Assets\Xamarin Forms Succinctly.pdf" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\bahnschrift.ttf" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\georgiab.ttf" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\InvoiceTemplate.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Treeview.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Treeview.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Treeview.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Treeview.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Treeview.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Treeview.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\multiuser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable\Paul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\singleuser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable\DiagramCurve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable\DiagramCurve1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable\DiagramEdge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable\DiagramEdge1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable\DiagramStraight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable\DiagramStraight1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable\diagramplus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable\diagramsub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\diagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable\Clayton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\emp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable\eric.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable\image57.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable\Image30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable\images12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable\images9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Jenny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Image117.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\values\styles.axml" />
+    <AndroidResource Include="Resources\anim\slide.xml" />
+    <AndroidResource Include="Resources\anim\slide2.xml" />
+    <AndroidResource Include="Resources\anim\slideleft.xml" />
+    <AndroidResource Include="Resources\anim\slideright.xml" />
+    <AndroidResource Include="Resources\layout\SamplePage.xml" />
+    <AndroidResource Include="Resources\drawable\LinearLayout_Border.axml" />
+    <AndroidResource Include="Resources\drawable\SpinnerExt.axml" />
+    <AndroidResource Include="Resources\layout\HtmlViewer.axml" />
+    <AndroidResource Include="Resources\xml\samplelist.xml" />
+    <AndroidResource Include="Resources\xml\provider_paths.xml" />
+    <AndroidResource Include="Resources\drawable\listpopup.xml" />
+    <AndroidResource Include="Resources\drawable\divider_gradient.xml" />
+    <AndroidResource Include="Resources\drawable\splash.png" />
+    <AndroidResource Include="Resources\drawable\settings.png" />
+    <AndroidResource Include="Resources\drawable\menu.png" />
+    <AndroidResource Include="Resources\drawable\tick.png" />
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+    <AndroidResource Include="Resources\layout\layout.xml" />
+    <AndroidResource Include="Resources\drawable\mount1.png" />
+    <AndroidResource Include="Resources\drawable\linear.png" />
+    <AndroidResource Include="Resources\drawable\digital.png" />
+    <AndroidResource Include="Resources\drawable\acc_icon.png" />
+    <AndroidResource Include="Resources\drawable\bluelogo.png" />
+    <AndroidResource Include="Resources\drawable\GreenUp.png" />
+    <EmbeddedResource Include="Resources\drawable\Image0.png" />
+    <EmbeddedResource Include="Resources\drawable\Image1.png" />
+    <EmbeddedResource Include="Resources\drawable\Image10.png" />
+    <EmbeddedResource Include="Resources\drawable\Image11.png" />
+    <EmbeddedResource Include="Resources\drawable\Image12.png" />
+    <EmbeddedResource Include="Resources\drawable\Image13.png" />
+    <EmbeddedResource Include="Resources\drawable\Image14.png" />
+    <EmbeddedResource Include="Resources\drawable\Image15.png" />
+    <EmbeddedResource Include="Resources\drawable\Image16.png" />
+    <EmbeddedResource Include="Resources\drawable\Image17.png" />
+    <EmbeddedResource Include="Resources\drawable\Image18.png" />
+    <EmbeddedResource Include="Resources\drawable\Image19.png" />
+    <EmbeddedResource Include="Resources\drawable\Image2.png" />
+    <EmbeddedResource Include="Resources\drawable\Image20.png" />
+    <EmbeddedResource Include="Resources\drawable\Image21.png" />
+    <EmbeddedResource Include="Resources\drawable\Image22.png" />
+    <EmbeddedResource Include="Resources\drawable\Image23.png" />
+    <EmbeddedResource Include="Resources\drawable\Image24.png" />
+    <EmbeddedResource Include="Resources\drawable\Image25.png" />
+    <EmbeddedResource Include="Resources\drawable\Image26.png" />
+    <EmbeddedResource Include="Resources\drawable\Image27.png" />
+    <EmbeddedResource Include="Resources\drawable\Image28.png" />
+    <EmbeddedResource Include="Resources\drawable\Image3.png" />
+    <EmbeddedResource Include="Resources\drawable\Image4.png" />
+    <EmbeddedResource Include="Resources\drawable\Image5.png" />
+    <EmbeddedResource Include="Resources\drawable\Image6.png" />
+    <EmbeddedResource Include="Resources\drawable\Image7.png" />
+    <EmbeddedResource Include="Resources\drawable\Image8.png" />
+    <EmbeddedResource Include="Resources\drawable\Image9.png" />
+    <AndroidResource Include="Resources\drawable\RedDown.png" />
+    <AndroidResource Include="Resources\drawable\SortingDown.png" />
+    <AndroidResource Include="Resources\drawable\SortingUp.png" />
+    <AndroidResource Include="Resources\drawable\flag.png" />
+    <AndroidResource Include="Resources\drawable\inbox.png" />
+    <AndroidResource Include="Resources\drawable\outbox.png" />
+    <AndroidResource Include="Resources\drawable\power.png" />
+    <AndroidResource Include="Resources\drawable\profile.png" />
+    <AndroidResource Include="Resources\drawable\trash.png" />
+    <AndroidResource Include="Resources\drawable\burgericon.png" />
+    <AndroidResource Include="Resources\drawable\user.png" />
+    <AndroidResource Include="Resources\drawable\pin.png" />
+    <AndroidResource Include="Resources\drawable\numeric.png" />
+    <AndroidResource Include="Resources\drawable\slider.png" />
+    <AndroidResource Include="Resources\drawable\selection.xml" />
+    <AndroidResource Include="Resources\drawable\excelexport.png" />
+    <AndroidResource Include="Resources\drawable\pdfexport.png" />
+    <AndroidResource Include="Resources\drawable\movie.png" />
+    <AndroidResource Include="Resources\drawable\newtagbackground.xml" />
+    <AndroidResource Include="Resources\drawable\previewtagbackground.xml" />
+    <AndroidResource Include="Resources\drawable\updatetagbackground.xml" />
+    <AndroidResource Include="Resources\drawable\tab_indicator_ab_example.xml" />
+    <AndroidResource Include="Resources\drawable\tab_selected_example.9.png" />
+    <AndroidResource Include="Resources\drawable\tab_selected_focused_example.9.png" />
+    <AndroidResource Include="Resources\drawable\tab_selected_pressed_example.9.png" />
+    <AndroidResource Include="Resources\drawable\tab_unselected_example.9.png" />
+    <AndroidResource Include="Resources\drawable\tab_unselected_focused_example.9.png" />
+    <AndroidResource Include="Resources\drawable\tab_unselected_pressed_example.9.png" />
+    <AndroidResource Include="Resources\values\dimen.xml" />
+    <AndroidResource Include="Resources\drawable\images1.png" />
+    <AndroidResource Include="Resources\drawable\images2.png" />
+    <AndroidResource Include="Resources\drawable\images3.png" />
+    <AndroidResource Include="Resources\drawable\images4.png" />
+    <AndroidResource Include="Resources\drawable\images5.png" />
+    <AndroidResource Include="Resources\drawable\images6.png" />
+    <AndroidResource Include="Resources\drawable\images7.png" />
+    <AndroidResource Include="Resources\drawable\movie1.png" />
+    <AndroidResource Include="Resources\drawable\movie2.png" />
+    <AndroidResource Include="Resources\drawable\movie3.png" />
+    <AndroidResource Include="Resources\drawable\movie4.png" />
+    <AndroidResource Include="Resources\drawable\movie5.png" />
+    <AndroidResource Include="Resources\drawable\movie6.png" />
+    <AndroidResource Include="Resources\drawable\movie7.png" />
+    <AndroidResource Include="Resources\drawable\gettingstartedsample.png" />
+    <AndroidResource Include="Resources\drawable\imagesample.png" />
+    <AndroidResource Include="Resources\drawable\slidesample.png" />
+    <AndroidResource Include="Resources\drawable\tablesample.png" />
+    <AndroidResource Include="Resources\drawable\chartssample.png" />
+    <AndroidResource Include="Resources\drawable\commentssample.png" />
+	<AndroidResource Include="Resources\drawable\connectorssample.png" />
+	<AndroidResource Include="Resources\drawable\createanimationsample.png" />
+	<AndroidResource Include="Resources\drawable\modifyanimationsample.png" />
+	<AndroidResource Include="Resources\drawable\slidetransitionsample.png" />
+    <EmbeddedResource Include="Samples\PDF\Assets\Product Catalog.pdf" />	
+    <EmbeddedResource Include="Samples\PDF\Assets\Xamarin_JPEG.jpg" />
+    <EmbeddedResource Include="Samples\PDF\Assets\Xamarin_PNG.png" /> 
+    <EmbeddedResource Include="Samples\PDF\Assets\arial.ttf" />
+	<EmbeddedResource Include="Samples\PDF\Assets\arabic.txt" />
+	<EmbeddedResource Include="Samples\PDF\Assets\NotoSerif-Black.otf" />
+    <EmbeddedResource Include="Samples\PDF\Assets\JavaScript Succinctly.pdf" />
+    <EmbeddedResource Include="Samples\PDF\Assets\SalesOrderDetail.pdf" />
+    <EmbeddedResource Include="Samples\PDF\Assets\Products.xml" />
+    <EmbeddedResource Include="Samples\PDF\Assets\Report.xml" />
+    <EmbeddedResource Include="Samples\PDF\Assets\Xamarin_bannerEdit.jpg" />
+    <EmbeddedResource Include="Samples\PDF\Assets\PDF.pfx" />
+	<EmbeddedResource Include="Samples\PDF\Assets\SignedDocument.pdf" />
+	<EmbeddedResource Include="Samples\DocIO\Templates\BkmkDocumentPart_Template.doc" />
+	<EmbeddedResource Include="Samples\DocIO\Templates\Bookmark_Template.doc" />
+	<EmbeddedResource Include="Samples\DocIO\Templates\Excel_Template.xlsx" />
+	<EmbeddedResource Include="Samples\DocIO\Templates\Products.xml" />
+	<EmbeddedResource Include="Samples\DocIO\Templates\Letter Formatting.docx" />
+	<EmbeddedResource Include="Samples\DocIO\Templates\ContentControlTemplate.docx" />
+	<EmbeddedResource Include="Samples\DocIO\Templates\Employees.xml" />
+	<EmbeddedResource Include="Samples\DocIO\Templates\WordtoHTML.doc" />
+	<EmbeddedResource Include="Samples\DocIO\Templates\WordtoPDF.docx" />
+    <EmbeddedResource Include="Samples\DocIO\Templates\EmployeesReportDemo.doc" />
+    <EmbeddedResource Include="Samples\DocIO\Templates\Template.doc" />
+    <EmbeddedResource Include="Samples\DocIO\Templates\Template_Letter.doc" />
+    <EmbeddedResource Include="Samples\DocIO\Templates\AdventureCycle.jpg" />
+	<EmbeddedResource Include="Samples\DocIO\Templates\Mountain-200.jpg" />
+	<EmbeddedResource Include="Samples\DocIO\Templates\Mountain-300.jpg" />
+	<EmbeddedResource Include="Samples\DocIO\Templates\Northwind.png" />
+	<EmbeddedResource Include="Samples\DocIO\Templates\Road-550-W.jpg" />
+    <EmbeddedResource Include="Samples\DocIO\Templates\SampleImage.png" />
+    <EmbeddedResource Include="Samples\Presentation\Templates\HelloWorld.pptx" />
+    <EmbeddedResource Include="Samples\Presentation\Templates\Products.xml" />
+    <EmbeddedResource Include="Samples\Presentation\Templates\TableData.xml" />
+	<EmbeddedResource Include="Samples\Presentation\Templates\SlideTableData.xml" />
+    <EmbeddedResource Include="Samples\Presentation\Templates\Images.pptx" />
+    <EmbeddedResource Include="Samples\Presentation\Templates\Template.pptx" />
+    <EmbeddedResource Include="Samples\Presentation\Templates\Slides.pptx" />
+    <EmbeddedResource Include="Samples\Presentation\Templates\NewCharts.pptx" />
+    <EmbeddedResource Include="Samples\Presentation\Templates\tablet.jpg" />
+	<EmbeddedResource Include="Samples\Presentation\Templates\ShapeWithAnimation.pptx" />
+	<EmbeddedResource Include="Samples\Presentation\Templates\Animation.pptx" />
+	<EmbeddedResource Include="Samples\Presentation\Templates\Transition.pptx" />
+	<EmbeddedResource Include="Samples\Presentation\Templates\HeaderFooter.pptx" />
+    <AndroidResource Include="Resources\drawable\Presentation.png" />
+	<EmbeddedResource Include="Samples\XlsIO\Template\CLRObjects.xml" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\customers.xml" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\ChartData.xlsx" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\FilterData.xlsx" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\IconFilterData.xlsx" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\FilterData_Color.xlsx" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\ReplaceOptions.xlsx" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\AdvancedFilterData.xlsx" />
+	<EmbeddedResource Include="Samples\XlsIO\Template\ExcelToPDF.xlsx" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\ExportSales.xlsx" />
+	<EmbeddedResource Include="Samples\XlsIO\Template\ExportData.xml" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\ExportData.xlsx" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\ExpenseReport.xlsx" />
+    <EmbeddedResource Include="Samples\XlsIO\Template\NorthwindTemplate.xlsx" />
+    <AndroidResource Include="Resources\drawable\Xlsio.png" />
+    <AndroidResource Include="Resources\drawable\createspreadsheet.png" />
+    <AndroidResource Include="Resources\drawable\excelchart.png" />
+    <AndroidResource Include="Resources\drawable\formulas.png" />
+    <AndroidResource Include="Resources\drawable\importCLRobject.png" />
+    <AndroidResource Include="Resources\drawable\importxml.png" />
+    <AndroidResource Include="Resources\drawable\filters.png" />
+    <AndroidResource Include="Resources\drawable\findandreplace.png" />
+    <AndroidResource Include="Resources\drawable\Previous.png" />
+    <AndroidResource Include="Resources\drawable\Font.png" />
+    <AndroidResource Include="Resources\layout\CustomActionBar.xml" />
+    <AndroidResource Include="Resources\layout\CustomView.axml" />
+    <AndroidResource Include="Resources\layout\FeatureLayout.xml" />
+    <AndroidResource Include="Resources\layout\FeatureView.axml" />
+    <AndroidResource Include="Resources\layout\HomeScreen.axml" />
+    <AndroidResource Include="Resources\layout\TypesLayout.xml" />
+    <AndroidResource Include="Resources\drawable\roundrect.xml" />
+    <AndroidResource Include="Resources\layout\leftbuttonShape.xml" />
+    <AndroidResource Include="Resources\layout\Propertywindow.xml" />
+    <AndroidResource Include="Resources\layout\rightbuttonshape.xml" />
+    <AndroidResource Include="Resources\drawable\layoutshape.xml" />
+    <AndroidResource Include="Resources\drawable\area.png" />
+    <AndroidResource Include="Resources\layout\SamplePageLayout.xml" />
+    <AndroidResource Include="Resources\layout\ScrollTextView.xml" />
+    <AndroidResource Include="Resources\drawable\blackout.png" />
+    <AndroidResource Include="Resources\drawable\custom.png" />
+    <AndroidResource Include="Resources\drawable\Inline.png" />
+    <AndroidResource Include="Resources\drawable\localization.png" />
+    <AndroidResource Include="Resources\drawable\view.png" />
+    <AndroidResource Include="Resources\drawable\scheduleCalendar.png" />
+    <AndroidResource Include="Resources\drawable\scheduleOption.png" />
+    <AndroidResource Include="Resources\drawable\schedulePlus.png" />
+        <AndroidResource Include="Resources\drawable\barcode.png" />
+        <AndroidResource Include="Resources\drawable\calculate.png" />
+        <AndroidResource Include="Resources\drawable\calendar.png" />
+        <AndroidResource Include="Resources\drawable\carousel.png" />
+        <AndroidResource Include="Resources\drawable\datagrid.png" />
+        <AndroidResource Include="Resources\drawable\datasource.png" />
+        <AndroidResource Include="Resources\drawable\kanban.png" />
+    <AndroidResource Include="Resources\drawable\map.png" />
+    <AndroidResource Include="Resources\drawable\pulltorefresh.png" />
+        <AndroidResource Include="Resources\drawable\rating.png" />
+        <AndroidResource Include="Resources\drawable\rotator.png" />
+    <AndroidResource Include="Resources\drawable\schedule.png" />
+    <AndroidResource Include="Resources\drawable\treemap.png" />
+    <AndroidResource Include="Resources\drawable\charttooltipcustomization.png" />
+    <AndroidResource Include="Resources\drawable\datagridgrouping.png" />
+    <AndroidResource Include="Resources\drawable\datasourcegettingstarted.png" />
+    <AndroidResource Include="Resources\drawable\kanbancustomization.png" />
+    <AndroidResource Include="Resources\drawable\rangenavigatorcustomization.png" />
+    <AndroidResource Include="Resources\drawable\scheduleconfiguration.png" />
+        <AndroidResource Include="Resources\drawable\autocomplete.png" />
+        <AndroidResource Include="Resources\drawable\busyindicator.png" />
+        <AndroidResource Include="Resources\drawable\navigationdrawer.png" />
+        <AndroidResource Include="Resources\drawable\numerictextbox.png" />
+        <AndroidResource Include="Resources\drawable\numericupdown.png" />
+        <AndroidResource Include="Resources\drawable\rangenavigator.png" />
+        <AndroidResource Include="Resources\drawable\rangeslider.png" />
+        <AndroidResource Include="Resources\drawable\docio.png" />
+    <AndroidResource Include="Resources\drawable\bookmarknavigation.png" />
+    <AndroidResource Include="Resources\drawable\barchart.png" />
+    <AndroidResource Include="Resources\drawable\piechart.png" />
+    <AndroidResource Include="Resources\drawable\builtinstyle.png" />
+    <AndroidResource Include="Resources\drawable\customstyle.png" />
+    <AndroidResource Include="Resources\drawable\wordtohtml.png" />
+	<AndroidResource Include="Resources\drawable\wordtopdf.png" />
+    <AndroidResource Include="Resources\drawable\groupshapes.png" />
+        <AndroidResource Include="Resources\drawable\letterformat.png" />
+	<AndroidResource Include="Resources\drawable\Equation.png" />
+    <AndroidResource Include="Resources\drawable\protectionandformfilling.png" />
+    <AndroidResource Include="Resources\drawable\xmlmapping.png" />
+    <AndroidResource Include="Resources\drawable\generateword.png" />
+        <AndroidResource Include="Resources\drawable\radialmenu.png" />
+        <AndroidResource Include="Resources\drawable\sparkline.png" />
+    <AndroidResource Include="Resources\drawable\ClearSelection_Border.xml" />
+    <AndroidResource Include="Resources\drawable\button_border.xml" />
+    <AndroidResource Include="Resources\drawable\gettingstartedpdf.png" />
+    <AndroidResource Include="Resources\drawable\barcodepdf.png" />
+    <AndroidResource Include="Resources\drawable\bookletpdf.png" />
+    <AndroidResource Include="Resources\drawable\stamppdf.png" />
+    <AndroidResource Include="Resources\drawable\tablepdf.png" />
+    <AndroidResource Include="Resources\drawable\blue.png" />
+    <AndroidResource Include="Resources\drawable\green.png" />
+    <AndroidResource Include="Resources\drawable\documentation.png" />
+    <AndroidResource Include="Resources\drawable\newtagcircle.xml" />
+    <AndroidResource Include="Resources\drawable\previewtagcircle.xml" />
+    <AndroidResource Include="Resources\drawable\productpage.png" />
+    <AndroidResource Include="Resources\drawable\updatetagcircle.xml" />
+    <AndroidResource Include="Resources\drawable\whatsnew.png" />
+        <AndroidResource Include="Resources\drawable\chart.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\splash.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\autocomplete.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\barcode.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\busyindicator.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\calculate.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\calendar.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\carousel.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\chart.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\datagrid.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\datasource.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\docio.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\kanban.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\maps.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\navigationdrawer.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\numerictextbox.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\numericupdown.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\pdf.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\pulltorefresh.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\radialmenu.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\rangenavigator.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\rangeslider.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\rating.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\rotator.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\schedule.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\sparkline.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\presentation.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\treemap.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Xlsio.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\splash.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\autocomplete.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\barcode.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\busyindicator.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\calculate.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\presentation.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\chart.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\datagrid.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\datasource.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\docio.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\kanban.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\maps.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\navigationdrawer.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\numerictextbox.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\numericupdown.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\pdf.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\pulltorefresh.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\radialmenu.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\rangenavigator.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\rangeslider.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\rating.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\rotator.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\schedule.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\sparkline.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\treemap.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\Xlsio.png" />
+    <AndroidResource Include="Resources\drawable\logo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\productpage.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\whatsnew.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\documentation.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\productpage.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\whatsnew.png" />
+        <AndroidResource Include="Resources\drawable\sunburst.png" />
+    </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\world1.shp" />
+    <AndroidAsset Include="Assets\world1.dbf" />
+    <AndroidAsset Include="Assets\usa_state.shp" />
+    <AndroidAsset Include="Assets\usa_state.dbf" />
+    <AndroidAsset Include="Assets\Custom.dbf" />
+    <AndroidAsset Include="Assets\Custom.shp" />
+    <AndroidAsset Include="Assets\Custom.shx" />
+    <AndroidAsset Include="Assets\river.dbf" />
+    <AndroidAsset Include="Assets\river.shp" />
+    <AndroidAsset Include="Assets\settings.ttf" />
+    <AndroidAsset Include="Assets\Segoe_MDL2_Assets.ttf" />
+    <AndroidAsset Include="Assets\Android.ttf" />
+    <AndroidAsset Include="Assets\TabIcons.ttf" />
+    <AndroidAsset Include="Assets\socialicons.ttf" />
+    <AndroidAsset Include="Assets\icon.ttf" />
+    <AndroidAsset Include="Assets\Aeroplane.png" />
+    <AndroidAsset Include="Assets\all.png" />
+    <AndroidAsset Include="Assets\Book.png" />
+    <AndroidAsset Include="Assets\Maps.png" />
+    <AndroidAsset Include="Assets\Media.png" />
+    <AndroidAsset Include="Assets\Music.png" />
+    <AndroidAsset Include="Assets\Newspaper.png" />
+    <AndroidAsset Include="Assets\Picture.png" />
+    <AndroidAsset Include="Assets\Spaceship.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <EmbeddedResource Include="Resources\drawable\image56.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\image50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable\image51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\image53.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable\image54.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\image55.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\image43.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="Resources\drawable\Image29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\John.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable\Thomas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable\SyncfusionLogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\hospital.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\family.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\team.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\grain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\range_navigator_getting_Started.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\range_navigator_data_usage.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\SfSparkline.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\pulltorefresh.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\TicketBooking.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\pulltorefreshtemplate.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\pdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\sfclosebutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\pdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\sfclosebutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\user2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\user3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\user4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\user5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\cloudy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\cloudyselected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\humid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\humidselected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\rainy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\rainyselected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\warm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\warmselected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\windy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\windyselected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\saladdaze.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\spiceoflife.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\verynicoise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bucolicpie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bumpercrop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\doublecheesemargherita.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\margherita.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\eficon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Female.png" />
+  </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Contact0.png" />
+    </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable\Maria.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\digitalsignaturepdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\layout\Recurrence.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\mulaxis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\area100_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\autoscroll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bar_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bar100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bar100_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\buble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\buble_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\candle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\candle_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\cataxis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\col100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\col100_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\column.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\column_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\datamarker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\datapointsel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\dateaxis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\donut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\donut_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\line_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\liveupdates.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\logaxis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\pie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\pie_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\polar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\polar_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\pyramid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\pyramid_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\radar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\radar_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\rangecolumn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\rangecolumn_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\scatter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\scatter_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\semi_donut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\semi_pie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\spline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\spline_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\splinearea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\splinearea_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\stacked_area.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\stacked_area_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\stacked_bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\stacked_bar_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\stacked_col.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\stacked_col_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\steparea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\steparea_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\stepline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\stepline_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\techindicator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\tooltip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\trackball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\verchart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\zoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\area_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\area100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\numaxis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\semi_donut_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\semi_pie_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\funnel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\funnel_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\rangearea_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\rangearea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\splinerangearea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\splinerangearea_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\PageDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\PageUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\PDFViewer.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\pdfviewer.png" />
+  </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="Resources\drawable-hdpi\pdfviewer.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="Resources\drawable-xhdpi\pdfviewer.png" />
+    </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ohlc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ohlc_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\backIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\CancelSearch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\edittextbg1.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SearchIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SearchNext.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SearchPrev.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\searchEntry.xml" />
+  </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="Resources\drawable\imageeditor.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="Resources\drawable\imageeditor.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="Resources\drawable-hdpi\imageeditor.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="Resources\drawable-xhdpi\imageeditor.png" />
+    </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\popup_menu_pdfViewer.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\files.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Address.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Birthdate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ContactName.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Group.png" />
+  </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="Resources\drawable\DataForm.png" />
+    </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Contact1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Contact2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Contact3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Contact4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Contact5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Contact6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Contact7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Contact8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Contact9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\LabelContactName.png" />
+  </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="Resources\drawable-xhdpi\dataform.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="Resources\drawable-hdpi\dataform.png" />
+    </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\ListViewTemplate.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\dia_images2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\dia_images3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Annotation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\RedoDisabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Underline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\UndoDisabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Strikeout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\UndoEnabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\RedoEnabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\IconBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SfProgressPause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SfProgressPlay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\progressbar.png" />
+  </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="Resources\drawable-hdpi\progressbar.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="Resources\drawable-xhdpi\progressbar.png" />
+    </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\thicknessouter1.xml" />
+  </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="Resources\layout\backgroundborder.xml" />
+    </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\CustomToolbarPDFViewer.xml" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_ResizingIllustration.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_EditIllustration.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_DragAndDropIllustration.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_HandSymbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_InfoNotification.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_SwipeIllustration.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\layout\BorderLayout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\layout\BorderLayout1.xml" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_FoodCourt.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_MTicket.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_Parking.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\PopupImage1.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\PopupImage2.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\PopupImage3.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\PopupImage4.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\PopupImage5.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\PopupImage6.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\PopupImage7.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\PopupImage8.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\PopupImage9.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="Resources\drawable\PopupImage10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Popup_CallerImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_SendArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_SendMessage.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_BlockContact.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_ContactInfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\circulargauge.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\digitalgauge.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\High.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\lineargauge.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\location.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Low.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Moderate.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\maskededit.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable-hdpi\maskededit.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable-xhdpi\maskededit.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\checkbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable-hdpi\checkbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable-xhdpi\checkbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <Folder Include="Samples\AutoComplete\TokensSample\" />
+        <Folder Include="Samples\AutoComplete\ToleratingTyposSample\" />
+        <Folder Include="Samples\AutoComplete\DiacriticSample\" />
+        <Folder Include="Samples\SegmentedView\" />
+        <Folder Include="Samples\ComboBox\" />
+        <AndroidResource Include="Resources\drawable\Pizzaimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_DateSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_SelectSeats.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_TheatrInfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_Movie1.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_Movie2.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_Movie3.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_Movie4.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_Movie5.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_Movie6.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_Movie7.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_Movie8.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_Movie9.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Popup_Movie10.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\gradient.png" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\popuplayout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\shadow.xml" />
+  </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="Resources\drawable\AddIcon.png" />
+    </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\BringFrontIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\CustomViewImage1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\CustomViewImage2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\CustomViewImage3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ITypogy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ITypogy2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ITypogy3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ITypogy4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ReplaceIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SendBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Typogy1.xml" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Typogy3.xml" />
+  </ItemGroup>
+  <ItemGroup>
+        <AndroidResource Include="Resources\drawable\Typogy2.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Typogy4.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\ImageEditorCustomView.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Activity\AllControlsSamplePage.cs" />
+    <Compile Include="Common\Adapters\HomeScreenAdapter.cs" />
+    <Compile Include="Common\Activity\SampleViewActivity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\grid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\DiagramCurve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\DiagramCurve1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\DiagramEdge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\DiagramEdge1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\DiagramStraight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\DiagramStraight1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\DiagramCurve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\DiagramCurve1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\DiagramEdge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\DiagramEdge1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\DiagramStraight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\DiagramStraight1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\DiagramCurve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\DiagramCurve1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\DiagramEdge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\DiagramEdge1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\DiagramStraight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\DiagramStraight1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\DiagramCurve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\DiagramCurve1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\DiagramEdge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\DiagramEdge1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\DiagramStraight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\DiagramStraight1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\DiagramCurve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\DiagramCurve1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\DiagramEdge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\DiagramEdge1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\DiagramStraight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\DiagramStraight1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Clear_grouping_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Clear_sorting_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Grouping_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Sort_Ascending_Icons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Sort_descending_Icons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\BookmarkBorder.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\bookmarkAndroidToolbar.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\bookmarkListViewRow.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\treeview_exe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\treeview_folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\treeview_img0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\treeview_img1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\treeview_mp3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\treeview_pdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\treeview_png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\treeview_ppt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\treeview_video.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\treeview_word.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\treeview_zip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Samples\PDF\Assets\InvoiceProductList.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\NotApproved.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Approved.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Confidential.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Draft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Expired.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\StampViewList.axml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Xamarin.Android.Support.Compat.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Compat.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Xamarin.Android.Support.Compat.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Compat.targets'))" />
+    <Error Condition="!Exists('packages\Xamarin.Android.Support.Core.UI.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Core.UI.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Xamarin.Android.Support.Core.UI.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Core.UI.targets'))" />
+    <Error Condition="!Exists('packages\Xamarin.Android.Support.v7.RecyclerView.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v7.RecyclerView.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Xamarin.Android.Support.v7.RecyclerView.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v7.RecyclerView.targets'))" />
+    <Error Condition="!Exists('packages\Xamarin.Android.Support.v7.CardView.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v7.CardView.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Xamarin.Android.Support.v7.CardView.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v7.CardView.targets'))" />
+    <Error Condition="!Exists('packages\Xamarin.Android.Support.Core.Utils.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Core.Utils.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Xamarin.Android.Support.Core.Utils.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Core.Utils.targets'))" />
+    <Error Condition="!Exists('packages\Xamarin.Android.Support.Media.Compat.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Media.Compat.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Xamarin.Android.Support.Media.Compat.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Media.Compat.targets'))" />
+    <Error Condition="!Exists('packages\Xamarin.Android.Support.Fragment.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Fragment.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Xamarin.Android.Support.Fragment.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Fragment.targets'))" />
+    <Error Condition="!Exists('packages\Xamarin.Android.Support.v4.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v4.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Xamarin.Android.Support.v4.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v4.targets'))" />
+    <Error Condition="!Exists('packages\Xamarin.Android.Support.Vector.Drawable.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Vector.Drawable.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Xamarin.Android.Support.Vector.Drawable.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Vector.Drawable.targets'))" />
+    <Error Condition="!Exists('packages\Xamarin.Android.Support.Animated.Vector.Drawable.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Animated.Vector.Drawable.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Xamarin.Android.Support.Animated.Vector.Drawable.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Animated.Vector.Drawable.targets'))" />
+  </Target>
+	<Import Project="packages\Xamarin.Android.Support.Compat.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Compat.targets" Condition="Exists('packages\Xamarin.Android.Support.Compat.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Compat.targets')" />
+	<Import Project="packages\Xamarin.Android.Support.Core.UI.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Core.UI.targets" Condition="Exists('packages\Xamarin.Android.Support.Core.UI.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Core.UI.targets')" />
+	<Import Project="packages\Xamarin.Android.Support.v7.RecyclerView.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v7.RecyclerView.targets" Condition="Exists('packages\Xamarin.Android.Support.v7.RecyclerView.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v7.RecyclerView.targets')" />
+	<Import Project="packages\Xamarin.Android.Support.v7.CardView.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v7.CardView.targets" Condition="Exists('packages\Xamarin.Android.Support.v7.CardView.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v7.CardView.targets')" />
+	<Import Project="packages\Xamarin.Android.Support.Core.Utils.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Core.Utils.targets" Condition="Exists('packages\Xamarin.Android.Support.Core.Utils.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Core.Utils.targets')" />
+	<Import Project="packages\Xamarin.Android.Support.Media.Compat.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Media.Compat.targets" Condition="Exists('packages\Xamarin.Android.Support.Media.Compat.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Media.Compat.targets')" />
+	<Import Project="packages\Xamarin.Android.Support.Fragment.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Fragment.targets" Condition="Exists('packages\Xamarin.Android.Support.Fragment.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Fragment.targets')" />
+	<Import Project="packages\Xamarin.Android.Support.v4.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v4.targets" Condition="Exists('packages\Xamarin.Android.Support.v4.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v4.targets')" />
+	<Import Project="packages\Xamarin.Android.Support.Vector.Drawable.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('packages\Xamarin.Android.Support.Vector.Drawable.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Vector.Drawable.targets')" />
+	<Import Project="packages\Xamarin.Android.Support.Animated.Vector.Drawable.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Animated.Vector.Drawable.targets" Condition="Exists('packages\Xamarin.Android.Support.Animated.Vector.Drawable.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Animated.Vector.Drawable.targets')" />
+  	<Import Project="build\tools\Syncfusion.CodeAnalysis.FxCop\tools\FxCop.MsBuild.targets" Condition="Exists('build\tools\Syncfusion.CodeAnalysis.FxCop\tools\FxCop.MsBuild.targets')" />
+	<Import Project="build\tools\Syncfusion.CodeAnalysis.StyleCop\tools\StyleCop.MsBuild.targets" Condition="Exists('build\tools\Syncfusion.CodeAnalysis.StyleCop\tools\StyleCop.MsBuild.targets')" />
+  <Import Project="build\tools\Syncfusion.CodeAnalysis.FxCop\tools\FxCop.MsBuild.targets" Condition="Exists('build\tools\Syncfusion.CodeAnalysis.FxCop\tools\FxCop.MsBuild.targets')" />
+  <Import Project="build\tools\Syncfusion.CodeAnalysis.StyleCop\tools\StyleCop.MsBuild.targets" Condition="Exists('build\tools\Syncfusion.CodeAnalysis.StyleCop\tools\StyleCop.MsBuild.targets')" />
+</Project>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\AlertViewDelegate.cs" >
+      <Link>Renderer\PdfViewer\AlertViewDelegate.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Renderer\AlertViewiOS.cs" >
+      <Link>Renderer\PdfViewer\AlertViewiOS.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Renderer\CustomEntryRenderer.cs" >
+      <Link>Renderer\PdfViewer\CustomEntryRenderer.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Renderer\SfFontButtonRenderer.cs" >
+      <Link>Renderer\PdfViewer\SfFontButtonRenderer.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\SaveiOS.cs" >
+      <Link>Renderer\PdfViewer\SaveiOS.cs</Link>
+    </Compile>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\PDFViewer_IOS.ttf" >
+      <Link>Resources\PDFViewer_IOS.ttf</Link>
+    </BundleResource>
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Font Page icons.ttf" >
+      <Link>Resources\Font Page icons.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\PdfViewer_Text_font.ttf" >
+      <Link>Resources\PdfViewer_Text_font.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Font Print.ttf" >
+      <Link>Resources\Font Print.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Final_PDFViewer_IOS_FontUpdate.ttf" >
+      <Link>Resources\Final_PDFViewer_IOS_FontUpdate.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Font size Font.ttf" >
+      <Link>Resources\Font size Font.ttf</Link>
+    </BundleResource>
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\PdfViewer_FONT.ttf" >
+      <Link>Resources\PdfViewer_FONT.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Font Text edit stamp.ttf" >
+      <Link>Resources\Font Text edit stamp.ttf</Link>
+    </BundleResource>
+  </ItemGroup>
+</Project>

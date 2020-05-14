@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Samples>
+  <Group Title="SfChat" IsUpdated="True" ImageId="AllControlls/Chat.png" SearchTags="Chat sample, chat room"
+       Description="Provides flexible ways to show the conversation between two or more users in a fully customizable layout.">
+    <Sample Platforms = "Android,iOS,UWP" Title = "Getting Started" Name = "GettingStarted" SearchTags="Chat sample, chat room"
+                Description = "This sample showcases the chat room conversation." />
+    <Sample Platforms = "Android,iOS,UWP" Title = "Flight Booking Bot" Name = "FlightBooking" SearchTags="Azure bot sample, flight booking"
+                Description = "This sample showcases the bot configured and hosted in azure to book flight ticket." />
+  </Group>
+</Samples>

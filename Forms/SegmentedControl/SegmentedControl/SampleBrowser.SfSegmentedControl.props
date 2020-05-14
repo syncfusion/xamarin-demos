@@ -1,0 +1,53 @@
+<Project>
+ <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\SegmentViewGettingStarted\View\SegmentViewGettingStarted.xaml.cs">
+    <Link>Samples\SegmentedControl\SegmentViewGettingStarted\View\SegmentViewGettingStarted.xaml.cs</Link>
+      <DependentUpon>SegmentViewGettingStarted.xaml</DependentUpon>
+    </Compile>
+   
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml.cs">
+    <Link>Samples\SegmentedControl\Samples\Themes\Themes.xaml.cs</Link>
+      <DependentUpon>Themes.xaml</DependentUpon>
+    </Compile>
+	
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\SegmentCustomization\View\SegmentCustomization.xaml.cs">
+    <Link>Samples\SegmentedControl\SegmentCustomization\View\SegmentCustomization.xaml.cs</Link>
+      <DependentUpon>SegmentCustomization.xaml</DependentUpon>
+    </Compile>
+	
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\SegmentViewGettingStarted\ViewModel\GettingStartedViewModel.cs">
+       <Link>Samples\SegmentedControl\SegmentViewGettingStarted\ViewModel\GettingStartedViewModel.cs</Link>
+    </Compile>
+	
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\SegmentCustomization\ViewModel\CustomizationViewModel.cs">
+       <Link>Samples\SegmentedControl\SegmentCustomization\ViewModel\CustomizationViewModel.cs</Link>
+    </Compile>
+	
+	</ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml" >
+    <Link>Samples\SegmentedControl\SamplesList\SamplesList.xml</Link>
+	</EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\SegmentViewGettingStarted\View\SegmentViewGettingStarted.xaml">
+    <Link>Samples\SegmentedControl\SegmentViewGettingStarted\View\SegmentViewGettingStarted.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml">
+    <Link>Samples\SegmentedControl\Samples\Themes\Themes.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    
+	
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\SegmentCustomization\View\SegmentCustomization.xaml">
+    <Link>Samples\SegmentedControl\SegmentCustomization\View\SegmentCustomization.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+	
+  </ItemGroup>
+</Project>

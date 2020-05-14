@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:comboBox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:core="clr-namespace:SampleBrowser.SfComboBox;"
+    xmlns:icon="clr-namespace:SampleBrowser.SfComboBox;assembly=SampleBrowser.SfComboBox"
+    x:Class="SampleBrowser.SfComboBox.ToleratingTypos">
+    <Grid>
+       <Grid Margin="10">
+          <Grid.RowDefinitions>
+             <RowDefinition Height="50" />
+             <RowDefinition Height="2*" />
+             <RowDefinition Height="50" />
+          </Grid.RowDefinitions>
+          <comboBox:SfComboBox x:Name="comboBox" MultiSelectMode="Token"  
+                    IsEditableMode="true"
+                    DisplayMemberPath="AppName" 
+                    ImageMemberPath="AppImage" 
+                    Grid.Row="0" 
+                    MaximumDropDownHeight="180" 
+                    SuggestionMode="Contains"
+                    DataSource="{Binding AppCollection}"
+                    IsSelectedItemsVisibleInDropDown="false"
+                    ItemPadding="0,0,10,0" 
+                    SelectionChanged="Handle_SelectionChanged"
+                    DropDownItemHeight="60" 
+                    Watermark="Search Here">
+          <comboBox:SfComboBox.ItemTemplate>
+          <DataTemplate>
+              <StackLayout Padding="15,10"
+                           BackgroundColor="Transparent"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"
+                           Orientation="Horizontal">
+                <Grid>
+                   <Image Source="{Binding AppImage}"
+                          VerticalOptions="Center"
+                          HorizontalOptions="Center"
+                          HeightRequest="46"
+                          WidthRequest="46"/>
+                </Grid>
+                    <Label  Margin="10,5" Text="{Binding AppName}" 
+                            VerticalOptions="Center"
+                            TextColor="Black"
+                            HorizontalOptions="Center" 
+                            FontSize="18" />
+               </StackLayout>
+           </DataTemplate>
+          </comboBox:SfComboBox.ItemTemplate>
+         </comboBox:SfComboBox>
+            
+        <StackLayout Grid.Row="1" Padding="0,30,0,0">
+           <ListView x:Name="listView" RowHeight="70"  ItemsSource="{Binding SelectedItem1,Mode=TwoWay}">
+             <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell IsEnabled="false">
+                       <Grid Padding="0,5,0,5">
+                         <Grid.ColumnDefinitions>
+                                        <ColumnDefinition>
+                                            <ColumnDefinition.Width>
+                                                <OnPlatform x:TypeArguments="GridLength" iOS="60" Android="60" WinPhone="40" />
+                                            </ColumnDefinition.Width>
+                                        </ColumnDefinition >
+                              <ColumnDefinition Width="2*"/>
+                             <ColumnDefinition Width="50"/>
+                          </Grid.ColumnDefinitions>
+                              <Image Margin="0,5,0,5" Grid.Column="0" Source="{Binding AppImage}" />
+                              <StackLayout Grid.Column="1" Padding="0,5,0,0" Spacing="2" Orientation="Vertical">
+                                   <Label Text="{Binding AppName}" FontAttributes="Bold" TextColor="Black" FontSize="16"/>
+                                   <StackLayout Orientation="Horizontal">
+                                   </StackLayout>
+                                   <Label Text="{Binding Date}" FontSize="12"/>
+                               </StackLayout>
+                            <Grid Grid.Column="2" Margin="5,0,0,0" HorizontalOptions="End" VerticalOptions="Center" HeightRequest="50" WidthRequest="50">
+                                   <Image Margin="5" HeightRequest="50" WidthRequest="50" Source="Download2.png" />
+                            </Grid>
+                         </Grid>
+                      </ViewCell>
+                    </DataTemplate>
+                 </ListView.ItemTemplate>
+              </ListView>
+          </StackLayout>
+        <StackLayout Grid.Row="2" Orientation="Horizontal">
+           <Button Text="Update All" BackgroundColor="#f49242" TextColor="White" HorizontalOptions="FillAndExpand" WidthRequest="100" HeightRequest="50"/>
+           <Button Text="Uninstall All" BackgroundColor="#f49242" TextColor="White" HorizontalOptions="FillAndExpand" WidthRequest="100" HeightRequest="50"/>
+        </StackLayout>
+     </Grid>
+   </Grid>
+</local:SampleView>

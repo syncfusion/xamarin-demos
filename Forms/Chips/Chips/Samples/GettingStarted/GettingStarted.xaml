@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<core:SampleView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:BusyIndicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+    xmlns:TextInputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+    xmlns:SyncfusionButton="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SampleBrowser.Chips"
+    xmlns:tabView="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
+    xmlns:RangeSlider="clr-namespace:Syncfusion.SfRangeSlider.XForms;assembly=Syncfusion.SfRangeSlider.XForms"
+    xmlns:core="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    x:Class="SampleBrowser.Chips.GettingStarted">
+
+  <core:SampleView.Resources>
+        <ResourceDictionary>
+           
+            <Style x:Key="CheckBoxNormalStyle"  TargetType="SyncfusionButton:SfCheckBox">
+                <Setter Property="TextColor" Value="#212121"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="Margin" Value="0,0,8,0"/>
+                <Setter Property="CheckedColor" Value="#4285F4"/>
+            </Style>
+
+            <Style x:Key="SegmentedNormalStyle"  TargetType="SyncfusionButton:SfSegmentedControl">
+                <Setter Property="DisplayMode" Value="Image"/>
+                <Setter Property="CornerRadius" Value="0"/>
+                <Setter Property="SegmentHeight" Value="45"/>
+                <Setter Property="Margin" Value="14,16,33,0"/>
+                <Setter Property="Color" Value="Transparent"/>
+                <Setter Property="FontIconFontColor" Value="Black"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="BorderColor" Value="#EEEEEE"/>
+                <Setter Property="SelectedIndex" Value="0"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="VisibleSegmentsCount" Value="5"/>
+                <Setter Property="SegmentCornerRadius" Value="15"/>
+            </Style>
+            <Style x:Key="EntryNormalStyle"  TargetType="Entry">
+                <Setter Property="TextColor" Value="#007DE4"/>
+                <Setter Property="FontSize" Value="15"/>
+            </Style>
+        </ResourceDictionary>
+    </core:SampleView.Resources>
+    <core:SampleView.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="140"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid>
+                <SyncfusionButton:SfChip   
+                    Grid.Row="0"
+                    FontSize="16"
+                    Padding="8"
+                    BorderWidth="{Binding BorderThickness,Mode=TwoWay}"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    CornerRadius="{Binding CornerRadius,Mode=TwoWay}"
+                    BorderColor="{Binding BorderColorProperty}"
+                    TextColor="{Binding TextColor}"
+                    CloseButtonColor="{Binding TextColor}"
+                    SelectionIndicatorColor="{Binding TextColor}"
+                    BackgroundColor="{Binding BackgroundColor}"
+                    Text="{Binding Text,Mode=TwoWay}"
+                    ShowIcon="{Binding IsShownIcon}"
+                    ShowCloseButton="{Binding IsShownCloseButton}"
+                    ShowSelectionIndicator="{Binding IsShownSelection}"
+                    ImageSource="{Binding Icon}">
+                </SyncfusionButton:SfChip>
+            </Grid>
+            <Grid Grid.Row="1">
+                <ScrollView>
+                    <StackLayout>
+                        <StackLayout Margin="14,0,33,0" Orientation="Horizontal">
+                            <SyncfusionButton:SfCheckBox 
+                                    Text="Icon" 
+                                    Style="{StaticResource CheckBoxNormalStyle}"
+                                    IsChecked="{Binding IsShownIcon}"/>
+                            <SyncfusionButton:SfCheckBox 
+                                    Text="Selection" 
+                                    Style="{StaticResource CheckBoxNormalStyle}"
+                                    IsChecked="{Binding IsShownSelection}"/>
+                            <SyncfusionButton:SfCheckBox 
+                                    Text="Close Icon"
+                                    Style="{StaticResource CheckBoxNormalStyle}"
+                                    IsChecked="{Binding IsShownCloseButton}"/>
+                        </StackLayout>
+
+                        <TextInputLayout:SfTextInputLayout 
+                                    ContainerType="Outlined"
+                                    Margin="14,10,33,0"
+                                    Hint="Name">
+                            <Entry  TextColor="#212121" 
+                                    Style="{StaticResource EntryNormalStyle}"
+                                    Text="{Binding Text,Mode=TwoWay}" />
+                        </TextInputLayout:SfTextInputLayout>
+
+                        <StackLayout>
+                            <tabView:SfTabView 
+                                    VisibleHeaderCount="3"  
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    TabHeight="40" 
+                                    HeightRequest="130">
+                                <tabView:SfTabItem Title="TEXT COLOR" TitleFontSize="12">
+                                    <tabView:SfTabItem.Content>
+                                        <StackLayout HorizontalOptions="CenterAndExpand">
+                                            <SyncfusionButton:SfSegmentedControl 
+                                                ItemsSource="{Binding PrimaryTextColors}" 
+                                                x:Name="TextColorSegment" 
+                                                BorderThickness="3" Color="#f7f7f4"
+                                                SelectedIndex="0"  
+                                                Style="{StaticResource SegmentedNormalStyle}"          
+                                                SelectionChanged="Handle_SelectionChanged" >
+                                                <SyncfusionButton:SfSegmentedControl.SelectionIndicatorSettings>
+                                                    <SyncfusionButton:SelectionIndicatorSettings 
+                                                        Color="#d6d6d6"  
+                                                        Position="Fill">
+                                                    </SyncfusionButton:SelectionIndicatorSettings>
+                                                </SyncfusionButton:SfSegmentedControl.SelectionIndicatorSettings>
+                                            </SyncfusionButton:SfSegmentedControl>
+                                        </StackLayout>
+                                    </tabView:SfTabItem.Content>
+                                </tabView:SfTabItem>
+
+                                <tabView:SfTabItem Title="BACKGROUND" TitleFontSize="12">
+                                    <tabView:SfTabItem.Content>
+                                        <StackLayout>
+                                            <SyncfusionButton:SfSegmentedControl
+                                        BorderThickness="3" Color="#f7f7f4"
+                                        ItemsSource="{Binding PrimaryColors}" 
+                                        x:Name="BackgroundColorSegment"
+                                        Style="{StaticResource SegmentedNormalStyle}"                  
+                                        SelectionChanged="Handle_SelectionChanged"
+                                        SelectedIndex="4"
+                                        >
+                                                <SyncfusionButton:SfSegmentedControl.SelectionIndicatorSettings>
+                                                    <SyncfusionButton:SelectionIndicatorSettings 
+                                                Color="#d6d6d6"
+                                                Position="Fill">
+                                                    </SyncfusionButton:SelectionIndicatorSettings>
+                                                </SyncfusionButton:SfSegmentedControl.SelectionIndicatorSettings>
+                                            </SyncfusionButton:SfSegmentedControl>
+                                        </StackLayout>
+                                    </tabView:SfTabItem.Content>
+                                </tabView:SfTabItem>
+
+                                <tabView:SfTabItem Title="BORDER COLOR" TitleFontSize="12">
+                                    <tabView:SfTabItem.Content>
+                                        <StackLayout>
+                                            <SyncfusionButton:SfSegmentedControl 
+                                            BorderThickness="3" 
+                                            x:Name="BorderColorSegment"  Color="#f7f7f4"
+                                            ItemsSource="{Binding PrimaryColors}"
+                                            Style="{StaticResource SegmentedNormalStyle}"                  
+                                            SelectionChanged="Handle_SelectionChanged"
+                                            SelectedIndex="3" 
+                                            >
+                                                <SyncfusionButton:SfSegmentedControl.SelectionIndicatorSettings>
+                                                    <SyncfusionButton:SelectionIndicatorSettings 
+                                                    Color="#d6d6d6"
+                                                    Position="Fill">
+                                                    </SyncfusionButton:SelectionIndicatorSettings>
+                                                </SyncfusionButton:SfSegmentedControl.SelectionIndicatorSettings>
+                                            </SyncfusionButton:SfSegmentedControl>
+                                        </StackLayout>
+                                    </tabView:SfTabItem.Content>
+                                </tabView:SfTabItem>
+                            </tabView:SfTabView>
+
+                        </StackLayout>
+
+                        <Label Margin="14,0,33,0" FontAttributes="Bold" Text="Border Thickness:"/>
+
+                        <StackLayout Margin="10,0,33,0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="30"/>
+                                </Grid.ColumnDefinitions>
+                                <RangeSlider:SfRangeSlider 
+                                        x:Name="borderSlider" 
+                                        HeightRequest="50"
+                                        Orientation="Horizontal"
+                                        ShowValueLabel="False"
+                                        ShowRange="False"
+                                        KnobColor="#4285F4"
+                                        Minimum="0"
+                                        TrackColor="#E0E0E0"
+                                        TrackSelectionColor="#4285F4"
+                                        Maximum="10"
+                                        SnapsTo="StepValues"
+                                        Value="{Binding BorderThickness}"
+                                        ToolTipPlacement="None"
+                                        TickPlacement="None">
+                                    <RangeSlider:SfRangeSlider.StepFrequency>
+                                        <OnPlatform x:TypeArguments="x:Double">
+                                            <On Platform="iOS" Value="0.1" />
+                                            <On Platform="Android" Value="0.1" />
+                                            <On Platform="UWP" Value="1" />
+                                        </OnPlatform>
+                                    </RangeSlider:SfRangeSlider.StepFrequency>
+                                </RangeSlider:SfRangeSlider>
+                                <Label 
+                                        Text="{Binding StepValue}"  
+                                        Grid.Column="1" 
+                                        HorizontalTextAlignment="Center" 
+                                        VerticalTextAlignment="Center" />
+                            </Grid>
+                        </StackLayout>
+
+                        <Label Margin="14,10,33,0" Text="Corner Radius:" FontAttributes="Bold"/>
+
+
+                        <Grid Margin="14,10,33,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="30"/>
+                            </Grid.ColumnDefinitions>
+                            <Label
+                                        Text="Left" 
+                                        HorizontalTextAlignment="Start"
+                                        VerticalTextAlignment="Center"/>
+                            <RangeSlider:SfRangeSlider 
+                                        x:Name="leftCornerRadius"
+                                        HeightRequest="50"
+                                        TrackColor="#E0E0E0"
+                                        TrackSelectionColor="#4285F4"
+                                        Orientation="Horizontal"
+                                        ShowValueLabel="False"
+                                        ShowRange="False"
+                                        Minimum="0"
+                                        KnobColor="#4285F4"
+                                        Grid.Column="1"
+                                        StepFrequency="2"
+                                        Maximum="{Binding Maximum}"
+                                        Value="{Binding LeftSliderValue}"
+                                        SnapsTo="StepValues"
+                                        ToolTipPlacement="None"
+                                        TickPlacement="None"/>
+                            <Label  
+                                    Text="{Binding Source={x:Reference leftCornerRadius},Path=Value}" 
+                                    Grid.Column="2" 
+                                    HorizontalTextAlignment="Center"
+                                    VerticalTextAlignment="Center"   />
+                        </Grid>
+
+                        <Grid Margin="14,10,33,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="30"/>
+                            </Grid.ColumnDefinitions>
+                                <Label 
+                                    Text="Right"
+                                    HorizontalTextAlignment="Start"
+                                    VerticalTextAlignment="Center"/>
+                                <RangeSlider:SfRangeSlider 
+                                    x:Name="rightCornerRadius"
+                                    HeightRequest="50"
+                                    Grid.Column="1"
+                                    Orientation="Horizontal"
+                                    ShowValueLabel="False"
+                                    ShowRange="False"
+                                    TrackColor="#E0E0E0"
+                                    KnobColor="#4285F4"
+                                    TrackSelectionColor="#4285F4"
+                                    Minimum="0"
+                                    StepFrequency="2"
+                                    Maximum="{Binding Maximum}"
+                                    SnapsTo="StepValues"
+                                    Value="{Binding SliderValue}"
+                                    ToolTipPlacement="None"
+                                    TickPlacement="None"/>
+                                 <Label 
+                                    Text="{Binding Source={x:Reference rightCornerRadius},Path=Value}"  
+                                    HorizontalTextAlignment="Center"
+                                    Grid.Column="2"
+                                    VerticalTextAlignment="Center"/>
+                        </Grid>
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+        </Grid>
+    </core:SampleView.Content>
+</core:SampleView>

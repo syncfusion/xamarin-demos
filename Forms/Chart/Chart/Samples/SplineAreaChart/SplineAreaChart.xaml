@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.SplineAreaChart" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+  <local:SampleView.Content>
+    <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+      <chart:SfChart.Margin>
+        <OnPlatform x:TypeArguments="Thickness" WinPhone="0,0,15,0" />
+      </chart:SfChart.Margin>
+      <chart:SfChart.Title>
+        <chart:ChartTitle Text="Inflation Rate in Percentage"  />
+      </chart:SfChart.Title>
+      <chart:SfChart.BindingContext>
+        <sampleBrowser:SplineAreaSeriesViewModel />
+      </chart:SfChart.BindingContext>
+      <chart:SfChart.PrimaryAxis>
+        <chart:NumericalAxis Interval="2" EdgeLabelsDrawingMode="Shift" ShowMajorGridLines="false">
+          <chart:NumericalAxis.MajorTickStyle>
+            <chart:ChartAxisTickStyle TickSize="8">
+            </chart:ChartAxisTickStyle>
+          </chart:NumericalAxis.MajorTickStyle>
+        </chart:NumericalAxis>
+      </chart:SfChart.PrimaryAxis>
+      <chart:SfChart.SecondaryAxis>
+        <chart:NumericalAxis Maximum="4" Minimum="0" Interval="1" >
+          <chart:NumericalAxis.LabelStyle>
+            <chart:ChartAxisLabelStyle x:Name="secondaryAxisLabelStyle"/>
+          </chart:NumericalAxis.LabelStyle>
+          <chart:NumericalAxis.AxisLineStyle>
+            <chart:ChartLineStyle StrokeWidth="0">
+            </chart:ChartLineStyle>
+          </chart:NumericalAxis.AxisLineStyle>
+          <chart:NumericalAxis.MajorTickStyle>
+            <chart:ChartAxisTickStyle TickSize="0" />
+          </chart:NumericalAxis.MajorTickStyle>
+        </chart:NumericalAxis>
+      </chart:SfChart.SecondaryAxis>
+      <chart:SfChart.Legend>
+        <chart:ChartLegend IconHeight="14" IconWidth="14"  DockPosition="Bottom" ToggleSeriesVisibility="True" />
+      </chart:SfChart.Legend>
+      <chart:SfChart.ColorModel>
+        <chart:ChartColorModel Palette="Natural" />
+      </chart:SfChart.ColorModel>
+      <chart:SfChart.Series>
+        <chart:SplineAreaSeries Opacity="0.5" Label="US" LegendIcon="SeriesType" EnableTooltip="true" ItemsSource="{Binding SplineAreaData1}" XBindingPath="Value" YBindingPath="Size" EnableAnimation="true" />
+        <chart:SplineAreaSeries Opacity="0.5" Label="France" LegendIcon="SeriesType" EnableTooltip="true" ItemsSource="{Binding SplineAreaData2}" XBindingPath="Value" YBindingPath="Size" EnableAnimation="true" />
+        <chart:SplineAreaSeries Opacity="0.5" Label="Germany" LegendIcon="SeriesType" EnableTooltip="true" ItemsSource="{Binding SplineAreaData3}" XBindingPath="Value" YBindingPath="Size" EnableAnimation="true" />
+      </chart:SfChart.Series>
+    </chart:SfChart>
+  </local:SampleView.Content>
+</local:SampleView>

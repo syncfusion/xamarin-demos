@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Samples>
+  <Sample Title="RadioButton" Name="RadioButton" SearchTags="SfRadioButton, RadioButton, Buttons" Description = "Enables the user to select a single option from a group of choices when paired with other RadioButton controls." />
+</Samples>

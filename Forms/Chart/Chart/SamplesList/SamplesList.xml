@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Samples>
+    <SampleGroup Title="Types" >
+        <Sample Title="Line" SearchTags="continuous, linear" Name="LineChart" ImageSelected="Line_selected.png" Icon="Line.png" />
+        <Sample Title="Step Line" SearchTags="continuous, linear" Name="StepLineChart" Icon="StepLine.png" ImageSelected="StepLine_selected.png" />
+        <Sample Title="Bar" SearchTags="continuous" Name="BarChart" Icon="Bar.png" ImageSelected="Bar_selected.png" />
+        <Sample Title="Area" SearchTags="continuous" Name="AreaChart" Icon="Area.png" ImageSelected="Area_selected.png" />
+        <Sample Title="Spline" SearchTags="continuous, linear" Name="SplineChart" Icon="Spline.png" ImageSelected="Spline_selected.png"  />
+        <Sample Title="Column" SearchTags="bar, rectangle" Name="ColumnChart" Icon="Column.png" ImageSelected="Column_selected.png" />
+        <Sample Title="Histogram" SearchTags="histogram" Name="HistogramChart" Icon="Column.png" ImageSelected="Column_selected.png" />
+        <Sample Title="Step Area" SearchTags="continuous" Name="StepAreaChart" Icon="StepArea.png" ImageSelected="StepArea_selected.png" />
+        <Sample Title="Spline Area" SearchTags="continuous" Name="SplineAreaChart" Icon="SplineArea.png" ImageSelected="SplineArea_selected.png" />
+        <Sample Title="Pie" SearchTags="circle" Name="PieChart" Icon="Pie.png" ImageSelected="Pie_selected.png"/>
+        <Sample Title="Semi Pie" SearchTags="circle" Name="SemiPieChart" Icon="SemiPie.png" ImageSelected="SemiPie_selected.png" />
+        <Sample Title="Doughnut" SearchTags="circle" Name="DoughnutChart" Icon="Doughnut.png" ImageSelected="Doughnut_selected.png" />
+        <Sample Title="Semi Doughnut" SearchTags="circle" Name="SemiDoughnutChart" Icon="SemiDoughnut.png" ImageSelected="SemiDoughnut_selected.png" />
+        <Sample Title="Pyramid" Name="PyramidChart" Icon="Pyramid.png" ImageSelected="Pyramid_selected.png" />
+        <Sample Title="Funnel" Name="FunnelChart" Icon="Funnel.png" ImageSelected="Funnel_selected.png" />
+        <Sample Title="Bubble" SearchTags="circle" Name="BubbleChart" Icon="Bubble.png" ImageSelected="Bubble_selected.png" />
+        <Sample Title="Scatter" SearchTags="circle" Name="ScatterChart" Icon="Scatter.png" ImageSelected="Scatter_selected.png" />
+        <Sample Title="Waterfall" Name="WaterfallChart" Icon="Column.png" ImageSelected="Column_selected.png" />
+        <Sample Title="Range Column" SearchTags="bar, rectangle" Name="RangeColumnChart" Icon="RangeColumn.png" ImageSelected="RangeColumn_selected.png" />
+        <Sample Title="Range Bar" SearchTags="bar, rectangle" Name="RangeBarChart" Icon="RangeColumn.png" ImageSelected="RangeBar_selected.png" />
+        <Sample Title="Range Area" Name="RangeAreaChart" Icon="RangeArea.png" ImageSelected="RangeArea_selected.png" />
+        <Sample Title="Spline Range Area" Name="SplineRangeAreaChart" Icon="RangeArea.png" ImageSelected="RangeArea_selected.png" />
+        <Sample Title="Candle" SearchTags="financial" Name="CandleChart" Icon="Candle.png" ImageSelected="Candle_selected.png" />
+        <Sample Title="OHLC" SearchTags="financial" Name="OHLCChart" Icon="OHLC.png" ImageSelected="OHLC_selected.png" />
+        <Sample Title="Polar" Name="PolarChart" Icon="Polar.png" ImageSelected="Polar_selected.png" />
+        <Sample Title="Radar" Name="RadarChart" Icon="Radar.png" ImageSelected="Radar_selected.png" />
+        <Sample Title="Stacked Line" Name="StackedLineChart" />
+        <Sample Title="100% Stacked Line" Name="StackedLine100Chart" />
+        <Sample Title="Stacked Column" SearchTags="bar, rectangle" Name="StackedColumnChart" Icon="StackedColumn.png" ImageSelected="StackedColumn_selected.png" />
+        <Sample Title="100% Stacked Column" SearchTags="bar, rectangle" Name="StackedColumn100Chart" Icon="Hun_centStackedColumn.png" ImageSelected="Hun_centStackedColumn_selected.png" />
+        <Sample Title="Stacked Bar" SearchTags="bar, rectangle" Name="StackedBarChart" Icon="StackedBar.png" ImageSelected="StackedBar_selected.png" />
+        <Sample Title="100% Stacked Bar" SearchTags="bar, rectangle" Name="StackedBar100Chart" Icon="Hun_centStackedBar.png" ImageSelected="Hun_centStackedBar_selected.png" />
+        <Sample Title="Stacked Area" Name="StackedAreaChart" Icon="StackedArea.png" ImageSelected="StackedArea_selected.png" />
+        <Sample Title="100% Stacked Area" Name="StackedArea100Chart" Icon="Hun_centStackedArea.png" ImageSelected="Hun_centStackedArea_selected.png" />
+    </SampleGroup>
+    
+    <SampleGroup Title="Axis">
+        <Sample SearchTags="string" Name="CategoryAxis" Description="This sample showcases the use of category axis in chart.Category Axis is an indexed based axis that plots values based on its index in the data source." Title="Category Axis" EnableLoadingIndicator="True" />
+        <Sample Name="NumericAxis" Description="This sample showcases the use of numerical axis in chart. Numerical axis is used to plot numeric values." Title="Numerical Axis" EnableLoadingIndicator="True" />
+        <Sample Name="LogarithmicAxis" Description="This sample showcases the use of logarithmic axis in chart." Title="Logarithmic Axis" EnableLoadingIndicator="True" />
+        <Sample Name="DateTimeAxis" Description="This sample showcases the use of date time axis" Title="DateTime Axis" EnableLoadingIndicator="True" />
+        <Sample Name="MultipleAxes" Description="This sample showcases the use of multiple axes in chart." Title="Multiple Axes" EnableLoadingIndicator="True" />
+        <Sample SearchTags="graph" Name="AxisCrossing" Description="Axis crossing feature changes the location at which the x-axis crosses the y-axis and vice versa." Title="Axis Crossing" EnableLoadingIndicator="True" />
+    </SampleGroup>
+    
+    <SampleGroup Title="Interaction">
+        <Sample SearchTags="crosshair, interection" Name="Trackball" Description="This sample showcases the trackball feature. Trackball displays the tooltip for the data points that are closer to the point where you touch on the chart area." Title="Trackball" EnableLoadingIndicator="True" />
+        <Sample SearchTags="pan, interection" Name="ZoomingAndPanning" Description="This sample showcases the zooming and panning capablities of chart." Title="Zooming and panning" EnableLoadingIndicator="True" />
+        <Sample SearchTags="interection" Name="Tooltip" Description="This sample showcases the tooltip capablities in chart. Tooltip feature is used to show information about the segment when you tap on the segment." Title="Tooltip" EnableLoadingIndicator="True" />
+        <Sample SearchTags="fill, interection" Name="DataPointSelection" Description="Selection aloows you to highlight a data point. You can select a data point by tapping on it." Title="Data Point Selection" EnableLoadingIndicator="True"/>
+    </SampleGroup>
+
+    <Sample SearchTags="multi circle" Platforms="Android,iOS,UWP" Name="MultipleCircle" Description="This sample showcases the MultiCircle feature. " Title="Stacked Doughnut" EnableLoadingIndicator="True"/>
+    <Sample Title="Trendlines" SearchTags="trendline, linear" Name="ChartTrendlines" ImageSelected="Line_selected.png" IsNew="True" Icon="Line.png"  Description="This sample showcases all types of trendlines." EnableLoadingIndicator="True"/>
+    <Sample SearchTags="legend, template" Name="Legend" Description="This sample showcases the Legend feature. " Title="Legend Template" EnableLoadingIndicator="True"/>
+    <Sample SearchTags="gradient, colors" Name="GradientChart" Description="This sample showcases the gradient feature. " Title="Gradient Color" EnableLoadingIndicator="True" />
+    <Sample SearchTags="note" Name="Annotations" Description="Annotations are used to display metadata about a chart or series at a specific point of interest in the plotting area." Title="Annotations" EnableLoadingIndicator="True" />
+    <Sample SearchTags="servive, scroll, auto" Name="LiveUpdate" Description="This Sample illustrates the performance of SfChart in real time update scenario." Title="Live Update" EnableLoadingIndicator="True" />
+    <Sample Name="StripLines" Description="Strip lines are used to highlight specific range in the chart. They can be horizontal or vertical and also be made to optionally repeat at specific intervals." Title="Strip Lines" EnableLoadingIndicator="True" />
+    <Sample SearchTags="inverse" Name="VerticalChart" Description="This sample showcases the vertical charts feature." Title="Vertical Chart" EnableLoadingIndicator="True" />
+    <Sample SearchTags="adornment, symbol" Name="DataMarkerCustomization" Description="This sample showcases the customization of data markers. Data markers are used to provide information about the data points to the user." Title="Data Marker" EnableLoadingIndicator="True" />
+    <Sample SearchTags="live" Name="AutoScrolling" Description="This sample shows the automatic scrolling of axis during real time updates." Title="Auto Scrolling" EnableLoadingIndicator="True"/>
+    <Sample Name="TechnicalIndicator" Description="Technical indicators are the base for technical analysis which is used to determine the future of financial stock or economic trends." Title="Technical Indicator" EnableLoadingIndicator="True" />
+</Samples>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfNavigationDrawer.Archive_Default">
+    <ContentView.Content>
+        <Grid x:Name="headingGrid" BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid BackgroundColor="#00a0e1" >
+                <Image x:Name="headerGradiant" HeightRequest="50" Aspect="AspectFill" />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Button FontSize="20" x:Name="btn" HeightRequest="28" Grid.Column="0" Clicked="Btn_Clicked" HorizontalOptions="Start" WidthRequest="28" />
+                    <Label x:Name="headerLabel" FontSize="20" Grid.Column="1" HorizontalTextAlignment="Center" XAlign="Center" HorizontalOptions="Center" VerticalTextAlignment="Center" HeightRequest="50" TextColor="White" />
+                    <Button FontSize="16" Grid.Column="2" x:Name="recentButton" BackgroundColor="#00a0e1" HeightRequest="40" Clicked="Btn_Clicked" HorizontalOptions="End" WidthRequest="40" TextColor="White"/>
+                </Grid>
+            </Grid>
+            <StackLayout Grid.Row="1" Padding="0,-5,0,0" BackgroundColor="#f0f0f0">
+                <ListView x:Name="listView" ItemTapped="Handle_ItemTapped" ItemsSource="{Binding ViewCollection}" BackgroundColor="#f0f0f0" SeparatorVisibility="None" HasUnevenRows="true" >
+                    <ListView.RowHeight>
+                        <OnPlatform x:TypeArguments="x:Int32">
+                            <On Platform="Android, iOS">80</On>
+                            <On Platform="UWP">105</On>
+                        </OnPlatform>
+                    </ListView.RowHeight>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Margin="5,5,5,0" Padding="5" BackgroundColor="White">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="2*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="7*" />
+                                            <ColumnDefinition Width="3*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Label x:Name="nameLabel" Grid.Column="0" Margin="5,0,0,0" Text="{Binding Sender}" FontAttributes="{Binding FontAttribute}" FontSize="15" TextColor="#545659" HorizontalTextAlignment="Start" HorizontalOptions="Start" />
+                                        <Label x:Name="dateLabel" Grid.Column="1" Margin="0,0,5,0" YAlign="Start" FontSize="12" FontAttributes="{Binding FontAttribute}" Text="{Binding Date}" TextColor="#006bcd" XAlign="End" HorizontalOptions="End" HorizontalTextAlignment="End" />
+                                    </Grid>
+                                    <Label x:Name="subjectLabel" Margin="5,0,0,0" Grid.Row="1" Text="{Binding Subject}" FontSize="13" FontAttributes="{Binding FontAttribute}" HorizontalTextAlignment="Start" TextColor="{Binding SubjectColor}"/>
+                                    <Label x:Name="descriptionLabel" Margin="5,0,0,0" Grid.Row="2" Text="{Binding Content}" FontSize="12" HorizontalTextAlignment="Start" TextColor="#545659"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

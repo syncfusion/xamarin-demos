@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:rotate="clr-namespace:Syncfusion.SfRotator.XForms;assembly=Syncfusion.SfRotator.XForms" xmlns:radialMenu="clr-namespace:Syncfusion.SfRadialMenu.XForms;assembly=Syncfusion.SfRadialMenu.XForms" x:Class="SampleBrowser.SfRadialMenu.Customization_RadialMenu" xmlns:icon="clr-namespace:SampleBrowser.SfRadialMenu">
+  <local:SampleView.Resources>
+    <ResourceDictionary>
+      <icon:CustomizationFontConversion x:Key="CustomizationFontConversion" />
+    </ResourceDictionary>
+  </local:SampleView.Resources>
+	<local:SampleView.Content>
+		<ScrollView>
+		<Grid BackgroundColor="White">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="40" />
+				<RowDefinition Height="*" x:Name="rowHeight"/>
+				<RowDefinition Height="0.5" />
+				<RowDefinition Height="180" />
+			</Grid.RowDefinitions>
+			<Grid Grid.Row="0" BackgroundColor="Black" Padding="10,0,0,0">
+				<Label Text="Choose Team Color" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Center" VerticalTextAlignment="Center" TextColor="White" FontFamily="Calibri" FontSize="21" />
+			</Grid>
+			<Grid Grid.Row="1" Padding="10,0,10,0">
+				<rotate:SfRotator x:Name="sfRotator" NavigationDelay="10" ItemsSource="{Binding RotatorCollection,Mode=TwoWay}" SelectedIndex="0" NavigationDirection="Horizontal" NavigationStripMode="Dots" BackgroundColor="#ececec" NavigationStripPosition="Bottom">
+					<rotate:SfRotator.ItemTemplate>
+						<DataTemplate>
+							<Grid BackgroundColor="White">
+								<Grid.RowDefinitions>
+                  <RowDefinition >
+                    <RowDefinition.Height>
+                      <OnPlatform x:TypeArguments="GridLength" iOS="1.3*" Android="1*" WinPhone="2.3*" />
+                    </RowDefinition.Height>
+                  </RowDefinition>
+									<RowDefinition Height="*" />
+									<RowDefinition Height="30" />
+								</Grid.RowDefinitions>
+								<Grid Grid.Row="0">
+									<Label Text="{Binding TeamName}" FontAttributes="Bold" Margin="0,0,5,0" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" x:Name="teamLabel" VerticalOptions="Start" TextColor="{Binding TeamColor,Mode=TwoWay}" FontFamily="Calibri" FontSize="19" />
+									<Label x:Name="teamUSAMember" TextColor="{Binding TeamColor,Mode=TwoWay}" VerticalTextAlignment="End" VerticalOptions="End" HorizontalTextAlignment="Center" Text="" FontSize="85" FontFamily="{Binding Converter={StaticResource CustomizationFontConversion},ConverterParameter=RadialMenu}">
+										<!--<Label.FontFamily>-->
+											<!--<OnPlatform x:TypeArguments="x:String" iOS="RadialMenu" Android="radialmenu_RadialMenu.ttf#RadialMenu" WinPhone="radialmenu_RadialMenu.ttf#RadialMenu" />-->
+										<!--</Label.FontFamily>-->
+									</Label>
+								</Grid>
+								<Grid Grid.Row="1">
+									<Grid.RowDefinitions>
+										<RowDefinition Height="*" />
+									</Grid.RowDefinitions>
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="*" />
+										<ColumnDefinition Width="0.5" />
+										<ColumnDefinition Width="*" />
+									</Grid.ColumnDefinitions>
+									<StackLayout Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" Margin="20,0,0,0">
+										<Label Text="FIFA RANKING" TextColor="#666666" x:Name="fifaLabel" FontFamily="Calibri" FontSize="12" />
+										<Grid HorizontalOptions="Center" VerticalOptions="Center">
+											<Grid.RowDefinitions>
+												<RowDefinition Height="auto" />
+												<RowDefinition Height="auto" />
+												<RowDefinition Height="auto" />
+											</Grid.RowDefinitions>
+											<Grid.ColumnDefinitions>
+												<ColumnDefinition Width="2*" />
+												<ColumnDefinition Width="*" />
+											</Grid.ColumnDefinitions>
+											<Label Text="Current" FontSize="12" TextColor="#333333" Grid.Row="0" Grid.Column="0" />
+											<Label Text="{Binding FIFACurrent}" TextColor="#333333" FontSize="12" Grid.Row="0" Grid.Column="1" />
+											<Label Text="Highest" FontSize="12" TextColor="#333333" Grid.Row="1" Grid.Column="0" />
+											<Label Text="{Binding FIFAHightest}" TextColor="#333333" FontSize="12" Grid.Row="1" Grid.Column="1" />
+											<Label Text="Lowest" FontSize="12" TextColor="#333333" Grid.Row="2" Grid.Column="0" />
+											<Label Text="{Binding FIFALowest}" TextColor="#333333" FontSize="12" Grid.Row="2" Grid.Column="1" />
+										</Grid>
+									</StackLayout>
+									<BoxView WidthRequest="1" Grid.Column="1" BackgroundColor="#e5e0e0" />
+									<StackLayout Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" Margin="20,0,0,0">
+										<Label Text="ELO RANKING" TextColor="#666666" x:Name="eloLabel" FontFamily="Calibri" FontSize="12" />
+										<Grid HorizontalOptions="Center" VerticalOptions="Center">
+											<Grid.RowDefinitions>
+												<RowDefinition Height="auto" />
+												<RowDefinition Height="auto" />
+												<RowDefinition Height="auto" />
+											</Grid.RowDefinitions>
+											<Grid.ColumnDefinitions>
+												<ColumnDefinition Width="2*" />
+												<ColumnDefinition Width="*" />
+											</Grid.ColumnDefinitions>
+											<Label Text="Current" TextColor="#333333" FontSize="12" Grid.Row="0" Grid.Column="0" />
+											<Label Text="{Binding EloCurrent}" TextColor="#333333" FontSize="12" Grid.Row="0" Grid.Column="1" />
+											<Label Text="Highest" FontSize="12" TextColor="#333333" Grid.Row="1" Grid.Column="0" />
+											<Label Text="{Binding EloHightest}" TextColor="#333333" FontSize="12" Grid.Row="1" Grid.Column="1" />
+											<Label Text="Lowest" FontSize="12" TextColor="#333333" Grid.Row="2" Grid.Column="0" />
+											<Label Text="{Binding EloLowest}" TextColor="#333333" FontSize="12" Grid.Row="2" Grid.Column="1" />
+										</Grid>
+									</StackLayout>
+								</Grid>
+								<StackLayout Grid.Row="2" />
+							</Grid>
+						</DataTemplate>
+					</rotate:SfRotator.ItemTemplate>
+				</rotate:SfRotator>
+			</Grid>
+			<Grid Grid.Row="2" Padding="10,0,10,0">
+				<BoxView HeightRequest="1" BackgroundColor="#e5e0e0" />
+			</Grid>
+			<Grid Grid.Row="3" x:Name="grid1" BackgroundColor="White" Padding="10,0,10,0">
+				<radialMenu:SfRadialMenu x:Name="teamUSARadialMenu" CenterButtonRadius="30" CenterButtonBackgroundColor="#383838" RimColor="#FFCDCBCE" SelectionColor="Gray" CenterButtonBorderColor="#ffffff" CenterButtonText="" CenterButtonTextColor="White" CenterButtonFontFamily="{Binding Converter={StaticResource CustomizationFontConversion}}" CenterButtonFontSize="18"
+					CenterButtonBackText="" CenterButtonBackTextColor="White" CenterButtonBackFontFamily="{Binding Converter={StaticResource CustomizationFontConversion}}" CenterButtonBackFontSize="18" EnableCenterButtonAnimation="false" IsDragEnabled="false" RimRadius="75" AnimationDuration="300" SeparatorThickness="1">
+					<radialMenu:SfRadialMenu.Items>
+						<radialMenu:SfRadialMenuItem BackgroundColor="#00cc1d">
+							<radialMenu:SfRadialMenuItem.Items>
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#00440a" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#00600f" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#037715" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#00cc1d" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#15c631" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#29e547" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#44e25d" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#6ee580" />
+							</radialMenu:SfRadialMenuItem.Items>
+						</radialMenu:SfRadialMenuItem>
+						<radialMenu:SfRadialMenuItem BackgroundColor="#c65619">
+							<radialMenu:SfRadialMenuItem.Items>
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#c65619" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#d6662a" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#cc7141" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#e08555" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#ed9465" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#db946f" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#f2af8c" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#fcbf9f" />
+							</radialMenu:SfRadialMenuItem.Items>
+						</radialMenu:SfRadialMenuItem>
+						<radialMenu:SfRadialMenuItem BackgroundColor="#F17525">
+							<radialMenu:SfRadialMenuItem.Items>
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#f76404" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#e25b02" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#ed6912" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#ea6e1c" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#ed792d" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#e8803c" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#ed8e50" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#e29663" />
+							</radialMenu:SfRadialMenuItem.Items>
+						</radialMenu:SfRadialMenuItem>
+						<radialMenu:SfRadialMenuItem BackgroundColor="#0bb4c3">
+							<radialMenu:SfRadialMenuItem.Items>
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#006d77" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#019aa8" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#0bb4c3" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#22bdcc" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#25c2d1" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#47c6d3" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#63cdd8" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#7fd0d8" />
+							</radialMenu:SfRadialMenuItem.Items>
+						</radialMenu:SfRadialMenuItem>
+						<radialMenu:SfRadialMenuItem BackgroundColor="#0051d4">
+							<radialMenu:SfRadialMenuItem.Items>
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#013589" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#0348b7" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#0051d4" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#2370ed" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#3a7ce8" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#659cf7" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#6a91d1" />
+								<radialMenu:SfRadialMenuItem ItemTapped="Handle_ItemTapped" BackgroundColor="#84a7e0" />
+							</radialMenu:SfRadialMenuItem.Items>
+						</radialMenu:SfRadialMenuItem>
+					</radialMenu:SfRadialMenu.Items>
+				</radialMenu:SfRadialMenu>
+			</Grid>
+		</Grid>
+	   </ScrollView>
+	</local:SampleView.Content>
+</local:SampleView>

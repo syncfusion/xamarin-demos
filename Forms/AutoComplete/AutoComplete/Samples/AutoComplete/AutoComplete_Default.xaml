@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+				  xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:auto="clr-namespace:SampleBrowser.SfAutoComplete"
+				  xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+                  	xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms" 
+                  x:Class="SampleBrowser.SfAutoComplete.AutoComplete_Default">
+  <local:SampleView.Content>
+   <ScrollView>	
+    <Grid x:Name="sampleLayout" Padding="10">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <Label x:Name="jobSearchLabel" Text="Job Search" Grid.Row="0" FontSize="20" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="Center" />
+      <StackLayout Orientation="Vertical" Grid.Row="1">
+        <StackLayout x:Name="countryAutoCompleteLayout">
+			<inputLayout:SfTextInputLayout x:Name="countryTextInputLayout" Hint="Country" ContainerType="Filled" Margin="0,-5,0,0">
+							<auto:AutoCompleteRenderer Watermark="Enter Country Name" PopupDelay="0" WatermarkColor="#adb2bb" TextSize="16" x:Name="countryAutoComplete"  SuggestionMode="StartsWith" AutoCompleteMode="Suggest" HeightRequest="60" MinimumPrefixCharacters="1" MaximumDropDownHeight="150"
+               HighlightedTextColor="Red" TextHighlightMode="FirstOccurrence" AutoCompleteSource="{Binding }" DropDownItemHeight="35">
+                                <auto:AutoCompleteRenderer.HeightRequest>
+                                    <OnPlatform
+                                        x:TypeArguments="x:Double"
+                                        Android="60"
+                                        WinPhone="60"
+                                        iOS="32" />
+                                </auto:AutoCompleteRenderer.HeightRequest>
+                            </auto:AutoCompleteRenderer>
+			</inputLayout:SfTextInputLayout>
+        </StackLayout>
+      </StackLayout>
+      <StackLayout Orientation="Vertical" Grid.Row="2">
+        <StackLayout x:Name="jobAutoCompleteLayout">
+			<inputLayout:SfTextInputLayout x:Name="jobTextInputLayout" Hint="Job Field" ContainerType="Filled" Margin="0,-10,0,0">
+							<auto:AutoCompleteRenderer Watermark="Enter 'B' , 'S' , 'M' to start" PopupDelay="0" WatermarkColor="#adb2bb" TextSize="16" x:Name="jobFieldAutoComplete" SuggestionMode="Contains" AutoCompleteMode="Suggest" HeightRequest="60" MinimumPrefixCharacters="1" MaximumDropDownHeight="150"
+               HighlightedTextColor="Red" TextHighlightMode="MultipleOccurrence" AutoCompleteSource="{Binding }" DropDownItemHeight="35">
+                                <auto:AutoCompleteRenderer.HeightRequest>
+                                    <OnPlatform
+                                        x:TypeArguments="x:Double"
+                                        Android="60"
+                                        WinPhone="60"
+                                        iOS="32" />
+                                </auto:AutoCompleteRenderer.HeightRequest>
+                            </auto:AutoCompleteRenderer>
+			</inputLayout:SfTextInputLayout>
+						
+        </StackLayout>
+      </StackLayout>
+      <StackLayout Orientation="Vertical" Grid.Row="3">
+			<inputLayout:SfTextInputLayout
+                        ContainerType="Filled"
+                        Margin="0,-10,0,0"
+                        Hint="Experience">
+				<auto:AutoCompleteRenderer x:Name="experienceAutoComplete" ShowSuggestionsOnFocus="true" SelectionChanged="Handle_SelectionChanged">
+                            <auto:AutoCompleteRenderer.HeightRequest>
+                                    <OnPlatform
+                                        x:TypeArguments="x:Double"
+                                        Android="60"
+                                        WinPhone="60"
+                                        iOS="30" />
+                                </auto:AutoCompleteRenderer.HeightRequest>
+                            </auto:AutoCompleteRenderer>
+			</inputLayout:SfTextInputLayout>
+		</StackLayout>
+      <StackLayout Padding="0,20,0,0" x:Name="buttonaStack" Grid.Row="4">
+        <Button x:Name="searchButton" VerticalOptions="Center" BorderWidth="1"  Text="Search" FontSize="Medium" Clicked="Handle_Clicked" BorderColor="#007aff" TextColor="#007aff" />
+      </StackLayout>
+    </Grid>
+   </ScrollView>
+  </local:SampleView.Content>
+  <local:SampleView.PropertyView>
+
+    <Grid x:Name="optionLayout" RowSpacing="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+      <StackLayout  Grid.Row="0">
+                <Label x:Name="suggestionModeLabel" Text="Suggestion Mode" FontSize="Small"  YAlign="End" TextColor="#666666" />
+                <Picker x:Name="suggestionModepicker"  SelectedIndex="1" BackgroundColor="White" TextColor="#333333"/>
+            </StackLayout>
+      <StackLayout  Grid.Row="1">
+                <Label x:Name="autoCompleteModeLabel" Text="AutoComplete Mode" FontSize="Small" YAlign="End" TextColor="#666666" />
+        <StackLayout x:Name="pickerLayout2">
+          <Picker x:Name="autoCompleteModepicker"  SelectedIndex="1" BackgroundColor="White" TextColor="#333333"/>
+        </StackLayout>
+      </StackLayout>
+      <Grid Grid.Row="2" >
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" x:Name="minprefixcolumn1" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+         <Label TextColor="#666666" x:Name="minimumPrefixCharacterLabel" Text="Minimum Prefix Character" FontSize="Small" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" FontFamily="Helvetica"  />
+        <Entry x:Name="minPrefixCharacterText" HorizontalOptions="End" Grid.Column="1" Text="1" WidthRequest="150" VerticalOptions="Center" TextColor="#333333"/>
+      </Grid>
+            <Grid Grid.Row="3"  >
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" x:Name="maxdropdowncolumn1" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label TextColor="#666666" x:Name="maximumDropDownHeightLabel" Text="Maximum Dropdown Height" FontSize="Small" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" FontFamily="Helvetica"  />
+        <Entry x:Name="maximumDropDownHeightText" HorizontalOptions="End" Grid.Column="1" Text="150" WidthRequest="150" VerticalOptions="Center" TextColor="#333333"/>
+      </Grid>
+      <Grid Grid.Row="4">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" x:Name="popupdelaycolumn1" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+                <Label TextColor="#666666" x:Name="popupDelayLabel" Text="Popup Delay" FontSize="Small" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" FontFamily="Helvetica"  />
+        <Entry x:Name="PopupDelayText" HorizontalOptions="End" Grid.Column="1" Text="0" WidthRequest="150" VerticalOptions="Center" TextColor="#333333"/>
+      </Grid>
+    </Grid>
+
+  </local:SampleView.PropertyView>
+</local:SampleView>

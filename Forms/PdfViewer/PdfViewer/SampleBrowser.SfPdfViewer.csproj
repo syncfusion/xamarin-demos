@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk">
+   <PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute> 
+   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Encrypted Document.pdf" />
+    <None Remove="Assets\F# Succinctly.pdf" />
+    <None Remove="Assets\FormFillingDocument.pdf" />
+    <None Remove="Assets\GIS Succinctly.pdf" />
+    <None Remove="Assets\HTTP Succinctly.pdf" />
+    <None Remove="Assets\JavaScript Succinctly.pdf" />
+    <None Remove="Assets\Xamarin Forms Succinctly.pdf" />
+    <None Remove="SamplesList\SamplesList.xml" />
+	<None Remove="SampleBrowser.SfPdfViewer.Props" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Encrypted Document.pdf" />
+    <EmbeddedResource Include="Assets\F# Succinctly.pdf" />
+    <EmbeddedResource Include="Assets\FormFillingDocument.pdf" />
+    <EmbeddedResource Include="Assets\GIS Succinctly.pdf" />
+    <EmbeddedResource Include="Assets\HTTP Succinctly.pdf" />
+    <EmbeddedResource Include="Assets\JavaScript Succinctly.pdf" />
+    <EmbeddedResource Include="Assets\Xamarin Forms Succinctly.pdf" />
+    <EmbeddedResource Include="SamplesList\SamplesList.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SampleBrowser.Core" Version="18.1.0.52" />
+	<PackageReference Include="Syncfusion.Xamarin.Core" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPdfViewer" Version="18.1.0.52" />
+	<PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="18.1.0.52" />
+	<PackageReference Include="Syncfusion.Xamarin.SfRangeSlider" Version="18.1.0.52" />
+	<PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="18.1.0.52" />
+	<PackageReference Include="Syncfusion.Xamarin.SfPopupLayout" Version="18.1.0.52" />
+	<PackageReference Include="System.ComponentModel" Version="4.3.0" />
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="MainPage.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+</Project>

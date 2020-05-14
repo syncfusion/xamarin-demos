@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:core="clr-namespace:SampleBrowser.SfAutoComplete"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:listview="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms" 
+    xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms" 
+    xmlns:icon="clr-namespace:SampleBrowser.SfAutoComplete"
+    x:Class="SampleBrowser.SfAutoComplete.MultiSelect">
+   
+        <Grid.Resources>
+            <ResourceDictionary>
+            <icon:ImageSourceToStringConverter x:Key="imagesourcetoimage"/>
+                  <OnPlatform x:TypeArguments="x:String" x:Key="customfontfamily" iOS="Segoe MDL2 Assets" Android="Segoe MDL2 Assets.ttf" WinPhone="Segoe_MDL2_Assets.ttf#Segoe MDL2 Assets"  />
+          <core:StringToColorConverter x:Key="stringtocolor"/>
+            <icon:AutoCompleteImageConverter x:Key="AutoCompleteImageConverter" />
+            <Style  TargetType="autocomplete:SfAutoComplete">
+                <Setter Property="DisplayMemberPath" Value="ContactName"/>
+                <Setter Property="MultiSelectMode" Value="Token"/>
+                <Setter Property="DropDownItemHeight" Value="75"/>
+                <Setter Property="TokensWrapMode" Value="Wrap"/>
+              <Setter Property="DropDownCornerRadius" Value="4"/>
+                <Setter Property="DataSource" Value="{Binding ContactData}"/>
+                <Setter Property="ImageMemberPath" Value="ContactImage"/>
+                <Setter Property="MaximumDropDownHeight" Value="200"/>       
+                <Setter Property="ItemTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <StackLayout    Padding="15,10"
+                                        BackgroundColor="Transparent"
+                                        VerticalOptions="CenterAndExpand"
+                                        HorizontalOptions="StartAndExpand"
+                                        Orientation="Horizontal">
+                                <Grid>
+                                    <Image Source="{Binding ContactType,Converter={StaticResource AutoCompleteImageConverter}}"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"
+                                   HeightRequest="50"
+                                   WidthRequest="50"/>
+                                    <Image Source="{Binding ContactImage,Converter={StaticResource AutoCompleteImageConverter}}"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"
+                                   HeightRequest="46"
+                                   WidthRequest="46"/>
+                                </Grid>
+                                <StackLayout    Margin="10,5" 
+                                            Orientation="Vertical">
+                                    <Label Text="{Binding ContactName}"  FontSize="18" />
+                                    <Label Text="{Binding ContactNumber}"  FontSize="12" />
+                                </StackLayout>
+                            </StackLayout>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style TargetType="autocomplete:TokenSettings" x:Key="tokensettings" >
+                <Setter Property="DeleteButtonColor" Value="Red"/>
+            </Style>
+        </ResourceDictionary>
+        </Grid.Resources>
+         <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid BackgroundColor="#2A4D72"
+              HeightRequest="50">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Margin="10,0"
+                   Text="Email - Compose"
+                   FontAttributes="Bold"
+                   VerticalOptions="Center"
+                   TextColor="White"/>
+            <Label Grid.Column="1"
+                   Margin="10,0"
+                   Text="ATTACH"
+                   FontAttributes="Bold"
+                   VerticalOptions="Center"
+                   TextColor="White"/>
+            <Label Grid.Column="2"
+                   Text="SEND"
+                   Margin="10,0"
+                   FontAttributes="Bold"
+                   VerticalOptions="Center"
+                   TextColor="White"/>
+        </Grid>
+        <Grid Grid.Row="1"
+              Margin="10,0,10,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Label Text="To"
+                   FontSize="20"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
+            <Label Grid.Row="1"
+                   FontSize="20"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                Text="Cc"/>
+            <Label Grid.Row="2"
+                   FontSize="20"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                Text="Bcc"/>
+            <autocomplete:SfAutoComplete x:Name="autocomplete" Grid.Column="1" 
+                                         IsFocused="{Binding IsToFocused , Mode=TwoWay}"
+                                         AutoCompleteMode="Suggest"
+                                         Text="{Binding CustomText}"
+                                         IsSelectedItemsVisibleInDropDown="false"
+                                         Watermark="{Binding Watermark}"
+                                         SelectedItem="{Binding SelectedItem}"
+                                         HeightRequest="{Binding ToHeight}"  >
+            </autocomplete:SfAutoComplete>
+            <autocomplete:SfAutoComplete    Grid.Row="1"
+                                            x:Name="autocomplete2"
+                                            Grid.Column="1"
+                                            IsSelectedItemsVisibleInDropDown="false"
+                                            IsFocused="{Binding IsCcFocused, Mode=TwoWay}"
+                                            HeightRequest="{Binding CcHeight}"/>
+            <autocomplete:SfAutoComplete    Grid.Row="2"
+                                             x:Name="autocomplete3"
+                                            Grid.Column="1"
+                                            IsSelectedItemsVisibleInDropDown="false"
+                                            IsFocused="{Binding IsBccFocused, Mode=TwoWay}"
+                                            HeightRequest="{Binding BccHeight}" />
+        </Grid>
+       <ScrollView Grid.Row="2">
+        <Grid Margin="10,0,10,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Entry   Margin="5,0,0,0"
+                     Placeholder="Subject" 
+                     FontSize="15"/>
+            <Editor Margin="5,10" 
+                    FontSize="12"
+                    Grid.Row="1" 
+                    Text="Sent from my smartphone."/>
+
+        </Grid>
+       </ScrollView>
+    </Grid>
+     <local:SampleView.PropertyView>
+    
+          
+    </local:SampleView.PropertyView>
+        
+
+</local:SampleView>

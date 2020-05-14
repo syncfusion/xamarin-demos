@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{595C04E3-FBEF-41D2-804C-DE0FB09E6DD6}</ProjectGuid>
+    <ProjectTypeGuids>{A3F8F2AB-B479-4A4A-A458-A89E7DC349F1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SampleBrowser.SfChart.MacOS</RootNamespace>
+    <AssemblyName>SampleBrowser.SfChart.macOS</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>Xamarin.Mac</TargetFrameworkIdentifier>
+    <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <CodeSigningKey>Mac Developer</CodeSigningKey>
+    <CreatePackage>false</CreatePackage>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <IncludeMonoRuntime>false</IncludeMonoRuntime>
+    <UseSGen>true</UseSGen>
+    <UseRefCounting>true</UseRefCounting>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <CreatePackage>true</CreatePackage>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <IncludeMonoRuntime>true</IncludeMonoRuntime>
+    <UseSGen>true</UseSGen>
+    <UseRefCounting>true</UseRefCounting>
+    <LinkMode>SdkOnly</LinkMode>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.Mac" />
+   	<PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
+		<PackageReference Include="SampleBrowser.Core">
+			<Version>18.1.0.52</Version>
+		</PackageReference>
+		<PackageReference Include="Syncfusion.Xamarin.Core">
+			<Version>18.1.0.52</Version>
+		</PackageReference>
+		<PackageReference Include="Syncfusion.Xamarin.DataSource">
+			<Version>18.1.0.52</Version>
+		</PackageReference>
+		<PackageReference Include="Syncfusion.Xamarin.GridCommon">
+			<Version>18.1.0.52</Version>
+		</PackageReference>
+		<PackageReference Include="Syncfusion.Xamarin.SfListView">
+			<Version>18.1.0.52</Version>
+		</PackageReference>
+        <PackageReference Include="Syncfusion.Xamarin.SfChart">
+            <Version>18.1.0.52</Version>
+        </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-128.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-128%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-16.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-16%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-256.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-256%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-32.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-32%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-512.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-512%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chart\SampleBrowser.SfChart.csproj">
+      <Project>{85e00a55-2584-4619-b141-23e8c7440e00}</Project>
+      <Name>SampleBrowser.SfChart</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="ViewController.cs" />
+    <Compile Include="ViewController.designer.cs">
+      <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Main.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chart\SampleBrowser.SfChart.csproj">
+      <Project>{37DAE521-CD07-448D-866A-81CD7D0AFB0D}</Project>
+      <Name>SampleBrowser.SfChart</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\..\Resources\Image\Icons\Female.png">
+      <Link>Resources\Female.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Icons\Male.png">
+      <Link>Resources\Male.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Icons\Chart_Book.png">
+      <Link>Resources\Chart_Book.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Icons\ToyCar.png">
+      <Link>Resources\ToyCar.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Icons\HouseIcon.png">
+      <Link>Resources\HouseIcon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\People\Person0.png">
+      <Link>Resources\Person0.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Icons\Savings.png">
+      <Link>Resources\Savings.png</Link>
+    </BundleResource>
+    <BundleResource Include="Resources\Option.png" />
+    <BundleResource Include="Resources\viewcode.png" />
+    <BundleResource Include="Resources\Tags\preview.png" />
+    <BundleResource Include="Resources\Tags\x_update.png" />
+    <BundleResource Include="Resources\Tags\x_new.png" />
+    <BundleResource Include="Resources\Tags\newimage.png" />
+    <BundleResource Include="Resources\Tags\updated.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
+</Project>

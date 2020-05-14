@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<core:SampleView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:core="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:progressBar1="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
+             x:Class="SampleBrowser.SfProgressBar.CircularAngleCustomization">
+    <core:SampleView.Content>
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+          </Grid.ColumnDefinitions>
+          
+            <Label Text="Custom angle"
+                   Grid.Column="0" Grid.ColumnSpan="3"
+                   HorizontalOptions="Start" VerticalOptions="Start"
+                   Margin="10,0,0,0">
+              <Label.FontSize>
+                <OnPlatform x:TypeArguments="x:Double" iOS="11"/>
+              </Label.FontSize>
+            </Label>
+
+            <!--Circular porgress bar with start angle end angle customization-->
+            <progressBar1:SfCircularProgressBar x:Name="AngleCustomizationProgressBar"
+                                          Grid.Column="0"
+                                          Margin="0,10,0,0"
+                                          Progress="100"
+                                          StartAngle="130"
+                                          EndAngle="410"
+                                          ShowProgressValue="False"
+                                          ValueChanged="AngleCustomizationProgressBar_ValueChanged"
+                                          >
+
+            </progressBar1:SfCircularProgressBar>
+
+        </Grid>
+    </core:SampleView.Content>
+</core:SampleView>

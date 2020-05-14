@@ -1,0 +1,73 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+	  <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <RootNamespace>SampleBrowser.XlsIO</RootNamespace>
+    <AssemblyName>SampleBrowser.XlsIO</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="SamplePages.cs" />
+    <Compile Remove="XlsIOSampleBrowser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="SampleBrowser.XlsIO.nuspec" />
+    <None Remove="SamplesList\SamplesList.xml" />
+	<None Remove="SampleBrowser.XlsIO.props" />
+	<None Remove="Samples\Template\bahnschrift.ttf" />
+	<None Remove="Samples\Template\ExpenseReport.xlsx" />
+	<None Remove="Samples\Template\georgiab.ttf" />
+	<None Remove="Samples\Template\InvoiceTemplate.xlsx" />
+	<None Remove="Samples\Template\NorthwindTemplate.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SamplesList\SamplesList.xml" />
+    <EmbeddedResource Include="Samples\Template\AdvancedFilterData.xlsx" />
+    <EmbeddedResource Include="Samples\Template\bahnschrift.ttf" />
+    <EmbeddedResource Include="Samples\Template\ChartData.xlsx" />
+    <EmbeddedResource Include="Samples\Template\ExpenseReport.xlsx" />
+    <EmbeddedResource Include="Samples\Template\FilterData.xlsx" />
+	<EmbeddedResource Include="Samples\Template\FilterData_Color.xlsx" />
+	<EmbeddedResource Include="Samples\Template\georgiab.ttf" />
+	<EmbeddedResource Include="Samples\Template\IconFilterData.xlsx" />
+	<EmbeddedResource Include="Samples\Template\InvoiceTemplate.xlsx" />
+    <EmbeddedResource Include="Samples\Template\NorthwindTemplate.xlsx" />
+    <EmbeddedResource Include="Samples\Template\ReplaceOptions.xlsx" />
+    <EmbeddedResource Include="Samples\Template\CLRObjects.xml" />
+    <EmbeddedResource Include="Samples\Template\customers.xml" />
+    <EmbeddedResource Include="Samples\Template\ExportSales.xlsx" />
+	<EmbeddedResource Include="Samples\Template\ExportData.xlsx" />
+	<EmbeddedResource Include="Samples\Template\ExportData.xml" />
+	<EmbeddedResource Include="Samples\Template\ExcelToPDF.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="SampleBrowser.Core" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.XlsIO" Version="18.1.0.52" />
+	<PackageReference Include="Syncfusion.Xamarin.PDF" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.XlsIORenderer" Version="18.1.0.52" />
+	<PackageReference Include="Syncfusion.Xamarin.SkiaSharpHelper" Version="18.1.0.52" />
+	<PackageReference Include="SkiaSharp" version="1.59.3" />
+    <PackageReference Include="Syncfusion.Xamarin.Compression" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.SfDataGrid" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="18.1.0.52" />
+    <PackageReference Include="Xamarin.Forms" version="3.6.0.344457" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Import Project="..\..\..\..\..\build\tools\Syncfusion.CodeAnalysis.StyleCop\tools\StyleCop.MsBuild.targets" Condition="Exists('..\..\..\..\..\build\tools\Syncfusion.CodeAnalysis.StyleCop\tools\StyleCop.MsBuild.targets')" />
+  <PropertyGroup>
+    <PrepareResourceNamesDependsOn>
+      IncludeFilesInDroid;
+      $(PrepareResourceNamesDependsOn)
+    </PrepareResourceNamesDependsOn>
+  </PropertyGroup>
+</Project>

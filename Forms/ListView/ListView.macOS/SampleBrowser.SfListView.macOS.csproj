@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D113D02F-EAC4-47B7-9259-045554F09CCA}</ProjectGuid>
+    <ProjectTypeGuids>{A3F8F2AB-B479-4A4A-A458-A89E7DC349F1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SampleBrowser.SfListView.MacOS</RootNamespace>
+    <AssemblyName>SampleBrowser.SfListView.macOS</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>Xamarin.Mac</TargetFrameworkIdentifier>
+    <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <CodeSigningKey>Mac Developer</CodeSigningKey>
+    <CreatePackage>false</CreatePackage>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <IncludeMonoRuntime>false</IncludeMonoRuntime>
+    <UseSGen>true</UseSGen>
+    <UseRefCounting>true</UseRefCounting>
+    <HttpClientHandler>
+    </HttpClientHandler>
+    <LinkMode>SdkOnly</LinkMode>
+    <XamMacArch>
+    </XamMacArch>
+    <PackageSigningKey>3rd Party Mac Developer Installer</PackageSigningKey>
+    <AOTMode>None</AOTMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <CreatePackage>true</CreatePackage>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <IncludeMonoRuntime>true</IncludeMonoRuntime>
+    <UseSGen>true</UseSGen>
+    <UseRefCounting>true</UseRefCounting>
+    <LinkMode>SdkOnly</LinkMode>
+    <HttpClientHandler>
+    </HttpClientHandler>
+    <XamMacArch>
+    </XamMacArch>
+    <AOTMode>None</AOTMode>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="SampleBrowser.Core">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+	<PackageReference Include="Syncfusion.Xamarin.Buttons">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.Core">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.DataSource">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfDataGrid">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfListView">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfPullToRefresh">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.Mac" />
+    <PackageReference Include="Xamarin.Forms">
+      <Version>3.6.0.344457</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-128.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-128%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-16.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-16%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-256.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-256%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-32.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-32%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-512.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-512%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ListSwiping.png" />
+    <BundleResource Include="Resources\ListSelection.png" />
+    <BundleResource Include="Resources\ListPullToRefresh.png" />
+    <BundleResource Include="Resources\ListPaging.png" />
+    <BundleResource Include="Resources\ListOrientation.png" />
+    <BundleResource Include="Resources\ListLoadMore.png" />
+    <BundleResource Include="Resources\ListItemReordering.png" />
+    <BundleResource Include="Resources\ListGrouping.png" />
+    <BundleResource Include="Resources\ListGridLayout.png" />
+    <BundleResource Include="Resources\ListGettingStarted.png" />
+    <BundleResource Include="Resources\ListFiltering.png" />
+    <BundleResource Include="Resources\ListDataTemplateSelector.png" />
+    <BundleResource Include="Resources\ListAutofitItems.png" />
+    <BundleResource Include="Resources\Tags\preview.png" />
+    <BundleResource Include="Resources\Tags\x_update.png" />
+    <BundleResource Include="Resources\Tags\x_new.png" />
+    <BundleResource Include="Resources\Tags\newimage.png" />
+    <BundleResource Include="Resources\Tags\updated.png" />
+    <BundleResource Include="Resources\Option.png" />
+    <BundleResource Include="Resources\viewcode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\..\Resources\Font\SB Icons.ttf">
+      <Link>Resources\Fonts\SB Icons.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Font\Sync FontIcons.ttf">
+      <Link>Resources\Fonts\Sync FontIcons.ttf</Link>
+    </BundleResource>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AppDelegate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Main.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ListView\SampleBrowser.SfListView.csproj">
+      <Project>{5B92368B-7E6C-49D9-BFA2-F5B0A60E3FC9}</Project>
+      <Name>SampleBrowser.SfListView</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\..\Resources\Image\Animals\BrownCat.jpg">
+      <Link>Resources\BrownCat.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Animals\Dog.jpg">
+      <Link>Resources\Dog.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Animals\Horse.jpg">
+      <Link>Resources\Horse.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Book\Book0.png">
+      <Link>Resources\Book0.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Book\Book1.png">
+      <Link>Resources\Book1.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Book\Book10.png">
+      <Link>Resources\Book10.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Book\Book11.png">
+      <Link>Resources\Book11.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Book\Book12.png">
+      <Link>Resources\Book12.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Book\Book13.png">
+      <Link>Resources\Book13.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Book\Book14.png">
+      <Link>Resources\Book14.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Book\Book15.png">
+      <Link>Resources\Book15.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Book\Book16.png">
+      <Link>Resources\Book16.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Book\Book17.png">
+      <Link>Resources\Book17.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Book\Book18.png">
+      <Link>Resources\Book18.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Book\Book19.png">
+      <Link>Resources\Book19.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Book\Book2.png">
+      <Link>Resources\Book2.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Book\Book3.png">
+      <Link>Resources\Book3.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Book\Book4.png">
+      <Link>Resources\Book4.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Book\Book5.png">
+      <Link>Resources\Book5.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Book\Book6.png">
+      <Link>Resources\Book6.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Book\Book7.png">
+      <Link>Resources\Book7.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Book\Book8.png">
+      <Link>Resources\Book8.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Book\Book9.png">
+      <Link>Resources\Book9.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Book\Novels.jpg">
+      <Link>Resources\Novels.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Food\Chocolate.jpg">
+      <Link>Resources\Chocolate.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Food\FlowerGiftCakes.jpg">
+      <Link>Resources\FlowerGiftCakes.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Food\Food.jpg">
+      <Link>Resources\Food.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Food\Pizza0.jpg">
+      <Link>Resources\Pizza0.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Food\Pizza1.jpg">
+      <Link>Resources\Pizza1.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Food\Pizza10.jpg">
+      <Link>Resources\Pizza10.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Food\Pizza11.jpg">
+      <Link>Resources\Pizza11.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Food\Pizza12.jpg">
+      <Link>Resources\Pizza12.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Food\Pizza13.jpg">
+      <Link>Resources\Pizza13.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Food\Pizza14.jpg">
+      <Link>Resources\Pizza14.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Food\Pizza15.jpg">
+      <Link>Resources\Pizza15.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Food\Pizza16.jpg">
+      <Link>Resources\Pizza16.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Food\Pizza17.jpg">
+      <Link>Resources\Pizza17.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Food\Pizza2.jpg">
+      <Link>Resources\Pizza2.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Food\Pizza3.jpg">
+      <Link>Resources\Pizza3.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Food\Pizza4.jpg">
+      <Link>Resources\Pizza4.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Food\Pizza5.jpg">
+      <Link>Resources\Pizza5.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Food\Pizza6.jpg">
+      <Link>Resources\Pizza6.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Food\Pizza7.jpg">
+      <Link>Resources\Pizza7.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Food\Pizza8.jpg">
+      <Link>Resources\Pizza8.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Food\Pizza9.jpg">
+      <Link>Resources\Pizza9.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Food\Spices1.jpg">
+      <Link>Resources\Spices1.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Food\Spices2.jpg">
+      <Link>Resources\Spices2.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Fruit\Orange.jpg">
+      <Link>Resources\Orange.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Furniture\DiningTable.jpg">
+      <Link>Resources\DiningTable.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Icons\SortIcon.png">
+      <Link>Resources\SortIcon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Icons\Sort_Ascending.png">
+      <Link>Resources\Sort_Ascending.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Icons\Sort_Decending.png">
+      <Link>Resources\Sort_Decending.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Music\BrownGuitar.jpg">
+      <Link>Resources\BrownGuitar.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Music\Guitar.jpg">
+      <Link>Resources\Guitar.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Music\Listeningmusic.jpg">
+      <Link>Resources\Listeningmusic.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Music\Radio.jpg">
+      <Link>Resources\Radio.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Music\Violin.jpg">
+      <Link>Resources\Violin.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Others\Bell.jpg">
+      <Link>Resources\Bell.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Others\Calculation.jpg">
+      <Link>Resources\Calculation.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Others\Cameras.png">
+      <Link>Resources\Cameras.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Others\City.jpg">
+      <Link>Resources\City.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Others\CollegeGirl.jpg">
+      <Link>Resources\CollegeGirl.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Others\DadSon.jpg">
+      <Link>Resources\DadSon.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Others\Electronics.jpg">
+      <Link>Resources\Electronics.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Others\Friends.jpg">
+      <Link>Resources\Friends.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Others\Hight.jpg">
+      <Link>Resources\Hight.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Others\IdealHouse.jpg">
+      <Link>Resources\IdealHouse.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Others\Jewellery.jpg">
+      <Link>Resources\Jewellery.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Others\Kids.jpg">
+      <Link>Resources\Kids.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Others\Ladybug.jpg">
+      <Link>Resources\Ladybug.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Others\Mobile.jpg">
+      <Link>Resources\Mobile.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Others\Money.jpg">
+      <Link>Resources\Money.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Others\NaughtyBoy.jpg">
+      <Link>Resources\NaughtyBoy.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Others\Openbook.jpg">
+      <Link>Resources\Openbook.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Others\Peacock.jpg">
+      <Link>Resources\Peacock.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Others\Perfumes.jpg">
+      <Link>Resources\Perfumes.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Others\Playing.jpg">
+      <Link>Resources\Playing.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Others\Shopping.jpg">
+      <Link>Resources\Shopping.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\People\People_Circle0.png">
+      <Link>Resources\People_Circle0.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\People\People_Circle1.png">
+      <Link>Resources\People_Circle1.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\People\People_Circle10.png">
+      <Link>Resources\People_Circle10.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\People\People_Circle11.png">
+      <Link>Resources\People_Circle11.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\People\People_Circle12.png">
+      <Link>Resources\People_Circle12.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\People\People_Circle13.png">
+      <Link>Resources\People_Circle13.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\People\People_Circle14.png">
+      <Link>Resources\People_Circle14.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\People\People_Circle15.png">
+      <Link>Resources\People_Circle15.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\People\People_Circle16.png">
+      <Link>Resources\People_Circle16.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\People\People_Circle17.png">
+      <Link>Resources\People_Circle17.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\People\People_Circle18.png">
+      <Link>Resources\People_Circle18.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\People\People_Circle19.png">
+      <Link>Resources\People_Circle19.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\People\People_Circle2.png">
+      <Link>Resources\People_Circle2.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\People\People_Circle3.png">
+      <Link>Resources\People_Circle3.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\People\People_Circle4.png">
+      <Link>Resources\People_Circle4.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\People\People_Circle5.png">
+      <Link>Resources\People_Circle5.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\People\People_Circle6.png">
+      <Link>Resources\People_Circle6.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\People\People_Circle7.png">
+      <Link>Resources\People_Circle7.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\People\People_Circle8.png">
+      <Link>Resources\People_Circle8.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\People\People_Circle9.png">
+      <Link>Resources\People_Circle9.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Shapes\SkyBlue.png">
+      <Link>Resources\SkyBlue.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Shoes\Graycanvas.jpg">
+      <Link>Resources\Graycanvas.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Sport\Sports.jpg">
+      <Link>Resources\Sports.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Sport\Sports_Health.jpg">
+      <Link>Resources\Sports_Health.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Toy\Car.jpg">
+      <Link>Resources\Car.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Toy\Minitoys.jpg">
+      <Link>Resources\Minitoys.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Toy\Toys.jpg">
+      <Link>Resources\Toys.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Toy\Train.jpg">
+      <Link>Resources\Train.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Toy\Van.jpg">
+      <Link>Resources\Van.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Resources\Image\Toy\Watches.jpg">
+      <Link>Resources\Watches.jpg</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Fonts\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
+</Project>

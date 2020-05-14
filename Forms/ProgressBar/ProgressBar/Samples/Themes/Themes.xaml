@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms" x:Class="SampleBrowser.SfProgressBar.Themes">
+        <StackLayout Margin="50" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Label Text="Linear" Margin="0,10,0,0" VerticalTextAlignment="Center"  HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+             <progressBar:SfLinearProgressBar  Margin="0,10,0,0" x:Name="LinearProgressBar" WidthRequest="330" AnimationDuration="0" Progress="75" HorizontalOptions="Center" VerticalOptions="Center" />
+              <Label Text="Circular" Margin="0,50,0,0" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand"  VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center"  />
+               <progressBar:SfCircularProgressBar Margin="0,-90,0,0" x:Name="CircularProgressBar" ShowProgressValue="False" AnimationDuration="0" HeightRequest="365" WidthRequest="200" Progress = "75"  HorizontalOptions="Center" VerticalOptions="Start" />
+    </StackLayout>
+</local:SampleView>

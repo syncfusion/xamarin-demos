@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<core:SampleView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:core="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
+             x:Class="SampleBrowser.SfProgressBar.LinearSegment">
+    <core:SampleView.Content>
+        <Grid>
+            <Label Text="Segment"
+                   HorizontalOptions="Start" VerticalOptions="Start" Margin="20,0,0,0">
+              <Label.FontSize>
+                <OnPlatform x:TypeArguments="x:Double" iOS="11"/>
+              </Label.FontSize>
+            </Label>
+
+            <!--Linear progress bar with segment-->
+            <progressBar:SfLinearProgressBar x:Name="SegmentedProgressBar"
+                                        Margin="20,20,20,0"
+                                        SegmentCount="4"
+                                        Progress="75">
+
+            </progressBar:SfLinearProgressBar>
+        </Grid>
+    </core:SampleView.Content>
+</core:SampleView>

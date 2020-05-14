@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView
+    x:Class="SampleBrowser.SfSchedule.GettingStarted"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+	xmlns:samplelocal="clr-namespace:SampleBrowser.SfSchedule"
+    xmlns:schedule="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.SfSchedule.XForms">
+
+  <local:SampleView.Content>
+        <Grid x:Name="grid_layout">
+            <schedule:SfSchedule
+                x:Name="Schedule" ScheduleHeaderDateFormat=""
+                DataSource="{Binding Appointments}"  
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                ShowCurrentTimeIndicator="True">
+                <schedule:SfSchedule.BindingContext>
+                    <samplelocal:ScheduleViewModel />
+                </schedule:SfSchedule.BindingContext>
+        <schedule:SfSchedule.AppointmentMapping>
+          <schedule:ScheduleAppointmentMapping
+            SubjectMapping="EventName"
+            StartTimeMapping="From"
+            EndTimeMapping="To"
+            ColorMapping="Color"
+            IsAllDayMapping="IsAllDay"
+            MinHeightMapping="MinimumHeight"
+          />
+        </schedule:SfSchedule.AppointmentMapping>
+        <schedule:SfSchedule.MonthViewSettings> 
+                <schedule:MonthViewSettings AppointmentDisplayMode="Appointment" 
+                                            AppointmentIndicatorCount="3" 
+                                            AppointmentDisplayCount="2"/>
+        </schedule:SfSchedule.MonthViewSettings>
+      </schedule:SfSchedule>
+    </Grid>
+  </local:SampleView.Content>
+
+    <local:SampleView.PropertyView>
+        <Grid  BackgroundColor="White"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" Orientation="Horizontal">
+                <Label x:Name="showCurrentTime"
+                   VerticalOptions="Center"
+                   Text="Show current time indicator"/>
+                <Switch Margin="10,0,0,0"
+                  x:Name="currentTime"
+                  IsToggled="True"/>
+            </StackLayout>
+            <StackLayout Grid.Row="1" Orientation="Horizontal">
+                <Label 
+                    x:Name="scheduleViewLabel"
+                    FontSize="15"
+                    TextColor="Gray" />
+                <Picker  x:Name="viewPicker" Margin="-5,0,0,0"
+                     VerticalOptions="Start"
+                     HorizontalOptions="FillAndExpand" Title="Change the view type">
+                    <Picker.Items>
+                        <x:String>Day View</x:String>
+                        <x:String>Week View</x:String>
+                        <x:String>Work Week View</x:String>
+                        <x:String>Month View</x:String>
+                        <x:String>Timeline View</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+        </Grid>
+    </local:SampleView.PropertyView>
+    <local:SampleView.Behaviors>
+    <samplelocal:SetScheduleViewBehavior/>
+  </local:SampleView.Behaviors>
+</local:SampleView>

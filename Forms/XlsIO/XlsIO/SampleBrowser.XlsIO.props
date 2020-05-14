@@ -1,0 +1,175 @@
+﻿<Project>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ChartsPage\ChartsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <Link>Samples\XlsIO\Samples\ChartsPage\ChartsPage.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CreateSpreadsheetPage\CreateSpreadsheetPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <Link>Samples\XlsIO\Samples\CreateSpreadsheetPage\CreateSpreadsheetPage.xaml</Link>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ExcelToPDFPage\ExcelToPDFPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <Link>Samples\XlsIO\Samples\ExcelToPDFPage\ExcelToPDFPage.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\FiltersPage\FiltersPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <Link>Samples\XlsIO\Samples\FiltersPage\FiltersPage.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\FindAndReplacePage\FindAndReplacePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <Link>Samples\XlsIO\Samples\FindAndReplacePage\FindAndReplacePage.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\FormulasPage\FormulasPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <Link>Samples\XlsIO\Samples\FormulasPage\FormulasPage.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ImportCollectionObjectsPage\ImportCollectionObjectsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <Link>Samples\XlsIO\Samples\ImportCollectionObjectsPage\ImportCollectionObjectsPage.xaml</Link>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ImportNestedCollectionPage\ImportNestedCollectionPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <Link>Samples\XlsIO\Samples\ImportNestedCollectionPage\ImportNestedCollectionPage.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ImportXMLPage\ImportXMLPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <Link>Samples\XlsIO\Samples\ImportXMLPage\ImportXMLPage.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DataTablePage\DataTablePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <Link>Samples\XlsIO\Samples\DataTablePage\DataTablePage.xaml</Link>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\WorksheetToImagePage\WorksheetToImagePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <Link>Samples\XlsIO\Samples\WorksheetToImagePage\WorksheetToImagePage.xaml</Link>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\WorksheetToHTMLPage\WorksheetToHTMLPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <Link>Samples\XlsIO\Samples\WorksheetToHTMLPage\WorksheetToHTMLPage.xaml</Link>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\PerformancePage\PerformancePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <Link>Samples\XlsIO\Samples\PerformancePage\PerformancePage.xaml</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ChartsPage\ChartsPage.xaml.cs">
+      <DependentUpon>ChartsPage.xaml</DependentUpon>
+      <Link>Samples\XlsIO\Samples\ChartsPage\ChartsPage.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\CreateSpreadsheetPage\CreateSpreadsheetPage.xaml.cs">
+      <DependentUpon>CreateSpreadsheetPage.xaml</DependentUpon>
+      <Link>Samples\XlsIO\Samples\CreateSpreadsheetPage\CreateSpreadsheetPage.xaml.cs</Link>
+    </Compile>    
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\ExcelToPDFPage\ExcelToPDFPage.xaml.cs">
+      <DependentUpon>ExcelToPDFPage.xaml</DependentUpon>
+      <Link>Samples\XlsIO\Samples\ExcelToPDFPage\ExcelToPDFPage.xaml</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\FiltersPage\FiltersPage.xaml.cs">
+      <DependentUpon>FiltersPage.xaml</DependentUpon>
+      <Link>Samples\XlsIO\Samples\FiltersPage\FiltersPage.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\FindAndReplacePage\FindAndReplacePage.xaml.cs">
+      <DependentUpon>FindAndReplacePage.xaml</DependentUpon>
+      <Link>Samples\XlsIO\Samples\FindAndReplacePage\FindAndReplacePage.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\FormulasPage\FormulasPage.xaml.cs">
+      <DependentUpon>FormulasPage.xaml</DependentUpon>
+      <Link>Samples\XlsIO\Samples\FormulasPage\FormulasPage.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ImportCollectionObjectsPage\ImportCollectionObjectsPage.xaml.cs">
+      <DependentUpon>ImportCollectionObjectsPage.xaml</DependentUpon>
+      <Link>Samples\XlsIO\Samples\ImportCollectionObjectsPage\ImportCollectionObjectsPage.xaml.cs</Link>
+    </Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\ImportNestedCollectionPage\ImportNestedCollectionPage.xaml.cs">
+      <DependentUpon>ImportNestedCollectionPage.xaml</DependentUpon>
+      <Link>Samples\XlsIO\Samples\ImportNestedCollectionPage\ImportNestedCollectionPage.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ImportXMLPage\ImportXMLPage.xaml.cs">
+      <DependentUpon>ImportXMLPage.xaml</DependentUpon>
+      <Link>Samples\XlsIO\Samples\ImportXMLPage\ImportXMLPage.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataTablePage\DataTablePage.cs">
+      <DependentUpon>DataTablePage.xaml</DependentUpon>
+      <Link>Samples\XlsIO\Samples\DataTablePage\DataTablePage.cs</Link>
+    </Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\WorksheetToImagePage\WorksheetToImagePage.xaml.cs">
+      <DependentUpon>WorksheetToImagePage.xaml</DependentUpon>
+      <Link>Samples\XlsIO\Samples\WorksheetToImagePage/WorksheetToImagePage.xaml</Link>
+    </Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\WorksheetToHTMLPage\WorksheetToHTMLPage.xaml.cs">
+      <DependentUpon>WorksheetToHTMLPage.xaml</DependentUpon>
+      <Link>Samples\XlsIO\Samples\WorksheetToHTMLPage\WorksheetToHTMLPage.xaml.cs</Link>
+    </Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\PerformancePage\PerformancePage.xaml.cs">
+      <DependentUpon>PerformancePage.xaml</DependentUpon>
+      <Link>Samples\XlsIO\Samples\PerformancePage\PerformancePage.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\DeviceExt.cs">
+      <Link>Samples\XlsIO\DeviceExt.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\ISave.cs">
+      <Link>Samples\XlsIO\ISave.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Extensions.cs">
+      <Link>Samples\XlsIO\Samples\Extensions.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+      <Link>Samples\XlsIO\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Template\AdvancedFilterData.xlsx">
+      <Link>Samples\XlsIO\Samples\Template\AdvancedFilterData.xlsx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Template\ChartData.xlsx">
+      <Link>Samples\XlsIO\Samples\Template\ChartData.xlsx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Template\FilterData.xlsx">
+      <Link>Samples\XlsIO\Samples\Template\FilterData.xlsx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Template\FilterData_Color.xlsx">
+      <Link>Samples\XlsIO\Samples\Template\FilterData_Color.xlsx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Template\IconFilterData.xlsx">
+      <Link>Samples\XlsIO\Samples\Template\IconFilterData.xlsx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Template\ReplaceOptions.xlsx">
+      <Link>Samples\XlsIO\Samples\Template\ReplaceOptions.xlsx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Template\CLRObjects.xml">
+      <Link>Samples\XlsIO\Samples\Template\CLRObjects.xml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Template\customers.xml">
+      <Link>Samples\XlsIO\Samples\Template\customers.xml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Template\ExportSales.xlsx">
+      <Link>Samples\XlsIO\Samples\Template\ExportSales.xlsx</Link>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Template\ExportData.xlsx">
+      <Link>Samples\XlsIO\Samples\Template\ExportData.xlsx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Template\ExportData.xml">
+      <Link>Samples\XlsIO\Samples\Template\ExportData.xml</Link>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Template\ExpenseReport.xlsx">
+      <Link>Samples\XlsIO\Samples\Template\ExpenseReport.xlsx</Link>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Template\ExcelToPDF.xlsx">
+      <Link>Samples\XlsIO\Samples\Template\ExcelToPDF.xlsx</Link>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Template\NorthwindTemplate.xlsx">
+      <Link>Samples\XlsIO\Samples\Template\NorthwindTemplate.xlsx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Template\bahnschrift.ttf">
+      <Link>Samples\XlsIO\Samples\Template\bahnschrift.ttf</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Template\georgiab.ttf">
+      <Link>Samples\XlsIO\Samples\Template\georgiab.ttf</Link>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Template\InvoiceTemplate.xlsx">
+      <Link>Samples\XlsIO\Samples\Template\InvoiceTemplate.xlsx</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

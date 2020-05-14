@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:sample="clr-namespace:SampleBrowser.SfCircularGauge"
+             x:Class="SampleBrowser.SfCircularGauge.CustomizationSample">
+	
+  <local:SampleView.BindingContext>
+    <sample:CircularGaugeViewModel x:Name="viewModel" PointerValue="800"  RangePointerColor="#FFDD00"
+                                  NeedlePointerColor="#424242" RangeColor="#E0E0E0"/>
+  </local:SampleView.BindingContext>
+
+  <local:SampleView.Content BackgroundColor="White">
+    <ScrollView>
+
+      <Grid  x:Name="main_layout">
+
+        <Grid.RowDefinitions>
+          <RowDefinition />
+          <RowDefinition />
+        </Grid.RowDefinitions>
+
+          <gauge:SfCircularGauge x:Name="circularGauge1" Grid.Row="0">
+
+            <gauge:SfCircularGauge.Headers>
+              <gauge:Header x:Name="header1" Position="0.5,0.1" TextSize="24" ForegroundColor="Black"/>
+            </gauge:SfCircularGauge.Headers>
+
+            <gauge:SfCircularGauge.Scales>
+              <gauge:Scale x:Name="scale1" StartAngle="210" SweepAngle="120" StartValue="0" EndValue="1000"
+                 Interval="500" ShowLabels="False" ShowTicks="False" ShowRim="False" MinorTicksPerInterval="0">
+
+                <gauge:Scale.Pointers>
+                  <gauge:RangePointer x:Name="rangepointer1" Value="{Binding PointerValue}"  Color="{Binding RangePointerColor}" Thickness="30" Offset="0.7" EnableAnimation="False"/>
+                  <gauge:NeedlePointer x:Name="needlePointer1" Value="{Binding PointerValue}" Color="{Binding NeedlePointerColor}" Type="Triangle" LengthFactor="0.7"
+                 Thickness="10" KnobRadiusFactor="0.1" KnobColor="{Binding NeedlePointerColor}"/>
+                </gauge:Scale.Pointers>
+
+                <gauge:Scale.Ranges>
+                  <gauge:Range x:Name="range1" StartValue="0" EndValue="1000" Color="{Binding RangeColor}" Offset="0.7" Thickness="30"/>
+                </gauge:Scale.Ranges>
+
+              </gauge:Scale>
+            </gauge:SfCircularGauge.Scales>
+
+          </gauge:SfCircularGauge>
+              
+          <gauge:SfCircularGauge x:Name="circularGauge2" Grid.Row="1">
+
+            <gauge:SfCircularGauge.Headers>
+              <gauge:Header x:Name="header2" Position="0.5,0.5" TextSize="24" ForegroundColor="Black"/>
+              <gauge:Header x:Name="header3" Position="0.5,0.6" TextSize="18" Text="Used" ForegroundColor="Gray" />
+            </gauge:SfCircularGauge.Headers>
+
+            <gauge:SfCircularGauge.Scales>
+              <gauge:Scale x:Name="scale2" StartAngle="90" SweepAngle="360" StartValue="0" EndValue="1000"
+                 Interval="500" ShowLabels="False" ShowTicks="False" ShowRim="False" MinorTicksPerInterval="0">
+
+                <gauge:Scale.Pointers>
+                  <gauge:RangePointer x:Name="rangePointer2" Value="{Binding PointerValue}"  Color="{Binding RangePointerColor}" Thickness="30" Offset="0.8" EnableAnimation="False"/>
+                </gauge:Scale.Pointers>
+
+                <gauge:Scale.Ranges>
+                  <gauge:Range x:Name="range2" StartValue="0" EndValue="999.9" Color="{Binding RangeColor}" Offset="0.8" Thickness="30"/>
+                </gauge:Scale.Ranges>
+
+              </gauge:Scale>
+            </gauge:SfCircularGauge.Scales>
+
+          </gauge:SfCircularGauge>        
+        
+      </Grid>
+            
+    </ScrollView>
+  </local:SampleView.Content>
+  
+  <local:SampleView.PropertyView>
+
+    <StackLayout Orientation="Vertical" >
+      <StackLayout BackgroundColor="White" Orientation="Horizontal">
+        <Label x:Name="pointer_text" Text="Change pointer value" FontAttributes="Bold" TextColor="Black"/>
+        <Label x:Name="pointer_value" FontAttributes="Bold" TextColor="Black"
+                BindingContext="{x:Reference pointer_slider}" Text="{Binding Value, StringFormat='{0:N}'}"/>
+      </StackLayout>
+      
+      <Slider x:Name="pointer_slider" MinimumTrackColor="#177CE7" ThumbColor="#1a1aff" MaximumTrackColor="DarkGray" 
+       Value="{Binding PointerValue, Mode=TwoWay}"
+        Maximum="1000"/>
+
+      <StackLayout Orientation="Vertical" >
+        <Label  x:Name="RangePointerColor" Text="RangePointer Color" TextColor="Black" FontAttributes="Bold"/>
+        <Picker x:Name="rangePointerColorPicker" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+          <Picker.Items>
+            <x:String>Yellow</x:String>
+            <x:String>Green</x:String>
+            <x:String>Pink</x:String>
+          </Picker.Items>
+        </Picker>
+      </StackLayout>
+
+      <StackLayout Orientation="Vertical" >
+        <Label  x:Name="NeedlePointerColor" Text="NeedlePointer Color" TextColor="Black" FontAttributes="Bold"/>
+        <Picker x:Name="needlePointerColorPicker" HorizontalOptions="FillAndExpand" VerticalOptions="Center" >
+          <Picker.Items>
+            <x:String>Gray</x:String>
+            <x:String>Violet</x:String>
+            <x:String>Brown</x:String>
+          </Picker.Items>
+        </Picker>
+      </StackLayout>
+
+      <StackLayout Orientation="Vertical" >
+        <Label  x:Name="RangeColor" Text="Range Color" TextColor="Black" FontAttributes="Bold"/>
+        <Picker x:Name="rangeColorPicker" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+          <Picker.Items>
+            <x:String>Light Gray</x:String>
+            <x:String>Blue</x:String>
+            <x:String>Orange</x:String>
+          </Picker.Items>
+        </Picker>
+      </StackLayout>
+
+    </StackLayout>
+  </local:SampleView.PropertyView>
+</local:SampleView>

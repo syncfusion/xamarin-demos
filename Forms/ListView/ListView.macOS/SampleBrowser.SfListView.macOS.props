@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+ <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\ListAutofitItems.png">
+      <Link>Resources\ListAutofitItems.png</Link>
+    </BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\ListDataTemplateSelector.png">
+      <Link>Resources\ListDataTemplateSelector.png</Link>
+    </BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\ListFiltering.png">
+      <Link>Resources\ListFiltering.png</Link>
+    </BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\ListGettingStarted.png">
+      <Link>Resources\ListGettingStarted.png</Link>
+    </BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\ListGridLayout.png">
+      <Link>Resources\ListGridLayout.png</Link>
+    </BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\ListGrouping.png">
+      <Link>Resources\ListGrouping.png</Link>
+    </BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\ListItemReordering.png">
+      <Link>Resources\ListItemReordering.png</Link>
+    </BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\ListLoadMore.png">
+      <Link>Resources\ListLoadMore.png</Link>
+    </BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\ListOrientation.png">
+      <Link>Resources\ListOrientation.png</Link>
+    </BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\ListPaging.png">
+      <Link>Resources\ListPaging.png</Link>
+    </BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\ListPullToRefresh.png">
+      <Link>Resources\ListPullToRefresh.png</Link>
+    </BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\ListSelection.png">
+      <Link>Resources\ListSelection.png</Link>
+    </BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\ListSwiping.png">
+      <Link>Resources\ListSwiping.png</Link>
+    </BundleResource>
+  </ItemGroup>
+</Project>

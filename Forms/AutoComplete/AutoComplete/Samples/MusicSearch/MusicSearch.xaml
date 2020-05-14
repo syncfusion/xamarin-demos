@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" 
+   xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+    xmlns:listview="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms" 
+    xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms" 
+    x:Class="SampleBrowser.SfAutoComplete.MusicSearch" >
+         
+    <local:SampleView.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Black" />
+            </Style>
+        </ResourceDictionary>
+    </local:SampleView.Resources>
+	<ScrollView>
+    <Grid BackgroundColor="#FFECEBEA">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="0" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="20" />
+            </Grid.RowDefinitions>
+            <Grid BackgroundColor="DeepSkyBlue">
+                <Label VerticalOptions="Center" Margin="10,0,0,0" HorizontalOptions="Start" Text="My Music" FontAttributes="Bold" TextColor="Black" />
+            </Grid>
+          <Grid Grid.Row="1" 
+                Margin="10"
+                BackgroundColor="White">
+            <autocomplete:SfAutoComplete 
+                                          WatermarkColor="LightGray" 
+                                          TextSize="18" 
+                                          Margin="10,0" 
+                                          IgnoreDiacritic="false"
+                                          DropDownItemHeight="40" 
+                                          DisplayMemberPath="SongTitle" 
+                                          SelectedItem="{Binding SelectedItem,Mode=TwoWay}" 
+                                          SuggestionMode="Contains" 
+                                          VerticalOptions="Center" 
+                                          ShowBorder="false"
+                                          HeightRequest="50" 
+                                          ShowSuggestionsOnFocus="True" 
+                                          MaximumDropDownHeight="150" 
+                                          FilteredItems="{Binding FilteredCollection, Mode=TwoWay}" 
+                                          DataSource="{Binding DataCollection}" 
+                                          Watermark="{Binding Watermark}"
+                                          TextHighlightMode="MultipleOccurrence"
+                                          Text="{Binding CustomText}" >
+            </autocomplete:SfAutoComplete>
+          </Grid>
+          <Grid Grid.Row="2" >
+                <Label  FontSize="100"  x:Name="playerLabel" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="Fill" HorizontalOptions="Fill">
+                    <Label.Text>
+                <OnPlatform x:TypeArguments="x:String" iOS="I" Android="I" WinPhone="&#xe90b;"  />
+              </Label.Text>
+              <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String" iOS="player" Android="autocompleteplayer.ttf#autocompleteplayer" WinPhone="Segoe MDL2 Assets" />
+              </Label.FontFamily>
+                </Label>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label Text="{Binding SelectedItem.SongTitle}" Margin="10,0,0,0" FontSize="20" />
+                <StackLayout Orientation="Horizontal" Grid.Row="1">
+                    <Label Text="{Binding SelectedItem.SongAuther}" Margin="10,0,0,0" FontSize="15" />
+                    <Label Text="*" Margin="10,0,0,0" FontSize="15" />
+                    <Label Text="{Binding SelectedItem.SongSize}" Margin="10,0,0,0" FontSize="15" />
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Row="4" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50" />
+                    <ColumnDefinition Width="0" />
+                    <ColumnDefinition Width="50" />
+                </Grid.ColumnDefinitions>
+                <Label Text="{Binding Playing}" VerticalOptions="Center" HorizontalOptions="Center" />
+                <Grid Grid.Column="1">
+                    <Button BackgroundColor="{Binding SelectedItem.SongTheme}" Margin="20,0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HeightRequest="14" />
+                    <StackLayout WidthRequest="{Binding Move}" HorizontalOptions="Start" VerticalOptions="Center">
+                        <Label Text="L" HorizontalOptions="End" FontSize="20" Margin="10,0,0,0" >
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String" iOS="player" Android="autocompleteplayer.ttf#autocompleteplayer" />
+                            </Label.FontFamily>
+                        </Label>
+                    </StackLayout>
+                </Grid>
+                <Label Grid.Column="2" Text="{Binding SelectedItem.SongLength}" VerticalOptions="Center" HorizontalOptions="Center" />
+            </Grid>
+            <Grid Grid.Row="5">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="MusicICon_B"  FontSize="22" VerticalTextAlignment="End" Margin="10,0,0,0">
+                       <Label.Text>
+                      <OnPlatform x:TypeArguments="x:String" iOS="B" Android="B" WinPhone="&#xeb9e;"  />
+                    </Label.Text>
+                    <Label.FontFamily>
+                      <OnPlatform x:TypeArguments="x:String" iOS="player" Android="autocompleteplayer.ttf#autocompleteplayer" WinPhone="Segoe MDL2 Assets" />
+                    </Label.FontFamily>
+                    </Label>
+                    <Label Grid.Column="1"  Margin="10,0,0,0" VerticalTextAlignment="End" FontSize="22" x:Name="SearchedItem">
+                        <Label.Text>
+                      <OnPlatform x:TypeArguments="x:String" iOS="P" Android="P" WinPhone="&#xe768;"  />
+                    </Label.Text>
+                    <Label.FontFamily>
+                      <OnPlatform x:TypeArguments="x:String" iOS="player" Android="autocompleteplayer.ttf#autocompleteplayer" WinPhone="Segoe MDL2 Assets" />
+                    </Label.FontFamily>
+                    </Label>
+                    <Label x:Name="MusicIcon_F" Grid.Column="2"   FontSize="22" VerticalTextAlignment="End" Margin="10,0,0,0">
+                       <Label.Text>
+                      <OnPlatform x:TypeArguments="x:String" iOS="F" Android="F" WinPhone="&#xeb9d;"  />
+                    </Label.Text>
+                    <Label.FontFamily>
+                      <OnPlatform x:TypeArguments="x:String" iOS="player" Android="autocompleteplayer.ttf#autocompleteplayer" WinPhone="Segoe MDL2 Assets"/>
+                    </Label.FontFamily>
+                  </Label>
+                   <Label x:Name="MusicIcon_M" Grid.Column="3"  Margin="20,0,0,0" VerticalTextAlignment="End" FontSize="22">
+                        <Label.Text>
+                      <OnPlatform x:TypeArguments="x:String" iOS="M" Android="M" WinPhone="&#xe8ee;"  />
+                    </Label.Text>
+                    <Label.FontFamily>
+                      <OnPlatform x:TypeArguments="x:String" iOS="player" Android="autocompleteplayer.ttf#autocompleteplayer" WinPhone="Segoe MDL2 Assets"/>
+                    </Label.FontFamily>
+                    </Label>
+                    <Label x:Name="MusicIcon_R"  Grid.Column="4" FontSize="22" VerticalTextAlignment="End" Margin="10,0,0,0">
+                        <Label.Text>
+                      <OnPlatform x:TypeArguments="x:String" iOS="R" Android="R" WinPhone="&#xe8ed;"  />
+                    </Label.Text>
+                    <Label.FontFamily>
+                      <OnPlatform x:TypeArguments="x:String" iOS="player" Android="autocompleteplayer.ttf#autocompleteplayer" WinPhone="Segoe MDL2 Assets" />
+                    </Label.FontFamily>
+                    </Label>
+                    <Label x:Name="MusicIcon_E" Grid.Column="5" Margin="10,0,0,0" VerticalTextAlignment="End" FontSize="22">
+                         <Label.Text>
+                      <OnPlatform x:TypeArguments="x:String" iOS="E" Android="E" WinPhone="&#xe8ea;"  />
+                    </Label.Text>
+                    <Label.FontFamily>
+                      <OnPlatform x:TypeArguments="x:String" iOS="player" Android="autocompleteplayer.ttf#autocompleteplayer" WinPhone="Segoe MDL2 Assets" />
+                    </Label.FontFamily>
+                    </Label>
+                    <Label x:Name="MusicIcon_V"  Grid.Column="6" FontSize="22" VerticalTextAlignment="End" Margin="10,0,0,0">
+                       <Label.Text>
+                      <OnPlatform x:TypeArguments="x:String" iOS="V" Android="V" WinPhone="&#xe90f;"  />
+                    </Label.Text>
+                    <Label.FontFamily>
+                      <OnPlatform x:TypeArguments="x:String" iOS="player" Android="autocompleteplayer.ttf#autocompleteplayer" WinPhone="Segoe MDL2 Assets" />
+                    </Label.FontFamily>
+                    </Label>
+                </Grid>
+
+            </Grid>
+        </Grid>
+    </Grid>
+  </ScrollView>
+</local:SampleView>

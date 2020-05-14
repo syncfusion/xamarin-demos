@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:namespace="clr-namespace:SampleBrowser.SfButton"
+                  xmlns:TextInputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+                  xmlns:SyncfusionButton="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+                  xmlns:RangeSlider="clr-namespace:Syncfusion.SfRangeSlider.XForms;assembly=Syncfusion.SfRangeSlider.XForms"
+                  xmlns:tabView="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
+                  x:Class="SampleBrowser.SfButton.CustomizationSample">
+    <local:SampleView.Resources>
+        <ResourceDictionary>
+            <Style x:Key="LabelNormalStyle"  TargetType="Label">
+                <Setter Property="TextColor" Value="#007DE4"/>
+                <Setter Property="FontSize" Value="15"/>
+            </Style>
+            <Style x:Key="CheckBoxNormalStyle"  TargetType="SyncfusionButton:SfCheckBox">
+                <Setter Property="TextColor" Value="#007DE4"/>
+                <Setter Property="FontSize" Value="14"/>
+            </Style>
+            <Style x:Key="RadioButtonNormalStyle"  TargetType="SyncfusionButton:SfRadioButton">
+                <Setter Property="TextColor" Value="#007DE4"/>
+                <Setter Property="FontSize" Value="15"/>
+            </Style>
+
+            <Style x:Key="SegmentedNormalStyle"  TargetType="SyncfusionButton:SfSegmentedControl">
+                <Setter Property="DisplayMode" Value="Image"/>
+                <Setter Property="CornerRadius" Value="0"/>
+                <Setter Property="SegmentHeight" Value="45"/>
+                <Setter Property="SegmentWidth" Value="50"/>
+                <Setter Property="Margin" Value="10,0,10,0"/>
+                <Setter Property="Color" Value="Transparent"/>
+                <Setter Property="FontIconFontColor" Value="Black"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="BorderColor" Value="#EEEEEE"/>
+                <Setter Property="SelectedIndex" Value="0"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="VisibleSegmentsCount" Value="5"/>
+                <Setter Property="SegmentCornerRadius" Value="15"/>
+                <Setter Property="VisibleSegmentsCount" Value="5"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+
+            </Style>
+            <Style x:Key="EntryNormalStyle"  TargetType="Entry">
+                <Setter Property="TextColor" Value="#007DE4"/>
+                <Setter Property="FontSize" Value="15"/>
+            </Style>
+        </ResourceDictionary>
+    </local:SampleView.Resources>
+    <local:SampleView.Content>
+        <Grid Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition>
+                    <ColumnDefinition.Width>
+                        <OnPlatform x:TypeArguments="GridLength">
+                            <On Platform="UWP">
+                                <OnIdiom x:TypeArguments="GridLength" Desktop="420" Tablet="400" Phone="*" />
+                            </On>
+                            <On Platform="Android">
+                                <OnIdiom x:TypeArguments="GridLength" Desktop="420" Tablet="400" Phone="*"/>
+                            </On>
+                            <On Platform="iOS">
+                                <OnIdiom x:TypeArguments="GridLength" Desktop="420" Tablet="400" Phone="*"/>
+                            </On>
+                        </OnPlatform>
+                    </ColumnDefinition.Width>
+                </ColumnDefinition>
+
+                <ColumnDefinition>
+                    <ColumnDefinition.Width>
+                        <OnPlatform x:TypeArguments="GridLength">
+                            <On Platform="UWP">
+                                <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="140"/>
+                            </On>
+                            <On Platform="Android">
+                                <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="140"/>
+                            </On>
+                            <On Platform="iOS">
+                                <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="140"/>
+                            </On>
+                        </OnPlatform>
+                    </ColumnDefinition.Width>
+                </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Padding="10">
+                <SyncfusionButton:SfButton Grid.Row="0"                                          
+                                           BackgroundImage="{Binding BackgroudImage}"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center"
+                                           CornerRadius="{Binding CornerRadius,Mode=TwoWay}"
+                                           HasShadow="{Binding EnableShadow}"
+                                           BorderWidth="{Binding BorderWidth}"
+                                           BorderColor="{Binding BorderColor}"
+                                           BackgroundColor="{Binding BackgroundColor}">
+                    <SyncfusionButton:SfButton.Content>
+                        <Grid HorizontalOptions="Center" VerticalOptions="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Padding="15,0,5,0">
+                                <Label Text="&#xE7BF;" 
+                                   HorizontalTextAlignment="Center" 
+                                   VerticalOptions="Center"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalOptions="Start" 
+                                   FontSize="25" 
+                                   TextColor="{Binding TextColor}">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="iOS" Value="Segoe MDL2 Assets" />
+                                            <On Platform="Android" Value="button_Segoe MDL2 Assets.ttf#Segoe MDL2 Assets" />
+                                            <On Platform="UWP" Value="/Assets/Fonts/button_Segoe MDL2 Assets.ttf#Segoe MDL2 Assets" />
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                            </Grid>
+                            <Grid Padding="0,15,15,15" Grid.Column="1" >
+                                <Label HorizontalOptions="Center" 
+                                   HorizontalTextAlignment="Center" 
+                                   FontSize="15" 
+                                   TextColor="{Binding TextColor}"               
+                                   VerticalTextAlignment="Center" 
+                                   VerticalOptions="Center" 
+                                   LineBreakMode="NoWrap" 
+                                   Text="{Binding Text,Mode=TwoWay}">
+                                </Label>
+                            </Grid>
+                        </Grid>
+                    </SyncfusionButton:SfButton.Content>
+                </SyncfusionButton:SfButton>
+            </Grid>
+            <Grid Grid.Row="1" Padding="10">
+                <ScrollView Padding="10" VerticalScrollBarVisibility="Never">
+                    <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+                        <Grid Margin="0,10" HorizontalOptions="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="250"/>
+                                <ColumnDefinition Width="150"/>
+                            </Grid.ColumnDefinitions>
+
+                            <SyncfusionButton:SfCheckBox Text="Show Background Image"
+                                                                 CheckedColor="Accent"
+                                                                 Style="{StaticResource CheckBoxNormalStyle}"
+                                                                 IsChecked="{Binding CanShowBackgroundImage}"/>
+                        </Grid>
+                        <TextInputLayout:SfTextInputLayout 
+                        ContainerType="Outlined" 
+                        Hint="Text">
+                            <Entry Style="{StaticResource EntryNormalStyle}"
+                               Text="{Binding Text,Mode=TwoWay}" />
+                        </TextInputLayout:SfTextInputLayout>
+
+                        <tabView:SfTabView VisibleHeaderCount="3"  
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Start"
+                                       TabHeight="40"
+                                       HeightRequest="110">
+                            <tabView:SfTabItem Title="TEXT COLOR" TitleFontSize="12">
+                                <tabView:SfTabItem.Content>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="10"/>
+                                            <RowDefinition Height="50"/>
+                                            <RowDefinition Height="10"/>
+                                        </Grid.RowDefinitions>
+                                        <SyncfusionButton:SfSegmentedControl Grid.Row="1"
+                                                                                x:Name="TextColorSegment"
+                                                                             SelectedIndex="0"
+                                                                             Style="{StaticResource SegmentedNormalStyle}"                  
+                                                                            SelectionChanged="Handle_SelectionChanged" >
+                                            <SyncfusionButton:SfSegmentedControl.SelectionIndicatorSettings>
+                                                <SyncfusionButton:SelectionIndicatorSettings 
+                                                    Color="#EEEEEE"
+                                                    Position="Fill">
+                                                </SyncfusionButton:SelectionIndicatorSettings>
+                                            </SyncfusionButton:SfSegmentedControl.SelectionIndicatorSettings>
+                                        </SyncfusionButton:SfSegmentedControl>
+                                    </Grid>
+                                </tabView:SfTabItem.Content>
+
+                            </tabView:SfTabItem>
+
+                            <tabView:SfTabItem Title="BACKGROUND" TitleFontSize="12">
+                                <tabView:SfTabItem.Content>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="10"/>
+                                            <RowDefinition Height="50"/>
+                                            <RowDefinition Height="10"/>
+                                        </Grid.RowDefinitions>
+                                        <SyncfusionButton:SfSegmentedControl Grid.Row="1"
+                                                                             SelectedIndex="3"
+                                                                             SelectionTextColor="#af2463"
+                                                                                x:Name="BackgroundColorSegment"
+                                                                             Style="{StaticResource SegmentedNormalStyle}"                  
+                                                                            SelectionChanged="Handle_SelectionChanged" >
+                                            <SyncfusionButton:SfSegmentedControl.SelectionIndicatorSettings>
+                                                <SyncfusionButton:SelectionIndicatorSettings 
+                                                    Color="#EEEEEE"
+                                                    Position="Fill">
+                                                </SyncfusionButton:SelectionIndicatorSettings>
+                                            </SyncfusionButton:SfSegmentedControl.SelectionIndicatorSettings>
+                                        </SyncfusionButton:SfSegmentedControl>
+                                    </Grid>
+                                </tabView:SfTabItem.Content>
+                            </tabView:SfTabItem>
+
+                            <tabView:SfTabItem Title="BORDER COLOR" TitleFontSize="12">
+                                <tabView:SfTabItem.Content>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="10"/>
+                                            <RowDefinition Height="50"/>
+                                            <RowDefinition Height="10"/>
+                                        </Grid.RowDefinitions>
+                                        <SyncfusionButton:SfSegmentedControl Grid.Row="1"
+                                                                             SelectedIndex="4"
+                                                                             x:Name="BorderColorSegment"
+                                                                             SelectionTextColor="#000000"
+                                                                             Style="{StaticResource SegmentedNormalStyle}"                  
+                                                                            SelectionChanged="Handle_SelectionChanged" >
+                                            <SyncfusionButton:SfSegmentedControl.SelectionIndicatorSettings>
+                                                <SyncfusionButton:SelectionIndicatorSettings 
+                                                    Color="#EEEEEE"
+                                                    Position="Fill">
+                                                </SyncfusionButton:SelectionIndicatorSettings>
+                                            </SyncfusionButton:SfSegmentedControl.SelectionIndicatorSettings>
+                                        </SyncfusionButton:SfSegmentedControl>
+                                    </Grid>
+
+                                </tabView:SfTabItem.Content>
+                            </tabView:SfTabItem>
+                        </tabView:SfTabView>
+
+
+                        <Label Text="Border Thickness"/>
+
+                        <Grid Margin="0,10" HeightRequest="35" HorizontalOptions="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="25"/>
+                            </Grid.ColumnDefinitions>
+                            <RangeSlider:SfRangeSlider x:Name="borderSlider" Grid.Column="0" 
+                                                       HeightRequest="50"
+                                                   HorizontalOptions="Center"
+                                                   Orientation="Horizontal"
+                                                   ShowValueLabel="False"
+                                                   ShowRange="False"
+                                                   Minimum="0"
+                                                   Maximum="10"
+                                                   SnapsTo="StepValues"
+                                                   TrackSelectionColor="Accent"
+                                                   KnobColor="Accent"
+                                                   Value="{Binding BorderWidth}"
+                                                   ToolTipPlacement="None"
+                                                   TickPlacement="None">
+                                <RangeSlider:SfRangeSlider.StepFrequency>
+                                    <OnPlatform x:TypeArguments="x:Double">
+                                        <On Platform="iOS" Value="0.1" />
+                                        <On Platform="Android" Value="0.1" />
+                                        <On Platform="UWP" Value="1" />
+                                    </OnPlatform>
+                                </RangeSlider:SfRangeSlider.StepFrequency>
+                            </RangeSlider:SfRangeSlider>
+                            <Label Text="{Binding StepValue}" Grid.Column="1"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"/>
+                        </Grid>
+
+                        <Label Text="Corner Radius"/>
+
+                        <Grid Margin="0,10" HeightRequest="35" HorizontalOptions="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Left" HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"/>
+                            <RangeSlider:SfRangeSlider Grid.Column="1" 
+                                                       x:Name="leftCornerRadius"
+                                                       HeightRequest="50"
+                                                   HorizontalOptions="Center"
+                                                   Orientation="Horizontal"
+                                                   ShowValueLabel="False"
+                                                   ShowRange="False"
+                                                   Minimum="0"
+                                                   StepFrequency="2"
+                                                   Maximum="25"
+                                                   TrackSelectionColor="Accent"
+                                                   KnobColor="Accent"
+                                                   Value="{Binding LeftSliderValue}"
+                                                   SnapsTo="StepValues"
+                                                   ToolTipPlacement="None"
+                                                   TickPlacement="None"/>
+                            <Label Text="{Binding Source={x:Reference leftCornerRadius},Path=Value}" Grid.Column="2"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"/>
+                        </Grid>
+                        <Grid Margin="0,10" HeightRequest="35" HorizontalOptions="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Right" HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center" />
+                            <RangeSlider:SfRangeSlider Grid.Column="1" 
+                                                       x:Name="rightCornerRadius"
+                                                       HeightRequest="50"
+                                                   HorizontalOptions="Center"
+                                                   Orientation="Horizontal"
+                                                   ShowValueLabel="False"
+                                                   ShowRange="False"
+                                                   Minimum="0"
+                                                   StepFrequency="2"
+                                                   Maximum="25"
+                                                   TrackSelectionColor="Accent"
+                                                   KnobColor="Accent"
+                                                   SnapsTo="StepValues"
+                                                   Value="{Binding RightSliderValue}"
+                                                   ToolTipPlacement="None"
+                                                   TickPlacement="None"/>
+                            <Label Text="{Binding Source={x:Reference rightCornerRadius},Path=Value}" Grid.Column="2"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"/>
+                        </Grid>
+                        <Grid Margin="0,10" x:Name="shadow">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Enable Shadow" />
+
+                            <Switch IsToggled="{Binding EnableShadow}" Grid.Column="1" HorizontalOptions="End" />
+                        </Grid>
+
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+        </Grid>
+    </local:SampleView.Content>
+</local:SampleView>

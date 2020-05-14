@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <AssemblyName>SampleBrowser.SfChat</AssemblyName>
+    <RootNamespace>SampleBrowser.SfChat</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Icons\**" />
+    <EmbeddedResource Remove="Icons\**" />
+    <None Remove="Icons\**" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Include="SamplesList\SamplesList.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+   <PackageReference Include="Microsoft.Bot.Schema" Version="4.7.0" />
+   <PackageReference Include="SampleBrowser.Core" Version="18.1.0.52" />
+   <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="18.1.0.52" />
+   <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.1.0.52" />
+   <PackageReference Include="Syncfusion.Xamarin.SfCalendar" Version="18.1.0.52" />
+   <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="18.1.0.52" />
+   <PackageReference Include="Syncfusion.Xamarin.SfChat" Version="18.1.0.52" />
+   <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="18.1.0.52" />
+   <PackageReference Include="System.ComponentModel" Version="4.3.0" />
+   <PackageReference Include="Xamarin.Essentials" Version="1.0.1" />
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="MainPage.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <Import Project="..\..\..\..\build\tools\Syncfusion.CodeAnalysis.StyleCop\tools\StyleCop.MsBuild.targets" Condition="Exists('..\..\..\..\build\tools\Syncfusion.CodeAnalysis.StyleCop\tools\StyleCop.MsBuild.targets')" />
+</Project>

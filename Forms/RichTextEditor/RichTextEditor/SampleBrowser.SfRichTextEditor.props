@@ -1,0 +1,55 @@
+﻿<Project>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+      <Link>Samples\RichTextEditor\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\MailPage\MailPage.xaml.cs">
+      <Link>Samples\RichTextEditor\Samples\MailPage\MailPage.xaml.cs</Link>
+	  <DependentUpon>MailPage.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\MailPage\MailPage.xaml">
+      <Link>Samples\RichTextEditor\Samples\MailPage\MailPage.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Localization\Localization.xaml.cs">
+      <Link>Samples\RichTextEditor\Samples\Localization\Localization.xaml.cs</Link>
+	  <DependentUpon>Localization.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Localization\Localization.xaml">
+      <Link>Samples\RichTextEditor\Samples\Localization\Localization.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Fonts\Boogaloo.ttf">
+      <Link>Samples\RichTextEditor\Fonts\Boogaloo.ttf</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Fonts\Handlee.ttf">
+      <Link>Samples\RichTextEditor\Fonts\Handlee.ttf</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Fonts\Kaushan Script.ttf">
+      <Link>Samples\RichTextEditor\Fonts\Kaushan Script.ttf</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Fonts\Pinyon Script.ttf">
+      <Link>Samples\RichTextEditor\Fonts\Pinyon Script.ttf</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Resources\Syncfusion.SfRichTextEditor.XForms.de-DE.resx">
+      <Link>Samples\RichTextEditor\Resources\Syncfusion.SfRichTextEditor.XForms.de-DE.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Resources\Syncfusion.SfRichTextEditor.XForms.en-US.resx">
+      <Link>Samples\RichTextEditor\Resources\Syncfusion.SfRichTextEditor.XForms.en-US.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Resources\Syncfusion.SfRichTextEditor.XForms.es-ES.resx">
+      <Link>Samples\RichTextEditor\Resources\Syncfusion.SfRichTextEditor.XForms.es-ES.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Resources\Syncfusion.SfRichTextEditor.XForms.ja-JP.resx">
+      <Link>Samples\RichTextEditor\Resources\Syncfusion.SfRichTextEditor.XForms.ja-JP.resx</Link>
+    </EmbeddedResource>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\RTECustomEntry.cs">
+      <Link>Samples\RichTextEditor\Samples\RTECustomEntry.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\IPhotoPickerService.cs">
+      <Link>Samples\RichTextEditor\Samples\IPhotoPickerService.cs</Link>
+    </Compile>
+  </ItemGroup>
+</Project>

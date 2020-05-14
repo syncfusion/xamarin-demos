@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfListView.Selection"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.SfListView"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+                   xmlns:syncbuttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms">
+    <sample:SampleView.Behaviors>
+        <local:SfListViewSelectionBehavior/>
+    </sample:SampleView.Behaviors>
+    <sample:SampleView.Resources>
+        <ResourceDictionary>
+            <local:SelectionModeToVisbileConverter  x:Key="SelectionModeToVisbileConverter"/>
+            <local:IconColorConverter x:Key="IconColorConverter"/>
+            <local:SelectionIconConverter x:Key="SelectionIconConverter"/>
+            <DataTemplate x:Name="ItemTemplate"  x:Key="ItemTemplate">
+                <Grid x:Name="grid" RowSpacing="0" ColumnSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="1" />
+                    </Grid.RowDefinitions>
+                    <Grid RowSpacing="0" ColumnSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Image Source="SkyBlue.png" HeightRequest="40"
+                   WidthRequest="40" Grid.Column="0"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
+                        <Label Grid.Column="0" Margin='{OnPlatform iOS="0,5,0,0", macOS="0,0,0,10", WPF="0,5,0,0", Android="0,5,0,0", UWP="0,5,0,0"}' HeightRequest="30"
+                   FontSize="{OnPlatform macOS=Large, Android=Large, iOS=Large, UWP=Medium, WPF=Medium}" Text ="&#xe718;" TextColor="White" VerticalOptions="Center"
+                   HorizontalOptions="Center" FontFamily="{OnPlatform iOS=SB Icons, macOS=SB Icons, Android=SB Icons.ttf#, UWP=SB Icons.ttf#SB Icons, WPF=Assets/Fonts/SB Icons.ttf#SB Icons}"/>
+                        <Grid Grid.Column="1"
+                  RowSpacing="1"
+                  Padding="10,0,0,0"
+                  VerticalOptions="Center">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <Label LineBreakMode="NoWrap"
+                     TextColor="#474747"
+                     Text="{Binding SongTitle}" 
+                               FontSize="{OnPlatform Android={OnIdiom Phone=16, Tablet=18}, iOS={OnIdiom Phone=18, Tablet=20}, macOS=20, UWP={OnIdiom Phone=18, Tablet=20, Desktop=20}, WPF=20}" />
+                            <Grid RowSpacing="0"
+                    ColumnSpacing="0"
+                    Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label TextColor="#474747"
+                       LineBreakMode="NoWrap"
+                       Text="{Binding SongAuther}"
+                               FontSize="{OnPlatform Android={OnIdiom Phone=10, Tablet=14}, iOS={OnIdiom Phone=12, Tablet=14}, macOS=14, UWP={OnIdiom Phone=12, Tablet=12, Desktop=12}, WPF=12}" />
+                                <Label TextColor="#474747"
+                       Margin="0,0,10,0"
+                       Grid.Column="1"
+                       LineBreakMode="NoWrap"
+                       HorizontalTextAlignment="End"
+                       Text="{Binding SongSize}"
+                               FontSize="{OnPlatform Android={OnIdiom Phone=10, Tablet=14}, iOS={OnIdiom Phone=12, Tablet=14}, macOS=14, UWP={OnIdiom Phone=12, Tablet=12, Desktop=12}, WPF=12}" />
+                            </Grid>
+                        </Grid>
+                        <Label Grid.Column="2" Margin="10,20,0,0" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center"
+                               FontSize="{OnPlatform Android=Large, UWP=Medium, WPF=Medium, iOS=Large, macOS=Large}"
+                               IsVisible="{Binding SelectionMode, Source={x:Reference listView}, Converter={StaticResource SelectionModeToVisbileConverter}}"
+                               Text="{Binding IsSelected, Converter={StaticResource SelectionIconConverter}}" TextColor="{Binding Path=IsSelected, Converter={StaticResource IconColorConverter}}"
+                               FontFamily="{OnPlatform iOS=Sync FontIcons, macOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons, WPF=Assets/Fonts/Sync FontIcons.ttf#Sync FontIcons}"/>
+                    </Grid>
+                    <StackLayout Grid.Row="1" BackgroundColor="#E4E4E4" HeightRequest="1"/>
+                </Grid>
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </sample:SampleView.Resources>
+
+    <sample:SampleView.Content>
+        <Grid Margin="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid x:Name="headerGrid" BackgroundColor="#FFEEEEF2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid x:Name="cancelImageParent" IsVisible="{Binding IsVisible}">
+                    <Label x:Name="selectionCancelImage" Rotation="{OnPlatform Android=-45, iOS=-45, UWP=-45, WPF=-45, macOS=45}" TextColor="Black" FontSize="{OnPlatform Android=Large, iOS=Large, macOS=Large, UWP=Medium, WPF=Medium}"
+              Grid.Column="0" Text="&#xe73b;" FontFamily="{OnPlatform iOS=Sync FontIcons, macOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons, WPF=Assets/Fonts/Sync FontIcons.ttf#Sync FontIcons}"
+              WidthRequest="25" HeightRequest="25"
+              Margin='{OnPlatform Android="20,0,10,0", iOS="20,0,10,0", UWP="20,0,10,0", WPF="20,0,10,0", macOS="30,10,10,0"}'
+              HorizontalOptions="Start"
+              VerticalOptions="Center"/>
+                </Grid>
+                <Label LineBreakMode="NoWrap"
+               Margin="15,0,0,0" Text="{Binding TitleInfo}" FontAttributes="Bold"
+               FontSize="16" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center"/>
+                <Label LineBreakMode="NoWrap" Grid.Column="0"
+               Margin="45,0,0,0" Text="{Binding HeaderInfo}" IsVisible="{Binding IsVisible}"
+               FontSize="14" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center"/>
+                <Grid Grid.Column="1" x:Name="editImageParent">
+                    <Label x:Name="selectionEditImage"
+               FontSize="{OnPlatform Android=Large, iOS=Large, macOS=Large, UWP=Medium, WPF=Medium}"
+               Text="&#xe747;" TextColor="Black" FontFamily="{OnPlatform iOS=Sync FontIcons, macOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons, WPF=Assets/Fonts/Sync FontIcons.ttf#Sync FontIcons}"
+               Margin="0,0,10,0"
+               HorizontalOptions="End"
+               VerticalOptions="Center"/>
+                </Grid>
+            </Grid>
+            <sync:SfListView x:Name="listView"
+                       AllowKeyboardNavigation="True"
+                       Grid.Row="1"
+                       SelectionGesture="Tap"
+                       SelectionMode="Single"
+                       SelectionBackgroundColor="#E4E4E4"
+                       ItemTemplate="{StaticResource ItemTemplate}"
+                       IsStickyHeader="True" ItemSize="70" ItemsSource="{Binding MusicInfo}">
+            </sync:SfListView>
+        </Grid>
+    </sample:SampleView.Content>
+</sample:SampleView>

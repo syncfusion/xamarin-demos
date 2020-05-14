@@ -1,0 +1,55 @@
+<Project>
+    <ItemGroup>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\Customization_RadialMenu\Customization_RadialMenu.xaml.cs">
+            <Link>Samples\RadialMenu\Customization_RadialMenu\Customization_RadialMenu.xaml.cs</Link>
+            <DependentUpon>Customization_RadialMenu.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\Customization_RadialMenu\Rotator_Model.cs">
+            <Link>Samples\RadialMenu\Customization_RadialMenu\Rotator_Model.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\Customization_RadialMenu\Rotator_ViewModel.cs">
+            <Link>Samples\RadialMenu\Customization_RadialMenu\Rotator_ViewModel.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted_RadialMenu\GettingStarted_RadialMenu.xaml.cs">
+            <Link>Samples\RadialMenu\GettingStarted_RadialMenu\GettingStarted_RadialMenu.xaml.cs</Link>
+            <DependentUpon>GettingStarted_RadialMenu.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\SlotIndex_RadialMenu\SlotIndex_RadialMenu.xaml.cs">
+            <Link>Samples\RadialMenu\SlotIndex_RadialMenu\SlotIndex_RadialMenu.xaml.cs</Link>
+            <DependentUpon>SlotIndex_RadialMenu.xaml</DependentUpon>
+        </Compile>
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+            <Link>Samples\RadialMenu\SamplesList\SamplesList.xml</Link>
+        </EmbeddedResource>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Customization_RadialMenu\Customization_RadialMenu.xaml">
+            <Link>Samples\RadialMenu\Customization_RadialMenu\Customization_RadialMenu.xaml</Link>
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted_RadialMenu\GettingStarted_RadialMenu.xaml">
+            <Link>Samples\RadialMenu\GettingStarted_RadialMenu\GettingStarted_RadialMenu.xaml</Link>
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\SlotIndex_RadialMenu\SlotIndex_RadialMenu.xaml">
+            <Link>Samples\RadialMenu\SlotIndex_RadialMenu\SlotIndex_RadialMenu.xaml</Link>
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+        </ItemGroup>
+        <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml.cs">
+              <Link>Samples\RadialMenu\Samples\Themes\Themes.xaml.cs</Link>
+              <DependentUpon>Themes.xaml</DependentUpon>
+          </Compile>
+              </ItemGroup>
+              <ItemGroup>
+          <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml">
+              <Link>Samples\RadialMenu\Samples\Themes\Themes.xaml</Link>
+              <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+              <SubType>Designer</SubType>
+          </EmbeddedResource>
+      </ItemGroup>
+</Project>
