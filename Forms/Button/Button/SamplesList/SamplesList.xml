@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Samples>
+  <Sample Title="Getting Started" Name="GettingStartedSample" SearchTags="PrimaryButton, SfButton, Buttons, FlatButton, IconButton, OutlineButton, CircleButton" Description = "Represents the different types of button customizations" />
+  <Sample Title="Customization" Platforms="Android,iOS,UWP" Name="CustomizationSample" SearchTags="Button, SfButton, Buttons" Description = "Represents a control that a user can show a customized button." />
+  <Sample Title="Toggle Button" Name="ToggleButtonSample" SearchTags="ToggleButton, Checkable, SfButton, Buttons" Description ="Represents the toggle state for button"/>
+</Samples>

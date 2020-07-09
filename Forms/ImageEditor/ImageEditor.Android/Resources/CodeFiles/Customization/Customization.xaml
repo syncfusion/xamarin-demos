@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<core:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:core="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:customControls="clr-namespace:SampleBrowser.SfImageEditor.CustomControls" xmlns:xForms="clr-namespace:Syncfusion.SfImageEditor.XForms;assembly=Syncfusion.SfImageEditor.XForms" xmlns:sfImageEditor="clr-namespace:SampleBrowser.SfImageEditor" x:Class="SampleBrowser.SfImageEditor.Customization">
+    <core:SampleView.Resources>
+        <ResourceDictionary>
+            <sfImageEditor:InverseBooleanConverter x:Key="InverseBooleanConverter" />
+            <sfImageEditor:CountToBooleanConverter x:Key="CountToBooleanConverter" />
+            <Style x:Key="colorButtonStyle" TargetType="Button">
+                <Setter Property="HeightRequest" Value="30" />
+                <Setter Property="WidthRequest" Value="30" />
+                <Setter Property="BorderRadius" Value="15" />
+            </Style>
+        </ResourceDictionary>
+    </core:SampleView.Resources>
+    <core:SampleView.Content>
+        <Grid x:Name="mainGrid">
+            <Grid>
+                <xForms:SfImageEditor BackgroundColor="Black" x:Name="imageEditor">
+                    <xForms:SfImageEditor.ToolbarSettings>
+                        <xForms:ToolbarSettings IsVisible="false" />
+                    </xForms:SfImageEditor.ToolbarSettings>
+                </xForms:SfImageEditor>
+            </Grid>
+            <Grid x:Name="colorPalette" IsVisible="{Binding IsColorPaletteVisible, Mode=TwoWay}" VerticalOptions="Start" BackgroundColor="Transparent" HorizontalOptions="End">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.30*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="0.35*" />
+                </Grid.RowDefinitions>
+                <ScrollView Grid.Row="1" Orientation="Vertical">
+                    <StackLayout Margin="0,0,15,0"  Orientation="Vertical" WidthRequest="30" VerticalOptions="StartAndExpand" HorizontalOptions="End">
+                        <customControls:RoundedColorButton Style="{StaticResource colorButtonStyle}" BackgroundColor="#4472c4" Clicked="ColorClicked" />
+                        <customControls:RoundedColorButton Style="{StaticResource colorButtonStyle}" BackgroundColor="#ed7d31" Clicked="ColorClicked" />
+                        <customControls:RoundedColorButton Style="{StaticResource colorButtonStyle}" BackgroundColor="#ffc000" Clicked="ColorClicked" />
+                        <customControls:RoundedColorButton Style="{StaticResource colorButtonStyle}" BackgroundColor="#70ad47" Clicked="ColorClicked" />
+                        <customControls:RoundedColorButton Style="{StaticResource colorButtonStyle}" BackgroundColor="#5b9bd5" Clicked="ColorClicked" />
+                        <customControls:RoundedColorButton Style="{StaticResource colorButtonStyle}" BackgroundColor="#c1c1c1" Clicked="ColorClicked" />
+                        <customControls:RoundedColorButton Style="{StaticResource colorButtonStyle}" BackgroundColor="#6f6fe2" Clicked="ColorClicked" />
+                        <customControls:RoundedColorButton Style="{StaticResource colorButtonStyle}" BackgroundColor="#e269ae" Clicked="ColorClicked" />
+                        <customControls:RoundedColorButton Style="{StaticResource colorButtonStyle}" BackgroundColor="#9e480e" Clicked="ColorClicked" />
+                        <customControls:RoundedColorButton Style="{StaticResource colorButtonStyle}" BackgroundColor="#997300" Clicked="ColorClicked" />
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+            <Grid VerticalOptions="Start" x:Name="toolbarGrid" BackgroundColor="Transparent" IsVisible="{Binding IsTouched}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <customControls:CustomButton HeightRequest="45" x:Name="resetButton" BackgroundColor="Transparent" WidthRequest="45" Clicked="Reset" Text = "&#xe74a;" FontSize = "40" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" TextColor="#FFFFFF">
+                </customControls:CustomButton>
+                <customControls:CustomButton x:Name="redoButton" HeightRequest="45" BackgroundColor="Transparent" WidthRequest="45" Grid.Column="2" Text = "&#xe739;" FontSize = "40" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" TextColor="#FFFFFF" IsVisible="{Binding RedoCount, Mode=TwoWay, Converter={StaticResource CountToBooleanConverter}}" Clicked="Redo">
+                </customControls:CustomButton>
+                <customControls:CustomButton x:Name="undoButton" HeightRequest="45" BackgroundColor="Transparent" WidthRequest="45" Grid.Column="3" Text = "&#xe716;" FontSize = "40" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" TextColor="#FFFFFF" Clicked="Undo">
+                </customControls:CustomButton>
+                <customControls:CustomButton x:Name="rectButton" HeightRequest="45" BackgroundColor="Transparent" WidthRequest="45" Grid.Column="4" Text = "&#xe701;" FontSize = "40" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" TextColor="#FFFFFF" Clicked="AddRect">
+                </customControls:CustomButton>
+                <customControls:CustomButton x:Name="textButton" HeightRequest="45" BackgroundColor="Transparent" WidthRequest="45" Grid.Column="5" Text = "&#xe749;" FontSize = "40" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" TextColor="#FFFFFF" Clicked="AddText">
+                </customControls:CustomButton>
+                <customControls:CustomButton x:Name="penButton" HeightRequest="45" BackgroundColor="Transparent" WidthRequest="45" Grid.Column="6" Clicked="DoodleDraw" Text = "&#xe747;" FontSize = "40" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" TextColor="#FFFFFF">
+                </customControls:CustomButton>
+            </Grid>
+            <Grid VerticalOptions="EndAndExpand" Margin="0,0,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.1*" />
+                    <ColumnDefinition Width="0.75*" />
+                    <ColumnDefinition Width="0.15*" />
+                </Grid.ColumnDefinitions>
+                <customControls:CustomEditor WatermarkText="Enter a Caption"  TextColor="White" x:Name="captionTextBox" Grid.Column="1" >
+                    <customControls:CustomEditor.Margin>
+                        <OnIdiom x:TypeArguments="Thickness">
+                            <OnIdiom.Phone>5,0,0,0</OnIdiom.Phone>
+                            <OnIdiom.Tablet>50,0,50,0</OnIdiom.Tablet>
+                        </OnIdiom>
+                    </customControls:CustomEditor.Margin>
+                </customControls:CustomEditor>
+                <customControls:CustomButton x:Name="shareButton" Grid.Column="2" Clicked="ShareButton_OnClicked" BackgroundColor="Transparent" Text = "&#xe751;" FontSize = "35" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" TextColor="#FFFFFF" />
+            </Grid>
+            <Grid BackgroundColor="Transparent" IsVisible="{Binding IsTouched, Mode=TwoWay, Converter={StaticResource InverseBooleanConverter}}">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Handle_Tapped" />
+                </Grid.GestureRecognizers>
+            </Grid>
+        </Grid>
+    </core:SampleView.Content>
+</core:SampleView>

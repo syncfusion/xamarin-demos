@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:range="clr-namespace:Syncfusion.SfRangeSlider.XForms;assembly=Syncfusion.SfRangeSlider.XForms"
+             x:Class="SampleBrowser.SfRangeSlider.Orientation">
+  <local:SampleView.Content>
+    <StackLayout Padding="10" Orientation="Vertical" Spacing="1" HeightRequest="150" VerticalOptions="FillAndExpand">
+
+      <Label x:Name="EqualizerLabel" FontSize = "20" Text = "Equalizer"  YAlign="Center"  XAlign="Center" TextColor="Black"/>
+      <ScrollView>
+      <StackLayout x:Name="MainRangeSlider" Spacing="1" HorizontalOptions="Center" Orientation="Horizontal">
+        <StackLayout  Spacing="1" x:Name="FirstSlider" VerticalOptions="Center" HorizontalOptions="Center" Orientation="Vertical">
+          <Label x:Name="hertzLabel" Text ="1420Hz" FontSize = "20"  YAlign = "Center"  XAlign="Center"/>
+          <range:SfRangeSlider x:Name="sfRangeSlider1"   HeightRequest = "300" WidthRequest = "85" Minimum = "-12" Maximum = "12" RangeStart = "-12" RangeEnd = "2.2" Value = "2.2" LabelPlacement="TopLeft" ShowValueLabel="true"
+      TickFrequency = "12" SnapsTo="StepValues" Orientation="Vertical" ToolTipPlacement="None"  ValuePlacement ="TopLeft"  TickPlacement="None" ShowRange="false"  ShowCustomLabel="false" StepFrequency="1"  TrackSelectionColor="Transparent"/>
+        </StackLayout>
+        <StackLayout  Orientation="Vertical" x:Name="SecondSlider" Spacing="1" VerticalOptions="Center">
+          <Label x:Name="hertzLabel1" FontSize = "20" Text ="730Hz"  YAlign = "Center"  XAlign="Center"/>
+          <range:SfRangeSlider x:Name="sfRangeSlider2" HeightRequest = "300" WidthRequest = "85" Minimum = "-12" Maximum = "12" RangeStart = "-12" RangeEnd = "-4.7" Value = "-4.7" LabelPlacement="TopLeft" ShowValueLabel="true"
+      TickFrequency = "12" SnapsTo="StepValues" StepFrequency="1" Orientation="Vertical" ToolTipPlacement="None" ValuePlacement ="TopLeft" TickPlacement="None" ShowRange="false" ShowCustomLabel="false"  TrackSelectionColor="Transparent"/>
+        </StackLayout>
+        <StackLayout  Orientation="Vertical"  x:Name="ThirdSlider" Spacing="1" VerticalOptions="Center">
+          <Label x:Name="hertzLabel2" FontSize = "20" Text ="1800Hz"  YAlign = "Center"  XAlign="Center"/>
+          <range:SfRangeSlider  x:Name="sfRangeSlider3" HeightRequest = "300" WidthRequest = "85" Minimum = "-12" Maximum = "12" RangeStart = "-12" RangeEnd = "6" Value = "6" LabelPlacement="TopLeft" ShowValueLabel="true"
+       TickFrequency = "12" SnapsTo="StepValues" StepFrequency="1" Orientation="Vertical" ToolTipPlacement="None" ValuePlacement ="TopLeft" TickPlacement="None" ShowRange="false" ShowCustomLabel="false"  TrackSelectionColor="Transparent"/>
+        </StackLayout>
+      </StackLayout>
+	 </ScrollView>
+    </StackLayout>
+  </local:SampleView.Content>
+</local:SampleView>

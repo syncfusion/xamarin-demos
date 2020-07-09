@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" 
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:cr="clr-namespace:SampleBrowser.SfPdfViewer"
+                  xmlns:sfpdfviewer="clr-namespace:Syncfusion.SfPdfViewer.XForms;assembly=Syncfusion.SfPdfViewer.XForms"
+                  x:Class="SampleBrowser.SfPdfViewer.Themes">
+    <local:SampleView.BindingContext>
+        <cr:GettingStartedViewModel/>
+    </local:SampleView.BindingContext>
+    <local:SampleView.Content>
+        <Grid x:Name="mainGrid" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid x:Name="pdfViewerGrid" Grid.Row="0" >
+                <sfpdfviewer:SfPdfViewer x:Name="pdfViewerControl" InputFileStream="{Binding PdfDocumentStream}" PreserveSignaturePadOrientation="True"/>
+            </Grid>
+        </Grid>
+    </local:SampleView.Content>
+    </local:SampleView>

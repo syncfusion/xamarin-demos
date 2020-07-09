@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="#039be5"
+    android:id="@+id/layout">
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Morrisville"
+        android:textSize="15sp"
+        android:textColor="#ffffff"
+        android:id="@+id/textview"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal" />
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/imageview"
+        android:adjustViewBounds="true"
+        android:layout_weight="1"
+        android:src="@drawable/cloudy"
+        android:layout_gravity="center_horizontal" />
+<!--</TableRow>-->
+<!--  android:background="#ffffff"-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:text="20°/12"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="23sp"
+        android:textAlignment="center"
+        android:id="@+id/text"
+        android:layout_below="@+id/imageview"
+        android:layout_gravity="center" />
+    <TextView
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Friday, March 16 "
+        android:textSize="13sp"
+        android:textColor="#ffffff"
+        android:id="@+id/text1"
+        android:layout_below="@+id/text"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal" />
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#007aaa"
+        android:id="@+id/scrollview"
+        android:layout_height="170dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:background="#007aaa"
+            android:layout_width="wrap_content"
+            android:id="@+id/pullscroller"
+            android:layout_height="fill_parent" />
+    </HorizontalScrollView>
+<!--  </TableLayout>-->
+</LinearLayout>

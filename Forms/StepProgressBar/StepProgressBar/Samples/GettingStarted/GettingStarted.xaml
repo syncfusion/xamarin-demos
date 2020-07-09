@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
+                  xmlns:local1="clr-namespace:SampleBrowser.SfStepProgressBar"
+                  x:Class="SampleBrowser.SfStepProgressBar.GettingStarted">
+    
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <local1:StatusToTextVisibilityConverter x:Key="StatusToText"/>
+            <Style TargetType="progressBar:StepView">
+                <Setter Property="ProgressValue" Value="{Binding ProgressedDistance}"/>
+                <Setter Property="Status" Value="{Binding Status}"/>
+            </Style>
+            <Style TargetType="Span" x:Key="StationSpan">
+                <Setter Property="Text" Value="{Binding Name}"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="#333942"/>
+            </Style>
+
+            <Style TargetType="Span" x:Key="ArraivalSpan">
+                <Setter Property="Text" Value="{Binding Arrival}"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="#4A515E"/>
+            </Style>
+            <Style TargetType="Span" x:Key="DepatureSpan">
+                <Setter Property="Text" Value="{Binding Depature}"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="#4A515E"/>
+            </Style>
+
+            <Style TargetType="Span" x:Key="ArraivalTimeSpan">
+                <Setter Property="Text" Value="On Time"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="{Binding ArrivalDateTime, Converter={StaticResource StatusToText} }"/>
+            </Style>
+
+            <Style TargetType="Span" x:Key="DepatureTimeSpan">
+                <Setter Property="Text" Value="On Time"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="{Binding DepatureDateTime, Converter={StaticResource StatusToText} }"/>
+            </Style>
+
+
+            <Style TargetType="Span" x:Key="DistanceSpan">
+                <Setter Property="Text" Value="{Binding Distance }"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="#4A515E"/>
+            </Style>
+
+            <Style TargetType="Span" x:Key="SpaceSpan">
+                <Setter Property="Text" Value="&#10;"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="Transparent"/>
+            </Style>
+
+            <Style TargetType="Span" x:Key="WhiteSpaceSpan">
+                <Setter Property="Text" Value="--------"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="Transparent"/>
+            </Style>
+            <Style TargetType="Grid">
+                <Setter Property="RowSpacing" Value="0"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <Grid  Margin="15,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="0"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Padding="15"       
+                  Margin="-15,0"
+                  BackgroundColor="#55EBECEF">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="130"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Text="Train Number"
+                       FontAttributes="Bold"
+                       TextColor="#000000"
+                       FontSize="14"/>
+                <Label Grid.Column="1"
+                       TextColor="#000000"
+                       FontSize="14"
+                       Text=":"/>
+                <Label Grid.Column="2"
+                       TextColor="#000000"
+                       FontSize="14"
+                       Text="S09 - New York, NY to Toronto, ON"/>
+                <Label Grid.Row="1"
+                       Text="Upcoming Station"
+                       FontAttributes="Bold"
+                        TextColor="#000000"
+                       FontSize="14"/>
+                <Label Grid.Row="1"
+                       Grid.Column="1"
+                       Text=":"
+                       TextColor="#000000"
+                       FontSize="14"/>
+                <Label Grid.Row="1"
+                       Grid.Column="2"
+                       x:Name="upComingStationLabel"
+                       TextColor="#E02020"
+                       FontSize="14"/>
+            </Grid>
+            <StackLayout Orientation="Horizontal"
+                         Padding="15,10"
+                         Margin="-15,0"
+                         Grid.Row="2"
+                         BackgroundColor="#EBECEF">
+                <Label Text="Arrival"
+                       TextColor="Black"
+                       FontSize="15"
+                       FontAttributes="Bold"/>
+                <Label Text="--"
+                       TextColor="Transparent"
+                       FontSize="15"
+                       FontAttributes="Bold"/>
+                <Label Text="Departure"
+                       TextColor="Black"
+                       FontSize="15"
+                       FontAttributes="Bold"/>
+                <Label Text="------------"
+                       TextColor="#EEEEEE"
+                       FontSize="15"/>
+                <Label Text="Station"
+                       TextColor="Black"
+                       FontSize="15"
+                               FontAttributes="Bold"/>
+            </StackLayout>
+            <StackLayout Grid.Row="3" Orientation="Vertical">
+                <ScrollView Orientation="Vertical">
+                    
+                    <progressBar:SfStepProgressBar x:Name="trainProgress" 
+                                           Orientation="Vertical"
+                                           ProgressAnimationDuration="2000"
+                                           TitleAlignment="Center">
+                        <progressBar:SfStepProgressBar.NotStartedStepStyle>
+                            <progressBar:StepStyle x:TypeArguments="progressBar:NotStartedStepState"
+                                               MarkerStrokeColor="#A7A7A7"                                                           
+                                               MarkerFillColor="#FFFFFF"
+                                               MarkerContentType="Dot"
+                                               MarkerContentFillColor="#A7A7A7"
+                                               TrackColor="#E7E7E7"
+                                               MarkerStrokeWidth="2"
+                                               MarkerSize="24"
+                                               MarkerContentSize="10"/>
+                        </progressBar:SfStepProgressBar.NotStartedStepStyle>
+                        <progressBar:SfStepProgressBar.InProgressStepStyle>
+                            <progressBar:StepStyle x:TypeArguments="progressBar:InProgressStepState"
+                                               MarkerContentType="Dot"
+                                               MarkerFillColor="#FFFFFF"
+                                               MarkerStrokeColor="#E02020"
+                                               MarkerContentFillColor="#E02020"
+                                               TrackColor="#D7D7D7"
+                                               ProgressLineColor="#FF0000"
+                                               MarkerStrokeWidth="2"
+                                               MarkerSize="24"
+                                               MarkerContentSize="10"/>
+                        </progressBar:SfStepProgressBar.InProgressStepStyle>
+                        <progressBar:SfStepProgressBar.CompletedStepStyle>
+                            <progressBar:StepStyle x:TypeArguments="progressBar:CompletedStepState"
+                                               MarkerFillColor="#FFFFFF"
+                                               MarkerStrokeColor="#4BC830"
+                                               MarkerContentType="Dot"
+                                               MarkerContentFillColor="#4BC830"
+                                               TrackColor="#A7A7A7"
+                                               ProgressLineColor="#4BC830"
+                                               MarkerStrokeWidth="2"
+                                               MarkerSize="24"
+                                               MarkerContentSize="10"/>
+                        </progressBar:SfStepProgressBar.CompletedStepStyle>
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <progressBar:StepView>
+                                    <progressBar:StepView.PrimaryFormattedText>
+                                        <FormattedString>
+                                            <Span  Style="{StaticResource StationSpan}"/>
+                                            <Span   Style="{StaticResource SpaceSpan}"/>
+                                            <Span  Style="{StaticResource DistanceSpan}"/>
+                                        </FormattedString>
+                                    </progressBar:StepView.PrimaryFormattedText>
+                                    <progressBar:StepView.SecondaryFormattedText>
+                                        <FormattedString>
+                                            <Span Style="{StaticResource ArraivalSpan}"/>
+                                            <Span   Style="{StaticResource WhiteSpaceSpan}"/>
+                                            <Span Style="{StaticResource DepatureSpan}"/>
+                                            <Span   Style="{StaticResource SpaceSpan}"/>
+                                            <Span Style="{StaticResource ArraivalTimeSpan}"/>
+                                            <Span   Style="{StaticResource WhiteSpaceSpan}"/>
+                                            <Span Style="{StaticResource DepatureTimeSpan}"/>
+                                        </FormattedString>
+                                    </progressBar:StepView.SecondaryFormattedText>
+                                </progressBar:StepView>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>                        
+                    </progressBar:SfStepProgressBar>
+                    
+                </ScrollView>
+            </StackLayout>
+        </Grid>
+    </ContentView.Content>
+</local:SampleView>

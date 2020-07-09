@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.XlsIO.ImportHtmlTablePage">
+
+    <local:SampleView.Content>
+        <StackLayout Padding="10">
+            <Label x:Name="Content_1" Text="This samples demonstrates how to import HTML table to worksheet."
+        FontSize="Medium" VerticalOptions="Center"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width = "*"/>
+                    <ColumnDefinition Width = "*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnGetInputTemplate" Clicked ="BtnGetInputTemplate_Clicked" Text ="Input Template" Grid.Row="1" Grid.Column="0" WidthRequest="150" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Button x:Name="btnGenerate" Clicked ="BtnGenerate_Clicked" Text ="Import" Grid.Row="1" Grid.Column="1" WidthRequest="150" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Grid>
+        </StackLayout>
+    </local:SampleView.Content>
+</local:SampleView>

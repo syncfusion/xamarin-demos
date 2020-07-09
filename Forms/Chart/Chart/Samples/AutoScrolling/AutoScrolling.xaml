@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.AutoScrolling" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+    <local:SampleView.Content>
+        <StackLayout Padding="10,10,10,10" x:Name="layout">
+            <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <chart:SfChart.Margin>
+                    <OnPlatform x:TypeArguments="Thickness" WinPhone="0,10,0,0" />
+                </chart:SfChart.Margin>
+                <chart:SfChart.BindingContext>
+                    <sampleBrowser:AutoScrollingViewModel />
+                </chart:SfChart.BindingContext>
+                <chart:SfChart.ChartBehaviors>
+                    <chart:ChartZoomPanBehavior ZoomMode="X" EnablePanning="true" EnableZooming="false" />
+                </chart:SfChart.ChartBehaviors>
+                <chart:SfChart.Axes>
+                    <chart:NumericalAxis x:Name="duplicateAxis" IsVisible ="false" IsVertical="true" OpposedPosition="true" Minimum="0" Maximum="100"/>
+                </chart:SfChart.Axes>
+                <chart:SfChart.PrimaryAxis>
+                    <chart:DateTimeAxis AutoScrollingDelta="5" ShowMajorGridLines="false" AutoScrollingDeltaType="Seconds">
+                        <chart:DateTimeAxis.LabelStyle>
+                            <chart:ChartAxisLabelStyle LabelFormat="HH:mm:ss" />
+                        </chart:DateTimeAxis.LabelStyle>
+                    </chart:DateTimeAxis>
+                </chart:SfChart.PrimaryAxis>
+                <chart:SfChart.SecondaryAxis>
+                    <chart:NumericalAxis x:Name="axis" TickPosition="Outside" Minimum="0" Maximum="100">
+                        <chart:NumericalAxis.LabelStyle>
+                            <chart:ChartAxisLabelStyle LabelsPosition="Outside" />
+                        </chart:NumericalAxis.LabelStyle>
+                    </chart:NumericalAxis>
+                </chart:SfChart.SecondaryAxis>
+                <chart:SfChart.Series>
+                    <chart:ColumnSeries ItemsSource="{Binding data}" XBindingPath="Date" YBindingPath="Value">
+                        <chart:ColumnSeries.ColorModel>
+                            <chart:ChartColorModel Palette="Natural" />
+                        </chart:ColumnSeries.ColorModel>
+                    </chart:ColumnSeries>
+                </chart:SfChart.Series>
+            </chart:SfChart>
+            <StackLayout Padding="5,5,5,5" x:Name="stack" />
+            <Label x:Name="label" HorizontalOptions="Start" Text="In this sample, a data point is being added every 500 milliseconds. The Chart is then automatically scrolled to display the fixed range of data points at the end. You can also pan to view previous data points. In this sample the delta value is 5 seconds.">
+                <Label.Font>
+                    <OnPlatform x:TypeArguments="Font" Android="10" iOS="10"  />
+                </Label.Font>
+            </Label>
+        </StackLayout>
+    </local:SampleView.Content>
+</local:SampleView>

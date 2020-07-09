@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfDiagram.MindMap"
+		xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+		xmlns:sfdiagram="clr-namespace:Syncfusion.SfDiagram.XForms;assembly=Syncfusion.SfDiagram.XForms"
+    xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfDiagram;assembly=SampleBrowser.SfDiagram"
+>
+    <local:SampleView.Content>
+        <Grid x:Name="parent" BackgroundColor="White">
+
+            <sfdiagram:SfDiagram x:Name="diagram">
+            </sfdiagram:SfDiagram>
+        </Grid>
+    </local:SampleView.Content>
+    <local:SampleView.PropertyView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <Label Text="Schema" Grid.Row="0" Grid.Column="0" TextColor="Black" VerticalTextAlignment="Center"/>
+                <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Transparent" VerticalOptions="Start" HorizontalOptions="Start" Orientation="Horizontal">
+                    <ScrollView Orientation = "Horizontal" Grid.Row="0" Grid.ColumnSpan="2" BackgroundColor="Transparent">
+                        <StackLayout Orientation="Horizontal">
+                            <Button Image="mindmapDefault.png" BorderColor="Transparent" BackgroundColor="Transparent" Clicked="DefaultLayout"/>
+                            <Button Image="mindmapconttree.png" BorderColor="Transparent" BackgroundColor="Transparent" Clicked="ContinuousTreeDefaultLayout"/>
+                            <Button Image="mindmaportho.png" BorderColor="Transparent" BackgroundColor="Transparent" Clicked="OrthogonalLayout"/>
+                            <Button Image="mindmapsimpletree.png" BorderColor="Transparent" BackgroundColor="Transparent" Clicked="SimpletreeCurvedLayout"/>
+                        </StackLayout>
+                    </ScrollView>
+                </StackLayout>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Style" Grid.Row="2" Grid.Column="0" TextColor="Black" VerticalTextAlignment="Center" IsVisible="false"/>
+                <Picker x:Name="style" Grid.Row="2" Grid.Column="1" IsVisible="false"/>
+            </Grid>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Switch x:Name="ManualLayoutSwitch" Grid.Column="1" HorizontalOptions="EndAndExpand"  HeightRequest="35" Toggled="ManualLayout_Toggled" />
+                <Label x:Name="LayoutTextLabel" Grid.Column="0" Text="Free Form" HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center" />
+            </Grid>
+        </Grid>
+    </local:SampleView.PropertyView>
+</local:SampleView>

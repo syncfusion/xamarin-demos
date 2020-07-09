@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local1="clr-namespace:SampleBrowser.SfStepProgressBar"
+    xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
+    x:Class="SampleBrowser.SfStepProgressBar.ShipmentTracking">
+
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <local1:TitleColorConverter x:Key="myConverter" />
+            <local1:SubTitleColorConverter x:Key="subSpanConverter" />
+            <Style TargetType="Span" x:Key="TitleSpan">
+                <Setter Property="Text" Value="{Binding Title}"/>
+                <Setter Property="FontSize" Value="13"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+            <Style TargetType="Span" x:Key="TitleStatusSpan">
+                <Setter Property="Text" Value="{Binding TitleStatus}"/>
+                <Setter Property="FontSize" Value="12"/>
+            </Style>
+            <Style TargetType="Span" x:Key="DateSpan">
+                <Setter Property="Text" Value="{Binding Date}"/>
+                <Setter Property="FontSize" Value="12"/>
+            </Style>
+            <Style TargetType="Span" x:Key="SpaceSpan">
+                <Setter Property="Text" Value="&#10;"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="Transparent"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentView.Resources>
+
+    <ContentView.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Text="Track your Package" FontFamily="HelveticNeue - Medium" Margin="0,20,0,0" FontSize="15" HorizontalTextAlignment= "Center" FontAttributes=" None" TextColor="Black" Grid.Row="0"/>
+            <ScrollView Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                <StackLayout>
+                    <progressBar:SfStepProgressBar TitleAlignment="Start" BackgroundColor="Transparent" Orientation="Vertical" x:Name="stepProgress" Margin="16">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <progressBar:StepView x:Name="stepView">
+                                    <progressBar:StepView.PrimaryFormattedText>
+                                        <FormattedString>
+                                            <Span x:Name="span1" ClassId="1" Style="{StaticResource TitleSpan}" TextColor="{Binding Source={x:Reference stepView},Path=Status,ConverterParameter={x:Reference span1},Converter={StaticResource myConverter}}"/>
+                                            <Span Style="{StaticResource SpaceSpan}"/>
+                                            <Span Style="{StaticResource SpaceSpan}"/>
+                                            <Span x:Name="span2" ClassId="2" Style="{StaticResource TitleStatusSpan}" TextColor="{Binding Source={x:Reference stepView},Path=Status,ConverterParameter={x:Reference span2},Converter={StaticResource subSpanConverter}}"/>
+                                            <Span Style="{StaticResource SpaceSpan}"/>
+                                            <Span x:Name="span3" ClassId="3" Style="{StaticResource DateSpan}" TextColor="{Binding Source={x:Reference stepView},Path=Status,ConverterParameter={x:Reference span3},Converter={StaticResource subSpanConverter}}"/>
+                                        </FormattedString>
+                                    </progressBar:StepView.PrimaryFormattedText>
+                                </progressBar:StepView>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </progressBar:SfStepProgressBar>
+                </StackLayout>
+            </ScrollView>
+            <Button x:Name="TrackButton" Text="Track Status" TextColor="Black" Grid.Row="2" Clicked="Handle_Clicked" WidthRequest="150" HeightRequest="40" HorizontalOptions="Center" BackgroundColor="#FFEAEAEA" Margin="0,0,0,10" FontFamily="Roboto-Medium" FontSize="Default"/>
+        </Grid>
+    </ContentView.Content>
+</local:SampleView>

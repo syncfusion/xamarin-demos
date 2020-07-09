@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Icon-60%403x.png" >
+    <Link>Resources\Icon-60%403x.png</Link>
+    </BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Icon-Small-40%403x.png" >
+    <Link>Resources\Icon-Small-40%403x.png</Link>
+    </BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Icon-Small%403x.png" >
+    <Link>Resources\Icon-Small%403x.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\icon_512x512.png" >
+    <Link>Resources\icon_512x512.png</Link>
+    </BundleResource>
+  </ItemGroup> 
+</Project>

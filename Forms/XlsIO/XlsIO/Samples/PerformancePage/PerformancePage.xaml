@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+            xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+            xmlns:SfCheck="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="SampleBrowser.XlsIO.PerformancePage">
+
+
+    <local:SampleView.Content>
+        <StackLayout Padding="10">
+            <Label x:Name="Content_1" Text="This sample demonstrates the performance of Syncfusion XlsIO library to create larger Excel files."
+                 FontSize="Medium" VerticalOptions="Center">
+            </Label>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>                    
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width = "*"/>
+                    <ColumnDefinition Width = "*"/>
+                </Grid.ColumnDefinitions>
+                <Label FontSize="Medium" Grid.Row="1" Grid.Column="0" VerticalOptions="Center">Enter no. of rows</Label>
+                <Entry Grid.Row="1" Grid.Column="1" x:Name="rowCount" Text="5000" VerticalOptions="Center"/>
+                <Label FontSize="Medium" Grid.Row="2" Grid.Column="0" VerticalOptions="Center">Enter no. of columns</Label>
+                <Entry Grid.Row="2" Grid.Column="1" x:Name="colCount" Text="50" VerticalOptions="Center"/>
+            </Grid>
+            <SfCheck:SfCheckBox x:Name="Import" Text="Import on Save" HorizontalOptions="Start"/>
+            <Label Style="font:smaller"  Text="Import on Save option directly serialize the data while saving the workbook."/>
+            <Button   x:Name="btnGenerate" Clicked ="BtnGenerate_Clicked"  Text ="Create" HorizontalOptions="Start" VerticalOptions="Center"></Button>            
+        </StackLayout>
+    </local:SampleView.Content>
+
+</local:SampleView>

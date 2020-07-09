@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Samples>  
+	<Sample  Name = "GettingStartedPDF" Title = "Getting Started" Description="This sample illustrates how to create a simple PDF document with text and images." EnableStoragePermission="true" />
+	<Sample  Name = "Stamping" Title = "Stamping" Description="This sample illustrates how to stamp or watermark an existing PDF document." EnableStoragePermission="true" />
+	<Sample  Name = "TableFeatures" Title = "Table Features" Description="This sample illustrates how to create borderless tables in a PDF document." EnableStoragePermission="true" />
+	<Sample  Name = "Booklet" Title = "Booklet" Description="This sample illustrates how to create a booklet from an existing PDF document." EnableStoragePermission="true" />
+	<Sample  Name = "Barcode" Title = "Barcode" Description="This sample illustrates how to create various barcode in a PDF document." EnableStoragePermission="true" />
+	<Sample  Name = "MailAttachment" Title = "Email Attachment" Description="This sample illustrates how to send a filled PDF form as an email attachment." EnableStoragePermission="true" />
+	<Sample  Name = "DigitalSignature" Title = "Digital Signature" Description="This sample illustrates how to digitally sign PDF document using a .pfx certificate." EnableStoragePermission="true" />
+	<Sample  Name = "DigitalSignatureValidation" Title = "Digital Signature Validation" Description="This sample illustrates how to validate the digitally signed PDF document signature." EnableStoragePermission="true" />
+	<Sample  Name = "ImageInsertion" Title = "Image Insertion" Description="This sample illustrates how to insert images in a PDF document." EnableStoragePermission="true" />
+	<Sample  Name = "Encryption" Title = "Encryption" Description="This sample illustrates how to create secure PDF document." EnableStoragePermission="true"  />
+	<Sample  Name = "RTLSupport" Title = "RTL Text" Description="This sample illustrates how to draw a right to left text in a PDF document." EnableStoragePermission="true" />
+	<Sample  Name = "Conformance" Title = "PDF Conformance" Description="This sample demonstrates various PDF conformance support in Essential PDF." EnableStoragePermission="true" />
+    <Sample  Name = "ZugFerd" Title = "ZUGFeRD Invoice" Description="This sample demonstrates how to create ZUGFeRD PDF invoice using Essential PDF." EnableStoragePermission="true" />
+	<Sample  Name = "OpenTypeFont" Title = "OpenType Font" Description="This sample illustrates how to draw a text with OpenType font in a PDF document." EnableStoragePermission="true"  />
+</Samples>

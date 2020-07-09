@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Label xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+       x:Class="SampleBrowser.SfSchedule.MonthCellDatesTemplate"
+       xmlns:samplelocal="clr-namespace:SampleBrowser.SfSchedule" 
+       BackgroundColor="Transparent" XAlign="Center" Text="{Binding Date, StringFormat='{0:dd}'}" TextColor="Black">
+    <Label.FontSize>
+        <OnPlatform x:TypeArguments="x:Double">
+            <On Platform="Android,UWP,WPF" Value="13"/>
+            <On Platform="iOS" Value="15"/>
+        </OnPlatform>
+    </Label.FontSize>
+    <Label.Behaviors>
+        <samplelocal:MonthCellDateBehavior />
+    </Label.Behaviors>
+</Label>

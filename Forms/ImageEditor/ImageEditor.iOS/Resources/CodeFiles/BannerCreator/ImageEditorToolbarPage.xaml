@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:imageeditor="clr-namespace:Syncfusion.SfImageEditor.XForms;assembly=Syncfusion.SfImageEditor.XForms"
+    xmlns:customControls="clr-namespace:SampleBrowser.SfImageEditor.CustomControls"
+    x:Class="SampleBrowser.SfImageEditor.ImageEditorToolbarPage">
+    <ContentPage.Content>
+        <Grid x:Name="mainGrid">
+
+            <Grid  BackgroundColor="Transparent" 
+                  VerticalOptions="FillAndExpand"
+                  HorizontalOptions="FillAndExpand">
+                <imageeditor:SfImageEditor x:Name="imageEditor" >
+                </imageeditor:SfImageEditor>
+            </Grid>
+                      
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
