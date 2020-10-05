@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+              xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+              xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="SampleBrowser.PDF.Encryption">
+
+  <local:SampleView.Content>
+    <StackLayout x:Name="stackLayout1" Padding="10">
+      
+      <Label x:Name="Description" Text="This sample illustrates how to create secure PDF documment." FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center">
+      </Label>
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <ScrollView Grid.Row="0">
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="0.5*" />
+              <RowDefinition Height="*" />
+              <RowDefinition Height="0.5*" />
+              <RowDefinition Height="*" />
+              <RowDefinition Height="0.5*" />
+              <RowDefinition Height="*" />
+              <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width = "*"/>
+              <ColumnDefinition Width = "*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.ColumnSpan="2" VerticalOptions="End">Encryption Algorithms </Label>
+            <Picker x:Name="Algorithms" Grid.ColumnSpan="2" SelectedIndexChanged="OnItemSelected" Grid.Row="1" VerticalOptions="Center"/>
+            <Label Grid.Row="2" Grid.ColumnSpan="2" VerticalOptions="End">Key Size </Label>  
+             <Picker x:Name="keysize" Grid.ColumnSpan="2"  Grid.Row="3" VerticalOptions="Center"/>
+            <Label Grid.Row="4" Grid.ColumnSpan="2" VerticalOptions="End">Encryption Options </Label>  
+             <Picker x:Name="Options" Grid.ColumnSpan="2" SelectedIndexChanged="OnOptionSelected"  Grid.Row="5" VerticalOptions="Center"/>
+            <Label Grid.Row="6" Grid.ColumnSpan="2" VerticalOptions="End">User Password : password</Label>            
+            <Label x:Name="OwnerPassword" Grid.Row="7" Grid.ColumnSpan="2" VerticalOptions="End">Owner Password : syncfusion</Label>
+            <Button Grid.Row="8" x:Name="btnGenerate" Grid.ColumnSpan="2" Text="Secure PDF" Clicked="OnButtonClicked" HorizontalOptions="Center" VerticalOptions="Center"/>
+          </Grid>
+        </ScrollView>
+      </Grid>
+      <Label></Label>
+    </StackLayout>
+  </local:SampleView.Content>
+  <local:SamplePage.PropertyView>
+  </local:SamplePage.PropertyView>
+</local:SampleView>

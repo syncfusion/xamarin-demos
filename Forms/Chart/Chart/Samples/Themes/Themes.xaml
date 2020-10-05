@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.Themes" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+    <local:SampleView.BindingContext>
+        <sampleBrowser:ThemesViewModel />
+    </local:SampleView.BindingContext>
+    <local:SampleView.Content>
+        <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <chart:SfChart.Title>
+                <chart:ChartTitle Text="Olympic Medal Counts - RIO"  />
+            </chart:SfChart.Title>
+            <chart:SfChart.BindingContext>
+                <sampleBrowser:ThemesViewModel />
+            </chart:SfChart.BindingContext>
+            <chart:SfChart.PrimaryAxis>
+                <chart:CategoryAxis>
+                    <chart:CategoryAxis.Title>
+                        <chart:ChartAxisTitle Text="Country"/>
+                    </chart:CategoryAxis.Title>
+                </chart:CategoryAxis>
+            </chart:SfChart.PrimaryAxis>
+            <chart:SfChart.SecondaryAxis>
+                <chart:NumericalAxis Minimum="0" Maximum="100" MinorTicksPerInterval="1" ShowMajorGridLines="True" ShowMinorGridLines="True">
+                    <chart:NumericalAxis.Title>
+                        <chart:ChartAxisTitle Text="Medals">
+                            <chart:ChartAxisTitle.Font>
+                                <OnPlatform x:TypeArguments="Font" iOS="12" />
+                            </chart:ChartAxisTitle.Font>
+                            <chart:ChartAxisTitle.Margin>
+                                <OnPlatform x:TypeArguments="Thickness" Android="0,0,10,0" />
+                            </chart:ChartAxisTitle.Margin>
+                        </chart:ChartAxisTitle>
+                    </chart:NumericalAxis.Title>
+                    <chart:NumericalAxis.StripLines>
+                        <chart:NumericalStripLine Start="55" Width ="20" Text=" "/>
+                    </chart:NumericalAxis.StripLines>
+                </chart:NumericalAxis>
+            </chart:SfChart.SecondaryAxis>
+            <chart:SfChart.Legend>
+                <chart:ChartLegend ToggleSeriesVisibility="True" IconWidth="14" IconHeight="14" />
+            </chart:SfChart.Legend>
+            <chart:SfChart.ChartAnnotations>
+                <chart:EllipseAnnotation X1="1" Y1="80" X2="3" Y2="95" Text=" " StrokeWidth="4" />
+            </chart:SfChart.ChartAnnotations>
+            <chart:SfChart.Series>
+                <chart:ColumnSeries x:Name="columnSeries1" ItemsSource="{Binding ColumnData1}" XBindingPath="Name" YBindingPath="Value" LegendIcon="SeriesType" Label="Gold" EnableTooltip="True">
+                    <chart:ColumnSeries.DataMarker>
+                        <chart:ChartDataMarker ShowLabel="True">
+                            <chart:ChartDataMarker.LabelStyle>
+                                <chart:DataMarkerLabelStyle LabelPosition="Inner" >
+                                    <chart:DataMarkerLabelStyle.Font>
+                                        <OnPlatform x:TypeArguments="Font" iOS="12" />
+                                    </chart:DataMarkerLabelStyle.Font>
+                                </chart:DataMarkerLabelStyle>
+                            </chart:ChartDataMarker.LabelStyle>
+                        </chart:ChartDataMarker>
+                    </chart:ColumnSeries.DataMarker>
+                </chart:ColumnSeries>
+                <chart:ColumnSeries x:Name="columnSeries2" ItemsSource="{Binding ColumnData2}" XBindingPath="Name" YBindingPath="Value" LegendIcon="SeriesType" Label="Silver" EnableTooltip="true">
+                    <chart:ColumnSeries.DataMarker>
+                        <chart:ChartDataMarker ShowLabel="True">
+                            <chart:ChartDataMarker.LabelStyle>
+                                <chart:DataMarkerLabelStyle LabelPosition="Inner" >
+                                    <chart:DataMarkerLabelStyle.Font>
+                                        <OnPlatform x:TypeArguments="Font" iOS="12" />
+                                    </chart:DataMarkerLabelStyle.Font>
+                                </chart:DataMarkerLabelStyle>
+                            </chart:ChartDataMarker.LabelStyle>
+                        </chart:ChartDataMarker>
+                    </chart:ColumnSeries.DataMarker>
+                </chart:ColumnSeries>
+            </chart:SfChart.Series>
+        </chart:SfChart>
+    </local:SampleView.Content>
+</local:SampleView>

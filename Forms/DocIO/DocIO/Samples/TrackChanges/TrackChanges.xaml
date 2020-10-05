@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+			 xmlns:SfRadio="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.DocIO.TrackChanges">
+
+  <local:SampleView.Content>
+    <StackLayout Padding="10">
+      <Label x:Name="Description" Text="This sample demonstrates how to accept or reject the tracked changes in the Word document using Essential DocIO."
+                 FontSize="Medium" VerticalOptions="Center"/>      
+            <Grid>
+                <SfRadio:SfRadioGroup Grid.Column="0" Grid.Row="0" HeightRequest="60" Orientation="Vertical">
+                    <SfRadio:SfRadioButton FontSize="13" WidthRequest="270" x:Name="acceptAll" Text="Accepts all the tracked changes in the Word document"/>
+                    <SfRadio:SfRadioButton FontSize="13" WidthRequest="270" x:Name="rejectAll" Text="Rejects all the tracked changes in the Word document"/>
+                </SfRadio:SfRadioGroup>
+                <Button Grid.Row="2" WidthRequest="180" Grid.Column="0" x:Name="btnGenerate1" Clicked ="OnButtonClicked1" Text ="View Template " HorizontalOptions="Start" VerticalOptions="Start"/>
+                <Button Grid.Row="3" WidthRequest="180" Grid.Column="0" x:Name="btnGenerate2" Clicked ="OnButtonClicked2" Text ="Generate Word" HorizontalOptions="Start" VerticalOptions="Start"/>
+            </Grid>
+    </StackLayout>
+  </local:SampleView.Content>
+</local:SampleView>

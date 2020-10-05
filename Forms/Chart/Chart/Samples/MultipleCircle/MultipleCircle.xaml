@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.MultipleCircle" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+  <local:SampleView.Content>
+     <StackLayout x:Name="stack">
+        <StackLayout.Resources>
+                <ResourceDictionary>
+                    <sampleBrowser:IndexToItemSourceConverter x:Key="indexToItemSourceConverter" />
+                    <chart:DoughnutSizeConverter Percentage="85" x:Key="imageSizeConverter"/>
+                </ResourceDictionary>
+        </StackLayout.Resources>
+        <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <chart:SfChart.BindingContext>
+                    <sampleBrowser:MultipleCircleViewModel x:Name="viewModel"/>
+                </chart:SfChart.BindingContext>
+            <chart:SfChart.Title>
+                <chart:ChartTitle FontSize="15" Text="Percentage of Loan Closure" />
+            </chart:SfChart.Title>
+            <chart:SfChart.Series>
+                <chart:DoughnutSeries StartAngle="-90" CapStyle="BothCurve" EndAngle="270" MaximumValue="100" CircularCoefficient="0.9" IsStackedDoughnut="true" x:Name="doughnutSeries" ItemsSource="{Binding DoughnutSeriesData}" LegendIcon="Circle" EnableAnimation="True">
+                        <chart:DoughnutSeries.DoughnutCoefficient>
+                            <OnPlatform x:TypeArguments="x:Double" WinPhone="0.3" Android="0.6" iOS="0.6" />
+                        </chart:DoughnutSeries.DoughnutCoefficient>
+                        <chart:DoughnutSeries.Spacing>
+                            <OnPlatform x:TypeArguments="x:Double" WinPhone="0.2" Android="0.4" iOS="0.4" />
+                        </chart:DoughnutSeries.Spacing>
+                        <chart:DoughnutSeries.ColorModel>
+                            <chart:ChartColorModel Palette="Custom" x:Name="colorModel" />
+                        </chart:DoughnutSeries.ColorModel>
+                    <chart:DoughnutSeries.CenterView>
+                        <Image Source="Person0.png" HeightRequest="{Binding InnerRadius, Converter={StaticResource imageSizeConverter}}" WidthRequest="{Binding InnerRadius, Converter={StaticResource imageSizeConverter}}"  HorizontalOptions="Center" VerticalOptions="Center" >
+                        </Image>
+                    </chart:DoughnutSeries.CenterView>
+                </chart:DoughnutSeries>
+            </chart:SfChart.Series>
+            <chart:SfChart.Legend>
+                <chart:ChartLegend x:Name="legend" OverflowMode="Wrap" DockPosition="Bottom">
+                   <chart:ChartLegend.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Orientation="Horizontal" x:Name="root" >
+                                <StackLayout HeightRequest="70" WidthRequest="80">
+                                   <chart:SfChart VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                    <chart:SfChart.Series>        
+                                        <chart:DoughnutSeries StartAngle="-90" CapStyle="BothCurve" EndAngle="270" MaximumValue="100" CircularCoefficient="1" IsStackedDoughnut="true" x:Name="series" ItemsSource="{Binding Converter={StaticResource indexToItemSourceConverter}}" Color="{Binding IconColor}" EnableAnimation="True">
+                                                    <chart:DoughnutSeries.DoughnutCoefficient>
+                                                        <OnPlatform x:TypeArguments="x:Double" WinPhone="0.6" Android="0.8" iOS="0.8" />
+                                                    </chart:DoughnutSeries.DoughnutCoefficient>
+                                                    <chart:DoughnutSeries.CenterView>
+                                                    <Image Source="{Binding BindingContext.DataPoint.Image}" HeightRequest="{Binding InnerRadius, Converter={StaticResource imageSizeConverter}}" WidthRequest="{Binding InnerRadius, Converter={StaticResource imageSizeConverter}}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                            </chart:DoughnutSeries.CenterView> 
+                                         </chart:DoughnutSeries>
+                                     </chart:SfChart.Series>
+                                    </chart:SfChart>
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center">
+                                    <Label FontSize="15" TextColor="{Binding IconColor}" Text="{Binding DataPoint.YValue, StringFormat='{0:N}%'}"/>
+                                    <Label FontSize="13" VerticalTextAlignment="Center" Text="{Binding DataPoint.XValue}" />
+                                </StackLayout>
+                            </StackLayout>
+                            </DataTemplate>
+                        </chart:ChartLegend.ItemTemplate>
+                    </chart:ChartLegend>
+                </chart:SfChart.Legend>            
+        </chart:SfChart>
+    </StackLayout>
+  </local:SampleView.Content>
+</local:SampleView>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Samples</key>
+	<array>
+		<dict>
+			<key>ControlName</key>
+			<string>Kanban</string>
+			<key>DisplayName</key>
+			<string>Kanban</string>
+			<key>Class</key>
+			<string>CustomizationKanban</string>
+			<key>Image</key>
+			<string>FeaturedSamples/KanbanCustomization</string>
+		</dict>
+		<dict>
+			<key>ControlName</key>
+			<string>RangeNavigator</string>
+			<key>DisplayName</key>
+			<string>Range Navigator</string>
+			<key>Class</key>
+			<string>GettingStartedRangeNavigator</string>
+			<key>Image</key>
+			<string>FeaturedSamples/RangeNavigatorCustomization</string>
+		</dict>
+		<dict>
+			<key>ControlName</key>
+			<string>Chart</string>
+			<key>DisplayName</key>
+			<string>Chart</string>
+			<key>Class</key>
+			<string>Tooltip</string>
+			<key>Image</key>
+			<string>FeaturedSamples/ChartTooltipCustomization</string>
+		</dict>
+		<dict>
+			<key>ControlName</key>
+			<string>DataGrid</string>
+			<key>DisplayName</key>
+			<string>DataGrid</string>
+			<key>Class</key>
+			<string>Grouping</string>
+			<key>Image</key>
+			<string>FeaturedSamples/DataGridGrouping</string>
+		</dict>
+		<dict>
+			<key>ControlName</key>
+			<string>Schedule</string>
+			<key>DisplayName</key>
+			<string>Schedule</string>
+			<key>Class</key>
+			<string>Configuration</string>
+			<key>Image</key>
+			<string>FeaturedSamples/ScheduleConfiguration</string>
+		</dict>
+		<dict>
+			<key>ControlName</key>
+			<string>DataSource</string>
+			<key>DisplayName</key>
+			<string>DataSource</string>
+			<key>Class</key>
+			<string>DataSourceGettingStarted</string>
+			<key>Image</key>
+			<string>FeaturedSamples/DataSourceGettingstarted</string>
+		</dict>
+	</array>
+</dict>
+</plist>

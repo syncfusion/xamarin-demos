@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.XlsIO.FindAndReplacePage">
+
+  <local:SampleView.Content>
+    <StackLayout Padding="10">     
+      <Label x:Name="Content_1" Text="This sample illustrates how to find and replace a value within the worksheet."
+                 FontSize="Medium" VerticalOptions="Center">
+      </Label>
+      <ScrollView>
+      <Grid>
+        <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label FontSize="Medium" Text="Find What:" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"></Label>
+        <Picker x:Name="picker" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <Label FontSize="Medium" Text="Replace What:" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"></Label>
+        <Entry x:Name="entry" TextChanged="ReplaceTextChanged" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <Label Text="Match Case:" Grid.Row = "4" Grid.Column ="0" VerticalOptions="Center" />
+        <Label Text="Match Entire Cell Content:" Grid.Row = "5" Grid.Column ="0" VerticalOptions="Center" />
+        <Switch Grid.Row = "4" Grid.Column ="1" x:Name="switch1" HorizontalOptions="Start" VerticalOptions="Center"/>
+        <Switch Grid.Row = "5" Grid.Column ="1" x:Name="switch2" HorizontalOptions="Start" VerticalOptions="Center"/>
+      <Button x:Name="btnGetInputTemplate" WidthRequest="150" Clicked ="OnButtonClicked1" Text ="Input Template" Grid.Row="7" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"></Button>
+      <Button x:Name="btnGenerate" WidthRequest="150" Clicked ="OnButtonClicked" Text ="Replace All" Grid.Row="7" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"></Button>
+      <Label x:Name="Error" Text="" FontSize="Medium" VerticalOptions="Center"></Label>
+      </Grid>
+      </ScrollView>
+    </StackLayout>
+  </local:SampleView.Content>
+  <local:SampleView.PropertyView>
+
+  </local:SampleView.PropertyView>
+
+</local:SampleView>

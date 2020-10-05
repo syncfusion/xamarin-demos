@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:timePicker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"  
+             xmlns:localSample="clr-namespace:SampleBrowser.SfTimePicker"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             mc:Ignorable="d"
+             x:Class="SampleBrowser.SfTimePicker.TimePickerCustomization">
+    <local:SampleView.Content>
+        <ScrollView>
+            <Grid Padding="20" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+                <Grid.BindingContext>
+                    <localSample:TimePickerAlarmObjectViewModel x:Name="viewModel"/>
+                </Grid.BindingContext>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <timePicker:SfTimePicker  x:Name="sftimepicker" 
+                                                  ShowHeader="{Binding ShowHeader}"
+                                                  ShowColumnHeader="{Binding ShowColumnHeader}"
+                                                  EnableLooping="True"
+                                              SelectedItemFontSize="20"
+                                              UnselectedItemFontSize="20"
+                                                  Format="{Binding Source={Reference picker},Path=SelectedItem,Mode=TwoWay}"
+                                                  HeaderText="{Binding HeaderText,Mode=TwoWay}"
+                                                  PickerWidth="300" 
+                                                  PickerMode="Default"/>
+                </Grid>
+                <Grid Grid.Row="1"  Padding="0,20,0,0">
+                    <StackLayout VerticalOptions="CenterAndExpand">
+                        <inputLayout:SfTextInputLayout Hint="Change header text" ContainerType="Outlined">
+                            <Entry Text="{Binding HeaderText,Mode=TwoWay}" HorizontalTextAlignment="Start" />
+                        </inputLayout:SfTextInputLayout>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <StackLayout VerticalOptions="CenterAndExpand">
+                        <inputLayout:SfTextInputLayout Hint="Change time format" ContainerType="Outlined">
+                            <Picker x:Name="picker" SelectedItem="{Binding SelectedTimeFomrat,Mode=TwoWay}" ItemsSource="{Binding TimeFormatcollections}" />
+                        </inputLayout:SfTextInputLayout>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="3">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                        <Label Text="Show header" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <Switch x:Name="header_switch" 
+                                    IsToggled="{Binding ShowHeader,Mode=TwoWay}" 
+                                    HorizontalOptions="EndAndExpand" 
+                                    VerticalOptions="EndAndExpand"/>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="4">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                        <Label Text="Show column header" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <Switch x:Name="Column_header_switch" 
+                                    IsToggled="{Binding ShowColumnHeader,Mode=TwoWay}" 
+                                    HorizontalOptions="EndAndExpand" 
+                                    VerticalOptions="EndAndExpand"/>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="5">
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                    <Label Text="Enable looping" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Switch 
+                                    IsToggled="{Binding Source={x:Reference sftimepicker}, Path=EnableLooping,Mode=TwoWay}}"
+                                    HorizontalOptions="EndAndExpand" 
+                                    VerticalOptions="EndAndExpand"/>
+                </StackLayout>
+            </Grid>
+            </Grid>
+        </ScrollView>
+    </local:SampleView.Content>
+</local:SampleView>

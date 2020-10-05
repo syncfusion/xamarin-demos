@@ -1,0 +1,150 @@
+<Project>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Chart.txt">
+    <Link>Icons\Chart.txt</Link>
+ </EmbeddedResource>
+
+   <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\FreeHand.txt">
+    <Link>Icons\FreeHand.txt</Link>
+ </EmbeddedResource>
+
+ <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Summer.txt">
+    <Link>Icons\Summer.txt</Link>
+ </EmbeddedResource>
+
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Icons\Venn.txt">
+    <Link>Icons\Venn.txt</Link>
+ </EmbeddedResource>
+
+<EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+    <Link>Samples\ImageEditor\SamplesList\SamplesList.xml</Link>
+  </EmbeddedResource>
+
+   <Compile Include="$(MSBuildThisFileDirectory)\CustomControls\CustomEditor.cs">
+    <Link>Samples\ImageEditor\CustomControls\CustomEditor.cs</Link>
+</Compile>
+
+
+  <Compile Include ="$(MSBuildThisFileDirectory)\Samples\BannerCreator\BannerCreator.xaml.cs">
+    <Link>Samples\ImageEditor\Samples\BannerCreator\BannerCreator.xaml.cs</Link>
+      <DependentUpon>BannerCreator.xaml</DependentUpon>
+    </Compile>
+
+
+  <Compile Include ="$(MSBuildThisFileDirectory)\Samples\BannerCreator\ImageEditorToolbarPage.xaml.cs">
+    <Link>Samples\ImageEditor\Samples\BannerCreator\ImageEditorToolbarPage.xaml.cs</Link>
+      <DependentUpon>ImageEditorToolbarPage.xaml</DependentUpon>
+    </Compile>
+
+
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\Customization\Customization.xaml.cs">
+    <Link>Samples\ImageEditor\Samples\Customization\Customization.xaml.cs</Link>
+      <DependentUpon> Customization.xaml</DependentUpon>
+    </Compile>
+    
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml.cs">
+      <Link>Samples\ImageEditor\Samples\Themes\Themes.xaml.cs</Link>
+      <DependentUpon> Themes.xaml</DependentUpon>
+    </Compile>
+
+  <EmbeddedResource Include ="$(MSBuildThisFileDirectory)\Samples\ImageEditor\ImageEditor.xaml">
+    <Link>Samples\ImageEditor\Samples\ImageEditor\ImageEditor.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+
+
+ <Compile Include="$(MSBuildThisFileDirectory)\Samples\ImageEditor\ImageEditor.xaml.cs">
+    <Link>Samples\ImageEditor\Samples\ImageEditor\ImageEditor.xaml.cs</Link>
+      <DependentUpon>ImageEditor.xaml</DependentUpon>
+    </Compile>
+
+
+ 
+ <Compile Include="$(MSBuildThisFileDirectory)\Share\IFileStore.cs">
+    <Link>Samples\ImageEditor\Share\IFileStore.cs</Link>
+    </Compile>
+
+ 
+ <Compile Include="$(MSBuildThisFileDirectory)\Share\IShare.cs">
+    <Link>Samples\ImageEditor\Share\IShare.cs</Link>
+    </Compile>
+
+ 
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Serialization\Serialization.xaml">
+    <Link>Samples\ImageEditor\Samples\Serialization\Serialization.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+
+
+ <Compile Include="$(MSBuildThisFileDirectory)\Samples\Serialization\Serialization.xaml.cs">
+    <Link>Samples\ImageEditor\Samples\Serialization\Serialization.xaml.cs</Link>
+      <DependentUpon>Serialization.xaml</DependentUpon>
+    </Compile>
+
+
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Serialization\SerializationContentPage.xaml">
+    <Link>Samples\ImageEditor\Samples\Serialization\SerializationContentPage.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+
+
+   <Compile Include="$(MSBuildThisFileDirectory)\Samples\Serialization\SerializationModel.cs">
+    <Link>Samples\ImageEditor\Samples\Serialization\SerializationModel.cs</Link>
+    </Compile>
+
+
+   <Compile Include="$(MSBuildThisFileDirectory)\Samples\Serialization\SerializationContentPage.xaml.cs">
+    <Link>Samples\ImageEditor\Samples\Serialization\SerializationContentPage.xaml.cs</Link>
+      <DependentUpon>SerializationContentPage.xaml</DependentUpon>
+    </Compile>
+
+
+
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\BannerCreator\BannerCreator.xaml">
+    <Link>Samples\ImageEditor\Samples\BannerCreator\BannerCreator.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+
+
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\BannerCreator\ImageEditorToolbarPage.xaml">
+    <Link>Samples\ImageEditor\Samples\BannerCreator\ImageEditorToolbarPage.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+
+
+ <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Customization\Customization.xaml">
+    <Link>Samples\ImageEditor\Samples\Customization\Customization.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+
+
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml">
+      <Link>Samples\ImageEditor\Samples\Themes\Themes.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CustomViewSample\CustomViewHomePage.xaml">
+      <Link>Samples\ImageEditor\Samples\CustomViewSample\CustomViewHomePage.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+
+   <Compile Include="$(MSBuildThisFileDirectory)\Samples\CustomViewSample\CustomViewHomePage.xaml.cs">
+    <Link>Samples\ImageEditor\Samples\CustomViewSample\CustomViewHomePage.xaml.cs</Link>
+      <DependentUpon>CustomViewHomePage.xaml</DependentUpon>
+    </Compile>
+
+
+
+ <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CustomViewSample\CustomViewSample.xaml">
+    <Link>Samples\ImageEditor\Samples\CustomViewSample\CustomViewSample.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+
+ <Compile Include="$(MSBuildThisFileDirectory)\Samples\CustomViewSample\CustomViewSample.xaml.cs">
+    <Link>Samples\ImageEditor\Samples\CustomViewSample\CustomViewSample.xaml.cs</Link>
+      <DependentUpon>CustomViewSample.xaml</DependentUpon>
+    </Compile>
+
+
+  </ItemGroup>
+</Project>

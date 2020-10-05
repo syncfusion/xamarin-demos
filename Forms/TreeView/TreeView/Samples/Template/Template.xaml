@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<sample:SampleView x:Class="SampleBrowser.SfTreeView.Template"
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:local="clr-namespace:SampleBrowser.SfTreeView"
+                   xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                   xmlns:sfTreeView="clr-namespace:Syncfusion.XForms.TreeView;assembly=Syncfusion.SfTreeView.XForms"
+                   xmlns:treeviewengine="clr-namespace:Syncfusion.TreeView.Engine;assembly=Syncfusion.SfTreeView.XForms">
+    <sample:SampleView.BindingContext>
+        <local:MailFolderViewModel x:Name="viewModel" />
+    </sample:SampleView.BindingContext>
+    <sample:SampleView.Resources>
+        <ResourceDictionary>
+            <local:LabelIsVisibleConverter x:Key="LabelIsVisibleConverter"/>
+            <local:FontAttributeConverter x:Key="FontAttributeConverter"/>
+        </ResourceDictionary>
+    </sample:SampleView.Resources>
+    <sample:SampleView.Content>
+        <Grid Margin="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <sfTreeView:SfTreeView x:Name="treeView"
+                             ItemHeight="40"
+                             Indentation="20"
+                             ExpanderWidth="40"
+                             FullRowSelect="True"
+                             IsAnimationEnabled="True"
+                             ItemsSource="{Binding Folders}"
+                             AutoExpandMode="AllNodesExpanded">
+                <sfTreeView:SfTreeView.HierarchyPropertyDescriptors>
+                    <treeviewengine:HierarchyPropertyDescriptor TargetType="{x:Type local:MailFolder}" ChildPropertyName="SubFolder"/>
+                </sfTreeView:SfTreeView.HierarchyPropertyDescriptors>
+                <sfTreeView:SfTreeView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid x:Name="grid" RowSpacing="0" BackgroundColor="Transparent">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="1" />
+                                    </Grid.RowDefinitions>
+                                    <Grid RowSpacing="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="30" />
+                                            <ColumnDefinition Width="5" />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid Grid.Column="0"
+                                              Padding="10,0,0,0"
+                                              VerticalOptions="Center">
+                                            <Label LineBreakMode="NoWrap"
+                                                   Text="{Binding FolderName}"
+                                                   TextColor="Black"
+                                                   FontAttributes="{Binding MailsCount,Converter={x:StaticResource FontAttributeConverter }}"
+                                                   VerticalTextAlignment="Center"
+                                                   FontSize="{OnPlatform Android={OnIdiom Phone=16, Tablet=18},iOS={OnIdiom Phone=16,Tablet=18},UWP={OnIdiom Phone=18,Tablet=20,Desktop=20}}" />
+                                        </Grid>
+                                        <Grid Grid.Column="1"
+                                              RowSpacing="1"
+                                              Padding=".1,.1,.1,.1"
+                                              VerticalOptions="Center">
+                                            <Label LineBreakMode="NoWrap"
+                                                   Text="{Binding MailsCount}"
+                                                   IsVisible="{Binding MailsCount,Converter={x:StaticResource LabelIsVisibleConverter}}"
+                                                   TextColor="White"
+                                                   BackgroundColor="#FF6377EB"
+                                                   VerticalTextAlignment="Center"
+                                                   HorizontalTextAlignment="Center"
+                                                   FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=16},iOS={OnIdiom Phone=14,Tablet=16},UWP={OnIdiom Phone=16,Tablet=18,Desktop=18}}"/>
+                                        </Grid>
+                                    </Grid>
+                                    <StackLayout Grid.Row="1" BackgroundColor="#E4E4E4" HeightRequest="1"/>
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </sfTreeView:SfTreeView.ItemTemplate>
+            </sfTreeView:SfTreeView>
+        </Grid>
+    </sample:SampleView.Content>
+</sample:SampleView>

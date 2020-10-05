@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfListView.Grouping"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.SfListView"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+                  xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable">
+    <sample:SampleView.BindingContext>
+        <local:ListViewGroupingViewModel/>
+    </sample:SampleView.BindingContext>
+    <sample:SampleView.Content>
+        <Grid Margin="0">
+            <sync:SfListView x:Name="listView" ItemsSource="{Binding ContactsInfo}"
+                       ItemSize="70" 
+					   FocusBorderThickness="0"
+                       IsStickyGroupHeader="True"
+                       AllowGroupExpandCollapse="True" 
+                       SelectionBackgroundColor="#ECECEC"
+                             GroupHeaderSize="{OnPlatform Default=40, macOS=70}">
+                <sync:SfListView.DataSource>
+                    <data:DataSource>
+                        <data:DataSource.SortDescriptors>
+                            <data:SortDescriptor PropertyName="ContactName" Direction="Ascending"/>
+                        </data:DataSource.SortDescriptors>
+                    </data:DataSource>
+                </sync:SfListView.DataSource>
+                <sync:SfListView.GroupHeaderTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal" BackgroundColor="#E4E4E4">
+                                    <Label Text="{Binding Key}" 
+                         FontSize="22" 
+                         FontAttributes="Bold"
+                         VerticalOptions="Center" 
+                         HorizontalOptions="Start" 
+                         Margin="20,0,0,0" />
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </sync:SfListView.GroupHeaderTemplate>
+                <sync:SfListView.Behaviors>
+                    <local:SfListViewGroupingBehavior/>
+                </sync:SfListView.Behaviors>
+                <sync:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid x:Name="grid" RowSpacing="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="1" />
+                                    </Grid.RowDefinitions>
+                                    <Grid RowSpacing="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="70" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <local:SfImage Source="{Binding ContactImage}"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           HeightRequest="50" WidthRequest="50"/>
+
+                                        <Grid Grid.Column="1"
+                          RowSpacing="1"
+                          Padding="10,0,0,0"
+                          VerticalOptions="Center">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+
+                                            <Label LineBreakMode="NoWrap"
+                                                   TextColor="#474747"
+                                                   Text="{Binding ContactName}"
+                                                   FontSize="{OnPlatform Android={OnIdiom Phone=16, Tablet=18}, iOS={OnIdiom Phone=16, Tablet=18}, macOS=18, UWP={OnIdiom Phone=18, Tablet=20, Desktop=20}, WPF=20}" />
+                                            <Label Grid.Row="1"
+                                                   Grid.Column="0"
+                                                   TextColor="#474747"
+                                                   LineBreakMode="NoWrap"
+                                                   Text="{Binding ContactNumber}"
+                                                   FontSize="{OnPlatform Android={OnIdiom Phone=12, Tablet=14}, iOS={OnIdiom Phone=12, Tablet=14}, macOS=14, UWP={OnIdiom Phone=12, Tablet=12, Desktop=12}, WPF=12}" />
+                                        </Grid>
+                                        <Grid Grid.Row="0"
+                          Grid.Column="2"
+                          RowSpacing="0"
+                          HorizontalOptions="End" VerticalOptions="Start"
+                                              Padding='{OnPlatform Default="0,10,10,0", macOS="0,10,15,0"}'>
+                                            <Label LineBreakMode="NoWrap"
+                                                   TextColor="#474747"
+                                                   Text="{Binding ContactType}"
+                                                   FontSize="{OnPlatform Android={OnIdiom Phone=10, Tablet=12}, iOS={OnIdiom Phone=10, Tablet=12}, macOS=12, UWP={OnIdiom Phone=10, Tablet=11, Desktop=11}, WPF=11}" />
+                                        </Grid>
+                                    </Grid>
+                                    <StackLayout Grid.Row="1" BackgroundColor="#E4E4E4" HeightRequest="1"/>
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </sync:SfListView.ItemTemplate>
+            </sync:SfListView>
+        </Grid>
+    </sample:SampleView.Content>
+</sample:SampleView>

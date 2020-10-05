@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfListView.Paging"
+                   x:Name="sampleView"
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:local="clr-namespace:SampleBrowser.SfListView"
+                   xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                   xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+                   xmlns:sfPager="clr-namespace:Syncfusion.SfDataGrid.XForms.DataPager;assembly=Syncfusion.SfDataGrid.XForms">
+
+    <sample:SampleView.Behaviors>
+        <local:SfListViewPagingBehavior/>
+    </sample:SampleView.Behaviors>
+
+    <sample:SampleView.Resources>
+        <ResourceDictionary>
+            <local:CurrencyFormatConverter x:Key="currencyFormatConverter"/>
+        </ResourceDictionary>
+    </sample:SampleView.Resources>
+
+    <sample:SampleView.Content>
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <sfPager:SfDataPager x:Name ="dataPager"
+                       HorizontalOptions="Center"
+                       Grid.Row="1"
+                       Padding="0,10,0,7"
+                       NumericButtonCount="{OnIdiom Default=8,  Phone=4}"
+                       HeightRequest="{OnPlatform Default=50, UWP=40}"
+                       WidthRequest="{OnIdiom Default=630,  Phone=312}"
+                       PageSize="{OnIdiom Default=9,  Phone=6}"
+                       PageCount="{OnPlatform Android={OnIdiom Phone=12, Tablet=8}, iOS={OnIdiom Phone=12, Tablet=8}, UWP={OnIdiom Phone=12,Tablet=8, Desktop=8}}"
+                       DisplayMode="{OnIdiom Default=FirstLastPreviousNextNumeric, Phone=PreviousNextNumeric}"
+                       UseOnDemandPaging="True">
+            </sfPager:SfDataPager>
+            <syncfusion:SfListView x:Name="listView"
+               SelectionMode="None" BackgroundColor="White"
+               Grid.Row="0">
+                <syncfusion:SfListView.ItemSize>
+                    <OnIdiom x:TypeArguments="x:Double"
+                      Phone="250"
+                      Tablet="300"
+                      Desktop="300"/>
+                </syncfusion:SfListView.ItemSize>
+                <syncfusion:SfListView.LayoutManager>
+                    <syncfusion:GridLayout>
+                        <syncfusion:GridLayout.SpanCount>
+                            <OnIdiom x:TypeArguments="x:Int32"
+                                Phone="2"
+                                Tablet="3"
+                                Desktop="3"/>
+                        </syncfusion:GridLayout.SpanCount>
+                    </syncfusion:GridLayout>
+                </syncfusion:SfListView.LayoutManager>
+                <syncfusion:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame OutlineColor="#b3b3b3" Margin="5" HasShadow="{OnPlatform Android=true, iOS=false, macOS=false, UWP=true}">
+                            <Grid Padding="0" ColumnSpacing="0" Margin="2">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Image Source="{Binding Image}" Aspect="AspectFit" BackgroundColor="White" VerticalOptions="Center" HorizontalOptions="Center" />
+                                <Grid Grid.Row="1" Padding="0" RowSpacing="4" HorizontalOptions="Start" Margin="5,0,0,0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Label Text="{Binding Name}" LineBreakMode="NoWrap" Grid.Row="0" HorizontalOptions="Start" FontFamily="Bold" 
+                                           FontSize="{OnIdiom Phone=16, Tablet=18, Desktop=20}"
+                                           Opacity="{OnPlatform Default=1, Android=0.87}"
+                                           TextColor="{OnPlatform Default=#333333, Android=#000000}">
+                                    </Label>
+                                    <Label Text="{Binding Weight}" FontSize="10" Grid.Row="1" HorizontalOptions="Start"
+                                             Opacity="{OnPlatform Default=1, Android=0.54}"
+                                           TextColor="{OnPlatform Default=#333333, Android=#000000,UWP=#4C4C4C}">
+                                    </Label>
+                                    <Grid Grid.Row="2" VerticalOptions="Center" HorizontalOptions="Start">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid Grid.Column="0">
+                                            <Frame BackgroundColor="Green" Padding="2" HeightRequest="20" 
+                                                   HasShadow="{OnPlatform Default=true, iOS=false, macOS=false}"
+                                                   WidthRequest="{OnIdiom Default=40, Phone=33}">
+                                                <Grid ColumnSpacing="0">
+                                                    <Grid.ColumnDefinitions >
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Label Text="{Binding ReviewValue}" Grid.Column="0" FontFamily="Bold"  VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"
+                                                           Margin='{OnIdiom Default="5,0,0,0", Phone="3,0,0,0"}'
+                                                           FontSize="{OnIdiom Default=15, Phone=12}">
+                                                    </Label>
+                                                    <Label Text="&#xe75e;" Grid.Column="1" HeightRequest="10" WidthRequest="15" TextColor="White" FontSize="10" VerticalOptions="End" Margin="0,5,0,5"
+                                                            FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"/>
+                                                </Grid>
+                                            </Frame>
+                                        </Grid>
+                                        <Label Grid.Column="1" Text="{Binding Ratings}" VerticalTextAlignment="Center" LineBreakMode="NoWrap" VerticalOptions="Center" HorizontalOptions="Center" FontFamily="Bold" TextColor="Gray" 
+                               FontSize="{OnPlatform Android={OnIdiom Phone=12, Tablet=14}, iOS={OnIdiom Phone=10, Tablet=14}, macOS=14, UWP={OnIdiom Phone=11, Tablet=14, Desktop=14}}" />
+                                    </Grid>
+                                    <Grid Grid.Row="3" Padding="0" VerticalOptions="Center" HorizontalOptions="Start">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Text="{Binding Price, Converter={StaticResource currencyFormatConverter}}" VerticalOptions="Center" FontAttributes="Bold" Grid.Column="0" HorizontalOptions="Start"
+                                               FontSize="{OnIdiom Phone=18, Tablet=20, Desktop=22}"
+                                     TextColor="{OnPlatform Default=#1C73F2, Android=#009688, UWP=#009688}" />
+                                        <Grid Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center">
+                                            <Label Text="{Binding Offer}" HorizontalTextAlignment="Center" LineBreakMode="NoWrap" VerticalTextAlignment="Center" FontFamily="Bold" TextColor="Gray" 
+                                                   FontSize="{OnPlatform Android={OnIdiom Phone=12, Tablet=14}, iOS={OnIdiom Phone=11, Tablet=14},macOS=14, UWP={OnIdiom Phone=11,Tablet=14, Desktop=14}}"/>
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </syncfusion:SfListView.ItemTemplate>
+            </syncfusion:SfListView>
+        </Grid>
+    </sample:SampleView.Content>
+</sample:SampleView>

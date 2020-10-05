@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<ItemGroup>
+    <Resource Include="$(MSBuildThisFileDirectory)\ListAutofitItems.png">
+      <Link>ListAutofitItems.png</Link>
+    </Resource>
+    <Resource Include="$(MSBuildThisFileDirectory)\ListDataTemplateSelector.png">
+      <Link>ListDataTemplateSelector.png</Link>
+    </Resource>
+    <Resource Include="$(MSBuildThisFileDirectory)\ListFiltering.png">
+      <Link>ListFiltering.png</Link>
+    </Resource>
+    <Resource Include="$(MSBuildThisFileDirectory)\ListGettingStarted.png">
+      <Link>ListGettingStarted.png</Link>
+    </Resource>
+    <Resource Include="$(MSBuildThisFileDirectory)\ListGrouping.png">
+      <Link>ListGrouping.png</Link>
+    </Resource>
+    <Resource Include="$(MSBuildThisFileDirectory)\ListOrientation.png">
+      <Link>ListOrientation.png</Link>
+    </Resource>
+    <Resource Include="$(MSBuildThisFileDirectory)\ListSelection.png">
+      <Link>ListSelection.png</Link>
+    </Resource>
+    <Resource Include="$(MSBuildThisFileDirectory)\ListSwiping.png">
+      <Link>ListSwiping.png</Link>
+    </Resource>
+    <Resource Include="$(MSBuildThisFileDirectory)\Assets\Fonts\UIFontIcons.ttf">
+      <Link>Assets\Fonts\UIFontIcons.ttf</Link>
+    </Resource>
+	</ItemGroup>
+</Project>

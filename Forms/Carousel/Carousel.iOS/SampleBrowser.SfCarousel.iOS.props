@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\carousel.ttf" >
+	<Link>Resources\carousel.ttf</Link>
+	</BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\CarouselIcon.ttf" >
+	<Link>Resources\CarouselIcon.ttf</Link>
+	</BundleResource>
+  </ItemGroup> 
+</Project>

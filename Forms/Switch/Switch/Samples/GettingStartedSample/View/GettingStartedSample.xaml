@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+    x:Class="SampleBrowser.SfSwitch.GettingStartedSample"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+    xmlns:SfSwitchControl="clr-namespace:SampleBrowser.SfSwitch">
+  <local:SampleView.Resources>
+    <ResourceDictionary>
+        <SfSwitchControl:SwitchConverter x:Key="Switchfont"/>
+    </ResourceDictionary>
+  </local:SampleView.Resources>
+  <local:SampleView.Content>
+    <Grid x:Name="MainGrid" 
+          RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="switchRow" Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+      <Grid
+        Grid.Row="0"
+        Margin="10,5">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition
+            Width="*">
+          </ColumnDefinition>
+          <ColumnDefinition
+            Width="150">
+          </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Margin="10,5">
+          <Label Text="All apps"
+                 FontSize="14"
+                 TextColor="Black"
+                 VerticalOptions="Center"
+                 HorizontalOptions="Start">
+          </Label>
+        </Grid>
+                <buttons:SfSwitch x:Name="allAppSwitch"
+                                  Grid.Column="1" 
+                                  Padding="10"
+                                  StateChanged="AllAppSwitch_StateChanged"
+                                  VerticalOptions="Center"
+                                  AllowIndeterminateState="True"
+                                  VisualType="Custom"
+                                  IsOn="{x:Null}"
+                                  HorizontalOptions="End">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup  x:Name="CommonStates">
+                            <VisualState x:Name="On">
+                                <VisualState.Setters>
+                                    <Setter Property="SwitchSettings">
+                                        <Setter.Value>
+                                            <buttons:DefaultSwitchSettings x:TypeArguments="buttons:OnState" 
+                                                                           TrackWidthRequest="50"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Off">
+                                <VisualState.Setters>
+                                    <Setter Property="SwitchSettings">
+                                        <Setter.Value>
+                                            <buttons:DefaultSwitchSettings x:TypeArguments="buttons:OffState" 
+                                                                           TrackWidthRequest="50"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Indeterminate">
+                                <VisualState.Setters>
+                                    <Setter Property="SwitchSettings">
+                                        <Setter.Value>
+                                            <buttons:DefaultSwitchSettings x:TypeArguments="buttons:IndeterminateState" 
+                                                                           TrackWidthRequest="50"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </buttons:SfSwitch>
+      </Grid>
+      <Grid
+        Grid.Row="1">
+        <ListView
+          ItemsSource="{Binding ListCollection}" 
+          CachingStrategy="RetainElement"
+          RowHeight="60" 
+          ItemTapped="Handle_ItemTapped">
+          <ListView.ItemTemplate
+            RowHeight="60">
+            <DataTemplate>
+              <ViewCell>
+                <Grid
+                  Margin="10,5">
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                      Width="50">
+                    </ColumnDefinition>
+                    <ColumnDefinition
+                      Width="*">
+                    </ColumnDefinition>
+                    <ColumnDefinition
+                      Width="100">
+                    </ColumnDefinition>
+                  </Grid.ColumnDefinitions>
+                  <Grid >
+                      <Label
+                      Text="B"
+                      FontSize="34"
+                      TextColor="{Binding IconColor}"
+                      VerticalOptions="Center"
+                      HorizontalOptions="Center" VerticalTextAlignment="Center" FontFamily="{Binding Converter={StaticResource Switchfont},ConverterParameter=switch}">
+			<Label.HeightRequest>
+				<OnPlatform x:TypeArguments="x:Double">
+					<On Platform="Android, iOS, UWP" Value="200" />
+					<On Platform="WPF" Value="40"/>
+				</OnPlatform>
+			</Label.HeightRequest>
+                      </Label>
+                      <Label
+                      Text="{Binding Icon}"
+                      FontSize="18"
+                      TextColor="#FFFFFFFF"
+                      VerticalOptions="Center"
+                      HorizontalOptions="Center"  FontFamily="{Binding Converter={StaticResource Switchfont},ConverterParameter=switch}">
+                      </Label>
+                  </Grid>
+                  <Grid
+                    Grid.Column="1">
+                    <Label Text="{Binding Name}"
+                           Margin="5"
+                           FontSize="14"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start">
+                    </Label>
+                  </Grid>
+                  <Grid Grid.Column="2">
+                        <buttons:SfSwitch HorizontalOptions="End"
+                                            Padding="10,0,10,0"
+                                            StateChanged="SfSwitch_StateChanged"
+                                            IsOn="{Binding CanNotify, Mode=TwoWay}"
+                                            AllowIndeterminateState="False"
+                                            VisualType="Default"/>      
+                </Grid>
+                </Grid>
+              </ViewCell>
+            </DataTemplate>
+          </ListView.ItemTemplate>
+        </ListView>
+      </Grid>
+    </Grid>
+  </local:SampleView.Content>
+</local:SampleView>

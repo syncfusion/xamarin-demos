@@ -1,0 +1,70 @@
+﻿<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:range="clr-namespace:Syncfusion.SfRangeSlider.XForms;assembly=Syncfusion.SfRangeSlider.XForms"
+             x:Class="SampleBrowser.SfRangeSlider.RangeSlider_Tablet">
+  <local:SampleView.Content>
+   <ScrollView>
+    <Grid Padding="10">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="8*"/>
+        <RowDefinition Height="300"/>
+      </Grid.RowDefinitions>
+      <ScrollView>
+        <StackLayout x:Name="sampleLayout" Padding="40,20,20,40" >
+          <StackLayout  x:Name="sampleLayout1" Spacing="20" >
+
+            <StackLayout  Spacing="0" Orientation="Horizontal">
+              <Label Text="&#xe704;" FontSize="35" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" TextColor="#061c99"/>
+              <Label x:Name="departureLabel" Text="Departure" XAlign="Start" FontAttributes="Bold" FontSize="20" YAlign="End"/>
+              <Label Text=" (in Hours)" FontSize = "16" HeightRequest = "22" YAlign = "Center" XAlign = "Start" />
+            </StackLayout>
+
+            <StackLayout   Orientation="Horizontal">
+              <Label x:Name="timeLabel5" FontSize="16" Text="Time:"/>
+              <Label x:Name="timeLabel3" FontSize = "16" Text = " 12 AM - 12 PM" HeightRequest = "22" YAlign = "Center" XAlign = "Start"/>
+            </StackLayout>
+
+            <StackLayout  Spacing="0">
+              <range:SfRangeSlider x:Name="sfRangeSlider1" WidthRequest = "200" Minimum = "0"  Maximum="12"
+            RangeStart = "0" RangeEnd = "12" TickFrequency = "2" SnapsTo = "None" ToolTipPlacement="TopLeft" Orientation = "Horizontal" TickPlacement = "BottomRight" ShowValueLabel="True"/>
+            </StackLayout>
+
+          </StackLayout>
+          <StackLayout x:Name="sampleLayout2" Spacing="20" Padding="0,40,0,0">
+
+
+            <StackLayout  Spacing="0" Orientation="Horizontal">
+              <Label Text="&#xe76a;" FontSize="35" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" TextColor="#00ba79"/>
+              <Label x:Name="arrivalLabel" Text="Arrival" XAlign="Start" FontSize="20" FontAttributes="Bold" YAlign="End"/>
+              <Label Text=" (in Hours)" FontSize = "16" HeightRequest = "22" YAlign = "Center" XAlign = "Start" />
+            </StackLayout>
+
+            <StackLayout   Orientation="Horizontal">
+              <Label x:Name="timeLabel6" FontSize="16" Text="Time:"/>
+              <Label x:Name="timeLabel4" FontSize = "16" Text = "12 AM - 12 PM" HeightRequest = "22" YAlign = "Center" XAlign = "Start"/>
+            </StackLayout>
+
+
+            <StackLayout  Spacing="0">
+              <range:SfRangeSlider x:Name="sfRangeSlider2" WidthRequest = "200" Minimum = "0"  Maximum="12"
+            RangeStart = "0" RangeEnd = "12" TickFrequency = "2" SnapsTo = "None" Orientation = "Horizontal" ToolTipPlacement="TopLeft" TickPlacement = "BottomRight" ShowValueLabel="True"/>
+            </StackLayout>
+
+          </StackLayout>
+        </StackLayout>
+      </ScrollView>
+      <ScrollView Grid.Row="1">
+
+        <StackLayout x:Name="Property_Windows">
+          <StackLayout Orientation="Horizontal" Padding="10,0,0,0" x:Name="temp"  HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
+            <Label Text="OPTIONS" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="150" FontSize="18"  FontFamily="Helvetica"/>
+            <Button x:Name="Property_Button" HorizontalOptions="EndAndExpand" ></Button>
+          </StackLayout>
+        </StackLayout>
+
+      </ScrollView>
+    </Grid>
+   </ScrollView>
+  </local:SampleView.Content>
+</local:SampleView>

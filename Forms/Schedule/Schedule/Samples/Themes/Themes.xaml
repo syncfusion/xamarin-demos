@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfSchedule.Themes"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:samplelocal="clr-namespace:SampleBrowser.SfSchedule"
+             xmlns:schedule="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.SfSchedule.XForms">
+    <local:SampleView.Content>
+        <Grid>
+      <Grid.BindingContext>
+        <samplelocal:ThemesViewModel />
+      </Grid.BindingContext>
+            <schedule:SfSchedule ScheduleView="MonthView" DataSource="{Binding Meetings}">
+         <schedule:SfSchedule.AppointmentMapping>
+          <schedule:ScheduleAppointmentMapping
+              StartTimeMapping="From"
+              EndTimeMapping="To"
+              SubjectMapping="EventName"
+              ColorMapping="Color">
+          </schedule:ScheduleAppointmentMapping>
+        </schedule:SfSchedule.AppointmentMapping>
+          <schedule:SfSchedule.MonthViewSettings>
+              <schedule:MonthViewSettings >
+          </schedule:MonthViewSettings>
+        </schedule:SfSchedule.MonthViewSettings>
+            </schedule:SfSchedule>
+        </Grid>
+    </local:SampleView.Content>
+</local:SampleView>
