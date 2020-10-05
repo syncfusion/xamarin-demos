@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.ScatterChart" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+  <local:SampleView.Content>
+    <StackLayout x:Name="stackLayout">
+      <StackLayout.Resources>
+        <ResourceDictionary>
+          <DataTemplate x:Key="toolTipTemplate1">
+            <StackLayout BackgroundColor="#404041">
+              <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="3,3,3,3" />
+              </StackLayout.Padding>
+              <Label Text="Male" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,4,0,0'}" FontSize="12" Grid.Row="0" />
+                            <BoxView Color="White" HeightRequest="0.75" Margin="{OnPlatform Default='0', WPF='4,0,4,0'}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+              <StackLayout Orientation="Horizontal"  VerticalOptions="FillAndExpand" BackgroundColor="#404041" Spacing="0" Padding="3" Margin="0">
+                <Label Text="Weight" VerticalTextAlignment="Center" HorizontalOptions="Start" TextColor="#CCCCCC" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" Margin="{OnPlatform Default='0', WPF='3,0,0,0'}"/>
+                <Label Text="{Binding Size,StringFormat=' :  {0} lbs'}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,0,3,0'}" FontSize="12" />
+              </StackLayout>
+              <StackLayout Orientation="Horizontal"  VerticalOptions="FillAndExpand" BackgroundColor="#404041" Spacing="0" Padding="3" Margin="0">
+                <Label Text="Height" VerticalTextAlignment="Center" HorizontalOptions="Start" TextColor="#CCCCCC" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" Margin="{OnPlatform Default='0', WPF='3,0,0,0'}"/>
+                <Label Text="{Binding Value,StringFormat=' :  {0}'}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,0,3,0'}" FontSize="12" />
+              </StackLayout>
+            </StackLayout>
+          </DataTemplate>
+          <DataTemplate x:Key="toolTipTemplate2">
+            <StackLayout BackgroundColor="#404041">
+              <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="3,3,3,3" />
+              </StackLayout.Padding>
+              <Label Text="Female" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,4,0,0'}" FontSize="12" Grid.Row="0" />
+                            <BoxView Color="White" HeightRequest="0.75" Margin="{OnPlatform Default='0', WPF='4,0,4,0'}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+              <StackLayout Orientation="Horizontal"  VerticalOptions="FillAndExpand" BackgroundColor="#404041" Spacing="0" Padding="3" Margin="0">
+                <Label Text="Weight" VerticalTextAlignment="Center" HorizontalOptions="Start" TextColor="#CCCCCC" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" Margin="{OnPlatform Default='0', WPF='3,0,0,0'}" />
+                <Label Text="{Binding Size,StringFormat=' :  {0} lbs'}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,0,3,0'}" FontSize="12" />
+              </StackLayout>
+              <StackLayout Orientation="Horizontal"  VerticalOptions="FillAndExpand" BackgroundColor="#404041" Spacing="0" Padding="3" Margin="0">
+                <Label Text="Height" VerticalTextAlignment="Center" HorizontalOptions="Start" TextColor="#CCCCCC" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" Margin="{OnPlatform Default='0', WPF='3,0,0,0'}" />
+                <Label Text="{Binding Value,StringFormat=' :  {0}'}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,0,3,0'}" FontSize="12" />
+              </StackLayout>
+            </StackLayout>
+          </DataTemplate>
+        </ResourceDictionary>
+      </StackLayout.Resources>
+      <chart:SfChart HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" x:Name="Chart">
+        <chart:SfChart.BindingContext>
+          <sampleBrowser:ScatterSeriesViewModel />
+        </chart:SfChart.BindingContext>
+        <chart:SfChart.ChartBehaviors>
+          <chart:ChartTooltipBehavior BackgroundColor="#404041" />
+        </chart:SfChart.ChartBehaviors>
+        <chart:SfChart.Legend >
+          <chart:ChartLegend x:Name="chartLegend" DockPosition="Bottom" ToggleSeriesVisibility="True" IconWidth="14" IconHeight="14">
+          </chart:ChartLegend>
+        </chart:SfChart.Legend>
+        <chart:SfChart.Margin>
+          <OnPlatform x:TypeArguments="Thickness" WinPhone="0,0,15,0" />
+        </chart:SfChart.Margin>
+        <chart:SfChart.ColorModel>
+          <chart:ChartColorModel Palette="Natural" />
+        </chart:SfChart.ColorModel>
+        <chart:SfChart.Title>
+          <chart:ChartTitle Text="Height vs Weight"  />
+        </chart:SfChart.Title>
+        <chart:SfChart.PrimaryAxis>
+          <chart:NumericalAxis ShowMajorGridLines="False" EdgeLabelsDrawingMode="Shift" Minimum="100" Maximum="220" Interval="20">
+            <chart:NumericalAxis.Title>
+              <chart:ChartAxisTitle Text="Height in Inches">
+                <chart:ChartAxisTitle.Margin>
+                  <OnPlatform x:TypeArguments="Thickness" Android="0,10,0,0" />
+                </chart:ChartAxisTitle.Margin>
+              </chart:ChartAxisTitle>
+            </chart:NumericalAxis.Title>
+          </chart:NumericalAxis>
+        </chart:SfChart.PrimaryAxis>
+        <chart:SfChart.SecondaryAxis>
+          <chart:NumericalAxis ShowMajorGridLines="False" Minimum="50" Maximum="80" Interval="5">
+            <chart:NumericalAxis.Title>
+              <chart:ChartAxisTitle Text="Weight in Pounds">
+                <chart:ChartAxisTitle.Margin>
+                  <OnPlatform x:TypeArguments="Thickness" Android="0,0,10,0" />
+                </chart:ChartAxisTitle.Margin>
+              </chart:ChartAxisTitle>
+            </chart:NumericalAxis.Title>
+          </chart:NumericalAxis>
+        </chart:SfChart.SecondaryAxis>
+        <chart:SfChart.Series>
+          <chart:ScatterSeries x:Name="scatterSeries1" ScatterWidth="12" ScatterHeight="12" ItemsSource="{Binding MaleData}" XBindingPath="Value" YBindingPath="Size" EnableTooltip="true" ShapeType="Ellipse" Label="Male" LegendIcon="SeriesType" TooltipTemplate="{StaticResource toolTipTemplate1}"/>
+          <chart:ScatterSeries x:Name="scatterSeries2" ScatterWidth="12" ScatterHeight="12" ItemsSource="{Binding FemaleData}" XBindingPath="Value" YBindingPath="Size" EnableTooltip="true" ShapeType="Diamond" Label="Female" LegendIcon="SeriesType" TooltipTemplate="{StaticResource toolTipTemplate2}"/>
+        </chart:SfChart.Series>
+      </chart:SfChart>
+    </StackLayout>
+  </local:SampleView.Content>
+</local:SampleView>

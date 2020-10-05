@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" 
+	xmlns:rotate="clr-namespace:Syncfusion.SfRotator.XForms;assembly=Syncfusion.SfRotator.XForms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="SampleBrowser.SfRotator.Rotator_TabletView">
+  <local:SampleView.Content>
+		<Grid x:Name="maingrid">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="60"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			 <Grid BackgroundColor="Black" Grid.Row="0" x:Name="header">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                    <Label Text="My Shop" TextColor="White" Font="18" Margin="10,0,0,0" VerticalOptions="Center" />
+                <StackLayout Grid.Column="1" Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,10,0">
+                        <Label Text="Check Out" TextColor="White" Font="16" Margin="0,5,0,0" />
+                        <Label TextColor="#d16d10" Font="16" Margin="0,5,0,0"  x:Name="TotalCart" Text="(0)" />        
+                    <Image Source="cartImg.png" Margin="0,5,5,0" HeightRequest="24" WidthRequest="24" />
+                </StackLayout>
+            </Grid>
+            	
+            
+    <Grid   Grid.Row="1" >
+      <Grid.RowDefinitions>
+        <RowDefinition x:Name="controlsize" Height="*" />  
+         <RowDefinition Height="Auto" />  
+         <RowDefinition  Height="Auto" />
+         <RowDefinition Height="Auto" />  
+         <RowDefinition x:Name="size" Height="Auto" />  
+         <RowDefinition Height="Auto" /> 
+         <RowDefinition Height="Auto" />   
+         <RowDefinition Height="Auto" />  
+        <RowDefinition Height="Auto" />   
+         <RowDefinition Height="Auto" />   
+      </Grid.RowDefinitions>
+
+      <Grid x:Name="root" >
+      <rotate:SfRotator x:Name="sfRotator" 
+                    Grid.Row="0" 
+                    WidthRequest="300"
+                    NavigationDelay="3000"  
+                    EnableAutoPlay="true"
+                    ItemsSource="{Binding ImageCollection}"
+                    SelectedIndex="2" 
+                    NavigationDirection="Horizontal"
+                    NavigationStripMode="Thumbnail" 
+                    BackgroundColor="White" 
+                    NavigationStripPosition="Right">
+        <rotate:SfRotator.ItemTemplate>
+          <DataTemplate>
+            <Image  Source="{Binding Image}" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Center">
+              
+            </Image>
+          </DataTemplate>
+        </rotate:SfRotator.ItemTemplate>
+      </rotate:SfRotator>
+      </Grid>
+        <Label TextColor="#333333" Margin="10,1,0,0" Grid.Row="1"   Text="Multi-Color Safety Bath Ducky"  FontFamily="Helvetica" FontSize="22" />
+
+        <StackLayout Orientation="Horizontal" Grid.Row="2" Margin="10,0,10,0"  >
+                <Label  Text="$1.99" TextColor="Black" FontSize="25" VerticalOptions="End" />
+                <Label TextColor="#808080" Margin="0,-4,0,0" VerticalOptions="End"  Text="$3.99"  FontSize="14"/>
+                <Label TextColor="#c1272d" Margin="3,-4,0,0"  VerticalOptions="End"  Text="(-50 %)"  FontSize="16"/>
+        </StackLayout >
+                
+        <StackLayout Orientation="Horizontal" Grid.Row="3">   
+                    <Image x:Name="ratingImage" Source="ratingimg.png" HeightRequest="25" WidthRequest= "70" Margin="5,0,2,0" VerticalOptions="Center" />
+                    <Label TextColor="#999999" VerticalOptions="Center"  Text="39 Ratings and 3 Reviews"  FontSize="14"/>
+        </StackLayout >
+                
+            <BoxView HeightRequest="1" Grid.Row="4" Margin="5,10,5,7" BackgroundColor="#e5e0e0"/>                                           
+            <StackLayout Grid.Row="5" Margin="7,0,10,0" Orientation="Vertical">
+            <Label Text="4 Quantity options:" FontSize="16"  YAlign="End" TextColor="#808080" />
+            <StackLayout Orientation="Horizontal"  Padding="0,10,0,0"  >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height ="*"/>
+                        </Grid.RowDefinitions>
+                        <Button BorderColor="#4d4d4d"   BorderWidth="0.75" BackgroundColor="White" WidthRequest="55"  x:Name="mButton" Clicked="Handle_Clicked" Text="1" TextColor="Black" FontSize="30" VerticalOptions="Center" HorizontalOptions="Start"  />
+                    </Grid>
+                    <Grid>
+                         <Grid.RowDefinitions>
+                            <RowDefinition Height ="*"/>
+                        </Grid.RowDefinitions>
+                        <Button BorderColor="#4d4d4d"  BorderWidth="0.75" BackgroundColor="White" Text="2" WidthRequest="55"  x:Name="sButton" Clicked="Handle_Clicked" TextColor="Black" FontSize="30" VerticalOptions="Center" HorizontalOptions="Start"  />
+                    </Grid>
+                    <Grid>
+                          <Grid.RowDefinitions>
+                            <RowDefinition Height ="*"/>
+                        </Grid.RowDefinitions>
+                        <Button BorderColor="#4d4d4d"  BorderWidth="0.75" BackgroundColor="White" Text="3" WidthRequest="55"  x:Name="xButton" Clicked="Handle_Clicked" TextColor="Black" FontSize="30" VerticalOptions="Center" HorizontalOptions="Start"  />
+                    </Grid>
+                    <Grid>
+                         <Grid.RowDefinitions>
+                            <RowDefinition Height ="*"/>
+                        </Grid.RowDefinitions>
+                        <Button BorderColor="#4d4d4d"  BorderWidth="0.75" BackgroundColor="White" Text="4" WidthRequest="55"  x:Name="xLButton" Clicked="Handle_Clicked" TextColor="Black" FontSize="30" VerticalOptions="Center" HorizontalOptions="Start"  />
+                    </Grid>
+               </StackLayout>
+             </StackLayout >
+             <BoxView HeightRequest="1" Grid.Row="6"  Margin="5,10,5,7" BackgroundColor="#e5e0e0"/>                     
+                <StackLayout Grid.Row="7" Margin="7,0,0,0" Orientation="Vertical">
+                     <Label  Text="Description" FontSize="16"  YAlign="End" TextColor="Gray" />
+                        <ScrollView IsClippedToBounds="true">
+                             <Label Margin="0,0,7,0" Text="Fun, easy-to-grasp size and shape, Water-tight to prevent sinking, squirting, and mildew, available in yellow, green and blue color, ideal for babies above 0+ months" 
+                                FontSize="14"  YAlign="End" TextColor="#333333" />
+                    </ScrollView>
+                </StackLayout>
+                <Grid Grid.Row="8" Margin="10">
+                    <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button BackgroundColor="#666666" HeightRequest="45" Margin="0,0,-3,0" Text="ADD TO CART" TextColor="White" BorderRadius="0" Clicked="Handle_ClickedAdd"/>
+                    <Button BackgroundColor="#f1852a" HeightRequest="45" Margin="-3,0,0,0" Grid.Column="1" Text="BUY NOW" BorderRadius="0" TextColor="White" Clicked="Handle_ClickedBuy"/>
+                    </Grid>
+                 </Grid>
+            </Grid>
+  </local:SampleView.Content>
+    <local:SampleView.PropertyView>
+       <StackLayout Spacing="40">
+         <Grid VerticalOptions="Center" Padding="10">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+                            <RowDefinition Height="15"/>
+        <RowDefinition Height="*" />
+                   </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+          <StackLayout Spacing="5" Grid.Column="0" Grid.Row="0">
+            <Label x:Name="directionLabel" Text="Direction" Margin="5" FontSize="16"  YAlign="End" TextColor="Gray" />
+            <Picker x:Name="directionPicker" HeightRequest="40" SelectedIndex="1" />
+          </StackLayout>
+          <StackLayout Spacing="5" Grid.Column="1" Grid.Row="0">
+            <Label Text="Strip Position" x:Name="tabLabel" FontSize="16" Margin="5" YAlign="End" TextColor="Gray" />
+            <Picker x:Name="tabPicker" HeightRequest="40" SelectedIndex="1" />
+          </StackLayout>
+          <StackLayout Spacing="5" Grid.Column="0" Grid.Row="2">
+            <Label Text="Strip Mode" x:Name="modeLabel" FontSize="16" YAlign="End" Margin="5" TextColor="Gray" />
+            <Picker x:Name="modePicker" HeightRequest="40" SelectedIndex="1" />
+          </StackLayout>
+           <StackLayout Spacing="5" Grid.Column="1" Grid.Row="2">
+            <Label  x:Name="emptyLabel" Text="Enable AutoPlay" FontSize="16" YAlign="End" Margin="5" TextColor="Gray"  />
+            <Switch x:Name="toggleButton" IsToggled="true"  HorizontalOptions="Center"  VerticalOptions="Center" />
+          </StackLayout>
+            </Grid>
+        </StackLayout>
+    </local:SampleView.PropertyView>
+</local:SampleView>

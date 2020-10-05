@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfDataGrid.Editing"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.SfDataGrid"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:sfgrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms">
+
+    <sample:SampleView.BindingContext>
+        <local:EditingViewModel x:Name="viewModel" />
+    </sample:SampleView.BindingContext>
+
+    <sample:SampleView.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="headerText"
+                      x:TypeArguments="x:String">
+                <On Platform="Android,UWP,iOS">
+                    <OnIdiom x:TypeArguments="x:String"
+                           Phone="Price"
+                           Tablet="Product Price"/>
+                </On>
+                <On Platform="WPF" Value="Product Price" />
+            </OnPlatform>
+            <OnPlatform x:Key="opacity"
+                      x:TypeArguments="x:Double">
+                <On Platform="iOS,Android" Value="87" />
+                <On Platform="UWP,WPF" Value="80" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="padding"
+                   x:TypeArguments="Thickness">
+                <On Platform="Android,iOS" Value="8, 12, 8, 12" />
+                <On Platform="UWP,WPF" Value="8, 12, 8, 16" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="textSize"
+                  x:TypeArguments="x:Double">
+                <On Platform="iOS,UWP,WPF" Value="14" />
+                <On Platform="Android" Value="13" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="font"
+                  x:TypeArguments="x:String">
+                <On Platform="Android" Value="Roboto-Regular" />
+                <On Platform="iOS" Value="SFProText-Regular" />
+                <On Platform="UWP,WPF" Value="SegoeUI" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="rowHeight" x:TypeArguments="x:Double">
+                <On Platform="Android,iOS,UWP,macOS" Value="48"/>
+                <On Platform="WPF" Value="30" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="headerHeight" x:TypeArguments="x:Double">
+                <On Platform="Android,iOS,UWP,macOS" Value="52"/>
+                <On Platform="WPF" Value="36" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="numericPadding"
+                   x:TypeArguments="Thickness">
+                <On Platform="Android,iOS,UWP" Value="5,5,5,5" />
+                <On Platform="WPF" Value="5,0,5,0" />
+            </OnPlatform>
+
+            <local:ItemSourceSelector x:Key="converter"/>
+        </ResourceDictionary>
+    </sample:SampleView.Resources>
+
+    <sample:SampleView.Behaviors>
+        <local:EditingBehaviors/>
+    </sample:SampleView.Behaviors>
+
+    <sample:SampleView.Content>
+        <Grid x:Name="customLayout">
+            <sfgrid:SfDataGrid x:Name="dataGrid"
+                               ItemsSource="{Binding DealerInformation}"
+                               AllowEditing="True"
+                               AutoGenerateColumns="false"
+                               NavigationMode="Cell"
+                               ColumnSizer="{OnPlatform Android={OnIdiom Phone=Auto, Tablet=Star}, iOS={OnIdiom Phone=Auto, Tablet=Star}, macOS=Star , UWP={OnIdiom Phone=Auto, Tablet=Star, Desktop=Star}, WPF={OnIdiom Phone=Auto, Tablet=Star, Desktop=Star}}"
+                               EditTapAction="OnDoubleTap"
+                               AllowKeyboardNavigation="True"
+                               GridStyle="{local:DefaultStyle}"
+                               HeaderRowHeight="{StaticResource headerHeight}"
+                               RowHeight="{StaticResource rowHeight}"
+                               SelectionMode="Single"
+                               VerticalOverScrollMode="None">
+
+                <sfgrid:SfDataGrid.Columns>
+
+                    <sfgrid:GridNumericColumn HeaderFontAttribute="Bold"
+                                              HeaderText="Product No"
+                                              HeaderTextAlignment="Start"
+                                              LineBreakMode="WordWrap"
+                                              MappingName="ProductNo"
+                                              Padding="{StaticResource numericPadding}"
+                                              NumberDecimalDigits="0"
+                                              HeaderCellTextSize="{StaticResource textSize}"
+                                              CellTextSize="{StaticResource textSize}"
+                                              TextAlignment="End">
+                    </sfgrid:GridNumericColumn>
+
+                    <sfgrid:GridPickerColumn BindingContext="{x:Reference viewModel}"
+                                             HeaderFontAttribute="Bold"
+                                             HeaderText="Dealer Name"
+                                             HeaderTextAlignment="Start"
+                                             ItemsSource="{Binding CustomerNames}"
+                                             LineBreakMode="WordWrap"
+                                             MappingName="DealerName"
+                                             HeaderCellTextSize="{StaticResource textSize}"
+                                             CellTextSize="{StaticResource textSize}"
+                                             TextAlignment="Start">
+                        <sfgrid:GridPickerColumn.Padding>
+                            <OnPlatform Android="5,0,0,0" iOS="5,0,0,0" UWP="5,0,0,0" WPF="5,0,0,0"/>
+                        </sfgrid:GridPickerColumn.Padding>
+                    </sfgrid:GridPickerColumn>
+
+                    <sfgrid:GridDateTimeColumn Format="d"
+                                               HeaderFontAttribute="Bold"
+                                               HeaderText="Shipped Date"
+                                               HeaderTextAlignment="Start"
+                                               LineBreakMode="WordWrap"
+                                               MappingName="ShippedDate"
+                                               Padding="5,0,0,0"
+                                               HeaderCellTextSize="{StaticResource textSize}"
+                                               CellTextSize="{StaticResource textSize}"
+                                               TextAlignment="Center">
+                    </sfgrid:GridDateTimeColumn>
+
+                    <sfgrid:GridComboBoxColumn HeaderFontAttribute="Bold"
+                                               BindingContext="{x:Reference viewModel}"
+                                               HeaderText="Ship Country"
+                                               HeaderTextAlignment="Start"
+                                               ItemsSource="{Binding CountryList}"
+                                               LineBreakMode="WordWrap"
+                                               MappingName="ShipCountry"
+                                               LoadUIView="True"
+                                               Width="{OnPlatform Android={OnIdiom Phone= 100, Tablet= NaN}, iOS={OnIdiom Phone= 100, Tablet = NaN}, macOS=NaN, UWP={OnIdiom Phone=100 , Desktop= NaN}, WPF={OnIdiom Phone=100 , Desktop= NaN}}"
+                                               HeaderCellTextSize="{StaticResource textSize}"
+                                               CellTextSize="{StaticResource textSize}"
+                                               TextAlignment="Start">
+                        <sfgrid:GridComboBoxColumn.Padding>
+                            <OnPlatform Android="5,0,0,0" iOS="5,0,0,0" UWP="5,0,0,0" WPF="5,0,0,0"/>
+                        </sfgrid:GridComboBoxColumn.Padding>
+                    </sfgrid:GridComboBoxColumn>
+
+                    <sfgrid:GridComboBoxColumn HeaderFontAttribute="Bold"
+                                               HeaderText="Ship City"
+                                               HeaderTextAlignment="Start"
+                                               ItemsSourceSelector="{StaticResource converter}"
+                                               LineBreakMode="WordWrap"
+                                               MappingName="ShipCity"
+                                               LoadUIView="True"
+                                               Width="{OnPlatform Android={OnIdiom Phone= 100, Tablet= NaN}, iOS={OnIdiom Phone= 100, Tablet = NaN}, macOS=NaN, UWP={OnIdiom Phone=100 , Desktop= NaN}, WPF={OnIdiom Phone=100 , Desktop= NaN}}"
+                                               HeaderCellTextSize="{StaticResource textSize}"
+                                               CellTextSize="{StaticResource textSize}"
+                                               TextAlignment="Start">
+                        <sfgrid:GridComboBoxColumn.Padding>
+                            <OnPlatform Android="5,0,0,0" iOS="5,0,0,0" UWP="5,0,0,0" WPF="5,0,0,0"/>
+                        </sfgrid:GridComboBoxColumn.Padding>
+                    </sfgrid:GridComboBoxColumn>
+
+                    <sfgrid:GridTextColumn Format="C"
+                                           HeaderFontAttribute="Bold"
+                                           HeaderTextAlignment="Start"
+                                           LineBreakMode="WordWrap"
+                                           MappingName="ProductPrice"
+                                           Padding="5,0,5,0"
+                                           HeaderText="{StaticResource headerText}"
+                                           HeaderCellTextSize="{StaticResource textSize}"
+                                           CellTextSize="{StaticResource textSize}"
+                                           TextAlignment="End">
+                    </sfgrid:GridTextColumn>
+
+
+                </sfgrid:SfDataGrid.Columns>
+
+            </sfgrid:SfDataGrid>
+            <Grid x:Name="transparent"
+                  BackgroundColor="Black"
+                  Opacity="0.8" />
+        </Grid>
+    </sample:SampleView.Content>
+</sample:SampleView>

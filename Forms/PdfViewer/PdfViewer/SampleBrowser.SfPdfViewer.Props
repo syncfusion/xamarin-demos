@@ -1,0 +1,156 @@
+<Project>
+ 
+  <ItemGroup>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\Encrypted Document.pdf" >
+      <Link>Samples\PdfViewer\Samples\Assets\Encrypted Document.pdf</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\F# Succinctly.pdf" >
+      <Link>Samples\PdfViewer\Samples\Assets\F# Succinctly.pdf</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\GIS Succinctly.pdf" >
+      <Link>Samples\PdfViewer\Samples\Assets\GIS Succinctly.pdf</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\HTTP Succinctly.pdf" >
+      <Link>Samples\PdfViewer\Samples\Assets\HTTP Succinctly.pdf</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\JavaScript Succinctly.pdf" >
+      <Link>Samples\PdfViewer\Samples\Assets\JavaScript Succinctly.pdf</Link>
+    </EmbeddedResource>
+      <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\FormFillingDocument.pdf" >
+      <Link>Samples\PdfViewer\Samples\Assets\FormFillingDocument.pdf</Link>
+    </EmbeddedResource>
+      <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\Xamarin Forms Succinctly.pdf" >
+      <Link>Samples\PdfViewer\Samples\Assets\Xamarin Forms Succinctly.pdf</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml" >
+      <Link>Samples\PdfViewer\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+<ItemGroup>
+  <Compile Include="$(MSBuildThisFileDirectory)\IAlertView.cs" >
+    <Link>Samples\PdfViewer\Samples\IAlertView.cs</Link>
+  </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\ISave.cs" >
+      <Link>Samples\PdfViewer\Samples\ISave.cs</Link>
+  </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Behavior\BehaviorBase.cs" >
+      <Link>Samples\PdfViewer\Samples\Behavior\BehaviorBase.cs</Link>
+  </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Behavior\EventToCommand.cs" >
+       <Link>Samples\PdfViewer\Samples\Behavior\EventToCommand.cs</Link>
+  </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helper\CustomEntry.cs" >
+       <Link>Samples\PdfViewer\Samples\Helper\CustomEntry.cs</Link>
+  </Compile>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helper\BookmarkHelper.cs" >
+       <Link>Samples\PdfViewer\Samples\Helper\BookmarkHelper.cs</Link>
+  </Compile>
+<Compile Include="$(MSBuildThisFileDirectory)\Samples\Helper\BookmarkHelperDesktop.cs" >
+       <Link>Samples\PdfViewer\Samples\Helper\BookmarkHelperDesktop.cs</Link>
+  </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helper\CustomViewCell.cs" >
+      <Link>Samples\PdfViewer\Samples\Helper\CustomViewCell.cs</Link>
+  </Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\Helper\FontMappingHelper.cs" >
+    <Link>Samples\PdfViewer\Samples\Helper\FontMappingHelper.cs</Link>
+  </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helper\SfButton.cs" >
+      <Link>Samples\PdfViewer\Samples\Helper\SfButton.cs</Link>
+  </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\Document.cs">
+      <Link>Samples\PdfViewer\Samples\Model\Document.cs</Link>
+  </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\DocumentData.cs" >
+      <Link>Samples\PdfViewer\Samples\Model\DocumentData.cs</Link>
+  </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PDFViewerCustomToolbar\PDFViewerCustomToolbar.xaml.cs">
+      <DependentUpon>PDFViewerCustomToolbar.xaml</DependentUpon>
+    <Link>Samples\PdfViewer\Samples\PDFViewerCustomToolbar\PDFViewerCustomToolbar.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PDFViewerCustomToolbar\PDFViewerCustomToolbar_Desktop.xaml.cs">
+      <DependentUpon>PDFViewerCustomToolbar_Desktop.xaml</DependentUpon>
+    <Link>Samples\PdfViewer\Samples\PDFViewerCustomToolbar\PDFViewerCustomToolbar_Desktop.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PDFViewerCustomToolbar\PDFViewerCustomToolbar_Phone.xaml.cs">
+      <DependentUpon>PDFViewerCustomToolbar_Phone.xaml</DependentUpon>
+    <Link>Samples\PdfViewer\Samples\PDFViewerCustomToolbar\PDFViewerCustomToolbar_Phone.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PDFViewerCustomToolbar\PDFViewerCustomToolbar_Tablet.xaml.cs">
+      <DependentUpon>PDFViewerCustomToolbar_Tablet.xaml</DependentUpon>
+    <Link>Samples\PdfViewer\Samples\PDFViewerCustomToolbar\PDFViewerCustomToolbar_Tablet.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PDFViewerGettingStarted\PDFViewerGettingStarted.xaml.cs">
+      <DependentUpon>PDFViewerGettingStarted.xaml</DependentUpon>
+    <Link>Samples\PdfViewer\Samples\PDFViewerGettingStarted\PDFViewerGettingStarted.xaml.cs</Link>
+    </Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\SinglePageView\SinglePageView.xaml.cs">
+      <DependentUpon>SinglePageView.xaml</DependentUpon>
+    <Link>Samples\PdfViewer\Samples\SinglePageView\SinglePageView.xaml.cs</Link>
+    </Compile>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\Form Filling\FillAndSign.xaml.cs">
+      <DependentUpon>FillAndSign.xaml</DependentUpon>
+    <Link>Samples\PdfViewer\Samples\Form Filling\FillAndSign.xaml.cs</Link>
+    </Compile>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helper\StampAnnotationView.xaml.cs">
+    <DependentUpon>StampAnnotationView.xaml</DependentUpon>
+    <Link>Samples\PdfViewer\Samples\Helper\StampAnnotationView.xaml.cs</Link>
+  </Compile>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml.cs">
+      <DependentUpon>Themes.xaml</DependentUpon>
+    <Link>Samples\PdfViewer\Samples\Themes\Themes.xaml.cs</Link>
+    </Compile>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\PdfViewerViewModel.cs" >
+    <Link>Samples\PdfViewer\Samples\ViewModel\PdfViewerViewModel.cs</Link>
+  </Compile>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\GettingStartedViewModel.cs" >
+    <Link>Samples\PdfViewer\Samples\ViewModel\GettingStartedViewModel.cs</Link>
+  </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\PDFViewerGettingStarted\PDFViewerGettingStarted.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <Link>Samples\PdfViewer\Samples\PDFViewerGettingStarted\PDFViewerGettingStarted.xaml</Link>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <Link>Samples\PdfViewer\Samples\Themes\Themes.xaml</Link>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+     <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Form Filling\FillAndSign.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <Link>Samples\PdfViewer\Samples\Form Filling\FillAndSign.xaml</Link>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\SinglePageView\SinglePageView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <Link>Samples\PdfViewer\Samples\SinglePageView\SinglePageView.xaml</Link>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\PDFViewerCustomToolbar\PDFViewerCustomToolbar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <Link>Samples\PdfViewer\Samples\PDFViewerCustomToolbar\PDFViewerCustomToolbar.xaml</Link>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\PDFViewerCustomToolbar\PDFViewerCustomToolbar_Desktop.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <Link>Samples\PdfViewer\Samples\PDFViewerCustomToolbar\PDFViewerCustomToolbar_Desktop.xaml</Link>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\PDFViewerCustomToolbar\PDFViewerCustomToolbar_Phone.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <Link>Samples\PdfViewer\Samples\PDFViewerCustomToolbar\PDFViewerCustomToolbar_Phone.xaml</Link>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\PDFViewerCustomToolbar\PDFViewerCustomToolbar_Tablet.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <Link>Samples\PdfViewer\Samples\PDFViewerCustomToolbar\PDFViewerCustomToolbar_Tablet.xaml</Link>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Helper\StampAnnotationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <Link>Samples\PdfViewer\Samples\Helper\StampAnnotationView.xaml</Link>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

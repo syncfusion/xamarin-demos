@@ -1,0 +1,19 @@
+<Project>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\EffectsGettingStarted\GettingStarted.xaml.cs">
+      <Link>Samples\EffectsView\Samples\EffectsGettingStarted\GettingStarted.xaml.cs</Link>
+      <DependentUpon>GettingStarted.xaml</DependentUpon>
+    </Compile>
+
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>Samples\EffectsView\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\EffectsGettingStarted\GettingStarted.xaml">
+      <Link>Samples\EffectsView\Samples\EffectsGettingStarted\GettingStarted.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

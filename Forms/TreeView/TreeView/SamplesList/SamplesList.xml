@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Samples>
+  <Sample Platforms="All" Title = "Getting Started" Name = "GettingStarted"
+            Description = "This sample illustrates about getting started with TreeView by loading a set of nodes items." />
+  <Sample Platforms="All" Title = "Unbound Mode" Name = "UnboundMode" 
+            Description = "This sample shows data loaded in unbound mode." />
+  <Sample Platforms="All" Title = "Node with images" Name = "NodeWithImage" 
+            Description = "This sample shows loading a node items with images." />
+  <Sample Platforms="All" Title = "Selection" Name = "Selection" 
+            Description = "This sample illustrates about Selection with TreeView." />
+  <Sample Platforms="All" Title = "Template" Name = "Template"
+            Description = "This sample shows display data in using different template." />
+  <Sample Platforms="All" Title = "Load On Demand" Name = "LoadOnDemand" 
+            Description = "This sample showcases child nodes loading on demand." />
+  <Sample Platforms="All" Title = "Checkboxes" Name = "Checkboxes"
+            Description = "This sample showcases checkbox in treeview." />
+  <Sample Platforms="All" Title="Autofit Items" Name="AutoFitContent"
+            Description="This sample showcases auto height items based on content."/>
+</Samples>

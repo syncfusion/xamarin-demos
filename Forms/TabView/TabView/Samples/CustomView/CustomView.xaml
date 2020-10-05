@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+    x:Class="SampleBrowser.SfTabView.CustomView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:converter="clr-namespace:SampleBrowser.SfTabView"
+    xmlns:tabview="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
+	BackgroundColor="#2196F3" x:Name="root">
+  <local:SampleView.Resources>
+    <ResourceDictionary>
+      <converter:booltofontConverter x:Key="booltofont"/>
+      <converter:booltocolorConverter x:Key="booltocolor"/>
+      <converter:CustomViewConverter x:Key="customviewfont"/>
+    </ResourceDictionary>
+  </local:SampleView.Resources>
+    <local:SampleView.Content>
+      <Grid BackgroundColor="White" >
+      <tabview:SfTabView Margin="0,0,0,2" x:Name="simTab" VisibleHeaderCount="2"  >
+        <tabview:SfTabView.Items>
+          <tabview:SfTabItem Title="Chat"   
+                             TitleFontSize="14"
+                             SelectionColor="#FF00AFF0"
+                             FontIconFontColor="#FF00AFF0"
+                             TitleFontColor="#FF00AFF0">
+            <tabview:SfTabItem.Content>
+
+              <ListView BackgroundColor="White"
+                    RowHeight="70"
+                    SeparatorColor="#f6f6f6" 
+                    CachingStrategy="RecycleElementAndDataTemplate"
+                    BindingContext="{Binding Path=BindingContext, Source={x:Reference root}}" ItemsSource="{Binding MessageLogs}">
+                <ListView.ItemTemplate>
+                  <DataTemplate>
+                    <ViewCell>
+                      <Grid BackgroundColor="White">
+                        <Grid.ColumnDefinitions>
+                          <ColumnDefinition Width="70"/>
+                          <ColumnDefinition Width="*"/>
+                          <ColumnDefinition Width="75"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid WidthRequest="50" Margin="10" HeightRequest="50"  VerticalOptions="Center"  HorizontalOptions="Center">
+    
+                        <Grid>
+                          <converter:CustomFrame CornerRadius="25" BackgroundColor="{Binding ContactImage}" HasShadow="false"/>
+                        </Grid>
+                          <Label Text="{Binding ContactReadType}"
+                                 TextColor="White"
+                                 FontSize="22"
+                                 WidthRequest="50"
+                                 HeightRequest="50"
+                                 VerticalTextAlignment="Center"
+                                 HorizontalTextAlignment="Center"
+                                 HorizontalOptions="Center"
+                          VerticalOptions="Center"/>
+                        </Grid>
+                        <Grid Margin="5" Grid.Column="1"  VerticalOptions="Center">
+                          <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                          </Grid.RowDefinitions>
+                          <Label Text="{Binding ContactName}"
+                                 FontSize="15"
+                                  WidthRequest="100"
+                                  HeightRequest="30"
+                                  FontAttributes="{Binding Read, Converter={StaticResource booltofont}}"
+                                  TextColor="{Binding Read, Converter={StaticResource booltocolor}}"
+                                  VerticalTextAlignment="Center"
+                                  VerticalOptions="End"/>
+                          <Label Text="{Binding Message}"
+                                 Grid.Row="1"
+                         FontSize="12"
+                         WidthRequest="100"
+                         HeightRequest="30"
+                         FontAttributes="{Binding Read, Converter={StaticResource booltofont}}"
+                         TextColor="{Binding Read, Converter={StaticResource booltocolor}}"
+                         VerticalTextAlignment="Center"
+                         VerticalOptions="Start"/>
+                        </Grid>
+                        <Grid Margin="5" Grid.Column="2" VerticalOptions="Center">
+                          <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                          </Grid.RowDefinitions>
+                          <Label Text="{Binding DateMonth}"
+                                 FontSize="15"
+                                  FontAttributes="{Binding Read, Converter={StaticResource booltofont}}"
+                                  TextColor="{Binding Read, Converter={StaticResource booltocolor}}"
+                                 VerticalOptions="Center"/>
+                          <Label Text="{Binding MessageCount}"
+                                 Grid.Row="1"
+                         FontSize="12"
+                         FontAttributes="{Binding Read, Converter={StaticResource booltofont}}"
+                         TextColor="{Binding Read, Converter={StaticResource booltocolor}}"
+                         VerticalOptions="Center"/>
+                        </Grid>
+                      </Grid>
+                    </ViewCell>
+                  </DataTemplate>
+                </ListView.ItemTemplate>
+              </ListView>
+
+            </tabview:SfTabItem.Content>
+            <tabview:SfTabItem.HeaderContent>
+                            <Grid VerticalOptions="Center" HeightRequest="50" Padding="10,5" x:Name="ChatsHeader" StyleId="ChatsHeader"
+                           HorizontalOptions="Center">
+                                <Label Text="Chats"
+                         TextColor="#FF00AFF0"
+                         FontSize="16"
+                         VerticalOptions="CenterAndExpand"
+                         HorizontalOptions="CenterAndExpand"/>
+                            </Grid>
+                        </tabview:SfTabItem.HeaderContent>
+          </tabview:SfTabItem>
+          <tabview:SfTabItem Title="Contacts" 
+                             TitleFontSize="14"
+                             SelectionColor="#FF00AFF0"
+                             FontIconFontColor="#FF00AFF0"
+                             TitleFontColor="#FF00AFF0">
+            <tabview:SfTabItem.Content>
+              <ListView BackgroundColor="White" 
+                        RowHeight="70"
+                        SeparatorColor="#f6f6f6"
+                        BindingContext="{Binding Path=BindingContext, Source={x:Reference root}}" ItemsSource="{Binding ListData}">
+                <ListView.ItemTemplate>
+                  <DataTemplate>
+                    <ViewCell>
+                      <Grid>
+                        <Grid.ColumnDefinitions>
+                          <ColumnDefinition Width="*"/>
+                          <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout
+                Orientation="Horizontal">
+                          <Grid WidthRequest="50" Margin="10" HeightRequest="50"  VerticalOptions="Center"  HorizontalOptions="Center">
+
+                            <Grid  >
+                              <converter:CustomFrame CornerRadius="25" BackgroundColor="{Binding ContactImage}" HasShadow="false"/>
+                            </Grid>
+                            <Label Text="{Binding ContactReadType}"
+                                    TextColor="White"
+                                 FontSize="22"
+                                 WidthRequest="50"
+                                 HeightRequest="50"
+                                 VerticalTextAlignment="Center"
+                                 HorizontalTextAlignment="Center"
+                                 HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
+
+                          </Grid>
+
+                          <StackLayout Margin="5" Orientation="Vertical" VerticalOptions="Center">
+                            <Label Text="{Binding ContactName}"
+                                  TextColor="Black"
+                                  FontSize="16"
+                                  WidthRequest="100"
+                                  HeightRequest="30"
+                                  VerticalOptions="Center"/>
+                            <Label Text="{Binding ContactNumber}"
+                                   FontSize="12"
+                                   WidthRequest="100"
+                                   HeightRequest="30"
+                           VerticalOptions="Center"/>
+                          </StackLayout>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" Orientation="Horizontal" VerticalOptions="Center">
+                          <Label Text="t" Margin="2,0,20,0" FontSize="22" HeightRequest="50" VerticalTextAlignment="Center" VerticalOptions="Center" FontFamily="{Binding Converter={StaticResource customviewfont},ConverterParameter=NestedTab}"/>
+                        </StackLayout>
+                      </Grid>
+                    </ViewCell>
+                  </DataTemplate>
+                </ListView.ItemTemplate>
+              </ListView>
+            </tabview:SfTabItem.Content>
+                        <tabview:SfTabItem.HeaderContent>
+                            <Grid VerticalOptions="Center" HeightRequest="50" Padding="10,5" x:Name="ContactsHeader" StyleId="ContactsHeader"
+                           HorizontalOptions="Center">
+                          <Label Text="Contacts"
+                           TextColor="#FF00AFF0"
+                           FontSize="16"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"/>
+                                </Grid>
+                        </tabview:SfTabItem.HeaderContent>
+                    </tabview:SfTabItem>
+        </tabview:SfTabView.Items>
+      </tabview:SfTabView>
+      </Grid>
+    </local:SampleView.Content>
+</local:SampleView>

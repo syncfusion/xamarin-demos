@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfMaps.OSM"
+              xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:maps="clr-namespace:Syncfusion.SfMaps.XForms;assembly=Syncfusion.SfMaps.XForms"
+             >
+    <Grid x:Name="mainGrid">
+    <Grid.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="markerTemplate">
+                <StackLayout IsClippedToBounds="false" HorizontalOptions="StartAndExpand" VerticalOptions="Center" HeightRequest="35">
+                    <Image Source="{Binding  ImageName}" Scale="1" Aspect="AspectFit " HorizontalOptions="StartAndExpand" VerticalOptions="Center"  HeightRequest="35" WidthRequest="25" />
+                </StackLayout>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Grid.Resources>
+    </Grid>
+
+</local:SampleView>

@@ -1,0 +1,48 @@
+<Project>
+	  <ItemGroup>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStartedSample\GettingStartedSample.xaml.cs">
+        <Link>Samples\ComboBox\GettingStartedSample\GettingStartedSample.xaml.cs</Link>
+          <DependentUpon>GettingStartedSample.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\ToleratingTypos\ToleratingTypos.xaml.cs">
+        <Link>Samples\ComboBox\ToleratingTypos\ToleratingTypos.xaml.cs</Link>
+        <DependentUpon>ToleratingTypos.xaml</DependentUpon>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStartedSample\ContactsInfo.cs">
+        <Link>Samples\ComboBox\GettingStartedSample\ContactsInfo.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Converters.cs">
+        <Link>Samples\ComboBox\Converters.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStartedSample\ContactsInfoRepository.cs">
+        <Link>Samples\ComboBox\GettingStartedSample\ContactsInfoRepository.cs</Link>
+      </Compile>
+	  </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml" >
+        <Link>Samples\ComboBox\SamplesList\SamplesList.xml</Link>
+        </EmbeddedResource>
+    
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\GettingStartedSample\GettingStartedSample.xaml">
+        <Link>Samples\ComboBox\GettingStartedSample\GettingStartedSample.xaml</Link>
+        <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ToleratingTypos\ToleratingTypos.xaml">
+        <Link>Samples\ComboBox\ToleratingTypos\ToleratingTypos.xaml</Link>
+        <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml.cs">
+              <Link>Samples\ComboBox\Samples\Themes\Themes.xaml.cs</Link>
+              <DependentUpon>Themes.xaml</DependentUpon>
+          </Compile>
+              </ItemGroup>
+              <ItemGroup>
+          <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml">
+              <Link>Samples\ComboBox\Samples\Themes\Themes.xaml</Link>
+              <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+              <SubType>Designer</SubType>
+          </EmbeddedResource>
+      </ItemGroup>
+</Project>

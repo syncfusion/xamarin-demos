@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Button xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfSchedule.AgendaViewItemTemplate"
+             xmlns:samplelocal="clr-namespace:SampleBrowser.SfSchedule" 
+             BackgroundColor="{Binding Color}" 
+             HorizontalOptions="FillAndExpand" 
+             VerticalOptions="FillAndExpand"
+             Text="{Binding Subject}" 
+             TextColor="White"
+             Image="{Binding Subject, Converter={StaticResource imageConverter}}">
+    <Button.Resources>
+        <ResourceDictionary>
+            <samplelocal:ImageConverter  x:Key ="imageConverter" />
+        </ResourceDictionary>
+    </Button.Resources>
+</Button>

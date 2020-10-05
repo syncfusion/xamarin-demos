@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView 
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:local1="clr-namespace:SampleBrowser.SfRichTextEditor"
+             xmlns:rte="clr-namespace:Syncfusion.XForms.RichTextEditor;assembly=Syncfusion.SfRichTextEditor.XForms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SampleBrowser.SfRichTextEditor.Themes">
+    
+    <ContentView.BindingContext>
+        <local1:ViewModel/>
+    </ContentView.BindingContext>
+    
+    <ContentView.Content>
+        <StackLayout VerticalOptions="FillAndExpand">
+            <rte:SfRichTextEditor x:Name="RTE" VerticalOptions="FillAndExpand" ImageInsertCommand="{Binding ImageCommand}" FontButtonCommand="{Binding FontCommand}"/>
+        </StackLayout>
+    </ContentView.Content>
+</local:SampleView>
