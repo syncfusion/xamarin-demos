@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sample:SampleView x:Class="SampleBrowser.SfListView.ItemReordering"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.SfListView"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+                  xmlns:helpers="clr-namespace:Syncfusion.ListView.XForms.Helpers;assembly=Syncfusion.SfListView.XForms"
+                  xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable"
+                  xmlns:syncCheckBox="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms">
+
+    <sample:SampleView.Resources>
+      <ResourceDictionary>
+        <helpers:InverseBoolConverter x:Key="inverseBoolConverter"/>
+      </ResourceDictionary>
+    </sample:SampleView.Resources>
+    <sample:SampleView.BindingContext>
+        <local:ListViewToDoViewModel/>
+    </sample:SampleView.BindingContext>
+	<sample:SampleView.Content>
+        <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding ToDoList}"
+			ItemSize="60" BackgroundColor="#FFE8E8EC"
+			GroupHeaderSize="50"
+			AllowGroupExpandCollapse="false"
+      		DragStartMode="OnHold,OnDragIndicator"
+			IsStickyGroupHeader="false" SelectionMode="None">
+            <syncfusion:SfListView.DataSource>
+                <data:DataSource>
+                    <data:DataSource.GroupDescriptors>
+                        <data:GroupDescriptor PropertyName="CategoryName"/>
+                    </data:DataSource.GroupDescriptors>
+                </data:DataSource>
+            </syncfusion:SfListView.DataSource>
+            <syncfusion:SfListView.GroupHeaderTemplate>
+				<DataTemplate>
+                    <Grid BackgroundColor="{OnPlatform Android=#eeeeee, iOS=#f7f7f7, macOS=#f7f7f7, UWP=#f2f2f2, WPF=#f2f2f2}">
+						<Label Text="{Binding Key}" 
+							FontSize="14" 
+                         	TextColor="#333333"
+                         	FontAttributes="Bold"
+                         	VerticalOptions="Center" 
+                         	HorizontalOptions="Start" 
+                         	Margin="15,0,0,0" />
+					</Grid>
+				</DataTemplate>
+			</syncfusion:SfListView.GroupHeaderTemplate>
+
+			<syncfusion:SfListView.ItemTemplate>
+				<DataTemplate>
+                    <Frame HasShadow="True" BackgroundColor="White" Padding="0"
+                           InputTransparent="{OnPlatform Default=false, Android=true}">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="70" />
+							<ColumnDefinition Width="*" />
+							<ColumnDefinition Width="60" />
+						</Grid.ColumnDefinitions>
+                            <Grid Padding="20,15,20,15">
+                                <syncCheckBox:SfCheckBox IsChecked="{Binding IsDone}" CornerRadius="0" 
+                                                         UncheckedColor="{OnPlatform Android=#6F7771, iOS=#2d89ef, UWP=#000000, WPF=#000000}" 
+                                                         CheckedColor="{OnPlatform Android=#6F7771, iOS=#2d89ef, UWP=#2d89ef, WPF=#2d89ef}"/>
+                            </Grid>
+
+                            <Label x:Name="textLabel" Text="{Binding Name}"
+							Grid.Column="1"
+							FontSize="15" 
+                         	TextColor="#333333"
+                         	VerticalOptions="Center" 
+                         	HorizontalOptions="Start" 
+                         	Margin="5,0,0,0" />
+
+                            <BoxView Grid.Column="1" Margin="5,3,0,0" BackgroundColor="#333333" 
+                                     HeightRequest="1" WidthRequest="{Binding Source={x:Reference textLabel}, Path=Width}"
+                                     VerticalOptions="Center" HorizontalOptions="Start"
+                                     IsVisible="{Binding IsDone}" />
+
+                            <syncfusion:DragIndicatorView Grid.Column="2" ListView="{x:Reference listView}" HorizontalOptions="Center" VerticalOptions="Center">
+                                <Grid Padding="20, 20, 20, 20">
+                                    <Label VerticalOptions="Center" HeightRequest="40" WidthRequest="40" HorizontalOptions="Center"
+                                           Text="&#xe71b;" FontSize="Medium" TextColor="#6F7771" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"/>
+                                </Grid>
+                            </syncfusion:DragIndicatorView>
+					</Grid>
+                    </Frame>
+                </DataTemplate>
+			</syncfusion:SfListView.ItemTemplate>
+            
+        </syncfusion:SfListView>
+	</sample:SampleView.Content>
+</sample:SampleView>

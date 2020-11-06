@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:SfRadio="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.XlsIO.ExcelToPDFPage">
+
+    <local:SampleView.Content>
+        <StackLayout Padding="10">
+            <Label x:Name="Content_1" Text="This sample illustrates the conversion of an Excel document to PDF."
+        FontSize="Medium" VerticalOptions="Center"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width = "*"/>
+                    <ColumnDefinition Width = "*"/>
+                </Grid.ColumnDefinitions>
+                <Label FontSize="Medium" Grid.Row="1" Grid.Column="0" Text="Page Setup Options:"  HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                <Picker x:Name="picker"  Grid.Row="1" Grid.Column="1" VerticalOptions="Center"/>
+            </Grid>
+            <Label FontSize="Medium" Grid.Row="2" Grid.Column="0" Text="Substitute Font:" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+            <SfRadio:SfCheckBox  Grid.Row="3" Grid.Column="0" FontSize="15" WidthRequest="70" x:Name="checkfontName" Text="Font Name"/>
+            <Label x:Name="Content_2" Text="Missing fonts in the device will be substituted to calibri."
+        FontSize="Small" VerticalOptions="Center"/>
+            <SfRadio:SfCheckBox FontSize="15" Grid.Row="4" Grid.Column="0" WidthRequest="70" x:Name="checkfontStream" Text="Font stream" />
+            <Label x:Name="Content_3" Text="Missing fonts in the device will be substituted from embedded resource."
+        FontSize="Small" VerticalOptions="Center"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width = "*"/>
+                    <ColumnDefinition Width = "*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnInput" Clicked ="OnInputButtonClicked" Text ="Input Template" Grid.Row="1" Grid.Column="0" WidthRequest="150" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Button x:Name="btnGenerate" Clicked ="OnButtonClicked" Text ="Convert To PDF" Grid.Row="1" Grid.Column="1" WidthRequest="150" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Grid>
+        </StackLayout>
+    </local:SampleView.Content>
+</local:SampleView>

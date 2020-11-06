@@ -1,0 +1,120 @@
+<Project>
+
+    <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\NestedTab\Model\ContactsInfo.cs" >
+	<Link>Samples\TabView\NestedTab\Model\ContactsInfo.cs</Link>
+	</Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\NestedTab\Model\ContactsInfoRepository.cs" >
+	<Link>Samples\TabView\NestedTab\Model\ContactsInfoRepository.cs</Link>
+	</Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\NestedTab\ViewModel.cs" >
+	<Link>Samples\TabView\NestedTab\ViewModel.cs</Link>
+	</Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\NestedTab\View\NestedTab.xaml.cs">
+	<Link>Samples\TabView\NestedTab\View\NestedTab.xaml.cs</Link>
+      <DependentUpon>NestedTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\TabViewGettingStarted\Model\TabData.cs" >
+	<Link>Samples\TabView\TabViewGettingStarted\Model\TabData.cs</Link>
+	</Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\TabViewGettingStarted\ViewModel\TabDataViewModel.cs" >
+	<Link>Samples\TabView\TabViewGettingStarted\ViewModel\TabDataViewModel.cs</Link>
+	</Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\TabViewGettingStarted\View\ProductView.xaml.cs">
+	<Link>Samples\TabView\TabViewGettingStarted\View\ProductView.xaml.cs</Link>
+      <DependentUpon>ProductView.xaml</DependentUpon>
+    </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml.cs">
+	<Link>Samples\TabView\Samples\Themes\Themes.xaml.cs</Link>
+      <DependentUpon>Themes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\TabViewGettingStarted\View\TabViewGettingStarted.xaml.cs">
+	<Link>Samples\TabView\TabViewGettingStarted\View\TabViewGettingStarted.xaml.cs</Link>
+      <DependentUpon>TabViewGettingStarted.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\TabViewGettingStarted\View\ItemViewTabletMode.xaml.cs">
+	<Link>Samples\TabView\TabViewGettingStarted\View\ItemViewTabletMode.xaml.cs</Link>
+      <DependentUpon>ItemViewTabletMode.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\CustomView\ViewModel.cs" >
+	<Link>Samples\TabView\CustomView\ViewModel.cs</Link>
+	</Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\CustomView\CustomView.xaml.cs">
+	<Link>Samples\TabView\CustomView\CustomView.xaml.cs</Link>
+      <DependentUpon>CustomView.xaml</DependentUpon>
+    </Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\CenterButton\ContactsInfo.cs" >
+	<Link>Samples\TabView\CenterButton\ContactsInfo.cs</Link>
+	</Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\CenterButton\ContactsInfoRepository.cs" >
+	<Link>Samples\TabView\CenterButton\ContactsInfoRepository.cs</Link>
+	</Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\CenterButton\Converters.cs" >
+	<Link>Samples\TabView\CenterButton\Converters.cs</Link>
+	</Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\CenterButton\CenterButtonPage.xaml.cs">
+	<Link>Samples\TabView\CenterButton\CenterButtonPage.xaml.cs</Link>
+      <DependentUpon>CenterButtonPage.xaml</DependentUpon>
+    </Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\CenterButton\ComposeDialog.xaml.cs">
+	<Link>Samples\TabView\CenterButton\ComposeDialog.xaml.cs</Link>
+      <DependentUpon>ComposeDialog.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\TabViewGettingStarted\View\TabViewGettingStarted.xaml">
+	<Link>Samples\TabView\TabViewGettingStarted\View\TabViewGettingStarted.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\TabViewGettingStarted\View\ProductView.xaml">
+	<Link>Samples\TabView\TabViewGettingStarted\View\ProductView.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CustomView\CustomView.xaml">
+	<Link>Samples\TabView\CustomView\CustomView.xaml</Link>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\NestedTab\View\NestedTab.xaml">
+	<Link>Samples\TabView\NestedTab\View\NestedTab.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CenterButton\CenterButtonPage.xaml">
+	<Link>Samples\TabView\CenterButton\CenterButtonPage.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CenterButton\ComposeDialog.xaml">
+	<Link>Samples\TabView\CenterButton\ComposeDialog.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml" >
+	  <Link>Samples\TabView\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\TabViewGettingStarted\View\ItemViewTabletMode.xaml">
+	  <Link>Samples\TabView\TabViewGettingStarted\View\ItemViewTabletMode.xaml</Link>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml">
+	  <Link>Samples\TabView\Samples\Themes\Themes.xaml</Link>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

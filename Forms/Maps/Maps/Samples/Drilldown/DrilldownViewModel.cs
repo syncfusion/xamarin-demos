@@ -1,0 +1,200 @@
+#region Copyright Syncfusion Inc. 2001-2020.
+// Copyright Syncfusion Inc. 2001-2020. All rights reserved.
+// Use of this code is subject to the terms of our license.
+// A copy of the current license can be obtained at any time by e-mailing
+// licensing@syncfusion.com. Any infringement will be prosecuted under
+// applicable laws. 
+#endregion
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Text;
+
+namespace SampleBrowser.SfMaps
+{
+    public class DrilldownViewModel
+    {
+        public DrilldownViewModel()
+        {
+            DataSource = new ObservableCollection<DrilldownModel>();
+            DataSource.Add(new DrilldownModel("Afghanistan", "Asia"));
+            DataSource.Add(new DrilldownModel("Angola", "Africa"));
+            DataSource.Add(new DrilldownModel("Albania", "Europe"));
+            DataSource.Add(new DrilldownModel("United Arab Emirates", "Asia"));
+            DataSource.Add(new DrilldownModel("Argentina", "South America"));
+            DataSource.Add(new DrilldownModel("Armenia", "Asia"));
+            DataSource.Add(new DrilldownModel("French Southern and Antarctic Lands", "Seven seas (open ocean)"));
+            DataSource.Add(new DrilldownModel("Australia", "Australia"));
+            DataSource.Add(new DrilldownModel("Austria", "Europe"));
+            DataSource.Add(new DrilldownModel("Azerbaijan", "Asia"));
+            DataSource.Add(new DrilldownModel("Burundi", "Africa"));
+            DataSource.Add(new DrilldownModel("Belgium", "Europe"));
+            DataSource.Add(new DrilldownModel("Benin", "Africa"));
+            DataSource.Add(new DrilldownModel("Burkina Faso", "Africa"));
+            DataSource.Add(new DrilldownModel("Bangladesh", "Asia"));
+            DataSource.Add(new DrilldownModel("Bulgaria", "Europe"));
+            DataSource.Add(new DrilldownModel("The Bahamas", "North America"));
+            DataSource.Add(new DrilldownModel("Bosnia and Herzegovina", "Europe"));
+            DataSource.Add(new DrilldownModel("Belarus", "Europe"));
+            DataSource.Add(new DrilldownModel("Belize", "North America"));
+            DataSource.Add(new DrilldownModel("Bolivia", "South America"));
+            DataSource.Add(new DrilldownModel("Brazil", "South America"));
+            DataSource.Add(new DrilldownModel("Brunei", "Asia"));
+            DataSource.Add(new DrilldownModel("Bhutan", "Asia"));
+            DataSource.Add(new DrilldownModel("Botswana", "Africa"));
+            DataSource.Add(new DrilldownModel("Central African Republic", "Africa"));
+            DataSource.Add(new DrilldownModel("Canada", "North America"));
+            DataSource.Add(new DrilldownModel("Switzerland", "Europe"));
+            DataSource.Add(new DrilldownModel("Chile", "South America"));
+            DataSource.Add(new DrilldownModel("China", "Asia"));
+            DataSource.Add(new DrilldownModel("Ivory Coast", "Africa"));
+            DataSource.Add(new DrilldownModel("Cameroon", "Africa"));
+            DataSource.Add(new DrilldownModel("Democratic Republic of the Congo", "Africa"));
+            DataSource.Add(new DrilldownModel("Republic of Congo", "Africa"));
+            DataSource.Add(new DrilldownModel("Colombia", "South America"));
+            DataSource.Add(new DrilldownModel("Costa Rica", "North America"));
+            DataSource.Add(new DrilldownModel("Cuba", "North America"));
+            DataSource.Add(new DrilldownModel("Northern Cyprus", "Asia"));
+            DataSource.Add(new DrilldownModel("Cyprus", "Asia"));
+            DataSource.Add(new DrilldownModel("Czech Republic", "Europe"));
+            DataSource.Add(new DrilldownModel("Germany", "Europe"));
+            DataSource.Add(new DrilldownModel("Djibouti", "Africa"));
+            DataSource.Add(new DrilldownModel("Denmark", "Europe"));
+            DataSource.Add(new DrilldownModel("Dominican Republic", "North America"));
+            DataSource.Add(new DrilldownModel("Algeria", "Africa"));
+            DataSource.Add(new DrilldownModel("Ecuador", "South America"));
+            DataSource.Add(new DrilldownModel("Egypt", "Africa"));
+            DataSource.Add(new DrilldownModel("Eritrea", "Africa"));
+            DataSource.Add(new DrilldownModel("Spain", "Europe"));
+            DataSource.Add(new DrilldownModel("Estonia", "Europe"));
+            DataSource.Add(new DrilldownModel("Ethiopia", "Africa"));
+            DataSource.Add(new DrilldownModel("Finland", "Europe"));
+            DataSource.Add(new DrilldownModel("Fiji", "Australia"));
+            DataSource.Add(new DrilldownModel("Falkland Islands", "South America"));
+            DataSource.Add(new DrilldownModel("France", "Europe"));
+            DataSource.Add(new DrilldownModel("Gabon", "Africa"));
+            DataSource.Add(new DrilldownModel("United Kingdom", "Europe"));
+            DataSource.Add(new DrilldownModel("Georgia", "Asia"));
+            DataSource.Add(new DrilldownModel("Ghana", "Africa"));
+            DataSource.Add(new DrilldownModel("Guinea", "Africa"));
+            DataSource.Add(new DrilldownModel("Gambia", "Africa"));
+            DataSource.Add(new DrilldownModel("Guinea Bissau", "Africa"));
+            DataSource.Add(new DrilldownModel("Equatorial Guinea", "Africa"));
+            DataSource.Add(new DrilldownModel("Greece", "Europe"));
+            DataSource.Add(new DrilldownModel("Greenland", "North America"));
+            DataSource.Add(new DrilldownModel("Guatemala", "North America"));
+            DataSource.Add(new DrilldownModel("Guyana", "South America"));
+            DataSource.Add(new DrilldownModel("Honduras", "North America"));
+            DataSource.Add(new DrilldownModel("Croatia", "Europe"));
+            DataSource.Add(new DrilldownModel("Haiti", "North America"));
+            DataSource.Add(new DrilldownModel("Hungary", "Europe"));
+            DataSource.Add(new DrilldownModel("Indonesia", "Asia"));
+            DataSource.Add(new DrilldownModel("India", "Asia"));
+            DataSource.Add(new DrilldownModel("Ireland", "Europe"));
+            DataSource.Add(new DrilldownModel("Iran", "Asia"));
+            DataSource.Add(new DrilldownModel("Iraq", "Asia"));
+            DataSource.Add(new DrilldownModel("Iceland", "Europe"));
+            DataSource.Add(new DrilldownModel("Israel", "Asia"));
+            DataSource.Add(new DrilldownModel("Italy", "Europe"));
+            DataSource.Add(new DrilldownModel("Jamaica", "North America"));
+            DataSource.Add(new DrilldownModel("Jordan", "Asia"));
+            DataSource.Add(new DrilldownModel("Japan", "Asia"));
+            DataSource.Add(new DrilldownModel("Kazakhstan", "Asia"));
+            DataSource.Add(new DrilldownModel("Kenya", "Africa"));
+            DataSource.Add(new DrilldownModel("Kyrgyzstan", "Asia"));
+            DataSource.Add(new DrilldownModel("Cambodia", "Asia"));
+            DataSource.Add(new DrilldownModel("South Korea", "Asia"));
+            DataSource.Add(new DrilldownModel("Kosovo", "Europe"));
+            DataSource.Add(new DrilldownModel("Kuwait", "Asia"));
+            DataSource.Add(new DrilldownModel("Laos", "Asia"));
+            DataSource.Add(new DrilldownModel("Lebanon", "Asia"));
+            DataSource.Add(new DrilldownModel("Liberia", "Africa"));
+            DataSource.Add(new DrilldownModel("Libya", "Africa"));
+            DataSource.Add(new DrilldownModel("Sri Lanka", "Asia"));
+            DataSource.Add(new DrilldownModel("Lesotho", "Africa"));
+            DataSource.Add(new DrilldownModel("Lithuania", "Europe"));
+            DataSource.Add(new DrilldownModel("Luxembourg", "Europe"));
+            DataSource.Add(new DrilldownModel("Latvia", "Europe"));
+            DataSource.Add(new DrilldownModel("Morocco", "Africa"));
+            DataSource.Add(new DrilldownModel("Moldova", "Europe"));
+            DataSource.Add(new DrilldownModel("Madagascar", "Africa"));
+            DataSource.Add(new DrilldownModel("Mexico", "North America"));
+            DataSource.Add(new DrilldownModel("Macedonia", "Europe"));
+            DataSource.Add(new DrilldownModel("Mali", "Africa"));
+            DataSource.Add(new DrilldownModel("Myanmar", "Asia"));
+            DataSource.Add(new DrilldownModel("Montenegro", "Europe"));
+            DataSource.Add(new DrilldownModel("Mongolia", "Asia"));
+            DataSource.Add(new DrilldownModel("Mozambique", "Africa"));
+            DataSource.Add(new DrilldownModel("Mauritania", "Africa"));
+            DataSource.Add(new DrilldownModel("Malawi", "Africa"));
+            DataSource.Add(new DrilldownModel("Malaysia", "Asia"));
+            DataSource.Add(new DrilldownModel("Namibia", "Africa"));
+            DataSource.Add(new DrilldownModel("New Caledonia", "Australia"));
+            DataSource.Add(new DrilldownModel("Niger", "Africa"));
+            DataSource.Add(new DrilldownModel("Nigeria", "Africa"));
+            DataSource.Add(new DrilldownModel("Nicaragua", "North America"));
+            DataSource.Add(new DrilldownModel("Netherlands", "Europe"));
+            DataSource.Add(new DrilldownModel("Norway", "Europe"));
+            DataSource.Add(new DrilldownModel("Nepal", "Asia"));
+            DataSource.Add(new DrilldownModel("New Zealand", "Australia"));
+            DataSource.Add(new DrilldownModel("Oman", "Asia"));
+            DataSource.Add(new DrilldownModel("Pakistan", "Asia"));
+            DataSource.Add(new DrilldownModel("Panama", "North America"));
+            DataSource.Add(new DrilldownModel("Peru", "South America"));
+            DataSource.Add(new DrilldownModel("Philippines", "Asia"));
+            DataSource.Add(new DrilldownModel("Papua New Guinea", "Australia"));
+            DataSource.Add(new DrilldownModel("Poland", "Europe"));
+            DataSource.Add(new DrilldownModel("Puerto Rico", "North America"));
+            DataSource.Add(new DrilldownModel("North Korea", "Asia"));
+            DataSource.Add(new DrilldownModel("Portugal", "Europe"));
+            DataSource.Add(new DrilldownModel("Paraguay", "South America"));
+            DataSource.Add(new DrilldownModel("Palestine", "Asia"));
+            DataSource.Add(new DrilldownModel("Qatar", "Asia"));
+            DataSource.Add(new DrilldownModel("Romania", "Europe"));
+            DataSource.Add(new DrilldownModel("Russia", "Asia"));
+            DataSource.Add(new DrilldownModel("Rwanda", "Africa"));
+            DataSource.Add(new DrilldownModel("Western Sahara", "Africa"));
+            DataSource.Add(new DrilldownModel("Saudi Arabia", "Asia"));
+            DataSource.Add(new DrilldownModel("Sudan", "Africa"));
+            DataSource.Add(new DrilldownModel("South Sudan", "Africa"));
+            DataSource.Add(new DrilldownModel("Senegal", "Africa"));
+            DataSource.Add(new DrilldownModel("Solomon Islands", "Australia"));
+            DataSource.Add(new DrilldownModel("Sierra Leone", "Africa"));
+            DataSource.Add(new DrilldownModel("El Salvador", "North America"));
+            DataSource.Add(new DrilldownModel("Somaliland", "Africa"));
+            DataSource.Add(new DrilldownModel("Somalia", "Africa"));
+            DataSource.Add(new DrilldownModel("Republic of Serbia", "Europe"));
+            DataSource.Add(new DrilldownModel("Suriname", "South America"));
+            DataSource.Add(new DrilldownModel("Slovakia", "Europe"));
+            DataSource.Add(new DrilldownModel("Slovenia", "Europe"));
+            DataSource.Add(new DrilldownModel("Sweden", "Europe"));
+            DataSource.Add(new DrilldownModel("Swaziland", "Africa"));
+            DataSource.Add(new DrilldownModel("Syria", "Asia"));
+            DataSource.Add(new DrilldownModel("Chad", "Africa"));
+            DataSource.Add(new DrilldownModel("Togo", "Africa"));
+            DataSource.Add(new DrilldownModel("Thailand", "Asia"));
+            DataSource.Add(new DrilldownModel("Tajikistan", "Asia"));
+            DataSource.Add(new DrilldownModel("Turkmenistan", "Asia"));
+            DataSource.Add(new DrilldownModel("East Timor", "Asia"));
+            DataSource.Add(new DrilldownModel("Trinidad and Tobago", "North America"));
+            DataSource.Add(new DrilldownModel("Tunisia", "Africa"));
+            DataSource.Add(new DrilldownModel("Turkey", "Asia"));
+            DataSource.Add(new DrilldownModel("Taiwan", "Asia"));
+            DataSource.Add(new DrilldownModel("United Republic of Tanzania", "Africa"));
+            DataSource.Add(new DrilldownModel("Uganda", "Africa"));
+            DataSource.Add(new DrilldownModel("Ukraine", "Europe"));
+            DataSource.Add(new DrilldownModel("Uruguay", "South America"));
+            DataSource.Add(new DrilldownModel("United States of America", "North America"));
+            DataSource.Add(new DrilldownModel("Uzbekistan", "Asia"));
+            DataSource.Add(new DrilldownModel("Venezuela", "South America"));
+            DataSource.Add(new DrilldownModel("Vietnam", "Asia"));
+            DataSource.Add(new DrilldownModel("Vanuatu", "Australia"));
+            DataSource.Add(new DrilldownModel("Yemen", "Asia"));
+            DataSource.Add(new DrilldownModel("South Africa", "Africa"));
+            DataSource.Add(new DrilldownModel("Zambia", "Africa"));
+            DataSource.Add(new DrilldownModel("Zimbabwe", "Africa"));
+        }
+        public ObservableCollection<DrilldownModel> DataSource { get; set; }
+       
+    }
+}

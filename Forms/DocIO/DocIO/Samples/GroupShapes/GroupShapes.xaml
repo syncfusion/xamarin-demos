@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+			 xmlns:SfRadio="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.DocIO.GroupShapes">
+
+  <local:SampleView.Content>
+    <StackLayout Padding="10">
+      <Label x:Name="Description" Text="This sample illustrates how to create a Word document with Group shapes using Essential DocIO."
+                 FontSize="Medium" VerticalOptions="Center"/>      
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label FontSize="Medium" Text="Save As:" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                <SfRadio:SfRadioGroup Grid.Column="1" Grid.Row="0" HeightRequest="30" Orientation="Horizontal">
+                    <SfRadio:SfRadioButton FontSize="13" WidthRequest="70" x:Name="docxButton" Text="DOCX"/>
+                    <SfRadio:SfRadioButton FontSize="13" WidthRequest="70" x:Name="pdfButton" Text="PDF"/>
+                </SfRadio:SfRadioGroup>
+                <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="btnGenerate" Clicked ="OnButtonClicked" Text ="Generate" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Grid>
+    </StackLayout>
+  </local:SampleView.Content>
+</local:SampleView>

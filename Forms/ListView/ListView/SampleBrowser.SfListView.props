@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Accordion\View\Accordion.xaml.cs">
+      <Link>Samples\ListView\Samples\Accordion\View\Accordion.xaml.cs</Link>
+    <DependentUpon>Accordion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Accordion\Helper\Behavior.cs">
+      <Link>Samples\ListView\Samples\Accordion\Helper\Behavior.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Accordion\Model\Contact.cs">
+      <Link>Samples\ListView\Samples\Accordion\Model\Contact.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Accordion\ViewModel\AccordionViewModel.cs">
+      <Link>Samples\ListView\Samples\Accordion\ViewModel\AccordionViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\AutoFitContent\View\AutoFitContent.xaml.cs">
+      <Link>Samples\ListView\Samples\AutoFitContent\View\AutoFitContent.xaml.cs</Link>
+    <DependentUpon>AutoFitContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\AutoFitContent\Model\BookInfo.cs">
+      <Link>Samples\ListView\Samples\AutoFitContent\Model\BookInfo.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\AutoFitContent\Model\BookInfoRepository.cs">
+      <Link>Samples\ListView\Samples\AutoFitContent\Model\BookInfoRepository.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\AutoFitContent\ViewModel\ViewModel.cs">
+      <Link>Samples\ListView\Samples\AutoFitContent\ViewModel\ViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataTemplateSelector\HelperClass\Behavior.cs">
+      <Link>Samples\ListView\Samples\DataTemplateSelector\HelperClass\Behavior.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataTemplateSelector\View\DataTemplateSelector.xaml.cs">
+      <Link>Samples\ListView\Samples\DataTemplateSelector\View\DataTemplateSelector.xaml.cs</Link>
+    <DependentUpon>DataTemplateSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataTemplateSelector\HelperClass\MessageDataTemplateSelector.cs">
+      <Link>Samples\ListView\Samples\DataTemplateSelector\HelperClass\MessageDataTemplateSelector.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataTemplateSelector\Model\MessageInfo.cs">
+      <Link>Samples\ListView\Samples\DataTemplateSelector\Model\MessageInfo.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataTemplateSelector\Model\MessageInfoRepository.cs">
+      <Link>Samples\ListView\Samples\DataTemplateSelector\Model\MessageInfoRepository.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataTemplateSelector\ViewModel\ViewModel.cs">
+      <Link>Samples\ListView\Samples\DataTemplateSelector\ViewModel\ViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataTemplateSelector\View\IncomingImageTemplate.xaml.cs">
+      <Link>Samples\ListView\Samples\DataTemplateSelector\View\IncomingImageTemplate.xaml.cs</Link>
+<DependentUpon>IncomingImageTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataTemplateSelector\View\IncomingTextTemplate.xaml.cs">
+      <Link>Samples\ListView\Samples\DataTemplateSelector\View\IncomingTextTemplate.xaml.cs</Link>
+<DependentUpon>IncomingTextTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataTemplateSelector\View\OutgoingTextTemplate.xaml.cs">
+      <Link>Samples\ListView\Samples\DataTemplateSelector\View\OutgoingTextTemplate.xaml.cs</Link>
+<DependentUpon>OutgoingTextTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\View\GettingStarted.xaml.cs">
+      <Link>Samples\ListView\Samples\GettingStarted\View\GettingStarted.xaml.cs</Link>
+    <DependentUpon>GettingStarted.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\Model\ShoppingInfo.cs">
+      <Link>Samples\ListView\Samples\GettingStarted\Model\ShoppingInfo.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\Model\ShoppingRepository.cs">
+      <Link>Samples\ListView\Samples\GettingStarted\Model\ShoppingRepository.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\ViewModel\ViewModel.cs">
+      <Link>Samples\ListView\Samples\GettingStarted\ViewModel\ViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\GridLayout\Helper\Converter.cs">
+      <Link>Samples\ListView\Samples\GridLayout\Helper\Converter.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\GridLayout\View\GridLayout.xaml.cs">
+      <Link>Samples\ListView\Samples\GridLayout\View\GridLayout.xaml.cs</Link>
+    <DependentUpon>GridLayout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\GridLayout\Model\GalleryInfo.cs">
+      <Link>Samples\ListView\Samples\GridLayout\Model\GalleryInfo.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\GridLayout\Model\GalleryInfoRepository.cs">
+      <Link>Samples\ListView\Samples\GridLayout\Model\GalleryInfoRepository.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\GridLayout\ViewModel\ViewModel.cs">
+      <Link>Samples\ListView\Samples\GridLayout\ViewModel\ViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Grouping\Helper\Behaviors.cs">
+      <Link>Samples\ListView\Samples\Grouping\Helper\Behaviors.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Grouping\View\Grouping.xaml.cs">
+      <Link>Samples\ListView\Samples\Grouping\View\Grouping.xaml.cs</Link>
+    <DependentUpon>Grouping.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Grouping\Model\ListViewContactsInfo.cs">
+      <Link>Samples\ListView\Samples\Grouping\Model\ListViewContactsInfo.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Grouping\Model\ListViewContactsInfoRepository.cs">
+      <Link>Samples\ListView\Samples\Grouping\Model\ListViewContactsInfoRepository.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Grouping\ViewModel\ViewModel.cs">
+      <Link>Samples\ListView\Samples\Grouping\ViewModel\ViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ItemReordering\View\ItemReordering.xaml.cs">
+      <Link>Samples\ListView\Samples\ItemReordering\View\ItemReordering.xaml.cs</Link>
+    <DependentUpon>ItemReordering.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ItemReordering\Model\GroceryList.cs">
+      <Link>Samples\ListView\Samples\ItemReordering\Model\GroceryList.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ItemReordering\Model\GroceryListRepository.cs">
+      <Link>Samples\ListView\Samples\ItemReordering\Model\GroceryListRepository.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ItemReordering\ViewModel\ViewModel.cs">
+      <Link>Samples\ListView\Samples\ItemReordering\ViewModel\ViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\LoadMore\Helpers\Converters.cs">
+      <Link>Samples\ListView\Samples\LoadMore\Helpers\Converters.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\LoadMore\Model\Product.cs">
+      <Link>Samples\ListView\Samples\LoadMore\Model\Product.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\LoadMore\Model\ProductRepository.cs">
+      <Link>Samples\ListView\Samples\LoadMore\Model\ProductRepository.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\LoadMore\ViewModel\LoadMoreViewModel.cs">
+      <Link>Samples\ListView\Samples\LoadMore\ViewModel\LoadMoreViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\LoadMore\Views\LoadMore.xaml.cs">
+      <Link>Samples\ListView\Samples\LoadMore\Views\LoadMore.xaml.cs</Link>
+<DependentUpon>LoadMore.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\LoadMore\Views\LoadMoreOrders.xaml.cs">
+      <Link>Samples\ListView\Samples\LoadMore\Views\LoadMoreOrders.xaml.cs</Link>
+    <DependentUpon>LoadMoreOrders.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Orientation\Model\PizzaInfo.cs">
+      <Link>Samples\ListView\Samples\Orientation\Model\PizzaInfo.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Orientation\Model\PizzaInfoRepository.cs">
+      <Link>Samples\ListView\Samples\Orientation\Model\PizzaInfoRepository.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Orientation\View\Orientation.xaml.cs">
+      <Link>Samples\ListView\Samples\Orientation\View\Orientation.xaml.cs</Link>
+    <DependentUpon>Orientation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Orientation\ViewModel\ViewModel.cs">
+      <Link>Samples\ListView\Samples\Orientation\ViewModel\ViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Paging\Helper\Behaviors.cs">
+      <Link>Samples\ListView\Samples\Paging\Helper\Behaviors.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Paging\Model\PagingProduct.cs">
+      <Link>Samples\ListView\Samples\Paging\Model\PagingProduct.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Paging\Model\PagingProductRepository.cs">
+      <Link>Samples\ListView\Samples\Paging\Model\PagingProductRepository.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Paging\View\Paging.xaml.cs">
+      <Link>Samples\ListView\Samples\Paging\View\Paging.xaml.cs</Link>
+     <DependentUpon>Paging.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Paging\ViewModel\PagingViewModel.cs">
+      <Link>Samples\ListView\Samples\Paging\ViewModel\PagingViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PullToRefresh\Helper\Behaviors.cs">
+      <Link>Samples\ListView\Samples\PullToRefresh\Helper\Behaviors.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PullToRefresh\Model\BlogsInfo.cs">
+      <Link>Samples\ListView\Samples\PullToRefresh\Model\BlogsInfo.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PullToRefresh\Helper\PickerExt.cs">
+      <Link>Samples\ListView\Samples\PullToRefresh\Helper\PickerExt.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PullToRefresh\View\PullToRefresh.xaml.cs">
+      <Link>Samples\ListView\Samples\PullToRefresh\View\PullToRefresh.xaml.cs</Link>
+        <DependentUpon>PullToRefresh.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PullToRefresh\View\ReadMoreContentPage.xaml.cs">
+      <Link>Samples\ListView\Samples\PullToRefresh\View\ReadMoreContentPage.xaml.cs</Link>
+    <DependentUpon>ReadMoreContentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PullToRefresh\ViewModel\ViewModel.cs">
+      <Link>Samples\ListView\Samples\PullToRefresh\ViewModel\ViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Selection\Helper\Behaviors.cs">
+      <Link>Samples\ListView\Samples\Selection\Helper\Behaviors.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Selection\Helper\Converter.cs">
+      <Link>Samples\ListView\Samples\Selection\Helper\Converter.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Selection\Model\MusiqInfo.cs">
+      <Link>Samples\ListView\Samples\Selection\Model\MusiqInfo.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Selection\Model\MusiqInfoRepository.cs">
+      <Link>Samples\ListView\Samples\Selection\Model\MusiqInfoRepository.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Selection\View\Selection.xaml.cs">
+      <Link>Samples\ListView\Samples\Selection\View\Selection.xaml.cs</Link>
+    <DependentUpon>Selection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Selection\ViewModel\ViewModel.cs">
+      <Link>Samples\ListView\Samples\Selection\ViewModel\ViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\SortingFiltering\Helper\Behaviors.cs">
+      <Link>Samples\ListView\Samples\SortingFiltering\Helper\Behaviors.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\SortingFiltering\Helper\Converter.cs">
+      <Link>Samples\ListView\Samples\SortingFiltering\Helper\Converter.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\SortingFiltering\Model\TaskInfo.cs">
+      <Link>Samples\ListView\Samples\SortingFiltering\Model\TaskInfo.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\SortingFiltering\View\SortingFiltering.xaml.cs">
+      <Link>Samples\ListView\Samples\SortingFiltering\View\SortingFiltering.xaml.cs</Link>
+    <DependentUpon>SortingFiltering.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\SortingFiltering\ViewModel\ViewModel.cs">
+      <Link>Samples\ListView\Samples\SortingFiltering\ViewModel\ViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Swiping\Helper\Behavior.cs">
+      <Link>Samples\ListView\Samples\Swiping\Helper\Behavior.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Swiping\Helper\Converter.cs">
+      <Link>Samples\ListView\Samples\Swiping\Helper\Converter.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Swiping\Model\ListViewInboxInfo.cs">
+      <Link>Samples\ListView\Samples\Swiping\Model\ListViewInboxInfo.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Swiping\Model\ListViewInboxInfoRepository.cs">
+      <Link>Samples\ListView\Samples\Swiping\Model\ListViewInboxInfoRepository.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Swiping\View\Swiping.xaml.cs">
+      <Link>Samples\ListView\Samples\Swiping\View\Swiping.xaml.cs</Link>
+    <DependentUpon>Swiping.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Swiping\ViewModel\ViewModel.cs">
+      <Link>Samples\ListView\Samples\Swiping\ViewModel\ViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml.cs">
+      <Link>Samples\ListView\Samples\Themes\Themes.xaml.cs</Link>
+    <DependentUpon>Themes.xaml</DependentUpon>
+    </Compile>
+	
+	<Compile Include="$(MSBuildThisFileDirectory)\Helper\SfImage.cs">
+      <Link>Samples\ListView\Helper\SfImage.cs</Link>
+    </Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Helper\BehaviorBase.cs">
+      <Link>Samples\ListView\Helper\BehaviorBase.cs</Link>
+    </Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Helper\CustomBehavior.cs">
+      <Link>Samples\ListView\Helper\CustomBehavior.cs</Link>
+    </Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Helper\EventToCommandBehavior.cs">
+      <Link>Samples\ListView\Helper\EventToCommandBehavior.cs</Link>
+    </Compile>
+
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Accordion\View\Accordion.xaml">
+      <Link>Samples\ListView\Samples\Accordion\View\Accordion.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\AutoFitContent\View\AutoFitContent.xaml">
+      <Link>Samples\ListView\Samples\AutoFitContent\View\AutoFitContent.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DataTemplateSelector\View\DataTemplateSelector.xaml">
+      <Link>Samples\ListView\Samples\DataTemplateSelector\View\DataTemplateSelector.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DataTemplateSelector\View\IncomingImageTemplate.xaml">
+      <Link>Samples\ListView\Samples\DataTemplateSelector\View\IncomingImageTemplate.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DataTemplateSelector\View\IncomingTextTemplate.xaml">
+      <Link>Samples\ListView\Samples\DataTemplateSelector\View\IncomingTextTemplate.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DataTemplateSelector\View\OutgoingTextTemplate.xaml">
+      <Link>Samples\ListView\Samples\DataTemplateSelector\View\OutgoingTextTemplate.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\View\GettingStarted.xaml">
+      <Link>Samples\ListView\Samples\GettingStarted\View\GettingStarted.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\GridLayout\View\GridLayout.xaml">
+      <Link>Samples\ListView\Samples\GridLayout\View\GridLayout.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Grouping\View\Grouping.xaml">
+      <Link>Samples\ListView\Samples\Grouping\View\Grouping.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ItemReordering\View\ItemReordering.xaml">
+      <Link>Samples\ListView\Samples\ItemReordering\View\ItemReordering.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\LoadMore\Views\LoadMore.xaml">
+      <Link>Samples\ListView\Samples\LoadMore\Views\LoadMore.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\LoadMore\Views\LoadMoreOrders.xaml">
+      <Link>Samples\ListView\Samples\LoadMore\Views\LoadMoreOrders.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Orientation\View\Orientation.xaml">
+      <Link>Samples\ListView\Samples\Orientation\View\Orientation.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Paging\View\Paging.xaml">
+      <Link>Samples\ListView\Samples\Paging\View\Paging.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\PullToRefresh\View\PullToRefresh.xaml">
+      <Link>Samples\ListView\Samples\PullToRefresh\View\PullToRefresh.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\PullToRefresh\View\ReadMoreContentPage.xaml">
+      <Link>Samples\ListView\Samples\PullToRefresh\View\ReadMoreContentPage.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Selection\View\Selection.xaml">
+      <Link>Samples\ListView\Samples\Selection\View\Selection.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\SortingFiltering\View\SortingFiltering.xaml">
+      <Link>Samples\ListView\Samples\SortingFiltering\View\SortingFiltering.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Swiping\View\Swiping.xaml">
+      <Link>Samples\ListView\Samples\Swiping\View\Swiping.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml">
+      <Link>Samples\ListView\Samples\Themes\Themes.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+      
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+      <Link>Samples\ListView\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+    
+  </ItemGroup>
+</Project>

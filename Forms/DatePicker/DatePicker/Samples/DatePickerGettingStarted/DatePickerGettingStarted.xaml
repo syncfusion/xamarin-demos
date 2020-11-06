@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView  xmlns:datePicker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms"
+                   xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                   xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+                   xmlns:sfButton="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+                   xmlns:localSample="clr-namespace:SampleBrowser.SfDatePicker"
+                   xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:sfPopup="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms"
+                   xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+                   x:Class="SampleBrowser.SfDatePicker.DatePickerGettingStarted">
+    <local:SampleView.Content>
+        <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+            <Grid.Resources>
+                <localSample:DatePickerDateToTextConverter x:Key="TimeSpanToTextValue"/>
+                <localSample:DatePickerTextToColor x:Key="TextToColorValue"/>
+                <localSample:DatePickerBoolToColor x:Key="BoolToColorValue"/>
+            </Grid.Resources>
+            <Grid.BindingContext>
+                <localSample:DatePickerTaskObjectViewModel x:Name="viewModel"/>
+            </Grid.BindingContext>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Label Text="TO-DO TASKS"
+                       FontSize="20"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       VerticalTextAlignment="Center"
+                       HorizontalOptions="Center"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <datePicker:SfDatePicker OkCommand="{Binding AcceptCommand}"
+                                         CancelCommand="{Binding DeclineCommand}"  
+                                         ShowFooter="True" 
+                                         PickerWidth="300"
+                                         SelectedItemFontSize="20"
+                                         UnselectedItemFontSize="20"
+                                         ColumnHeaderHeight="40" 
+                                         Date="{Binding SelectedDate, Mode=TwoWay}" 
+                                         IsOpen="{Binding IsPickerOpen, Mode=TwoWay}"
+                                         PickerMode="Dialog"/>
+                <listView:SfListView Margin="10,5,10,0"
+                                     x:Name="sfListView"
+                                     SelectionBackgroundColor="Transparent"   
+                                     ItemsSource="{Binding Tasks}"
+                                     SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+                                     AllowSwiping="True" 
+                                     SelectionMode="Single"
+                                     SwipeThreshold="30"
+                                     SwipeEnded="ListView_SwipeEnded"
+                                     ItemSize="65">
+                    <listView:SfListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell >
+                                <Grid>
+                                    <border:SfBorder Margin="10,3,10,3" 
+                                                     HasShadow="True"
+                                                     BorderColor="#F3F3F3"
+                                                     BackgroundColor="White"
+                                                     CornerRadius="10"
+                                                     BorderWidth="1">
+                                        <Grid >
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="50"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="50"/>
+                                                <ColumnDefinition Width="100"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid Grid.Column="0">
+                                                <Label Text="&#xe72e;"
+                                                       FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"
+                                                       FontSize="22"
+                                                       TextColor="{Binding DateValue,Converter={StaticResource TextToColorValue}}"
+                                                       VerticalOptions="Center"
+                                                       HorizontalOptions="Center"/>
+                                            </Grid>
+                                            <Grid Grid.Column="1">
+                                                <Label Text="{Binding Description}"
+                                                       FontSize="12"
+                                                       VerticalOptions="Center"/>
+                                            </Grid>
+                                            <Grid Grid.Column="2" ColumnSpacing="0">
+                                                <Label Text="&#xe755;"
+                                                       FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"
+                                                       FontSize="18"
+                                                       TextColor="{Binding DateValue,Converter={StaticResource TextToColorValue}}"
+                                                       VerticalOptions="Center"
+                                                       HorizontalOptions="EndAndExpand"/>
+                                            </Grid>
+                                            <Grid Grid.Column="3" ColumnSpacing="0">
+                                                <Label Text="{Binding DateValue,Converter={StaticResource TimeSpanToTextValue}}"
+                                                       TextColor="{Binding DateValue,Converter={StaticResource TextToColorValue}}"
+                                                       FontSize="12"
+                                                       VerticalOptions="Center"/>
+                                            </Grid>
+                                        </Grid>
+                                    </border:SfBorder>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </listView:SfListView.ItemTemplate>
+                    <listView:SfListView.LeftSwipeTemplate>
+                        <DataTemplate x:Name="LeftSwipeTemplate">
+                            <Grid BackgroundColor="#DC595F" 
+                                  HorizontalOptions="Fill" 
+                                  VerticalOptions="Fill">
+                                <Label Text="Delete" 
+                                       VerticalTextAlignment="Center" 
+                                       HorizontalTextAlignment="Center" 
+                                       HorizontalOptions="CenterAndExpand" 
+                                       VerticalOptions="CenterAndExpand"/>
+                            </Grid>
+                        </DataTemplate>
+                    </listView:SfListView.LeftSwipeTemplate>
+                </listView:SfListView>
+
+                <sfButton:SfButton Text="+"
+                               Command="{Binding AddCommand}"
+                                   FontSize="18"
+                               VerticalOptions="End"
+                               HorizontalOptions="Center"
+                               HasShadow="True"
+                               BackgroundColor="Accent"
+                               WidthRequest="50"
+                               HeightRequest="50"
+                               CornerRadius="25"/>
+                <sfPopup:SfPopupLayout IsVisible="{Binding IsOpen}" IsOpen="{Binding IsOpen}" x:Name="popupLayout">
+                    <sfPopup:SfPopupLayout.PopupView>
+                        <sfPopup:PopupView ShowHeader="True" 
+                                           ShowCloseButton="False"
+                                           HeightRequest="500"
+                                           HeaderTitle="Add a task">
+                            <sfPopup:PopupView.ContentTemplate>
+                                <DataTemplate>
+                                    <StackLayout VerticalOptions="CenterAndExpand" Padding="10">
+                                        <inputLayout:SfTextInputLayout Hint="Add a Description"
+                                                                       ContainerType="Outlined">
+                                            <Entry x:Name="entry" 
+                                                   Text="{Binding Text,Mode=TwoWay}" 
+                                                   HorizontalTextAlignment="Start"/>
+                                        </inputLayout:SfTextInputLayout>
+                                        <datePicker:SfDatePicker WidthRequest="250" 
+                                                                 BackgroundColor="#FAFAFA"
+                                                                 ColumnHeaderBackgroundColor="#FAFAFA"
+                                                                 ColumnHeaderHeight="40"
+                                                                 HeaderFontSize="18"
+                                                                 HeaderText="Select a date"
+                                                                 Date="{Binding SelectedDate, Mode=TwoWay}" 
+                                                                 PickerMode="Default">
+                                            <datePicker:SfDatePicker.HeaderBackgroundColor>
+                                              <OnPlatform x:TypeArguments="Color">
+                                                <On Platform="iOS, UWP" Value="#FAFAFA" />
+                                                <On Platform="Android" Value="Accent" />
+                                              </OnPlatform>
+                                            </datePicker:SfDatePicker.HeaderBackgroundColor>
+                                        </datePicker:SfDatePicker>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </sfPopup:PopupView.ContentTemplate>
+                            <sfPopup:PopupView.FooterTemplate>
+                                <DataTemplate>
+                                    <border:SfBorder Margin="0,3,0,0"
+                                                     CornerRadius="15"
+                                                     BorderColor="#F3F3F3"
+                                                     BackgroundColor="White"                        
+                                                     BorderWidth="1">
+                                        <StackLayout HorizontalOptions="End" Orientation="Horizontal">
+                                            <Button BackgroundColor="White"
+                                                    HorizontalOptions="Start"
+                                                    WidthRequest="100"
+                                                    TextColor="Accent"
+                                                    Command="{Binding CancelCommand}"
+                                                    Text="Cancel">
+                                            </Button>
+                                            <Button BackgroundColor="White"
+                                                    WidthRequest="80"
+                                                    TextColor="Accent"
+                                                    HorizontalOptions="Start"
+                                                    Command="{Binding OKCommand}"
+                                                    Text="Ok">
+                                            </Button>
+                                        </StackLayout>
+                                    </border:SfBorder>
+                                </DataTemplate>
+                            </sfPopup:PopupView.FooterTemplate>
+                        </sfPopup:PopupView>
+                    </sfPopup:SfPopupLayout.PopupView>
+                </sfPopup:SfPopupLayout>
+            </Grid>
+        </Grid>
+    </local:SampleView.Content>
+</local:SampleView>

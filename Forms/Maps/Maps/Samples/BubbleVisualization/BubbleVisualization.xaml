@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfMaps.BubbleVisualization"
+              xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfMaps"
+              xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+              xmlns:maps="clr-namespace:Syncfusion.SfMaps.XForms;assembly=Syncfusion.SfMaps.XForms">
+
+    <local:SampleView.Content>
+        <Grid x:Name="grid">
+            <Grid.BindingContext>
+                <sampleBrowser:BubbleVisualizationViewModel />
+            </Grid.BindingContext>
+
+            <Grid.Resources>
+                <ResourceDictionary>
+                    <DataTemplate x:Key="toolTipTemplate">
+                        <StackLayout>
+                            <Label Text="{Binding Country}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#FFFFFF" FontAttributes="Bold" FontFamily="Helvetica" Margin="0" FontSize="12" Grid.Row="0" />
+                            <BoxView Color="#888C91" HeightRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+                            <Label Text="{Binding Percent,StringFormat='{0}%'}" VerticalTextAlignment="Center" HorizontalOptions="Center" TextColor="#FFFFFF" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" />
+                        </StackLayout>
+                    </DataTemplate>
+                </ResourceDictionary>
+            </Grid.Resources>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+                <RowDefinition Height="20" />
+            </Grid.RowDefinitions>
+            <Label Text="Top 40 countries population" Margin="20,0,0,0" FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+            <maps:SfMaps x:Name="sfmap" Grid.Row="1">
+                <maps:SfMaps.Layers>
+                    <maps:ShapeFileLayer Uri="world1.shp" ShapeIDPath="Country" ShowMapItems="True" ShapeIDTableField="NAME" ItemsSource="{Binding Countries}">
+
+                        <maps:ShapeFileLayer.BubbleMarkerSettings>
+                            <maps:BubbleMarkerSetting  ValuePath="Percent" ColorValuePath="Percent" >
+                                <maps:BubbleMarkerSetting.ColorMappings>
+                                    <maps:RangeColorMapping Color="#2E769F" From="4" To="20" LegendLabel="Above 4%" />
+                                    <maps:RangeColorMapping Color="#D84444" To="4" From="2" LegendLabel="4% - 2%"  />
+                                    <maps:RangeColorMapping Color="#816F28" To="2" From="1" LegendLabel="2% - 1% "  />
+                                    <maps:RangeColorMapping Color="#7F38A0" To="1" From="0" LegendLabel="Below 1%"  />
+                                </maps:BubbleMarkerSetting.ColorMappings>
+                                <maps:BubbleMarkerSetting.TooltipSettings>
+                                    <maps:TooltipSetting ShowTooltip="True" ValuePath="Country"/>
+                                </maps:BubbleMarkerSetting.TooltipSettings>
+                            </maps:BubbleMarkerSetting>
+                        </maps:ShapeFileLayer.BubbleMarkerSettings>
+                        <maps:ShapeFileLayer.ShapeSettings>
+                            <maps:ShapeSetting ShapeFill="LightGray"/>
+                        </maps:ShapeFileLayer.ShapeSettings>
+                        <maps:ShapeFileLayer.LegendSettings>
+                            <maps:MapLegendSetting ShowLegend="True" LegendType="Bubbles"/>
+                        </maps:ShapeFileLayer.LegendSettings>
+                    </maps:ShapeFileLayer>
+                </maps:SfMaps.Layers>
+            </maps:SfMaps>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="Start" Grid.Row="2" Margin="0,0,5,-5" >
+                <Label Text="Source: " FontSize="12" />
+                <Label Text="en.wikipedia.org" TextColor="DeepSkyBlue" x:Name="Link" FontSize="12" />
+            </StackLayout>
+        </Grid>
+
+    </local:SampleView.Content>
+</local:SampleView>

@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<sample:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                   xmlns:local="clr-namespace:SampleBrowser.SfPopupLayout"
+                   x:Class="SampleBrowser.SfPopupLayout.GettingStarted"
+                   xmlns:textinput="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+                   xmlns:popuplayout="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms">
+    <sample:SampleView.Resources>
+        <ResourceDictionary>
+            <popuplayout:SfPopupLayout x:Key="AlertDialog">
+                <popuplayout:SfPopupLayout.PopupView>
+                    <popuplayout:PopupView ShowHeader="False" 
+                                           AcceptButtonText="DISCARD" 
+                                           DeclineButtonText="CANCEL"
+                                           AppearanceMode="TwoButton"
+                                           HeightRequest="120"
+                                           >
+                        <popuplayout:PopupView.ContentTemplate>
+                            <DataTemplate>
+                                <Grid BackgroundColor="White" Padding="15,20,0,0">
+                                    <Label FontSize="16"  BackgroundColor="White" TextColor="Gray" Text="Discard draft?"/>
+                                </Grid>
+                            </DataTemplate>
+                        </popuplayout:PopupView.ContentTemplate>
+
+                    </popuplayout:PopupView>
+                </popuplayout:SfPopupLayout.PopupView>
+            </popuplayout:SfPopupLayout>
+            <popuplayout:SfPopupLayout x:Key="AlertWithTitleDialog">
+                <popuplayout:SfPopupLayout.PopupView>
+                    <popuplayout:PopupView AcceptButtonText="AGREE" 
+                                           DeclineButtonText="DISAGREE"
+                                           AppearanceMode="TwoButton"
+                                           ShowCloseButton="False"
+                                           HeaderHeight="70"                                          
+                                           >
+                        <popuplayout:PopupView.HeaderTemplate>
+                            <DataTemplate>
+                                <StackLayout Padding="20, 10, 0, 0">
+                                    <Label LineBreakMode="WordWrap"
+                                               Text="Use Google's location service?"
+                                               FontSize="19"
+                                               HorizontalOptions="Center"
+                                               TextColor="Black"
+                                               FontAttributes="Bold"/>
+                                </StackLayout>
+                            </DataTemplate>
+                        </popuplayout:PopupView.HeaderTemplate>
+                        <popuplayout:PopupView.ContentTemplate>
+                            <DataTemplate>
+                                <StackLayout x:Name="stack" 
+                                                 Orientation="Horizontal"                                                   BackgroundColor="White"
+                                                 Padding="20,10,5,5">
+                                    <Label BackgroundColor="White" 
+                                               TextColor="Gray"
+                                               FontSize="16"
+                                               Text="Let Google help apps determine location. This means sending anonymous location date to Google, even when no apps are running."/>
+                                </StackLayout>
+                            </DataTemplate>
+                        </popuplayout:PopupView.ContentTemplate>
+                    </popuplayout:PopupView>
+                </popuplayout:SfPopupLayout.PopupView>
+            </popuplayout:SfPopupLayout>
+            <popuplayout:SfPopupLayout x:Key="SimpleDialog">
+                <popuplayout:SfPopupLayout.PopupView>
+                    <popuplayout:PopupView ShowFooter="False" 
+                                           ShowCloseButton="False" 
+                                           HeightRequest="210">
+                        <popuplayout:PopupView.HeaderTemplate>
+                            <DataTemplate>
+                                <StackLayout Padding="25, 10, 0, 0">
+                                    <Label LineBreakMode="WordWrap"
+                                               Text="ACCOUNTS FOR USER01"
+                                               FontSize="19"
+                                               HorizontalOptions="Start"
+                                               TextColor="Black"
+                                               FontAttributes="Bold"/>
+                                </StackLayout>
+                            </DataTemplate>
+                        </popuplayout:PopupView.HeaderTemplate>
+                        <popuplayout:PopupView.ContentTemplate>
+                            <DataTemplate>
+                                <Grid BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="40"/>
+                                        <RowDefinition Height="40"/>
+                                        <RowDefinition Height="40"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="10"/>
+                                        <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="500"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image WidthRequest="40" 
+                                           HeightRequest="40" 
+                                           HorizontalOptions="CenterAndExpand" 
+                                           VerticalOptions="CenterAndExpand" 
+                                           Grid.Row="0" 
+                                           Grid.Column="1" >
+                                        <Image.Source>
+                                            <FontImageSource Glyph="&#xe76d;"
+                                                             FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"
+                                                             Color="#0175c2" >
+                                            </FontImageSource>
+                                        </Image.Source>
+
+                                    </Image>
+                                    <Label Text ="user01@syncfusion.com" 
+                                           TextColor ="Black" 
+                                           FontSize ="16" 
+                                           HorizontalOptions="Center" 
+                                           VerticalOptions="Center" 
+                                           Opacity="87" 
+                                           WidthRequest="500" 
+                                           HeightRequest="40" 
+                                           Grid.Row="0" 
+                                           Grid.Column="2" 
+                                           Margin="0,7,0,0"/>
+                                    <Image WidthRequest="40" 
+                                           HeightRequest="40" 
+                                           HorizontalOptions="CenterAndExpand" 
+                                           VerticalOptions="CenterAndExpand" 
+                                           Grid.Row="1" 
+                                           Grid.Column="1">
+                                        <Image.Source>
+                                            <FontImageSource Glyph="&#xe76d;"
+                                                             FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"
+                                                             Color="#0175c2" >
+                                             </FontImageSource>
+                                        </Image.Source>
+                                    </Image>
+                                          
+                                    <Label Text ="user02@syncfusion.com" 
+                                           TextColor ="Black" 
+                                           FontSize ="16" 
+                                           HorizontalOptions="Center" 
+                                           VerticalOptions="Center" 
+                                           Opacity="87" 
+                                           WidthRequest="500" 
+                                           HeightRequest="40" 
+                                           Grid.Row="1" 
+                                           Grid.Column="2" 
+                                           Margin="0,7,0,0"/>
+                                    <Image WidthRequest="40" 
+                                           HeightRequest="40" 
+                                           HorizontalOptions="CenterAndExpand" 
+                                           VerticalOptions="CenterAndExpand" 
+                                           Grid.Row="2" 
+                                           Grid.Column="1">
+                                        <Image.Source>
+                                            <FontImageSource Glyph="&#xe726;"
+                                                             FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"
+                                                             Color="#0175c2" >
+                                            </FontImageSource>
+                                        </Image.Source>
+                                    </Image>
+                                          
+                                    <Label Text ="Add account" 
+                                           TextColor ="Black" 
+                                           FontSize ="16" 
+                                           HorizontalOptions="Center" 
+                                           VerticalOptions="Center" 
+                                           Opacity="87" 
+                                           WidthRequest="500" 
+                                           HeightRequest="40" 
+                                           Grid.Row="2" 
+                                           Grid.Column="2" 
+                                           Margin="0,7,0,0"/>
+                                </Grid>
+                            </DataTemplate>
+                        </popuplayout:PopupView.ContentTemplate>
+                    </popuplayout:PopupView>
+                </popuplayout:SfPopupLayout.PopupView>
+            </popuplayout:SfPopupLayout>
+            <popuplayout:SfPopupLayout x:Key="ConfirmationDialog">
+                <popuplayout:SfPopupLayout.PopupView>
+                    <popuplayout:PopupView ShowCloseButton="False" 
+                                           AcceptButtonText="OK"
+                                           HeightRequest="220"
+                                           FooterHeight="45"
+                                           >
+                        <popuplayout:PopupView.HeaderTemplate>
+                            <DataTemplate>
+                                <StackLayout Padding="25, 10, 0, 0">
+                                    <Label LineBreakMode="WordWrap"
+                                               Text="Font Size"
+                                               FontSize="19"
+                                               HorizontalOptions="Start"
+                                               TextColor="Black"
+                                               FontAttributes="Bold"/>
+                                </StackLayout>
+                            </DataTemplate>
+                        </popuplayout:PopupView.HeaderTemplate>
+                        <popuplayout:PopupView.ContentTemplate>
+                            <DataTemplate>
+                                <Grid BackgroundColor="White" 
+                                      HorizontalOptions="FillAndExpand" 
+                                      VerticalOptions="FillAndExpand">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="40"/>
+                                        <RowDefinition Height="40"/>
+                                        <RowDefinition Height="40"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="20"/>
+                                        <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="500"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Switch IsToggled="{Binding SmallFontSwitch, Mode=TwoWay, Source={x:Reference viewModel}}" 
+                                            Grid.Row="0" 
+                                            Grid.Column="1"  
+                                            HorizontalOptions="CenterAndExpand" 
+                                            VerticalOptions="CenterAndExpand"/>
+                                    <Label Text ="Small" 
+                                           TextColor ="Gray" 
+                                           FontSize ="16" 
+                                           HorizontalOptions="Center" 
+                                           VerticalOptions="Center" 
+                                           Opacity="87" 
+                                           WidthRequest="500" 
+                                           HeightRequest="40" 
+                                           Grid.Row="0" 
+                                           Grid.Column="2" 
+                                           Margin="0,10,0,0"/>
+                                    <Switch IsToggled="{Binding NormalFontSwitch, Mode=TwoWay, Source={x:Reference viewModel}}"  
+                                            Grid.Row="1" 
+                                            Grid.Column="1" 
+                                            HorizontalOptions="CenterAndExpand" 
+                                            VerticalOptions="CenterAndExpand"/>
+                                    <Label Text ="Normal" 
+                                           TextColor ="Gray" 
+                                           FontSize ="16" 
+                                           HorizontalOptions="Center" 
+                                           VerticalOptions="Center" 
+                                           Opacity="87" 
+                                           WidthRequest="500" 
+                                           HeightRequest="40" 
+                                           Grid.Row="1" 
+                                           Grid.Column="2" 
+                                           Margin="0,10,0,0"/>
+                                    <Switch IsToggled="{Binding LargeFontSwitch, Mode=TwoWay, Source={x:Reference viewModel}}"
+                                            Grid.Row="2" 
+                                            Grid.Column="1" 
+                                            HorizontalOptions="CenterAndExpand" 
+                                            VerticalOptions="CenterAndExpand"/>
+                                    <Label Text ="Large" 
+                                           TextColor ="Gray" 
+                                           FontSize ="16" 
+                                           HorizontalOptions="Center" 
+                                           VerticalOptions="Center"
+                                           Opacity="87" 
+                                           WidthRequest="500" 
+                                           HeightRequest="40" 
+                                           Grid.Row="2" 
+                                           Grid.Column="2" 
+                                           Margin="0,10,0,0"/>
+                                </Grid>
+                            </DataTemplate>
+                        </popuplayout:PopupView.ContentTemplate>
+                    </popuplayout:PopupView>
+                </popuplayout:SfPopupLayout.PopupView>
+            </popuplayout:SfPopupLayout>
+            <popuplayout:SfPopupLayout x:Key="ModalWindow" StaysOpen="True">
+                <popuplayout:SfPopupLayout.PopupView>
+                    <popuplayout:PopupView  ShowFooter="False" HeaderTitle="Modal Window" HeightRequest="180" >
+                        <popuplayout:PopupView.ContentTemplate>
+                            <DataTemplate>
+                                <Grid BackgroundColor="White" Padding="10">
+                                    <Label FontSize="14"  
+                                           BackgroundColor="White" 
+                                           TextColor="Gray" 
+                                           Text="Window loads under the parent window surrounded by an overlay which prevents clicking anywhere else on the screen apart from the control of the modal."/>
+                                </Grid>
+                            </DataTemplate>
+                        </popuplayout:PopupView.ContentTemplate>
+                    </popuplayout:PopupView>
+                </popuplayout:SfPopupLayout.PopupView>
+            </popuplayout:SfPopupLayout>
+            <popuplayout:SfPopupLayout x:Key="RelativeDialog" 
+                                       RelativePosition="AlignTop" 
+                                       RelativeView="{x:Reference relativePopupButton}">
+                <popuplayout:SfPopupLayout.PopupView>
+                    <popuplayout:PopupView ShowHeader="False"
+                                           HeightRequest="130"
+                                           WidthRequest="250"
+                                           AcceptButtonText="OK"
+                                           >
+                        <popuplayout:PopupView.ContentTemplate>
+                            <DataTemplate>
+                                <Grid BackgroundColor="White" Padding="15,20,0,0">
+                                    <Label FontSize="16"  
+                                           BackgroundColor="White" 
+                                           TextColor="Gray" 
+                                           Text="Dialog is displayed relatively at the top of the button."/>
+                                </Grid>
+                            </DataTemplate>
+                        </popuplayout:PopupView.ContentTemplate>
+                    </popuplayout:PopupView>
+                </popuplayout:SfPopupLayout.PopupView>
+            </popuplayout:SfPopupLayout>
+            <popuplayout:SfPopupLayout x:Key="FullScreenDialog">
+                <popuplayout:SfPopupLayout.PopupView>
+                    <popuplayout:PopupView AppearanceMode="TwoButton"
+                                           AcceptButtonText="SAVE"
+                                           DeclineButtonText="CANCEL">
+                        <popuplayout:PopupView.HeaderTemplate>
+                            <DataTemplate>
+                                <StackLayout Padding="10,10,0,0">
+                                    <Label Text="ADD EVENT"  VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </DataTemplate>
+                        </popuplayout:PopupView.HeaderTemplate>
+                        <popuplayout:PopupView.ContentTemplate>
+                            <DataTemplate>
+                                <Grid BackgroundColor="White" Padding="15,20,15,0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="90"/>
+                                        <RowDefinition Height="90"/>
+                                        <RowDefinition Height="30"/>
+                                        <RowDefinition Height="50"/>
+                                        <RowDefinition Height="30"/>
+                                        <RowDefinition Height="50"/>
+                                        <RowDefinition>
+                                            <RowDefinition.Height>
+                                                <OnPlatform x:TypeArguments="GridLength" Android="55" iOS="55">
+                                                    <On Platform="UWP" Value="75"/>
+                                                </OnPlatform>
+                                            </RowDefinition.Height>
+                                        </RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid Grid.Row="0" BackgroundColor="#F3F3F9" Margin="0,15,0,0">
+                                        <textinput:SfTextInputLayout Hint="Event name" ContainerType="Outlined" BackgroundColor="Transparent">
+                                            <Entry BackgroundColor="Transparent"/>
+                                        </textinput:SfTextInputLayout>
+                                    </Grid>
+
+                                    <Grid Grid.Row="1" BackgroundColor="#F3F3F9" Margin="0,15,0,0">
+                                        <textinput:SfTextInputLayout Hint="Location" ContainerType="Outlined" BackgroundColor="Transparent">
+                                            <Entry BackgroundColor="Transparent"/>
+                                        </textinput:SfTextInputLayout>
+                                    </Grid>
+
+                                    <Label Grid.Row="2" Text="From" Margin="0,10,0,0"/>
+                                    <Grid Grid.Row="3">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <DatePicker Grid.Column="0" FontSize="Small"/>
+                                        <TimePicker Grid.Column="1" FontSize="Small"/>
+                                    </Grid>
+
+                                    <Label Grid.Row="4" Text="To" Margin="0,10,0,0"/>
+                                    <Grid Grid.Row="5">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <DatePicker Grid.Column="0" FontSize="Small"/>
+                                        <TimePicker Grid.Column="1" FontSize="Small"/>
+                                    </Grid>
+                                    <Grid Grid.Row="6" Margin="0,35,0,0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Switch Grid.Column="0"/>
+                                        <Label Grid.Column="1" Text="All-day">
+                                            <Label.Margin>
+                                                <OnPlatform x:TypeArguments="Thickness">
+                                                    <On Platform="UWP" Value="0,10,0,0"/>
+                                                </OnPlatform>
+                                            </Label.Margin>
+                                        </Label>
+                                    </Grid>
+                                </Grid>
+                            </DataTemplate>
+                        </popuplayout:PopupView.ContentTemplate>
+                    </popuplayout:PopupView>
+                </popuplayout:SfPopupLayout.PopupView>
+            </popuplayout:SfPopupLayout>
+        </ResourceDictionary>
+    </sample:SampleView.Resources>
+
+    <sample:SampleView.BindingContext>
+        <local:GettingStartedViewModel x:Name="viewModel"/>
+    </sample:SampleView.BindingContext>
+
+    <sample:SampleView.Content>
+        <ScrollView x:Name="parentLayout">
+            <StackLayout Orientation="Vertical" Spacing="20" Padding="20" >
+                <Button x:Name="Alert" 
+                            Text="ALERT" 
+                            CornerRadius="5" 
+                            BackgroundColor="#0059ff"          
+                            TextColor="White" 
+                            HeightRequest="40" 
+                            Command="{Binding OpenAlertDialog}"
+                            CommandParameter="{StaticResource AlertDialog}"
+                            />
+                <Button x:Name="AlertTitle" 
+                            Text="ALERT WITH TITLE" 
+                            CornerRadius="5"                    
+                            BackgroundColor="#0059ff" 
+                            TextColor="White" 
+                            HeightRequest="40"
+                            Command="{Binding OpenAlertWithTitleDialog}"
+                            CommandParameter="{StaticResource AlertWithTitleDialog}"
+                            />
+                <Button x:Name="simple" 
+                            Text="SIMPLE" 
+                            CornerRadius="5"                                                           BackgroundColor="#0059ff" 
+                            TextColor="White" 
+                            HeightRequest="40"
+                            Command="{Binding OpenSimpleDialog}"
+                            CommandParameter="{StaticResource SimpleDialog}"
+                            />
+                <Button x:Name="confirmation" 
+                            Text="CONFIRMATION" 
+                            CornerRadius="5"                      
+                            BackgroundColor="#0059ff" 
+                            TextColor="White" 
+                            HeightRequest="40"
+                            Command="{Binding OpenConfirmationDialog}"
+                            CommandParameter="{StaticResource ConfirmationDialog}"
+                            />
+                <Button x:Name="modal" 
+                            Text="MODAL" 
+                            CornerRadius="5"  
+                            BackgroundColor="#0059ff"         
+                            TextColor="White" 
+                            HeightRequest="40"
+                            Command="{Binding OpenModalDialog}"
+                            CommandParameter="{StaticResource ModalWindow}"
+                            />
+                <Button x:Name="relativePopupButton" 
+                            Text="RELATIVE DIALOG" 
+                            CornerRadius="5"  
+                            BackgroundColor="#0059ff"         
+                            TextColor="White" 
+                            HeightRequest="40"
+                            Command="{Binding OpenRelativeDialog}"
+                            CommandParameter="{StaticResource RelativeDialog}"
+                            />
+
+                <Button x:Name="fullScreenPopupButton"
+                        Text="FULLSCREEN"
+                        CornerRadius="5"
+                        BackgroundColor="#0059ff"
+                        TextColor="White"
+                        HeightRequest="40"
+                        Command="{Binding OpenFullScreenDialog}"
+                        CommandParameter="{StaticResource FullScreenDialog}"/>
+            </StackLayout>
+        </ScrollView>
+    </sample:SampleView.Content>
+</sample:SampleView>
