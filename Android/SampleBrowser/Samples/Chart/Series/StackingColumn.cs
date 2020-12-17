@@ -8,15 +8,13 @@
 using Android.App;
 using Android.Content;
 using Android.Graphics;
-using Android.OS;
 using Android.Views;
 using Com.Syncfusion.Charts;
-using Com.Syncfusion.Charts.Enums;
 
 
 namespace SampleBrowser
 {
-     [Activity(Label = "Stacked Columns")]
+    [Activity(Label = "Stacked Columns")]
     public class StackingColumn : SamplePage
     {
         public override View GetSampleContent(Context context)

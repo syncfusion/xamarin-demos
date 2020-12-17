@@ -7,22 +7,13 @@
 #endregion
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
 using Android.Content;
 using Android.Graphics;
-using Android.OS;
-using Android.Runtime;
-using Android.Util;
 using Android.Views;
-using Android.Widget;
 
 namespace SampleBrowser
 {
-	public class DoodleDraw : View
+    public class DoodleDraw : View
 	{
 		private Paint mPaint;
 		public DoodleDraw(Context context) :

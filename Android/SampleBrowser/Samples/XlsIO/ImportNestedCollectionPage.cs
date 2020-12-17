@@ -9,10 +9,7 @@ using Syncfusion.XlsIO;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using Android.Content;
 using Android.Views;
 using Android.Widget;
@@ -22,7 +19,7 @@ using System.Xml.Serialization;
 
 namespace SampleBrowser
 {
-	public partial class  ImportNestedCollectionPage : SamplePage
+    public partial class  ImportNestedCollectionPage : SamplePage
 	{
 		private Context m_context;
 		private Spinner spinner;

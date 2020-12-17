@@ -11,20 +11,16 @@ using Android.Views;
 using Android.Content;
 using Android.Graphics;
 using Android.App;
-using Android.OS;
-using System.Collections.ObjectModel;
 using Com.Syncfusion.Schedule;
-using Com.Syncfusion.Schedule.Enums;
 using System.Collections.Generic;
 using Java.Util;
 using Java.Text;
 using Android.Util;
 using Android.Views.InputMethods;
-using Android.Graphics.Drawables;
 
 namespace SampleBrowser
 {
-	public class ScheduleAppointmentEditor : IDisposable
+    public class ScheduleAppointmentEditor : IDisposable
 	{
         #region Properties and variables
 

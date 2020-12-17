@@ -20,8 +20,6 @@ using Syncfusion.ZugFerd;
 using Syncfusion.Pdf.Interactive;
 using System.Linq;
 using System.Xml;
-using System.Xml.Linq;
-using System.Data;
 
 namespace SampleBrowser
 {

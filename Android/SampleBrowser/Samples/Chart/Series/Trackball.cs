@@ -8,12 +8,9 @@
 using Android.App;
 using Android.Content;
 using Android.Graphics;
-using Android.OS;
 using Android.Views;
 using Android.Widget;
 using Com.Syncfusion.Charts;
-using Com.Syncfusion.Charts.Enums;
-using Com.Syncfusion.Navigationdrawer;
 using System;
 using System.Collections.Generic;
 

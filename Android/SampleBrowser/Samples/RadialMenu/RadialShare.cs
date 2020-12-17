@@ -6,7 +6,6 @@
 // applicable laws. 
 #endregion
 using System;
-using Android.App;
 using Android.Content;
 using Android.Graphics;
 using Android.Util;
@@ -16,7 +15,7 @@ using Syncfusion.SfRadialMenu.Android;
 
 namespace SampleBrowser
 {
-	public class RadialShare : SamplePage
+    public class RadialShare : SamplePage
 	{
 		public RadialShare()
 		{

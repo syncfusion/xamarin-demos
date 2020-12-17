@@ -9,15 +9,13 @@ using Android.Content;
 using Android.Graphics;
 
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 
 namespace SampleBrowser
 {
-	public class BookDetailsRepository
+    public class BookDetailsRepository
 	{
         public BookDetailsRepository(Context context)
 		{

@@ -1,54 +1,45 @@
-#region Copyright Syncfusion Inc. 2001-2016.
+﻿#region Copyright Syncfusion Inc. 2001-2016.
 // Copyright Syncfusion Inc. 2001-2016. All rights reserved.
 // Use of this code is subject to the terms of our license.
 // A copy of the current license can be obtained at any time by e-mailing
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Util;
+using Android.Graphics;
 using Android.Views;
 using Android.Widget;
-
-using Java.Util;
 using Com.Syncfusion.Calendar;
 using Com.Syncfusion.Calendar.Enums;
-using Android.Graphics;
+using System;
+using System.Collections.Generic;
 
 namespace SampleBrowser
 {
     public class CalendarLocalization_Tab : SamplePage, IDisposable
     {
-       /*********************************
-        **Local Variable Inizialisation**
-        *********************************/
+        /*********************************
+         **Local Variable Initialization**
+         *********************************/
         private FrameLayout mainLayout;
         private SfCalendar calendar;
         private LinearLayout proprtyOptionsLayout;
         private ArrayAdapter<String> dataAdapter;
         private Spinner cultureSpinner;
-      
+
         public override View GetSampleContent(Context context)
         {
             //mainLayout
             mainLayout = new FrameLayout(context);
             calendar = new SfCalendar(context);
             calendar.ViewMode = ViewMode.MonthView;
-			calendar.HeaderHeight = 100;
+            calendar.HeaderHeight = 100;
             calendar.ShowEventsInline = false;
             calendar.Locale = new Java.Util.Locale("zh", "CN");
             MonthViewLabelSetting labelSettings = new MonthViewLabelSetting();
-			labelSettings.DateLabelSize = 14;
-			MonthViewSettings monthViewSettings = new MonthViewSettings();
-			monthViewSettings.MonthViewLabelSetting = labelSettings;
+            labelSettings.DateLabelSize = 14;
+            MonthViewSettings monthViewSettings = new MonthViewSettings();
+            monthViewSettings.MonthViewLabelSetting = labelSettings;
             monthViewSettings.SelectedDayTextColor = Color.Black;
             monthViewSettings.TodayTextColor = Color.ParseColor("#1B79D6");
             monthViewSettings.InlineBackgroundColor = Color.ParseColor("#E4E8ED");
@@ -59,8 +50,8 @@ namespace SampleBrowser
 
             return mainLayout;
         }
-     
-       public override View GetPropertyWindowLayout(Context context)
+
+        public override View GetPropertyWindowLayout(Context context)
         {
             proprtyOptionsLayout = new LinearLayout(context);
             proprtyOptionsLayout.SetPadding(40, 40, 40, 0);
@@ -68,7 +59,7 @@ namespace SampleBrowser
             CultureLayout(context);
             return proprtyOptionsLayout;
         }
-      
+
         private void CultureLayout(Context context)
         {
             //Culture Text
@@ -84,7 +75,7 @@ namespace SampleBrowser
             cultureList.Add("Spanish");
             cultureList.Add("English");
             cultureList.Add("French");
-            
+
             //Data Adapter
             dataAdapter = new ArrayAdapter<String>(context, Android.Resource.Layout.SimpleSpinnerItem, cultureList);
             dataAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
@@ -92,7 +83,7 @@ namespace SampleBrowser
             //cultureSpinner
             cultureSpinner.Adapter = dataAdapter;
             cultureSpinner.SetSelection(0);
-           
+
             //Culture Item Selected Listener
             cultureSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) =>
             {
@@ -115,7 +106,7 @@ namespace SampleBrowser
                 if (selectedItem.Equals("French"))
                 {
                     calendar.Locale = Java.Util.Locale.France;
-                }              
+                }
             };
 
             //cultureLayout

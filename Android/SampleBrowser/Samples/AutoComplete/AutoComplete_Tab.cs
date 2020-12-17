@@ -5,28 +5,24 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using Android.Views.InputMethods;
-using Android.Util;
-using System;
-using Com.Syncfusion.Autocomplete;
-using Android.Widget;
-using Android.Views;
-using System.Runtime.Remoting.Contexts;
-using Android.Graphics;
-using System.Collections.ObjectModel;
-using System.Collections.Generic;
 using Android.App;
 using Android.Content;
-
-using SampleBrowser;
+using Android.Graphics;
+using Android.Util;
+using Android.Views;
+using Android.Views.InputMethods;
+using Android.Widget;
+using Com.Syncfusion.Autocomplete;
+using System;
+using System.Collections.Generic;
 
 namespace SampleBrowser
 {
     public class AutoComplete_Tab : SamplePage
     {
-       /*********************************
-        **Local Variable Inizialisation**
-        *********************************/
+        /*********************************
+         **Local Variable Initialization**
+         *********************************/
         Spinner suggestionModeSpinner, autoCompleteModeSpinner;
         EditText minPrefixCharacterText, maxDropDownHeightText, popUpDelayText;
         SuggestionMode suggestionModes = SuggestionMode.StartsWith;
@@ -51,12 +47,12 @@ namespace SampleBrowser
         int minPrefixCharPosition = 1, maxDropDownPosition = 200, popUpDelayPosition = 100;
         double actionBarHeight, navigationBarHeight, totalHeight;
         FrameLayout frame;
-        Android.Content.Context con,context;
-		ScrollView scrollView;
+        Android.Content.Context con, context;
+        ScrollView scrollView;
         public View GetPropertyLayout(Android.Content.Context context)
         {
-           
-            totalWidth = (context.Resources.DisplayMetrics.WidthPixels);          
+
+            totalWidth = (context.Resources.DisplayMetrics.WidthPixels);
             propertylayout = new LinearLayout(context);
             propertylayout.Orientation = Orientation.Vertical;
 
@@ -144,7 +140,7 @@ namespace SampleBrowser
             suggestionModeList.Add("Equals");
             suggestionModeList.Add("EqualsWithCaseSensitive");
 
-            suggestionModeSpinner = new Spinner(context,SpinnerMode.Dialog);
+            suggestionModeSpinner = new Spinner(context, SpinnerMode.Dialog);
             suggestionModeDataAdapter = new ArrayAdapter<String>(context, Android.Resource.Layout.SimpleSpinnerItem, suggestionModeList);
             suggestionModeDataAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             suggestionModeSpinner.Adapter = suggestionModeDataAdapter;
@@ -152,7 +148,8 @@ namespace SampleBrowser
             suggestionModeSpinner.LayoutParameters = new FrameLayout.LayoutParams((int)(totalWidth * 0.33), ViewGroup.LayoutParams.WrapContent, GravityFlags.Center);
 
             //suggestionModeSpinner ItemSelected Listener
-            suggestionModeSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) => {
+            suggestionModeSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) =>
+            {
                 selectionPosition = e.Position;
                 String selectedItem = suggestionModeDataAdapter.GetItem(e.Position);
                 if (selectedItem.Equals("StartsWith"))
@@ -213,7 +210,7 @@ namespace SampleBrowser
             autoCompleteModeLabel.Gravity = GravityFlags.Left;
 
             //autoCompleteModeSpinner
-            autoCompleteModeSpinner = new Spinner(context,SpinnerMode.Dialog);
+            autoCompleteModeSpinner = new Spinner(context, SpinnerMode.Dialog);
             autoCompleteModeSpinner.LayoutParameters = new FrameLayout.LayoutParams((int)(totalWidth * 0.33), ViewGroup.LayoutParams.WrapContent, GravityFlags.Center);
             List<String> autoCompleteModeList = new List<String>();
             autoCompleteModeList.Add("Suggest");
@@ -227,7 +224,8 @@ namespace SampleBrowser
             autoCompleteModeSpinner.SetSelection(autoCompletModePosition);
 
             //autoCompleteModeSpinner ItemSelected Listener
-            autoCompleteModeSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) => {
+            autoCompleteModeSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) =>
+            {
                 autoCompletModePosition = e.Position;
                 String selectedItem = autoCompleteModeDataAdapter.GetItem(e.Position);
                 if (selectedItem.Equals("Suggest"))
@@ -276,17 +274,17 @@ namespace SampleBrowser
             minPrefixCharacterText.InputType = Android.Text.InputTypes.ClassPhone;
             minPrefixCharacterText.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) =>
             {
-				try
-				{
-					if (minPrefixCharacterText.Text.Length > 0)
-						minimum = Convert.ToInt32(e.Text.ToString());
-					else
-						minimum = 1;
-				}
-				catch 
-                { 
-				
-				}
+                try
+                {
+                    if (minPrefixCharacterText.Text.Length > 0)
+                        minimum = Convert.ToInt32(e.Text.ToString());
+                    else
+                        minimum = 1;
+                }
+                catch
+                {
+
+                }
                 minPrefixCharPosition = minimum;
                 ApplyChanges();
             };
@@ -321,17 +319,17 @@ namespace SampleBrowser
             maxDropDownHeightText.InputType = Android.Text.InputTypes.ClassPhone;
             maxDropDownHeightText.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) =>
             {
-				try
-				{
-					if (maxDropDownHeightText.Text.Length > 0)
-						maximum = Convert.ToInt32(e.Text.ToString());
-					else
-						maximum = 150;
-				}
-				catch
-                { 
-				
-				}
+                try
+                {
+                    if (maxDropDownHeightText.Text.Length > 0)
+                        maximum = Convert.ToInt32(e.Text.ToString());
+                    else
+                        maximum = 150;
+                }
+                catch
+                {
+
+                }
 
                 maxDropDownPosition = maximum;
                 ApplyChanges();
@@ -372,17 +370,17 @@ namespace SampleBrowser
             //popUpDelayText TextChanged Listener
             popUpDelayText.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) =>
             {
-				try
-				{
-					if (popUpDelayText.Text.Length > 0)
-						popupdelay = Convert.ToInt32(e.Text.ToString());
-					else
-						popupdelay = 100;
-				}
-				catch
-                { 
-				
-				}
+                try
+                {
+                    if (popUpDelayText.Text.Length > 0)
+                        popupdelay = Convert.ToInt32(e.Text.ToString());
+                    else
+                        popupdelay = 100;
+                }
+                catch
+                {
+
+                }
 
                 popUpDelayPosition = popupdelay;
                 ApplyChanges();
@@ -407,7 +405,7 @@ namespace SampleBrowser
         }
         public override View GetSampleContent(Android.Content.Context con1)
         {
-            con = context=con1;
+            con = context = con1;
             InitialMethod();
             ResultsLayout();
             ExperienceLayout();
@@ -422,8 +420,8 @@ namespace SampleBrowser
             countryNameAutoComplete.MaximumDropDownHeight = 150;
             countryNameAutoComplete.Watermark = "Enter a country name";
             countryNameAutoComplete.GetAutoEditText().FocusChange += AutoEditText_FocusChange;
-			countryNameAutoComplete.TextHighlightMode = OccurrenceMode.FirstOccurrence;
-			countryNameAutoComplete.HighlightedTextColor = Color.Blue;
+            countryNameAutoComplete.TextHighlightMode = OccurrenceMode.FirstOccurrence;
+            countryNameAutoComplete.HighlightedTextColor = Color.Blue;
 
             //jobFieldAutoComplete
             ArrayAdapter<String> titleAdapter = new ArrayAdapter<String>(con,
@@ -436,8 +434,8 @@ namespace SampleBrowser
             jobFieldAutoComplete.GetAutoEditText().FocusChange += AutoEditText_FocusChange1;
             countryNameAutoComplete.GetAutoEditText().SetTextSize(ComplexUnitType.Sp, 20);
             jobFieldAutoComplete.GetAutoEditText().SetTextSize(ComplexUnitType.Sp, 20);
-			jobFieldAutoComplete.TextHighlightMode = OccurrenceMode.FirstOccurrence;
-			jobFieldAutoComplete.HighlightedTextColor = Color.Blue;
+            jobFieldAutoComplete.TextHighlightMode = OccurrenceMode.FirstOccurrence;
+            jobFieldAutoComplete.HighlightedTextColor = Color.Blue;
 
             SearchButtonLayout();
             MainLayout();
@@ -455,7 +453,7 @@ namespace SampleBrowser
             {
                 actionBarHeight = TypedValue.ComplexToDimensionPixelSize(tv.Data, con.Resources.DisplayMetrics);
             }
-            
+
             navigationBarHeight = getNavigationBarHeight(con);
 
             totalHeight = totalHeight - navigationBarHeight - actionBarHeight;
@@ -479,7 +477,7 @@ namespace SampleBrowser
         private void ExperienceLayout()
         {
             //experienceSpinner
-            experienceSpinner = new Spinner(con,SpinnerMode.Dialog);
+            experienceSpinner = new Spinner(con, SpinnerMode.Dialog);
             experienceSpinner.DropDownWidth = 500;
             experienceSpinner.SetBackgroundColor(Color.Rgb(92, 178, 224));
 
@@ -544,7 +542,8 @@ namespace SampleBrowser
             searchButton.SetTextColor(Color.White);
             searchButton.SetBackgroundColor(Color.Rgb(72, 178, 224));
 
-            searchButton.Click += (object sender, EventArgs e) => {
+            searchButton.Click += (object sender, EventArgs e) =>
+            {
                 GetResult();
                 resultsDialog.SetMessage(jobNumber + " Jobs Found");
                 resultsDialog.Create().Show();
@@ -552,7 +551,7 @@ namespace SampleBrowser
         }
 
         private void MainLayout()
-        {           
+        {
             ArrayAdapter<String> experienceAdapter = new ArrayAdapter<String>(con,
                Android.Resource.Layout.SimpleListItem1, Experience);
             experienceSpinner.Adapter = experienceAdapter;
@@ -581,19 +580,19 @@ namespace SampleBrowser
             mainLayout.AddView(searchButton);
             mainLayout.Touch += (object sender, View.TouchEventArgs e) =>
             {
-				if (countryNameAutoComplete.IsFocused || jobFieldAutoComplete.IsFocused)
-				{
-					Rect outRect = new Rect();
-					countryNameAutoComplete.GetGlobalVisibleRect(outRect);
-					jobFieldAutoComplete.GetGlobalVisibleRect(outRect);
+                if (countryNameAutoComplete.IsFocused || jobFieldAutoComplete.IsFocused)
+                {
+                    Rect outRect = new Rect();
+                    countryNameAutoComplete.GetGlobalVisibleRect(outRect);
+                    jobFieldAutoComplete.GetGlobalVisibleRect(outRect);
 
-					if (!outRect.Contains((int)e.Event.RawX, (int)e.Event.RawY))
-					{
-						countryNameAutoComplete.ClearFocus();
-						jobFieldAutoComplete.ClearFocus();
+                    if (!outRect.Contains((int)e.Event.RawX, (int)e.Event.RawY))
+                    {
+                        countryNameAutoComplete.ClearFocus();
+                        jobFieldAutoComplete.ClearFocus();
 
-					}
-				}
+                    }
+                }
                 hideSoftKeyboard((Activity)con);
             };
 
@@ -631,7 +630,7 @@ namespace SampleBrowser
                 jobFieldAutoComplete.ClearFocus();
                 scrollView.LayoutParameters = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MatchParent, (int)(totalHeight * 0.4), GravityFlags.Bottom | GravityFlags.CenterHorizontal);
 
-				propertyFrameLayout.AddView(GetPropertyLayout(con));
+                propertyFrameLayout.AddView(GetPropertyLayout(con));
             };
 
             //scrollView
@@ -650,7 +649,7 @@ namespace SampleBrowser
                 propertyFrameLayout.RemoveAllViews();
                 buttomButtonLayout.RemoveAllViews();
                 scrollView.LayoutParameters = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MatchParent, (int)(totalHeight * 0.1), GravityFlags.Bottom | GravityFlags.CenterHorizontal);
-				buttomButtonLayout.AddView(propertyButton);
+                buttomButtonLayout.AddView(propertyButton);
             }
         }
 
@@ -661,7 +660,7 @@ namespace SampleBrowser
                 propertyFrameLayout.RemoveAllViews();
                 buttomButtonLayout.RemoveAllViews();
                 scrollView.LayoutParameters = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MatchParent, (int)(totalHeight * 0.1), GravityFlags.Bottom | GravityFlags.CenterHorizontal);
-				buttomButtonLayout.AddView(propertyButton);
+                buttomButtonLayout.AddView(propertyButton);
             }
         }
 

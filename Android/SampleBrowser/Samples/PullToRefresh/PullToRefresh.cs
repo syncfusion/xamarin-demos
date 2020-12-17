@@ -8,7 +8,6 @@
 using Android.Text.Style;
 using System;
 using Android.Graphics;
-using Org.Json;
 using Android.Widget;
 using Android.Views;
 using Android.Content;
@@ -18,11 +17,10 @@ using Java.Text;
 using Java.Util;
 using Android.Text;
 using Android.OS;
-using System.Threading.Tasks;
 
 namespace SampleBrowser
 {
-	public class PullToRefreshDemo: SamplePage
+    public class PullToRefreshDemo: SamplePage
 	{
 		SfPullToRefresh pull;
 		LinearLayout linearLayout,linearLayoutChild, selectedLayout;

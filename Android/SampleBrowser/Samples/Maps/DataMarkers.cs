@@ -5,7 +5,6 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using System;
 using Com.Syncfusion.Maps;
 using Com.Syncfusion.Sfbusyindicator;
 using Com.Syncfusion.Sfbusyindicator.Enums;
@@ -18,7 +17,7 @@ using Android.Views;
 
 namespace SampleBrowser
 {
-	public class DataMarkers : SamplePage
+    public class DataMarkers : SamplePage
 	{
 		public DataMarkers ()
 		{

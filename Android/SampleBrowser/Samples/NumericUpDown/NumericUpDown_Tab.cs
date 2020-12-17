@@ -1,4 +1,4 @@
-#region Copyright Syncfusion Inc. 2001-2016.
+﻿#region Copyright Syncfusion Inc. 2001-2016.
 // Copyright Syncfusion Inc. 2001-2016. All rights reserved.
 // Use of this code is subject to the terms of our license.
 // A copy of the current license can be obtained at any time by e-mailing
@@ -11,46 +11,39 @@ using Com.Syncfusion.Numericupdown;
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
-using Com.Syncfusion.Numerictextbox;
 using Android.Graphics;
 using Android.Views.InputMethods;
-using Android.Text;
-using Android.Text.Style;
 
 namespace SampleBrowser
 {
     public class NumericUpDown_Tab : SamplePage
     {
-       /*********************************
-        **Local Variable Inizialisation**
-        *********************************/
+        /*********************************
+         **Local Variable Initialization**
+         *********************************/
         SfNumericUpDown adultNumericUpDown, infantsNumericUpDown;
         Button propertyButton;
         FrameLayout propertyFrameLayout, buttomButtonLayout, topProperty, frame;
         double actionBarHeight, navigationBarHeight, totalHeight, totalWidth;
         double minimumValue = 0, maximumValue = 100, minimumPosition = 0, maximumPosition = 100;
         Context con, context;
-        int width,spinButtonPosition = 0;
+        int width, spinButtonPosition = 0;
         Boolean maxNegative, minNegative;
         bool autoReversePosition = false, autoReverse = false;
         float density;
-        LinearLayout mainLayout, proprtyOptionsLayout, propertylayout;     
+        LinearLayout mainLayout, proprtyOptionsLayout, propertylayout;
         ArrayAdapter<String> spinButtonDataAdapter;
-        Spinner spinButtonSpinner;      
+        Spinner spinButtonSpinner;
         EditText minimumText, maximumText;
         SpinButtonAlignment spinButtonAlignment = SpinButtonAlignment.Right;
         TextView adultText, infantsText;
-		GravityFlags gravity = GravityFlags.CenterVertical;
+        GravityFlags gravity = GravityFlags.CenterVertical;
         public override View GetSampleContent(Context con1)
         {
             con = con1;
@@ -59,14 +52,14 @@ namespace SampleBrowser
             //adultNumericUpDown
             AdultLayout();
             int numerHeight = (int)(density * 55);
-			if (density >= 3)
-			{
-				numerHeight = (int)(density * 65);
-			}
+            if (density >= 3)
+            {
+                numerHeight = (int)(density * 65);
+            }
             adultNumericUpDown = new SfNumericUpDown(con);
             adultNumericUpDown.FontSize = 18;
-			adultNumericUpDown.TextGravity = GravityFlags.CenterVertical;
-			adultNumericUpDown.LayoutParameters = new ViewGroup.LayoutParams((int)(width * 0.7), numerHeight);
+            adultNumericUpDown.TextGravity = GravityFlags.CenterVertical;
+            adultNumericUpDown.LayoutParameters = new ViewGroup.LayoutParams((int)(width * 0.7), numerHeight);
             adultNumericUpDown.Minimum = 0;
             adultNumericUpDown.Maximum = 100;
             adultNumericUpDown.Value = 5;
@@ -81,8 +74,8 @@ namespace SampleBrowser
             infantsTextLayout();
             infantsNumericUpDown = new SfNumericUpDown(con);
             infantsNumericUpDown.FontSize = 18;
-			infantsNumericUpDown.TextGravity = GravityFlags.CenterVertical;
-			infantsNumericUpDown.LayoutParameters = new ViewGroup.LayoutParams((int)(width * 0.7), numerHeight);
+            infantsNumericUpDown.TextGravity = GravityFlags.CenterVertical;
+            infantsNumericUpDown.LayoutParameters = new ViewGroup.LayoutParams((int)(width * 0.7), numerHeight);
             infantsNumericUpDown.Minimum = 0;
             infantsNumericUpDown.Maximum = 100;
             infantsNumericUpDown.Value = 2;
@@ -95,7 +88,7 @@ namespace SampleBrowser
             OptionLayout();
             return frame;
         }
-      
+
         private void InitialMethod()
         {
             //frame
@@ -104,10 +97,10 @@ namespace SampleBrowser
             totalWidth = con.Resources.DisplayMetrics.WidthPixels;
 
             TypedValue tv = new TypedValue();
-			if (con.Theme.ResolveAttribute(Android.Resource.Attribute.ActionBarSize, tv, true))
-			{
-				actionBarHeight = TypedValue.ComplexToDimensionPixelSize(tv.Data, con.Resources.DisplayMetrics);
-			}
+            if (con.Theme.ResolveAttribute(Android.Resource.Attribute.ActionBarSize, tv, true))
+            {
+                actionBarHeight = TypedValue.ComplexToDimensionPixelSize(tv.Data, con.Resources.DisplayMetrics);
+            }
             navigationBarHeight = getNavigationBarHeight(con);
             totalHeight = totalHeight - navigationBarHeight - actionBarHeight;
             width = con.Resources.DisplayMetrics.WidthPixels - 40;
@@ -118,7 +111,7 @@ namespace SampleBrowser
             mainFrameLayout.SetPadding(10, 10, 10, 10);
             FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.MatchParent, GravityFlags.FillVertical);
             mainFrameLayout.LayoutParameters = layoutParams;
-           
+
             //mainLayout
             mainLayout = new LinearLayout(con);
             mainLayout.LayoutParameters = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent);
@@ -126,7 +119,7 @@ namespace SampleBrowser
             mainLayout.Orientation = Orientation.Vertical;
             mainLayout.SetBackgroundColor(Color.White);
         }
-        
+
         private void AdultLayout()
         {
             //Adult
@@ -154,7 +147,8 @@ namespace SampleBrowser
         {
             mainLayout.AddView(infantsNumericUpDown);
             //Touch Event
-            mainLayout.Touch += (object sender, View.TouchEventArgs e) => {
+            mainLayout.Touch += (object sender, View.TouchEventArgs e) =>
+            {
                 if (adultNumericUpDown.IsFocused || infantsNumericUpDown.IsFocused)
                 {
                     Rect outRect = new Rect();
@@ -240,7 +234,7 @@ namespace SampleBrowser
                 buttomButtonLayout.AddView(propertyButton);
             }
         }
-      
+
         //Apply Changes Method
         public void ApplyChanges()
         {
@@ -249,21 +243,21 @@ namespace SampleBrowser
             adultNumericUpDown.Maximum = maximumValue;
             adultNumericUpDown.AutoReverse = autoReverse;
             adultNumericUpDown.SpinButtonAlignment = spinButtonAlignment;
-			adultNumericUpDown.TextGravity = gravity;
+            adultNumericUpDown.TextGravity = gravity;
 
             //infantsNumericUpDown
             infantsNumericUpDown.Minimum = minimumValue;
             infantsNumericUpDown.Maximum = maximumValue;
             infantsNumericUpDown.AutoReverse = autoReverse;
             infantsNumericUpDown.SpinButtonAlignment = spinButtonAlignment;
-			infantsNumericUpDown.TextGravity = gravity;
+            infantsNumericUpDown.TextGravity = gravity;
 
             maxNegative = minNegative = false;
         }
-     
+
         public View GetPropertyLayout(Context context1)
         {
-            context = context1;           
+            context = context1;
             width = (context.Resources.DisplayMetrics.WidthPixels) / 2;
             totalWidth = (context.Resources.DisplayMetrics.WidthPixels);
 
@@ -274,9 +268,9 @@ namespace SampleBrowser
             AutoReverseLayout();
 
             return propertylayout;
-        }    
+        }
         private void OptionViewLayout()
-        {          
+        {
             propertylayout = new LinearLayout(context);
             propertylayout.Orientation = Orientation.Vertical;
 
@@ -421,7 +415,7 @@ namespace SampleBrowser
             maximumLayout.AddView(maximumLabel);
             maximumLayout.AddView(maximumText);
             proprtyOptionsLayout.AddView(maximumLayout);
-            
+
             //spaceText
             TextView spaceText3 = new TextView(context);
             spaceText3.LayoutParameters = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MatchParent, 40, GravityFlags.Center);
@@ -435,7 +429,7 @@ namespace SampleBrowser
             spinButtonText.LayoutParameters = new FrameLayout.LayoutParams((int)(totalWidth * 0.33), ViewGroup.LayoutParams.WrapContent, GravityFlags.Center);
             spinButtonText.TextSize = 15;
             spinButtonText.Text = "SpinButtonAlignment";
-        
+
             //spinButtonList
             List<String> spinButtonList = new List<String>();
             spinButtonList.Add("Right");
@@ -446,27 +440,28 @@ namespace SampleBrowser
             spinButtonDataAdapter.SetDropDownViewResource
             (Android.Resource.Layout.SimpleSpinnerDropDownItem);
             //spinButtonSpinner
-            spinButtonSpinner = new Spinner(context,SpinnerMode.Dialog);
+            spinButtonSpinner = new Spinner(context, SpinnerMode.Dialog);
             spinButtonSpinner.LayoutParameters = new FrameLayout.LayoutParams((int)(totalWidth * 0.33), ViewGroup.LayoutParams.WrapContent, GravityFlags.Center);
             spinButtonSpinner.Adapter = spinButtonDataAdapter;
             spinButtonSpinner.SetSelection(spinButtonPosition);
-            spinButtonSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) => {
+            spinButtonSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) =>
+            {
                 String selectedItem = spinButtonDataAdapter.GetItem(e.Position);
                 spinButtonPosition = e.Position;
                 if (selectedItem.Equals("Right"))
                 {
                     spinButtonAlignment = SpinButtonAlignment.Right;
-					gravity = GravityFlags.CenterVertical;
+                    gravity = GravityFlags.CenterVertical;
                 }
                 if (selectedItem.Equals("Left"))
                 {
                     spinButtonAlignment = SpinButtonAlignment.Left;
-					gravity = GravityFlags.End | GravityFlags.CenterVertical;
+                    gravity = GravityFlags.End | GravityFlags.CenterVertical;
                 }
                 if (selectedItem.Equals("Both"))
                 {
                     spinButtonAlignment = SpinButtonAlignment.Both;
-					gravity = GravityFlags.Center;
+                    gravity = GravityFlags.Center;
                 }
                 ApplyChanges();
             };
@@ -477,7 +472,7 @@ namespace SampleBrowser
             spinButtonLayout.AddView(spinButtonText);
             spinButtonLayout.AddView(spinButtonSpinner);
             proprtyOptionsLayout.AddView(spinButtonLayout);
-            
+
             //spaceText
             TextView spaceText4 = new TextView(context);
             spaceText4.LayoutParameters = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MatchParent, 40, GravityFlags.Center);
@@ -494,7 +489,8 @@ namespace SampleBrowser
             //autoReverseCheckBox
             Switch autoReverseCheckBox = new Switch(context);
             autoReverseCheckBox.Checked = autoReversePosition;
-            autoReverseCheckBox.CheckedChange += (object send, CompoundButton.CheckedChangeEventArgs eve) => {
+            autoReverseCheckBox.CheckedChange += (object send, CompoundButton.CheckedChangeEventArgs eve) =>
+            {
                 if (!eve.IsChecked)
                     autoReverse = false;
                 else
@@ -503,7 +499,7 @@ namespace SampleBrowser
                 autoReversePosition = autoReverse;
                 ApplyChanges();
             };
-            
+
             //spaceText
             TextView spaceText7 = new TextView(context);
             spaceText7.LayoutParameters = new FrameLayout.LayoutParams((int)(totalWidth * 0.167), ViewGroup.LayoutParams.WrapContent, GravityFlags.Center);
@@ -515,7 +511,7 @@ namespace SampleBrowser
             autoReverseLayout.AddView(autoReverseCheckBox);
             autoReverseLayout.AddView(spaceText7);
             proprtyOptionsLayout.AddView(autoReverseLayout);
-            
+
             //spaceText
             TextView spaceText5 = new TextView(context);
             spaceText5.LayoutParameters = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MatchParent, 40, GravityFlags.Center);

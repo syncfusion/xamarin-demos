@@ -5,14 +5,12 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using System;
 using System.Collections.Generic;
 using Android.Content;
 using Android.Graphics;
 using Android.Views;
 using Android.Widget;
 using Com.Syncfusion.Charts;
-using Java.Lang;
 using System.Collections.ObjectModel;
 
 namespace SampleBrowser

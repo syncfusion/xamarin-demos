@@ -8,11 +8,7 @@
 using Syncfusion.XlsIO;
 using Syncfusion.XlsIORenderer;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using COLOR = Syncfusion.Drawing;
 using System.IO;
 using Android.Content;
 using Android.Views;

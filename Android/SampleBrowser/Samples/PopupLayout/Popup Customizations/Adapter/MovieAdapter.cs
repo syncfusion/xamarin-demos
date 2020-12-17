@@ -7,20 +7,12 @@
 #endregion
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Syncfusion.Android.PopupLayout;
 using Android.Graphics;
 using Android.Content.Res;
-using System.Threading.Tasks;
-using static Android.Views.View;
 using Android.Util;
 
 namespace SampleBrowser

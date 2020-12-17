@@ -5,22 +5,16 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using Android.App;
 using Android.Content;
 using Android.Graphics;
-using Android.OS;
 using Android.Views;
 using Android.Widget;
-using Com.Syncfusion.Charts;
-using Com.Syncfusion.Charts.Enums;
 using Syncfusion.SfSparkline.Android;
-using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 
 namespace SampleBrowser
 {
-	public class SparkLine : SamplePage
+    public class SparkLine : SamplePage
 	{
 		SfAreaSparkline areaSparLine;
 		SfLineSparkline lineSparkLine;

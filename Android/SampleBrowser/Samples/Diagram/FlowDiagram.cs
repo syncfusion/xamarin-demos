@@ -12,7 +12,6 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Syncfusion.SfDiagram.Android;
-using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 

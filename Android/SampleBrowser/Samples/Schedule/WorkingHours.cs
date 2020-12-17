@@ -10,15 +10,10 @@ using System;
 using Android.Content;
 using Android.Views;
 using Android.Widget;
-using Com.Syncfusion.Sfrangeslider;
 using System.Collections.Generic;
 using Java.Util;
 using Android.Graphics;
-using Java.Text;
-using Android.App;
-using Android.OS;
 using Com.Syncfusion.Schedule;
-using System.Collections.ObjectModel;
 using Com.Syncfusion.Schedule.Enums;
 
 namespace SampleBrowser

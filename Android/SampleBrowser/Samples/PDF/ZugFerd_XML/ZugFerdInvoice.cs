@@ -7,24 +7,9 @@
 #endregion
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.IO;
 using System.Xml;
-using System.Xml.Linq;
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using Syncfusion.Pdf.Grid;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Tables;
-using Syncfusion.Pdf;
-using Syncfusion.Drawing;
-using Syncfusion.Pdf.Interactive;
-using System.Reflection;
 
 namespace Syncfusion.ZugFerd
 {

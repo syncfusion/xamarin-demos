@@ -5,14 +5,13 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using System;
 using Syncfusion.SfDataGrid;
 using Android.Views;
 using System.Globalization;
 
 namespace SampleBrowser
 {
-	public class GridGettingStarted:SamplePage
+    public class GridGettingStarted:SamplePage
 	{
 		SfDataGrid sfGrid;
 		GettingStartedViewModel viewModel;

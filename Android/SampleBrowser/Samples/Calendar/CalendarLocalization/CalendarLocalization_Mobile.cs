@@ -1,35 +1,25 @@
-#region Copyright Syncfusion Inc. 2001-2016.
+﻿#region Copyright Syncfusion Inc. 2001-2016.
 // Copyright Syncfusion Inc. 2001-2016. All rights reserved.
 // Use of this code is subject to the terms of our license.
 // A copy of the current license can be obtained at any time by e-mailing
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Util;
+using Android.Graphics;
 using Android.Views;
 using Android.Widget;
-
-using Java.Util;
 using Com.Syncfusion.Calendar;
 using Com.Syncfusion.Calendar.Enums;
-using Com.Syncfusion.Navigationdrawer;
-using Android.Graphics;
+using System;
+using System.Collections.Generic;
 
 namespace SampleBrowser
 {
     public class CalendarLocalization_Mobile : IDisposable
     {
         /*********************************
-         **Local Variable Inizialisation**
+         **Local Variable Initialization**
          *********************************/
         private Java.Util.Locale localinfo = new Java.Util.Locale("zn", "CH");
         private ArrayAdapter<String> dataAdapter;
@@ -45,18 +35,18 @@ namespace SampleBrowser
 
         public View GetSampleContent(Context context)
         {
-           /************
-            **Calendar**
-            ************/        
+            /************
+             **Calendar**
+             ************/
             calendar = new SfCalendar(context);
             calendar.ViewMode = ViewMode.MonthView;
             calendar.ShowEventsInline = false;
-			calendar.HeaderHeight = 100;
+            calendar.HeaderHeight = 100;
             calendar.Locale = new Java.Util.Locale("zh", "CN");
             MonthViewLabelSetting labelSettings = new MonthViewLabelSetting();
-			labelSettings.DateLabelSize = 14;
-			MonthViewSettings monthViewSettings = new MonthViewSettings();
-			monthViewSettings.MonthViewLabelSetting = labelSettings;
+            labelSettings.DateLabelSize = 14;
+            MonthViewSettings monthViewSettings = new MonthViewSettings();
+            monthViewSettings.MonthViewLabelSetting = labelSettings;
             monthViewSettings.SelectedDayTextColor = Color.Black;
             monthViewSettings.TodayTextColor = Color.ParseColor("#1B79D6");
             monthViewSettings.InlineBackgroundColor = Color.ParseColor("#E4E8ED");
@@ -83,13 +73,13 @@ namespace SampleBrowser
             propertylayout.Orientation = Orientation.Vertical;
             propertylayout.AddView(culturetxt);
             propertylayout.AddView(cultureSpinner);
-           
+
             // propertylayout.AddView(separate, layoutParams1);
             propertylayout.SetPadding(20, 10, 10, 10);
 
             return propertylayout;
         }
-       
+
         private void CultureLayout()
         {
             /***********
@@ -147,10 +137,10 @@ namespace SampleBrowser
             layoutParams1 = new LinearLayout.LayoutParams(width * 2, 5);
             layoutParams1.SetMargins(0, 20, 0, 0);
         }
-        
-       /************************
-        **Apply Changes Method**
-        ************************/
+
+        /************************
+         **Apply Changes Method**
+         ************************/
         public void OnApplyChanges()
         {
             calendar.Locale = localinfo;

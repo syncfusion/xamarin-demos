@@ -7,24 +7,12 @@
 #endregion
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
-using Syncfusion.OfficeChart;
-using Syncfusion.DocIORenderer;
-using Syncfusion.Pdf;
-using Syncfusion.Drawing;
 using System.IO;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using Android.Content;
 using Android.Views;
 using Android.Widget;
-using Android.Graphics;
-using Android.Webkit;
-using Android.App;
-using Android.OS;
 
 namespace SampleBrowser
 {

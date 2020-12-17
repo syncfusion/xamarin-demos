@@ -6,21 +6,10 @@
 // applicable laws. 
 #endregion
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content.Res;
-using Android.OS;
-using Android.Runtime;
-using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Syncfusion.Android.PopupLayout;
 using Syncfusion.SfDataGrid;
-using Android.Support.V7.Widget;
-using System.Drawing;
 using Android.Content;
 using static Android.App.ActionBar;
 using System.ComponentModel;

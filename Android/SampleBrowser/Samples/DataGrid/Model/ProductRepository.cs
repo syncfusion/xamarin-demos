@@ -6,12 +6,11 @@
 // applicable laws. 
 #endregion
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 namespace SampleBrowser
 {
-	public class ProductRepository
+    public class ProductRepository
 	{
 		public ProductRepository ()
 		{

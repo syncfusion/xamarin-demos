@@ -5,11 +5,8 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using System;
 using Android.Views;
-using Android.Widget;
 using Syncfusion.Android.TreeView;
-using Syncfusion.TreeView.Engine;
 
 namespace SampleBrowser
 {

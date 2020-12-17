@@ -7,17 +7,9 @@
 #endregion
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Com.Syncfusion.Navigationdrawer;
-
-using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Com.Syncfusion.Charts;
-using Com.Syncfusion.Charts.Enums;
 using Android.Widget;
 using Android.Graphics;
 

@@ -5,7 +5,6 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using System;
 using Android.App;
 using Android.Content;
 using Android.Widget;
@@ -14,14 +13,13 @@ using System.Xml;
 using System.Collections.Generic;
 using Android.Support.V4.Widget;
 using Android.Support.V4.View;
-using Android.Telephony;
 using Android.Content.PM;
 using Android.Content.Res;
 using System.Linq;
 
 namespace SampleBrowser
 {
-	[Activity(Label = "Essential Studio", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/PropertyApp", Icon = "@drawable/icon")]
+    [Activity(Label = "Essential Studio", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/PropertyApp", Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
         #region fields

@@ -10,18 +10,13 @@ using Android.Widget;
 using Android.Views;
 using Android.Content;
 using Android.Graphics;
-using Android.App;
-using Android.OS;
-using System.Collections.ObjectModel;
-using System.Reflection.Emit;
-using Android.Media;
 using Com.Syncfusion.Schedule;
 using Com.Syncfusion.Schedule.Enums;
 using Android.Util;
 
 namespace SampleBrowser
 {
-	public class ScheduleViewOptionLayout : IDisposable
+    public class ScheduleViewOptionLayout : IDisposable
 	{
 		private Context con;
 		private LinearLayout mainLayout, borderLayout;

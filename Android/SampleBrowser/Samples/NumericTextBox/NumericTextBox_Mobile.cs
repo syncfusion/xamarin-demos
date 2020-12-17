@@ -1,4 +1,4 @@
-#region Copyright Syncfusion Inc. 2001-2016.
+﻿#region Copyright Syncfusion Inc. 2001-2016.
 // Copyright Syncfusion Inc. 2001-2016. All rights reserved.
 // Use of this code is subject to the terms of our license.
 // A copy of the current license can be obtained at any time by e-mailing
@@ -6,38 +6,32 @@
 // applicable laws. 
 #endregion
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Util;
-using Android.Views;
-using Android.Widget;
-using Com.Syncfusion.Numerictextbox;
 using Android.Graphics;
-using Android.Views.InputMethods;
 using Android.Text;
 using Android.Text.Style;
+using Android.Views;
+using Android.Views.InputMethods;
+using Android.Widget;
+using Com.Syncfusion.Numerictextbox;
+using System;
+using System.Collections.Generic;
 
 namespace SampleBrowser
 {
     public class NumericTextBox_Mobile
     {
-       /*********************************
-        **Local Variable Inizialisation**
-        *********************************/
+        /*********************************
+         **Local Variable Initialization**
+         *********************************/
         TextView simpleInterestCalculatorLabel, sILabelSpacing, findingSILabel, formulaLabel;
         TextView formulaLabelSpacing, principalLabel, principalStackSpacing, interestLabel;
         TextView InterestcalStackSpacing, period, outputLabel, outputStackSpacing;
         SfNumericTextBox principalAmountNumericTextBox, outputNumberTextBox;
         SfNumericTextBox interestNumericTextBox, periodValueNumericTextBox;
         LinearLayout propertylayout, allowNullLayout;
-        ArrayAdapter<String> cultureDataAdapter;     
+        ArrayAdapter<String> cultureDataAdapter;
         Java.Util.Locale localinfo;
         Spinner cultureSpinner;
         int numerHeight, width;
@@ -45,7 +39,7 @@ namespace SampleBrowser
 
         public View GetSampleContent(Context con)
         {
-            
+
 
             SamplePageContent(con);
             FrameLayout mainFrameLayout = new FrameLayout(con);
@@ -63,7 +57,7 @@ namespace SampleBrowser
             var culture = new Java.Util.Locale("en", "US");
             principalAmountNumericTextBox.CultureInfo = culture;
             principalAmountNumericTextBox.ValueChangeMode = ValueChangeMode.OnKeyFocus;
-                               
+
             //InterestNumericTextBox           
             interestNumericTextBox = new SfNumericTextBox(con);
             interestNumericTextBox.FormatString = "P";
@@ -71,7 +65,7 @@ namespace SampleBrowser
             interestNumericTextBox.PercentDisplayMode = PercentDisplayMode.Compute;
             interestNumericTextBox.MaximumNumberDecimalDigits = 2;
             interestNumericTextBox.ValueChangeMode = ValueChangeMode.OnKeyFocus;
-            interestNumericTextBox.LayoutParameters = new ViewGroup.LayoutParams(width / 2, numerHeight);          
+            interestNumericTextBox.LayoutParameters = new ViewGroup.LayoutParams(width / 2, numerHeight);
             interestNumericTextBox.Watermark = "Rate of Interest";
             interestNumericTextBox.AllowNull = true;
             interestNumericTextBox.CultureInfo = culture;
@@ -81,12 +75,12 @@ namespace SampleBrowser
             periodValueNumericTextBox.FormatString = " years";
             periodValueNumericTextBox.Value = 20;
             periodValueNumericTextBox.MaximumNumberDecimalDigits = 0;
-            periodValueNumericTextBox.LayoutParameters = new ViewGroup.LayoutParams(width / 2, numerHeight);           
+            periodValueNumericTextBox.LayoutParameters = new ViewGroup.LayoutParams(width / 2, numerHeight);
             periodValueNumericTextBox.Watermark = "Period (in years)";
             periodValueNumericTextBox.ValueChangeMode = ValueChangeMode.OnKeyFocus;
             periodValueNumericTextBox.CultureInfo = culture;
             periodValueNumericTextBox.AllowNull = true;
-          
+
             //OutputNumberTextBox
             outputNumberTextBox = new SfNumericTextBox(con);
             outputNumberTextBox.FormatString = "c";
@@ -99,24 +93,27 @@ namespace SampleBrowser
             outputNumberTextBox.Enabled = false;
             outputNumberTextBox.LayoutParameters = new ViewGroup.LayoutParams(width / 2, numerHeight);
             outputNumberTextBox.ValueChangeMode = ValueChangeMode.OnLostFocus;
-          
+
             //Numerictextbox Value Changed Listener
-            principalAmountNumericTextBox.ValueChanged += (object sender, ValueChangedEventArgs e) => {
-				if (e.Value != null && periodValueNumericTextBox.Value != null && interestNumericTextBox.Value != null)
-					outputNumberTextBox.Value = Double.Parse(e.Value.ToString()) * Double.Parse(periodValueNumericTextBox.Value.ToString()) * Double.Parse(interestNumericTextBox.Value.ToString());
+            principalAmountNumericTextBox.ValueChanged += (object sender, ValueChangedEventArgs e) =>
+            {
+                if (e.Value != null && periodValueNumericTextBox.Value != null && interestNumericTextBox.Value != null)
+                    outputNumberTextBox.Value = Double.Parse(e.Value.ToString()) * Double.Parse(periodValueNumericTextBox.Value.ToString()) * Double.Parse(interestNumericTextBox.Value.ToString());
 
             };
-            periodValueNumericTextBox.ValueChanged += (object sender, ValueChangedEventArgs e) => {
-				if (e.Value != null && principalAmountNumericTextBox.Value != null && interestNumericTextBox.Value != null)
-					outputNumberTextBox.Value = Double.Parse(e.Value.ToString()) * Double.Parse(principalAmountNumericTextBox.Value.ToString()) * Double.Parse(interestNumericTextBox.Value.ToString());
+            periodValueNumericTextBox.ValueChanged += (object sender, ValueChangedEventArgs e) =>
+            {
+                if (e.Value != null && principalAmountNumericTextBox.Value != null && interestNumericTextBox.Value != null)
+                    outputNumberTextBox.Value = Double.Parse(e.Value.ToString()) * Double.Parse(principalAmountNumericTextBox.Value.ToString()) * Double.Parse(interestNumericTextBox.Value.ToString());
 
             };
-            interestNumericTextBox.ValueChanged += (object sender, ValueChangedEventArgs e) => {
-				if (e.Value != null && principalAmountNumericTextBox.Value != null && periodValueNumericTextBox.Value != null)
-					outputNumberTextBox.Value = Double.Parse(e.Value.ToString()) * Double.Parse(principalAmountNumericTextBox.Value.ToString()) * Double.Parse(periodValueNumericTextBox.Value.ToString());
+            interestNumericTextBox.ValueChanged += (object sender, ValueChangedEventArgs e) =>
+            {
+                if (e.Value != null && principalAmountNumericTextBox.Value != null && periodValueNumericTextBox.Value != null)
+                    outputNumberTextBox.Value = Double.Parse(e.Value.ToString()) * Double.Parse(principalAmountNumericTextBox.Value.ToString()) * Double.Parse(periodValueNumericTextBox.Value.ToString());
 
             };
-           
+
             mainFrameLayout.AddView(GetView(con));
             ScrollView mainScrollView = new ScrollView(con);
             mainScrollView.AddView(mainFrameLayout);
@@ -170,7 +167,8 @@ namespace SampleBrowser
 
             mainLayout.SetPadding(20, 20, 10, 20);
             mainLayout.AddView(outputStackSpacing);
-            mainLayout.Touch += (object sender, View.TouchEventArgs e) => {
+            mainLayout.Touch += (object sender, View.TouchEventArgs e) =>
+            {
                 if (outputNumberTextBox.IsFocused || interestNumericTextBox.IsFocused || periodValueNumericTextBox.IsFocused || principalAmountNumericTextBox.IsFocused)
                 {
                     Rect outRect = new Rect();
@@ -193,18 +191,18 @@ namespace SampleBrowser
             return mainLayout;
         }
 
-        
+
         private void SamplePageContent(Context con)
         {
             numerHeight = getDimensionPixelSize(con, Resource.Dimension.numeric_txt_ht);
             width = con.Resources.DisplayMetrics.WidthPixels - 40;
-           
+
             //SimpleInterestCalculatorLabel
             simpleInterestCalculatorLabel = new TextView(con);
             simpleInterestCalculatorLabel.Text = "Simple Interest Calculator";
             simpleInterestCalculatorLabel.Gravity = GravityFlags.Center;
             simpleInterestCalculatorLabel.TextSize = 24;
-           
+
             //FindingSILabel
             findingSILabel = new TextView(con);
             findingSILabel.Text = "The formula for finding simple interest is:";
@@ -225,25 +223,25 @@ namespace SampleBrowser
             principalLabel = new TextView(con);
             principalLabel.LayoutParameters = new ViewGroup.LayoutParams(width / 2, numerHeight);
             principalLabel.Text = "Principal";
-			principalLabel.TextSize = 20;
+            principalLabel.TextSize = 20;
 
             //InterestLabel
             interestLabel = new TextView(con);
             interestLabel.LayoutParameters = new ViewGroup.LayoutParams(width / 2, numerHeight);
             interestLabel.Text = "Interest Rate";
-			interestLabel.TextSize = 20;
-           
+            interestLabel.TextSize = 20;
+
             //periodLabel
             period = new TextView(con);
             period.LayoutParameters = new ViewGroup.LayoutParams(width / 2, numerHeight);
             period.Text = "Term";
-			period.TextSize = 20;
+            period.TextSize = 20;
 
             //outputLabel
             outputLabel = new TextView(con);
             outputLabel.LayoutParameters = new ViewGroup.LayoutParams(width / 2, numerHeight);
             outputLabel.Text = "Interest";
-			outputLabel.TextSize = 20;
+            outputLabel.TextSize = 20;
             outputLabel.SetTextColor(Color.ParseColor("#66BB6A"));
 
             //SpacingLabel
@@ -266,7 +264,7 @@ namespace SampleBrowser
         }
 
         public View GetPropertyWindowLayout(Context context)
-        {          
+        {
             width = (context.Resources.DisplayMetrics.WidthPixels) / 2;
             propertylayout = new LinearLayout(context);
             propertylayout.Orientation = Orientation.Vertical;
@@ -281,7 +279,7 @@ namespace SampleBrowser
             TextView culturetxt = new TextView(context);
             culturetxt.TextSize = 20;
             culturetxt.Text = "Culture";
-         
+
             //CultureList
             List<String> cultureList = new List<String>();
             cultureList.Add("United States");
@@ -294,11 +292,12 @@ namespace SampleBrowser
             cultureDataAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
 
             //CultureSpinner
-			cultureSpinner = new Spinner(context,SpinnerMode.Dialog);
+            cultureSpinner = new Spinner(context, SpinnerMode.Dialog);
             cultureSpinner.Adapter = cultureDataAdapter;
 
             //CultureSpinner ItemSelected Listener
-            cultureSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) => {
+            cultureSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) =>
+            {
                 String selectedItem = cultureDataAdapter.GetItem(e.Position);
                 if (selectedItem.Equals("United States"))
                 {
@@ -327,11 +326,11 @@ namespace SampleBrowser
             //CultureSeparate
             SeparatorView cultureSeparate = new SeparatorView(context, width * 2);
             cultureSeparate.LayoutParameters = new ViewGroup.LayoutParams(width * 2, 5);
-           // propertylayout.AddView(cultureSeparate, cultureLayoutParams);
+            // propertylayout.AddView(cultureSeparate, cultureLayoutParams);
 
-           /*************
-            **AllowNull**
-            *************/
+            /*************
+             **AllowNull**
+             *************/
             TextView allowNullText = new TextView(context);
             allowNullText.Text = "Allow Null";
             allowNullText.Gravity = GravityFlags.Center;
@@ -340,7 +339,8 @@ namespace SampleBrowser
             //AllowNullCheckBox
             Switch allowNullCheckBox = new Switch(context);
             allowNullCheckBox.Checked = true;
-            allowNullCheckBox.CheckedChange += (object send, CompoundButton.CheckedChangeEventArgs eve) => {
+            allowNullCheckBox.CheckedChange += (object send, CompoundButton.CheckedChangeEventArgs eve) =>
+            {
                 if (!eve.IsChecked)
                     allownull = false;
                 else
@@ -353,8 +353,8 @@ namespace SampleBrowser
                 ViewGroup.LayoutParams.WrapContent, 70);
             allowNullTextLayoutParams.SetMargins(0, 10, 0, 0);
 
-			TextView textSpacing = new TextView(context);
-			propertylayout.AddView(textSpacing);
+            TextView textSpacing = new TextView(context);
+            propertylayout.AddView(textSpacing);
 
             //AllowNullLayout
             allowNullLayout = new LinearLayout(context);
@@ -363,14 +363,14 @@ namespace SampleBrowser
             allowNullLayout.Orientation = Orientation.Horizontal;
             propertylayout.AddView(allowNullLayout);
 
-			TextView textSpacing1 = new TextView(context);
-			propertylayout.AddView(textSpacing1);
+            TextView textSpacing1 = new TextView(context);
+            propertylayout.AddView(textSpacing1);
             //AllowNullSeparate
             SeparatorView allowNullSeparate = new SeparatorView(context, width * 2);
             allowNullSeparate.LayoutParameters = new ViewGroup.LayoutParams(width * 2, 5);
             LinearLayout.LayoutParams allowNullLayoutParams = new LinearLayout.LayoutParams(width * 2, 5);
             allowNullLayoutParams.SetMargins(0, 20, 15, 0);
-        //    propertylayout.AddView(allowNullSeparate, allowNullLayoutParams);
+            //    propertylayout.AddView(allowNullSeparate, allowNullLayoutParams);
             propertylayout.SetPadding(5, 0, 5, 0);
 
             return propertylayout;

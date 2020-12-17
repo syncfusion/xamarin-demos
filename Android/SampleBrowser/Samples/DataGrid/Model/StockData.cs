@@ -5,12 +5,11 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using System;
 using System.ComponentModel;
 
 namespace SampleBrowser
 {
-	public class StockData : INotifyPropertyChanged
+    public class StockData : INotifyPropertyChanged
 	{
 		#region Private Members
 

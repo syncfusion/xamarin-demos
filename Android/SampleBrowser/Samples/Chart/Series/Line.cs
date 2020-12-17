@@ -5,21 +5,14 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using System.Reflection.Emit;
-using Android.App;
 using Android.Graphics;
-using Android.OS;
 using Com.Syncfusion.Charts;
 using Android.Views;
 using Android.Content;
-using Android.Widget;
-using System.Collections.Generic;
-using System;
-using Com.Syncfusion.Charts.Enums;
 
 namespace SampleBrowser
 {
-   public class Line : SamplePage
+    public class Line : SamplePage
     {
         SfChart chart;
 

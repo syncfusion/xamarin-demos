@@ -11,7 +11,6 @@ using Android.Views;
 using Android.Widget;
 using System.Collections.Generic;
 using System.Globalization;
-using Android.Graphics;
 
 namespace SampleBrowser
 {

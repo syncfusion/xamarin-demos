@@ -12,29 +12,25 @@ using System;
 using Com.Syncfusion.Autocomplete;
 using Android.Widget;
 using Android.Views;
-using System.Runtime.Remoting.Contexts;
 using Android.Graphics;
-using System.Collections.ObjectModel;
 using System.Collections.Generic;
 using Android.App;
 using Android.Content;
-
-using SampleBrowser;
 
 namespace SampleBrowser
 {
     public class AutoComplete_Mobile
     {
         /*********************************
-        **Local Variable Inizialisation**
+        **Local Variable Initialization**
         *********************************/
-        int minimum = 1, popupdelay = 100, maximum = 150, jobNumber = 0, width;  
+        int minimum = 1, popupdelay = 100, maximum = 150, jobNumber = 0, width;
         TextView jobSearchLabel, countryLabel, jobFieldLabel, experienceLabel, jobSearchLabelSpacing;
         TextView countryLabelSpacing, countryAutoCompleteSpacing, jobFieldLabelSpacing, jobFieldAutoCompleteSpacing;
         TextView experienceLabelSpacing, experienceSpinnerSpacing, searchButtonSpacing;
-        EditText minPrefixCharacterText, maxDropDownHeightText, popUpDelayText;       
-        Spinner suggestionModeSpinner, autoCompleteModeSpinner, experienceSpinner;          
-        LinearLayout propertylayout, minPrefixCharaterStack, maxDropDownHeightStack, popUpDelayStack;      
+        EditText minPrefixCharacterText, maxDropDownHeightText, popUpDelayText;
+        Spinner suggestionModeSpinner, autoCompleteModeSpinner, experienceSpinner;
+        LinearLayout propertylayout, minPrefixCharaterStack, maxDropDownHeightStack, popUpDelayStack;
         ArrayAdapter<String> suggestionModeDataAdapter, autoCompleteModeDataAdapter;
         SfAutoComplete countryNameAutoComplete, jobFieldAutoComplete;
         SuggestionMode suggestionModes = SuggestionMode.StartsWith;
@@ -58,9 +54,9 @@ namespace SampleBrowser
             MaximumDropDownLayout();
             PopUpDelayLayout();
 
-			ScrollView scroll = new ScrollView(context1);
-			scroll.AddView(propertylayout);
-            
+            ScrollView scroll = new ScrollView(context1);
+            scroll.AddView(propertylayout);
+
             return scroll;
         }
 
@@ -77,7 +73,7 @@ namespace SampleBrowser
             //SpaceText
             TextView spacingText = new TextView(context);
             propertylayout.AddView(spacingText);
-			suggestionModeSpinner = new Spinner(context,SpinnerMode.Dialog);
+            suggestionModeSpinner = new Spinner(context, SpinnerMode.Dialog);
             propertylayout.AddView(suggestionModeLabel);
             propertylayout.AddView(suggestionModeSpinner);
 
@@ -96,7 +92,8 @@ namespace SampleBrowser
             suggestionModeSpinner.Adapter = suggestionModeDataAdapter;
 
             //suggestionModeSpinner ItemSelected Listener
-            suggestionModeSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) => {
+            suggestionModeSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) =>
+            {
                 String selectedItem = suggestionModeDataAdapter.GetItem(e.Position);
                 if (selectedItem.Equals("StartsWith"))
                 {
@@ -137,7 +134,7 @@ namespace SampleBrowser
             suggestionModeSeparate.LayoutParameters = new ViewGroup.LayoutParams(width * 2, 5);
             LinearLayout.LayoutParams suggestionModeLayoutParam = new LinearLayout.LayoutParams(width * 2, 5);
             suggestionModeLayoutParam.SetMargins(0, 20, 0, 0);
-           // propertylayout.AddView(suggestionModeSeparate, suggestionModeLayoutParam);
+            // propertylayout.AddView(suggestionModeSeparate, suggestionModeLayoutParam);
         }
 
         private void AutoCompleteModeLayout()
@@ -153,7 +150,7 @@ namespace SampleBrowser
             //SpaceTExt
             TextView textSpacing = new TextView(context);
             propertylayout.AddView(textSpacing);
-			autoCompleteModeSpinner = new Spinner(context,SpinnerMode.Dialog);
+            autoCompleteModeSpinner = new Spinner(context, SpinnerMode.Dialog);
             propertylayout.AddView(autoCompleteModeLabel);
             propertylayout.AddView(autoCompleteModeSpinner);
 
@@ -167,7 +164,8 @@ namespace SampleBrowser
             autoCompleteModeSpinner.Adapter = autoCompleteModeDataAdapter;
 
             //autoCompleteModeSpinner ItemSelected Listener
-            autoCompleteModeSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) => {
+            autoCompleteModeSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) =>
+            {
                 String selectedItem = autoCompleteModeDataAdapter.GetItem(e.Position);
                 if (selectedItem.Equals("Suggest"))
                 {
@@ -215,17 +213,17 @@ namespace SampleBrowser
             minPrefixCharacterText.InputType = Android.Text.InputTypes.ClassPhone;
             minPrefixCharacterText.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) =>
             {
-				try
-				{
-					if (minPrefixCharacterText.Text.Length > 0)
-						minimum = Convert.ToInt32(e.Text.ToString());
-					else
-						minimum = 1;
-				}
-				catch
+                try
                 {
-					
-				}
+                    if (minPrefixCharacterText.Text.Length > 0)
+                        minimum = Convert.ToInt32(e.Text.ToString());
+                    else
+                        minimum = 1;
+                }
+                catch
+                {
+
+                }
             };
 
             //MinPrefixCharaterTextLayoutParams
@@ -236,8 +234,8 @@ namespace SampleBrowser
                 width - 10, ViewGroup.LayoutParams.WrapContent);
             minPrefixCharaterLabelLayoutParams.SetMargins(0, 10, 0, 0);
 
-			TextView spacingText = new TextView(context);
-			propertylayout.AddView(spacingText);
+            TextView spacingText = new TextView(context);
+            propertylayout.AddView(spacingText);
             //MinPrefixCharaterStack
             minPrefixCharaterStack = new LinearLayout(context);
             minPrefixCharaterStack.AddView(minPrefixCharaterLabel, minPrefixCharaterLabelLayoutParams);
@@ -250,7 +248,7 @@ namespace SampleBrowser
             minPrefixCharaterSeparate.LayoutParameters = new ViewGroup.LayoutParams(width * 2, 5);
             LinearLayout.LayoutParams minPrefixCharaterLayoutParams = new LinearLayout.LayoutParams(width * 2, 5);
             minPrefixCharaterLayoutParams.SetMargins(0, 20, 0, 0);
-           // propertylayout.AddView(minPrefixCharaterSeparate, minPrefixCharaterLayoutParams);
+            // propertylayout.AddView(minPrefixCharaterSeparate, minPrefixCharaterLayoutParams);
         }
 
         private void MaximumDropDownLayout()
@@ -270,16 +268,17 @@ namespace SampleBrowser
             maxDropDownHeightText.InputType = Android.Text.InputTypes.ClassPhone;
             maxDropDownHeightText.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) =>
             {
-				try
-				{
-					if (maxDropDownHeightText.Text.Length > 0)
-						maximum = Convert.ToInt32(e.Text.ToString());
-					else
-						maximum = 150;
-				}
-				catch{
-					
-				}
+                try
+                {
+                    if (maxDropDownHeightText.Text.Length > 0)
+                        maximum = Convert.ToInt32(e.Text.ToString());
+                    else
+                        maximum = 150;
+                }
+                catch
+                {
+
+                }
             };
 
             //MaxDropDownHeightTextLayoutParams
@@ -290,8 +289,8 @@ namespace SampleBrowser
                 width - 10, ViewGroup.LayoutParams.WrapContent);
             maxDropDownHeightLabelLayoutParams.SetMargins(0, 10, 0, 0);
 
-			TextView spacingText = new TextView(context);
-			propertylayout.AddView(spacingText);
+            TextView spacingText = new TextView(context);
+            propertylayout.AddView(spacingText);
             //MaxDropDownHeightStack
             maxDropDownHeightStack = new LinearLayout(context);
             maxDropDownHeightStack.AddView(maxDropDownHeightLabel, maxDropDownHeightLabelLayoutParams);
@@ -304,7 +303,7 @@ namespace SampleBrowser
             maxDropDownHeightSeparate.LayoutParameters = new ViewGroup.LayoutParams(width * 2, 5);
             LinearLayout.LayoutParams maxDropDownHeightLayoutParams = new LinearLayout.LayoutParams(width * 2, 5);
             maxDropDownHeightLayoutParams.SetMargins(0, 20, 0, 0);
-           // propertylayout.AddView(maxDropDownHeightSeparate, maxDropDownHeightLayoutParams);
+            // propertylayout.AddView(maxDropDownHeightSeparate, maxDropDownHeightLayoutParams);
         }
 
         private void PopUpDelayLayout()
@@ -326,17 +325,17 @@ namespace SampleBrowser
             //popUpDelayText TextChanged Listener
             popUpDelayText.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) =>
             {
-				try
-				{
-					if (popUpDelayText.Text.Length > 0)
-						popupdelay = Convert.ToInt32(e.Text.ToString());
-					else
-						popupdelay = 100;
-				}
-				catch
-                { 
-				
-				}
+                try
+                {
+                    if (popUpDelayText.Text.Length > 0)
+                        popupdelay = Convert.ToInt32(e.Text.ToString());
+                    else
+                        popupdelay = 100;
+                }
+                catch
+                {
+
+                }
             };
 
             LinearLayout.LayoutParams popUpDelayTextLayoutParams = new LinearLayout.LayoutParams(
@@ -346,8 +345,8 @@ namespace SampleBrowser
                 width - 10, ViewGroup.LayoutParams.WrapContent);
             popUpDelayLabelLayoutParams.SetMargins(0, 10, 0, 0);
 
-			TextView spacingText = new TextView(context);
-			propertylayout.AddView(spacingText);
+            TextView spacingText = new TextView(context);
+            propertylayout.AddView(spacingText);
             //PopUpDelayStack
             popUpDelayStack = new LinearLayout(context);
             popUpDelayStack.AddView(popUpDelayLabel, popUpDelayLabelLayoutParams);
@@ -360,14 +359,14 @@ namespace SampleBrowser
             popUpDelaySeparate.LayoutParameters = new ViewGroup.LayoutParams(width * 2, 5);
             LinearLayout.LayoutParams popUpDelayLayoutParams = new LinearLayout.LayoutParams(width * 2, 5);
             popUpDelayLayoutParams.SetMargins(0, 20, 0, 0);
-         //   propertylayout.AddView(popUpDelaySeparate, popUpDelayLayoutParams);
+            //   propertylayout.AddView(popUpDelaySeparate, popUpDelayLayoutParams);
         }
         public View GetSampleContent(Android.Content.Context con)
         {
-            SamplePageContents(con);        
+            SamplePageContents(con);
 
             //countryNameAutoComplete
-            countryNameAutoComplete = new SfAutoComplete(con);         
+            countryNameAutoComplete = new SfAutoComplete(con);
             ArrayAdapter<String> countryAdapter = new ArrayAdapter<String>(con,
                 Android.Resource.Layout.SimpleListItem1, new Countrylist().Country);
             countryNameAutoComplete.LayoutParameters = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MatchParent, 50);
@@ -376,11 +375,11 @@ namespace SampleBrowser
             countryNameAutoComplete.MaximumDropDownHeight = 150;
             countryNameAutoComplete.Watermark = "Enter a country name";
             countryNameAutoComplete.GetAutoEditText().SetTextSize(ComplexUnitType.Sp, 20);
-			countryNameAutoComplete.TextHighlightMode = OccurrenceMode.FirstOccurrence;
-			countryNameAutoComplete.HighlightedTextColor = Color.Blue;
+            countryNameAutoComplete.TextHighlightMode = OccurrenceMode.FirstOccurrence;
+            countryNameAutoComplete.HighlightedTextColor = Color.Blue;
 
             //jobFieldAutoComplete
-            jobFieldAutoComplete = new SfAutoComplete(con);         
+            jobFieldAutoComplete = new SfAutoComplete(con);
             ArrayAdapter<String> titleAdapter = new ArrayAdapter<String>(con,
                 Android.Resource.Layout.SimpleListItem1, Title);
             jobFieldAutoComplete.AutoCompleteSource = (titleAdapter);
@@ -389,12 +388,12 @@ namespace SampleBrowser
             jobFieldAutoComplete.MaximumDropDownHeight = 150;
             jobFieldAutoComplete.Watermark = "Starts with ’S’, ‘M’ or ‘B’";
             jobFieldAutoComplete.GetAutoEditText().SetTextSize(ComplexUnitType.Sp, 20);
-			jobFieldAutoComplete.TextHighlightMode = OccurrenceMode.FirstOccurrence;
-			jobFieldAutoComplete.HighlightedTextColor = Color.Blue;
+            jobFieldAutoComplete.TextHighlightMode = OccurrenceMode.FirstOccurrence;
+            jobFieldAutoComplete.HighlightedTextColor = Color.Blue;
 
             //main view
             LinearLayout mainView = GetView(con);
-            return mainView;          
+            return mainView;
         }
 
         private LinearLayout GetView(Android.Content.Context con)
@@ -421,7 +420,8 @@ namespace SampleBrowser
             mainLayout.AddView(experienceSpinnerSpacing);
             mainLayout.AddView(searchButtonSpacing);
             mainLayout.AddView(searchButton);
-            mainLayout.Touch += (object sender, View.TouchEventArgs e) => {
+            mainLayout.Touch += (object sender, View.TouchEventArgs e) =>
+            {
                 Rect outRect = new Rect();
                 countryNameAutoComplete.GetGlobalVisibleRect(outRect);
                 jobFieldAutoComplete.GetGlobalVisibleRect(outRect);
@@ -486,7 +486,7 @@ namespace SampleBrowser
             experienceLabel = new TextView(con);
             experienceLabel.Text = "Experience";
             experienceLabel.TextSize = 16;
-          
+
             //experienceLabelSpacing
             experienceLabelSpacing = new TextView(con);
             experienceLabelSpacing.SetHeight(10);
@@ -502,7 +502,8 @@ namespace SampleBrowser
             searchButton.Text = "Search";
             searchButton.SetTextColor(Color.White);
             searchButton.SetBackgroundColor(Color.Gray);
-            searchButton.Click += (object sender, EventArgs e) => {
+            searchButton.Click += (object sender, EventArgs e) =>
+            {
                 GetResult();
                 resultsDialog.SetMessage(jobNumber + " Jobs Found");
                 resultsDialog.Create().Show();
@@ -511,9 +512,9 @@ namespace SampleBrowser
             //searchButtonSpacing
             searchButtonSpacing = new TextView(con);
             searchButtonSpacing.SetHeight(30);
-          
+
             //experience Spinner
-			experienceSpinner = new Spinner(con,SpinnerMode.Dialog);
+            experienceSpinner = new Spinner(con, SpinnerMode.Dialog);
             experienceSpinner.DropDownWidth = 500;
             experienceSpinner.SetBackgroundColor(Color.Gray);
             ArrayAdapter<String> experienceDataAdapter = new ArrayAdapter<String>

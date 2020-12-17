@@ -1,4 +1,4 @@
-#region Copyright Syncfusion Inc. 2001-2016.
+﻿#region Copyright Syncfusion Inc. 2001-2016.
 // Copyright Syncfusion Inc. 2001-2016. All rights reserved.
 // Use of this code is subject to the terms of our license.
 // A copy of the current license can be obtained at any time by e-mailing
@@ -7,101 +7,99 @@
 #endregion
 
 
-using System;
-
-using Android.App;
-using Android.OS;
-using Android.Runtime;
+using Android.Content;
+using Android.Graphics;
 using Android.Views;
 using Android.Widget;
-using droid = Android.Widget.Orientation;
-
 using Com.Syncfusion.Sfrangeslider;
-using Android.Graphics;
-using Android.Content;
+using System;
+using droid = Android.Widget.Orientation;
 namespace SampleBrowser
 {
-	//[con(Label = "Orientation")]
-	public class Equalizer : SamplePage
-	{
-       /*********************************
-        **Local Variable Inizialisation**
-        *********************************/
-        SfRangeSlider slider1,slider2,slider3;
+    //[con(Label = "Orientation")]
+    public class Equalizer : SamplePage
+    {
+        /*********************************
+         **Local Variable Initialization**
+         *********************************/
+        SfRangeSlider slider1, slider2, slider3;
         TextView adjLabel, hertzLabel, hertzLabel1, hertzLabel2, decibelLabel;
         TextView decibelLabel1, decibelLabel2, adjLabel7, adjLabel8, adjLabel9, adjLabel10;
         int height, width;
         LinearLayout mainLayout, layout1, layout2, layout3;
         FrameLayout.LayoutParams sliderLayout;
 
-        public override View GetSampleContent (Context con)
-		{		
-			height =  con.Resources.DisplayMetrics.HeightPixels/2;
-			width = con.Resources.DisplayMetrics.WidthPixels/3;
+        public override View GetSampleContent(Context con)
+        {
+            height = con.Resources.DisplayMetrics.HeightPixels / 2;
+            width = con.Resources.DisplayMetrics.WidthPixels / 3;
 
             SamplePageContent(con);
             sliderLayout = new FrameLayout.LayoutParams(width, height + (height / 4));
-           /****************
-            **RangeSlider1**
-            ****************/
-            slider1 =  new SfRangeSlider(con);
-			slider1.Minimum=-12;
-			slider1.Maximum=12;
-			slider1.TickFrequency=12;
-			slider1.TrackSelectionColor=Color.Gray;
-			slider1.Orientation=Com.Syncfusion.Sfrangeslider.Orientation.Vertical;
-			slider1.TickPlacement=TickPlacement.None;
-			slider1.ValuePlacement=ValuePlacement.TopLeft;
-			slider1.ShowValueLabel=true;
-			slider1.SnapsTo=SnapsTo.None;
-			slider1.Value=6;
+            /****************
+             **RangeSlider1**
+             ****************/
+            slider1 = new SfRangeSlider(con);
+            slider1.Minimum = -12;
+            slider1.Maximum = 12;
+            slider1.TickFrequency = 12;
+            slider1.TrackSelectionColor = Color.Gray;
+            slider1.Orientation = Com.Syncfusion.Sfrangeslider.Orientation.Vertical;
+            slider1.TickPlacement = TickPlacement.None;
+            slider1.ValuePlacement = ValuePlacement.TopLeft;
+            slider1.ShowValueLabel = true;
+            slider1.SnapsTo = SnapsTo.None;
+            slider1.Value = 6;
 
-			slider1.ValueChanged += (object sender, ValueChangedEventArgs e) => {
-				String decibelString=(string)(Math.Round(e.Value)+".0db");
-				decibelLabel.Text=decibelString;
-			};
+            slider1.ValueChanged += (object sender, ValueChangedEventArgs e) =>
+            {
+                String decibelString = (string)(Math.Round(e.Value) + ".0db");
+                decibelLabel.Text = decibelString;
+            };
 
-           /****************
-            **RangeSlider2**
-            ****************/
-            slider2 =  new SfRangeSlider(con);
-			slider2.Minimum=-12;
-			slider2.Maximum=12;
-			slider2.TickFrequency=12;
-			slider2.TrackSelectionColor=Color.Gray;
-			slider2.Orientation=Com.Syncfusion.Sfrangeslider.Orientation.Vertical;
-			slider2.TickPlacement=TickPlacement.None;
-			slider2.ValuePlacement=ValuePlacement.TopLeft;
-			slider2.ShowValueLabel=true;
-			slider2.SnapsTo=SnapsTo.None;
-			slider2.Value=-3;
-			slider2.LayoutParameters=sliderLayout;
-			slider2.ValueChanged+= (object sender, ValueChangedEventArgs e) => {
-				decibelLabel1.Text=Convert.ToString(Math.Round(e.Value)+".0db");
-			};
+            /****************
+             **RangeSlider2**
+             ****************/
+            slider2 = new SfRangeSlider(con);
+            slider2.Minimum = -12;
+            slider2.Maximum = 12;
+            slider2.TickFrequency = 12;
+            slider2.TrackSelectionColor = Color.Gray;
+            slider2.Orientation = Com.Syncfusion.Sfrangeslider.Orientation.Vertical;
+            slider2.TickPlacement = TickPlacement.None;
+            slider2.ValuePlacement = ValuePlacement.TopLeft;
+            slider2.ShowValueLabel = true;
+            slider2.SnapsTo = SnapsTo.None;
+            slider2.Value = -3;
+            slider2.LayoutParameters = sliderLayout;
+            slider2.ValueChanged += (object sender, ValueChangedEventArgs e) =>
+            {
+                decibelLabel1.Text = Convert.ToString(Math.Round(e.Value) + ".0db");
+            };
 
-           /****************
-            **RangeSlider3**
-            ****************/
-            slider3 =  new SfRangeSlider(con);
-			slider3.Minimum=-12;
-			slider3.Maximum=12;
-			slider3.TickFrequency=12;
-			slider3.TrackSelectionColor=Color.Gray;
-			slider3.Orientation=Com.Syncfusion.Sfrangeslider.Orientation.Vertical;
-			slider3.TickPlacement=TickPlacement.None;
-			slider3.ValuePlacement=ValuePlacement.TopLeft;
-			slider3.ShowValueLabel=true;
-			slider3.SnapsTo=SnapsTo.None;
-			slider3.Value=12;
-			slider3.LayoutParameters=sliderLayout;
-			slider3.ValueChanged+= (object sender, ValueChangedEventArgs e) => {
-				decibelLabel2.Text=Convert.ToString(Math.Round(e.Value)+".0db");
-			};
+            /****************
+             **RangeSlider3**
+             ****************/
+            slider3 = new SfRangeSlider(con);
+            slider3.Minimum = -12;
+            slider3.Maximum = 12;
+            slider3.TickFrequency = 12;
+            slider3.TrackSelectionColor = Color.Gray;
+            slider3.Orientation = Com.Syncfusion.Sfrangeslider.Orientation.Vertical;
+            slider3.TickPlacement = TickPlacement.None;
+            slider3.ValuePlacement = ValuePlacement.TopLeft;
+            slider3.ShowValueLabel = true;
+            slider3.SnapsTo = SnapsTo.None;
+            slider3.Value = 12;
+            slider3.LayoutParameters = sliderLayout;
+            slider3.ValueChanged += (object sender, ValueChangedEventArgs e) =>
+            {
+                decibelLabel2.Text = Convert.ToString(Math.Round(e.Value) + ".0db");
+            };
 
             LinearLayout mainView = GetView(con);
-            return mainView;		
-		}
+            return mainView;
+        }
 
         private LinearLayout GetView(Context con)
         {
@@ -154,9 +152,9 @@ namespace SampleBrowser
         }
         private void SamplePageContent(Context con)
         {
-           /*************
-            **Adj Label**
-            *************/
+            /*************
+             **Adj Label**
+             *************/
             adjLabel = new TextView(con);
             adjLabel7 = new TextView(con);
             adjLabel8 = new TextView(con);
@@ -216,6 +214,6 @@ namespace SampleBrowser
             decibelLabel2.Typeface = Typeface.Create("Helvetica", TypefaceStyle.Normal);
             decibelLabel2.Gravity = GravityFlags.Center;
         }
-	}
+    }
 }
 

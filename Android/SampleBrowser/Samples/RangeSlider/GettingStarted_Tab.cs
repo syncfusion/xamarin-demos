@@ -1,4 +1,4 @@
-#region Copyright Syncfusion Inc. 2001-2016.
+﻿#region Copyright Syncfusion Inc. 2001-2016.
 // Copyright Syncfusion Inc. 2001-2016. All rights reserved.
 // Use of this code is subject to the terms of our license.
 // A copy of the current license can be obtained at any time by e-mailing
@@ -8,27 +8,22 @@
 
 
 using Android.Content;
-using Com.Syncfusion.Sfrangeslider;
-using Android.Widget;
-using Android.Views;
 using Android.Graphics;
-
-using SampleBrowser;
-
-using droid = Android.Widget.Orientation;
-
-using System.Collections.Generic;
-using System;
 using Android.Util;
+using Android.Views;
+using Android.Widget;
+using Com.Syncfusion.Sfrangeslider;
+using System;
+using System.Collections.Generic;
 
 namespace SampleBrowser
 {
     //[con(Label = "Getting Started")]
     public class GettingStarted_Tab : SamplePage
     {
-       /*********************************
-        **Local Variable Inizialisation**
-        *********************************/
+        /*********************************
+         **Local Variable Initialization**
+         *********************************/
         SfRangeSlider range, range2;
         public static TickPlacement tickplacement = TickPlacement.BottomRight;
         public static ValuePlacement valueplacement = ValuePlacement.BottomRight;
@@ -41,17 +36,17 @@ namespace SampleBrowser
         FrameLayout propertyFrameLayout, buttomButtonLayout;
         double actionBarHeight, navigationBarHeight, totalHeight;
         TextView arrivalLabel;
-        Context con,context;
+        Context con, context;
         Spinner tickSpinner, labelSpinner;
         ArrayAdapter<String> labelAdapter, dataAdapter;
         int tickPosition = 0, labelPosition = 0;
         bool showLabelPosition = true, snaptsToPosition = false;
-        int  totalWidth;
+        int totalWidth;
 
         public override View GetSampleContent(Context con1)
         {
             con = con1;
-            InitialMethod();          
+            InitialMethod();
             DepatureLayout();
 
             //rangeSlider
@@ -109,7 +104,7 @@ namespace SampleBrowser
             {
                 actionBarHeight = TypedValue.ComplexToDimensionPixelSize(tv.Data, con.Resources.DisplayMetrics);
             }
-           
+
             navigationBarHeight = getNavigationBarHeight(con);
             totalHeight = totalHeight - navigationBarHeight - actionBarHeight;
 
@@ -164,29 +159,30 @@ namespace SampleBrowser
             timeLabel1.SetTextColor(Color.ParseColor("#939394"));
             timeLabel1.Text = "  " + "Time:  " + fromValue1 + "AM " + " - " + toValue1 + " PM";
             timeLabel1.Gravity = GravityFlags.Left;
-            range.RangeChanged += (object sender, RangeChangedEventArgs e) => {
+            range.RangeChanged += (object sender, RangeChangedEventArgs e) =>
+            {
                 String pMeridian = "AM", pMeridian1 = "AM";
-				if (Math.Round(e.RangeStart).ToString() == "0")
+                if (Math.Round(e.RangeStart).ToString() == "0")
                 {
                     fromValue1 = "12";
                     pMeridian1 = "AM";
                 }
                 else
-					fromValue1 = Convert.ToString(Math.Round(e.RangeStart));
+                    fromValue1 = Convert.ToString(Math.Round(e.RangeStart));
 
-				if (e.RangeEnd <= 12)
-					toValue1 = Convert.ToString(Math.Round(e.RangeEnd));
+                if (e.RangeEnd <= 12)
+                    toValue1 = Convert.ToString(Math.Round(e.RangeEnd));
 
-				if (Math.Round(e.RangeEnd).ToString() == "12")
+                if (Math.Round(e.RangeEnd).ToString() == "12")
                     pMeridian = "PM";
 
-				if (Math.Round(e.RangeEnd).ToString() == "12")
+                if (Math.Round(e.RangeEnd).ToString() == "12")
                     pMeridian = "PM";
-				if (Convert.ToString(Math.Round(e.RangeStart)).Equals(Convert.ToString(Math.Round(e.RangeEnd))))
+                if (Convert.ToString(Math.Round(e.RangeStart)).Equals(Convert.ToString(Math.Round(e.RangeEnd))))
                 {
-					if (Math.Round(e.RangeStart).ToString() == "0")
+                    if (Math.Round(e.RangeStart).ToString() == "0")
                         timeLabel1.Text = "  " + "Time: " + fromValue1 + " " + pMeridian1;
-					else if (Math.Round(e.RangeEnd).ToString() == "12")
+                    else if (Math.Round(e.RangeEnd).ToString() == "12")
                         timeLabel1.Text = "  " + "Time: " + toValue1 + " " + pMeridian;
                     else
                         timeLabel1.Text = "  " + "Time: " + fromValue1 + " " + pMeridian1;
@@ -239,26 +235,27 @@ namespace SampleBrowser
             toValue = Math.Round(range2.RangeEnd).ToString();
             timeLabel3.Text = "  " + "Time:  " + fromvalue + "AM " + " - " + toValue + " PM";
             timeLabel3.Gravity = GravityFlags.Left;
-            range2.RangeChanged += (object sender, RangeChangedEventArgs e) => {
+            range2.RangeChanged += (object sender, RangeChangedEventArgs e) =>
+            {
                 String pMeridian = "AM", pMeridian1 = "AM";
-				if (Math.Round(e.RangeStart).ToString() == "0")
+                if (Math.Round(e.RangeStart).ToString() == "0")
                 {
                     fromvalue = "12";
                     pMeridian1 = "AM";
                 }
                 else
-					fromvalue = Convert.ToString(Math.Round(e.RangeStart));
+                    fromvalue = Convert.ToString(Math.Round(e.RangeStart));
 
-				if (e.RangeEnd <= 12)
-					toValue = Convert.ToString(Math.Round(e.RangeEnd));
+                if (e.RangeEnd <= 12)
+                    toValue = Convert.ToString(Math.Round(e.RangeEnd));
 
-				if (Math.Round(e.RangeEnd).ToString() == "12")
+                if (Math.Round(e.RangeEnd).ToString() == "12")
                     pMeridian = "PM";
-				if (Convert.ToString(Math.Round(e.RangeStart)).Equals(Convert.ToString(Math.Round(e.RangeEnd))))
+                if (Convert.ToString(Math.Round(e.RangeStart)).Equals(Convert.ToString(Math.Round(e.RangeEnd))))
                 {
-					if (Math.Round(e.RangeStart).ToString() == "0")
+                    if (Math.Round(e.RangeStart).ToString() == "0")
                         timeLabel3.Text = "  " + "Time: " + fromvalue + " " + pMeridian1;
-					else if (Math.Round(e.RangeEnd).ToString() == "12")
+                    else if (Math.Round(e.RangeEnd).ToString() == "12")
                         timeLabel3.Text = "  " + "Time: " + toValue + " " + pMeridian;
                     else
                         timeLabel3.Text = "  " + "Time: " + fromvalue + " " + pMeridian1;
@@ -313,11 +310,11 @@ namespace SampleBrowser
             frame.FocusableInTouchMode = true;
         }
 
-       
+
         public View GetPropertyLayout(Android.Content.Context context1)
         {
             context = context1;
-            totalWidth = (context.Resources.DisplayMetrics.WidthPixels);           
+            totalWidth = (context.Resources.DisplayMetrics.WidthPixels);
 
             OptionLayout();
             TickPlacementLayout();
@@ -392,7 +389,7 @@ namespace SampleBrowser
             placementLabel.Typeface = Typeface.Create("Roboto", TypefaceStyle.Normal);
             placementLabel.SetTextColor(Color.Black);
             placementLabel.Gravity = GravityFlags.Left;
-         
+
             //positionList
             List<String> positionList = new List<String>();
             positionList.Add("BottomRight");
@@ -404,12 +401,13 @@ namespace SampleBrowser
             dataAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
 
             //tickSpinner
-            tickSpinner = new Spinner(context,SpinnerMode.Dialog);
+            tickSpinner = new Spinner(context, SpinnerMode.Dialog);
             tickSpinner.LayoutParameters = new FrameLayout.LayoutParams((int)(totalWidth * 0.33), ViewGroup.LayoutParams.WrapContent, GravityFlags.Center);
             tickSpinner.SetPadding(0, 0, 0, 0);
             tickSpinner.Adapter = dataAdapter;
             tickSpinner.SetSelection(tickPosition);
-            tickSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) => {
+            tickSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) =>
+            {
                 String selectedItem = dataAdapter.GetItem(e.Position);
                 tickPosition = e.Position;
                 if (selectedItem.Equals("BottomRight"))
@@ -468,9 +466,10 @@ namespace SampleBrowser
             labelList.Add("TopLeft");
 
             //labelSpinner
-            labelSpinner = new Spinner(context,SpinnerMode.Dialog);
+            labelSpinner = new Spinner(context, SpinnerMode.Dialog);
             labelSpinner.LayoutParameters = new FrameLayout.LayoutParams((int)(totalWidth * 0.33), ViewGroup.LayoutParams.WrapContent, GravityFlags.Center);
-            labelSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) => {
+            labelSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) =>
+            {
                 String selectedItem = dataAdapter.GetItem(e.Position);
                 labelPosition = e.Position;
                 if (selectedItem.Equals("TopLeft"))
@@ -516,7 +515,8 @@ namespace SampleBrowser
             //checkBox
             Switch checkBox = new Switch(context);
             checkBox.Checked = showLabelPosition;
-            checkBox.CheckedChange += (object sender, CompoundButton.CheckedChangeEventArgs e) => {
+            checkBox.CheckedChange += (object sender, CompoundButton.CheckedChangeEventArgs e) =>
+            {
                 if (e.IsChecked)
                     showlabel = true;
                 else
@@ -555,7 +555,8 @@ namespace SampleBrowser
             //checkBox
             Switch checkBox2 = new Switch(context);
             checkBox2.Checked = snaptsToPosition;
-            checkBox2.CheckedChange += (object sender, CompoundButton.CheckedChangeEventArgs e) => {
+            checkBox2.CheckedChange += (object sender, CompoundButton.CheckedChangeEventArgs e) =>
+            {
                 if (e.IsChecked)
                     snapsto = SnapsTo.Ticks;
                 else

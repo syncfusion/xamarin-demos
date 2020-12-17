@@ -5,20 +5,14 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using System;
-using Android.App;
 using Android.Content;
 using Android.Graphics;
-using Android.OS;
-using Android.Runtime;
 using Android.Util;
 using Android.Views;
-using Android.Widget;
-using Java.Lang;
 
 namespace SampleBrowser
 {
-	internal class RoundButton : View ,View.IOnClickListener
+    internal class RoundButton : View ,View.IOnClickListener
 	{
 	    internal Color fillColor; DoodleDraw doodleDraw;
 		internal RoundButton(Context context,float height,float width,Color color,DoodleDraw doodle) :

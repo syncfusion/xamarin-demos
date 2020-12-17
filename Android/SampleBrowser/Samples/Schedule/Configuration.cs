@@ -13,16 +13,13 @@ using Com.Syncfusion.Sfrangeslider;
 using System.Collections.Generic;
 using Java.Util;
 using Android.Graphics;
-using Java.Text;
-using Android.App;
-using Android.OS;
 using Com.Syncfusion.Schedule;
 using Com.Syncfusion.Schedule.Enums;
 using System.Collections.ObjectModel;
 
 namespace SampleBrowser
 {
-	public class Configuration : SamplePage, IDisposable
+    public class Configuration : SamplePage, IDisposable
 	{
 		public Configuration()
 		{

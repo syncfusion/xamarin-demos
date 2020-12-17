@@ -13,19 +13,14 @@ using Android.OS;
 using Android.Graphics;
 using Android.Content;
 using Android.Content.PM;
-using Android.Graphics.Drawables;
 using Android.Views;
 using System.Collections.Generic;
-using System.Linq;
-using Android.Support.V4.Widget;
 using System.Threading.Tasks;
 using System.IO;
 using Android.Content.Res;
 using System.Text;
 using Android.Util;
-using Java.Lang;
 using System.ComponentModel;
-using System.Collections.ObjectModel;
 using Android.Views.InputMethods;
 
 namespace SampleBrowser

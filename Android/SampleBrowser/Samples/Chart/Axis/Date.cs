@@ -6,10 +6,7 @@
 // applicable laws. 
 #endregion
 using Android.Content;
-using Android.OS;
-using Android.App;
 using Com.Syncfusion.Charts;
-using Com.Syncfusion.Charts.Enums;
 using Android.Graphics;
 using Android.Views;
 using System;

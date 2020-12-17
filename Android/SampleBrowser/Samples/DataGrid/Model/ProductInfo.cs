@@ -5,11 +5,10 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using System;
 
 namespace SampleBrowser
 {
-	public class ProductInfo : NotificationObject
+    public class ProductInfo : NotificationObject
 	{
 		#region Private Members
 

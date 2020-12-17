@@ -5,17 +5,14 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using Android.App;
 using Android.Content;
-using Android.OS;
 using Android.Graphics;
 using Com.Syncfusion.Charts;
-using Com.Syncfusion.Charts.Enums;
 using Android.Views;
 
 namespace SampleBrowser
 {
-   public class StackingArea : SamplePage
+    public class StackingArea : SamplePage
     {
         private SfChart chart;
 

@@ -1,35 +1,29 @@
-#region Copyright Syncfusion Inc. 2001-2016.
+﻿#region Copyright Syncfusion Inc. 2001-2016.
 // Copyright Syncfusion Inc. 2001-2016. All rights reserved.
 // Use of this code is subject to the terms of our license.
 // A copy of the current license can be obtained at any time by e-mailing
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Util;
+using Android.Graphics;
 using Android.Views;
 using Android.Widget;
 using Com.Syncfusion.Calendar;
 using Com.Syncfusion.Calendar.Enums;
-using Android.Graphics;
-using Java.Util;
-using Android.Text.Format;
 using Java.Text;
+using Java.Util;
+using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace SampleBrowser
 {
-	public class CalendarConfiguration_Tab : SamplePage, IDisposable
-	{
+    public class CalendarConfiguration_Tab : SamplePage, IDisposable
+    {
         /*********************************
-         **Local Variable Inizialisation**
+         **Local Variable Initialization**
          *********************************/
 
         private int minYear = 2012, minMonth = 0, minDay = 1;
@@ -38,28 +32,28 @@ namespace SampleBrowser
         private Button minDateButton, maxDateButton;
         private DatePickerDialog minDatePicker, maxDatePicker;
         private LinearLayout proprtyOptionsLayout;
-		private FrameLayout mainLayout;
+        private FrameLayout mainLayout;
         private Calendar minPick, maxPick;
         private const int DATEDIALOGID = 0;
         private ArrayAdapter<String> dataAdapter;
         private Spinner modeSpinner;
         private SfCalendar calendar;
-        private Context context;	
+        private Context context;
 
         public override View GetSampleContent(Context context1)
-		{
+        {
             context = context1;
 
             //calendar
             mainLayout = new FrameLayout(context);
             calendar = new SfCalendar(context);
-			calendar.ShowEventsInline = false;
-			calendar.ViewMode = ViewMode.MonthView;
-			calendar.HeaderHeight = 100;
+            calendar.ShowEventsInline = false;
+            calendar.ViewMode = ViewMode.MonthView;
+            calendar.HeaderHeight = 100;
             MonthViewLabelSetting labelSettings = new MonthViewLabelSetting();
-			labelSettings.DateLabelSize = 14;
-			MonthViewSettings monthViewSettings = new MonthViewSettings();
-			monthViewSettings.MonthViewLabelSetting = labelSettings;
+            labelSettings.DateLabelSize = 14;
+            MonthViewSettings monthViewSettings = new MonthViewSettings();
+            monthViewSettings.MonthViewLabelSetting = labelSettings;
             monthViewSettings.TodayTextColor = Color.ParseColor("#1B79D6");
             monthViewSettings.SelectedDayTextColor = Color.Black;
             monthViewSettings.InlineBackgroundColor = Color.ParseColor("#E4E8ED");
@@ -86,9 +80,9 @@ namespace SampleBrowser
             MinimumDateLayout();
             MaximumDateLayout();
 
-            return proprtyOptionsLayout; 
+            return proprtyOptionsLayout;
         }
-       
+
         private void SelectionModeLayout()
         {
             //ViewMode
@@ -102,7 +96,7 @@ namespace SampleBrowser
             List<String> selectionList = new List<String>();
             selectionList.Add("Single Selection");
             selectionList.Add("Multiple Selection");
-           
+
             //Data Adapter
             dataAdapter = new ArrayAdapter<String>(context, Android.Resource.Layout.SimpleSpinnerItem, selectionList);
             dataAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
@@ -110,7 +104,7 @@ namespace SampleBrowser
             //ModeSpinner
             modeSpinner.Adapter = dataAdapter;
             modeSpinner.SetSelection(0);
-            
+
             //Mode Spinner Item Changed Listener
             modeSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) =>
             {
@@ -123,7 +117,7 @@ namespace SampleBrowser
                 if (selectedItem.Equals("Multiple Selection"))
                 {
                     calendar.SelectionMode = SelectionMode.MultiSelection;
-                }     
+                }
             };
             LinearLayout viewModeLayout = new LinearLayout(context);
             viewModeLayout.Orientation = Android.Widget.Orientation.Vertical;
@@ -132,7 +126,7 @@ namespace SampleBrowser
             viewModeLayout.AddView(modeSpinner);
             proprtyOptionsLayout.AddView(viewModeLayout);
         }
-            
+
         private void MinimumDateLayout()
         {
             minPick = Calendar.Instance;
@@ -153,7 +147,7 @@ namespace SampleBrowser
             minDateButton.Text = minTextDate;
             minDateButton.TextSize = 16;
             minDatePicker = new DatePickerDialog(context, MinDateSetting, minYear, minMonth, minDay);
-            minDateButton.Click += (object sender, EventArgs e) => 
+            minDateButton.Click += (object sender, EventArgs e) =>
             {
                 minDatePicker.Show();
             };
@@ -167,7 +161,7 @@ namespace SampleBrowser
 
             proprtyOptionsLayout.AddView(minDateLayout);
         }
-        
+
         private void MaximumDateLayout()
         {
             //Maximum Date Text
@@ -183,7 +177,7 @@ namespace SampleBrowser
             maxDateButton.TextSize = 16;
             maxDateButton.SetBackgroundColor(Color.ParseColor("#8CD4CF"));
             maxDatePicker = new DatePickerDialog(context, MaxDateSetting, maxYear, maxMonth, maxDay);
-            maxDateButton.Click += (object sender, EventArgs e) => 
+            maxDateButton.Click += (object sender, EventArgs e) =>
             {
                 maxDatePicker.Show();
             };
@@ -195,67 +189,67 @@ namespace SampleBrowser
             maxDateLayout.AddView(maxDate);
             maxDateLayout.AddView(maxDateButton);
             proprtyOptionsLayout.AddView(maxDateLayout);
-        }   
-       
+        }
+
         //Minimum DateSelected Method      
         private void MinDateSetting(object sender, DatePickerDialog.DateSetEventArgs e)
-		{
-			DateTime newMinDate = e.Date;
+        {
+            DateTime newMinDate = e.Date;
             minYear = newMinDate.Year;
             minMonth = newMinDate.Month;
             minDay = newMinDate.Day;
             minTextDate = minDay.ToString() + "/" + minMonth.ToString() + "/" + minYear.ToString();
             Calendar minCal = Calendar.Instance;
-			minCal.Set(newMinDate.Year, newMinDate.Month - 1, newMinDate.Day);
+            minCal.Set(newMinDate.Year, newMinDate.Month - 1, newMinDate.Day);
 
-			if (calendar.MaxDate == null || (calendar.MaxDate != null && minCal.Before(calendar.MaxDate)))
+            if (calendar.MaxDate == null || (calendar.MaxDate != null && minCal.Before(calendar.MaxDate)))
             {
-				calendar.MinDate = minCal;
-				StringBuilder stringBuilder = new StringBuilder().Append(newMinDate.Day).Append("/").Append(newMinDate.Month).Append("/").Append(newMinDate.Year);
-				minDateButton.Text = stringBuilder.ToString();
-			}
-		}
-             
+                calendar.MinDate = minCal;
+                StringBuilder stringBuilder = new StringBuilder().Append(newMinDate.Day).Append("/").Append(newMinDate.Month).Append("/").Append(newMinDate.Year);
+                minDateButton.Text = stringBuilder.ToString();
+            }
+        }
+
         //Maximum DateSelected Method     
-       private void MaxDateSetting(object sender, DatePickerDialog.DateSetEventArgs e)
-		{
-			DateTime newMaxDate = e.Date;
+        private void MaxDateSetting(object sender, DatePickerDialog.DateSetEventArgs e)
+        {
+            DateTime newMaxDate = e.Date;
             maxYear = newMaxDate.Year;
             maxMonth = newMaxDate.Month;
             maxDay = newMaxDate.Day;
             maxTextDate = maxDay.ToString() + "/" + maxMonth.ToString() + "/" + maxYear.ToString();
 
             Calendar maxCal = Calendar.Instance;
-			maxCal.Set(newMaxDate.Year, newMaxDate.Month - 1, newMaxDate.Day);
-			if (calendar.MinDate == null || (calendar.MinDate != null && maxCal.After(calendar.MinDate)))
-            {				
-				calendar.MaxDate = maxCal;
-				StringBuilder stringBuilder = new StringBuilder().Append(newMaxDate.Day).Append("/").Append(newMaxDate.Month).Append("/").Append(newMaxDate.Year);
-				maxDateButton.Text = stringBuilder.ToString();
-			}
-		}
+            maxCal.Set(newMaxDate.Year, newMaxDate.Month - 1, newMaxDate.Day);
+            if (calendar.MinDate == null || (calendar.MinDate != null && maxCal.After(calendar.MinDate)))
+            {
+                calendar.MaxDate = maxCal;
+                StringBuilder stringBuilder = new StringBuilder().Append(newMaxDate.Day).Append("/").Append(newMaxDate.Month).Append("/").Append(newMaxDate.Year);
+                maxDateButton.Text = stringBuilder.ToString();
+            }
+        }
 
-       private void Calendar_DrawMonthCell(object sender, DrawMonthCellEventArgs e)
+        private void Calendar_DrawMonthCell(object sender, DrawMonthCellEventArgs e)
         {
-			SimpleDateFormat compareString = new SimpleDateFormat("dd/MM/yyyy");
-			String temp = new SimpleDateFormat("dd/MM/yyyy").Format(e.MonthCell.Date.Time);
-			Java.Util.Date date = compareString.Parse(temp);
-			string dayString = new SimpleDateFormat("EEEE").Format(date);
-			if (dayString.ToLower().Equals("sunday") || dayString.ToLower().Equals("saturday"))
-			{
-				e.MonthCell.TextColor = Color.ParseColor("#0990e9");
+            SimpleDateFormat compareString = new SimpleDateFormat("dd/MM/yyyy");
+            String temp = new SimpleDateFormat("dd/MM/yyyy").Format(e.MonthCell.Date.Time);
+            Java.Util.Date date = compareString.Parse(temp);
+            string dayString = new SimpleDateFormat("EEEE").Format(date);
+            if (dayString.ToLower().Equals("sunday") || dayString.ToLower().Equals("saturday"))
+            {
+                e.MonthCell.TextColor = Color.ParseColor("#0990e9");
                 e.MonthCell.FontAttribute = Typeface.Create(" ", TypefaceStyle.Bold);
-			}
-			else
-			{
-				e.MonthCell.TextColor = Color.ParseColor("#7F7F7F");
+            }
+            else
+            {
+                e.MonthCell.TextColor = Color.ParseColor("#7F7F7F");
                 e.MonthCell.FontAttribute = Typeface.Create(" ", TypefaceStyle.Italic);
-			}
+            }
         }
 
         public void Dispose()
         {
-            if(calendar != null)
+            if (calendar != null)
             {
                 calendar.DrawMonthCell -= Calendar_DrawMonthCell;
                 calendar.Dispose();

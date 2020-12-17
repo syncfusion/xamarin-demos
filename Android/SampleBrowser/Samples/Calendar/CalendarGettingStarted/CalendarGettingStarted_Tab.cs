@@ -1,32 +1,25 @@
-#region Copyright Syncfusion Inc. 2001-2016.
+﻿#region Copyright Syncfusion Inc. 2001-2016.
 // Copyright Syncfusion Inc. 2001-2016. All rights reserved.
 // Use of this code is subject to the terms of our license.
 // A copy of the current license can be obtained at any time by e-mailing
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Util;
+using Android.Graphics;
 using Android.Views;
 using Android.Widget;
 using Com.Syncfusion.Calendar;
 using Com.Syncfusion.Calendar.Enums;
-using Android.Graphics;
+using System;
+using System.Collections.Generic;
 
 namespace SampleBrowser
 {
     public class CalendarGettingStarted_Tab : SamplePage, IDisposable
     {
         /*********************************
-         **Local Variable Inizialisation**
+         **Local Variable Initialization**
          *********************************/
         private SfCalendar calendar;
         private ArrayAdapter<String> dataAdapter;
@@ -34,7 +27,7 @@ namespace SampleBrowser
         private Context context;
         private FrameLayout mainView;
         private LinearLayout proprtyOptionsLayout;
-      
+
         public CalendarGettingStarted_Tab()
         {
         }
@@ -80,20 +73,20 @@ namespace SampleBrowser
             viewModeLabel.Text = "ViewMode";
 
             modeSpinner = new Spinner(context, SpinnerMode.Dialog);
-            
+
             //Vie Mode List
             List<String> viewModeList = new List<String>();
             viewModeList.Add("Month View");
             viewModeList.Add("Year View");
-            
+
             //Data Adapter
             dataAdapter = new ArrayAdapter<String>(context, Android.Resource.Layout.SimpleSpinnerItem, viewModeList);
             dataAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             modeSpinner.Adapter = dataAdapter;
             modeSpinner.SetSelection(0);
-            
+
             //Mode Spinner Item Selected Listener
-            modeSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) => 
+            modeSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) =>
             {
                 String selectedItem = dataAdapter.GetItem(e.Position);
                 if (selectedItem.Equals("Month View"))
@@ -104,7 +97,7 @@ namespace SampleBrowser
                 if (selectedItem.Equals("Year View"))
                 {
                     calendar.ViewMode = ViewMode.YearView;
-                }   
+                }
             };
 
             //viewModeLayout
