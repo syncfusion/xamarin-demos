@@ -2408,103 +2408,103 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Syncfusion.Xamarin.Buttons.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.Calculate">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.DataGridExport.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.DataSource">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.DocIORenderer">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.PresentationRenderer">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfAutoComplete.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfBarcode.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfCalendar.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfCarousel.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfChart.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfComboBox.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfDataForm.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfDiagram.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfGauge.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfImageEditor.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfKanban.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfMaps.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfNavigationDrawer.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfPdfViewer.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfPicker.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfPullToRefresh.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfRadialMenu.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfRating.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfRotator.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfSchedule.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfSparkline.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfSunburstChart.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfTabView.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfTreeMap.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfTreeView.Android">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.XlsIORenderer">
-      <Version>18.3.0.47</Version>
+      <Version>18.4.0.30</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Animated.Vector.Drawable">
       <Version>25.4.0.2</Version>

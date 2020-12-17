@@ -7,15 +7,15 @@
 #endregion
 using Android.App;
 using Android.Content;
-using Android.Widget;
-using Android.OS;
-using System.Xml;
-using System.Collections.Generic;
-using Android.Support.V4.Widget;
-using Android.Support.V4.View;
 using Android.Content.PM;
 using Android.Content.Res;
+using Android.OS;
+using Android.Support.V4.View;
+using Android.Support.V4.Widget;
+using Android.Widget;
+using System.Collections.Generic;
 using System.Linq;
+using System.Xml;
 
 namespace SampleBrowser
 {
