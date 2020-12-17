@@ -7,7 +7,6 @@
 #endregion
 using System;
 using Syncfusion.SfDataGrid;
-using Syncfusion.Data;
 using Android.Graphics;
 using Android.Widget;
 using System.Reflection;
@@ -16,7 +15,7 @@ using System.IO;
 
 namespace SampleBrowser
 {
-	public class GridImageCell:GridCell
+    public class GridImageCell:GridCell
 	{
 		private ImageView customerImage;
 		Bitmap bitmap;

@@ -5,14 +5,11 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using Android.App;
 using Android.Util;
 using System;
-using System.Collections.Generic;
 using Android.Content;
 using Android.Views;
 using Android.Widget;
-using Android.Content.Res;
 using Android.Graphics;
 using Syncfusion.Android.Buttons;
 

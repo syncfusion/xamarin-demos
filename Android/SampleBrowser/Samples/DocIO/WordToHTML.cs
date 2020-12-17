@@ -9,22 +9,15 @@ using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using System.IO;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using Android.Content;
 using Android.Views;
 using Android.Widget;
 using Android.Graphics;
-using Android.Webkit;
-using Android.App;
-using Android.OS;
 
 namespace SampleBrowser
 {
-	public partial class WordToHTML : SamplePage
+    public partial class WordToHTML : SamplePage
     {
 		private Context m_context;
 		public override View GetSampleContent (Context con)

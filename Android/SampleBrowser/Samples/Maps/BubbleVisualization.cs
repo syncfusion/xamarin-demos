@@ -5,7 +5,6 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using System;
 using Com.Syncfusion.Maps;
 using Android.Graphics;
 using Org.Json;

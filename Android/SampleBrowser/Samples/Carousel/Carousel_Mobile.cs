@@ -1,26 +1,17 @@
-#region Copyright Syncfusion Inc. 2001-2020.
+﻿#region Copyright Syncfusion Inc. 2001-2020.
 // Copyright Syncfusion Inc. 2001-2020. All rights reserved.
 // Use of this code is subject to the terms of our license.
 // A copy of the current license can be obtained at any time by e-mailing
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Util;
+using Android.Graphics;
 using Android.Views;
 using Android.Widget;
 using Com.Syncfusion.Carousel;
-
-using Java.Util;
-using Android.Graphics;
+using System;
+using System.Collections.Generic;
 
 
 namespace SampleBrowser
@@ -28,7 +19,7 @@ namespace SampleBrowser
     public class Carousel_Mobile
     {
         /*********************************
-         **Local Variable Inizialisation**
+         **Local Variable Initialization**
          *********************************/
         LinearLayout.LayoutParams lineParams, labelParams, entryParams, adjustParams, lineParams2;
         LinearLayout propertylayout, offSetStack, scaleStack, rotateStack;
@@ -80,7 +71,7 @@ namespace SampleBrowser
             return propertylayout;
         }
 
-       
+
         private void offsetLayout()
         {
             lineParams = new LinearLayout.LayoutParams(width * 2, 5);
@@ -115,9 +106,10 @@ namespace SampleBrowser
             offSetStack.AddView(offSet, entryParams);
             offSetStack.Orientation = Orientation.Horizontal;
             propertylayout.AddView(offSetStack);
-            
+
             //offSet TextChanged Listener
-            offSet.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
+            offSet.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) =>
+            {
                 if (offSet.Text.Length > 0)
                 {
                     int i = Convert.ToInt32(e.Text.ToString());
@@ -130,9 +122,9 @@ namespace SampleBrowser
 
             //lineParams
             lineParams2 = new LinearLayout.LayoutParams(width * 2, 5);
-            lineParams2.SetMargins(0, 20, 0, 0);      
-           
-          
+            lineParams2.SetMargins(0, 20, 0, 0);
+
+
         }
 
         private void ScaleOffsetLayout()
@@ -145,8 +137,8 @@ namespace SampleBrowser
             scaleStack = new LinearLayout(context);
             TextView centerLabel2 = new TextView(context);
 
-			TextView textSpacing = new TextView(context);
-			propertylayout.AddView(textSpacing);
+            TextView textSpacing = new TextView(context);
+            propertylayout.AddView(textSpacing);
 
             //scaleOffset
             scaleOffset = new EditText(context);
@@ -160,9 +152,10 @@ namespace SampleBrowser
             scaleStack.SetGravity(GravityFlags.Center);
             scaleStack.Orientation = Orientation.Horizontal;
             propertylayout.AddView(scaleStack);
-           
+
             //scaleOffset TextChanged Listener
-            scaleOffset.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
+            scaleOffset.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) =>
+            {
                 if (scaleOffset.Text.Length > 0)
                 {
                     float i = (float)Convert.ToDouble(e.Text.ToString());
@@ -173,8 +166,8 @@ namespace SampleBrowser
                 }
             };
 
-           
-   
+
+
         }
 
         private void RotationAngleLayout()
@@ -187,8 +180,8 @@ namespace SampleBrowser
             rotateStack = new LinearLayout(context);
             TextView centerLabel3 = new TextView(context);
 
-			TextView textSpacing = new TextView(context);
-			propertylayout.AddView(textSpacing);
+            TextView textSpacing = new TextView(context);
+            propertylayout.AddView(textSpacing);
 
             //RotateAngle
             RotateAngle = new EditText(context);
@@ -202,9 +195,10 @@ namespace SampleBrowser
             rotateStack.SetGravity(GravityFlags.Center);
             rotateStack.Orientation = Orientation.Horizontal;
             propertylayout.AddView(rotateStack);
-            
+
             //RotateAngle TextChanged Listener
-            RotateAngle.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
+            RotateAngle.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) =>
+            {
                 if (RotateAngle.Text.Length > 0)
                 {
                     int i = Convert.ToInt32(e.Text.ToString());
@@ -215,7 +209,7 @@ namespace SampleBrowser
                 }
             };
 
-         
+
             propertylayout.SetPadding(5, 0, 5, 0);
         }
 
@@ -235,20 +229,20 @@ namespace SampleBrowser
             placementLabel.Gravity = GravityFlags.Left;
             TextView adjLabel2 = new TextView(context);
             adjLabel2.SetHeight(14);
-        
+
 
             //tickSpinner
-            tickSpinner = new Spinner(context,SpinnerMode.Dialog);
+            tickSpinner = new Spinner(context, SpinnerMode.Dialog);
             tickSpinner.SetPadding(0, 0, 0, 0);
             propertylayout.AddView(placementLabel);
             SeparatorView separate = new SeparatorView(context, width * 2);
             separate.LayoutParameters = new ViewGroup.LayoutParams(width * 2, 5);
-          
+
 
             //adjLabel
             TextView adjLabel3 = new TextView(context);
             adjLabel3.SetHeight(20);
-           
+
             propertylayout.AddView(tickSpinner);
             TextView adjLabel4 = new TextView(context);
             propertylayout.AddView(adjLabel4);
@@ -269,12 +263,12 @@ namespace SampleBrowser
                 String selectedItem = dataAdapter.GetItem(e.Position);
                 if (selectedItem.Equals("Default"))
                 {
-                    
+
                     viewMode = ViewMode.Default;
                 }
                 else if (selectedItem.Equals("Linear"))
                 {
-                   
+
                     viewMode = ViewMode.Linear;
                 }
             };

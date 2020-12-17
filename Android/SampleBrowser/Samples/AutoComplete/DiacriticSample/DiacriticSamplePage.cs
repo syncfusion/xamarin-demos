@@ -5,16 +5,13 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using Android.Util;
-using System;
 using Android.Views;
-using SampleBrowser;
 using Android.Widget;
 using Com.Syncfusion.Autocomplete;
 
 namespace SampleBrowser
 {
-	public class DiacriticSamplePage : SamplePage
+    public class DiacriticSamplePage : SamplePage
 	{
 		LinearLayout mainLayout;
 		int width;

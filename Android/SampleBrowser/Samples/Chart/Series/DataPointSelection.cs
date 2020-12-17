@@ -5,18 +5,13 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using Android.App;
 using Android.Content;
-using Android.OS;
 using Android.Views;
 using Android.Widget;
 using Com.Syncfusion.Charts;
-using Com.Syncfusion.Charts.Enums;
 using Android.Graphics;
-using System.Collections.ObjectModel;
 using System.Collections.Generic;
 using System;
-using Com.Syncfusion.Navigationdrawer;
 
 namespace SampleBrowser
 {

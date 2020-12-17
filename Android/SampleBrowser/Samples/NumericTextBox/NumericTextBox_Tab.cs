@@ -1,4 +1,4 @@
-#region Copyright Syncfusion Inc. 2001-2016.
+﻿#region Copyright Syncfusion Inc. 2001-2016.
 // Copyright Syncfusion Inc. 2001-2016. All rights reserved.
 // Use of this code is subject to the terms of our license.
 // A copy of the current license can be obtained at any time by e-mailing
@@ -6,30 +6,25 @@
 // applicable laws. 
 #endregion
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Util;
-using Android.Views;
-using Android.Widget;
-using Com.Syncfusion.Numerictextbox;
 using Android.Graphics;
-using Android.Views.InputMethods;
 using Android.Text;
 using Android.Text.Style;
+using Android.Util;
+using Android.Views;
+using Android.Views.InputMethods;
+using Android.Widget;
+using Com.Syncfusion.Numerictextbox;
+using System;
+using System.Collections.Generic;
 
 namespace SampleBrowser
 {
     public class NumericTextBox_Tab : SamplePage
     {
         /*********************************
-         **Local Variable Inizialisation**
+         **Local Variable Initialization**
          *********************************/
         SfNumericTextBox principalAmountNumericTextBox, outputNumberTextBox, interestNumericTextBox, periodValueNumericTextBox;
         LinearLayout propertylayout, mainLayout;
@@ -41,7 +36,7 @@ namespace SampleBrowser
         bool allownull = true;
         int culturePosition = 0, numerHeight, width;
         bool allowNullPosition = true;
-        double actionBarHeight, navigationBarHeight,  totalHeight;
+        double actionBarHeight, navigationBarHeight, totalHeight;
         Context context, con;
         FrameLayout frame, mainFrameLayout;
         public override View GetSampleContent(Context con1)
@@ -55,8 +50,8 @@ namespace SampleBrowser
             TextView principalLabel = new TextView(con);
             principalLabel.LayoutParameters = new ViewGroup.LayoutParams(width / 2, numerHeight);
             principalLabel.Text = "Principal";
-			principalLabel.TextSize = 20;
-			principalAmountNumericTextBox = new SfNumericTextBox(con);
+            principalLabel.TextSize = 20;
+            principalAmountNumericTextBox = new SfNumericTextBox(con);
             principalAmountNumericTextBox.FormatString = "C";
             principalAmountNumericTextBox.LayoutParameters = new ViewGroup.LayoutParams(width / 2, numerHeight);
             principalAmountNumericTextBox.Value = 1000;
@@ -79,7 +74,7 @@ namespace SampleBrowser
             TextView interestLabel = new TextView(con);
             interestLabel.LayoutParameters = new ViewGroup.LayoutParams(width / 2, numerHeight);
             interestLabel.Text = "Interest Rate";
-			interestLabel.TextSize = 20;
+            interestLabel.TextSize = 20;
             interestNumericTextBox = new SfNumericTextBox(con);
             interestNumericTextBox.FormatString = "P";
             interestNumericTextBox.Value = 0.1;
@@ -103,7 +98,7 @@ namespace SampleBrowser
             TextView period = new TextView(con);
             period.LayoutParameters = new ViewGroup.LayoutParams(width / 2, numerHeight);
             period.Text = "Term";
-			period.TextSize = 20;
+            period.TextSize = 20;
             periodValueNumericTextBox = new SfNumericTextBox(con);
             periodValueNumericTextBox.FormatString = " years";
             periodValueNumericTextBox.Value = 20;
@@ -124,7 +119,7 @@ namespace SampleBrowser
             TextView outputLabel = new TextView(con);
             outputLabel.LayoutParameters = new ViewGroup.LayoutParams(width / 2, numerHeight);
             outputLabel.Text = "Interest";
-			outputLabel.TextSize = 20;
+            outputLabel.TextSize = 20;
             outputLabel.SetTextColor(Color.ParseColor("#66BB6A"));
             outputNumberTextBox = new SfNumericTextBox(con);
             outputNumberTextBox.FormatString = "c";
@@ -163,7 +158,7 @@ namespace SampleBrowser
             {
                 actionBarHeight = TypedValue.ComplexToDimensionPixelSize(tv.Data, con.Resources.DisplayMetrics);
             }
-           
+
             navigationBarHeight = getNavigationBarHeight(con);
             totalHeight = totalHeight - navigationBarHeight - actionBarHeight;
             numerHeight = getDimensionPixelSize(con, Resource.Dimension.numeric_txt_ht);
@@ -225,22 +220,26 @@ namespace SampleBrowser
         private void ValueChangeListener()
         {
             //numerictextbox Value Changed Listener
-            principalAmountNumericTextBox.ValueChanged += (object sender, ValueChangedEventArgs e) => {
-				if (e.Value != null && periodValueNumericTextBox.Value != null && interestNumericTextBox.Value != null)
-					outputNumberTextBox.Value = Double.Parse(e.Value.ToString()) * Double.Parse(periodValueNumericTextBox.Value.ToString()) * Double.Parse(interestNumericTextBox.Value.ToString());
+            principalAmountNumericTextBox.ValueChanged += (object sender, ValueChangedEventArgs e) =>
+            {
+                if (e.Value != null && periodValueNumericTextBox.Value != null && interestNumericTextBox.Value != null)
+                    outputNumberTextBox.Value = Double.Parse(e.Value.ToString()) * Double.Parse(periodValueNumericTextBox.Value.ToString()) * Double.Parse(interestNumericTextBox.Value.ToString());
 
             };
-            periodValueNumericTextBox.ValueChanged += (object sender, ValueChangedEventArgs e) => {
-				if (e.Value != null && principalAmountNumericTextBox.Value != null && interestNumericTextBox.Value != null)
+            periodValueNumericTextBox.ValueChanged += (object sender, ValueChangedEventArgs e) =>
+            {
+                if (e.Value != null && principalAmountNumericTextBox.Value != null && interestNumericTextBox.Value != null)
                     outputNumberTextBox.Value = Double.Parse(e.Value.ToString()) * Double.Parse(principalAmountNumericTextBox.Value.ToString()) * Double.Parse(interestNumericTextBox.Value.ToString());
 
             };
-            interestNumericTextBox.ValueChanged += (object sender, ValueChangedEventArgs e) => {
-				if (e.Value != null && principalAmountNumericTextBox.Value != null && periodValueNumericTextBox.Value != null)
-					outputNumberTextBox.Value = Double.Parse(e.Value.ToString()) * Double.Parse(principalAmountNumericTextBox.Value.ToString()) * Double.Parse(periodValueNumericTextBox.Value.ToString());
+            interestNumericTextBox.ValueChanged += (object sender, ValueChangedEventArgs e) =>
+            {
+                if (e.Value != null && principalAmountNumericTextBox.Value != null && periodValueNumericTextBox.Value != null)
+                    outputNumberTextBox.Value = Double.Parse(e.Value.ToString()) * Double.Parse(principalAmountNumericTextBox.Value.ToString()) * Double.Parse(periodValueNumericTextBox.Value.ToString());
 
             };
-            mainLayout.Touch += (object sender, View.TouchEventArgs e) => {
+            mainLayout.Touch += (object sender, View.TouchEventArgs e) =>
+            {
                 if (outputNumberTextBox.IsFocused || interestNumericTextBox.IsFocused || periodValueNumericTextBox.IsFocused || principalAmountNumericTextBox.IsFocused)
                 {
                     Rect outRect = new Rect();
@@ -416,7 +415,7 @@ namespace SampleBrowser
             culturetxt.LayoutParameters = new FrameLayout.LayoutParams((int)(totalWidth * 0.33), ViewGroup.LayoutParams.WrapContent, GravityFlags.Center);
             culturetxt.TextSize = 15;
             culturetxt.Text = "Culture";
-            cultureSpinner = new Spinner(context,SpinnerMode.Dialog);
+            cultureSpinner = new Spinner(context, SpinnerMode.Dialog);
             cultureSpinner.LayoutParameters = new FrameLayout.LayoutParams((int)(totalWidth * 0.33), ViewGroup.LayoutParams.WrapContent, GravityFlags.Center);
             List<String> cultureList = new List<String>();
             cultureList.Add("United States");
@@ -430,7 +429,8 @@ namespace SampleBrowser
             (Android.Resource.Layout.SimpleSpinnerDropDownItem);
             cultureSpinner.Adapter = cultureDataAdapter;
             cultureSpinner.SetSelection(culturePosition);
-            cultureSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) => {
+            cultureSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) =>
+            {
                 String selectedItem = cultureDataAdapter.GetItem(e.Position);
                 culturePosition = e.Position;
                 if (selectedItem.Equals("United States"))
@@ -481,7 +481,8 @@ namespace SampleBrowser
             allowNullCheckBox.Gravity = GravityFlags.Left;
             // allowNullCheckBox.LayoutParameters = new FrameLayout.LayoutParams((int)(totalWidth * 0.167), ViewGroup.LayoutParams.WrapContent, GravityFlags.Center);
             allowNullCheckBox.Checked = allowNullPosition;
-            allowNullCheckBox.CheckedChange += (object send, CompoundButton.CheckedChangeEventArgs eve) => {
+            allowNullCheckBox.CheckedChange += (object send, CompoundButton.CheckedChangeEventArgs eve) =>
+            {
                 if (!eve.IsChecked)
                     allownull = false;
                 else

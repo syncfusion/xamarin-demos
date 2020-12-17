@@ -5,16 +5,14 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using System;
 using Syncfusion.SfDataGrid;
 using Android.Views;
 using Android.Content.Res;
-using Android.Widget;
 using Android.Graphics;
 
 namespace SampleBrowser
 {
-	public class AutoRowHeight:SamplePage
+    public class AutoRowHeight:SamplePage
 	{
 		SfDataGrid sfGrid;
 		AutoRowHeightViewModel viewModel;

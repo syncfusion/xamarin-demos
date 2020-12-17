@@ -10,16 +10,14 @@ using System;
 using Android.Views;
 using Android.Graphics;
 using Com.Syncfusion.Treemap;
-using System.Collections.Generic;
 using Android.Widget;
 using Com.Syncfusion.Treemap.Enums;
 using Android.Content;
-using System.Collections.ObjectModel;
 using Org.Json;
 
 namespace SampleBrowser
 {
-	public class Hierarchical : SamplePage
+    public class Hierarchical : SamplePage
 	{
 		SfTreeMap tree;
 		Toast currentToast;

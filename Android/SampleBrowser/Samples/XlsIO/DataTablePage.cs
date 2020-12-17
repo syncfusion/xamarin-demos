@@ -9,20 +9,13 @@ using Syncfusion.XlsIO;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using COLOR = Syncfusion.Drawing;
-using System.Xml;
 using Android.Content;
 using Android.Views;
 using Android.Widget;
 using Android.Graphics;
-using SampleBrowser;
-using Android.App;
 using Syncfusion.SfDataGrid;
-using System.ComponentModel;
 using System.Data;
 
 namespace SampleBrowser

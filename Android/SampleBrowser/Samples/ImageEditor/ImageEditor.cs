@@ -12,11 +12,7 @@ using Android.Widget;
 using Android.OS;
 using Android.Graphics;
 using Android.Content;
-using Android.Provider;
-using Java.IO;
 using Android.Content.PM;
-using Android.Graphics.Drawables;
-using Android.Runtime;
 using Android.Views;
 
 

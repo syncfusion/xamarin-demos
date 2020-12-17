@@ -1,24 +1,17 @@
-#region Copyright Syncfusion Inc. 2001-2016.
+﻿#region Copyright Syncfusion Inc. 2001-2016.
 // Copyright Syncfusion Inc. 2001-2016. All rights reserved.
 // Use of this code is subject to the terms of our license.
 // A copy of the current license can be obtained at any time by e-mailing
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Android.App;
-using Android.OS;
-using Android.Runtime;
-using Android.Util;
+using Android.Content;
+using Android.Graphics;
 using Android.Views;
 using Android.Widget;
-using Android.Content;
 using Com.Syncfusion.Rotator;
-using System.Collections;
-using Android.Graphics;
+using System;
+using System.Collections.Generic;
 
 
 namespace SampleBrowser
@@ -29,9 +22,9 @@ namespace SampleBrowser
         {
         }
 
-       /*********************************
-        **Local Variable Inizialisation**
-        *********************************/
+        /*********************************
+         **Local Variable Initialization**
+         *********************************/
         SfRotator rotator;
         Context con;
         Spinner directionSpinner, tabStripSpinner, modeSpinner;
@@ -52,10 +45,10 @@ namespace SampleBrowser
             rotator.SelectedIndex = 2;
             rotator.EnableAutoPlay = false;
             rotator.SetBackgroundColor(Color.ParseColor("#ececec"));
-            
+
             //Images List
             List<SfRotatorItem> images = new List<SfRotatorItem>();
-            
+
             //Images Id List
             List<int> imageID = new List<int>();
             imageID.Add(Resource.Drawable.movie1);
@@ -92,23 +85,23 @@ namespace SampleBrowser
             TextView directionLabel = new TextView(context);
             directionLabel.Text = "Navigation Direction";
             directionLabel.TextSize = 20;
-            directionLabel.SetPadding(0,0,0,50);
+            directionLabel.SetPadding(0, 0, 0, 50);
             directionLabel.SetTextColor(Color.Black);
             directionLabel.Gravity = GravityFlags.Left;
 
             //directionSpinner
-            directionSpinner = new Spinner(context,SpinnerMode.Dialog);
+            directionSpinner = new Spinner(context, SpinnerMode.Dialog);
             directionSpinner.SetPadding(0, 0, 0, 0);
 
             //Direction List
             List<String> directionList = new List<String>();
             directionList.Add("Horizontal");
             directionList.Add("Vertical");
-            
+
             //Direction adapter
             directionAdapter = new ArrayAdapter<String>(context, Android.Resource.Layout.SimpleSpinnerItem, directionList);
             directionAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-           
+
             //Direction Spinner Item Selected Listener
             directionSpinner.Adapter = directionAdapter;
             directionSpinner.SetSelection(0);
@@ -130,19 +123,19 @@ namespace SampleBrowser
             //directionLayout
             LinearLayout directionLayout = new LinearLayout(context);
             directionLayout.Orientation = Android.Widget.Orientation.Vertical;
-            directionLayout.SetPadding(0,0,0,60);
+            directionLayout.SetPadding(0, 0, 0, 60);
             directionLayout.AddView(directionLabel);
             directionLayout.AddView(directionSpinner);
             proprtyOptionsLayout.AddView(directionLayout);
 
-           
+
         }
 
         private void StripPositionLayout()
         {
-            //Tap Position	
+            //Tap Position  
             TextView tabPoitionLabel = new TextView(context);
-            tabPoitionLabel.SetPadding(0,0,0,50);
+            tabPoitionLabel.SetPadding(0, 0, 0, 50);
             tabPoitionLabel.Text = "Navigation Strip Position";
             tabPoitionLabel.Gravity = GravityFlags.Left;
             tabPoitionLabel.TextSize = 20;
@@ -154,7 +147,7 @@ namespace SampleBrowser
             tabList.Add("Top");
             tabList.Add("Right");
             tabList.Add("Left");
-            tabStripSpinner = new Spinner(context,SpinnerMode.Dialog);
+            tabStripSpinner = new Spinner(context, SpinnerMode.Dialog);
 
             // Tap Adapter
             tabAdapter = new ArrayAdapter<String>(context, Android.Resource.Layout.SimpleSpinnerItem, tabList);
@@ -189,31 +182,31 @@ namespace SampleBrowser
             //tabPoitionLayout
             LinearLayout tabPoitionLayout = new LinearLayout(context);
             tabPoitionLayout.Orientation = Android.Widget.Orientation.Vertical;
-            tabPoitionLayout.SetPadding(0,0,0,60);
+            tabPoitionLayout.SetPadding(0, 0, 0, 60);
             tabPoitionLayout.AddView(tabPoitionLabel);
             tabPoitionLayout.AddView(tabStripSpinner);
             proprtyOptionsLayout.AddView(tabPoitionLayout);
 
-         
+
         }
 
         private void StripModeLayout()
         {
             //modeLabel
             TextView modeLabel = new TextView(context);
-            modeLabel.SetPadding(0,0,0,50);
+            modeLabel.SetPadding(0, 0, 0, 50);
             modeLabel.Text = "Navigation Strip Mode";
             modeLabel.Gravity = GravityFlags.Left;
             modeLabel.TextSize = 20;
             modeLabel.SetTextColor(Color.Black);
-            
+
             //Mode List
             List<String> modeList = new List<String>();
             modeList.Add("Dots");
             modeList.Add("Thumbnail");
-            
+
             //Mode Spinner Item Selected Listener
-            modeSpinner = new Spinner(context,SpinnerMode.Dialog);
+            modeSpinner = new Spinner(context, SpinnerMode.Dialog);
             modeSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) =>
             {
                 String selectedItem = modeAdapter.GetItem(e.Position);
@@ -236,12 +229,12 @@ namespace SampleBrowser
             //modeLayout
             LinearLayout modeLayout = new LinearLayout(context);
             modeLayout.Orientation = Android.Widget.Orientation.Vertical;
-            modeLayout.SetPadding(0,0,0,60);
+            modeLayout.SetPadding(0, 0, 0, 60);
             modeLayout.AddView(modeLabel);
             modeLayout.AddView(modeSpinner);
             proprtyOptionsLayout.AddView(modeLayout);
 
-           
+
         }
 
         private void EnableAutoPlayLayout()
@@ -263,9 +256,9 @@ namespace SampleBrowser
                 rotator.EnableAutoPlay = e.IsChecked;
             };
             ex.AddView(playSwitch);
-            ex.SetPadding(450,0,0,0);
+            ex.SetPadding(450, 0, 0, 0);
             LinearLayout autoPlayLayout = new LinearLayout(context);
-            autoPlayLayout.SetPadding(0,0,0,60);
+            autoPlayLayout.SetPadding(0, 0, 0, 60);
             autoPlayLayout.Orientation = Android.Widget.Orientation.Horizontal;
 
             autoPlayLayout.AddView(autoPlayLabel);
@@ -274,7 +267,7 @@ namespace SampleBrowser
 
 
         }
-       
+
     }
 }
 

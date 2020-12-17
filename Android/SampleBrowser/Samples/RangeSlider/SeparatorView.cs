@@ -6,23 +6,14 @@
 // applicable laws. 
 #endregion
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
 using Android.Util;
 using Android.Views;
-using Android.Widget;
 using Android.Graphics;
 
 namespace SampleBrowser
 {
-	public class SeparatorView : View
+    public class SeparatorView : View
 	{
 		float ScreenWidth;
 		public SeparatorView (Context context,float width) :

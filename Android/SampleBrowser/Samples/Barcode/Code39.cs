@@ -6,9 +6,6 @@
 // applicable laws. 
 #endregion
 
-using System;
-using System.Collections.Generic;
-
 using Android.Content;
 using Android.Views;
 using Android.Widget;
@@ -18,7 +15,7 @@ using Com.Syncfusion.Barcode.Enums;
 
 namespace SampleBrowser
 {
-	public class Code39 : SamplePage
+    public class Code39 : SamplePage
 	{
         SfBarcode barcode;
 

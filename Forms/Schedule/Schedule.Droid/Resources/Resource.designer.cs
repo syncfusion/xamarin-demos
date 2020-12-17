@@ -8,9 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("SampleBrowser.SfButton.Droid.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("SampleBrowser.SfSchedule.Droid.Resource", IsApplication=true)]
 
-namespace SampleBrowser.SfButton.Droid
+namespace SampleBrowser.SfSchedule.Droid
 {
 	
 	
@@ -43,14 +43,44 @@ namespace SampleBrowser.SfButton.Droid
 		public partial class Drawable
 		{
 			
-			// aapt resource value: 0x7F010001
-			public const int buttonbackground = 2130771969;
+			// aapt resource value: 0x7F01000C
+			public const int cake_schedule = 2130771980;
 			
 			// aapt resource value: 0x7F010000
-			public const int button_backgroundImage = 2130771968;
+			public const int Conference_schedule = 2130771968;
+			
+			// aapt resource value: 0x7F010001
+			public const int People_Circle1 = 2130771969;
 			
 			// aapt resource value: 0x7F010002
-			public const int icon = 2130771970;
+			public const int People_Circle12 = 2130771970;
+			
+			// aapt resource value: 0x7F010003
+			public const int People_Circle14 = 2130771971;
+			
+			// aapt resource value: 0x7F010004
+			public const int People_Circle2 = 2130771972;
+			
+			// aapt resource value: 0x7F010005
+			public const int People_Circle3 = 2130771973;
+			
+			// aapt resource value: 0x7F010006
+			public const int People_Circle4 = 2130771974;
+			
+			// aapt resource value: 0x7F010007
+			public const int People_Circle5 = 2130771975;
+			
+			// aapt resource value: 0x7F010008
+			public const int People_Circle6 = 2130771976;
+			
+			// aapt resource value: 0x7F010009
+			public const int People_Circle8 = 2130771977;
+			
+			// aapt resource value: 0x7F01000A
+			public const int Stethoscope = 2130771978;
+			
+			// aapt resource value: 0x7F01000B
+			public const int Troubleshoot = 2130771979;
 			
 			static Drawable()
 			{

@@ -12,13 +12,11 @@ using Com.Syncfusion.Schedule.Enums;
 using Android.Views;
 using Android.Widget;
 using Java.Util;
-using System.Collections.Generic;
 using Android.Graphics;
-using Java.Text;
 
 namespace SampleBrowser
 {
-	public class Recurrence : SamplePage, IDisposable
+    public class Recurrence : SamplePage, IDisposable
 	{
 		public Recurrence()
 		{

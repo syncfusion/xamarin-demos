@@ -6,7 +6,6 @@
 // applicable laws. 
 #endregion
 
-using Android.App;
 using Android.Util;
 using System;
 using System.Collections.Generic;
@@ -15,10 +14,8 @@ using Android.Content;
 using Android.Views;
 using Android.Widget;
 using Com.Syncfusion.Rating;
-using Android.Content.Res;
 
 using Android.Graphics;
-using Android.Views.InputMethods;
 
 namespace SampleBrowser
 {

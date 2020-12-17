@@ -6,8 +6,6 @@
 // applicable laws. 
 #endregion
 using Android.Graphics;
-using Com.Syncfusion.Charts;
-using Java.Util;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;

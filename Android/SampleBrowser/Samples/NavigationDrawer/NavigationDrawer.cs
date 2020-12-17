@@ -1,4 +1,4 @@
-#region Copyright Syncfusion Inc. 2001-2015.
+﻿#region Copyright Syncfusion Inc. 2001-2015.
 // Copyright Syncfusion Inc. 2001-2015. All rights reserved.
 // Use of this code is subject to the terms of our license.
 // A copy of the current license can be obtained at any time by e-mailing
@@ -11,13 +11,9 @@ using Android.Util;
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Graphics;
@@ -29,34 +25,34 @@ namespace SampleBrowser
     public class NavigationDrawer : SamplePage
     {
         /*********************************
-         **Local Variable Inizialisation**
+         **Local Variable Initialization**
          *********************************/
-        LinearLayout inboxLayout, mail1, mail2, mail3, mail4, mail9, mail10, mail11,mail18, mail19, mail20;
+        LinearLayout inboxLayout, mail1, mail2, mail3, mail4, mail9, mail10, mail11, mail18, mail19, mail20;
         LinearLayout secondaryDrawerLayout, Item1, Item2, Item3, Item4, Item5, Item6, Item7;
         LinearLayout ItemLayout1, ItemLayout2, ItemLayout3, ItemLayout4, ItemLayout5, ItemLayout6, ItemLayout7;
-        LinearLayout.LayoutParams layoutParams5, layoutParams,layoutParamsSecondaryDrawer;
+        LinearLayout.LayoutParams layoutParams5, layoutParams, layoutParamsSecondaryDrawer;
         SeparatorView separatorView1, separatorView2, separatorView3, separatorView4, separatorView5, separatorView6, separatorView7;
         SeparatorView labelSeparator4, labelSeparator3, labelSeparator5;
-        SeparatorView labelSeparator6, labelSeparator7, labelSeparator8, labelSeparator9,labelSeparator18, labelSeparator19, labelSeparator20;
+        SeparatorView labelSeparator6, labelSeparator7, labelSeparator8, labelSeparator9, labelSeparator18, labelSeparator19, labelSeparator20;
         LinearLayout outboxlayout, mail12, mail13, mail14, mail15, mail16, mail17;
         LinearLayout mail5, mail6, profilelayout, linear2;
         SeparatorView labelSeparator10, labelSeparator11, labelSeparator12, labelSeparator13;
         SeparatorView labelSeparator14, labelSeparator15, labelSeparator16, labelSeparator17;
-        Button iconbutton,iconbutton1;
+        Button iconbutton, iconbutton1;
         ListView viewItem;
         SfNavigationDrawer slideDrawer;
         DrawerSettings drawerSettings;
         LinearLayout propertylayout;
         ArrayAdapter<String> dataAdapter, dataAdapter1, arrayAdapter, dataAdapter2, dataAdapter3;
-        Spinner positionSpinner,positionSpinner1, animationSpinner, animationSpinner1;
-        Position sliderposition = Position.Left,sliderposition1 = Position.Right;
-        Transition sliderTransition = Transition.SlideOnTop,sliderTransition1 = Transition.SlideOnTop;
+        Spinner positionSpinner, positionSpinner1, animationSpinner, animationSpinner1;
+        Position sliderposition = Position.Left, sliderposition1 = Position.Right;
+        Transition sliderTransition = Transition.SlideOnTop, sliderTransition1 = Transition.SlideOnTop;
         Context context;
         int height, width;
-        double actionBarHeight;   
-        TextView profileContentLabel;       
+        double actionBarHeight;
+        TextView profileContentLabel;
         FrameLayout ContentFrame;
-        ScrollView textScroller,textScroller1, textScroller2;              
+        ScrollView textScroller, textScroller1, textScroller2;
 
         public override void OnApplyChanges()
         {
@@ -66,9 +62,9 @@ namespace SampleBrowser
             slideDrawer.SecondaryDrawerSettings.Position = sliderposition1;
             slideDrawer.SecondaryDrawerSettings.Transition = sliderTransition1;
         }
-       
+
         public override View GetPropertyWindowLayout(Context context)
-        {          
+        {
             int width = (context.Resources.DisplayMetrics.WidthPixels) / 2;
             propertylayout = new LinearLayout(context);
             propertylayout.Orientation = Orientation.Vertical;
@@ -91,7 +87,7 @@ namespace SampleBrowser
             TextView cultureLabel1 = new TextView(context);
             cultureLabel1.TextSize = 20;
             cultureLabel1.Text = " Secondary Drawer Position";
-           
+
             //positionlist
             List<String> positionlist = new List<String>();
             positionlist.Add("Left");
@@ -114,10 +110,11 @@ namespace SampleBrowser
             dataAdapter2.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
 
             //positionSpinner
-            positionSpinner = new Spinner(context,SpinnerMode.Dialog);
+            positionSpinner = new Spinner(context, SpinnerMode.Dialog);
             positionSpinner.SetGravity(GravityFlags.Left);
             positionSpinner.Adapter = dataAdapter;
-            positionSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) => {
+            positionSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) =>
+            {
                 String selectedItem = dataAdapter.GetItem(e.Position);
                 if (selectedItem.Equals("Left"))
                 {
@@ -140,7 +137,8 @@ namespace SampleBrowser
             positionSpinner1 = new Spinner(context, SpinnerMode.Dialog);
             positionSpinner1.SetGravity(GravityFlags.Left);
             positionSpinner1.Adapter = dataAdapter2;
-            positionSpinner1.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) => {
+            positionSpinner1.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) =>
+            {
                 String selectedItem = dataAdapter2.GetItem(e.Position);
                 if (selectedItem.Equals("Left"))
                 {
@@ -178,12 +176,12 @@ namespace SampleBrowser
             //cultureLabel1
             TextView cultureLabel1 = new TextView(context);
             cultureLabel1.TextSize = 20;
-            cultureLabel1.Text = "Default Drawer Animations";   
+            cultureLabel1.Text = "Default Drawer Animations";
 
             //cultureLabel2
             TextView cultureLabel2 = new TextView(context);
             cultureLabel2.TextSize = 20;
-            cultureLabel2.Text = "Secondary Drawer Animations";           
+            cultureLabel2.Text = "Secondary Drawer Animations";
 
             //transitionlist
             List<String> transitionlist = new List<String>();
@@ -207,9 +205,10 @@ namespace SampleBrowser
             dataAdapter3.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem); ;
 
             //animationSpinner
-            animationSpinner = new Spinner(context,SpinnerMode.Dialog);
+            animationSpinner = new Spinner(context, SpinnerMode.Dialog);
             animationSpinner.SetGravity(GravityFlags.Left);
-            animationSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) => {
+            animationSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) =>
+            {
                 String selectedItem = dataAdapter1.GetItem(e.Position);
                 if (selectedItem.Equals("SlideOnTop"))
                 {
@@ -227,7 +226,8 @@ namespace SampleBrowser
 
             animationSpinner1 = new Spinner(context, SpinnerMode.Dialog);
             animationSpinner1.SetGravity(GravityFlags.Left);
-            animationSpinner1.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) => {
+            animationSpinner1.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) =>
+            {
                 String selectedItem = dataAdapter3.GetItem(e.Position);
                 if (selectedItem.Equals("SlideOnTop"))
                 {
@@ -243,8 +243,8 @@ namespace SampleBrowser
                 }
             };
 
-			TextView textSpacing = new TextView(context);
-			propertylayout.AddView(textSpacing);
+            TextView textSpacing = new TextView(context);
+            propertylayout.AddView(textSpacing);
 
             animationSpinner.Adapter = dataAdapter1;
             animationSpinner1.Adapter = dataAdapter3;
@@ -261,13 +261,13 @@ namespace SampleBrowser
 
             propertylayout.SetPadding(5, 0, 5, 0);
         }
-      
+
         public override View GetSampleContent(Context context1)
         {
             context = context1;
             IconButtonLayout();
             HomeContentLayout();
-            MainContentLayout();          
+            MainContentLayout();
             ProfileContentLayout();
             InboxContentLayout();
             SecondaryDrawerLayout();
@@ -306,7 +306,7 @@ namespace SampleBrowser
             }
             iconbutton1.Gravity = GravityFlags.CenterVertical;
         }
-       
+
         private void HomeContentLayout()
         {
             //HomeLabel
@@ -341,7 +341,7 @@ namespace SampleBrowser
             FrameLayout.LayoutParams layout2 = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.WrapContent, GravityFlags.Center);
             linear2.AddView(linearLayout, layout2);
         }
-       
+
         private void MainContentLayout()
         {
             //textScroller
@@ -405,11 +405,13 @@ namespace SampleBrowser
             slideDrawer.LayoutParameters = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.MatchParent);
             viewItem = new ListView(context);
             viewItem.VerticalScrollBarEnabled = true;
-            iconbutton.Click += (object sender, EventArgs e) => {
+            iconbutton.Click += (object sender, EventArgs e) =>
+            {
                 slideDrawer.ToggleDrawer();
             };
 
-            iconbutton1.Click += (object sender, EventArgs e) => {
+            iconbutton1.Click += (object sender, EventArgs e) =>
+            {
                 slideDrawer.ToggleSecondaryDrawer();
             };
 
@@ -436,7 +438,7 @@ namespace SampleBrowser
             frameLayout.AddView(contentLayout);
             slideDrawer.DrawerContentView = frameLayout;
         }
-       
+
         private void ProfileContentLayout()
         {
             //profilelayout
@@ -495,7 +497,7 @@ namespace SampleBrowser
             profilelayout.SetBackgroundColor(Color.White);
         }
 
-        
+
         private void InboxContentLayout()
         {
             LinearLayout ContentLayout = new LinearLayout(context);
@@ -1304,7 +1306,7 @@ namespace SampleBrowser
             drawerSettings.DrawerContentView = textScroller1;
             slideDrawer.SecondaryDrawerSettings = drawerSettings;
         }
-       
+
         private void OutBoxLayout()
         {
             //outboxlayout
@@ -1361,7 +1363,7 @@ namespace SampleBrowser
             mail12.AddView(messageLabel10);
             labelSeparator11 = new SeparatorView(context, width * 2);
             labelSeparator11.separatorColor = Color.LightGray;
-            labelSeparator11.LayoutParameters = (new ViewGroup.LayoutParams(width * 2, 3));          
+            labelSeparator11.LayoutParameters = (new ViewGroup.LayoutParams(width * 2, 3));
             mail12.Orientation = Orientation.Vertical;
             mail12.Orientation = (Orientation.Vertical);
             mail5.Orientation = Orientation.Vertical;
@@ -1509,7 +1511,8 @@ namespace SampleBrowser
             textScroller2.LayoutParameters = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.MatchParent);
 
             //Item click Listener
-            viewItem.ItemClick += (object sender, AdapterView.ItemClickEventArgs e) => {
+            viewItem.ItemClick += (object sender, AdapterView.ItemClickEventArgs e) =>
+            {
                 String selectedItem = arrayAdapter.GetItem(e.Position);
                 if (selectedItem.Equals("Home"))
                 {

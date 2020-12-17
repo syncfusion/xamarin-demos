@@ -5,13 +5,12 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using System;
 using Syncfusion.SfDataGrid;
 using Android.Graphics;
 
 namespace SampleBrowser
 {
-	public class Blue : DataGridStyle
+    public class Blue : DataGridStyle
 	{
 		public Blue ()
 		{

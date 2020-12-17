@@ -1,4 +1,4 @@
-#region Copyright Syncfusion Inc. 2001-2016.
+﻿#region Copyright Syncfusion Inc. 2001-2016.
 // Copyright Syncfusion Inc. 2001-2016. All rights reserved.
 // Use of this code is subject to the terms of our license.
 // A copy of the current license can be obtained at any time by e-mailing
@@ -11,28 +11,20 @@ using Com.Syncfusion.Numericupdown;
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Util;
 using Android.Views;
 using Android.Widget;
-using Com.Syncfusion.Numerictextbox;
 using Android.Graphics;
 using Android.Views.InputMethods;
-using Android.Text;
-using Android.Text.Style;
 
 namespace SampleBrowser
 {
     public class NumericUpDown_Mobile
     {
         /*********************************
-         **Local Variable Inizialisation**
+         **Local Variable Initialization**
          *********************************/
         LinearLayout propertylayout, autoReverseLayout, minimumValueLayout, maximumValueLayout, fontSizeLayOut, selectAllOnFocusLayout;
         ArrayAdapter<String> spinButtonDataAdapter;
@@ -46,20 +38,20 @@ namespace SampleBrowser
         TextView adultText, infantsText;
         Context context;
         int width;
-		GravityFlags gravity=GravityFlags.CenterVertical;
+        GravityFlags gravity = GravityFlags.CenterVertical;
         public View GetSampleContent(Context con)
         {
-            
+
             int width = con.Resources.DisplayMetrics.WidthPixels - 40;
-            float density = con.Resources.DisplayMetrics.Density;                                
+            float density = con.Resources.DisplayMetrics.Density;
             int numerHeight = (int)(density * 55);
-			if (density >= 3)
-			{
-				numerHeight = (int)(density * 65);
-			}
+            if (density >= 3)
+            {
+                numerHeight = (int)(density * 65);
+            }
 
             SamplePageContent(con);
-           
+
             //AdultNumericUpDown
             adultNumericUpDown = new SfNumericUpDown(con);
             adultNumericUpDown.FontSize = 18;
@@ -72,12 +64,12 @@ namespace SampleBrowser
             adultNumericUpDown.AutoReverse = false;
             adultNumericUpDown.MaximumDecimalDigits = 0;
             adultNumericUpDown.StepValue = 1;
-                  
+
             //InfantsNumericUpDown
             infantsNumericUpDown = new SfNumericUpDown(con);
             infantsNumericUpDown.FontSize = 18;
-			infantsNumericUpDown.TextGravity = GravityFlags.CenterVertical;
-			infantsNumericUpDown.LayoutParameters = new ViewGroup.LayoutParams(width, numerHeight);
+            infantsNumericUpDown.TextGravity = GravityFlags.CenterVertical;
+            infantsNumericUpDown.LayoutParameters = new ViewGroup.LayoutParams(width, numerHeight);
             infantsNumericUpDown.Minimum = 0;
             infantsNumericUpDown.Maximum = 100;
             infantsNumericUpDown.Value = 2;
@@ -104,14 +96,15 @@ namespace SampleBrowser
             LinearLayout mainLayout = new LinearLayout(con);
             mainLayout.LayoutParameters = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent);
             mainLayout.SetGravity(GravityFlags.FillVertical);
-            mainLayout.Orientation = Orientation.Vertical;      
+            mainLayout.Orientation = Orientation.Vertical;
             mainLayout.AddView(adultText);
             mainLayout.AddView(adultNumericUpDown);
             mainLayout.AddView(infantsText);
             mainLayout.AddView(infantsNumericUpDown);
 
             //MainLayout Touch Event
-            mainLayout.Touch += (object sender, View.TouchEventArgs e) => {
+            mainLayout.Touch += (object sender, View.TouchEventArgs e) =>
+            {
                 if (adultNumericUpDown.IsFocused || infantsNumericUpDown.IsFocused)
                 {
                     Rect outRect = new Rect();
@@ -130,7 +123,7 @@ namespace SampleBrowser
             return mainLayout;
         }
 
-        
+
         private void SamplePageContent(Context con)
         {
             //AdultText
@@ -144,7 +137,7 @@ namespace SampleBrowser
             infantsText.Text = "Number of infants";
             infantsText.TextSize = 18;
         }
-    
+
         //Apply Changes Method
         public void OnApplyChanges()
         {
@@ -155,8 +148,8 @@ namespace SampleBrowser
             adultNumericUpDown.AutoReverse = autoReverse;
             adultNumericUpDown.SelectAllOnFocus = selectAllOnFocus;
             adultNumericUpDown.SpinButtonAlignment = spinButtonAlignment;
-			adultNumericUpDown.TextGravity = gravity;
-           
+            adultNumericUpDown.TextGravity = gravity;
+
             //infantsNumericUpDown
             infantsNumericUpDown.Minimum = minimumValue;
             infantsNumericUpDown.Maximum = maximumValue;
@@ -164,18 +157,18 @@ namespace SampleBrowser
             infantsNumericUpDown.AutoReverse = autoReverse;
             infantsNumericUpDown.SelectAllOnFocus = selectAllOnFocus;
             infantsNumericUpDown.SpinButtonAlignment = spinButtonAlignment;
-			infantsNumericUpDown.TextGravity = gravity;
+            infantsNumericUpDown.TextGravity = gravity;
 
             maxNegative = minNegative = fontsizeNegative = false;
         }
-      
+
         public View GetPropertyWindowLayout(Context context1)
         {
             context = context1;
             width = (context.Resources.DisplayMetrics.WidthPixels) / 2;
             propertylayout = new LinearLayout(context);
             propertylayout.Orientation = Orientation.Vertical;
-           
+
             MinimumLayout();
             MaximumLayout();
             FontSizeLayout();
@@ -307,7 +300,7 @@ namespace SampleBrowser
             minimumSeparate.LayoutParameters = new ViewGroup.LayoutParams(width * 2, 5);
             LinearLayout.LayoutParams minimumLayoutParams = new LinearLayout.LayoutParams(width * 2, 5);
             minimumLayoutParams.SetMargins(0, 20, 15, 0);
-           // propertylayout.AddView(minimumSeparate, minimumLayoutParams);
+            // propertylayout.AddView(minimumSeparate, minimumLayoutParams);
         }
 
         private void MaximumLayout()
@@ -356,8 +349,8 @@ namespace SampleBrowser
                 ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent);
             maximumLabelLayoutParams.SetMargins(0, 10, 0, 0);
 
-			TextView textSpacing = new TextView(context);
-			propertylayout.AddView(textSpacing);
+            TextView textSpacing = new TextView(context);
+            propertylayout.AddView(textSpacing);
             //MaximumValueLayout
             maximumValueLayout = new LinearLayout(context);
             maximumValueLayout.AddView(maximumLabel, maximumLabelLayoutParams);
@@ -370,7 +363,7 @@ namespace SampleBrowser
             maximumSeparate.LayoutParameters = new ViewGroup.LayoutParams(width * 2, 5);
             LinearLayout.LayoutParams maximumLayoutParams = new LinearLayout.LayoutParams(width * 2, 5);
             maximumLayoutParams.SetMargins(0, 20, 15, 0);
-           // propertylayout.AddView(maximumSeparate, maximumLayoutParams);
+            // propertylayout.AddView(maximumSeparate, maximumLayoutParams);
         }
 
         private void SpinButtonLayout()
@@ -396,28 +389,29 @@ namespace SampleBrowser
             spinButtonDataAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
 
             //SpinButtonSpinner
-            spinButtonSpinner = new Spinner(context,SpinnerMode.Dialog);
+            spinButtonSpinner = new Spinner(context, SpinnerMode.Dialog);
             spinButtonSpinner.Adapter = spinButtonDataAdapter;
 
-			TextView textSpacing = new TextView(context);
-			propertylayout.AddView(textSpacing);
+            TextView textSpacing = new TextView(context);
+            propertylayout.AddView(textSpacing);
             //SpinButtonSpinner ItemSelected Listener
-            spinButtonSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) => {
+            spinButtonSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) =>
+            {
                 String selectedItem = spinButtonDataAdapter.GetItem(e.Position);
                 if (selectedItem.Equals("Right"))
                 {
                     spinButtonAlignment = SpinButtonAlignment.Right;
-					gravity = GravityFlags.CenterVertical;
+                    gravity = GravityFlags.CenterVertical;
                 }
                 if (selectedItem.Equals("Left"))
                 {
                     spinButtonAlignment = SpinButtonAlignment.Left;
-					gravity=GravityFlags.End | GravityFlags.CenterVertical;
+                    gravity = GravityFlags.End | GravityFlags.CenterVertical;
                 }
                 if (selectedItem.Equals("Both"))
                 {
                     spinButtonAlignment = SpinButtonAlignment.Both;
-					gravity = GravityFlags.Center;
+                    gravity = GravityFlags.Center;
                 }
             };
             propertylayout.AddView(spinButtonText);
@@ -426,7 +420,7 @@ namespace SampleBrowser
             //SpinButtonSeparate
             SeparatorView spinButtonSeparate = new SeparatorView(context, width * 2);
             spinButtonSeparate.LayoutParameters = new ViewGroup.LayoutParams(width * 2, 5);
-           // propertylayout.AddView(spinButtonSeparate, spinButtonLayoutParams);
+            // propertylayout.AddView(spinButtonSeparate, spinButtonLayoutParams);
         }
 
         private void AutoReverseLayout()
@@ -442,7 +436,8 @@ namespace SampleBrowser
             //AutoReverseCheckBox
             Switch autoReverseCheckBox = new Switch(context);
             autoReverseCheckBox.Checked = false;
-            autoReverseCheckBox.CheckedChange += (object send, CompoundButton.CheckedChangeEventArgs eve) => {
+            autoReverseCheckBox.CheckedChange += (object send, CompoundButton.CheckedChangeEventArgs eve) =>
+            {
                 if (!eve.IsChecked)
                     autoReverse = false;
                 else
@@ -455,8 +450,8 @@ namespace SampleBrowser
                 ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent);
             autoReverseTextLayoutParams.SetMargins(0, 10, 0, 0);
 
-			TextView textSpacing = new TextView(context);
-			propertylayout.AddView(textSpacing);
+            TextView textSpacing = new TextView(context);
+            propertylayout.AddView(textSpacing);
             //AutoReverseLayout
             autoReverseLayout = new LinearLayout(context);
             autoReverseLayout.AddView(autoReverseText, autoReverseTextLayoutParams);
@@ -469,7 +464,7 @@ namespace SampleBrowser
             autoReverseSeparate.LayoutParameters = new ViewGroup.LayoutParams(width * 2, 5);
             LinearLayout.LayoutParams autoReverseLayoutParams = new LinearLayout.LayoutParams(width * 2, 5);
             autoReverseLayoutParams.SetMargins(0, 20, 15, 0);
-           // propertylayout.AddView(autoReverseSeparate, autoReverseLayoutParams);
+            // propertylayout.AddView(autoReverseSeparate, autoReverseLayoutParams);
             propertylayout.SetPadding(20, 20, 20, 20);
         }
 
@@ -486,7 +481,8 @@ namespace SampleBrowser
             //SelectAllOnFocusCheckBox
             Switch selectAllOnFocusCheckBox = new Switch(context);
             selectAllOnFocusCheckBox.Checked = false;
-            selectAllOnFocusCheckBox.CheckedChange += (object send, CompoundButton.CheckedChangeEventArgs eve) => {
+            selectAllOnFocusCheckBox.CheckedChange += (object send, CompoundButton.CheckedChangeEventArgs eve) =>
+            {
                 if (!eve.IsChecked)
                     selectAllOnFocus = false;
                 else

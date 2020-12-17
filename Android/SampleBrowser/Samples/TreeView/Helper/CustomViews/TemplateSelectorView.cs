@@ -6,13 +6,10 @@
 // applicable laws. 
 #endregion
 using Android.Content;
-using Android.Graphics;
 using Android.Views;
 using Android.Widget;
 using System;
 using Syncfusion.Android.TreeView;
-using Android.Util;
-using Android.Runtime;
 
 namespace SampleBrowser
 {

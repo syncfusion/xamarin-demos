@@ -5,11 +5,7 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using System;
 using Syncfusion.SfDataGrid;
-using Android.App;
-using Android.Graphics;
-using Android.OS;
 using Android.Views;
 using Android.Widget;
 using System.Globalization;
@@ -18,7 +14,7 @@ using System.ComponentModel;
 
 namespace SampleBrowser
 {
-	public class Sorting:SamplePage
+    public class Sorting:SamplePage
 	{
 		SfDataGrid sfGrid;
 		SortingViewModel viewModel;

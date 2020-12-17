@@ -5,7 +5,6 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using System;
 using Com.Syncfusion.Maps;
 using Android.Graphics;
 using Android.Views;
@@ -13,7 +12,7 @@ using Android.Widget;
 
 namespace SampleBrowser
 {
-	public class PopulationMarker : MapMarker
+    public class PopulationMarker : MapMarker
 	{
 		public PopulationMarker (Android.Content.Context con)
 		{

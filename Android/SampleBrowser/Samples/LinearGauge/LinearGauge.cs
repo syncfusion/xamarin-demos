@@ -6,21 +6,16 @@
 // applicable laws. 
 #endregion
 
-using Android.Util;
-using System;
 using Android.Views;
 using Com.Syncfusion.Gauges.SfLinearGauge;
 using Android.Widget;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
 using System.Collections.ObjectModel;
 using Android.Graphics;
 
 
 namespace SampleBrowser
 {
-	public class LinearGauge : SamplePage
+    public class LinearGauge : SamplePage
 	{
         public static int pointervalue = 10;
 

@@ -8,17 +8,12 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using Android.Content;
 using Android.Views;
 using Android.Widget;
-using Android.Graphics;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIO;
-using Syncfusion.Drawing;
 using Syncfusion.OfficeChart;
 using System.Xml;
 

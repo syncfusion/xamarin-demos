@@ -7,11 +7,7 @@
 #endregion
 using Syncfusion.XlsIO;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Android.Content;
 using Android.Views;
 using Android.Widget;

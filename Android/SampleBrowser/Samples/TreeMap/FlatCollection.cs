@@ -14,7 +14,6 @@ using Android.Graphics;
 using Com.Syncfusion.Treemap;
 using System.Collections.Generic;
 using Android.Widget;
-using Com.Syncfusion.Treemap.Enums;
 using Android.Content;
 using Range = Com.Syncfusion.Treemap.Range;
 

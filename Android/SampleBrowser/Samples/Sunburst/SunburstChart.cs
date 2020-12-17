@@ -5,15 +5,11 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using Android.App;
 using Android.Content;
 using Android.Graphics;
-using Android.OS;
 using Android.Views;
 using Android.Widget;
-using System;
 using Syncfusion.SfSunburstChart.Android;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Android.Runtime;
 

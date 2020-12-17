@@ -6,7 +6,6 @@
 // applicable laws. 
 #endregion
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 
 namespace SampleBrowser
 {

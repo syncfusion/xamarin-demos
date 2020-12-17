@@ -1,4 +1,4 @@
-#region Copyright Syncfusion Inc. 2001-2016.
+﻿#region Copyright Syncfusion Inc. 2001-2016.
 // Copyright Syncfusion Inc. 2001-2016. All rights reserved.
 // Use of this code is subject to the terms of our license.
 // A copy of the current license can be obtained at any time by e-mailing
@@ -6,23 +6,21 @@
 // applicable laws. 
 #endregion
 
-using System;
-using System.Collections.Generic;
-
 using Android.Content;
+using Android.Graphics;
 using Android.Views;
 using Android.Widget;
 using Com.Syncfusion.Sfbusyindicator;
-using Android.Graphics;
 using Com.Syncfusion.Sfbusyindicator.Enums;
-using Android.Util;
+using System;
+using System.Collections.Generic;
 
 namespace SampleBrowser
 {
     public class BusyIndicator_Tab : SamplePage
     {
         /*********************************
-         **Local Variable Inizialisation**
+         **Local Variable Initialization**
          *********************************/
         int animationSpinnerPosition = 0, totalWidth = 0;
         SfBusyIndicator sfBusyIndicator;
@@ -39,13 +37,13 @@ namespace SampleBrowser
 
             showBusyText = new TextView(context1);
             showBusyText.TextSize = 20;
-            showBusyText.SetPadding(0,0,0,20);
+            showBusyText.SetPadding(0, 0, 0, 20);
             showBusyText.Text = "Animation Types";
             showBusySpinner = new Spinner(context1, SpinnerMode.Dialog);
 
             //View Mode List
             List<String> animationList = new List<String>();
-         
+
             animationList.Add("Ball");
             animationList.Add("Battery");
             animationList.Add("DoubleCircle");
@@ -60,7 +58,7 @@ namespace SampleBrowser
             animationList.Add("SlicedCircle");
             animationList.Add("ZoomingTarget");
             animationList.Add("Gear");
-        
+
 
             //Data Adapter
             ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(context1, Android.Resource.Layout.SimpleSpinnerItem, animationList);
@@ -76,7 +74,7 @@ namespace SampleBrowser
             context1 = context;
             width = (context.Resources.DisplayMetrics.WidthPixels) / 2;
             showBusyLayout();
-           
+
             /******************
              **propertylayout**
              ******************/
@@ -89,16 +87,16 @@ namespace SampleBrowser
             LinearLayout propertylayout = new LinearLayout(context);
             propertylayout.Orientation = Orientation.Vertical;
             propertylayout.AddView(showBusyText);
-            showBusyText.SetPadding(0,10,0,30);
+            showBusyText.SetPadding(0, 10, 0, 30);
             propertylayout.AddView(showBusySpinner);
-          
+
             return propertylayout;
         }
-       
+
         public override View GetSampleContent(Context con1)
         {
             con = con1;
-           
+
             //sfBusyIndicator
             sfBusyIndicator = new SfBusyIndicator(con);
             sfBusyIndicator.IsBusy = true;
@@ -115,13 +113,13 @@ namespace SampleBrowser
             return mainView;
         }
 
-       
+
         private void AnimationModeLayout()
         {
             /*********************
              **Animation Mode**
              *********************/
-            animationSpinner = new Spinner(con,SpinnerMode.Dialog);
+            animationSpinner = new Spinner(con, SpinnerMode.Dialog);
             animationSpinner.LayoutParameters = new FrameLayout.LayoutParams((int)(totalWidth * 0.33), ViewGroup.LayoutParams.WrapContent, GravityFlags.Center);
             animationSpinner.SetMinimumHeight(60);
             animationSpinner.DropDownWidth = 500;
@@ -143,8 +141,8 @@ namespace SampleBrowser
             animationList.Add("SingleCircle");
             animationList.Add("SlicedCircle");
             animationList.Add("ZoomingTarget");
-			animationList.Add("Gear");
-		
+            animationList.Add("Gear");
+
 
             //Data Adapter
             ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>
@@ -159,7 +157,7 @@ namespace SampleBrowser
             animationTypeText.TextSize = 15;
             animationTypeText.Text = "Animation Types";
         }
-    
+
         /*****************************************
          **Animation Spinner ItemSelected Method**
          *****************************************/
@@ -248,15 +246,15 @@ namespace SampleBrowser
                 sfBusyIndicator.TextColor = Color.ParseColor("#ED8F3C");
                 sfBusyIndicator.AnimationType = AnimationTypes.ZoomingTarget;
             }
-			else if (selectedItem.Equals("Gear"))
-			{
-				sfBusyIndicator.Duration = 1500;
-				sfBusyIndicator.TextColor = Color.Gray;
-				sfBusyIndicator.AnimationType = AnimationTypes.GearBox;
-			}
-		
+            else if (selectedItem.Equals("Gear"))
+            {
+                sfBusyIndicator.Duration = 1500;
+                sfBusyIndicator.TextColor = Color.Gray;
+                sfBusyIndicator.AnimationType = AnimationTypes.GearBox;
+            }
+
         }
-     
+
     }
 }
 

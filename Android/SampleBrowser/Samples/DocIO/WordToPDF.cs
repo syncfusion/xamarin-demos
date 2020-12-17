@@ -5,29 +5,20 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.OfficeChart;
 using Syncfusion.DocIORenderer;
 using Syncfusion.Pdf;
 using System.IO;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using Android.Content;
 using Android.Views;
 using Android.Widget;
-using Android.Graphics;
-using Android.Webkit;
-using Android.App;
-using Android.OS;
 
 namespace SampleBrowser
 {
-	public partial class WordToPDF : SamplePage
+    public partial class WordToPDF : SamplePage
     {
         private Context m_context;
         public override View GetSampleContent(Context con)

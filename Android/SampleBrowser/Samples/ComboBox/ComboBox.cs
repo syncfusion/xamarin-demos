@@ -8,7 +8,6 @@
 using Android.Util;
 using System;
 using Android.Views;
-using SampleBrowser;
 using Android.Widget;
 using Android.Graphics;
 using Syncfusion.Android.ComboBox;
@@ -16,7 +15,7 @@ using System.Collections.Generic;
 
 namespace SampleBrowser
 {
-	public class ComboBox : SamplePage
+    public class ComboBox : SamplePage
 	{
 		public ComboBox()
 		{

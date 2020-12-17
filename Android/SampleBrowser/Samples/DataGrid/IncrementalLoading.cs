@@ -5,7 +5,6 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using System;
 using Syncfusion.SfDataGrid;
 using Android.Views;
 using System.Globalization;
@@ -13,7 +12,7 @@ using Android.Graphics;
 
 namespace SampleBrowser
 {
-	public class IncrementalLoading:SamplePage
+    public class IncrementalLoading:SamplePage
 	{
 		SfDataGrid sfGrid;
 		IncrementalLoadingViewModel viewModel;

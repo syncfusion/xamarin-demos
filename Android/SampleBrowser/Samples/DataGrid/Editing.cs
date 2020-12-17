@@ -8,7 +8,6 @@
 using Android.Content;
 using Android.Views;
 using Syncfusion.SfDataGrid;
-using System.Globalization;
 
 
 namespace SampleBrowser

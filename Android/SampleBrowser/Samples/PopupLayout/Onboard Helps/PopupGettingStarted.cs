@@ -12,18 +12,9 @@ using System.Globalization;
 using Syncfusion.Android.PopupLayout;
 using Android.Widget;
 using Android.Views.Animations;
-using Android;
-using System.Reflection;
-using System.Linq;
 using Android.Graphics;
-using Android.Animation;
-using Java.Util;
 using System.Threading.Tasks;
 using Android.Content;
-using Android.Graphics.Drawables;
-using Android.Text.Method;
-using Android.Runtime;
-using Android.Text;
 
 namespace SampleBrowser
 {

@@ -1,4 +1,4 @@
-#region Copyright Syncfusion Inc. 2001 - 2020
+﻿#region Copyright Syncfusion Inc. 2001 - 2020
 // Copyright Syncfusion Inc. 2001 - 2020. All rights reserved.
 // Use of this code is subject to the terms of our license.
 // A copy of the current license can be obtained at any time by e-mailing
@@ -6,36 +6,26 @@
 // applicable laws. 
 #endregion
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
+using Android.Graphics;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Com.Syncfusion.Gauges.SfDigitalGauge;
-using System.Reflection.Emit;
 using Java.Text;
-using Java.Lang;
-using Android.Graphics;
-using Java.Util;
 
 namespace SampleBrowser
 {
-	public class DigitalGauge_Tab : SamplePage
-	{
-       /*********************************
-        **Local Variable Inizialisation**
-        *********************************/
+    public class DigitalGauge_Tab : SamplePage
+    {
+        /*********************************
+         **Local Variable Initialization**
+         *********************************/
         SfDigitalGauge segmentSevenGauge;
-		SfDigitalGauge segmentFourteenGauge;
-		SfDigitalGauge segmentSixteenGauge;
-		SfDigitalGauge segmentMatrixGauge;
-		TextView segmentSevenText, segmentFourteenText, segmentSixteenText, segmentMatrixText, segmentSeven, segmentFourteen, segmentSixteen, segmentMatrix;
+        SfDigitalGauge segmentFourteenGauge;
+        SfDigitalGauge segmentSixteenGauge;
+        SfDigitalGauge segmentMatrixGauge;
+        TextView segmentSevenText, segmentFourteenText, segmentSixteenText, segmentMatrixText, segmentSeven, segmentFourteen, segmentSixteen, segmentMatrix;
         Context con;
         int totalHeight;
         LinearLayout segmentSixteenLayout, segmentMatrixLayout, segmentFourteenLayout;
@@ -45,8 +35,8 @@ namespace SampleBrowser
         LinearLayout mainDigitalGaugeLayout;
         TextView spaceText1;
         ScrollView mainGaugeScrollView;
-        public override View GetSampleContent (Context con1)
-		{
+        public override View GetSampleContent(Context con1)
+        {
             con = con1;
             totalHeight = con.Resources.DisplayMetrics.HeightPixels;
 
@@ -57,12 +47,12 @@ namespace SampleBrowser
             SegmentTextLayout();
             GaugeViewLayout();
 
-			return mainGaugeScrollView;
-		}
-       
+            return mainGaugeScrollView;
+        }
+
         private void SevenSegmentLayout()
         {
-            
+
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH mm ss");
             currentDateandTime = simpleDateFormat.Format(new Java.Util.Date());
             segmentSevenGauge = new SfDigitalGauge(con);
@@ -158,7 +148,7 @@ namespace SampleBrowser
             segmentMatrixGauge.LayoutParameters = (new LinearLayout.LayoutParams((int)segmentMatrixWidth, (int)segmentMatrixHeight));
 
         }
-      
+
         private void SegmentTextLayout()
         {
             //TextView

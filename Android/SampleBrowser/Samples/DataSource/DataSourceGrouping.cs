@@ -6,13 +6,8 @@
 // applicable laws. 
 #endregion
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Syncfusion.DataSource;
 using Android.Widget;
-using Android.Views;
-using Android.Graphics;
 
 namespace SampleBrowser
 {

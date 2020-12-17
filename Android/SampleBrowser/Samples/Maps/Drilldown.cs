@@ -14,7 +14,6 @@ using Android.Widget;
 using Android.OS;
 using Com.Syncfusion.Sfbusyindicator;
 using Com.Syncfusion.Sfbusyindicator.Enums;
-using System.Collections.ObjectModel;
 
 namespace SampleBrowser
 {

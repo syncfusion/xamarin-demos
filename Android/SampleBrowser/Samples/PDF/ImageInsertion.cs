@@ -6,25 +6,13 @@
 // applicable laws. 
 #endregion
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
 using Android.Content;
-using Java.IO;
-using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using System.IO;
-using Syncfusion.Pdf.Parsing;
-using System.Threading.Tasks;
 
 using Syncfusion.Pdf;
 using System.Reflection;
-using Syncfusion.Pdf.Security;
-using Syncfusion.Drawing;
 using Syncfusion.Pdf.Graphics;
 
 namespace SampleBrowser

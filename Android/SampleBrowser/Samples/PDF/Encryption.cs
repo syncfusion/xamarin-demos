@@ -6,25 +6,14 @@
 // applicable laws. 
 #endregion
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.Graphics;
-
-using Syncfusion.Pdf.Barcode;
 using System.IO;
 using Syncfusion.Pdf.Graphics;
 
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Security;
-using Syncfusion.Drawing;
 using System.Reflection;
 using Syncfusion.Pdf.Interactive;
 

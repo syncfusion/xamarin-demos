@@ -9,13 +9,6 @@ using System;
 using System.IO;
 using Android.Content;
 using Java.IO;
-using System.Threading.Tasks;
-using SampleBrowser;
-using Android.App;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.Support.V4.Content;
 
 namespace SampleBrowser

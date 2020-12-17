@@ -7,19 +7,15 @@
 #endregion
 using Syncfusion.XlsIO;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using Android.Content;
 using Android.Views;
 using Android.Widget;
 using Android.Graphics;
 namespace SampleBrowser
 {
-	public partial class  FiltersPage : SamplePage
+    public partial class  FiltersPage : SamplePage
 	{
 		private Context m_context;
 		private Spinner spinner;

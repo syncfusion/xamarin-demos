@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="16.1" package="XamarinAndroid.SampleBrowser" android:installLocation="auto">
-	<uses-sdk android:minSdkVersion="17"/>
+	<uses-sdk android:minSdkVersion="17" android:targetSdkVersion="28" />
 	<application android:label="Syncfusion Components for Xamarin.Android" android:largeHeap="true">
 		<provider android:name="android.support.v4.content.FileProvider" android:authorities="${applicationId}.provider" android:exported="false" android:grantUriPermissions="true">
 			<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths" />

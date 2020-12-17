@@ -8,12 +8,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
-using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Syncfusion.Pdf.Grid;
@@ -23,7 +18,6 @@ using Syncfusion.Pdf.Tables;
 using Syncfusion.Pdf;
 using Syncfusion.Drawing;
 using System.Reflection;
-using System.Xml.Linq;
 using System.Xml;
 using Syncfusion.Pdf.Interactive;
 

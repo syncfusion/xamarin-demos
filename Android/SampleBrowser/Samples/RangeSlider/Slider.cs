@@ -1,4 +1,4 @@
-#region Copyright Syncfusion Inc. 2001-2016.
+﻿#region Copyright Syncfusion Inc. 2001-2016.
 // Copyright Syncfusion Inc. 2001-2016. All rights reserved.
 // Use of this code is subject to the terms of our license.
 // A copy of the current license can be obtained at any time by e-mailing
@@ -7,61 +7,57 @@
 #endregion
 
 
-using Android.App;
 using Android.Content;
 using Android.Graphics;
-using Android.OS;
-using Com.Syncfusion.Sfrangeslider;
-using System;
-using System.Threading.Tasks;
-using Android.Widget;
 using Android.Views;
+using Android.Widget;
+using Com.Syncfusion.Sfrangeslider;
 
 
 namespace SampleBrowser
 {
-	//[con(Label = "Slider")]
-	public class Slider : SamplePage
-	{
+    //[con(Label = "Slider")]
+    public class Slider : SamplePage
+    {
 
         /*********************************
-        **Local Variable Inizialisation**
+        **Local Variable Initialization**
         *********************************/
         TextView opacityLabel;
         SfRangeSlider range;
-		ImageView mountImg;
-        int height;   
-        public override View GetSampleContent (Context con)
-		{
+        ImageView mountImg;
+        int height;
+        public override View GetSampleContent(Context con)
+        {
             SamplePageContent(con);
-           /***************
-            **RangeSlider**
-            ***************/
+            /***************
+             **RangeSlider**
+             ***************/
             range = new SfRangeSlider(con);
-			range.Minimum = 0;range.Maximum = 100; range.Value = 100;
-			range.ShowRange = false; range.SnapsTo = SnapsTo.None;
-			range.Orientation = Com.Syncfusion.Sfrangeslider.Orientation.Horizontal;
-			range.TickPlacement = TickPlacement.BottomRight;
-			range.ShowValueLabel = true; range.TickFrequency = 20;
-			range.ValuePlacement = ValuePlacement.BottomRight;
-			range.LayoutParameters = (new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MatchParent, GettingStarted_Mobile.getDimensionPixelSize(con,Resource.Dimension.range_ht)));
-			range.ValueChanged += ValueChanged ;				
-			range.SetY(-30);
-				
-            //Frame Layout
-			FrameLayout frame = new FrameLayout(con);
-			frame.SetBackgroundColor (Color.White);
-			frame.LayoutParameters = ( new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.MatchParent,GravityFlags.Center));
-			frame.AddView(GetView(con));
+            range.Minimum = 0; range.Maximum = 100; range.Value = 100;
+            range.ShowRange = false; range.SnapsTo = SnapsTo.None;
+            range.Orientation = Com.Syncfusion.Sfrangeslider.Orientation.Horizontal;
+            range.TickPlacement = TickPlacement.BottomRight;
+            range.ShowValueLabel = true; range.TickFrequency = 20;
+            range.ValuePlacement = ValuePlacement.BottomRight;
+            range.LayoutParameters = (new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MatchParent, GettingStarted_Mobile.getDimensionPixelSize(con, Resource.Dimension.range_ht)));
+            range.ValueChanged += ValueChanged;
+            range.SetY(-30);
 
-			return frame;
-		}
-		
+            //Frame Layout
+            FrameLayout frame = new FrameLayout(con);
+            frame.SetBackgroundColor(Color.White);
+            frame.LayoutParameters = (new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.MatchParent, GravityFlags.Center));
+            frame.AddView(GetView(con));
+
+            return frame;
+        }
+
         private LinearLayout GetView(Context con)
         {
-           /***************
-            **LinearLayout**
-            ***************/
+            /***************
+             **LinearLayout**
+             ***************/
             LinearLayout linearLayout = new LinearLayout(con);
             linearLayout.SetGravity(Android.Views.GravityFlags.CenterHorizontal);
             linearLayout.Orientation = Android.Widget.Orientation.Vertical;
@@ -91,9 +87,10 @@ namespace SampleBrowser
             opacityLabel.TextSize = 20;
             opacityLabel.Gravity = GravityFlags.Left;
         }
-		public void ValueChanged(object sender, ValueChangedEventArgs e) {
-			float alpha = (float)(e.Value / 100);
-			mountImg.Alpha = alpha;
-		}
-	}
+        public void ValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            float alpha = (float)(e.Value / 100);
+            mountImg.Alpha = alpha;
+        }
+    }
 }

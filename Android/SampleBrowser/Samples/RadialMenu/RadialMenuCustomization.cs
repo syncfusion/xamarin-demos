@@ -7,15 +7,8 @@
 #endregion
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
 using Android.Content;
 using Android.Graphics;
-using Android.OS;
-using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
@@ -24,7 +17,7 @@ using Syncfusion.SfRadialMenu.Android;
 namespace SampleBrowser
 {
 
-	public class RadialMenuCustomization : SamplePage
+    public class RadialMenuCustomization : SamplePage
 	{
 		LinearLayout mainLayout; double width, height; int buttonCount; float density; DoodleDraw dd;
 		SfRadialMenu radialMenu;

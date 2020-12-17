@@ -1,39 +1,29 @@
-#region Copyright Syncfusion Inc. 2001-2020.
+﻿#region Copyright Syncfusion Inc. 2001-2020.
 // Copyright Syncfusion Inc. 2001-2020. All rights reserved.
 // Use of this code is subject to the terms of our license.
 // A copy of the current license can be obtained at any time by e-mailing
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Util;
+using Android.Graphics;
 using Android.Views;
 using Android.Widget;
 using Com.Syncfusion.Carousel;
-
-using Java.Util;
-using Android.Graphics;
-using Android.Views.InputMethods;
+using System;
+using System.Collections.Generic;
 
 namespace SampleBrowser
 {
-    public class Carousel_Tab :SamplePage
+    public class Carousel_Tab : SamplePage
     {
-       /*********************************
-        **Local Variable Inizialisation**
-        *********************************/
+        /*********************************
+         **Local Variable Initialization**
+         *********************************/
         EditText offSet, scaleOffset, RotateAngle;
         LinearLayout proprtyOptionsLayout;
         Spinner tickSpinner;
-        ArrayAdapter<String> dataAdapter;       
+        ArrayAdapter<String> dataAdapter;
         SfCarousel carousel;
         Context context1;
         int width;
@@ -208,12 +198,12 @@ namespace SampleBrowser
         {
             //placementLabel
             TextView placementLabel = new TextView(context1);
-            placementLabel.SetPadding(0,0,0,10);
+            placementLabel.SetPadding(0, 0, 0, 10);
             placementLabel.Text = "View Mode";
             placementLabel.TextSize = 20;
 
             //tickSpinner
-            tickSpinner = new Spinner(context1,SpinnerMode.Dialog);
+            tickSpinner = new Spinner(context1, SpinnerMode.Dialog);
             tickSpinner.SetPadding(0, 0, 0, 0);
 
             //positionList
@@ -250,21 +240,21 @@ namespace SampleBrowser
             };
 
             LinearLayout linearLayout = new LinearLayout(context1);
-            linearLayout.SetPadding(20,40,0,40);
+            linearLayout.SetPadding(20, 40, 0, 40);
             linearLayout.Orientation = Android.Widget.Orientation.Vertical;
             linearLayout.AddView(placementLabel);
             linearLayout.AddView(tickSpinner);
             proprtyOptionsLayout.AddView(linearLayout);
 
-         
+
         }
-      
+
         public override void OnApplyChanges()
         {
             base.OnApplyChanges();
         }
-      
-   
+
+
     }
 }
 

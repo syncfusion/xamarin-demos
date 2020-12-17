@@ -14,13 +14,12 @@ using Android.Widget;
 using System.Collections.Generic;
 using Android.Graphics;
 using Java.Util;
-using Android.App;
 using Java.Text;
 using Android.Util;
 
 namespace SampleBrowser
 {
-	public class ScheduleTypes : SamplePage, IDisposable
+    public class ScheduleTypes : SamplePage, IDisposable
 	{
 		private SfSchedule sfSchedule;
 		private LinearLayout linearLayout;
