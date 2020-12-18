@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView 
+              xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+              xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+              xmlns:timePicker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms"
+              xmlns:sfButton="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+              xmlns:localSample="clr-namespace:SampleBrowser.SfTimePicker"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="SampleBrowser.SfTimePicker.TimePickerGettingStarted"
+              Margin="-10">
+    <local:SampleView.Content>
+
+        <Grid Padding="10" HorizontalOptions="Fill" VerticalOptions="StartAndExpand">
+            <Grid.Resources>
+                <localSample:TimePickerTimeSpanToTextConverter x:Key="TimeSpanToTextValue"/>
+                <localSample:TimePickerBoolToColor x:Key="BoolToColorValue"/>
+                <localSample:TimePickerBoolToText x:Key="BoolToTextValue"/>
+            </Grid.Resources>
+            <Grid.BindingContext>
+                <localSample:TimePickerAlarmObjectViewModel x:Name="viewModel"/>
+            </Grid.BindingContext>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid BackgroundColor="Accent" HorizontalOptions="Fill">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label Text="{Binding Time}"
+                       TextColor="White"
+                       FontSize="48"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
+                    <Label HeightRequest="48" Text="{Binding Meridian}"
+                       TextColor="White"
+                       FontSize="20"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Start"/>
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Row="1" Padding="10,0,0,10">
+                <Label Text="Alarms"
+                   TextColor="Accent"
+                   Margin="10,0"
+                   FontSize="18"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Start"/>
+            </Grid>
+            <Grid Grid.Row="2" Padding="10,0,0,10">
+                <timePicker:SfTimePicker PickerWidth="320"  
+                                         ShowFooter="True"   
+                                         Format="h_mm_tt"
+                                         FooterHeight="50"
+                                         SelectedItemFontSize="20"
+                                         UnselectedItemFontSize="20"
+                                         Time="{Binding SelectedTime, Mode=TwoWay}" 
+                                         IsOpen="{Binding IsPickerOpen, Mode=TwoWay}"
+                                         OkCommand="{Binding OkCommand}"
+                                         CancelCommand="{Binding CancelCommand}"
+                                         PickerMode="Dialog"
+                                         ColumnHeaderHeight="40"/>
+
+                <syncfusion:SfListView SelectionBackgroundColor="Transparent"  
+                                       x:Name="sfListView"
+                                       ItemsSource="{Binding Alarms}"
+                                       SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+                                       AllowSwiping="True" 
+                                       SelectionMode="Single"
+                                       SwipeThreshold="30"
+                                       SwipeEnded="ListView_SwipeEnded"
+                                       ItemSize="75">
+                    <syncfusion:SfListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="0">
+                                        <Label Text="&#xe759;"
+                                          FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"
+                                           TextColor="{Binding IsOn, Converter={StaticResource BoolToColorValue}}"
+                                           FontSize="25"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center"/>
+                                    </Grid>
+                                    <Grid Grid.Column="1">
+                                        <Label Text="{Binding TimeValue, Converter={StaticResource TimeSpanToTextValue}}"
+                                          TextColor="{Binding IsOn, Converter={StaticResource BoolToColorValue}}"
+                                          FontSize="18"
+                                          VerticalOptions="Center"/>
+                                    </Grid>
+                                    <Grid Grid.Column="2">
+                                        <Label Text="{Binding TimeDifference, Converter={StaticResource BoolToTextValue}}"
+                                           TextColor="{Binding IsOn, Converter={StaticResource BoolToColorValue}}"
+                                           FontSize="12"
+                                           VerticalOptions="Center"/>
+                                    </Grid>
+                                    <Grid Grid.Column="3">
+                                        <Switch VerticalOptions="Center" IsToggled="{Binding IsOn, Mode=TwoWay}"/>
+                                    </Grid>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </syncfusion:SfListView.ItemTemplate>
+                    <syncfusion:SfListView.LeftSwipeTemplate>
+                        <DataTemplate x:Name="LeftSwipeTemplate">
+                            <Grid BackgroundColor="#DC595F" 
+                                  HorizontalOptions="Fill" 
+                                  VerticalOptions="Fill">
+                                <Label Text="Delete" 
+                                       VerticalTextAlignment="Center" 
+                                       HorizontalTextAlignment="Center" 
+                                       HorizontalOptions="CenterAndExpand" 
+                                       VerticalOptions="CenterAndExpand"/>
+                            </Grid>
+                        </DataTemplate>
+                    </syncfusion:SfListView.LeftSwipeTemplate>
+                </syncfusion:SfListView>
+                <sfButton:SfButton Text="+"
+                               Command="{Binding AddCommand}"
+                               FontSize="18"
+
+                               VerticalOptions="End"
+                               HorizontalOptions="Center"
+                             
+                               HasShadow="True"
+                               BackgroundColor="Accent"
+                               WidthRequest="50"
+                               HeightRequest="50"
+                               CornerRadius="25"/>
+            </Grid>
+        </Grid>
+       
+    </local:SampleView.Content>
+</local:SampleView>

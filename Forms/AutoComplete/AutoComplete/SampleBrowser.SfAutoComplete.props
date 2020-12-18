@@ -1,0 +1,171 @@
+<Project>
+    <ItemGroup>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\AutoComplete\AutoComplete.xaml.cs">
+            <Link>Samples\AutoComplete\AutoComplete\AutoComplete.xaml.cs</Link>
+            <DependentUpon>AutoComplete.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\AutoComplete\AutoComplete_Default.xaml.cs">
+            <Link>Samples\AutoComplete\AutoComplete\AutoComplete_Default.xaml.cs</Link>
+            <DependentUpon>AutoComplete_Default.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\AutoComplete\AutoComplete_Tablet.xaml.cs">
+            <Link>Samples\AutoComplete\AutoComplete\AutoComplete_Tablet.xaml.cs</Link>
+            <DependentUpon>AutoComplete_Tablet.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\CustomSearchPage\CustomSearchPage.xaml.cs">
+            <Link>Samples\AutoComplete\CustomSearchPage\CustomSearchPage.xaml.cs</Link>
+            <DependentUpon>CustomSearchPage.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\CustomSearchPage\CustomModel.cs">
+            <Link>Samples\AutoComplete\CustomSearchPage\CustomModel.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\CustomSearchPage\CustomViewModel.cs">
+            <Link>Samples\AutoComplete\CustomSearchPage\CustomViewModel.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\Delimiter\DelimiterSample.xaml.cs">
+            <Link>Samples\AutoComplete\Delimiter\DelimiterSample.xaml.cs</Link>
+            <DependentUpon>DelimiterSample.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\HeaderFooterSample\HeaderFooterSample.xaml.cs">
+            <Link>Samples\AutoComplete\HeaderFooterSample\HeaderFooterSample.xaml.cs</Link>
+            <DependentUpon>HeaderFooterSample.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\HeaderFooterSample\ContactsInfo.cs">
+            <Link>Samples\AutoComplete\HeaderFooterSample\ContactsInfo.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\HeaderFooterSample\ContactsInfoRepository.cs">
+            <Link>Samples\AutoComplete\HeaderFooterSample\ContactsInfoRepository.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\MultiSelect\MultiSelect.xaml.cs">
+            <Link>Samples\AutoComplete\MultiSelect\MultiSelect.xaml.cs</Link>
+            <DependentUpon>MultiSelect.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\MultiSelect\ContactsInfo.cs">
+            <Link>Samples\AutoComplete\MultiSelect\ContactsInfo.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\MultiSelect\ContactsInfoRepository.cs">
+            <Link>Samples\AutoComplete\MultiSelect\ContactsInfoRepository.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\MultiSelect\MultiSelectViewModel.cs">
+            <Link>Samples\AutoComplete\MultiSelect\MultiSelectViewModel.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\MusicSearch\MusicSearch.xaml.cs">
+            <Link>Samples\AutoComplete\MusicSearch\MusicSearch.xaml.cs</Link>
+            <DependentUpon>MusicSearch.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\MusicSearch\MusicInfo.cs">
+            <Link>Samples\AutoComplete\MusicSearch\MusicInfo.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\MusicSearch\MusicInfoRepository.cs">
+            <Link>Samples\AutoComplete\MusicSearch\MusicInfoRepository.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\MusicSearch\MusicModel.cs">
+            <Link>Samples\AutoComplete\MusicSearch\MusicModel.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\MusicSearch\MusicViewModel.cs">
+            <Link>Samples\AutoComplete\MusicSearch\MusicViewModel.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\Performance\Performance.xaml.cs">
+            <Link>Samples\AutoComplete\Performance\Performance.xaml.cs</Link>
+            <DependentUpon>Performance.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\Performance\PerformanceModel.cs">
+            <Link>Samples\AutoComplete\Performance\PerformanceModel.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\Performance\ViewModel3.cs">
+            <Link>Samples\AutoComplete\Performance\ViewModel3.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\ToleratingTypos\ToleratingTypos.xaml.cs">
+            <Link>Samples\AutoComplete\ToleratingTypos\ToleratingTypos.xaml.cs</Link>
+            <DependentUpon>ToleratingTypos.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\ToleratingTypos\Engine.cs">
+            <Link>Samples\AutoComplete\ToleratingTypos\Engine.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\AutoCompleteHelper.cs">
+            <Link>Samples\AutoComplete\AutoCompleteHelper.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\Converters.cs">
+            <Link>Samples\AutoComplete\Converters.cs</Link>
+        </Compile>
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+            <Link>Samples\AutoComplete\SamplesList\SamplesList.xml</Link>
+        </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CustomSearchPage\CustomSearchPage.xaml">
+            <Link>Samples\AutoComplete\CustomSearchPage\CustomSearchPage.xaml</Link>
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Delimiter\DelimiterSample.xaml">
+            <Link>Samples\AutoComplete\Delimiter\DelimiterSample.xaml</Link>
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\HeaderFooterSample\HeaderFooterSample.xaml">
+            <Link>Samples\AutoComplete\HeaderFooterSample\HeaderFooterSample.xaml</Link>
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\MultiSelect\MultiSelect.xaml">
+            <Link>Samples\AutoComplete\MultiSelect\MultiSelect.xaml</Link>
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\MusicSearch\MusicSearch.xaml">
+            <Link>Samples\AutoComplete\MusicSearch\MusicSearch.xaml</Link>
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Performance\Performance.xaml">
+            <Link>Samples\AutoComplete\Performance\Performance.xaml</Link>
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ToleratingTypos\ToleratingTypos.xaml">
+            <Link>Samples\AutoComplete\ToleratingTypos\ToleratingTypos.xaml</Link>
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\CustomSearch.txt">
+            <Link>Samples\AutoComplete\CustomSearch.txt</Link>
+        </EmbeddedResource>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\strings.txt">
+            <Link>Samples\AutoComplete\strings.txt</Link>
+        </EmbeddedResource>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\words.txt">
+            <Link>Samples\AutoComplete\words.txt</Link>
+        </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\AutoComplete\AutoComplete.xaml">
+            <Link>Samples\AutoComplete\AutoComplete\AutoComplete.xaml</Link>
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\AutoComplete\AutoComplete_Default.xaml">
+            <Link>Samples\AutoComplete\AutoComplete\AutoComplete_Default.xaml</Link>
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\AutoComplete\AutoComplete_Tablet.xaml">
+            <Link>Samples\AutoComplete\AutoComplete\AutoComplete_Tablet.xaml</Link>
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml.cs">
+              <Link>Samples\AutoComplete\Samples\Themes\Themes.xaml.cs</Link>
+              <DependentUpon>Themes.xaml</DependentUpon>
+          </Compile>
+    </ItemGroup>
+    <ItemGroup>
+          <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml">
+              <Link>Samples\AutoComplete\Samples\Themes\Themes.xaml</Link>
+              <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+              <SubType>Designer</SubType>
+          </EmbeddedResource>
+    </ItemGroup>
+
+</Project>

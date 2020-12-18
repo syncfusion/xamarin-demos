@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                  xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:editor="clr-namespace:Syncfusion.SfImageEditor.XForms;assembly=Syncfusion.SfImageEditor.XForms"
+                  x:Class="SampleBrowser.SfImageEditor.ProfileEditPage">
+    <ContentPage.Content>
+        <editor:SfImageEditor x:Name="imageEditor" Margin="0,0,0,5"/>
+    </ContentPage.Content>
+</ContentPage>

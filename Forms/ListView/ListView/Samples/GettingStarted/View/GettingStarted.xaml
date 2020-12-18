@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfListView.GettingStarted"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.SfListView"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
+    <sample:SampleView.BindingContext>
+        <local:ListViewGettingStartedViewModel/>
+    </sample:SampleView.BindingContext>
+    <sample:SampleView.Content>
+        <Grid Margin="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <sync:SfListView x:Name="listView" ItemsSource="{Binding CategoryInfo}"
+                         Margin="0"
+                         Padding="0,5,0,5"
+                         SelectionMode="None"
+                         BackgroundColor="#F0F0F0"
+                         ItemSpacing="10,5,10,5"
+                             ItemSize="{OnPlatform Android={OnIdiom Phone=100, Tablet=100}, iOS={OnIdiom Phone=100, Tablet= 90}, UWP={OnIdiom Phone=120, Tablet=150, Desktop=150}, macOS=105,WPF=150}">
+                <sync:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BackgroundColor="White" Padding="1" HasShadow="{OnPlatform Android=true, iOS=false, UWP=true, WPF=true}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="{OnPlatform Android={OnIdiom Phone=0.35*, Tablet=0.25*}, iOS={OnIdiom Phone=0.35*, Tablet=0.15*}, UWP={OnIdiom Desktop=auto, Phone=auto, Tablet=0.55*}, macOS=0.15*, WPF=auto}" />
+                                    <ColumnDefinition Width="{OnPlatform Android={OnIdiom Phone=0.65*, Tablet=0.75*}, iOS={OnIdiom Phone=0.65*, Tablet=0.85*}, UWP={OnIdiom Desktop=*, Phone=*, Tablet=0.15*}, macOS=*, WPF=*}" />
+                                </Grid.ColumnDefinitions>
+
+                                <local:SfImage Source="{Binding CategoryImage}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="150" WidthRequest="150" Aspect="AspectFill"/>
+
+                                <StackLayout Grid.Column="1" Padding="10,0,0,0">
+                                    <StackLayout.VerticalOptions>
+                                        <OnPlatform x:TypeArguments="LayoutOptions">
+                                            <On Platform="macOS" Value="CenterAndExpand"/>
+                                        </OnPlatform>
+                                    </StackLayout.VerticalOptions>
+                                    <Label Text="{Binding CategoryName}" LineBreakMode="WordWrap" FontAttributes="Bold"
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=18, Tablet=22}, iOS={OnIdiom Phone=18, Tablet=22}, UWP={OnIdiom Phone=16, Tablet=26, Desktop=26}, macOS=22, WPF=26}" />
+                                    <Label Grid.Row="1" LineBreakMode="WordWrap" Text="{Binding CategoryDescription}"
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=11, Tablet=13}, iOS={OnIdiom Phone=11, Tablet=13}, UWP={OnIdiom Phone=10, Tablet=14, Desktop=16}, macOS=13, WPF=16}" />
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </sync:SfListView.ItemTemplate>
+            </sync:SfListView>
+        </Grid>
+    </sample:SampleView.Content>
+</sample:SampleView>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView  xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+  xmlns:sflistView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+    xmlns:navigation="clr-namespace:Syncfusion.SfNavigationDrawer.XForms;assembly=Syncfusion.SfNavigationDrawer.XForms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfNavigationDrawer.NavigationDrawer_Tablet">
+     <local:SampleView.Content>
+    <navigation:SfNavigationDrawer BackgroundColor="White" x:Name="navigationDrawer">
+            <navigation:SfNavigationDrawer.DefaultDrawerSettings>
+                 <navigation:DrawerSettings x:Name="defaultDrawer" TouchThreshold="50" DrawerHeaderHeight="150" DrawerHeight="300" DrawerFooterHeight="0" Duration="400" Position="Left" Transition="SlideOnTop">
+                    <navigation:DrawerSettings.DrawerHeaderView>
+                        <Grid BackgroundColor="#00a0e1">
+                        <Grid.Resources>
+                            <ResourceDictionary>
+                            <local:ImagePathConverter x:Key="ImagePathConverter" />
+                        </ResourceDictionary>
+                        </Grid.Resources>
+                        <Image x:Name="gradiantImage" Aspect="AspectFill" BackgroundColor="#00a0e1"  HeightRequest="150" />
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="8*" />
+                            <RowDefinition Height="2*" />
+                        </Grid.RowDefinitions>
+                                <Image x:Name="userImage" Margin="7,0,0,0" Aspect="AspectFit" HeightRequest="80" WidthRequest="80" HorizontalOptions="Start" Source="People_Circle13.png" />
+                        <Label x:Name="userNameLabel" Grid.Row="1" Margin="7,0,0,0" Text="ellana@outlook.com" TextColor="White" HorizontalOptions="Start" HorizontalTextAlignment="Start" />
+                    </Grid>
+                    </Grid>
+                </navigation:DrawerSettings.DrawerHeaderView>
+                    
+                    <navigation:DrawerSettings.DrawerContentView>
+                        <Grid BackgroundColor="#f0f0f0" x:Name="drawerContentViewGrid" Padding="1,1,0.5,1">
+                            <sflistView:SfListView x:Name="listView" BackgroundColor="White" ItemSize="40" ItemTapped="Handle_ItemTapped" SelectionBackgroundColor="Transparent">
+                                <sflistView:SfListView.ItemTemplate>
+                                    <DataTemplate>
+                                         <StackLayout Orientation="Horizontal">
+                                            <Label x:Name="iconLabel" Text="{Binding Icon}" TextColor="{Binding FontColor}" Margin="7,0,0,0" FontSize="20" HeightRequest="25" VerticalTextAlignment="Center" VerticalOptions="Center">
+                                                <Label.FontFamily>
+                                                    <OnPlatform x:TypeArguments="x:String" iOS="navigation" Android="navigation.ttf#navigation" WinPhone="Segoe_MDL2_Assets.ttf#Segoe MDL2 Assets" />
+                                                </Label.FontFamily>
+                                            </Label>
+                                            <Label x:Name="menuItemLabel" Margin="7,0,0,0" Text="{Binding MenuItem}" TextColor="{Binding FontColor}" VerticalTextAlignment="Center" HeightRequest="25" VerticalOptions="Center" YAlign="Center" />
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </sflistView:SfListView.ItemTemplate>
+                            </sflistView:SfListView>
+                        </Grid>
+                </navigation:DrawerSettings.DrawerContentView>  
+              </navigation:DrawerSettings>
+            </navigation:SfNavigationDrawer.DefaultDrawerSettings>
+    
+
+
+    <navigation:SfNavigationDrawer.SecondaryDrawerSettings>
+                <navigation:DrawerSettings x:Name="secondaryDrawer" TouchThreshold="50" DrawerHeaderHeight="40" DrawerFooterHeight="0" DrawerHeight="300" Duration="400" Position="Right" Transition="SlideOnTop">
+                    <navigation:DrawerSettings.DrawerHeaderView>
+                        <StackLayout BackgroundColor="#00a0e1">
+                            <Label x:Name="notificationText" Text="Notifications" Margin="10,0,0,0" TextColor="White" FontSize="20" HeightRequest="40" VerticalTextAlignment="Center" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </navigation:DrawerSettings.DrawerHeaderView>
+                    <navigation:DrawerSettings.DrawerContentView>
+                        <Grid BackgroundColor="#f0f0f0" Padding="1,1,0.5,1">
+                            <sflistView:SfListView x:Name="listView1" QueryItemSize="Handle_QueryItemSize" BackgroundColor="#f0f0f0"  ItemSize="80" SelectionBackgroundColor="Transparent">
+                                <sflistView:SfListView.ItemTemplate>
+                                    <DataTemplate>
+                            <ViewCell>
+                                <Grid Margin="5,5,5,0" BackgroundColor="White">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="23" />
+                                        <RowDefinition Height="18" />
+                                        <RowDefinition Height="45" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="8*" />
+                                    </Grid.ColumnDefinitions>
+                                   <Grid Grid.RowSpan="2" Margin="5,0,5,0">
+                                                 <Image Source="{Binding ContactImage}"
+                                                    VerticalOptions="Start"
+                                                    HorizontalOptions="Start"
+                                                    WidthRequest="46">
+                                                   <Image.HeightRequest>
+                                                            <OnPlatform x:TypeArguments="x:Double" iOS="30" Android="46" WinPhone="60" />
+                                                    </Image.HeightRequest>
+                                                    </Image>
+                                    </Grid>
+                                                                       
+                                        <Label x:Name="nameLabel" Grid.Column="1" Margin="5,0,0,0" Text="{Binding Sender}" FontAttributes="Bold" FontSize="15" HorizontalTextAlignment="Start" HorizontalOptions="Start" />                                    
+                                        <Label x:Name="subjectLabel" Margin="5,0,0,0" Grid.Column="1" Grid.Row="1" Text="{Binding Subject}" FontAttributes="Bold" FontSize="13" HorizontalTextAlignment="Start" TextColor="{Binding SubjectColor}"/>
+                                        <Label x:Name="descriptionLabel" Margin="5,0,0,0" Grid.Column="1" Grid.Row="2" Text="{Binding Content}" FontSize="12" HorizontalTextAlignment="Start" />                                    
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                                </sflistView:SfListView.ItemTemplate>
+                            </sflistView:SfListView>
+                        </Grid>
+                    </navigation:DrawerSettings.DrawerContentView>  
+                </navigation:DrawerSettings>
+            </navigation:SfNavigationDrawer.SecondaryDrawerSettings>
+    </navigation:SfNavigationDrawer>
+  </local:SampleView.Content>
+    
+  <local:SampleView.PropertyView>
+     <StackLayout x:Name="optionLayout" Orientation="Vertical" Spacing="10">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" HeightRequest="50">
+                    <Label Text="API Name" FontSize="18"  WidthRequest="150" VerticalTextAlignment="Center"/>
+                    <Label Text="Default" FontSize="18" WidthRequest="100" VerticalTextAlignment="Center"/> 
+                    <Label Text="Secondary" FontSize="18" WidthRequest="100" VerticalTextAlignment="Center"/>   
+            </StackLayout>
+
+             <StackLayout Orientation="Horizontal" HorizontalOptions="Start" HeightRequest="40">
+                    <Label Text="Transition" FontSize="18" Margin="0,-3,0,0" HeightRequest="40" WidthRequest="150" HorizontalOptions="Start" VerticalOptions="StartAndExpand" VerticalTextAlignment="Center"/>
+                    <Picker x:Name="defaultTransitionPicker"  WidthRequest="100"   VerticalOptions="Start" HorizontalOptions="FillAndExpand" HeightRequest="40"/> 
+                    <Picker x:Name="transitionPicker"  WidthRequest="100"  VerticalOptions="Start" HorizontalOptions="FillAndExpand" HeightRequest="40"/> 
+             </StackLayout>
+            <StackLayout HeightRequest="10" />
+             <StackLayout Orientation="Horizontal" HorizontalOptions="Start" HeightRequest="40">
+                    <Label Text="Position" Margin="0,-3,0,0" FontSize="18" HeightRequest="40" WidthRequest="150" HorizontalOptions="Start" VerticalOptions="StartAndExpand" VerticalTextAlignment="Center"/>
+                    <Picker x:Name="defaultPositionPicker" WidthRequest="100"  VerticalOptions="Center" HorizontalOptions="FillAndExpand" HeightRequest="40"/> 
+                    <Picker x:Name="positionPicker" WidthRequest="100"  VerticalOptions="Center" HorizontalOptions="FillAndExpand" HeightRequest="40"/> 
+             </StackLayout>
+        </StackLayout>
+  </local:SampleView.PropertyView>
+ </local:SampleView>

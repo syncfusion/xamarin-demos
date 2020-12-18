@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Helper\SfImageRenderer.cs">
+      <Link>Helper\SfImageRenderer.cs</Link>
+    </Compile>
+
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ListAutofitItems.png">
+      <Link>Resources\drawable\ListAutofitItems.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ListDataTemplateSelector.png">
+      <Link>Resources\drawable\ListDataTemplateSelector.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ListFiltering.png">
+      <Link>Resources\drawable\ListFiltering.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ListGettingStarted.png">
+      <Link>Resources\drawable\ListGettingStarted.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ListGridLayout.png">
+      <Link>Resources\drawable\ListGridLayout.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ListGrouping.png">
+      <Link>Resources\drawable\ListGrouping.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ListItemReordering.png">
+      <Link>Resources\drawable\ListItemReordering.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ListLoadMore.png">
+      <Link>Resources\drawable\ListLoadMore.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ListOrientation.png">
+      <Link>Resources\drawable\ListOrientation.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ListPaging.png">
+      <Link>Resources\drawable\ListPaging.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ListPullToRefresh.png">
+      <Link>Resources\drawable\ListPullToRefresh.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ListSelection.png">
+      <Link>Resources\drawable\ListSelection.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\ListSwiping.png">
+      <Link>Resources\drawable\ListSwiping.png</Link>
+    </AndroidResource>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\UIFontIcons.ttf">
+      <Link>Assets\UIFontIcons.ttf</Link>
+    </AndroidAsset>
+  </ItemGroup>
+</Project>

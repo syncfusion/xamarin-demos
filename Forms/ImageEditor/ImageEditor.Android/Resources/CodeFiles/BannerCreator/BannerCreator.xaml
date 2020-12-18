@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                  xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  x:Class="SampleBrowser.SfImageEditor.BannerCreator">
+    <local:SampleView.Content>
+        <Grid BackgroundColor="#f2f2f2" Padding="20,70,20,0" x:Name="imageGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.6*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout Padding="10,0,0,0" Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Label BackgroundColor="Transparent" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="18" TextColor="#808080" Text="Banner Creator" />
+            </StackLayout>
+            <Grid Grid.Row="1" x:Name="mainGrid" Padding="0,5,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Frame x:Name="Frame1" Padding="1" HasShadow="false" Grid.Column="0" BackgroundColor="#999999">
+                    <Image BackgroundColor="White" Aspect="AspectFill" Grid.Column="0" Source="{Binding BroweImage1}">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ImageTapped" NumberOfTapsRequired="1" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+                <Frame x:Name="Frame2" HasShadow="false" Padding="1" Grid.Column="1" BackgroundColor="#666666">
+                    <Image BackgroundColor="White" Aspect="AspectFill" Grid.Column="1" Source="{Binding BroweImage2}">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ImageTapped" NumberOfTapsRequired="1" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+                <Frame x:Name="Frame3" HasShadow="false" Padding="1" Grid.Column="2" BackgroundColor="#999999">
+                    <Image BackgroundColor="White" Aspect="AspectFill" Grid.Column="2" Source="{Binding BroweImage3}">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ImageTapped" NumberOfTapsRequired="1" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+            </Grid>
+        </Grid>
+    </local:SampleView.Content>
+</local:SampleView>

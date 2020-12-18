@@ -1,0 +1,101 @@
+﻿<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfMaps.Drilldown"
+              xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfMaps"
+              xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+              xmlns:maps="clr-namespace:Syncfusion.SfMaps.XForms;assembly=Syncfusion.SfMaps.XForms">
+
+    <local:SampleView.Content>
+        <Grid BackgroundColor="White">
+            <Grid.BindingContext>
+                <sampleBrowser:DrilldownViewModel/>
+            </Grid.BindingContext>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <StackLayout IsVisible="False" x:Name="stackLayout" Orientation="Horizontal" Margin="20,20,0,0">
+                <Label x:Name="label" Margin="0,0,5,0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="WorldMap" ForegroundColor="Blue"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label Text=">" Margin="0,0,5,0"/>
+                <Label x:Name="continentLabel" FontAttributes="Bold"/>
+            </StackLayout>
+            <maps:SfMaps x:Name="Map" EnableZooming="false"  BackgroundColor="White" Grid.Row="1" EnablePanning="False">
+                <maps:SfMaps.Layers >
+                    <maps:ShapeFileLayer Uri="world-map.shp" x:Name="layer" ShapeIDPath="Country" EnableSelection="True" ShapeIDTableField="admin" ShapeSelectionChanged="Layer_ShapeSelectionChanged"
+                                         ItemsSource="{Binding DataSource}">
+                        <maps:ShapeFileLayer.ShapeSettings>
+                            <maps:ShapeSetting  ShapeColorValuePath="Continent">
+                                <maps:ShapeSetting.ColorMappings>
+                                    <maps:EqualColorMapping Color="#C13664" Value="North America" ></maps:EqualColorMapping>
+                                    <maps:EqualColorMapping Color="#9C3367" Value="South America"></maps:EqualColorMapping>
+                                    <maps:EqualColorMapping Color="#80306A" Value="Africa"></maps:EqualColorMapping>
+                                    <maps:EqualColorMapping Color="#622D6C" Value="Europe"></maps:EqualColorMapping>
+                                    <maps:EqualColorMapping Color="#462A6D" Value="Asia"></maps:EqualColorMapping>
+                                    <maps:EqualColorMapping Color="#2A2870" Value="Australia"></maps:EqualColorMapping>
+                                </maps:ShapeSetting.ColorMappings>
+                            </maps:ShapeSetting>
+                        </maps:ShapeFileLayer.ShapeSettings>
+                        <maps:ShapeFileLayer.Markers>
+                            <maps:MapMarker x:Name="asiaMarker" Label="Asia" Latitude="63.34303378997662" Longitude="102.07617561287645"/>
+                            <maps:MapMarker x:Name="australiaMarker" Label="Australia" Latitude="-25.74775493367931" Longitude="136.80451417932431"/>
+                            <maps:MapMarker x:Name="africaMarker" Label="Africa" Latitude="19.025302093442327" Longitude="15.157534554671087"/>
+                            <maps:MapMarker x:Name="northAmericaMarker" Label="North    America" Latitude="59.88893689676585" Longitude="-109.3359375"/>
+                            <maps:MapMarker x:Name="europeMarker" Label="Europe" Latitude="47.95121990866204" Longitude="18.468749999999998"/>
+                            <maps:MapMarker x:Name="southAmericaMarker" Label="South    America" Latitude="-6.64607562172573" Longitude="-55.54687499999999"/>
+                        </maps:ShapeFileLayer.Markers>
+                        <maps:ShapeFileLayer.MarkerTemplate>
+                            <DataTemplate>
+                                <Label Text="{Binding Label}" LineBreakMode="WordWrap" WidthRequest="45" TextColor="#bee8a2" FontSize="10"/>
+                            </DataTemplate>
+                        </maps:ShapeFileLayer.MarkerTemplate>
+                    </maps:ShapeFileLayer>
+
+                    <maps:ShapeFileLayer   ShapeIDPath="Country" ShapeIDTableField="admin" Uri="south-america.shp">
+                        <maps:ShapeFileLayer.ShapeSettings>
+                            <maps:ShapeSetting ShapeFill="#9C3367"/>
+                        </maps:ShapeFileLayer.ShapeSettings>
+                    </maps:ShapeFileLayer>
+
+                    <maps:ShapeFileLayer   ShapeIDPath="Country" ShapeIDTableField="admin" Uri="north-america.shp">
+                        <maps:ShapeFileLayer.ShapeSettings>
+                            <maps:ShapeSetting ShapeFill="#C13664"/>
+                        </maps:ShapeFileLayer.ShapeSettings>
+                    </maps:ShapeFileLayer>
+
+                    <maps:ShapeFileLayer  ShapeIDPath="Country" ShapeIDTableField="admin"  Uri="europe.shp">
+                        <maps:ShapeFileLayer.ShapeSettings>
+                            <maps:ShapeSetting ShapeFill="#622D6C"/>
+                        </maps:ShapeFileLayer.ShapeSettings>
+                    </maps:ShapeFileLayer>
+
+                    <maps:ShapeFileLayer  ShapeIDPath="Country" ShapeIDTableField="admin" Uri="africa.shp">
+                        <maps:ShapeFileLayer.ShapeSettings>
+                            <maps:ShapeSetting ShapeFill="#80306A"/>
+                        </maps:ShapeFileLayer.ShapeSettings>
+                    </maps:ShapeFileLayer>
+
+                    <maps:ShapeFileLayer  ShapeIDPath="Country" ShapeIDTableField="admin" Uri="australia.shp">
+                        <maps:ShapeFileLayer.ShapeSettings>
+                            <maps:ShapeSetting ShapeFill="#2A2870"/>
+                        </maps:ShapeFileLayer.ShapeSettings>
+                    </maps:ShapeFileLayer>
+
+                    <maps:ShapeFileLayer  ShapeIDPath="Country" ShapeIDTableField="admin" Uri="asia.shp">
+                        <maps:ShapeFileLayer.ShapeSettings>
+                            <maps:ShapeSetting ShapeFill="#462A6D"/>
+                        </maps:ShapeFileLayer.ShapeSettings>
+                    </maps:ShapeFileLayer>
+
+                </maps:SfMaps.Layers>
+            </maps:SfMaps>
+            <Label x:Name="header" Grid.Row="2" Margin="0,0,0,20" Text="Tap on a shape to drilldown" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        </Grid>
+    </local:SampleView.Content>
+</local:SampleView>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.Legend" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+    <local:SampleView.Content>
+        <StackLayout x:Name="stack">
+            <StackLayout.Resources>
+                <ResourceDictionary>
+                    <sampleBrowser:BoolToFontAttributesConverter x:Key="boolToFontAttributesConverter" />
+                </ResourceDictionary>
+            </StackLayout.Resources>
+            <chart:SfChart VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" x:Name="chart">
+                <chart:SfChart.BindingContext>
+                    <sampleBrowser:LegendViewModel />
+                </chart:SfChart.BindingContext>
+                <chart:SfChart.Title>
+                    <chart:ChartTitle Text="Project Cost Breakdown" />
+                </chart:SfChart.Title>
+                <chart:SfChart.Legend>
+                    <chart:ChartLegend DockPosition="Bottom" OverflowMode="Wrap" Margin="3"
+                                       StrokeColor="Black" CornerRadius="5" StrokeWidth="1"
+                                       BackgroundColor="#04000000">
+                        <chart:ChartLegend.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout BackgroundColor="{Binding DataPoint.LegendBackgroundColor}" Padding="3" Orientation="Horizontal" x:Name="root" WidthRequest="143">
+                                  <BoxView Color="{Binding IconColor}" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="13" WidthRequest="13" >
+                                    <BoxView.Margin>
+                                      <OnPlatform x:TypeArguments="Thickness" WinPhone="0,4,0,0" />
+                                    </BoxView.Margin>
+                                  </BoxView>
+                                    <Label FontSize="{OnPlatform Default='13', WPF='12'}" VerticalTextAlignment="Center" Text="{Binding DataPoint.Name}" FontAttributes="{Binding DataPoint.IsExploded, Converter={StaticResource boolToFontAttributesConverter}}" />
+                                    <Label HorizontalTextAlignment="End" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" FontSize="{OnPlatform Default='13', WPF='12'}" Text="{Binding DataPoint.Value}" 
+                                           FontAttributes="{Binding DataPoint.IsExploded, Converter={StaticResource boolToFontAttributesConverter}}" />
+                                </StackLayout>
+                            </DataTemplate>
+                        </chart:ChartLegend.ItemTemplate>
+                    </chart:ChartLegend>
+                </chart:SfChart.Legend>
+                <chart:SfChart.PrimaryAxis>
+                    <chart:CategoryAxis />
+                </chart:SfChart.PrimaryAxis>
+                <chart:SfChart.SecondaryAxis>
+                    <chart:NumericalAxis />
+                </chart:SfChart.SecondaryAxis>
+                <chart:PieSeries ExplodeOnTouch="true" ExplodeIndex="{Binding ExplodeIndex}" ItemsSource="{Binding Data}" XBindingPath="Name" YBindingPath="Value">
+                    <chart:PieSeries.ColorModel>
+                        <chart:ChartColorModel Palette="Natural" />
+                    </chart:PieSeries.ColorModel>
+                    <chart:PieSeries.DataMarker>
+                        <chart:ChartDataMarker  >
+                            <chart:ChartDataMarker.LabelStyle>
+                                <chart:DataMarkerLabelStyle BackgroundColor="{OnPlatform Default='Transparent', WPF='Default'}" TextColor="White" />
+                            </chart:ChartDataMarker.LabelStyle>
+                        </chart:ChartDataMarker>
+                    </chart:PieSeries.DataMarker>
+                </chart:PieSeries>
+            </chart:SfChart>
+        </StackLayout>
+    </local:SampleView.Content>
+</local:SampleView>

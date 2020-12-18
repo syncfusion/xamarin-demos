@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Samples>
+	  <Sample Icon = "DataSourceGetStarted.png" Title = "Getting Started" Name = "DataSourceGettingStarted"
+           Description = "This sample showcases the DataSource bound with ObservableCollection." />
+    <Sample Icon = "DataSourceSorting.png" Title = "Sorting" Name = "DataSourceSorting"
+           Description = "This sample showcases the sorting capabilities of the DataSource." />
+    <Sample Icon = "DataSourceGrouping.png" Title = "Grouping" Name = "DataSourceGrouping"
+              Description = "This sample showcases the grouping capabilities of the DataSource." />
+</Samples>
