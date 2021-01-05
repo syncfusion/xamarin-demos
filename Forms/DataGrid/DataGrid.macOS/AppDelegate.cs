@@ -59,10 +59,10 @@ namespace SampleBrowser.SfDataGrid.MacOS
         public override void DidFinishLaunching(NSNotification notification)
         {
             Xamarin.Forms.Forms.Init();
-            Syncfusion.ListView.XForms.MacOS.SfListViewRenderer.Init();
-            SfDataGridRenderer.Init();
             SampleBrowser.Core.MacOS.SampleBrowserMac.Init();
             this.LoadApplication(new App());
+            Syncfusion.ListView.XForms.MacOS.SfListViewRenderer.Init();
+            SfDataGridRenderer.Init();
             base.DidFinishLaunching(notification);
         }
     }
