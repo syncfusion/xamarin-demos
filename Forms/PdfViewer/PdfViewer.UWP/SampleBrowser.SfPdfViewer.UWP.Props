@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Renderer\AlertViewUWP.cs" >
+      <Link>Renderer\PdfViewer\AlertViewUWP.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Renderer\CustomEntryRenderer.cs" >
+      <Link>Renderer\PdfViewer\CustomEntryRenderer.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Renderer\SfFontButtonRenderer.cs" >
+      <Link>Renderer\PdfViewer\SfFontButtonRenderer.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\SaveWindows.cs" >
+      <Link>Renderer\PdfViewer\SaveWindows.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\Assets\Fonts\Final_PDFViewer_UWP_FontUpdate.ttf" >
+      <Link>Assets\Fonts\Final_PDFViewer_UWP_FontUpdate.ttf</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Assets\Fonts\PdfViewer_Text_font.ttf" >
+      <Link>Assets\Fonts\PdfViewer_Text_font.ttf</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Assets\Fonts\PDFViewer_UWP.ttf" >
+      <Link>Assets\Fonts\PDFViewer_UWP.ttf</Link>
+    </Content>
+	<Content Include="$(MSBuildThisFileDirectory)\Assets\Fonts\PdfViewer_FONT.ttf" >
+      <Link>Assets\Fonts\PdfViewer_FONT.ttf</Link>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\Assets\Fonts\Font Text edit stamp.ttf" >
+      <Link>Assets\Fonts\Font Text edit stamp.ttf</Link>
+    </Content>
+   <Content Include="$(MSBuildThisFileDirectory)\Assets\Fonts\Font Print.ttf" >
+      <Link>Assets\Fonts\Font Print.ttf</Link>
+    </Content>
+  </ItemGroup>
+</Project>

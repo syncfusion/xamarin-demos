@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Samples>
+  <Sample Platforms="Android,iOS,UWP" Title = "Getting Started" Name = "GettingStarted"
+            Description = "This sample illustrates about getting started with Accordion by loading a set of expandable items in a predefined template." />
+</Samples>

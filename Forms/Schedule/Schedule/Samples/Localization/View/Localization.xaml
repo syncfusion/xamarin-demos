@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+    x:Class="SampleBrowser.SfSchedule.Localization"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+	xmlns:samplelocal="clr-namespace:SampleBrowser.SfSchedule"
+    xmlns:schedule="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.SfSchedule.XForms">
+    <local:SampleView.Content>
+        <Grid x:Name="grid_layout">
+            <schedule:SfSchedule
+                x:Name="Schedule"
+                DataSource="{Binding Appointments}"
+                HorizontalOptions="FillAndExpand"
+                ScheduleView="MonthView" Locale="ja"
+                VerticalOptions="FillAndExpand">
+              <schedule:SfSchedule.WeekViewSettings>
+                <schedule:WeekViewSettings
+                     WorkStartHour="7"
+                     WorkEndHour="18">
+                </schedule:WeekViewSettings>
+              </schedule:SfSchedule.WeekViewSettings>
+                <schedule:SfSchedule.BindingContext>
+                    <samplelocal:LocalizationViewModel />
+                </schedule:SfSchedule.BindingContext>
+            </schedule:SfSchedule>
+        </Grid>
+    </local:SampleView.Content>
+  <local:SampleView.PropertyView>
+        <Grid BackgroundColor="White" 
+                HorizontalOptions="FillAndExpand" 
+                VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+           
+            <Label Grid.Row="0" x:Name="scheduleViewLabel" 
+                    VerticalOptions="Center" 
+                    Text="Change the view type" 
+                    FontSize="15" TextColor="Gray" />
+            
+            <Picker x:Name="viewPicker" Grid.Row="1" 
+                        VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand">
+                <Picker.Items>
+                    <x:String>Day View</x:String>
+                    <x:String>Week View</x:String>
+                    <x:String>Work Week View</x:String>
+                    <x:String>Month View</x:String>
+                    <x:String>Timeline View</x:String>                  
+                </Picker.Items>
+            </Picker>
+            
+            <Label Grid.Row="2" x:Name="localeLabel" 
+                    VerticalOptions="Center" 
+                    Text="Change the language" 
+                    FontSize="15" 
+                    TextColor="Gray" />
+            
+            <Picker x:Name="localePicker" Grid.Row="3" 
+                        VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand">
+                <Picker.Items>
+                    <x:String>Japanese</x:String>
+                    <x:String>English</x:String>
+                    <x:String>French</x:String>
+                    <x:String>Spanish</x:String>
+                </Picker.Items>
+            </Picker>           
+        </Grid>
+        
+    </local:SampleView.PropertyView>
+  <local:SampleView.Behaviors>
+    <samplelocal:SetScheduleViewBehavior/>
+  </local:SampleView.Behaviors>
+</local:SampleView>

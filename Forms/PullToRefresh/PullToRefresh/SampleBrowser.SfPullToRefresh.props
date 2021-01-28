@@ -1,0 +1,101 @@
+<Project>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataGridPullToRefresh\DataGridPullToRefreshBehaviors.cs" >
+      <Link>Samples\PullToRefresh\Samples\DataGridPullToRefresh\DataGridPullToRefreshBehaviors.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataGridPullToRefresh\DataGridPullToRefresh.xaml.cs">
+      <Link>Samples\PullToRefresh\Samples\DataGridPullToRefresh\DataGridPullToRefresh.xaml.cs</Link>
+      <DependentUpon>DataGridPullToRefresh.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataGridPullToRefresh\DataGridPullToRefreshViewModel.cs" >
+      <Link>Samples\PullToRefresh\Samples\DataGridPullToRefresh\DataGridPullToRefreshViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataGridPullToRefresh\Model\OrderInfo.cs" >
+      <Link>Samples\PullToRefresh\Samples\DataGridPullToRefresh\Model\OrderInfo.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataGridPullToRefresh\Model\OrderInfoRepository.cs" >
+      <Link>Samples\PullToRefresh\Samples\DataGridPullToRefresh\Model\OrderInfoRepository.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ListViewPullToRefresh\SfListViewPullToRefreshBehavior.cs" >
+      <Link>Samples\PullToRefresh\Samples\ListViewPullToRefresh\SfListViewPullToRefreshBehavior.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ListViewPullToRefresh\ListViewPullToRefresh.xaml.cs" >
+      <DependentUpon>ListViewPullToRefresh.xaml</DependentUpon>
+      <Link>Samples\PullToRefresh\Samples\ListViewPullToRefresh\ListViewPullToRefresh.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ListViewPullToRefresh\Model\ListViewBlogsInfo.cs" >
+      <Link>Samples\PullToRefresh\Samples\ListViewPullToRefresh\Model\ListViewBlogsInfo.cs</Link>
+    </Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\ListViewPullToRefresh\Model\BlogsInfoRepository.cs" >
+      <Link>Samples\PullToRefresh\Samples\ListViewPullToRefresh\Model\BlogsInfoRepository.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ListViewPullToRefresh\ReadMoreContentPage.xaml.cs">
+      <DependentUpon>ReadMoreContentPage.xaml</DependentUpon>
+      <Link>Samples\PullToRefresh\Samples\ListViewPullToRefresh\ReadMoreContentPage.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ListViewPullToRefresh\ListViewPullToRefreshViewModel.cs" >
+      <Link>Samples\PullToRefresh\Samples\ListViewPullToRefresh\ListViewPullToRefreshViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PullToRefreshView\PullToRefreshViewBehavior.cs" >
+      <Link>Samples\PullToRefresh\Samples\PullToRefreshView\PullToRefreshViewBehavior.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PullToRefreshView\Model\WeatherData.cs" >
+      <Link>Samples\PullToRefresh\Samples\PullToRefreshView\Model\WeatherData.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PullToRefreshView\Model\WeatherDataRepository.cs" >
+      <Link>Samples\PullToRefresh\Samples\PullToRefreshView\Model\WeatherDataRepository.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PullToRefreshView\PullToRefreshView.xaml.cs">
+      <DependentUpon>PullToRefreshView.xaml</DependentUpon>
+      <Link>Samples\PullToRefresh\Samples\PullToRefreshView\PullToRefreshView.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PullToRefreshView\PullToRefreshViewModel.cs">
+      <Link>Samples\PullToRefresh\Samples\PullToRefreshView\PullToRefreshViewModel.cs</Link>
+    </Compile>
+     <Compile Include="$(MSBuildThisFileDirectory)\Samples\PullToRefreshTemplate\PullToRefreshTemplateBehaviour.cs" >
+      <Link>Samples\PullToRefresh\Samples\PullToRefreshTemplate\PullToRefreshTemplateBehaviour.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PullToRefreshTemplate\PullToRefreshTemplate.xaml.cs">
+      <Link>Samples\PullToRefresh\Samples\PullToRefreshTemplate\PullToRefreshTemplate.xaml.cs</Link>
+      <DependentUpon>PullToRefreshTemplate.xaml</DependentUpon>
+    </Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\Helper\PickerExt.cs" >
+      <Link>Samples\PullToRefresh\Samples\Helper\PickerExt.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helper\SfImage.cs" >
+      <Link>Samples\PullToRefresh\Samples\Helper\SfImage.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ListViewPullToRefresh\ReadMoreContentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Link>Samples\PullToRefresh\Samples\ListViewPullToRefresh\ReadMoreContentPage.xaml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ListViewPullToRefresh\ListViewPullToRefresh.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Link>Samples\PullToRefresh\Samples\ListViewPullToRefresh\ListViewPullToRefresh.xaml</Link>
+    </EmbeddedResource>
+   <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DataGridPullToRefresh\DataGridPullToRefresh.xaml">
+    <SubType>Designer</SubType>
+    <Generator>MSBuild:Compile</Generator>
+    <Link>Samples\PullToRefresh\Samples\DataGridPullToRefresh\DataGridPullToRefresh.xaml</Link>
+  </EmbeddedResource>    
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\PullToRefreshTemplate\PullToRefreshTemplate.xaml">
+    <SubType>Designer</SubType>
+    <Generator>MSBuild:Compile</Generator>
+    <Link>Samples\PullToRefresh\Samples\PullToRefreshTemplate\PullToRefreshTemplate.xaml</Link>
+  </EmbeddedResource>
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\PullToRefreshView\PullToRefreshView.xaml">
+    <SubType>Designer</SubType>
+    <Generator>MSBuild:Compile</Generator>
+    <Link>Samples\PullToRefresh\Samples\PullToRefreshView\PullToRefreshView.xaml</Link>
+  </EmbeddedResource>
+    </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml" >
+      <Link>Samples\PullToRefresh\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

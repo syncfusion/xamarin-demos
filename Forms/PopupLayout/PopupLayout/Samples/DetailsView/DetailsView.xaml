@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<sample:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                   xmlns:local="clr-namespace:SampleBrowser.SfPopupLayout"
+                   x:Class="SampleBrowser.SfPopupLayout.DetailsView"
+                   xmlns:sflistview="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+                   xmlns:popuplayout="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms">
+
+    <sample:SampleView.Resources>
+        <popuplayout:SfPopupLayout x:Key="NotificationPopUp" StaysOpen="True">
+            <popuplayout:SfPopupLayout.PopupView>
+                <popuplayout:PopupView  ShowFooter="False" 
+                                        HeaderTitle="Notification !" 
+                                        HeightRequest="130">
+                    <popuplayout:PopupView.ContentTemplate>
+                        <DataTemplate>
+                            <Grid BackgroundColor="White" Padding="10,10,10,10">
+                                <Label FontSize="14"  
+                                       BackgroundColor="White" 
+                                       TextColor="Black" 
+                                       Text="Click on the contact tile to view the options"/>
+                            </Grid>
+                        </DataTemplate>
+                    </popuplayout:PopupView.ContentTemplate>
+                </popuplayout:PopupView>
+            </popuplayout:SfPopupLayout.PopupView>
+        </popuplayout:SfPopupLayout>
+    </sample:SampleView.Resources>
+
+    <sample:SampleView.BindingContext>
+        <local:ContactsViewModel x:Name="viewModel"/>
+    </sample:SampleView.BindingContext>
+
+    <sample:SampleView.Content>
+        <popuplayout:SfPopupLayout x:Name="popUp">
+            <popuplayout:SfPopupLayout.PopupView>
+                <popuplayout:PopupView HeightRequest="150" 
+                                       ShowHeader="False" 
+                                       ShowFooter="False" 
+                                       AnimationMode="None" 
+                                       WidthRequest="{Binding Source={x:Reference listView}, Path=Width}">
+                    <popuplayout:PopupView.PopupStyle>
+                        <popuplayout:PopupStyle BorderThickness="5" 
+                                                BorderColor="{OnPlatform iOS=White}"/>
+                    </popuplayout:PopupView.PopupStyle>
+                    <popuplayout:PopupView.ContentTemplate>
+                        <DataTemplate>
+                            <Grid BackgroundColor="White" 
+                                  HorizontalOptions="FillAndExpand" 
+                                  VerticalOptions="FillAndExpand" 
+                                  Padding="{OnPlatform iOS=10, UWP=10}">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="500"/>
+                                </Grid.ColumnDefinitions>
+                                <Image x:Name="sendMessageImage" 
+                                       Opacity="0.5" 
+                                       WidthRequest="20" 
+                                       HeightRequest="20" 
+                                       HorizontalOptions="CenterAndExpand" 
+                                       VerticalOptions="CenterAndExpand" 
+                                       Grid.Row="0" 
+                                       Grid.Column="0">
+                                    <Image.Source>
+                                        <FontImageSource Glyph="&#xe746;"
+                                                         FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"
+                                                         Color="#000000"/>
+                                    </Image.Source>
+
+                                </Image>
+                                <Label x:Name="sendMessageText" 
+                                       Text ="Send a Message" 
+                                       TextColor ="Black" 
+                                       FontSize ="16" 
+                                       HorizontalOptions="Start" 
+                                       VerticalOptions="Center" 
+                                       Opacity="87" WidthRequest="500" 
+                                       HeightRequest="40" 
+                                       Grid.Row="0" 
+                                       Grid.Column="1" 
+                                       Margin="0,10,0,0"/>
+                                <Image x:Name="blockSpanImage" 
+                                       Opacity="0.5" 
+                                       WidthRequest="20" 
+                                       HeightRequest="20" 
+                                       HorizontalOptions="CenterAndExpand" 
+                                       VerticalOptions="CenterAndExpand" 
+                                       Grid.Row="1" 
+                                       Grid.Column="0">
+                                    <Image.Source>
+                                        <FontImageSource Glyph="&#xe722;"
+                                                         FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"
+                                                         Color="#000000"/>
+                                    </Image.Source>
+                                </Image>
+                                <Label x:Name="blockSpanText" 
+                                       Text ="Block / Report Spam" 
+                                       TextColor ="Black" 
+                                       FontSize ="16" 
+                                       HorizontalOptions="Start" 
+                                       VerticalOptions="Center" 
+                                       Opacity="87" 
+                                       WidthRequest="500" 
+                                       HeightRequest="40" 
+                                       Grid.Row="1" 
+                                       Grid.Column="1" 
+                                       Margin="0,10,0,0"/>
+                                <Image x:Name="callDetailImage" 
+                                       Opacity="0.5" 
+                                       WidthRequest="20" 
+                                       HeightRequest="20" 
+                                       HorizontalOptions="CenterAndExpand" 
+                                       VerticalOptions="CenterAndExpand" 
+                                       Grid.Row="2" 
+                                       Grid.Column="0">
+                                    <Image.Source>
+                                        <FontImageSource Glyph="&#xe767;"
+                                                         FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"
+                                                         Color="#000000"/>
+                                    </Image.Source>
+                                </Image>
+                                <Label x:Name="callDetailText" 
+                                       Text ="Call details" 
+                                       TextColor ="Black" 
+                                       FontSize ="16" 
+                                       HorizontalOptions="Start" 
+                                       VerticalOptions="Center" 
+                                       Opacity="87" 
+                                       WidthRequest="500"
+                                       HeightRequest="40" 
+                                       Grid.Row="2" 
+                                       Grid.Column="1" 
+                                       Margin="0,10,0,0"/>
+                            </Grid>
+                        </DataTemplate>
+                    </popuplayout:PopupView.ContentTemplate>
+                </popuplayout:PopupView>
+            </popuplayout:SfPopupLayout.PopupView>
+            <popuplayout:SfPopupLayout.Content>
+                <Grid x:Name="mainGrid" BackgroundColor="#F4F4F4" Padding="16,0,16,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0"
+                           Text="Today"
+                           TextColor="#000000"
+                           FontSize="14"
+                           HorizontalOptions="Start"
+                           VerticalOptions="CenterAndExpand"
+                           Margin="10,10,0,0"
+                           Opacity="54" />
+                    <sflistview:SfListView x:Name="listView"
+                                           ItemSize="80"
+                                           SelectionMode="None"
+                                           ItemsSource="{Binding Contactsinfo}"
+                                           Grid.Row="1" IsScrollBarVisible="False"
+                                           ItemSpacing="0,5,0,5">
+                        <sflistview:SfListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.View>
+                                        <Grid x:Name="grid" RowSpacing="0">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="1" />
+                                            </Grid.RowDefinitions>
+                                            <Grid RowSpacing="0">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="70" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="70" />
+                                                </Grid.ColumnDefinitions>
+                                                <Image Source="{Binding ContactImage}"
+                                                       VerticalOptions="Center"
+                                                       HorizontalOptions="Center"
+                                                       HeightRequest="50"/>
+                                                <Grid Grid.Column="1"
+                                                      RowSpacing="1"
+                                                      Padding="10,0,0,0"
+                                                      VerticalOptions="Center">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="*" />
+                                                        <RowDefinition Height="*" />
+                                                    </Grid.RowDefinitions>
+                                                    <Label LineBreakMode="NoWrap"
+                                                           TextColor="#474747"
+                                                           Text="{Binding ContactName}" 
+                                                           FontSize="{OnPlatform 
+                                                        UWP={OnIdiom Phone=18, Tablet=20, Desktop=20},
+                                                        Android={OnIdiom Phone=16, Tablet=18}, 
+                                                        iOS={OnIdiom Phone=16, Tablet=18}}"/>
+                                                    <Label Grid.Row="1"
+                                                           Grid.Column="0"
+                                                           TextColor="#474747"
+                                                           LineBreakMode="NoWrap"
+                                                           Text="{Binding CallTime}" 
+                                                           FontSize="{OnPlatform UWP=12, 
+                                                        Android={OnIdiom Phone=12, Tablet=14}, 
+                                                        iOS={OnIdiom Phone=12, Tablet=14}}"/>
+                                                </Grid>
+                                                <Grid Grid.Row="0"
+                                                      Grid.Column="2"
+                                                      RowSpacing="0"
+                                                      HorizontalOptions="End"
+                                                      Padding="0,10,10,0">
+                                                    <Image 
+                                                       Opacity="0.5"
+                                                       HeightRequest="{OnPlatform UWP={OnIdiom Phone=30, Tablet=27, Desktop=27}, 
+                                                       Android=35, 
+                                                       iOS={OnIdiom Phone=35, Tablet=30}}">
+                                                        <Image.Source>
+                                                            <FontImageSource Glyph="&#xe766;"
+                                                                             FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"
+                                                                             Color="#000000"/>
+                                                        </Image.Source>
+                                                    </Image>
+                                                </Grid>
+                                            </Grid>
+                                            <StackLayout Grid.Row="1" 
+                                                         BackgroundColor="#E4E4E4" 
+                                                         HeightRequest="1"/>
+                                        </Grid>
+                                    </ViewCell.View>
+                                </ViewCell>
+                            </DataTemplate>
+                        </sflistview:SfListView.ItemTemplate>
+                    </sflistview:SfListView>
+                </Grid>
+            </popuplayout:SfPopupLayout.Content>
+        </popuplayout:SfPopupLayout>
+    </sample:SampleView.Content>
+    
+    <sample:SampleView.Behaviors>
+        <local:DetailsViewBehaviors />
+    </sample:SampleView.Behaviors>
+</sample:SampleView>

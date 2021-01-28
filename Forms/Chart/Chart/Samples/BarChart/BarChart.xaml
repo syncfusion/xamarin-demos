@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.BarChart" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+  <local:SampleView.Content>
+    <StackLayout x:Name="stack">
+      <StackLayout.Resources>
+        <ResourceDictionary>
+          <DataTemplate x:Key="toolTipTemplate1">
+            <StackLayout BackgroundColor="#404041">
+              <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="3,3,3,3" />
+              </StackLayout.Padding>
+              <Label Text="Imports" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,4,0,0'}" FontSize="12" Grid.Row="0" />
+                            <BoxView Color="White" HeightRequest="0.75" VerticalOptions="FillAndExpand" Margin="{OnPlatform Default='0', WPF='4,0,4,0'}" HorizontalOptions="FillAndExpand" />
+              <StackLayout Orientation="Horizontal"  VerticalOptions="FillAndExpand" BackgroundColor="#404041" Spacing="0" Padding="3" Margin="0">
+                <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="#CCCCCC" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" Margin="{OnPlatform Default='0', WPF='3,0,0,0'}" />
+                <Label Text="{Binding Value,StringFormat=' :  {0}B'}" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,0,3,0'}" FontSize="12" />
+              </StackLayout>
+            </StackLayout>
+          </DataTemplate>
+          <DataTemplate x:Key="toolTipTemplate2">
+            <StackLayout BackgroundColor="#404041">
+              <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="3,3,3,3" />
+              </StackLayout.Padding>
+              <Label Text="Exports" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,4,0,0'}" FontSize="12" Grid.Row="0" />
+                            <BoxView Grid.Row="1" Color="White" HeightRequest="0.75" Margin="{OnPlatform Default='0', WPF='4,0,4,0'}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+              <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" BackgroundColor="#404041" Spacing="0" Padding="3" Margin="0">
+                <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="#CCCCCC" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" Margin="{OnPlatform Default='0', WPF='3,0,0,0'}"/>
+                <Label Text="{Binding Value,StringFormat=' :  {0}B'}" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,0,3,0'}" FontSize="12" />
+              </StackLayout>
+            </StackLayout>
+          </DataTemplate>
+        </ResourceDictionary>
+      </StackLayout.Resources>
+      <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <chart:SfChart.Title>
+          <chart:ChartTitle Text="UK Trade in Food Groups - 2015"  />
+        </chart:SfChart.Title>
+        <chart:SfChart.BindingContext>
+          <sampleBrowser:BarSeriesViewModel />
+        </chart:SfChart.BindingContext>
+        <chart:SfChart.ChartBehaviors>
+          <chart:ChartTooltipBehavior BackgroundColor="#404041" />
+        </chart:SfChart.ChartBehaviors>
+        <chart:SfChart.PrimaryAxis>
+          <chart:CategoryAxis EdgeLabelsDrawingMode="Shift" ShowMajorGridLines="false">
+            <chart:CategoryAxis.Title>
+              <chart:ChartAxisTitle Text="Food" />
+            </chart:CategoryAxis.Title>
+          </chart:CategoryAxis>
+        </chart:SfChart.PrimaryAxis>
+        <chart:SfChart.SecondaryAxis>
+          <chart:NumericalAxis IsVisible="false" EdgeLabelsDrawingMode="Shift" ShowMajorGridLines="false" ShowMinorGridLines="false">
+            <chart:NumericalAxis.MajorTickStyle>
+              <chart:ChartAxisTickStyle TickSize="8">
+              </chart:ChartAxisTickStyle>
+            </chart:NumericalAxis.MajorTickStyle>
+          </chart:NumericalAxis>
+        </chart:SfChart.SecondaryAxis>
+        <chart:SfChart.Legend>
+          <chart:ChartLegend ToggleSeriesVisibility="True" DockPosition="Bottom" IconWidth="14" IconHeight="14" />
+        </chart:SfChart.Legend>
+        <chart:SfChart.ColorModel>
+          <chart:ChartColorModel Palette="Natural" />
+        </chart:SfChart.ColorModel>
+        <chart:SfChart.Series>
+          <chart:BarSeries x:Name="barSeries1" ItemsSource="{Binding BarData1}" XBindingPath="Name" YBindingPath="Value" LegendIcon="SeriesType" Label="Imports" EnableTooltip="true" EnableAnimation="True" TooltipTemplate="{StaticResource toolTipTemplate1}">
+            <chart:BarSeries.DataMarker>
+              <chart:ChartDataMarker ShowLabel="True">
+                <chart:ChartDataMarker.LabelStyle>
+                  <chart:DataMarkerLabelStyle LabelPosition="Inner" LabelFormat="#.#'B'"  Font="12">
+                  </chart:DataMarkerLabelStyle>
+                </chart:ChartDataMarker.LabelStyle>
+              </chart:ChartDataMarker>
+            </chart:BarSeries.DataMarker>
+          </chart:BarSeries>
+          <chart:BarSeries x:Name="barSeries2" ItemsSource="{Binding BarData2}" XBindingPath="Name" YBindingPath="Value" LegendIcon="SeriesType" Label="Exports" EnableTooltip="true" EnableAnimation="True" TooltipTemplate="{StaticResource toolTipTemplate2}">
+            <chart:BarSeries.DataMarker>
+              <chart:ChartDataMarker ShowLabel="True">
+                <chart:ChartDataMarker.LabelStyle>
+                  <chart:DataMarkerLabelStyle LabelPosition="Inner" LabelFormat="#.#'B'"  Font="12">
+                  </chart:DataMarkerLabelStyle>
+                </chart:ChartDataMarker.LabelStyle>
+              </chart:ChartDataMarker>
+            </chart:BarSeries.DataMarker>
+          </chart:BarSeries>
+        </chart:SfChart.Series>
+      </chart:SfChart>
+    </StackLayout>
+  </local:SampleView.Content>
+</local:SampleView>
