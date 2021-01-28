@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup> 
+     <Compile Include="$(MSBuildThisFileDirectory)\CustomFrameRenderer.cs" > 
+	 <Link>TabView\CustomFrameRenderer.cs</Link> 
+	 </Compile> 
+   </ItemGroup> 
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\Assets\Fonts\NestedTab.ttf" >
+	<Link>Assets\Fonts\NestedTab.ttf</Link>
+	</Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\Assets\Fonts\Segoe MDL2 Assets.ttf" >
+	<Link>Assets\Fonts\Segoe MDL2 Assets.ttf</Link>
+	</Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\Assets\Fonts\TabIcons.ttf" >
+	<Link>Assets\Fonts\TabIcons.ttf</Link>
+	</Content>
+  </ItemGroup>
+  
+</Project>

@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:gradient ="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+                  xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"                 
+                  x:Class="SampleBrowser.SfButton.GettingStartedSample">
+    <local:SampleView.Resources>
+        <ResourceDictionary>
+            <Style TargetType="syncfusion:SfButton" x:Key="linearVisualStyle">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Checked" >
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundGradient">
+                                        <Setter.Value>
+                                            <gradient:SfLinearGradientBrush>
+                                                <gradient:SfLinearGradientBrush.GradientStops>
+                                                    <gradient:SfGradientStop Color="#51F1F2" Offset="0"/>
+                                                    <gradient:SfGradientStop Color="#2F9BDF" Offset="1"/>
+                                                </gradient:SfLinearGradientBrush.GradientStops>
+                                            </gradient:SfLinearGradientBrush>
+                                        </Setter.Value>
+                                    </Setter>
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Unchecked">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundGradient">
+                                        <Setter.Value>
+                                            <gradient:SfLinearGradientBrush>
+                                                <gradient:SfLinearGradientBrush.GradientStops>
+                                                    <gradient:SfGradientStop Color="#2F9BDF" Offset="0"/>
+                                                    <gradient:SfGradientStop Color="#51F1F2" Offset="1"/>
+                                                </gradient:SfLinearGradientBrush.GradientStops>
+                                            </gradient:SfLinearGradientBrush>
+                                        </Setter.Value>
+                                    </Setter>
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+            <Style TargetType="syncfusion:SfButton" x:Key="radialVisualStyle">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Checked" >
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundGradient">
+                                        <Setter.Value>
+                                            <gradient:SfRadialGradientBrush Radius="1.5">
+                                                <gradient:SfRadialGradientBrush.GradientStops>
+                                                    <gradient:SfGradientStop Color="#FF5361" Offset="0.3"/>
+                                                    <gradient:SfGradientStop Color="#FFB57B" Offset="1"/>
+                                                </gradient:SfRadialGradientBrush.GradientStops>
+                                            </gradient:SfRadialGradientBrush>
+                                        </Setter.Value>
+                                    </Setter>
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Unchecked">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundGradient">
+                                        <Setter.Value>
+                                            <gradient:SfRadialGradientBrush Radius="1">
+                                                <gradient:SfRadialGradientBrush.GradientStops>
+                                                    <gradient:SfGradientStop Color="#FFB57B" Offset="0"/>
+                                                    <gradient:SfGradientStop Color="#FF5361" Offset="1"/>
+                                                </gradient:SfRadialGradientBrush.GradientStops>
+                                            </gradient:SfRadialGradientBrush>
+                                        </Setter.Value>
+                                    </Setter>
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+            <OnPlatform x:TypeArguments="x:String" x:Key="FontIcon">
+                <On Platform="Android" Value="Sync FontIcons.ttf#Sync FontIcons" />
+                <On Platform="iOS" Value="Sync FontIcons" />
+                <On Platform="UWP" Value="Sync FontIcons.ttf#Sync FontIcons"/>
+            </OnPlatform>
+            <FontImageSource x:Key="Heart_Icon"
+                             FontFamily="{StaticResource FontIcon}" Size="44"
+                             Glyph="&#xe72b;" 
+                             Color="White" />
+        </ResourceDictionary>
+    </local:SampleView.Resources>
+    <local:SampleView.Content>
+        <ScrollView>
+            <Grid Padding="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition>
+                        <RowDefinition.Height>
+                            <OnPlatform x:TypeArguments="GridLength">
+                                <On Platform="UWP">
+                                    <OnIdiom x:TypeArguments="GridLength" Desktop="100" Tablet="140" Phone="*"/>
+                                </On>
+                                <On Platform="WPF" Value="100"/>
+                                <On Platform="Android">
+                                    <OnIdiom x:TypeArguments="GridLength" Desktop="140" Tablet="140" Phone="*"/>
+                                </On>
+                                <On Platform="iOS">
+                                    <OnIdiom x:TypeArguments="GridLength" Desktop="140" Tablet="140" Phone="*"/>
+                                </On>
+                            </OnPlatform>
+                        </RowDefinition.Height>
+                    </RowDefinition>
+                    <RowDefinition>
+                        <RowDefinition.Height>
+                            <OnPlatform x:TypeArguments="GridLength">
+                                <On Platform="UWP">
+                                    <OnIdiom x:TypeArguments="GridLength" Desktop="100" Tablet="140" Phone="*"/>
+                                </On>
+                                <On Platform="WPF" Value="100">
+                                </On>
+                                <On Platform="Android">
+                                    <OnIdiom x:TypeArguments="GridLength" Desktop="140" Tablet="140" Phone="*"/>
+                                </On>
+                                <On Platform="iOS">
+                                    <OnIdiom x:TypeArguments="GridLength" Desktop="140" Tablet="140" Phone="*"/>
+                                </On>
+                            </OnPlatform>
+                        </RowDefinition.Height>
+                    </RowDefinition>
+                    <RowDefinition>
+                        <RowDefinition.Height>
+                            <OnPlatform x:TypeArguments="GridLength">
+                                <On Platform="UWP">
+                                    <OnIdiom x:TypeArguments="GridLength" Desktop="100" Tablet="140" Phone="*"/>
+                                </On>
+                                <On Platform="WPF" Value="100">
+                                </On>
+                                <On Platform="Android">
+                                    <OnIdiom x:TypeArguments="GridLength" Desktop="140" Tablet="140" Phone="*"/>
+                                </On>
+                                <On Platform="iOS">
+                                    <OnIdiom x:TypeArguments="GridLength" Desktop="140" Tablet="140" Phone="*"/>
+                                </On>
+                            </OnPlatform>
+                        </RowDefinition.Height>
+                    </RowDefinition>
+                    <RowDefinition>
+                        <RowDefinition.Height>
+                            <OnPlatform x:TypeArguments="GridLength">
+                                <On Platform="UWP">
+                                    <OnIdiom x:TypeArguments="GridLength" Desktop="100" Tablet="140" Phone="*"/>
+                                </On>
+                                <On Platform="WPF" Value="100">
+                                </On>
+                                <On Platform="Android">
+                                    <OnIdiom x:TypeArguments="GridLength" Desktop="140" Tablet="140" Phone="*"/>
+                                </On>
+                                <On Platform="iOS">
+                                    <OnIdiom x:TypeArguments="GridLength" Desktop="140" Tablet="140" Phone="*"/>
+                                </On>
+                            </OnPlatform>
+                        </RowDefinition.Height>
+                    </RowDefinition>
+                    <RowDefinition>
+                        <RowDefinition.Height>
+                            <OnPlatform x:TypeArguments="GridLength">
+                                <On Platform="UWP">
+                                    <OnIdiom x:TypeArguments="GridLength" Desktop="100" Tablet="140" Phone="*"/>
+                                </On>
+                                <On Platform="WPF" Value="100">
+                                </On>
+                                <On Platform="Android">
+                                    <OnIdiom x:TypeArguments="GridLength" Desktop="140" Tablet="140" Phone="*"/>
+                                </On>
+                                <On Platform="iOS">
+                                    <OnIdiom x:TypeArguments="GridLength" Desktop="140" Tablet="140" Phone="*"/>
+                                </On>
+                            </OnPlatform>
+                        </RowDefinition.Height>
+                    </RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition>
+                        <ColumnDefinition.Width>
+                            <OnPlatform x:TypeArguments="GridLength">
+                                <On Platform="UWP">
+                                    <OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="200" Phone="*" />
+                                </On>
+                                <On Platform="WPF" Value="170">
+                                </On>
+                                <On Platform="Android">
+                                    <OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="200" Phone="*"/>
+                                </On>
+                                <On Platform="iOS">
+                                    <OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="200" Phone="*"/>
+                                </On>
+                            </OnPlatform>
+                        </ColumnDefinition.Width>
+                    </ColumnDefinition>
+                    <ColumnDefinition>
+                        <ColumnDefinition.Width>
+                            <OnPlatform x:TypeArguments="GridLength">
+                                <On Platform="UWP">
+                                    <OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="*" />
+                                </On>
+                                <On Platform="WPF" Value="170">
+                                </On>
+                                <On Platform="Android">
+                                    <OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="*"/>
+                                </On>
+                                <On Platform="iOS">
+                                    <OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="*"/>
+                                </On>
+                            </OnPlatform>
+                        </ColumnDefinition.Width>
+                    </ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <syncfusion:SfButton x:Name="primaryButton"
+                                         Text="Primary Button"
+                                         HorizontalOptions="Center"
+                                         VerticalOptions="Center"
+                                         CornerRadius="2">
+                </syncfusion:SfButton>
+                <syncfusion:SfButton x:Name="normalButton" 
+                                         Grid.Column="1"
+                                         Text="Normal Button"
+                                         HorizontalOptions="Center"
+                                         VerticalOptions="Center"
+                                         BackgroundColor="#D8D6D7"
+                                         TextColor="Black"
+                                         CornerRadius="2">
+                </syncfusion:SfButton>
+                <syncfusion:SfButton x:Name="flatButton" 
+                                     Grid.Row="1" 
+                                     Text="Flat Button"
+                                     BorderWidth="0"
+                                     HorizontalOptions="Center"
+                                     VerticalOptions="Center"
+                                     TextColor="Accent"
+                                     BackgroundColor="Transparent"
+                                     CornerRadius="2">
+                </syncfusion:SfButton>
+                <syncfusion:SfButton x:Name="outlineButton"
+                                     Grid.Row="1"
+                                     Grid.Column="1" 
+                                     Text="Outline Button"
+                                     TextColor="Accent"
+                                     HorizontalOptions="Center"
+                                     VerticalOptions="Center"
+                                     BackgroundColor="White"
+                                     CornerRadius="0"
+                                     BorderColor="Accent">
+                    <syncfusion:SfButton.BorderWidth>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="iOS" Value="2" />
+                            <On Platform="WPF" Value="2"/>
+                            <On Platform="Android" Value="1" />
+                            <On Platform="UWP" Value="2" />
+                        </OnPlatform>
+                    </syncfusion:SfButton.BorderWidth>
+                </syncfusion:SfButton>
+                <syncfusion:SfButton x:Name="iconButtonLeft"
+                                     Grid.Row="2" 
+                                     ShowIcon="True"
+                                     ImageSource="{StaticResource Heart_Icon}"
+                                     Text="Icon Button"
+                                     HorizontalOptions="Center"
+                                     VerticalOptions="Center"
+                                     CornerRadius="2">
+                </syncfusion:SfButton>
+                <syncfusion:SfButton x:Name="iconButtonRight" 
+                                     Grid.Row="2" 
+                                     Grid.Column="1" 
+                                     ShowIcon="True"
+                                     HorizontalOptions="Center"
+                                     VerticalOptions="Center"
+                                     ImageSource="{StaticResource Heart_Icon}"
+                                     ImageAlignment="End"
+                                     Text="Icon Button"
+                                     CornerRadius="2">
+                </syncfusion:SfButton>
+                <syncfusion:SfButton x:Name="circleButton" 
+                                     Grid.Row="3" 
+                                     HorizontalOptions="Center"
+                                     VerticalOptions="Center"
+                                     HorizontalTextAlignment="Center"
+                                     VerticalTextAlignment="Center"
+                                     Text="&#xEB52;"
+                                     BorderWidth="0"
+                                     FontSize="20"
+                                     CornerRadius="40" >
+                    <syncfusion:SfButton.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Segoe MDL2 Assets" />
+                            <On Platform="WPF" Value="/Assets/Fonts/button_Segoe MDL2 Assets.ttf#Segoe MDL2 Assets"/>
+                            <On Platform="Android" Value="button_Segoe MDL2 Assets.ttf#Segoe MDL2 Assets" />
+                            <On Platform="UWP" Value="/Assets/Fonts/button_Segoe MDL2 Assets.ttf#Segoe MDL2 Assets" />
+                        </OnPlatform>
+                    </syncfusion:SfButton.FontFamily>
+                </syncfusion:SfButton>
+                <syncfusion:SfButton x:Name="iconButton" 
+                                     Grid.Row="3"
+                                     Grid.Column="1"
+                                     HorizontalOptions="Center"
+                                     VerticalOptions="Center"
+                                     HorizontalTextAlignment="Center"
+                                     VerticalTextAlignment="Center"
+                                     Text="&#xEB52;"
+                                     BorderWidth="0"
+                                     FontSize="16"  
+                                     CornerRadius="20"
+                                     IsCheckable="true"
+                                     TextColor="Black"
+                                     BackgroundColor="Transparent" 
+                                     PressedBackgroundColor="Transparent">
+                    <syncfusion:SfButton.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Segoe MDL2 Assets" />
+                            <On Platform="WPF"  Value="/Assets/Fonts/button_Segoe MDL2 Assets.ttf#Segoe MDL2 Assets"/>
+                            <On Platform="Android" Value="button_Segoe MDL2 Assets.ttf#Segoe MDL2 Assets" />
+                            <On Platform="UWP" Value="/Assets/Fonts/button_Segoe MDL2 Assets.ttf#Segoe MDL2 Assets" />
+                        </OnPlatform>
+                    </syncfusion:SfButton.FontFamily>
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Checked" >
+                                <VisualState.Setters>
+                                    <Setter Property="TextColor" Value="Accent"/>
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Unchecked">
+                                <VisualState.Setters>
+                                    <Setter Property="TextColor" Value="Black" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </syncfusion:SfButton>
+                <syncfusion:SfButton x:Name="gradientButton"
+                                     Grid.Row="4"
+                                     Grid.ColumnSpan="{OnPlatform Android=1, iOS=1, UWP=2,WPF=2}"
+                                     Text="Linear Gradient"
+                                     HorizontalOptions="Center"
+                                     VerticalOptions="Center"
+                                     CornerRadius="20"
+                                     IsCheckable="True"
+                                     Clicked="GradientButton_Clicked">
+                    <syncfusion:SfButton.BorderColor>
+                        <OnPlatform UWP="#51F1F2" WPF="#51F1F2"/>
+                    </syncfusion:SfButton.BorderColor>
+                    <syncfusion:SfButton.BorderWidth>
+                        <OnPlatform UWP="1" WPF="1"/>
+                    </syncfusion:SfButton.BorderWidth>
+                    <syncfusion:SfButton.Style>
+                        <OnPlatform Android="{StaticResource linearVisualStyle}" iOS="{StaticResource linearVisualStyle}" UWP="{StaticResource linearVisualStyle}"/>
+                    </syncfusion:SfButton.Style>
+                </syncfusion:SfButton>
+                <syncfusion:SfButton Text="Radial Gradient" 
+                                     Grid.Row="4"
+                                     Grid.Column="1"
+                                     HorizontalOptions="Center"
+                                     VerticalOptions="Center"
+                                     CornerRadius="20"
+                                     IsCheckable="True">
+                    <syncfusion:SfButton.IsVisible>
+                        <OnPlatform WPF="False" Android="True" iOS="True" UWP="False" />
+                    </syncfusion:SfButton.IsVisible>
+                    <syncfusion:SfButton.Style>
+                        <OnPlatform Android="{StaticResource radialVisualStyle}" iOS="{StaticResource radialVisualStyle}" UWP="{StaticResource radialVisualStyle}"/>
+                    </syncfusion:SfButton.Style>
+                </syncfusion:SfButton>
+            </Grid>
+        </ScrollView>
+    </local:SampleView.Content>
+</local:SampleView>

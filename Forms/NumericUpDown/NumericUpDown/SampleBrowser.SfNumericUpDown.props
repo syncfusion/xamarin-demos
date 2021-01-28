@@ -1,0 +1,42 @@
+<Project >
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\NumericUpDown\NumericUpDown.xaml.cs">
+    <Link>Samples\NumericUpDown\NumericUpDown\NumericUpDown.xaml.cs</Link>
+      <DependentUpon>NumericUpDown.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\NumericUpDown\NumericUpDown_Default.xaml.cs">
+    <Link>Samples\NumericUpDown\NumericUpDown\NumericUpDown_Default.xaml.cs</Link>
+      <DependentUpon>NumericUpDown_Default.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml.cs">
+	    <Link>Samples\NumericUpDown\Samples\Themes\Themes.xaml.cs</Link>
+      <DependentUpon>Themes.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml" >
+    <Link>Samples\NumericUpDown\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+   <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\NumericUpDown\NumericUpDown.xaml">
+   <Link>Samples\NumericUpDown\NumericUpDown\NumericUpDown.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\NumericUpDown\NumericUpDown_Default.xaml">
+    <Link>Samples\NumericUpDown\NumericUpDown\NumericUpDown_Default.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml">
+	    <Link>Samples\NumericUpDown\Samples\Themes\Themes.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

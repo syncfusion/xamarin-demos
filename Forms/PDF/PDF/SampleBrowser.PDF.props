@@ -1,0 +1,209 @@
+<Project>  
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+	<Link>Samples\PDF\SamplesList\SamplesList.xml</Link>
+	</EmbeddedResource> 
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Assets\arabic.txt">
+	<Link>Samples\PDF\Samples\Assets\arabic.txt</Link>
+	</EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Assets\arial.ttf">
+	<Link>Samples\PDF\Samples\Assets\arial.ttf</Link>
+	</EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Assets\NotoSerif-Black.otf">
+	<Link>Samples\PDF\Samples\Assets\NotoSerif-Black.otf</Link>
+	</EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Assets\FormFillingDocument.pdf">
+	<Link>Samples\PDF\Samples\Assets\FormFillingDocument.pdf</Link>
+	</EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Assets\JavaScript Succinctly.pdf">
+	<Link>Samples\PDF\Samples\Assets\JavaScript Succinctly.pdf</Link>
+	</EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Assets\PDF.pfx">
+	<Link>Samples\PDF\Samples\Assets\PDF.pfx</Link>
+	</EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Assets\SignedDocument.pdf">
+	<Link>Samples\PDF\Samples\Assets\SignedDocument.pdf</Link>
+	</EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Assets\Product Catalog.pdf">
+	<Link>Samples\PDF\Samples\Assets\Product Catalog.pdf</Link>
+	</EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Assets\Products.xml">
+	<Link>Samples\PDF\Samples\Assets\Products.xml</Link>
+	</EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Assets\Report.xml">
+	<Link>Samples\PDF\Samples\Assets\Report.xml</Link>
+	</EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Assets\SalesOrderDetail.pdf">
+	<Link>Samples\PDF\Samples\Assets\SalesOrderDetail.pdf</Link>
+	</EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Assets\Xamarin_bannerEdit.jpg">
+	<Link>Samples\PDF\Samples\Assets\Xamarin_bannerEdit.jpg</Link>
+	</EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Assets\Xamarin_JPEG.jpg">
+	<Link>Samples\PDF\Samples\Assets\Xamarin_JPEG.jpg</Link>
+	</EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Assets\Xamarin_PNG.png">
+	<Link>Samples\PDF\Samples\Assets\Xamarin_PNG.png</Link>
+	</EmbeddedResource>	
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Assets\InvoiceProductList.xml">
+	<Link>Samples\PDF\Samples\Assets\InvoiceProductList.xml</Link>
+	</EmbeddedResource>	
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Assets\AdventureCycle.jpg">
+	<Link>Samples\PDF\Samples\Assets\AdventureCycle.jpg</Link>
+	</EmbeddedResource>	
+  </ItemGroup> 
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Barcode\Barcode.xaml">
+	<Link>Samples\PDF\Samples\Barcode\Barcode.xaml</Link>
+	<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+	</EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Booklet\Booklet.xaml">
+	<Link>Samples\PDF\Samples\Booklet\Booklet.xaml</Link>
+	<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+	</EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DigitalSignature\DigitalSignature.xaml">
+	<Link>Samples\PDF\Samples\DigitalSignature\DigitalSignature.xaml</Link>
+	<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+	</EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Encryption\Encryption.xaml">
+	<Link>Samples\PDF\Samples\Encryption\Encryption.xaml</Link>
+	<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+	</EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DigitalSignatureValidation\DigitalSignatureValidation.xaml">
+	<Link>Samples\PDF\Samples\DigitalSignatureValidation\DigitalSignatureValidation.xaml</Link>
+	<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+	</EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\GettingStartedPDF\GettingStartedPDF.xaml">
+	<Link>Samples\PDF\Samples\GettingStartedPDF\GettingStartedPDF.xaml</Link>
+	<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+	</EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ImageInsertion\ImageInsertion.xaml">
+	<Link>Samples\PDF\Samples\ImageInsertion\ImageInsertion.xaml</Link>
+	<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+	</EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\MailAttachment\MailAttachment.xaml">
+	<Link>Samples\PDF\Samples\MailAttachment\MailAttachment.xaml</Link>
+	<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+	</EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\RTLSupport\RTLSupport.xaml">
+	<Link>Samples\PDF\Samples\RTLSupport\RTLSupport.xaml</Link>
+	<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+	</EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\OpenTypeFont\OpenTypeFont.xaml">
+	<Link>Samples\PDF\Samples\OpenTypeFont\OpenTypeFont.xaml</Link>
+	<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+	</EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Conformance\Conformance.xaml">
+	<Link>Samples\PDF\Samples\Conformance\Conformance.xaml</Link>
+	<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+	</EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Stamping\Stamping.xaml">
+	<Link>Samples\PDF\Samples\Stamping\Stamping.xaml</Link>
+	<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+	</EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\TableFeatures\TableFeatures.xaml">
+	<Link>Samples\PDF\Samples\TableFeatures\TableFeatures.xaml</Link>
+	<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+	</EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ZugFerd\ZugFerd.xaml">
+	<Link>Samples\PDF\Samples\ZugFerd\ZugFerd.xaml</Link>
+	<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+	</EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Barcode\Barcode.xaml.cs">
+	<Link>Samples\PDF\Samples\Barcode\Barcode.xaml.cs</Link>
+	<DependentUpon>Barcode.xaml</DependentUpon>
+	</Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\Booklet\Booklet.xaml.cs">
+	<Link>Samples\PDF\Samples\Booklet\Booklet.xaml.cs</Link>
+	<DependentUpon>Booklet.xaml</DependentUpon>
+	</Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\DigitalSignature\DigitalSignature.xaml.cs">
+	<Link>Samples\PDF\Samples\DigitalSignature\DigitalSignature.xaml.cs</Link>
+	<DependentUpon>DigitalSignature.xaml</DependentUpon>
+	</Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\Encryption\Encryption.xaml.cs">
+	<Link>Samples\PDF\Samples\Encryption\Encryption.xaml.cs</Link>
+	<DependentUpon>Encryption.xaml</DependentUpon>
+	</Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\DigitalSignatureValidation\DigitalSignatureValidation.xaml.cs">
+	<Link>Samples\PDF\Samples\DigitalSignatureValidation\DigitalSignatureValidation.xaml.cs</Link>
+	<DependentUpon>DigitalSignatureValidation.xaml</DependentUpon>
+	</Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStartedPDF\GettingStartedPDF.xaml.cs">
+	<Link>Samples\PDF\Samples\GettingStartedPDF\GettingStartedPDF.xaml.cs</Link>
+	<DependentUpon>GettingStartedPDF.xaml</DependentUpon>
+	</Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\ImageInsertion\ImageInsertion.xaml.cs">
+	<Link>Samples\PDF\Samples\ImageInsertion\ImageInsertion.xaml.cs</Link>
+	<DependentUpon>ImageInsertion.xaml</DependentUpon>
+	</Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\MailAttachment\MailAttachment.xaml.cs">
+	<Link>Samples\PDF\Samples\MailAttachment\MailAttachment.xaml.cs</Link>
+	<DependentUpon>MailAttachment.xaml</DependentUpon>
+	</Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\RTLSupport\RTLSupport.xaml.cs">
+	<Link>Samples\PDF\Samples\RTLSupport\RTLSupport.xaml.cs</Link>
+	<DependentUpon>RTLSupport.xaml</DependentUpon>
+	</Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\OpenTypeFont\OpenTypeFont.xaml.cs">
+	<Link>Samples\PDF\Samples\OpenTypeFont\OpenTypeFont.xaml.cs</Link>
+	<DependentUpon>OpenTypeFont.xaml</DependentUpon>
+	</Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\Conformance\Conformance.xaml.cs">
+	<Link>Samples\PDF\Samples\Conformance\Conformance.xaml.cs</Link>
+	<DependentUpon>Conformance.xaml</DependentUpon>
+	</Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\Stamping\Stamping.xaml.cs">
+	<Link>Samples\PDF\Samples\Stamping\Stamping.xaml.cs</Link>
+	<DependentUpon>Stamping.xaml</DependentUpon>
+	</Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\TableFeatures\TableFeatures.xaml.cs">
+	<Link>Samples\PDF\Samples\TableFeatures\TableFeatures.xaml.cs</Link>
+	<DependentUpon>TableFeatures.xaml</DependentUpon>
+	</Compile>	
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\ZugFerd\ZugFerd.xaml.cs">
+	<Link>Samples\PDF\Samples\ZugFerd\ZugFerd.xaml.cs</Link>
+	<DependentUpon>ZugFerd.xaml</DependentUpon>
+	</Compile>	
+	<Compile Include="$(MSBuildThisFileDirectory)\ISave.cs">
+	<Link>Samples\PDF\ISave.cs</Link>
+	</Compile>	
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\ZugFerd\CountryCodes.cs">
+	<Link>Samples\ZugFerd\CountryCodes.cs</Link>
+	</Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ZugFerd\CurrencyCodes.cs">
+	<Link>Samples\ZugFerd\CurrencyCodes.cs</Link>
+	</Compile>	
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\ZugFerd\InvoiceType.cs">
+	<Link>Samples\ZugFerd\InvoiceType.cs</Link>
+	</Compile>	
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\ZugFerd\Product.cs">
+	<Link>Samples\ZugFerd\Product.cs</Link>
+	</Compile>	
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\ZugFerd\UserDetails.cs">
+	<Link>Samples\ZugFerd\UserDetails.cs</Link>
+	</Compile>	
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\ZugFerd\ZugFerdInvoice.cs">
+	<Link>Samples\ZugFerd\ZugFerdInvoice.cs</Link>
+	</Compile>	
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\ZugFerd\ZugferdProfile.cs">
+	<Link>Samples\ZugFerd\ZugferdProfile.cs</Link>
+	</Compile>	
+  </ItemGroup>
+</Project>

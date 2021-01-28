@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\MaskedEdit\MaskedEdit.xaml.cs">
+	  <Link>Samples\MaskedEdit\Samples\MaskedEdit.xaml.cs</Link>
+      <DependentUpon>MaskedEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\MaskedEdit\MaskedEdit_Default.xaml.cs">
+	  <Link>Samples\MaskedEdit\Samples\MaskedEdit_Default.xaml.cs</Link>
+      <DependentUpon>MaskedEdit_Default.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\MaskedEdit\MaskedEdit_Tablet.xaml.cs">
+	  <Link>Samples\MaskedEdit\Samples\MaskedEdit_Tablet.xaml.cs</Link>
+      <DependentUpon>MaskedEdit_Tablet.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml.cs">
+	    <Link>Samples\MaskedEdit\Samples\Themes\Themes.xaml.cs</Link>
+      <DependentUpon>Themes.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+    <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml" >
+	<Link>Samples\MaskedEdit\SamplesList\SamplesList.xml</Link>
+	</EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\MaskedEdit\MaskedEdit.xaml">
+	  <Link>Samples\MaskedEdit\Samples\MaskedEdit.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\MaskedEdit\MaskedEdit_Default.xaml">
+	  <Link>Samples\MaskedEdit\Samples\MaskedEdit_Default.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\MaskedEdit\MaskedEdit_Tablet.xaml">
+	  <Link>Samples\MaskedEdit\Samples\MaskedEdit_Tablet.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml">
+	    <Link>Samples\MaskedEdit\Samples\Themes\Themes.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

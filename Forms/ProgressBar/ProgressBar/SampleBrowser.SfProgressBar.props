@@ -1,0 +1,155 @@
+   <Project>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml" >
+	<Link>Samples\ProgressBar\SamplesList\SamplesList.xml</Link>
+	</EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Circular\Circular.xaml">
+		<Link>Samples\ProgressBar\Samples\Circular\Circular.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Circular\CircularAngleCustomization.xaml">
+		<Link>Samples\ProgressBar\Samples\Circular\CircularAngleCustomization.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Circular\CircularCustomContent.xaml">
+	<Link>Samples\ProgressBar\Samples\Circular\CircularCustomContent.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Circular\CircularDeterminateInDeterminate.xaml">
+	<Link>Samples\ProgressBar\Samples\Circular\CircularDeterminateInDeterminate.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Circular\CircularRadiusCustomization.xaml">
+	<Link>Samples\ProgressBar\Samples\Circular\CircularRadiusCustomization.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Circular\CircularRangeColors.xaml">
+	<Link>Samples\ProgressBar\Samples\Circular\CircularRangeColors.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Circular\CircularSegment.xaml">
+	<Link>Samples\ProgressBar\Samples\Circular\CircularSegment.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Linear\Linear.xaml">
+	<Link>Samples\ProgressBar\Samples\Linear\Linear.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Linear\LinearBuffer.xaml">
+	<Link>Samples\ProgressBar\Samples\Linear\LinearBuffer.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Linear\LinearCornerRadius.xaml">
+	<Link>Samples\ProgressBar\Samples\Linear\LinearCornerRadius.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Linear\LinearDeterminate.xaml">
+	<Link>Samples\ProgressBar\Samples\Linear\LinearDeterminate.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Linear\LinearIndeterminate.xaml">
+	<Link>Samples\ProgressBar\Samples\Linear\LinearIndeterminate.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Linear\LinearPadding.xaml">
+	<Link>Samples\ProgressBar\Samples\Linear\LinearPadding.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+	    <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Linear\LinearRangeColors.xaml">
+	<Link>Samples\ProgressBar\Samples\Linear\LinearRangeColors.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Linear\LinearSegment.xaml">
+	<Link>Samples\ProgressBar\Samples\Linear\LinearSegment.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Linear\LinearSegmentedCornerRadius.xaml">
+	<Link>Samples\ProgressBar\Samples\Linear\LinearSegmentedCornerRadius.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+<ItemGroup>
+   <Compile Include="$(MSBuildThisFileDirectory)\Samples\Circular\Circular.xaml.cs">
+		<Link>Samples\ProgressBar\Samples\Circular\Circular.xaml.cs</Link>
+      <DependentUpon>Circular.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Circular\CircularAngleCustomization.xaml.cs">
+		<Link>Samples\ProgressBar\Samples\Circular\CircularAngleCustomization.xaml.cs</Link>
+      <DependentUpon>CircularAngleCustomization.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Circular\CircularCustomContent.xaml.cs">
+	<Link>Samples\ProgressBar\Samples\Circular\CircularCustomContent.xaml.cs</Link>
+      <DependentUpon>CircularCustomContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Circular\CircularDeterminateInDeterminate.xaml.cs">
+	<Link>Samples\ProgressBar\Samples\Circular\CircularDeterminateInDeterminate.xaml.cs</Link>
+      <DependentUpon>CircularDeterminateInDeterminate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Circular\CircularSegment.xaml.cs">
+	<Link>Samples\ProgressBar\Samples\Circular\CircularSegment.xaml.cs</Link>
+      <DependentUpon>CircularSegment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Circular\CircularRadiusCustomization.xaml.cs">
+	<Link>Samples\ProgressBar\Samples\Circular\CircularRadiusCustomization.xaml.cs</Link>
+      <DependentUpon>CircularRadiusCustomization.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Circular\CircularRangeColors.xaml.cs">
+	<Link>Samples\ProgressBar\Samples\Circular\CircularRangeColors.xaml.cs</Link>
+      <DependentUpon>CircularRangeColors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Linear\LinearCornerRadius.xaml.cs">
+		<Link>Samples\ProgressBar\Samples\Linear\LinearCornerRadius.xaml.cs</Link>
+      <DependentUpon>LinearCornerRadius.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Linear\LinearDeterminate.xaml.cs">
+	<Link>Samples\ProgressBar\Samples\Linear\LinearDeterminate.xaml.cs</Link>
+      <DependentUpon>LinearDeterminate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Linear\Linear.xaml.cs">
+	<Link>Samples\ProgressBar\Samples\Linear\Linear.xaml.cs</Link>
+      <DependentUpon>Linear.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Linear\LinearIndeterminate.xaml.cs">
+	<Link>Samples\ProgressBar\Samples\Linear\LinearIndeterminate.xaml.cs</Link>
+      <DependentUpon>LinearIndeterminate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Linear\LinearPadding.xaml.cs">
+	<Link>Samples\ProgressBar\Samples\Linear\LinearPadding.xaml.cs</Link>
+      <DependentUpon>LinearPadding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Linear\LinearRangeColors.xaml.cs">
+	<Link>Samples\ProgressBar\Samples\Linear\LinearRangeColors.xaml.cs</Link>
+      <DependentUpon>LinearRangeColors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Linear\LinearBuffer.xaml.cs">
+	<Link>Samples\ProgressBar\Samples\Linear\LinearBuffer.xaml.cs</Link>
+      <DependentUpon>LinearBuffer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Linear\LinearSegment.xaml.cs">
+	<Link>Samples\ProgressBar\Samples\Linear\LinearSegment.xaml.cs</Link>
+      <DependentUpon>LinearSegment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Linear\LinearSegmentedCornerRadius.xaml.cs">
+	<Link>Samples\ProgressBar\Samples\Linear\LinearSegmentedCornerRadius.xaml.cs</Link>
+      <DependentUpon>LinearSegmentedCornerRadius.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml.cs">
+              <Link>Samples\ProgressBar\Samples\Themes\Themes.xaml.cs</Link>
+              <DependentUpon>Themes.xaml</DependentUpon>
+          </Compile>
+              </ItemGroup>
+              <ItemGroup>
+          <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml">
+              <Link>Samples\ProgressBar\Samples\Themes\Themes.xaml</Link>
+              <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+              <SubType>Designer</SubType>
+          </EmbeddedResource>
+      </ItemGroup>
+
+  
+</Project>

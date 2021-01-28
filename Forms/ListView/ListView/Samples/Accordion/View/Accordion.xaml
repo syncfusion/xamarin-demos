@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfListView.Accordion"
+                   x:Name="sampleView"
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:local="clr-namespace:SampleBrowser.SfListView"
+                   xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                   xmlns:sflistview="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
+
+    <sample:SampleView.BindingContext>
+        <local:AccordionViewModel/>
+    </sample:SampleView.BindingContext>
+    <sample:SampleView.Behaviors>
+        <local:SfListViewAccordionBehavior/>
+    </sample:SampleView.Behaviors> 
+    <sample:SampleView.Content>
+        <Grid x:Name="mainGrid" BackgroundColor="#F0F0F0" Padding="4">
+            <sflistview:SfListView x:Name="listView" ItemsSource="{Binding ContactsInfo}" 
+                                   FocusBorderThickness="0" AutoFitMode="Height" SelectionMode ="None" IsScrollBarVisible="False" ItemSpacing="0">
+                <sflistview:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid Padding="2" Margin="1" BackgroundColor="#F0F0F0" >
+                                    <Frame x:Name="frame" CornerRadius="2" Padding="1" Margin="1" OutlineColor="White" HasShadow="{OnPlatform Android=true, iOS=false, macOS=false, UWP=true, WPF=true}">
+                                        <Grid VerticalOptions="FillAndExpand" BackgroundColor="White" HorizontalOptions="FillAndExpand" RowSpacing="0">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <Grid x:Name="grid" RowSpacing="0">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="60" />
+                                                </Grid.RowDefinitions>
+                                                <Grid RowSpacing="0">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="60" />
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="50" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Grid Grid.Row="0" Grid.Column="0">
+                                                        <local:SfImage HeightRequest="45" Margin="5,0,0,0" WidthRequest="45" Source="{Binding ContactImage}" VerticalOptions="Center" HorizontalOptions="Center" />
+                                                    </Grid>
+                                                    <Grid Grid.Row="0" Grid.Column="1" RowSpacing="1" Padding="5" VerticalOptions="Center">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="*" />
+                                                            <RowDefinition Height="*" />
+                                                        </Grid.RowDefinitions>
+                                                        <Label Grid.Row="0" LineBreakMode="NoWrap" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="#474747" Text="{Binding ContactName}" 
+                                                               FontSize="{OnPlatform Android={OnIdiom Phone=16, Tablet=18}, iOS={OnIdiom Phone=16, Tablet=18}, macOS=18 , UWP={OnIdiom Phone=18, Tablet=20, Default=20}, WPF=20}"/>
+                                                        <Label Grid.Row="1" TextColor="#474747" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" LineBreakMode="NoWrap" Text="{Binding CallTime}"
+                                                               FontSize="{OnPlatform Android={OnIdiom Phone=12, Tablet=14}, iOS={OnIdiom Phone=12, Tablet=14}, macOS=14 , UWP={OnIdiom Phone=12, Tablet=12, Default=12}, WPF=20}"/>
+                                                    </Grid>
+                                                    <Grid Grid.Row="0" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center">
+                                                        <Label HeightRequest="20" WidthRequest="20" HorizontalOptions="Center" VerticalOptions="Center"
+                                                               Text ="&#xe766;" TextColor="#757575" FontSize="{OnPlatform Android=20, iOS=Large, macOS=Large, UWP=Medium, WPF=Medium }" FontFamily="{OnPlatform iOS=Sync FontIcons, macOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons, WPF=Assets/Fonts/Sync FontIcons.ttf#Sync FontIcons}"/>
+                                                    </Grid>
+                                                </Grid>
+                                            </Grid>
+                                            <Grid IsVisible="{Binding IsVisible, Mode=TwoWay}" ColumnSpacing="0" RowSpacing="0" Grid.Row="1" BackgroundColor="White"
+                                                  HorizontalOptions="FillAndExpand" Padding="5" VerticalOptions="FillAndExpand">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="1" />
+                                                    <RowDefinition Height="40" />
+                                                    <RowDefinition Height="40" />
+                                                    <RowDefinition Height="40" />
+                                                    <RowDefinition Height="40" />
+                                                    <RowDefinition Height="40" />
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions >
+                                                    <ColumnDefinition Width="50" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <BoxView Grid.Row="0" Grid.Column="0" BackgroundColor="LightGray" />
+                                                <Label Grid.Row="1" Grid.Column="0" WidthRequest="30" HeightRequest="30" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                                       Text="&#xe761;" Margin="0,5,0,0" TextColor="#757575" FontSize="{OnPlatform Android=20, iOS=Large, macOS=Large, UWP=Medium, WPF=Medium }" FontFamily="{OnPlatform iOS=Sync FontIcons, macOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons, WPF=Assets/Fonts/Sync FontIcons.ttf#Sync FontIcons}"/>
+                                                <Label Grid.Row="2" Grid.Column="0" WidthRequest="30" HeightRequest="30" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                                       Text="&#xe72a;" TextColor="#757575" FontSize="{OnPlatform Android=20, iOS=Large, macOS=Large, UWP=Medium, WPF=Medium }" FontFamily="{OnPlatform iOS=Sync FontIcons, macOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons, WPF=Assets/Fonts/Sync FontIcons.ttf#Sync FontIcons}"/>
+                                                <Label Grid.Row="3" Grid.Column="0" WidthRequest="30" HeightRequest="30" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                                       Text="&#xe746;" TextColor="#757575" FontSize="{OnPlatform Android=20, iOS=Large, macOS=Large, UWP=Medium, WPF=Medium }" FontFamily="{OnPlatform iOS=Sync FontIcons, macOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons, WPF=Assets/Fonts/Sync FontIcons.ttf#Sync FontIcons}"/>
+                                                <Label Grid.Row="4" Grid.Column="0" WidthRequest="30" HeightRequest="30" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                                       Text="&#xe722;" TextColor="#757575" FontSize="{OnPlatform Android=20, iOS=Large, macOS=Large, UWP=Medium, WPF=Medium }" FontFamily="{OnPlatform iOS=Sync FontIcons, macOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons, WPF=Assets/Fonts/Sync FontIcons.ttf#Sync FontIcons}"/>
+                                                <Label Grid.Row="5" Grid.Column="0" WidthRequest="30" HeightRequest="30" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                                           Text="&#xe767;" TextColor="#757575" FontSize="{OnPlatform Android=20, iOS=Large, macOS=Large, UWP=Medium, WPF=Medium }" FontFamily="{OnPlatform iOS=Sync FontIcons, macOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons, WPF=Assets/Fonts/Sync FontIcons.ttf#Sync FontIcons}"/>
+                                               
+                                                <BoxView Grid.Row="0" Grid.Column="1" BackgroundColor="LightGray" />
+                                                <Label Grid.Row="1" Grid.Column="1" Text="Create new contact" TextColor="#000000" FontSize="14" HorizontalOptions="Start"
+                                                       VerticalOptions="Center" Opacity="87"/>
+                                                <Label Grid.Row="2" Grid.Column="1" Text="Add to a contact" TextColor="#000000" FontSize="14" HorizontalOptions="Start"
+                                                       VerticalOptions="Center" Opacity="87"/>
+                                                <Label Grid.Row="3" Grid.Column="1" Text="Send a message" TextColor="#000000" FontSize="14" HorizontalOptions="Start"
+                                                       VerticalOptions="Center" Opacity="87"/>
+                                                <Label Grid.Row="4" Grid.Column="1" Text="Block/report Spam" TextColor="#000000" FontSize="14" HorizontalOptions="Start"
+                                                       VerticalOptions="Center" Opacity="87"/>
+                                                <Label Grid.Row="5" Grid.Column="1" Text="Call details" TextColor="#000000" FontSize="14" HorizontalOptions="Start"
+                                                       VerticalOptions="Center" Opacity="87"/>
+                                            </Grid>
+                                        </Grid>
+                                    </Frame>
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </sflistview:SfListView.ItemTemplate>
+            </sflistview:SfListView>
+        </Grid>
+    </sample:SampleView.Content>
+</sample:SampleView>

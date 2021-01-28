@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.GradientChart" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+    <local:SampleView.Content>
+        <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <chart:SfChart.Margin>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="0,0,15,0" />
+            </chart:SfChart.Margin>
+            <chart:SfChart.Title>
+                <chart:ChartTitle Text="Oxygen Level " />
+            </chart:SfChart.Title>
+            <chart:SfChart.BindingContext>
+                <sampleBrowser:GradientChartViewModel />
+            </chart:SfChart.BindingContext>
+            <chart:SfChart.PrimaryAxis>
+                <chart:DateTimeAxis PlotOffset="6" 
+                                    LabelRotationAngle="-45"
+                                    ShowMajorGridLines = "false" ShowMinorGridLines ="false">
+                    <chart:DateTimeAxis.LabelStyle>
+                        <chart:ChartAxisLabelStyle LabelFormat="MMM dd" />
+                    </chart:DateTimeAxis.LabelStyle>
+                </chart:DateTimeAxis>
+            </chart:SfChart.PrimaryAxis>
+            <chart:SfChart.SecondaryAxis>
+                <chart:NumericalAxis Maximum="50" Interval="5" >
+                  <chart:NumericalAxis.AxisLineStyle>
+                    <chart:ChartLineStyle StrokeWidth="0">
+                    </chart:ChartLineStyle>
+                  </chart:NumericalAxis.AxisLineStyle>
+                  <chart:NumericalAxis.MajorTickStyle>
+                    <chart:ChartAxisTickStyle TickSize="0" />
+                  </chart:NumericalAxis.MajorTickStyle>
+                    <chart:NumericalAxis.LabelStyle>
+                        <chart:ChartAxisLabelStyle x:Name="secondaryAxisLabelStyle" />
+                    </chart:NumericalAxis.LabelStyle>
+                </chart:NumericalAxis>
+            </chart:SfChart.SecondaryAxis>
+         
+            <chart:SfChart.Series>
+                <chart:SplineAreaSeries ItemsSource="{Binding OxygenHighDate}" XBindingPath="Date" YBindingPath="High" StrokeColor="#FF0080DF" StrokeWidth="2">
+                <chart:SplineAreaSeries.DataMarker>
+                        <chart:ChartDataMarker MarkerWidth="8" MarkerHeight="8" MarkerColor="White" MarkerBorderColor="#FF0080DF" MarkerBorderWidth="2" ShowMarker="true" ShowLabel="true" >
+                            <chart:ChartDataMarker.LabelStyle>
+                                <chart:DataMarkerLabelStyle OffsetY="-10" BackgroundColor="#FF0080DF" LabelFormat="#.#'%'"/>
+                            </chart:ChartDataMarker.LabelStyle>
+                        </chart:ChartDataMarker>
+                    </chart:SplineAreaSeries.DataMarker>
+               <chart:SplineAreaSeries.ColorModel>
+                <chart:ChartColorModel Palette="Custom">
+                    <chart:ChartColorModel.CustomGradientColors>
+                        <chart:ChartGradientColor StartPoint="0.5,1" EndPoint="0.5,0">
+                            <chart:ChartGradientColor.GradientStops>                           
+                            <chart:ChartGradientStop Color="White" Offset= "0"/>
+                             <chart:ChartGradientStop Color="#FF0080DF" Offset= "1"/>
+                         </chart:ChartGradientColor.GradientStops>
+                        </chart:ChartGradientColor>
+                    </chart:ChartColorModel.CustomGradientColors>
+                </chart:ChartColorModel>
+            </chart:SplineAreaSeries.ColorModel>
+                </chart:SplineAreaSeries>
+            </chart:SfChart.Series>
+        </chart:SfChart>
+    </local:SampleView.Content>
+</local:SampleView>

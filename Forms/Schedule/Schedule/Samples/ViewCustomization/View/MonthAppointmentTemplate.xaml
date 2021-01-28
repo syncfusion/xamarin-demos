@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="SampleBrowser.SfSchedule.MonthAppointmentTemplate" 
+             xmlns:samplelocal="clr-namespace:SampleBrowser.SfSchedule" 
+             BackgroundColor="Transparent" Orientation="Vertical"
+    VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+	<Label x:Name="label" Text="{Binding Date, StringFormat='{0:dd}'}" XAlign="Center" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <Label.FontSize>
+            <OnPlatform x:TypeArguments="x:Double">
+                <On Platform="Android,UWP,WPF" Value="13"/>
+                <On Platform="iOS" Value="15"/>
+            </OnPlatform>
+        </Label.FontSize>
+    </Label>
+        <Image x:Name="Image" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Start">
+            <Image.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="Android,iOS" Value="15,0,0,0"/>
+                    <On Platform="UWP,WPF">
+                    <OnIdiom x:TypeArguments="Thickness" Tablet="15,0,0,40" Phone="8,0,0,30" Desktop="15,0,0,40" />
+                    </On>
+                </OnPlatform>
+            </Image.Margin>
+            <Image.HeightRequest>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <On Platform="Android,iOS" Value="40"/>
+                <On Platform="UWP,WPF" Value="30"/>
+            </OnPlatform>
+            </Image.HeightRequest>
+            <Image.WidthRequest>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <On Platform="Android,iOS" Value="20"/>
+                <On Platform="UWP,WPF" Value="15"/>
+            </OnPlatform>
+            </Image.WidthRequest>
+        </Image>
+        <StackLayout.Behaviors>
+        <samplelocal:MonthCellCustomViewBehavior />
+    </StackLayout.Behaviors>
+</StackLayout>

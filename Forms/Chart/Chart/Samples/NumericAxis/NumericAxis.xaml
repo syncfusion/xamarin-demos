@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.NumericAxis" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+  <local:SampleView.Content>
+    <StackLayout x:Name="stack">
+      <StackLayout.Resources>
+        <ResourceDictionary>
+          <DataTemplate x:Key="toolTipTemplate1">
+            <StackLayout BackgroundColor="#404041">
+              <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="3,3,3,3" />
+              </StackLayout.Padding>
+              <Label Text="England" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,4,0,0'}" FontSize="12" Grid.Row="0" />
+                            <BoxView Color="White" HeightRequest="0.75" Margin="{OnPlatform Default='0', WPF='4,0,4,0'}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+              <StackLayout Orientation="Horizontal"  VerticalOptions="FillAndExpand" BackgroundColor="#404041" Spacing="0" Padding="3" Margin="0">
+                <Label Text="{Binding Value,StringFormat='{0}th Over'}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="#CCCCCC" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" Margin="{OnPlatform Default='0', WPF='3,0,0,0'}" />
+                <Label Text="{Binding Size,StringFormat=' :  {0} Runs'}" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,0,3,0'}" FontSize="12" />
+              </StackLayout>
+            </StackLayout>
+          </DataTemplate>
+          <DataTemplate x:Key="toolTipTemplate2">
+            <StackLayout BackgroundColor="#404041">
+              <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="3,3,3,3" />
+              </StackLayout.Padding>
+              <Label Text="West Indies" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,4,0,0'}" FontSize="12" Grid.Row="0" />
+                            <BoxView Color="White" HeightRequest="0.75" Margin="{OnPlatform Default='0', WPF='4,0,4,0'}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+              <StackLayout Orientation="Horizontal"  VerticalOptions="FillAndExpand" BackgroundColor="#404041" Spacing="0" Padding="3" Margin="0">
+                <Label Text="{Binding Value,StringFormat='{0}th Over'}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="#CCCCCC" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" Margin="{OnPlatform Default='0', WPF='3,0,0,0'}" />
+                <Label Text="{Binding Size,StringFormat=' :  {0} Runs'}" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,0,3,0'}" FontSize="12" />
+              </StackLayout>
+            </StackLayout>
+          </DataTemplate>
+        </ResourceDictionary>
+      </StackLayout.Resources>
+      <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <chart:SfChart.Margin>
+          <OnPlatform x:TypeArguments="Thickness" WinPhone="0,0,15,0" />
+        </chart:SfChart.Margin>
+        <chart:SfChart.Title>
+          <chart:ChartTitle Text="England vs West Indies" />
+        </chart:SfChart.Title>
+        <chart:SfChart.ColorModel>
+          <chart:ChartColorModel Palette="Natural" />
+        </chart:SfChart.ColorModel>
+        <chart:SfChart.BindingContext>
+          <sampleBrowser:NumericAxisViewModel />
+        </chart:SfChart.BindingContext>
+        <chart:SfChart.ChartBehaviors>
+          <chart:ChartTooltipBehavior BackgroundColor="#404041" />
+        </chart:SfChart.ChartBehaviors>
+        <chart:SfChart.Legend>
+          <chart:ChartLegend ToggleSeriesVisibility="true" IconWidth="14" IconHeight="14" DockPosition="Bottom"/>
+        </chart:SfChart.Legend>
+        <chart:SfChart.PrimaryAxis>
+          <chart:CategoryAxis PlotOffset="2" AxisLineOffset="2" ShowMajorGridLines="false" LabelPlacement="BetweenTicks" Interval="1">
+            <chart:CategoryAxis.Title>
+              <chart:ChartAxisTitle Text="Death Overs" />
+            </chart:CategoryAxis.Title>
+          </chart:CategoryAxis>
+        </chart:SfChart.PrimaryAxis>
+        <chart:SfChart.SecondaryAxis>
+          <chart:NumericalAxis Minimum="0" Maximum="25" Interval="5" >
+            <chart:NumericalAxis.MajorTickStyle>
+              <chart:ChartAxisTickStyle TickSize="0" StrokeWidth="0" />
+            </chart:NumericalAxis.MajorTickStyle>
+            <chart:NumericalAxis.AxisLineStyle>
+              <chart:ChartLineStyle StrokeWidth="0" />
+            </chart:NumericalAxis.AxisLineStyle>
+          </chart:NumericalAxis>
+        </chart:SfChart.SecondaryAxis>
+        <chart:SfChart.Series>
+          <chart:ColumnSeries x:Name="series1" ItemsSource="{Binding NumericData}" XBindingPath="Value" YBindingPath="Size" EnableTooltip="True" LegendIcon="SeriesType" Label="England" TooltipTemplate="{StaticResource toolTipTemplate1}">
+            <chart:ColumnSeries.DataMarker>
+              <chart:ChartDataMarker >
+                <chart:ChartDataMarker.LabelStyle>
+                  <chart:DataMarkerLabelStyle LabelPosition="Inner" Font="12">
+                  </chart:DataMarkerLabelStyle>
+                </chart:ChartDataMarker.LabelStyle>
+              </chart:ChartDataMarker>
+            </chart:ColumnSeries.DataMarker>
+          </chart:ColumnSeries>
+          <chart:ColumnSeries x:Name="series2" ItemsSource="{Binding NumericData1}" XBindingPath="Value" YBindingPath="Size" EnableTooltip="True" LegendIcon="SeriesType" Label="West Indies" TooltipTemplate="{StaticResource toolTipTemplate2}">
+            <chart:ColumnSeries.DataMarker>
+              <chart:ChartDataMarker >
+                <chart:ChartDataMarker.LabelStyle>
+                  <chart:DataMarkerLabelStyle LabelPosition="Inner" Font="12">
+                  </chart:DataMarkerLabelStyle>
+                </chart:ChartDataMarker.LabelStyle>
+              </chart:ChartDataMarker>
+            </chart:ColumnSeries.DataMarker>
+          </chart:ColumnSeries>
+        </chart:SfChart.Series>
+      </chart:SfChart>
+    </StackLayout>
+  </local:SampleView.Content>
+</local:SampleView>

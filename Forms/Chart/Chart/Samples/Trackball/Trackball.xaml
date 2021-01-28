@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.Trackball" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+  <local:SampleView.Resources>
+    <ResourceDictionary>
+      <DataTemplate x:Key="trackballTemplate1">
+        <StackLayout Orientation="Horizontal" HeightRequest="20" BackgroundColor="#404041" Spacing="0" Padding="3" Margin="0">
+          <Label Text="John" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="#CCCCCC" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" Margin="{OnPlatform Default='0', WPF='0,4,0,0'}" />
+          <Label Text="{Binding Value,StringFormat=' : {0}M'}" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,4,0,0'}" FontSize="12" />
+        </StackLayout>
+      </DataTemplate>
+      <DataTemplate x:Key="trackballTemplate2">
+        <StackLayout Orientation="Horizontal" HeightRequest="20" BackgroundColor="#404041" Spacing="0" Padding="3" Margin="0">
+          <Label Text="Andrew" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="#CCCCCC" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" Margin="{OnPlatform Default='0', WPF='0,4,0,0'}" />
+          <Label Text="{Binding Value,StringFormat=' : {0}M'}" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,4,0,0'}" FontSize="12" />
+        </StackLayout>
+      </DataTemplate>
+      <DataTemplate x:Key="trackballTemplate3">
+        <StackLayout Orientation="Horizontal" HeightRequest="20" BackgroundColor="#404041" Spacing="0" Padding="3" Margin="0">
+          <Label Text="Thomas" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="#CCCCCC" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" Margin="{OnPlatform Default='0', WPF='0,4,0,0'}" />
+          <Label Text="{Binding Value,StringFormat=' : {0}M'}" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,4,0,0'}" FontSize="12" />
+        </StackLayout>
+      </DataTemplate>
+    </ResourceDictionary>
+  </local:SampleView.Resources>
+  <local:SampleView.Content>
+    <StackLayout>
+      <chart:SfChart x:Name="chart" VerticalOptions="FillAndExpand">
+        <chart:SfChart.Title>
+          <chart:ChartTitle Text="Average sales for person"  />
+        </chart:SfChart.Title>
+        <chart:SfChart.BindingContext>
+          <sampleBrowser:TrackballViewModel />
+        </chart:SfChart.BindingContext>
+        <chart:SfChart.ColorModel>
+          <chart:ChartColorModel Palette="Natural" />
+        </chart:SfChart.ColorModel>
+        <chart:SfChart.PrimaryAxis>
+          <chart:DateTimeAxis PlotOffset="5" AxisLineOffset="5" ShowMajorGridLines="false" EdgeLabelsDrawingMode="Shift" Interval="1" IntervalType="Years" Minimum="1999,12,31">
+            <chart:DateTimeAxis.AxisLineStyle>
+              <chart:ChartLineStyle StrokeWidth="1" StrokeColor="#404041" />
+            </chart:DateTimeAxis.AxisLineStyle>
+            <chart:DateTimeAxis.LabelStyle>
+              <chart:ChartAxisLabelStyle LabelFormat="yyyy"/>
+            </chart:DateTimeAxis.LabelStyle>
+          </chart:DateTimeAxis>
+        </chart:SfChart.PrimaryAxis>
+        <chart:SfChart.SecondaryAxis>
+          <chart:NumericalAxis x:Name="secondaryAxis" Minimum="10" Maximum="80" Interval="10">
+            <chart:NumericalAxis.Title>
+              <chart:ChartAxisTitle Text="Revenue" />
+            </chart:NumericalAxis.Title>
+            <chart:NumericalAxis.LabelStyle>
+              <chart:ChartAxisLabelStyle x:Name="secondaryAxisLabelStyle"/>
+            </chart:NumericalAxis.LabelStyle>
+            <chart:NumericalAxis.MajorTickStyle>
+              <chart:ChartAxisTickStyle TickSize="0" />
+            </chart:NumericalAxis.MajorTickStyle>
+            <chart:NumericalAxis.AxisLineStyle>
+              <chart:ChartLineStyle StrokeWidth="0" />
+            </chart:NumericalAxis.AxisLineStyle>
+          </chart:NumericalAxis>
+        </chart:SfChart.SecondaryAxis>
+        <chart:SfChart.Legend>
+          <chart:ChartLegend DockPosition="Top" ToggleSeriesVisibility="True" IconWidth="14" IconHeight="14" />
+        </chart:SfChart.Legend>
+        <chart:SfChart.Series>
+          <chart:LineSeries TrackballLabelTemplate="{StaticResource trackballTemplate1}" x:Name="lineSeries1" StrokeWidth="3" ItemsSource="{Binding LineSeries1}" XBindingPath="Date" YBindingPath="Value" Label="John" LegendIcon="Circle">
+            <chart:LineSeries.DataMarker>
+              <chart:ChartDataMarker ShowMarker="True" MarkerColor="White" ShowLabel="False" MarkerBorderWidth="2" MarkerBorderColor="#00BDAE" MarkerHeight="6" MarkerWidth="6" />
+            </chart:LineSeries.DataMarker>
+          </chart:LineSeries>
+          <chart:LineSeries TrackballLabelTemplate="{StaticResource trackballTemplate2}" x:Name="lineSeries2" StrokeWidth="3" ItemsSource="{Binding LineSeries2}" XBindingPath="Date" YBindingPath="Value" Label="Andrew" LegendIcon="Circle">
+            <chart:LineSeries.DataMarker>
+              <chart:ChartDataMarker ShowMarker="True" MarkerColor="White" ShowLabel="False" MarkerBorderWidth="2" MarkerBorderColor="#404041" MarkerHeight="6" MarkerWidth="6" />
+            </chart:LineSeries.DataMarker>
+          </chart:LineSeries>
+          <chart:LineSeries TrackballLabelTemplate="{StaticResource trackballTemplate3}" x:Name="lineSeries3" StrokeWidth="3" ItemsSource="{Binding LineSeries3}" XBindingPath="Date" YBindingPath="Value" Label="Thomas" LegendIcon="Circle">
+            <chart:LineSeries.DataMarker>
+              <chart:ChartDataMarker ShowMarker="True" MarkerColor="White" ShowLabel="False" MarkerBorderWidth="2" MarkerBorderColor="#357CD2" MarkerHeight="6" MarkerWidth="6" />
+            </chart:LineSeries.DataMarker>
+          </chart:LineSeries>
+        </chart:SfChart.Series>
+        <chart:SfChart.ChartBehaviors>
+          <chart:ChartTrackballBehavior x:Name="chartTrackball">
+            <chart:ChartTrackballBehavior.LabelStyle>
+              <chart:ChartTrackballLabelStyle BackgroundColor="#404041" />
+            </chart:ChartTrackballBehavior.LabelStyle>
+          </chart:ChartTrackballBehavior>
+        </chart:SfChart.ChartBehaviors>
+      </chart:SfChart>
+      <Label x:Name="label" Text="Press and hold to enable trackball." HorizontalOptions="Center" >
+      </Label>
+    </StackLayout>
+  </local:SampleView.Content>
+  <local:SampleView.PropertyView>
+    <StackLayout x:Name="stack">
+      <StackLayout.Padding>
+        <OnPlatform x:TypeArguments="Thickness" WinPhone="20,20,20,20" />
+      </StackLayout.Padding>
+      <StackLayout.WidthRequest>
+        <OnPlatform x:TypeArguments="x:Double" WinPhone="200" />
+      </StackLayout.WidthRequest>
+      <StackLayout.HorizontalOptions>
+        <OnPlatform x:TypeArguments="LayoutOptions" iOS="FillAndExpand" Android="FillAndExpand" WinPhone="Center" />
+      </StackLayout.HorizontalOptions>
+      <StackLayout.VerticalOptions>
+        <OnPlatform x:TypeArguments="LayoutOptions" iOS="FillAndExpand" Android="FillAndExpand" WinPhone="Center" />
+      </StackLayout.VerticalOptions>
+      <Label Text="Label Display Mode" HorizontalOptions="FillAndExpand" />
+      <Picker HorizontalOptions="FillAndExpand" VerticalOptions="Center" x:Name="labelDisplayMode" WidthRequest="400">
+        <Picker.Items>
+          <x:String>Nearest Point</x:String>
+          <x:String>Floating Point</x:String>
+        </Picker.Items>
+      </Picker>
+      <StackLayout Margin="0,10,0,0">
+        <Label Text="Touch Mode" HorizontalOptions="FillAndExpand" />
+        <Picker HorizontalOptions="FillAndExpand" VerticalOptions="Center" x:Name="trackballTouchMode" WidthRequest="400">
+            <Picker.Items>
+                <x:String>Long Press</x:String>
+                <x:String>Touch Move</x:String>
+                <x:String>None</x:String>
+            </Picker.Items>
+        </Picker>
+      </StackLayout>
+    </StackLayout>
+  </local:SampleView.PropertyView>
+</local:SampleView>

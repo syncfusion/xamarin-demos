@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cr="clr-namespace:SampleBrowser.SfPdfViewer"
+             x:Class="SampleBrowser.SfPdfViewer.StampAnnotationView">
+    <ContentView.Content>
+        <Grid>
+            <Grid BackgroundColor="Black" Opacity="0.6"></Grid>
+            <Grid ColumnSpacing="0" RowSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition>
+                        <ColumnDefinition.Width>
+                            <OnIdiom x:TypeArguments="GridLength" Phone="0" Tablet="1*" Desktop="2*"/>
+                        </ColumnDefinition.Width>
+                    </ColumnDefinition>
+                    <ColumnDefinition>
+                        <ColumnDefinition.Width>
+                            <OnIdiom x:TypeArguments="GridLength" Phone="*" Tablet="4*" Desktop="1.5*" />
+                        </ColumnDefinition.Width>
+                    </ColumnDefinition>
+                    <ColumnDefinition>
+                        <ColumnDefinition.Width>
+                            <OnIdiom x:TypeArguments="GridLength" Phone="0" Tablet="1*" Desktop="2*" />
+                        </ColumnDefinition.Width>
+                    </ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition>
+                        <RowDefinition.Height>
+                            <OnIdiom x:TypeArguments="GridLength" Phone="0" Tablet="1*" Desktop="1*" />
+                        </RowDefinition.Height>
+                    </RowDefinition>
+                    <RowDefinition>
+                        <RowDefinition.Height>
+                            <OnIdiom x:TypeArguments="GridLength" Phone="*" Tablet="2*" Desktop="3*" />
+                        </RowDefinition.Height>
+                    </RowDefinition>
+                    <RowDefinition>
+                        <RowDefinition.Height>
+                            <OnIdiom x:TypeArguments="GridLength" Phone="0" Tablet="1*" Desktop="1*" />
+                        </RowDefinition.Height>
+                    </RowDefinition>
+                </Grid.RowDefinitions>
+
+                <StackLayout BackgroundColor="White" Orientation="Vertical" Spacing="0" Grid.Row="1" Grid.Column="1">
+
+                    <StackLayout Orientation="Horizontal" HeightRequest="50" BackgroundColor="#E9E9E9">
+                        <StackLayout.IsVisible>
+                            <OnIdiom x:TypeArguments="x:Boolean" Phone="True" Desktop="False" Tablet="False" />
+                        </StackLayout.IsVisible>
+                        <cr:SfFontButton x:Name="backButton" WidthRequest="40" BackgroundColor="Transparent" FontFamily="{x:Static cr:FontMappingHelper.FontFamily}" Text="{x:Static cr:FontMappingHelper.SearchBack}" FontSize="30" Clicked="BackButton_Clicked" />
+                        <Label Text="CHOOSE STAMP" FontSize="18" TextColor="#0076FF" VerticalOptions="Center"  HorizontalOptions="StartAndExpand" Margin="0, 0, 0, 0" />
+                    </StackLayout>
+
+                    <Grid BackgroundColor="#E9E9E9">
+                        <Grid.HeightRequest>
+                            <OnIdiom x:TypeArguments="x:Double" Tablet="50" Desktop="100" />
+                        </Grid.HeightRequest>
+                        <Grid.IsVisible>
+                            <OnIdiom x:TypeArguments="x:Boolean" Phone="False" Desktop="True" Tablet="True" />
+                        </Grid.IsVisible>
+                        <Label Text="Choose Stamp" TextColor="Black" VerticalOptions="Center"  HorizontalOptions="Center" >
+                            <Label.FontSize>
+                                <OnIdiom x:TypeArguments="x:Double" Desktop="12" Tablet="16" />
+                            </Label.FontSize>
+                            <Label.FontAttributes>
+                                <OnIdiom x:TypeArguments="FontAttributes" Desktop="Bold" />
+                            </Label.FontAttributes>
+                        </Label>
+
+                    </Grid>
+
+                    <StackLayout VerticalOptions="FillAndExpand" Padding="20, 20, 20, 20">
+                        <Grid x:Name="grid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="8*" />
+                                <ColumnDefinition Width="0.5*" />
+                                <ColumnDefinition Width="8*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+
+                                <RowDefinition>
+                                    <RowDefinition.Height>
+                                        <OnIdiom x:TypeArguments="GridLength" Phone="3*" Tablet="3*" Desktop="3*"/>
+                                    </RowDefinition.Height>
+                                </RowDefinition>
+
+                                <RowDefinition>
+                                    <RowDefinition.Height>
+                                        <OnIdiom x:TypeArguments="GridLength" Phone="3*" Tablet="3*" Desktop="3*" />
+                                    </RowDefinition.Height>
+                                </RowDefinition>
+
+                                <RowDefinition>
+                                    <RowDefinition.Height>
+                                        <OnIdiom x:TypeArguments="GridLength" Phone="3*" Tablet="3*" Desktop="3*" />
+                                    </RowDefinition.Height>
+                                </RowDefinition>
+
+                                <RowDefinition>
+                                    <RowDefinition.Height>
+                                        <OnIdiom x:TypeArguments="GridLength" Phone="10*" Tablet="3*" Desktop="3*" />
+                                    </RowDefinition.Height>
+                                </RowDefinition>
+
+                            </Grid.RowDefinitions>
+
+                            <Frame Grid.Column="0" Grid.Row="0" BorderColor="Transparent" HasShadow="False">
+                                <Frame.Effects>
+                                    <cr:CustomStampEffect />
+                                </Frame.Effects>
+                                <Frame.Padding>
+                                    <OnIdiom x:TypeArguments="Thickness" Desktop="5" Phone="0" Tablet="0" />
+                                </Frame.Padding>
+                                <Image x:Name="approved" Source="Approved.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </Frame>
+                            <Frame Grid.Column="2" Grid.Row="0" BorderColor="Transparent" HasShadow="False">
+                                <Frame.Effects>
+                                    <cr:CustomStampEffect />
+                                </Frame.Effects>
+                                <Frame.Padding>
+                                    <OnIdiom x:TypeArguments="Thickness" Desktop="5" Phone="0" Tablet="0" />
+                                </Frame.Padding>
+                                <Image x:Name="confidential" Source="Confidential.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </Frame>
+                            <Frame Grid.Column="0" Grid.Row="1" BorderColor="Transparent" HasShadow="False">
+                                <Frame.Effects>
+                                    <cr:CustomStampEffect />
+                                </Frame.Effects>
+                                <Frame.Padding>
+                                    <OnIdiom x:TypeArguments="Thickness" Desktop="5" Phone="0" Tablet="0" />
+                                </Frame.Padding>
+                                <Image x:Name="draft" Source="Draft.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </Frame>
+                            <Frame Grid.Column="2" Grid.Row="1" BorderColor="Transparent" HasShadow="False">
+                                <Frame.Effects>
+                                    <cr:CustomStampEffect />
+                                </Frame.Effects>
+                                <Frame.Padding>
+                                    <OnIdiom x:TypeArguments="Thickness" Desktop="5" Phone="0" Tablet="0" />
+                                </Frame.Padding>
+                                <Image x:Name="expired" Source="Expired.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </Frame>
+                            <Frame Grid.Column="0" Grid.Row="2" BorderColor="Transparent" HasShadow="False">
+                                <Frame.Effects>
+                                    <cr:CustomStampEffect />
+                                </Frame.Effects>
+                                <Frame.Padding>
+                                    <OnIdiom x:TypeArguments="Thickness" Desktop="5" Phone="0" Tablet="0" />
+                                </Frame.Padding>
+                                <Image x:Name="notapproved" Source="NotApproved.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </Frame>
+
+                        </Grid>
+                    </StackLayout>
+
+                    <Grid>
+                        <Grid.Margin>
+                            <OnIdiom x:TypeArguments="Thickness" Desktop="0, 0, 0, 15" />
+                        </Grid.Margin>
+                        <Grid.BackgroundColor>
+                            <OnIdiom x:TypeArguments="Color" Tablet="#E9E9E9" Desktop="White" />
+                        </Grid.BackgroundColor>
+                        <Grid.HeightRequest>
+                            <OnIdiom x:TypeArguments="x:Double" Tablet="50" Desktop="100" />
+                        </Grid.HeightRequest>
+                        <Grid.IsVisible>
+                            <OnIdiom x:TypeArguments="x:Boolean" Phone="False" Desktop="True" Tablet="True" />
+                        </Grid.IsVisible>
+                        <Button Text="Close" HorizontalOptions="End" Margin="0, 0, 20, 0" Clicked="Button_Clicked" >
+                            <Button.FontSize>
+                                <OnIdiom x:TypeArguments="x:Double" Desktop="12" Tablet="16" />
+                            </Button.FontSize>
+                            <Button.BackgroundColor>
+                                <OnIdiom x:TypeArguments="Color" Desktop="#0076FF" Tablet="Transparent" />
+                            </Button.BackgroundColor>
+                            <Button.TextColor>
+                                <OnIdiom x:TypeArguments="Color" Desktop="White" Tablet="#0076FF" />
+                            </Button.TextColor>
+                        </Button>
+                    </Grid>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\DataGridDependencyService.cs">
+      <Link>DataGrid\DataGridDependencyService.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\FormsViewRenderer.cs">
+      <Link>DataGrid\FormsViewRenderer.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\SaveAndroid.cs">
+      <Link>DataGrid\SaveAndroid.cs</Link>
+    </Compile>
+  </ItemGroup>
+</Project>
