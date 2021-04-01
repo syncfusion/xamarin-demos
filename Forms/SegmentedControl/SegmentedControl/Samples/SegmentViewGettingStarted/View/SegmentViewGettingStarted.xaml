@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+    x:Class="SampleBrowser.SegmentedControl.SegmentViewGettingStarted"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:converter="clr-namespace:SampleBrowser.SegmentedControl"
+    xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms">
+    
+  <local:SampleView.Resources>
+    <ResourceDictionary>
+      <converter:SegmentedConverter
+        x:Key="Segmentedfont">
+      </converter:SegmentedConverter>
+    </ResourceDictionary>
+  </local:SampleView.Resources>
+  
+    <local:SampleView.Content>
+        <ScrollView x:Name="MainScrollView">        
+            <Grid Padding="10" x:Name="MainGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.16*"/>
+                <RowDefinition Height="0.25*"/>
+                <RowDefinition Height="0.05*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+            </Grid.RowDefinitions>
+            <Grid 
+              Grid.Row="0"
+              Margin="10,5,0,10">
+              <Grid.Padding>
+                <OnIdiom 
+                  x:TypeArguments="Thickness"
+                  Phone="0, 0, 0, 0"
+                  Tablet="200, 0, 200, 0"/>
+              </Grid.Padding>
+              <buttons:SfSegmentedControl 
+                x:Name="clothType" 
+                Margin="10,0"
+                SegmentHeight="35"
+                VisibleSegmentsCount="3"
+                SelectionChanged="ClothType_OnSelectionChanged"
+                SelectedIndex="2"
+                BorderColor="#3F3F3F"
+                FontColor="Black"
+                SelectionTextColor="#02A0AE"
+                ItemsSource="{Binding ClothTypeCollection}">
+                        <buttons:SfSegmentedControl.Color>
+                            <OnPlatform WPF="White" Default="Transparent"/>
+                        </buttons:SfSegmentedControl.Color>
+                        <buttons:SfSegmentedControl.CornerRadius>
+                                        <OnPlatform
+                                            x:TypeArguments="x:Double">
+                                            <On
+                                                Platform="Android"
+                                                Value="20">
+                                            </On>
+                                            <On
+                                                Platform="UWP"
+                                                Value="20" >
+                                            </On>
+                                <On
+                                                Platform="iOS"
+                                                Value="15"/>
+                                <On Platform="WPF" Value="20"/>
+                              
+                                        </OnPlatform>
+                                     </buttons:SfSegmentedControl.CornerRadius>
+                <buttons:SfSegmentedControl.SelectionIndicatorSettings>
+                  <buttons:SelectionIndicatorSettings 
+                    Color="Transparent"
+                    Position="Bottom">
+                  </buttons:SelectionIndicatorSettings>
+                </buttons:SfSegmentedControl.SelectionIndicatorSettings>
+              </buttons:SfSegmentedControl>
+            </Grid>
+            <Grid 
+              Grid.Row="1"
+              Padding="0,0,10,0">
+                <Label VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Text="{Binding FontIconText}"
+                   x:Name="preview"
+                   FontSize="115" 
+                       FontFamily="{Binding Converter={StaticResource Segmentedfont},ConverterParameter=Segmented}">  
+                </Label>
+             </Grid>
+            <Grid 
+              Grid.Row="2"
+              Margin="10,0,0,0">
+              <StackLayout>
+                <Label
+                  Text="Best trendy outfits for men."
+                  HorizontalOptions="Start"
+                    x:Name="detail"
+                  FontSize="12"
+                  TextColor="#3F3F3F">
+                </Label>
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Row="3" BackgroundColor="Transparent">
+                <StackLayout Orientation="Vertical" >
+                  <Label VerticalOptions="Start"
+                     HorizontalOptions="Start"
+                     Text="Color"
+                     FontAttributes="Bold"
+                     FontSize="16"
+                         x:Name="colortext"
+                     Margin="10,5,0,0">
+                  </Label>
+                   <buttons:SfSegmentedControl 
+                     x:Name="PrimaryColorSegment"
+                     DisplayMode="Image"
+                     CornerRadius="0"
+                     SegmentHeight="45"
+                     SegmentWidth="50"
+                     WidthRequest="350"
+                     Margin="10,0,10,0"
+                     FontIconFontColor="Black"
+                     BackgroundColor="Transparent"
+                     BorderColor="#EEEEEE"
+                     FontSize="12"
+                            ItemsSource="{Binding PrimaryColors}"
+                       SegmentPadding="0"
+                     SelectionChanged="Handle_SelectionChanged"
+                            SelectedIndex="6"
+                     VisibleSegmentsCount="7"
+                     SegmentCornerRadius="15"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center">
+                            <buttons:SfSegmentedControl.Color>
+                                <OnPlatform WPF="White" Default="Transparent"/>
+                            </buttons:SfSegmentedControl.Color>
+                            <buttons:SfSegmentedControl.SelectionIndicatorSettings>
+                            <buttons:SelectionIndicatorSettings 
+                              Color="#EEEEEE"
+                              Position="Fill">
+                            </buttons:SelectionIndicatorSettings>
+                        </buttons:SfSegmentedControl.SelectionIndicatorSettings>
+                    </buttons:SfSegmentedControl>
+                    </StackLayout>
+             </Grid>
+            <Grid Grid.Row="4">
+              <Grid.Padding>
+                <OnIdiom 
+                  x:TypeArguments="Thickness">
+                  <OnIdiom.Phone>
+                    <OnPlatform
+                      x:TypeArguments="Thickness"
+                      iOS="0,0,0,0"
+                      Android="0,0,0,0"
+                      WinPhone="0,40,0,0">
+                    </OnPlatform>
+                  </OnIdiom.Phone>
+                </OnIdiom>
+              </Grid.Padding>
+                <StackLayout 
+                  Orientation="Vertical" >
+                        <StackLayout.Margin>
+                            <OnPlatform WPF="10"/>
+                        </StackLayout.Margin>
+                  <Label 
+                    VerticalOptions="Start"
+                    Margin="10,0,0,0"
+                    HorizontalOptions="Start"
+                    Text="Size"
+                      x:Name="sizetext"
+                    FontAttributes="Bold"
+                    FontSize="16">
+                    <Label.Margin>
+                       <OnPlatform 
+                         x:TypeArguments="Thickness">
+                             <OnPlatform.Android>
+                               <OnIdiom
+                                 x:TypeArguments="Thickness"
+                                 Phone="10,15,15,0"
+                                 Tablet="10,30,0,0">
+                               </OnIdiom>
+                             </OnPlatform.Android>
+                             <OnPlatform.iOS
+                               x:TypeArguments="Thickness"
+                               Value="10,5,0,0">
+                              </OnPlatform.iOS>
+                       <OnPlatform.WinPhone>
+                         <OnIdiom
+                           x:TypeArguments="Thickness"
+                           Phone="10,15,15,0"
+                           Desktop="10,0,0,0">
+                         </OnIdiom>
+                       </OnPlatform.WinPhone>
+                       </OnPlatform>
+                    </Label.Margin>
+                  </Label>
+                    <Grid>
+                      <Grid.Padding>
+                        <OnIdiom
+                          x:TypeArguments="Thickness"
+                          Phone="0, 0, 0, -10"
+                          Tablet="200, 0, 200, 0">
+                        </OnIdiom>
+                      </Grid.Padding>
+                    <buttons:SfSegmentedControl 
+                      x:Name="SegmentedView1"
+                      DisplayMode="Text"
+                      CornerRadius="20"
+                      BorderColor="#2C7BBC"
+                      SelectionTextColor="White"
+                      Margin="10,0,0,0"
+                      FontSize="16"
+                      Color="White"
+                      FontColor="#3F3F3F"
+                      SegmentPadding="0"
+                      SegmentCornerRadius="20"
+                      VisibleSegmentsCount="5"
+                      ItemsSource="{Binding SizeCollection}"
+                      SegmentHeight="40" 
+                      SegmentWidth="75">
+                      <buttons:SfSegmentedControl.SelectionIndicatorSettings>
+                        <buttons:SelectionIndicatorSettings 
+                          Color="#2C7BBC"
+                          CornerRadius="20"
+                          Position="Fill">
+                        </buttons:SelectionIndicatorSettings>
+                        </buttons:SfSegmentedControl.SelectionIndicatorSettings>
+                    </buttons:SfSegmentedControl>
+                  <buttons:SfSegmentedControl.Margin>
+                      <OnPlatform
+                        x:TypeArguments="Thickness">
+                        <OnPlatform.Android 
+                          x:TypeArguments="Thickness"
+                          Value="0">
+                        </OnPlatform.Android>
+                        <OnPlatform.iOS 
+                          x:TypeArguments="Thickness"
+                          Value="0">
+                        </OnPlatform.iOS>
+                       <OnPlatform.WinPhone>
+                         <OnIdiom 
+                           x:TypeArguments="Thickness"
+                           Phone="0,-30,0,-90"
+                           Desktop="0,-15,0,0"/>
+                       </OnPlatform.WinPhone>
+                      </OnPlatform>
+                  </buttons:SfSegmentedControl.Margin>
+                    </Grid>
+                </StackLayout>
+            </Grid>
+          <Grid
+            Grid.Row="5">
+                    <Grid.Margin>
+                        <OnPlatform WPF="0,5,0,10"/>
+                    </Grid.Margin>
+            <StackLayout 
+              Orientation="Vertical">
+              <Label
+                VerticalOptions="Start"
+                HorizontalOptions="Start"
+                FontAttributes="Bold"
+                FontSize="16"
+                  x:Name="descriptiontext"
+                Margin="10,0,0,0">
+                <Label.Text>
+                  <OnPlatform 
+                    x:TypeArguments="x:String"
+                    x:Key="DescriptionText">
+                    <On
+                      Platform="Android"
+                      Value="Description">
+                    </On>
+                    <On
+                      Platform="UWP"
+                      Value="Description" >
+                    </On>
+                    <On
+                      Platform="iOS"
+                      Value="Description">
+                    </On>
+                  </OnPlatform>
+                </Label.Text>
+              </Label>
+              <Label
+                VerticalOptions="Start"
+                HorizontalOptions="Start"
+                FontSize="12"
+                  x:Name="descriptiondetail"
+                Margin="10,0,0,0">
+                <Label.Text>
+                  <OnPlatform 
+                    x:TypeArguments="x:String"
+                    x:Key="DescriptionText">
+                    <On
+                      Platform="Android"
+                      Value="95% Polyester, 5% Spandex, imported, machine wash, casual wear. This outfit keeps you cool and comfortable in quick-dry fabric that wicks away moisture.">
+                    </On>
+                    <On 
+                      Platform="UWP"
+                       Value="95% Polyester, 5% Spandex, imported, machine wash, casual wear. This outfit keeps you cool and comfortable in quick-dry fabric that wicks away moisture.">
+                    </On>
+                    <On
+                      Platform="iOS"
+                      Value="95% Polyester, 5% Spandex, imported, machine wash, casual wear. This outfit keeps you cool and comfortable in quick-dry fabric that wicks away moisture.">
+                    </On>
+                  </OnPlatform>
+                </Label.Text>
+              </Label>
+            </StackLayout>
+          </Grid>
+        </Grid>
+    </ScrollView>
+    </local:SampleView.Content>
+   
+</local:SampleView>

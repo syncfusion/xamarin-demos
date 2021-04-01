@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.AreaChart" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+  <local:SampleView.Content>
+    <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+      <chart:SfChart.Margin>
+        <OnPlatform x:TypeArguments="Thickness" WinPhone="0,0,15,0" />
+      </chart:SfChart.Margin>
+      <chart:SfChart.BindingContext>
+        <sampleBrowser:AreaSeriesViewModel />
+      </chart:SfChart.BindingContext>
+      <chart:SfChart.Title>
+        <chart:ChartTitle Text="Average Sales Comparison" />
+      </chart:SfChart.Title>
+      <chart:SfChart.PrimaryAxis>
+        <chart:NumericalAxis EdgeLabelsDrawingMode="Shift" Minimum="2000" Maximum="2005" Interval="1" ShowMajorGridLines="false">
+          <chart:NumericalAxis.MajorTickStyle>
+            <chart:ChartAxisTickStyle TickSize="8">
+            </chart:ChartAxisTickStyle>
+          </chart:NumericalAxis.MajorTickStyle>
+        </chart:NumericalAxis>
+      </chart:SfChart.PrimaryAxis>
+      <chart:SfChart.SecondaryAxis>
+        <chart:NumericalAxis Maximum="5" Minimum="2" Interval="1">
+          <chart:NumericalAxis.Title>
+            <chart:ChartAxisTitle Text="Revenue in Millions" />
+          </chart:NumericalAxis.Title>
+          <chart:NumericalAxis.LabelStyle>
+            <chart:ChartAxisLabelStyle x:Name="secondaryAxisLabelStyle"/>
+          </chart:NumericalAxis.LabelStyle>
+          <chart:NumericalAxis.AxisLineStyle>
+            <chart:ChartLineStyle StrokeWidth="0">
+            </chart:ChartLineStyle>
+          </chart:NumericalAxis.AxisLineStyle>
+          <chart:NumericalAxis.MajorTickStyle>
+            <chart:ChartAxisTickStyle TickSize="0" />
+          </chart:NumericalAxis.MajorTickStyle>
+        </chart:NumericalAxis>
+      </chart:SfChart.SecondaryAxis>
+      <chart:SfChart.Legend>
+        <chart:ChartLegend DockPosition="Bottom" ToggleSeriesVisibility="True" IconWidth="14" IconHeight="14" />
+      </chart:SfChart.Legend>
+      <chart:SfChart.ColorModel>
+        <chart:ChartColorModel Palette="Natural" />
+      </chart:SfChart.ColorModel>
+      <chart:SfChart.Series>
+        <chart:AreaSeries Opacity="0.5" ItemsSource="{Binding AreaData1}" Label="Product A" LegendIcon="SeriesType" XBindingPath="Value" YBindingPath="Size" EnableAnimation="true" EnableTooltip="true"/>
+        <chart:AreaSeries Opacity="0.5" ItemsSource="{Binding AreaData2}" Label="Product B" LegendIcon="SeriesType" XBindingPath="Value" YBindingPath="Size" EnableAnimation="true" EnableTooltip="true"/>
+      </chart:SfChart.Series>
+    </chart:SfChart>
+  </local:SampleView.Content>
+</local:SampleView>

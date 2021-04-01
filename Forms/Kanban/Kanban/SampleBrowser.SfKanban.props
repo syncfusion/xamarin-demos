@@ -1,0 +1,75 @@
+  <Project>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml" >
+	<Link>Samples\Kanban\SamplesList\SamplesList.xml</Link>
+	</EmbeddedResource>
+  </ItemGroup>
+<ItemGroup>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\KanbanCustomizationSample\KanbanCustomViewModel.cs" >
+	<Link>Samples\Kanban\Samples\KanbanCustomizationSample\KanbanCustomViewModel.cs</Link>
+	</Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\KanbanDependencyService.cs" >
+	<Link>Samples\Kanban\Samples\KanbanDependencyService.cs</Link>
+	</Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\KanbanGettingStarted\ViewModel.cs" >
+	<Link>Samples\Kanban\Samples\KanbanGettingStarted\ViewModel.cs</Link>
+	</Compile>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\ThemesViewModel.cs" >
+    <Link>Samples\Kanban\Samples\Themes\ThemesViewModel.cs</Link>
+  </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\KanbanCustomizationSample\KanbanCutomizationSample.xaml.cs">
+	<Link>Samples\Kanban\Samples\KanbanCustomizationSample\KanbanCutomizationSample.xaml.cs</Link>
+      <DependentUpon>KanbanCustomizationSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\KanbanCustomizationSample\Templates\DeliveryTemplate.xaml.cs" >
+     <Link>Samples\Kanban\Samples\KanbanCustomizationSample\Templates\DeliveryTemplate.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\KanbanCustomizationSample\Templates\MenuTemplate.xaml.cs" >
+    <Link>Samples\Kanban\Samples\KanbanCustomizationSample\Templates\MenuTemplate.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\KanbanCustomizationSample\Templates\OrderTemplate.xaml.cs" >
+    <Link>Samples\Kanban\Samples\KanbanCustomizationSample\Templates\OrderTemplate.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\KanbanCustomizationSample\Templates\ReadyToServeTemplate.xaml.cs" >
+    <Link>Samples\Kanban\Samples\KanbanCustomizationSample\Templates\ReadyToServeTemplate.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\KanbanGettingStarted\KanbanGettingStarted.xaml.cs">
+	<Link>Samples\Kanban\Samples\KanbanGettingStarted\KanbanGettingStarted.xaml.cs</Link>
+      <DependentUpon>KanbanGettingStarted.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml.cs">
+    <Link>Samples\Kanban\Samples\Themes\Themes.xaml.cs</Link>
+    <DependentUpon>Themes.xaml</DependentUpon>
+    </Compile>
+</ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\KanbanCustomizationSample\KanbanCustomizationSample.xaml">
+	<Link>Samples\Kanban\Samples\KanbanCustomizationSample\KanbanCustomizationSample.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\KanbanGettingStarted\KanbanGettingStarted.xaml">
+	<Link>Samples\Kanban\Samples\KanbanGettingStarted\KanbanGettingStarted.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml">
+      <Link>Samples\Kanban\Samples\Themes\Themes.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\KanbanCustomizationSample\Templates\DeliveryTemplate.xaml">
+    <Link>Samples\Kanban\Samples\KanbanCustomizationSample\Templates\DeliveryTemplate.xaml</Link>
+    <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\KanbanCustomizationSample\Templates\OrderTemplate.xaml">
+    <Link>Samples\Kanban\Samples\KanbanCustomizationSample\Templates\OrderTemplate.xaml</Link>
+    <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\KanbanCustomizationSample\Templates\MenuTemplate.xaml">
+    <Link>Samples\Kanban\Samples\KanbanCustomizationSample\Templates\MenuTemplate.xaml</Link>
+    <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\KanbanCustomizationSample\Templates\ReadyToServeTemplate.xaml">
+    <Link>Samples\Kanban\Samples\KanbanCustomizationSample\Templates\ReadyToServeTemplate.xaml</Link>
+    <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

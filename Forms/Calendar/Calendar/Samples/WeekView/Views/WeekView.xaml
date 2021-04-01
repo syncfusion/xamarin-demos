@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:samplelocal="clr-namespace:SampleBrowser.SfCalendar"
+                  xmlns:CalendarSample="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                  xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms" 
+				  BackgroundColor="#FF007DE5"
+                  x:Class="SampleBrowser.SfCalendar.WeekView">
+
+    <local:SampleView.BindingContext>
+        <samplelocal:WeekViewModel />
+    </local:SampleView.BindingContext>
+
+    <local:SampleView.Content>
+        <Grid BackgroundColor="#FF007DE5" x:Name="grid">
+            <gradient:SfGradientView x:Name="gradiantView">
+                <gradient:SfGradientView.BackgroundBrush>
+                    <gradient:SfLinearGradientBrush>
+                        <gradient:SfLinearGradientBrush.GradientStops>
+                            <gradient:SfGradientStop Color="#FF007DE5" Offset="0.0" />
+                            <gradient:SfGradientStop Color="White" Offset="1.0" />
+                        </gradient:SfLinearGradientBrush.GradientStops>
+                    </gradient:SfLinearGradientBrush>
+                </gradient:SfGradientView.BackgroundBrush>
+            </gradient:SfGradientView>
+            <CalendarSample:SfCalendar x:Name="calendar" 
+                                   DataSource="{Binding Appointments}" 
+                                   VerticalOptions="FillAndExpand"  BackgroundColor="Transparent" 
+                                   HorizontalOptions="FillAndExpand" 
+                                   ShowInlineEvents="true">
+                <CalendarSample:SfCalendar.MonthViewSettings>
+                    <CalendarSample:MonthViewSettings CurrentMonthBackgroundColor="Transparent" 
+                                                  DayHeaderBackgroundColor="Transparent" 
+                                                  HeaderBackgroundColor="Transparent" 
+                                                  DisabledBackgroundColor="Transparent"
+                                                  InlineBackgroundColor="Transparent" 
+                                                  AgendaSelectedDateColor="White"
+                                                  TodayBorderColor="White"
+                                                  DateSelectionColor="White"
+                                                  TodaySelectionBackgroundColor="White"
+                                                  TodaySelectionTextColor="Black"
+                                                  SelectedDayTextColor="Black"
+                                                  TodayTextColor="White"
+                                                  PreviousMonthBackgroundColor="Transparent"
+                                                  WeekEndBackgroundColor="Transparent">
+                    </CalendarSample:MonthViewSettings>
+                </CalendarSample:SfCalendar.MonthViewSettings>
+                <CalendarSample:SfCalendar.YearViewSettings>
+                    <CalendarSample:YearViewSettings HeaderBackground="Transparent" 
+                                                     LayoutBackground="Transparent"
+                                                     MonthHeaderBackground="Transparent"
+                                                     MonthLayoutBackground="Transparent">
+                    </CalendarSample:YearViewSettings>
+                </CalendarSample:SfCalendar.YearViewSettings>
+            </CalendarSample:SfCalendar>
+        </Grid>
+    </local:SampleView.Content>
+    <local:SampleView.Behaviors>
+        <samplelocal:WeekViewBehavior />
+    </local:SampleView.Behaviors>
+</local:SampleView>

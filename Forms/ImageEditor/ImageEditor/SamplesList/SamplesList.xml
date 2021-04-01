@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Samples>
+  <Sample Title = "Image Editor" Name = "ImageEditor" IsUpdated ="true"/>
+  <Sample Title = "Banner Creator" Name = "BannerCreator"  />
+  <Sample Title = "Profile Editor" Name = "ProfileEditor" />
+  <Sample Title = "Serialization" Name = "Serialization" />
+  <Sample Title = "Customization" Name = "Customization"  />
+  <Sample Title = "CustomView" Name = "CustomViewSample"/>
+</Samples>

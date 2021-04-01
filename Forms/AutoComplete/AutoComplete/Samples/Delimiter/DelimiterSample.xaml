@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms" 
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="SampleBrowser.SfAutoComplete.DelimiterSample">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+
+    <autocomplete:SfAutoComplete x:Name="autocomplete"
+          MaximumDropDownHeight="150"
+          AutoCompleteMode="Suggest">
+      <autocomplete:SfAutoComplete.DropDownHeaderView>
+        <Grid>
+          <Label Text="All Country" x:Name="Headerlabel" VerticalOptions="Center" Margin="10,0,0,0"/>
+        </Grid>
+      </autocomplete:SfAutoComplete.DropDownHeaderView>
+        <autocomplete:SfAutoComplete.DropDownFooterView>
+        <Grid>
+          <Label Text="Add New Item" x:Name="Footerlabel" VerticalOptions="Center" Margin="10,0,0,0"/>
+        </Grid>
+      </autocomplete:SfAutoComplete.DropDownFooterView>
+    </autocomplete:SfAutoComplete>
+    <ScrollView  Grid.Row="1"> 
+    <StackLayout Orientation="Vertical" Margin="10">
+
+        <Label Text="Background Color" FontSize="18"  Margin="0,10,5,0"/>
+        <Picker x:Name="BackgroundColorPicker"
+                HeightRequest="40"
+                TextColor="#333333"/>
+
+
+
+        <Label Text="Fore Color" FontSize="18" Margin="0,10,5,0"/>
+        <Picker x:Name="Borderpicker"
+                HeightRequest="40"
+                TextColor="#333333"/>
+
+        <Grid  Margin="0,10,0,10">
+          <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="50"/>
+          </Grid.ColumnDefinitions>
+        <Label Text="Show ClearButton" FontSize="18"  />
+        <Switch Grid.Column="1"/>
+        </Grid>
+      
+      <Grid  Margin="0,10,0,10">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
+        <Label Text="Show Dropdown Header" FontSize="18"  />
+        <Switch Grid.Column="1"/>
+      </Grid>
+
+      <Grid  Margin="0,10,0,10">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
+        <Label Text="Show Dropdown Footer" FontSize="18"  />
+        <Switch Grid.Column="1"/>
+      </Grid>
+
+
+      <Grid  Margin="0,10,0,10">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
+        <Label Text="Show Popup" FontSize="18"  />
+        <Switch Grid.Column="1"/>
+      </Grid>
+
+      
+
+      <Label Text="Height" FontSize="18"  Margin="0,10,5,0"/>
+      <Slider AutomationId="Height" ValueChanged="Handle_ValueChanged"  Minimum="0" Maximum="30"/>
+
+
+          <Label Text="CornerRadius" FontSize="18"  Margin="0,10,5,0"/>
+          <Slider AutomationId="CornerRadius" ValueChanged="Handle_ValueChanged"  Minimum="0" Maximum="30"/>
+
+      
+
+          <Label Text="Delimiter" FontSize="18"  Margin="0,10,5,0"/>   
+         <Picker x:Name="delimiterpicker" 
+                 HeightRequest="40" 
+                 TextColor="#333333"/>
+
+    </StackLayout>
+    </ScrollView>
+  </Grid>
+</local:SampleView>

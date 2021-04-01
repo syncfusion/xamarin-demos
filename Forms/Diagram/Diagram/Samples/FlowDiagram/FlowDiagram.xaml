@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="SampleBrowser.SfDiagram.FlowDiagram"
+		xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+		xmlns:sfdiagram="clr-namespace:Syncfusion.SfDiagram.XForms;assembly=Syncfusion.SfDiagram.XForms"
+    xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfDiagram;assembly=SampleBrowser.SfDiagram"
+             >
+
+  <local:SampleView.Content>
+    <Grid  BackgroundColor="White">
+      <sfdiagram:SfDiagram x:Name="diagram">
+      </sfdiagram:SfDiagram>
+    </Grid>
+  </local:SampleView.Content>
+  <local:SampleView.PropertyView>
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>
+      <BoxView BackgroundColor="Gray" Grid.Row="0" Grid.ColumnSpan="4" HeightRequest="0.5"  VerticalOptions="End" HorizontalOptions="FillAndExpand" />
+      <StackLayout Grid.Row="0" Grid.ColumnSpan="4" >
+        <Label Text="Grid Color" TextColor="Black" VerticalTextAlignment="Center" Margin="8,0,0,8"/>
+        <StackLayout Orientation="Horizontal" Margin="8,0,0,8"  >
+        <ScrollView x:Name="scrollColor"  Orientation = "Horizontal" BackgroundColor="Transparent">
+          <StackLayout x:Name="fillStack" Orientation="Horizontal" HeightRequest="45">
+            <StackLayout x:Name="colorRed" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="39">
+              <Button x:Name="redButton" ClassId="fillStack" HeightRequest="33" WidthRequest="33" BorderRadius="17" BorderWidth="3" BorderColor="Transparent" BackgroundColor="Red" VerticalOptions="Center" Margin="0,3,0,0" Clicked="ChangeColor"/>
+            </StackLayout>
+            <StackLayout x:Name="colorOrange" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="39">
+              <Button x:Name="orangeButton" HeightRequest="33" ClassId="fillStack"  WidthRequest="33" BorderRadius="17" BorderWidth="3" BorderColor="Transparent" BackgroundColor="Orange" VerticalOptions="Center" Margin="0,3,0,0" Clicked="ChangeColor"/>
+            </StackLayout>
+            <StackLayout x:Name="colorGreen" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="39">
+              <Button x:Name="greenButton" HeightRequest="33" ClassId="fillStack" WidthRequest="33" BorderRadius="17" BorderWidth="3" BorderColor="Transparent" BackgroundColor="Green" VerticalOptions="Center" Margin="0,3,0,0" Clicked="ChangeColor"/>
+            </StackLayout>
+            <StackLayout x:Name="colorBlue" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="39">
+              <Button x:Name="blueButton" HeightRequest="33" ClassId="fillStack" WidthRequest="33" BorderRadius="17" BorderWidth="3" BorderColor="Transparent" BackgroundColor="Blue" VerticalOptions="Center" Margin="0,3,0,0" Clicked="ChangeColor"/>
+            </StackLayout>
+            <StackLayout x:Name="colorPurple" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="39">
+              <Button x:Name="purpleButton" HeightRequest="33" ClassId="fillStack" WidthRequest="33" BorderRadius="17" BorderWidth="3" BorderColor="Transparent" BackgroundColor="Purple" VerticalOptions="Center" Margin="0,3,0,0" Clicked="ChangeColor"/>
+            </StackLayout>
+            <StackLayout x:Name="colorAqua" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="39">
+              <Button x:Name="aquaButton" HeightRequest="33" ClassId="fillStack" WidthRequest="33" BorderRadius="17" BorderWidth="3" BorderColor="Transparent" BackgroundColor="Aqua" VerticalOptions="Center" Margin="0,3,0,0" Clicked="ChangeColor"/>
+            </StackLayout>
+            <StackLayout x:Name="colorFuchsia" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="39">
+              <Button x:Name="fuchsiaButton" HeightRequest="33" ClassId="fillStack" WidthRequest="33" BorderRadius="17" BorderWidth="3" BorderColor="Transparent" BackgroundColor="Fuchsia" VerticalOptions="Center" Margin="0,3,0,0" Clicked="ChangeColor"/>
+            </StackLayout>
+            <StackLayout x:Name="colorGray" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="39">
+              <Button x:Name="grayButton" HeightRequest="33" ClassId="fillStack" WidthRequest="33" BorderRadius="17" BorderWidth="3" BorderColor="Transparent" BackgroundColor="Gray" VerticalOptions="Center" Margin="0,3,0,0" Clicked="ChangeColor"/>
+            </StackLayout>
+            <StackLayout x:Name="colorLime" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="39">
+              <Button x:Name="limeButton" HeightRequest="33" ClassId="fillStack" WidthRequest="33" BorderRadius="17" BorderWidth="3" BorderColor="Transparent" BackgroundColor="Lime" VerticalOptions="Center" Margin="0,3,0,0" Clicked="ChangeColor"/>
+            </StackLayout>
+            <StackLayout x:Name="colorMaroon" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="39">
+              <Button x:Name="maroonButton" HeightRequest="33" ClassId="fillStack" WidthRequest="33" BorderRadius="17" BorderWidth="3" BorderColor="Transparent" BackgroundColor="Maroon" VerticalOptions="Center" Margin="0,3,0,0" Clicked="ChangeColor"/>
+            </StackLayout>
+            <StackLayout x:Name="colorNavy" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="39">
+              <Button x:Name="navyButton" HeightRequest="33" ClassId="fillStack" WidthRequest="33" BorderRadius="17" BorderWidth="3" BorderColor="Transparent" BackgroundColor="Navy" VerticalOptions="Center" Margin="0,3,0,0" Clicked="ChangeColor"/>
+            </StackLayout>
+            <StackLayout x:Name="colorOlive" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="39">
+              <Button x:Name="oliveButton" HeightRequest="33" ClassId="fillStack" WidthRequest="33" BorderRadius="17" BorderWidth="3" BorderColor="Transparent" BackgroundColor="Olive" VerticalOptions="Center" Margin="0,3,0,0" Clicked="ChangeColor"/>
+            </StackLayout>
+            <StackLayout x:Name="colorSilver" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="39">
+              <Button x:Name="silverButton" HeightRequest="33" ClassId="fillStack" WidthRequest="33" BorderRadius="17" BorderWidth="3" BorderColor="Transparent" BackgroundColor="Silver" VerticalOptions="Center" Margin="0,3,0,0" Clicked="ChangeColor"/>
+            </StackLayout>
+            <StackLayout x:Name="colorTeal" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="39">
+              <Button x:Name="tealButton" HeightRequest="33" ClassId="fillStack" WidthRequest="33" BorderRadius="17" BorderWidth="3" BorderColor="Transparent" BackgroundColor="Teal" VerticalOptions="Center" Margin="0,3,0,0" Clicked="ChangeColor"/>
+            </StackLayout>
+          </StackLayout>
+        </ScrollView>
+      </StackLayout>
+      </StackLayout>
+      <BoxView BackgroundColor="Gray" Grid.Row="1" Grid.ColumnSpan="4" HeightRequest="0.5" VerticalOptions="End" HorizontalOptions="FillAndExpand"/>
+      <Label Text="Show Grid" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" TextColor="Black" HeightRequest="35" VerticalTextAlignment="Center" Margin="8,0,0,8"/>
+      <Switch x:Name="ShowGridSwitch" Grid.Row="1" Grid.Column="3" HorizontalOptions="EndAndExpand" HeightRequest="35" Toggled="ShowGrid_Toggled"/>
+      <BoxView BackgroundColor="Gray" Grid.Row="0" Grid.ColumnSpan="4" HeightRequest="1" VerticalOptions="End" HorizontalOptions="FillAndExpand"/>
+      <Label Text="Snap To Grid" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" TextColor="Black" HeightRequest="35" VerticalTextAlignment="Center" Margin="8,0,0,0"/>
+      <Switch x:Name="SnapToGridSwitch" Grid.Row="2" Grid.Column="3" HorizontalOptions="EndAndExpand" HeightRequest="35" Toggled="SnapToGrid_Toggled"/>
+      <BoxView BackgroundColor="Gray" Grid.Row="1" Grid.ColumnSpan="4" HeightRequest="1" VerticalOptions="End" HorizontalOptions="FillAndExpand"/>
+      <BoxView BackgroundColor="Gray" Grid.Row="2" Grid.ColumnSpan="4" HeightRequest="1" VerticalOptions="End" HorizontalOptions="FillAndExpand"/>
+
+      <Label Text="Size" Grid.Row="3" Grid.Column="0" TextColor="Black" VerticalOptions="Center" Margin="8,0,0,0"/>
+      <Frame OutlineColor="DodgerBlue" CornerRadius="5" Grid.Row="3" Grid.Column="1" HeightRequest="25" Padding="0" Margin="12,6,6,12">
+        <Frame.HasShadow>
+          <OnPlatform x:TypeArguments="x:Boolean" Android="true" iOS="false"/>
+        </Frame.HasShadow>
+                <Image HeightRequest="35" WidthRequest="35" Grid.Row="3" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent" >
+                    <Image.Source>
+                        <FontImageSource Glyph="&#xe768;"
+                        Color="#007aff" 
+                        FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" 
+                                             />
+                    </Image.Source>
+                </Image>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnGridSizeSubtract"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+      <Label x:Name="GridtThickness" Text="12" Grid.Row="3" Grid.Column="2"  VerticalTextAlignment="Center"  HorizontalTextAlignment="Center"/>
+      <Frame OutlineColor="DodgerBlue" CornerRadius="5" Grid.Row="3" Grid.Column="3" Padding="0" HeightRequest="25" Margin="12,6,6,12">
+        <Frame.HasShadow>
+          <OnPlatform x:TypeArguments="x:Boolean" Android="true" iOS="false"/>
+        </Frame.HasShadow>
+                <Image HeightRequest="35" WidthRequest="35" Grid.Row="3" Grid.Column="3" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Center">
+                    <Image.Source>
+                        <FontImageSource Glyph="&#xe70a;"
+                        Color="#007aff" 
+                        FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" />
+                    </Image.Source>
+                </Image>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnGridSizePlus"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+    </Grid>
+  </local:SampleView.PropertyView>
+</local:SampleView>
