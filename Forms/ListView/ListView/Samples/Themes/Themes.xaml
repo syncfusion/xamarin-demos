@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfListView.Themes"
+                   x:Name="sampleView"
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:local="clr-namespace:SampleBrowser.SfListView"
+                   xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                   xmlns:core="clr-namespace:Syncfusion.XForms.Themes;assembly=Syncfusion.Core.XForms"
+                   xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
+
+    <sample:SampleView.BindingContext>
+        <local:ListViewSwipingViewModel/>
+    </sample:SampleView.BindingContext>
+    <sample:SampleView.Content>
+        <sync:SfListView x:Name="listView"
+                         ItemsSource="{Binding InboxInfo}"
+                         SelectionMode="Single"
+                         IsStickyHeader="True"
+                         ItemSize="{OnIdiom Default=100, Desktop=110}">
+            <sync:SfListView.ItemTemplate>
+                <DataTemplate x:Name="ItemTemplate">
+                    <Grid x:Name="grid">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="1" />
+                        </Grid.RowDefinitions>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Grid Margin="5">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Label LineBreakMode="NoWrap"
+                                       TextColor="{DynamicResource SfListViewForegroundColor}"
+                                       FontAttributes="Bold"
+                                       Text="{Binding Title}"
+                                       FontSize="{OnPlatform Android={OnIdiom Phone=17, Tablet=19}, iOS={OnIdiom Phone=18, Tablet=20}, UWP={OnIdiom Phone=18, Tablet=20, Desktop=20}, macOS=20, WPF=20}"/>
+                                <Label LineBreakMode="NoWrap"
+                                       TextColor="{DynamicResource SfListViewForegroundColor}"
+                                       Grid.Row="1"
+                                       Text="{Binding Subject}"
+                                       FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=16}, iOS={OnIdiom Phone=14, Tablet=16}, macOS=16, UWP={OnIdiom Phone=16, Tablet=20, Desktop=20}, WPF=20}" />
+                                <Label TextColor="{DynamicResource SfListViewForegroundColor}"
+                                       Grid.Row="2"
+                                       LineBreakMode="NoWrap"
+                                       Text="{Binding Description}"
+                                       FontSize="{OnPlatform Android={OnIdiom Phone=12, Tablet=14}, iOS={OnIdiom Phone=12, Tablet=14}, macOS=14, UWP={OnIdiom Phone=12, Tablet=12, Desktop=20}, WPF=20}" />
+                            </Grid>
+                            <Grid Grid.Column="1" Padding="5,10,5,10" HorizontalOptions="End">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="30" />
+                                </Grid.RowDefinitions>
+                                <Label TextColor="{DynamicResource SfListViewForegroundColor}"
+                                       LineBreakMode="NoWrap"
+                                       Text="{Binding Date}"
+                                       FontSize="{OnPlatform Android={OnIdiom Phone=12, Tablet=14}, iOS={OnIdiom Phone=12, Tablet=14}, macOS=14, UWP={OnIdiom Phone=12, Tablet=12, Desktop=20}, WPF=20}" />
+                                <Label x:Name="NormalImage" Grid.Row="1" HorizontalOptions="Center"
+                                               HeightRequest="22"
+                                               WidthRequest="22"
+                                               VerticalOptions="Center"
+                                       Text="&#xe75e;" TextColor="#ffcc00" FontSize="Medium" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons, WPF=Assets/Fonts/Sync FontIcons.ttf#Sync FontIcons}"/>
+                            </Grid>
+                        </Grid>
+                        <StackLayout Grid.Row="1" BackgroundColor="#A5A5A5" Opacity="0.25" HeightRequest="1"/>
+                    </Grid>
+                </DataTemplate>
+            </sync:SfListView.ItemTemplate>
+            <sync:SfListView.HeaderTemplate>
+                <DataTemplate x:Name="HeaderTemplate">
+                    <Grid BackgroundColor="{DynamicResource SfListViewSelectionBackgroundColor}" HeightRequest="45">
+                        <Label LineBreakMode="NoWrap"
+                               Margin="10,0,0,0" Text="Inbox" FontAttributes="Bold"
+                               FontSize="18" TextColor="{DynamicResource SfListViewForegroundColor}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    </Grid>
+                </DataTemplate>
+            </sync:SfListView.HeaderTemplate>
+        </sync:SfListView>
+    </sample:SampleView.Content>
+</sample:SampleView>

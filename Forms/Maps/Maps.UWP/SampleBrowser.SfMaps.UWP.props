@@ -1,0 +1,107 @@
+﻿
+<Project>
+
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\ShapeFiles\Custom.dbf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <Link>Assets\ShapeFiles\Custom.dbf</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\ShapeFiles\Custom.shp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <Link>Assets\ShapeFiles\Custom.shp</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\ShapeFiles\Custom.shx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <Link>Assets\ShapeFiles\Custom.shx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\ShapeFiles\usa_state.dbf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <Link>Assets\ShapeFiles\usa_state.dbf</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\ShapeFiles\usa_state.shp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <Link>Assets\ShapeFiles\usa_state.shp</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\ShapeFiles\world1.dbf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <Link>Assets\ShapeFiles\world1.dbf</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\ShapeFiles\world1.shp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <Link>Assets\ShapeFiles\world1.shp</Link>
+    </EmbeddedResource>
+	 <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\ShapeFiles\asia.dbf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <Link>Assets\ShapeFiles\asia.dbf</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\ShapeFiles\asia.shp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <Link>Assets\ShapeFiles\asia.shp</Link>
+    </EmbeddedResource>
+	 <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\ShapeFiles\africa.dbf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <Link>Assets\ShapeFiles\africa.dbf</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\ShapeFiles\africa.shp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <Link>Assets\ShapeFiles\africa.shp</Link>
+    </EmbeddedResource>
+	 <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\ShapeFiles\australia.dbf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <Link>Assets\ShapeFiles\australia.dbf</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\ShapeFiles\australia.shp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <Link>Assets\ShapeFiles\australia.shp</Link>
+    </EmbeddedResource>
+	 <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\ShapeFiles\continent.dbf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <Link>Assets\ShapeFiles\continent.dbf</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\ShapeFiles\continent.shp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <Link>Assets\ShapeFiles\continent.shp</Link>
+    </EmbeddedResource>
+	 <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\ShapeFiles\europe.dbf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <Link>Assets\ShapeFiles\europe.dbf</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\ShapeFiles\europe.shp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <Link>Assets\ShapeFiles\europe.shp</Link>
+    </EmbeddedResource>
+	 <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\ShapeFiles\north-america.dbf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <Link>Assets\ShapeFiles\north-america.dbf</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\ShapeFiles\north-america.shp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <Link>Assets\ShapeFiles\north-america.shp</Link>
+    </EmbeddedResource>
+	 <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\ShapeFiles\south-america.dbf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <Link>Assets\ShapeFiles\south-america.dbf</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\ShapeFiles\south-america.shp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <Link>Assets\ShapeFiles\south-america.shp</Link>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\ShapeFiles\world-map.dbf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <Link>Assets\ShapeFiles\world-map.dbf</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\ShapeFiles\world-map.shp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <Link>Assets\ShapeFiles\world-map.shp</Link>
+    </EmbeddedResource>
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\ShapeFiles\river.dbf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <Link>Assets\ShapeFiles\river.dbf</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Assets\ShapeFiles\river.shp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <Link>Assets\ShapeFiles\river.shp</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    
+    <ItemGroup>
+	
+         <Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStartedSample\View\GettingStartedSample.xaml.cs">
+           <Link>Samples\Switch\GettingStartedSample\View\GettingStartedSample.xaml.cs</Link>
+           <DependentUpon>GettingStartedSample.xaml</DependentUpon>
+         </Compile>
+
+	    <Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStartedSample\View\TokenItem.xaml.cs">
+		  <Link>Samples\Switch\GettingStartedSample\View\TokenItem.xaml.cs</Link>
+		  <DependentUpon>TokenItem.xaml</DependentUpon>
+	    </Compile>
+
+		<Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStartedSample\ViewModel\TokensViewModel.cs">  
+			<Link>Samples\Switch\GettingStartedSample\ViewModel\TokensViewModel.cs</Link>
+		</Compile>
+				
+		<Compile Include="$(MSBuildThisFileDirectory)\Samples\VisualType\VisualType.xaml.cs">
+            <Link>Samples\Switch\VisualType\VisualType.xaml.cs</Link>
+            <DependentUpon>VisualType.xaml</DependentUpon>
+        </Compile>
+		
+		<Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml.cs">
+            <Link>Samples\Switch\Samples\Themes\Themes.xaml.cs</Link>
+            <DependentUpon>Themes.xaml</DependentUpon>
+        </Compile>
+
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml" >
+	    <Link>Samples\Switch\SamplesList\SamplesList.xml</Link>
+	    </EmbeddedResource>
+  </ItemGroup>
+ 
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\GettingStartedSample\View\GettingStartedSample.xaml">
+      <Link>Samples\Switch\GettingStartedSample\View\GettingStartedSample.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\GettingStartedSample\View\TokenItem.xaml">
+      <Link>Samples\Switch\GettingStartedSample\View\TokenItem.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  
+  
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\VisualType\VisualType.xaml">
+      <Link>Samples\Switch\VisualType\VisualType.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml">
+      <Link>Samples\Switch\Samples\Themes\Themes.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+ 
+</Project>

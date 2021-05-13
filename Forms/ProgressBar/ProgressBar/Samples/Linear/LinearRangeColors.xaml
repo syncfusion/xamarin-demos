@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<core:SampleView xmlns="http://xamarin.com/schemas/2014/forms" 
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:core="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                 xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
+                 x:Class="SampleBrowser.SfProgressBar.LinearRangeColors">
+    <core:SampleView.Content>
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+          </Grid.RowDefinitions>
+          
+            <Label Text="Range colors"
+                   Grid.Row="0"
+                   HorizontalOptions="Start" VerticalOptions="Start"
+                   Margin="20,0,0,0">
+              <Label.FontSize>
+                <OnPlatform x:TypeArguments="x:Double" iOS="11"/>
+              </Label.FontSize>
+            </Label>
+            <progressBar:SfLinearProgressBar x:Name="RangeColorProgressBar"
+                                        Grid.Row="0"
+                                        Margin="20,20,20,0"
+                                        Progress="100"
+                                        ValueChanged="RangeColorProgressBar_ValueChanged"
+                                        >
+
+                <!--Range colors collection without fadding-->
+                <progressBar:SfLinearProgressBar.RangeColors>
+                    <progressBar:RangeColorCollection>
+                        <progressBar:RangeColor Color="#36BBE1" Start="0" End="25"/>
+                        <progressBar:RangeColor Color="#9AEDE1" Start="25" End="50"/>
+                        <progressBar:RangeColor Color="#FFDC28" Start="50" End="75"/>
+                        <progressBar:RangeColor Color="#E15E0D" Start="75" End="100"/>
+                    </progressBar:RangeColorCollection>
+                </progressBar:SfLinearProgressBar.RangeColors>
+
+            </progressBar:SfLinearProgressBar>
+
+            <Label Text="Gradient"
+                   Grid.Row="1"
+                   HorizontalOptions="Start" VerticalOptions="Start"
+                   Margin="20,0,0,0">
+            <Label.FontSize>
+              <OnPlatform x:TypeArguments="x:Double" iOS="11"/>
+            </Label.FontSize>
+            </Label>
+            <progressBar:SfLinearProgressBar x:Name="RangeColorWithGradientProgressBar"
+                                        Grid.Row="1"
+                                        Margin="20,20,20,0"
+                                        Progress="100"
+                                        ValueChanged="RangeColorWithGradiantProgressBar_ValueChanged"
+                                        >
+
+            <!--Range colors collection with fadding-->
+            <progressBar:SfLinearProgressBar.RangeColors>
+              <progressBar:RangeColorCollection>
+                <progressBar:RangeColor IsGradient="true" Color="#E9ECF7" Start="0" End="20"/>
+                <progressBar:RangeColor IsGradient="true" Color="#A0D9EF" Start="20" End="40"/>
+                <progressBar:RangeColor IsGradient="true" Color="#62C1E5" Start="40" End="60"/>
+                <progressBar:RangeColor IsGradient="true" Color="#20A7DB" Start="60" End="80"/>
+                <progressBar:RangeColor IsGradient="true" Color="#1C96C5" Start="80" End="100"/>
+              </progressBar:RangeColorCollection>
+            </progressBar:SfLinearProgressBar.RangeColors>
+
+          </progressBar:SfLinearProgressBar>
+        </Grid>
+    </core:SampleView.Content>
+</core:SampleView>

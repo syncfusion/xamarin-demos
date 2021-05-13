@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\RadialMenu.ttf">
+            <Link>Assets\RadialMenu.ttf</Link>
+        </AndroidAsset>
+        <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\radialmenu_RadialMenu.ttf">
+            <Link>Assets\radialmenu_RadialMenu.ttf</Link>
+        </AndroidAsset>
+        <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\radialmenu_Segoe MDL2 Assets.ttf">
+            <Link>Assets\radialmenu_Segoe MDL2 Assets.ttf</Link>
+        </AndroidAsset>
+        <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\radialmenu_socialicons.ttf">
+            <Link>Assets\radialmenu_socialicons.ttf</Link>
+        </AndroidAsset>
+        <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\Segoe MDL2 Assets.ttf">
+            <Link>Assets\Segoe MDL2 Assets.ttf</Link>
+        </AndroidAsset>
+        <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\socialicons.ttf">
+            <Link>Assets\socialicons.ttf</Link>
+        </AndroidAsset>
+    </ItemGroup>
+</Project>

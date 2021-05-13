@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<StackLayout
+    x:Class="SampleBrowser.SfSchedule.EditorLayout"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:schedule="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.SfSchedule.XForms"
+    xmlns:samplelocal="clr-namespace:SampleBrowser.SfSchedule"
+    BackgroundColor="White"
+    HorizontalOptions="FillAndExpand"
+    IsVisible="false"
+    Orientation="Vertical"
+    VerticalOptions="FillAndExpand">
+    <StackLayout.BindingContext>
+        <samplelocal:EditorLayoutViewModel />
+    </StackLayout.BindingContext>
+
+    <ScrollView x:Name="editorScrollView">
+        <StackLayout>
+    <Grid
+        x:Name="eventName_layout"
+        Padding="20,10,20,0"
+        HeightRequest="40"
+        VerticalOptions="Start">
+        <Entry
+            x:Name="eventNameText"
+            HeightRequest="40"
+            TextColor="Black" />
+    </Grid>
+    <Grid
+        x:Name="organizer_layout"
+        Padding="20,20,20,0"
+        HeightRequest="40"
+        VerticalOptions="Start">
+        <Entry
+            x:Name="organizerText"
+            HeightRequest="40"
+            TextColor="Black" />
+    </Grid>
+    <Grid
+        x:Name="startTimeLabel_layout"
+        Padding="20,10,20,0"
+        HeightRequest="20"
+        VerticalOptions="Start">
+        <Label
+            Font="15"
+            Text="From"
+            TextColor="Gray" />
+    </Grid>
+    <Grid
+        x:Name="StartdateTimePicker_layout"
+        Padding="20,0,20,0"
+        VerticalOptions="Start">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid
+            x:Name="start_datepicker_layout"
+            Grid.Column="0"
+            HeightRequest="50"
+            VerticalOptions="Start"
+            WidthRequest="20">
+            <DatePicker x:Name="startDate_picker" HeightRequest="40" />
+        </Grid>
+        <Grid
+            x:Name="start_timepicker_layout"
+            Grid.Column="1"
+            HeightRequest="50"
+            VerticalOptions="Start"
+            WidthRequest="20">
+            <TimePicker x:Name="startTime_picker" HeightRequest="40" />
+        </Grid>
+    </Grid>
+    <Grid BackgroundColor="White" 
+                Padding="20,0,20,0"
+                HorizontalOptions="FillAndExpand" 
+                VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" x:Name="startTimeZoneLabel" 
+                    VerticalOptions="Center" 
+                    Text="Start Time Zone" 
+                    FontSize="15" TextColor="Gray" />
+            <Picker x:Name="startTimeZonePicker" Grid.Row="1" 
+                        VerticalOptions="Center" 
+                        SelectedIndex="0"
+                        HorizontalOptions="FillAndExpand">
+            </Picker>
+        </Grid>
+    <Grid
+        x:Name="endTimeLabel_layout"
+        Padding="20,10,20,0"
+        HeightRequest="20"
+        VerticalOptions="Start">
+        <Label
+            Font="15"
+            HeightRequest="20"
+            Text="To"
+            TextColor="Gray" />
+    </Grid>
+    <Grid
+        x:Name="EndDateTimePicker_layout"
+        Padding="20,0,20,0"
+        VerticalOptions="Start">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid
+            x:Name="end_datepicker_layout"
+            Grid.Column="0"
+            HeightRequest="50"
+            VerticalOptions="Start">
+            <DatePicker
+                x:Name="endDate_picker"
+                Grid.Column="0"
+                HeightRequest="50"
+                VerticalOptions="Start" />
+        </Grid>
+        <Grid
+            x:Name="end_timepicker_layout"
+            Grid.Column="1"
+            HeightRequest="50"
+            VerticalOptions="Start">
+            <TimePicker
+                x:Name="endTime_picker"
+                HeightRequest="50"
+                VerticalOptions="Start" />
+        </Grid>
+    </Grid>
+    <Grid BackgroundColor="White" 
+                Padding="20,0,20,0"
+                HorizontalOptions="FillAndExpand" 
+                VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" x:Name="endTimeZoneLabel" 
+                    VerticalOptions="Center" 
+                    Text="End Time Zone" 
+                    FontSize="15" TextColor="Gray" />
+            <Picker x:Name="endTimeZonePicker" Grid.Row="1" 
+                        VerticalOptions="Center" 
+                        SelectedIndex="0"
+                        HorizontalOptions="FillAndExpand">
+            </Picker>
+     </Grid>    
+    <Grid
+        x:Name="allDayGrid"
+        Padding="20,10,20,0"
+        VerticalOptions="Start">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="allDayLabel"
+            Grid.Column="0"
+            Font="15"
+            Text="All Day"
+            TextColor="Gray"
+            VerticalTextAlignment="Center" />
+        <Grid Grid.Column="1" Padding="20,0,0,0">
+            <Switch
+                x:Name="switchAllDay"
+                HorizontalOptions="Start"
+                VerticalOptions="Center" />
+        </Grid>
+    </Grid>
+        </StackLayout>
+    </ScrollView>
+
+    <Grid x:Name="editorButtons" BackgroundColor="White"
+        VerticalOptions="Start">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="cancelButtonGrid"
+            Grid.Column="0">
+            <Button
+                x:Name="cancelButton"
+                Text="Cancel"
+                TextColor="#3B3B3B"
+                WidthRequest="100" />
+        </Grid>
+        <Grid  x:Name="saveButtonGrid"
+            Grid.Column="1">
+            <Button
+                x:Name="saveButton"
+                Text="Save"
+                TextColor="White"
+                WidthRequest="100" />
+        </Grid>
+    </Grid>
+
+    <StackLayout.Behaviors>
+        <samplelocal:EditorLayoutBehavior />
+    </StackLayout.Behaviors>
+</StackLayout>

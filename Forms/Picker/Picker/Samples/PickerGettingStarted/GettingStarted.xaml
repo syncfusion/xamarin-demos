@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView  xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPicker.XForms"
+                   xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" 
+                   xmlns:custom="clr-namespace:SampleBrowser.SfPicker" 
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   x:Class="SampleBrowser.SfPicker.PickerGettingStarted">
+<local:SampleView.Content>
+<ScrollView Margin="10" >
+    <Grid x:Name="grid_layout" Padding="20,10,20,0" HorizontalOptions="Center">
+      <Grid.RowDefinitions>
+        <RowDefinition x:Name="rowheight" Height="300" />
+		<RowDefinition x:Name="logname" Height="40" />
+        <RowDefinition Height="*" />			
+      </Grid.RowDefinitions>
+
+      <Grid HorizontalOptions="Center">
+        <picker:SfPicker x:Name="picker"
+             HorizontalOptions="FillAndExpand"
+					   SelectedIndex="{Binding SelectedIndex}"
+					   ItemsSource="{Binding Source}"
+					   ShowHeader="{Binding IsShowHeader}"
+                         SelectedItemFontSize="20"
+                         UnSelectedItemFontSize="20"
+					   ShowColumnHeader="{Binding IsShowColumnHeader}"
+                       EnableLooping="{Binding IsEnableAutoReverse}"
+                       SelectionBackgroundColor="{Binding IsEnableBorderColor}"
+                        HeaderText="{Binding HeaderText}"
+				       ColumnHeaderText="{Binding ColumnHeaderTextCollection}"
+				       SelectionChanged="Picker_SelectionChanged" >
+        <picker:SfPicker.Behaviors>
+          <custom:SfPickerBehavior />
+        </picker:SfPicker.Behaviors>
+      </picker:SfPicker>
+      </Grid>
+
+		<Grid Grid.Row="1">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+			<Label Text="Event Log" Grid.Column="0"  HorizontalOptions="Start"  FontSize="16" />
+			<Button Text="Clear Logs" Grid.Column="1" x:Name="clearLogsButton"  FontSize="10"  BackgroundColor="White" BorderWidth="1" VerticalOptions="Center" BorderColor="#007aff" TextColor="#007aff" WidthRequest="100" HeightRequest="50" HorizontalOptions="End" Clicked="Handle_Clicked"  />
+		</Grid>
+
+		<ContentView Grid.Row="2" BackgroundColor="#FFFFFF" Padding="3,1,1,3" >
+			<ContentView BackgroundColor="White" VerticalOptions="Fill" Padding="10,5,10,10">
+				<ScrollView x:Name="scrollView" IsClippedToBounds="true" >
+					<StackLayout x:Name="eventLogLayout" Margin="5"/>
+				</ScrollView>
+			</ContentView>
+		</ContentView>
+    </Grid>
+		</ScrollView>
+  </local:SampleView.Content>
+	<local:SampleView.PropertyView>
+        <Grid x:Name="mainStack" RowSpacing="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"  x:Name="ShowHeaderLayout"/>
+                <RowDefinition Height="*" x:Name="ShowColumnHeaderLayout" />
+                <RowDefinition Height="*" x:Name="EnableAutoReverseLayout"/>
+                <RowDefinition Height="*" x:Name="SelectionBorderColorLayout"/>
+                <RowDefinition Height="*"  x:Name="selectedRowTextColorLayout"/>
+                <RowDefinition Height="*"  x:Name="unselectedRowTextColorLayout"/>
+                <RowDefinition Height="*"  x:Name="BorderColorLayout"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="ShowHeader" Grid.Row="0" Grid.Column="0"  FontAttributes="None" FontSize="16"  Text = "Show Header" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"   TextColor="#666666"/>
+            <Switch HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"   Grid.Row="0" Grid.Column="1"  IsToggled="{Binding IsShowHeader}" />
+
+            <Label x:Name="ShowColumnHeader"  Grid.Row="1" Grid.Column="0"  FontAttributes="None" FontSize="16" Text = "Show Column Header" HorizontalOptions = "StartAndExpand" VerticalOptions="CenterAndExpand" TextColor="#666666" />
+            <Switch HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"   Grid.Row="1" Grid.Column="1" IsToggled="{Binding IsShowColumnHeader,Mode=TwoWay}"  />
+
+            <Label x:Name="EnableAutoReverse"  Grid.Row="2" Grid.Column="0"  FontAttributes="None" FontSize="16"   Text = "Enable AutoReverse"  HorizontalOptions = "StartAndExpand" VerticalOptions="CenterAndExpand" TextColor="#666666" />
+            <Switch HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  Grid.Row="2" Grid.Column="1" IsToggled="{Binding IsEnableAutoReverse,Mode=TwoWay}"  />
+
+            <Label x:Name="BorderColor"  Grid.Row="3" Grid.Column="0" FontAttributes="None" FontSize="16" Text = "Enable SelectionBorder"   HorizontalOptions = "StartAndExpand" VerticalOptions="CenterAndExpand" TextColor="#666666" />
+            <Switch HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"   Grid.Row="3" Grid.Column="1" IsToggled="{Binding IsEnableBorderColor,Mode=TwoWay}" Toggled="Handle_Toggled" />
+
+            <StackLayout Grid.Row="4" Grid.ColumnSpan="2">
+                <Label x:Name="SelectedRowTextColorlbl"  FontSize="16"  FontAttributes="None"  Text = "SelectedRow TextColor"  HorizontalOptions = "Start" TextColor="#666666" />
+                <Picker x:Name="SelectedRowTextColorPicker"     VerticalOptions="Start" SelectedIndex="0" SelectedIndexChanged="Handle_SelectedIndexChanged3"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="5" Grid.ColumnSpan="2">
+                <Label x:Name="UnSelectedRowTextColorlbl" FontSize="16"  FontAttributes="None" Text = "UnSelectedRow TextColor" HorizontalOptions = "Start" TextColor="#666666" />
+                <Picker x:Name="UnSelectedRowTextColorPicker"   VerticalOptions="Start"  SelectedIndex="0" SelectedIndexChanged="Handle_SelectedIndexChanged4"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="6" Grid.ColumnSpan="2">
+                <Label x:Name="BorderColorlbl"  FontAttributes="None" FontSize="16"  Text = "Border TextColor"  HorizontalOptions = "Start" TextColor="#666666" />
+                <Picker x:Name="BorderColorPicker"  VerticalOptions="Start" SelectedIndex="0" SelectedIndexChanged="Handle_SelectedIndexChanged5"/>
+            </StackLayout>
+        </Grid>
+    </local:SampleView.PropertyView>
+</local:SampleView>

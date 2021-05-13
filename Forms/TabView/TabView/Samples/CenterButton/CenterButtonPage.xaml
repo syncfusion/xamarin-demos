@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+    x:Class="SampleBrowser.SfTabView.CenterButton"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:converter="clr-namespace:SampleBrowser.SfTabView"
+    xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+    xmlns:tabView="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
+	BackgroundColor="White" x:Name="root">
+  <local:SampleView.Resources>
+    <ResourceDictionary>
+       <converter:DateTimeToStringConverter x:Key="Datetostring"/>
+      <local:ImagePathConverter x:Key="ImagePathConverter" />
+    </ResourceDictionary>
+  </local:SampleView.Resources>
+    <local:SampleView.Content>
+        <Grid x:Name="mainGrid">
+         <tabView:SfTabView x:Name="TabView" 
+                               VisibleHeaderCount="5" 
+                               TabHeaderPosition="Bottom" 
+                               TabHeight="45"
+                            EnableSwiping="false"
+                               TabHeaderBackgroundColor="#F6F6F6"
+                               SelectionChanged="Handle_SelectionChanged"
+                               OverflowMode="CenterButton">
+                    <tabView:SfTabView.CenterButtonSettings>
+                     <tabView:CenterButtonSettings Height="45" Width="45"/>
+                 </tabView:SfTabView.CenterButtonSettings>
+            
+                 <tabView:SfTabView.SelectionIndicatorSettings>
+                     <tabView:SelectionIndicatorSettings Color="#1E90FF" 
+                                                         StrokeThickness="3"
+                                                         Position="Bottom"/>
+                 </tabView:SfTabView.SelectionIndicatorSettings>
+        
+          <tabView:SfTabView.CenterButtonView>
+                    <border:SfBorder CornerRadius="50" BackgroundColor="#5772e6" BorderColor="#5772e6">
+                    <Image 
+                    Aspect="AspectFill" 
+                    HeightRequest="30"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand">
+                        <Image.Source>
+                            <FontImageSource Glyph="&#xe747;" Size="30" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" Color="White"/>
+                        </Image.Source>
+              <Image.GestureRecognizers>
+                <TapGestureRecognizer
+                        Tapped="CenterButton_Tapped" />
+              </Image.GestureRecognizers>
+            </Image>
+           </border:SfBorder>
+                </tabView:SfTabView.CenterButtonView>
+
+        <tabView:SfTabItem>
+            <tabView:SfTabItem.HeaderContent>
+               <Grid>
+                        <Grid.RowDefinitions>
+                             <RowDefinition Height="*"/>
+                             <RowDefinition Height="5*"/>
+                             <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                             <ColumnDefinition Width="*"/>
+                             <ColumnDefinition Width="5*"/>
+                             <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                  <Image StyleId="Tabimage" 
+                         HeightRequest="25"
+                         Grid.Row="1"
+                         Aspect="AspectFit"
+                         HorizontalOptions="Center"
+                         Grid.Column="1" 
+                         WidthRequest="25">
+                                <Image.Source>
+                                    <FontImageSource Glyph="&#xe744;" Size="30" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" Color="#5c5e5e"/>
+                                </Image.Source>
+                     <Image.GestureRecognizers>
+                <TapGestureRecognizer
+                        Tapped="Handle_Tapped" />
+              </Image.GestureRecognizers>
+                    </Image>
+                       </Grid>
+          </tabView:SfTabItem.HeaderContent>
+            
+           <tabView:SfTabItem.Content>
+              <ListView x:Name="listView"
+                        BackgroundColor="White"
+                        RowHeight="75" 
+                        BindingContext="{Binding Path=BindingContext, Source={x:Reference root}}"
+                        ItemsSource="{Binding PrimaryListSource}">
+                <ListView.ItemTemplate>
+                  <DataTemplate>
+                    <ViewCell>
+                                <Grid>
+                                  <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="5*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                      <StackLayout  Orientation="Horizontal" Grid.Column="0" Grid.ColumnSpan="2">
+                         <Grid WidthRequest="50" Margin="10" HeightRequest="50"  VerticalOptions="Center"  HorizontalOptions="Center">  
+                                            <Grid>
+                                              <converter:CustomFrame CornerRadius="25" BackgroundColor="{Binding ContactImage}" HasShadow="false"/>
+                                            </Grid>
+                                            <Label Text="{Binding ContactReadType}"
+                                                    TextColor="White"
+                                                    FontSize="22"
+                                                    WidthRequest="50"
+                                                    HeightRequest="50"
+                                                    VerticalTextAlignment="Center"
+                                                    HorizontalTextAlignment="Center"
+                                                    HorizontalOptions="Center"
+                                                    VerticalOptions="Center"/>
+                                        </Grid>
+
+                        <StackLayout Margin="2,8,2,2" Orientation="Vertical">
+                              <Label Text="{Binding ContactName}"
+                                 TextColor="Black"
+                                 FontSize="15"
+                                  FontAttributes="Bold"
+                                 VerticalOptions="Center"/>
+                          <Label Text="{Binding Message}"
+                                 FontAttributes="None"
+                                 TextColor="Black"
+                         FontSize="12"
+                         VerticalOptions="Center"/>
+                        </StackLayout>
+                      </StackLayout>
+                   <StackLayout Margin="2,5,2,5" Grid.Column="1">
+                           <Label Text="{Binding MessagingTime,Converter={StaticResource Datetostring}}"
+                                  FontAttributes="None"
+                                  FontSize="12"
+                                 TextColor="Gray"/>
+                   </StackLayout>
+                    </Grid>
+                    </ViewCell>
+                  </DataTemplate>
+                </ListView.ItemTemplate>
+              </ListView>
+            </tabView:SfTabItem.Content>
+
+        </tabView:SfTabItem>
+        
+        <tabView:SfTabItem>
+            <tabView:SfTabItem.HeaderContent>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                             <RowDefinition Height="*"/>
+                             <RowDefinition Height="5*"/>
+                             <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                             <ColumnDefinition Width="*"/>
+                             <ColumnDefinition Width="5*"/>
+                             <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                  <Image StyleId="Tabimage1" 
+                         HeightRequest="25" 
+                         Grid.Row="1"
+                         Grid.Column="1" 
+                         HorizontalOptions="Center"     
+                         Aspect="AspectFit"
+                         WidthRequest="25">
+                                <Image.Source>
+                                    <FontImageSource Glyph="&#xe725;" Size="30" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" Color="#5c5e5e"/>
+                                </Image.Source>
+                                <Image.GestureRecognizers>
+                <TapGestureRecognizer
+                        Tapped="Handle_Tapped" />
+              </Image.GestureRecognizers>
+                    </Image>
+                       </Grid>
+             </tabView:SfTabItem.HeaderContent>
+             <tabView:SfTabItem.Content>
+              <ListView x:Name="listView1"
+                        BackgroundColor="White"
+                        RowHeight="75" 
+                        BindingContext="{Binding Path=BindingContext, Source={x:Reference root}}"
+                        ItemsSource="{Binding SecondaryListSource}">
+               <ListView.ItemTemplate>
+                  <DataTemplate>
+                    <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="5*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                      <StackLayout  Orientation="Horizontal" Grid.Column="0" Grid.ColumnSpan="2">
+                          <Grid WidthRequest="50" Margin="10" HeightRequest="50"  VerticalOptions="Center"  HorizontalOptions="Center">  
+                                            <Grid>
+                                              <converter:CustomFrame CornerRadius="25" BackgroundColor="{Binding ContactImage}" HasShadow="false"/>
+                                            </Grid>
+                                            <Label Text="{Binding ContactReadType}"
+                                                    TextColor="White"
+                                                    FontSize="22"
+                                                    WidthRequest="50"
+                                                    HeightRequest="50"
+                                                    VerticalTextAlignment="Center"
+                                                    HorizontalTextAlignment="Center"
+                                                    HorizontalOptions="Center"
+                                                    VerticalOptions="Center"/>
+                                        </Grid>
+                        <StackLayout Margin="2,8,2,2"  Orientation="Vertical">
+                              <Label Text="{Binding ContactName}"
+                                 TextColor="Black"
+                                 FontSize="15"
+                                  FontAttributes="Bold"
+                                 VerticalOptions="Center"/>
+                          <Label Text="{Binding Message}"
+                                 FontAttributes="None"
+                                 TextColor="Black"
+                         FontSize="12"
+                         VerticalOptions="Center"/>
+                        </StackLayout>
+                      </StackLayout>
+                   <StackLayout Margin="2,5,2,5" Grid.Column="1">
+                           <Label Text="{Binding MessagingTime,Converter={StaticResource Datetostring}}"
+                                  FontAttributes="None"
+                                   FontSize="12"
+                                 TextColor="Gray"/>
+                   </StackLayout>
+                    </Grid>
+                    </ViewCell>
+                  </DataTemplate>
+                </ListView.ItemTemplate>
+              </ListView>
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+
+        <tabView:SfTabItem>
+            <tabView:SfTabItem.HeaderContent>
+               <Grid>
+                        <Grid.RowDefinitions>
+                             <RowDefinition Height="*"/>
+                             <RowDefinition Height="5*"/>
+                             <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                             <ColumnDefinition Width="*"/>
+                             <ColumnDefinition Width="5*"/>
+                             <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                  <Image StyleId="Tabimage2" 
+                         HeightRequest="25"
+                         Grid.Row="1"
+                         Aspect="AspectFit"
+                         Grid.Column="1" 
+                         HorizontalOptions="Center"
+                         WidthRequest="25">
+                        <Image.Source>
+                                    <FontImageSource Glyph="&#xe724;" Size="30" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" Color="#5c5e5e"/>
+                         </Image.Source>
+                     <Image.GestureRecognizers>
+                <TapGestureRecognizer
+                        Tapped="Handle_Tapped" />
+              </Image.GestureRecognizers>
+                    </Image>
+                       </Grid>
+             </tabView:SfTabItem.HeaderContent>
+             <tabView:SfTabItem.Content>
+              <ListView x:Name="listView2"
+                        BackgroundColor="White"
+                        RowHeight="75" 
+                        BindingContext="{Binding Path=BindingContext, Source={x:Reference root}}"
+                        ItemsSource="{Binding ThirdListSource}">
+                <ListView.ItemTemplate>
+                  <DataTemplate>
+                    <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="5*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                      <StackLayout  Orientation="Horizontal" Grid.Column="0" Grid.ColumnSpan="2">
+                          <Grid WidthRequest="50" Margin="10" HeightRequest="50"  VerticalOptions="Center"  HorizontalOptions="Center">  
+                                            <Grid>
+                                              <converter:CustomFrame CornerRadius="25" BackgroundColor="{Binding ContactImage}" HasShadow="false"/>
+                                            </Grid>
+                                            <Label Text="{Binding ContactReadType}"
+                                                    TextColor="White"
+                                                    FontSize="22"
+                                                    WidthRequest="50"
+                                                    HeightRequest="50"
+                                                    VerticalTextAlignment="Center"
+                                                    HorizontalTextAlignment="Center"
+                                                    HorizontalOptions="Center"
+                                                    VerticalOptions="Center"/>
+                                        </Grid>
+                        <StackLayout Margin="2,8,2,2"  Orientation="Vertical">
+                              <Label Text="{Binding ContactName}"
+                                 TextColor="Black"
+                                 FontSize="15"
+                                  FontAttributes="Bold"
+                                 VerticalOptions="Center"/>
+                          <Label Text="{Binding Message}"
+                                 FontAttributes="None"
+                                 TextColor="Black"
+                         FontSize="12"
+                         VerticalOptions="Center"/>
+                        </StackLayout>
+                      </StackLayout>
+                   <StackLayout Margin="2,5,2,5" Grid.Column="1">
+                           <Label Text="{Binding MessagingTime,Converter={StaticResource Datetostring}}"
+                                  FontAttributes="None"
+                                   FontSize="12"
+                                 TextColor="Gray"/>
+                   </StackLayout>
+                    </Grid>
+                    </ViewCell>
+                  </DataTemplate>
+                </ListView.ItemTemplate>
+              </ListView>
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+        
+          <tabView:SfTabItem Title="Blue">
+            <tabView:SfTabItem.HeaderContent>
+               <Grid>
+                        <Grid.RowDefinitions>
+                             <RowDefinition Height="*"/>
+                             <RowDefinition Height="8*"/>
+                             <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                             <ColumnDefinition Width="*"/>
+                             <ColumnDefinition Width="8*"/>
+                             <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                  <Image StyleId="Tabimage3"
+                         Grid.Row="1" 
+                         HorizontalOptions="Center"
+                         Aspect="AspectFit"
+                         Grid.Column="1">
+                         <Image.Source>
+                                    <FontImageSource Glyph="&#xe76d;" Size="30" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" Color="#5c5e5e"/>
+                         </Image.Source>
+                     <Image.GestureRecognizers>
+                <TapGestureRecognizer
+                        Tapped="Handle_Tapped" />
+              </Image.GestureRecognizers>
+                    </Image>
+                       </Grid>
+             </tabView:SfTabItem.HeaderContent>
+                    <tabView:SfTabItem.Content>
+                        <StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+            <Grid Grid.Row="0" BackgroundColor="#57c4ec">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="3*"/>
+                 <RowDefinition Height="*"/>                       
+                </Grid.RowDefinitions>
+                <Image HorizontalOptions="Center"
+                       HeightRequest="250"
+                       WidthRequest="250"
+                       Grid.Row="1"
+                       Source="People_Circle23.png"
+                       Aspect="AspectFit" 
+                       VerticalOptions="Center"/>
+                    <Label x:Name="name" 
+                           Text="John Steinbeck" 
+                           FontAttributes="Bold"
+                           VerticalOptions="Center" 
+                           HorizontalOptions="Center"
+                           Grid.Row="2"
+                           TextColor="White"
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center"/>
+            </Grid>
+             <StackLayout Grid.Row="1" Orientation="Vertical" Margin="0,20,0,0" BackgroundColor="White">
+            <StackLayout Margin="30,0,0,0" Orientation="Horizontal">
+                <Image x:Name="mail_Image" 
+                        HeightRequest="30"
+                       WidthRequest="30"
+                       VerticalOptions="Center"
+                       HorizontalOptions="End">
+                         <Image.Source>
+                             <FontImageSource Glyph="&#xe725;" Size="40" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" Color="#5772e6"/>
+                        </Image.Source>                    
+                 </Image>
+                 <Label Margin="20,0,0,0"
+                       Grid.Row="0" 
+                       Grid.Column="2"
+                    Text="John@xyz.com"
+                        FontSize="15"
+                        FontAttributes="Bold"
+                       VerticalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Start"
+                       HorizontalOptions="Center" />
+              </StackLayout>
+                 <StackLayout Margin="30,0,0,0" Orientation="Horizontal">                    
+                    <Image 
+                       HeightRequest="30" 
+                       WidthRequest="30"                     
+                       VerticalOptions="Center"
+                       HorizontalOptions="End" >
+                        <Image.Source>
+                             <FontImageSource Glyph="&#xe766;" FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" Color="#5772e6"/>
+                        </Image.Source>                    
+                    </Image>
+                 <Label Margin="20,0,0,0"
+                    Text="XXX-XXX-XXX-XX"
+                        FontSize="15"
+                       VerticalOptions="Center"
+                        FontAttributes="Bold"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Start"
+                       HorizontalOptions="Center" />
+                     </StackLayout>                   
+               </StackLayout>
+            </Grid>
+            </StackLayout>
+           </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+    </tabView:SfTabView>
+            <Grid x:Name="ComposeDialog"
+              IsVisible="False">
+                <Grid.GestureRecognizers>
+                       <TapGestureRecognizer
+                             Tapped="Grid_Tapped" />
+                        </Grid.GestureRecognizers>
+          <Grid Opacity="0.5"
+                BackgroundColor="Black">
+
+          </Grid>
+          <converter:ComposeDialog x:Name="composer" 
+                                Margin="25,50">
+
+          </converter:ComposeDialog>
+        </Grid>
+      </Grid>
+  </local:SampleView.Content>
+</local:SampleView>

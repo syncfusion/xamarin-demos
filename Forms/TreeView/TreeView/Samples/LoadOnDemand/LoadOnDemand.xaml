@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfTreeView.LoadOnDemand"
+             xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:local="clr-namespace:SampleBrowser.SfTreeView"
+             xmlns:sfTreeView="clr-namespace:Syncfusion.XForms.TreeView;assembly=Syncfusion.SfTreeView.XForms">
+
+    <sample:SampleView.BindingContext>
+        <local:MusicInfoRepository x:Name="viewModel"></local:MusicInfoRepository>
+    </sample:SampleView.BindingContext>
+    <sample:SampleView.Content>
+        <sfTreeView:SfTreeView x:Name="treeView"
+                             Indentation="15"
+                             ExpanderWidth="40"
+                             IsAnimationEnabled="True"
+                             LoadOnDemandCommand="{Binding TreeViewOnDemandCommand}"
+                             ExpandActionTarget="Node"
+                             SelectionMode="None"
+                             ItemsSource="{Binding Menu}">
+            <sfTreeView:SfTreeView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Grid x:Name="grid" RowSpacing="0" BackgroundColor="Transparent">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="1" />
+                                </Grid.RowDefinitions>
+                                <Grid RowSpacing="0" Grid.Row="0">
+                                    <Grid Grid.Column="0"
+                                              RowSpacing="1"
+                                              Padding="1,0,0,0"
+                                              VerticalOptions="Center">
+                                        <Label LineBreakMode="NoWrap"
+                                                   Text="{Binding ItemName}"
+                                                   TextColor="Black"
+                                                   VerticalTextAlignment="Center" 
+                                                   FontSize="{OnPlatform Android={OnIdiom Phone=16, Tablet=18},iOS={OnIdiom Phone=16,Tablet=18},UWP={OnIdiom Phone=18,Tablet=20,Desktop=20}}"/>                                            
+                                    </Grid>
+                                </Grid>
+                                <StackLayout Grid.Row="1" HeightRequest="1"/>
+                            </Grid>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </sfTreeView:SfTreeView.ItemTemplate>
+        </sfTreeView:SfTreeView>
+    </sample:SampleView.Content>
+</sample:SampleView>
