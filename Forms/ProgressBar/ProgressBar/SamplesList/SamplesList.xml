@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Samples>
+  <Sample Name = "Linear" Title = "Linear" SearchTags="linear, linear progress bar, gradient progress bar, segmented progress bar, custom progress bar"/>
+  <Sample Name = "Circular" Title = "Circular" SearchTags="circular, circular progress bar, semi circle progress bar, custom progress bar, segmented progress bar, progress bar with content"/>
+</Samples>

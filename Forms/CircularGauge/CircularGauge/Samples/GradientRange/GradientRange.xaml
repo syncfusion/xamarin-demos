@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             x:Class="SampleBrowser.SfCircularGauge.GradientRange">
+    <local:SampleView.Content BackgroundColor="White">
+
+        <gauge:SfCircularGauge x:Name="circularGauge" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+            <gauge:SfCircularGauge.Scales>
+                <gauge:Scale StartValue="0" EndValue="100" Interval="50"
+                             ShowRim="False"
+                             ShowTicks="False"
+                             ShowLabels="False">
+                    <gauge:Scale.Ranges>
+                        <gauge:Range Offset="0.8" StartValue="0"
+                                 EndValue="100" Thickness="25">
+                            <gauge:Range.GradientStops>
+                                <gauge:GaugeGradientStop Value="0" Color="#F03E3E"/>
+                                <gauge:GaugeGradientStop Value="35" Color="#FFDD00"/>
+                                <gauge:GaugeGradientStop Value="75" Color="#FFDD00"/>
+                                <gauge:GaugeGradientStop Value="100" Color="#30B32D"/>
+                            </gauge:Range.GradientStops>
+                        </gauge:Range>    
+                    </gauge:Scale.Ranges>
+                    <gauge:Scale.Pointers>
+                        <gauge:MarkerPointer MarkerShape="InvertedTriangle" Offset="0.8"
+                                             Value="55" MarkerHeight="15" MarkerWidth="15"
+                                             Color="Red"/>
+                    </gauge:Scale.Pointers>
+                </gauge:Scale>
+            </gauge:SfCircularGauge.Scales>
+
+            <gauge:SfCircularGauge.Headers>
+
+                <gauge:Header Text="0" TextSize="20" ForegroundColor="#F03E3E"
+                              FontAttributes="Bold" Position="0.28, 0.86"/>
+                <gauge:Header Text="100" TextSize="20" FontAttributes="Bold"
+                              ForegroundColor="#30B32D" Position="0.75, 0.86"/>
+                <gauge:Header Text="55%" TextSize="20" ForegroundColor="#F03E3E"
+                              FontAttributes="Bold" Position="0.5,0.5"/>
+            </gauge:SfCircularGauge.Headers>
+
+        </gauge:SfCircularGauge>
+
+    </local:SampleView.Content>
+</local:SampleView>

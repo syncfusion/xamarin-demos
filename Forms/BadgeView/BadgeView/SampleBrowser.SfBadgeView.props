@@ -1,0 +1,55 @@
+<Project ToolsVersion="15.0">
+  <PropertyGroup>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>Samples\BadgeView\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Notification\Notification.xaml.cs">
+      <DependentUpon>Notification.xaml</DependentUpon>
+      <Link>Samples\BadgeView\Samples\Notification\Notification.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Customization\Customization.xaml.cs">
+      <DependentUpon>Customization.xaml</DependentUpon>
+      <Link>Samples\BadgeView\Samples\Customization\Customization.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Notification\NotificationModel.cs">
+      <Link>Samples\BadgeView\Samples\Notification\NotificationModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Notification\NotificationViewModel.cs">
+      <Link>Samples\BadgeView\Samples\Notification\NotificationViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Notification\HelperClass\BadgeViewConverter.cs">
+      <Link>Samples\BadgeView\Samples\Notification\HelperClass\BadgeViewConverter.cs</Link>
+    </Compile>
+     <Compile Include="$(MSBuildThisFileDirectory)\Samples\Notification\HelperClass\FontIconLabel.cs">
+      <Link>Samples\BadgeView\Samples\Notification\HelperClass\FontIconLabel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Customization\CustomizationViewModel.cs">
+      <Link>Samples\BadgeView\Samples\Customization\CustomizationViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Customization\CustomizationModel.cs">
+      <Link>Samples\BadgeView\Samples\Customization\CustomizationModel.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Notification\Notification.xaml">
+      <Link>Samples\BadgeView\Samples\Notification\Notification.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Customization\Customization.xaml">
+      <Link>Samples\BadgeView\Samples\Customization\Customization.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

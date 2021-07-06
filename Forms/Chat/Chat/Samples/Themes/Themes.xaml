@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfChat.Themes"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.SfChat"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                   xmlns:sfchat="clr-namespace:Syncfusion.XForms.Chat;assembly=Syncfusion.SfChat.XForms">
+
+    <sample:SampleView.BindingContext>
+        <local:GettingStartedViewModel x:Name="viewModel" />
+    </sample:SampleView.BindingContext>
+
+    <sample:SampleView.Content>
+        <StackLayout>
+            <sfchat:SfChat x:Name="sfChat" 
+                           MessageShape="RoundedRectangle"
+                           ShowOutgoingMessageAvatar="True"
+                           ShowIncomingMessageAvatar="True"
+                           SendMessageCommand="{Binding SendMessageCommand}"
+                           TypingIndicator="{Binding TypingIndicator}"
+                           ShowTypingIndicator="{Binding ShowTypingIndicator}"
+                           Messages="{Binding Messages}"
+                           CurrentUser="{Binding CurrentUser}"
+                           IncomingMessageTimestampFormat="hh:mm tt"
+                           OutgoingMessageTimestampFormat="hh:mm tt" >
+            </sfchat:SfChat>
+        </StackLayout>
+    </sample:SampleView.Content>
+</sample:SampleView>

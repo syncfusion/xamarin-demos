@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView  xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                   x:Class="SampleBrowser.SfRadioButton.Themes"
+                   xmlns:sync="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms">
+    <local:SampleView.Content >
+        <ScrollView>
+            <StackLayout >
+                <StackLayout x:Name="MainStack" HeightRequest="{OnPlatform Default='380', UWP='400'}" WidthRequest="300" HorizontalOptions="Center" VerticalOptions="Center" >
+                    <Label  x:Name="headerText" Margin="0,30,0,0" Text="Complete your Payment" FontAttributes="Bold" FontSize="20" HorizontalOptions="Center" />
+                    <StackLayout x:Name="amtStack" Orientation="Horizontal" Margin="15,25,15,0">
+                        <Label x:Name="amountlabl" Margin="0,15,0,0" Text="Total payable amount" HorizontalOptions="Start" FontSize="16" ></Label>
+                        <Label x:Name="amt" Margin="0,15,0,0" Text="$120" HorizontalOptions="EndAndExpand" FontAttributes="Bold" FontSize="18" ></Label>
+                    </StackLayout>
+                    <sync:SfRadioGroup x:Name="radioGroup" Margin="0,30,0,0">
+                        <Label x:Name="paymentmodelbl" Text="Select your payment mode" Margin="15,0,0,0" VerticalOptions="Start" HorizontalOptions="Start" FontSize="16"></Label>
+                        <sync:SfRadioButton x:Name="netbanking" Margin="15,20,0,0" Text="Net banking" FontSize="{OnPlatform Default='16', WPF='14'}" ></sync:SfRadioButton>
+                        <sync:SfRadioButton x:Name="debit" Margin="15,20,0,0" Text="Debit card" FontSize="{OnPlatform Default='16', WPF='14'}" ></sync:SfRadioButton>
+                        <sync:SfRadioButton x:Name="credit"  Margin="15,20,0,35" Text="Credit card" FontSize="{OnPlatform Default='16', WPF='14'}"></sync:SfRadioButton>
+                    </sync:SfRadioGroup>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </local:SampleView.Content>
+</local:SampleView>
