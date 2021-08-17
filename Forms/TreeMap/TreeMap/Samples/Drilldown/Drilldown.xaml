@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfTreeMap.Drilldown"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfTreeMap"
+             xmlns:treeMap="clr-namespace:Syncfusion.SfTreeMap.XForms;assembly=Syncfusion.SfTreeMap.XForms">
+    <local:SampleView.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <Grid.BindingContext>
+                <sampleBrowser:DrilldownViewModel></sampleBrowser:DrilldownViewModel>
+            </Grid.BindingContext>
+
+            <Label Grid.Row="0" Text="Continents by population" Margin="20,0,0,0" FontSize="20" HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center"/>
+
+            <treeMap:SfTreeMap Grid.Row="1" DataSource="{Binding PopulationDetails}" EnableDrilldown="True" x:Name="treeMap"
+                               WeightValuePath="Population" ColorValuePath="Population" ShowTooltip="True">
+                <treeMap:SfTreeMap.LeafItemSettings>
+                    <treeMap:LeafItemSettings LabelPath="Region"></treeMap:LeafItemSettings>
+                </treeMap:SfTreeMap.LeafItemSettings>
+                <treeMap:SfTreeMap.Levels>
+                    <treeMap:TreeMapFlatLevel GroupPath="Continent">
+                        <treeMap:TreeMapFlatLevel.HeaderStyle>
+                            <treeMap:Style Color= "Black"/>
+                        </treeMap:TreeMapFlatLevel.HeaderStyle>
+                    </treeMap:TreeMapFlatLevel>
+                    <treeMap:TreeMapFlatLevel GroupPath="States">
+                        <treeMap:TreeMapFlatLevel.HeaderStyle>
+                            <treeMap:Style Color= "Black"/>
+                        </treeMap:TreeMapFlatLevel.HeaderStyle>
+                    </treeMap:TreeMapFlatLevel>
+                </treeMap:SfTreeMap.Levels>
+
+                <treeMap:SfTreeMap.LeafItemColorMapping>
+                    <treeMap:PaletteColorMapping>
+                        <treeMap:PaletteColorMapping.Colors>
+                            <Color>#C044A5</Color>
+                            <Color>#665197</Color>
+                            <Color>#FF4652</Color>
+                            <Color>#8B2286</Color>
+                            <Color>#448FC0</Color>
+                        </treeMap:PaletteColorMapping.Colors>
+                    </treeMap:PaletteColorMapping>                   
+                </treeMap:SfTreeMap.LeafItemColorMapping>
+            </treeMap:SfTreeMap>
+
+            <StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="Start" Margin="0,0,5,-5" >
+                <Label Text="Source: " FontSize="12" />
+                <Label Text="en.wikipedia.org" TextColor="DeepSkyBlue" x:Name="link" FontSize="12" />
+            </StackLayout>
+
+        </Grid>
+    </local:SampleView.Content>
+</local:SampleView>

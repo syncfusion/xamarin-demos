@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Products>
+  <Product>
+    <ProductName>Slide Table</ProductName>
+    <Cell>
+      <Data1>
+        <Value>1</Value>
+      </Data1>
+      <Data2>
+        <Value>New Orleans Cajun Delights</Value>
+      </Data2>
+      <Data3>
+        <Value>Shelley Burke</Value>
+      </Data3>
+      <Data4>
+        <Value>P.O. Box 78934</Value>
+      </Data4>
+      <Data5>
+        <Value>New Orleans</Value>
+      </Data5>
+      <Data6>
+        <Value>USA</Value>
+      </Data6>
+      <Data7>
+        <Value>2</Value>
+      </Data7>
+      <Data8>
+        <Value>Cooperativa de Quesos 'Las Cabras</Value>
+      </Data8>
+      <Data9>
+        <Value>Antonio del Valle Saavedra</Value>
+      </Data9>
+      <Data10>
+        <Value>Calle del Rosal 4</Value>
+      </Data10>
+      <Data11>
+        <Value>Oviedo</Value>
+      </Data11>
+      <Data12>
+        <Value>Spain</Value>
+      </Data12>
+      <Data13>
+        <Value>3</Value>
+      </Data13>
+      <Data14>
+        <Value>Mayumi</Value>
+      </Data14>
+      <Data15>
+        <Value>Mayumi Ohno</Value>
+      </Data15>
+      <Data16>
+        <Value>92 Setsuko Chuo-ku</Value>
+      </Data16>
+      <Data17>
+        <Value>Osaka</Value>
+      </Data17>
+      <Data18>
+        <Value>Japan</Value>
+      </Data18>
+      <Data19>
+        <Value>4</Value>
+      </Data19>
+      <Data20>
+        <Value>Pavlova, Ltd.</Value>
+      </Data20>
+      <Data21>
+        <Value>Ian Devling</Value>
+      </Data21>
+      <Data22>
+        <Value>74 Rose St. Moonie Ponds</Value>
+      </Data22>
+      <Data23>
+        <Value>Melbourne</Value>
+      </Data23>
+      <Data24>
+        <Value>Australia</Value>
+      </Data24>
+      <Data25>
+        <Value>5</Value>
+      </Data25>
+      <Data26>
+        <Value>Specialty Biscuits, Ltd.</Value>
+      </Data26>
+      <Data27>
+        <Value>Peter Wilson</Value>
+      </Data27>
+      <Data28>
+        <Value>29 King's Way</Value>
+      </Data28>
+      <Data29>
+        <Value>Manchester</Value>
+      </Data29>
+      <Data30>
+        <Value>UK</Value>
+      </Data30>
+  </Cell>
+  </Product>
+</Products>

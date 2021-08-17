@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" 
+    xmlns:numeric="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms" 
+    xmlns:carousel="clr-namespace:Syncfusion.SfCarousel.XForms;assembly=Syncfusion.SfCarousel.XForms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:core="clr-namespace:SampleBrowser.SfCarousel" 
+    x:Class="SampleBrowser.SfCarousel.Virtualization_Default">
+<local:SampleView.Resources>
+     <ResourceDictionary>
+      <core:TextToProperConveter x:Key="texttopropertext" />
+      <core:FontIconConverter x:Key="FontIconConverter" />
+            <local:ImagePathConverter x:Key="ImagePathConverter" />
+       <core:UnWantedTextRemove x:Key="UnWantedTextRemove" />
+        <DataTemplate x:Key="itemTemplate">
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="65" />
+              <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label Text="{Binding Name,Converter={StaticResource UnWantedTextRemove}}" TextColor="#333333" Font="SemiBold,Large" FontFamily="SegoeUI" VerticalOptions="Center" HorizontalOptions="Center" FontSize="18" />
+          <Grid BackgroundColor="#FFEAEAEA" Grid.Row="1">
+            <Grid
+                BackgroundColor="#FFFFFFFF"
+                Margin="1"
+                x:Name="gridName">
+              <Grid RowSpacing="0">
+                <Grid RowSpacing="0">
+                  <core:ImageAdv
+                      BackgroundColor="White"
+                      ModelObject="{Binding}"
+                      VerticalOptions="Center"
+                      HorizontalOptions="Center"
+                      HorizontalTextAlignment="Center"
+                      VerticalTextAlignment="Center"
+                      TextColor="{Binding ItemColor}"
+                      FontFamily="{Binding Converter={StaticResource FontIconConverter},ConverterParameter=CarouselIcon.ttf#Sample}">
+                    <core:ImageAdv.FontSize>
+                      <OnIdiom x:TypeArguments="x:Double">
+                        <OnIdiom.Desktop>
+                          <OnPlatform
+                          x:TypeArguments="x:Double"
+                          WinPhone="75" />
+                        </OnIdiom.Desktop>
+                        <OnIdiom.Tablet>
+                          <OnPlatform
+                          x:TypeArguments="x:Double"
+                          iOS="50"
+                          Android="50"
+                          WinPhone="50" />
+                        </OnIdiom.Tablet>
+                        <OnIdiom.Phone>
+                          <OnPlatform
+                          x:TypeArguments="x:Double"
+                          iOS="50"
+                          Android="50"
+                          WinPhone="50" />
+                        </OnIdiom.Phone>
+                      </OnIdiom>
+                    </core:ImageAdv.FontSize>
+                    <core:ImageAdv.Text>
+                      <OnPlatform
+                      x:TypeArguments="BindingBase"
+                      Android="{Binding Unicode}"
+                      iOS="{Binding Unicode}"
+                      WinPhone="{Binding Unicode}" />
+                    </core:ImageAdv.Text>
+                    <core:ImageAdv.GestureRecognizers>
+                      <TapGestureRecognizer Tapped="Handle_Tapped" />
+                    </core:ImageAdv.GestureRecognizers>
+                  </core:ImageAdv>
+                  <core:ImageAdv
+                      ModelObject="{Binding}"
+                      BackgroundColor="White"
+                      VerticalOptions="End"
+                      HorizontalOptions="End"
+                      FontSize="23"
+                      FontFamily="{Binding Converter={StaticResource FontIconConverter},ConverterParameter=carousel.ttf#carousel}"
+                      TextColor="{Binding ItemColor}"
+                      Text="A">
+                    <core:ImageAdv.GestureRecognizers>
+                      <TapGestureRecognizer Tapped="Handle_Tapped" />
+                    </core:ImageAdv.GestureRecognizers>
+                  </core:ImageAdv>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+          </Grid>
+        </DataTemplate>
+    </ResourceDictionary>  
+</local:SampleView.Resources>
+    
+<local:SampleView.Content>
+        <Grid>
+          <ScrollView>
+    <Grid x:Name="carouselLayout" BackgroundColor="#F9F9F9"  >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout 
+            Grid.Row="0" 
+            Padding="10,0,0,10" 
+            VerticalOptions="Center">
+          <Grid x:Name="virtualizationButton">
+            <Image Source="White_Circle.png"  
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center">
+            </Image>
+            <Label
+            Text="TAP TO VIEW 9000+ ICONS" 
+            FontSize="18"
+            TextColor="#151515" 
+            BackgroundColor="Transparent"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+            <Label.WidthRequest>
+                  <OnPlatform
+                      x:TypeArguments="x:Double"
+                      Android="110"
+                      iOS="120"
+                      WinPhone="110" />              
+             </Label.WidthRequest>
+             </Label>
+            <Grid.GestureRecognizers>
+              <TapGestureRecognizer Tapped="Handle_Clicked" />
+            </Grid.GestureRecognizers>
+          </Grid>
+        
+        <carousel:SfCarousel 
+                    x:Name="brandCarousel" 
+                    IsVisible="false"
+                    ItemWidth="200"
+                    ItemHeight="250"
+                    EnableVirtualization = "true"
+                    ViewMode = "Linear"
+                    ItemSpacing="20"
+                    ItemTemplate="{StaticResource itemTemplate}" 
+                    SelectedIndex="0"/>
+            </StackLayout>
+        </Grid>
+          </ScrollView>
+          <Grid
+                      x:Name="Dialog"
+                      IsVisible="false">
+
+                <ScrollView>
+                    <Grid>
+                  
+                   
+                    <Grid 
+                    Opacity="0.5"
+                    BackgroundColor="Black" >
+                               <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Yes_Handle" />
+                    </Grid.GestureRecognizers>
+                            </Grid>
+            <Grid
+                BackgroundColor="White"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                WidthRequest="250"
+                HeightRequest="405">
+              <Grid
+                  Margin="10"
+                  VerticalOptions="Center"
+                  HorizontalOptions="Center"
+                  RowSpacing="0">
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="175" />
+                  <RowDefinition Height="1" />
+                  <RowDefinition Height="225" />
+                </Grid.RowDefinitions>
+                <Grid
+                    RowSpacing="0"
+                    x:Name="myGrid"
+                    BackgroundColor="White">
+                  <Label
+                      x:Name="iconName"
+                      Margin="0,25,0,0"
+                      VerticalOptions="Center"
+                      HorizontalOptions="Center"
+                      TextColor="{Binding ItemColor}"
+                      FontFamily="{Binding Converter={StaticResource FontIconConverter},ConverterParameter=CarouselIcon.ttf#Sample}"
+                      Text="{Binding Unicode}"
+                      HorizontalTextAlignment="Center"
+                      VerticalTextAlignment="Center">
+                    <Label.FontSize>
+                      <OnIdiom x:TypeArguments="x:Double">
+                        <OnIdiom.Desktop>
+                          <OnPlatform
+                          x:TypeArguments="x:Double"
+                          WinPhone="50" />
+                        </OnIdiom.Desktop>
+                        <OnIdiom.Tablet>
+                          <OnPlatform
+                          x:TypeArguments="x:Double"
+                          iOS="50"
+                          Android="90"
+                          WinPhone="15" />
+                        </OnIdiom.Tablet>
+                        <OnIdiom.Phone>
+                          <OnPlatform
+                          x:TypeArguments="x:Double"
+                          iOS="50"
+                          Android="90"
+                          WinPhone="15" />
+                        </OnIdiom.Phone>
+                      </OnIdiom>
+                    </Label.FontSize>
+                  </Label>
+                  <Label
+                      x:Name="iconText"
+                      Text="{Binding Name}"
+                      VerticalOptions="Start"
+                      HorizontalOptions="Start"
+                      TextColor="#FF000000"
+                      HorizontalTextAlignment="Start"
+                      VerticalTextAlignment="Center">
+                    <Label.FontSize>
+                      <OnIdiom x:TypeArguments="x:Double">
+                        <OnIdiom.Tablet>
+                          <OnPlatform
+                          x:TypeArguments="x:Double"
+                          iOS="14"
+                          Android="14" />
+                        </OnIdiom.Tablet>
+                        <OnIdiom.Phone>
+                          <OnPlatform
+                          x:TypeArguments="x:Double"
+                          iOS="14"
+                          Android="14"
+                          WinPhone="12" />
+                        </OnIdiom.Phone>
+                      </OnIdiom>
+                    </Label.FontSize>
+                  </Label>
+                </Grid>
+                <Grid
+                Grid.Row="1"
+                BackgroundColor="LightGray" />
+                <Grid
+                    Margin="10"
+                    Grid.Row="2"
+                    RowSpacing="0"
+                    BackgroundColor="White"
+                    x:Name="tapGrid"
+                    ColumnSpacing="0">
+                  <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                  </Grid.RowDefinitions>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                  </Grid.ColumnDefinitions>
+                  <Label
+                      Text="C"
+                      VerticalOptions="Center"
+                      HorizontalOptions="Center"
+                      FontSize="40"
+                      TextColor="Violet"
+                      Margin="5"
+                      FontFamily="{Binding Converter={StaticResource FontIconConverter},ConverterParameter=carousel.ttf#carousel}"
+                      x:Name="violet">
+                    <Label.GestureRecognizers>
+                      <TapGestureRecognizer Tapped="Color_Tapped" />
+                    </Label.GestureRecognizers>
+                  </Label>
+                  <Label
+                      Text="C"
+                      VerticalOptions="Center"
+                      HorizontalOptions="Center"
+                      FontSize="40"
+                      TextColor="OrangeRed"
+                      Margin="5"
+                      Grid.Row="0"
+                      Grid.Column="1"
+                      FontFamily="{Binding Converter={StaticResource FontIconConverter},ConverterParameter=carousel.ttf#carousel}"
+                      x:Name="orangeRed">
+                    <Label.GestureRecognizers>
+                      <TapGestureRecognizer Tapped="Color_Tapped" />
+                    </Label.GestureRecognizers>
+                  </Label>
+                  <Label
+                      Text="C"
+                      VerticalOptions="Center"
+                      HorizontalOptions="Center"
+                      FontSize="40"
+                      TextColor="Blue"
+                      Margin="5"
+                      Grid.Row="0"
+                      Grid.Column="2"
+                      FontFamily="{Binding Converter={StaticResource FontIconConverter},ConverterParameter=carousel.ttf#carousel}"
+                      x:Name="blue">
+                    <Label.GestureRecognizers>
+                      <TapGestureRecognizer Tapped="Color_Tapped" />
+                    </Label.GestureRecognizers>
+                  </Label>
+                  <Label
+                      Text="C"
+                      VerticalOptions="Center"
+                      HorizontalOptions="Center"
+                      FontSize="40"
+                      TextColor="Pink"
+                      Margin="5"
+                      Grid.Row="1"
+                      Grid.Column="0"
+                      FontFamily="{Binding Converter={StaticResource FontIconConverter},ConverterParameter=carousel.ttf#carousel}"
+                      x:Name="pink">
+                    <Label.GestureRecognizers>
+                      <TapGestureRecognizer Tapped="Color_Tapped" />
+                    </Label.GestureRecognizers>
+                  </Label>
+                  <Label
+                      Text="C"
+                      VerticalOptions="Center"
+                      HorizontalOptions="Center"
+                      FontSize="40"
+                      TextColor="LightGreen"
+                      Margin="5"
+                      Grid.Row="1"
+                      Grid.Column="1"
+                      FontFamily="{Binding Converter={StaticResource FontIconConverter},ConverterParameter=carousel.ttf#carousel}"
+                      x:Name="lightGreen">
+                    <Label.GestureRecognizers>
+                      <TapGestureRecognizer Tapped="Color_Tapped" />
+                    </Label.GestureRecognizers>
+                  </Label>
+                  <Label
+                      Text="C"
+                      VerticalOptions="Center"
+                      HorizontalOptions="Center"
+                      FontSize="40"
+                      TextColor="Gold"
+                      Margin="5"
+                      Grid.Row="1"
+                      Grid.Column="2"
+                      FontFamily="{Binding Converter={StaticResource FontIconConverter},ConverterParameter=carousel.ttf#carousel}"
+                      x:Name="gold">
+                    <Label.GestureRecognizers>
+                      <TapGestureRecognizer Tapped="Color_Tapped" />
+                    </Label.GestureRecognizers>
+                  </Label>
+                  <Label
+                      Text="C"
+                      VerticalOptions="Center"
+                      HorizontalOptions="Center"
+                      FontSize="40"
+                      TextColor="Orange"
+                      Margin="5"
+                      Grid.Row="2"
+                      Grid.Column="0"
+                      FontFamily="{Binding Converter={StaticResource FontIconConverter},ConverterParameter=carousel.ttf#carousel}"
+                      x:Name="orange">
+                    <Label.GestureRecognizers>
+                      <TapGestureRecognizer Tapped="Color_Tapped" />
+                    </Label.GestureRecognizers>
+                  </Label>
+                  <Label
+                      Text="C"
+                      VerticalOptions="Center"
+                      HorizontalOptions="Center"
+                      FontSize="40"
+                      TextColor="DeepPink"
+                      Margin="5"
+                      Grid.Row="2"
+                      Grid.Column="1"
+                      FontFamily="{Binding Converter={StaticResource FontIconConverter},ConverterParameter=carousel.ttf#carousel}"
+                      x:Name="deepPink">
+                    <Label.GestureRecognizers>
+                      <TapGestureRecognizer Tapped="Color_Tapped" />
+                    </Label.GestureRecognizers>
+                  </Label>
+                  <Label
+                      Text="C"
+                      VerticalOptions="Center"
+                      HorizontalOptions="Center"
+                      FontSize="40"
+                      TextColor="LightSeaGreen"
+                      Margin="5"
+                      Grid.Row="2"
+                      Grid.Column="2"
+                      FontFamily="{Binding Converter={StaticResource FontIconConverter},ConverterParameter=carousel.ttf#carousel}"
+                      x:Name="lightSeaGreen">
+                    <Label.GestureRecognizers>
+                      <TapGestureRecognizer Tapped="Color_Tapped" />
+                    </Label.GestureRecognizers>
+                  </Label>
+                  <Button
+                  Clicked="Yes_Handle"
+                  Grid.Row="3"
+                  Grid.Column="2"
+                  VerticalOptions="End"
+                  HorizontalOptions="End"
+                  BackgroundColor="White"
+                  TextColor="#FF418AD9"
+                  Text="OK" />
+                </Grid>
+                        </Grid>
+                    </Grid>
+                          </Grid>
+                </ScrollView>
+                </Grid>
+                    
+            </Grid>
+</local:SampleView.Content>
+</local:SampleView>

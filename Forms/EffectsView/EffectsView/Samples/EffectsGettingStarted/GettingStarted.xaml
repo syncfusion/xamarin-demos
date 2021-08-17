@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sfSampleView:SampleView
+    x:Class="SampleBrowser.SfEffectsView.GettingStarted"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sfEffectsView="clr-namespace:Syncfusion.XForms.EffectsView;assembly=Syncfusion.Core.XForms"
+    xmlns:sfBorder="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+    xmlns:sfSampleView="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+	xmlns:sfGradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+	xmlns:local="clr-namespace:SampleBrowser.SfEffectsView"
+	mc:Ignorable="d">
+	<sfSampleView:SampleView.Resources>
+		<local:VisibilityConvertor x:Key="visibility"/>
+	</sfSampleView:SampleView.Resources>
+	<sfSampleView:SampleView.BindingContext>
+		<local:EffectsViewModel x:Name="view"/>
+	</sfSampleView:SampleView.BindingContext>
+	<sfSampleView:SampleView.Content>
+		<ScrollView VerticalScrollBarVisibility="Never">
+			<ScrollView.WidthRequest>
+				<OnIdiom 
+						x:TypeArguments="x:Double" 
+						Desktop="400" 
+						Tablet="450"
+						Phone="344"/>
+			</ScrollView.WidthRequest>
+			<ScrollView.HorizontalOptions>
+				<OnIdiom
+                    x:TypeArguments="LayoutOptions"
+                    Desktop="Center"
+                    Phone="FillAndExpand"
+                    Tablet="CenterAndExpand" />
+			</ScrollView.HorizontalOptions>
+			<StackLayout Padding="10">
+				<StackLayout.Spacing>
+					<OnPlatform
+                            x:TypeArguments="x:Double"
+                            Android="10"
+                            iOS="20" Default="10"/>
+				</StackLayout.Spacing>
+				<!--Ripple effect-->
+
+				<Label Text="Ripple effect" FontAttributes="Bold"
+						   FontFamily="Roboto-Medium" TextColor=" #757575" 
+                           VerticalOptions="Center" Margin="0,10,10,10" FontSize="16"/>
+
+				<sfEffectsView:SfEffectsView x:Name="EffectsView" TouchDownEffects="Ripple" WidthRequest="344" 
+												 Margin="0,0,0,10" CornerRadius="5" RippleAnimationDuration="800">
+					<sfEffectsView:SfEffectsView.HeightRequest>
+						<OnIdiom 
+						x:TypeArguments="x:Double" 
+						Desktop="128" 
+						Tablet="128"
+						Phone="148"/>
+					</sfEffectsView:SfEffectsView.HeightRequest>
+
+					<Grid>
+						<sfGradient:SfGradientView >
+							<sfGradient:SfGradientView.BackgroundBrush>
+								<sfGradient:SfLinearGradientBrush>
+									<sfGradient:SfLinearGradientBrush.GradientStops>
+										<sfGradient:SfGradientStop Color="#0eddeb" Offset="0.0" />
+										<sfGradient:SfGradientStop Color="#006ed9" Offset="1" />
+									</sfGradient:SfLinearGradientBrush.GradientStops>
+								</sfGradient:SfLinearGradientBrush>
+							</sfGradient:SfGradientView.BackgroundBrush>
+						</sfGradient:SfGradientView>
+						<sfBorder:SfBorder BackgroundColor="Transparent" BorderColor="Transparent" 
+											   BorderWidth="0" VerticalOptions="Center">
+							<Grid>
+
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="3*"/>
+									<ColumnDefinition Width="7*"/>
+								</Grid.ColumnDefinitions>
+
+								<Image x:Name="cardImage" Source="Person0.png" Margin="7" VerticalOptions="Center"
+									   WidthRequest="80" HeightRequest="80"/>
+								<StackLayout Grid.Column="1" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+									<Label Text="Laura Steffi"  TextColor="#FFFFFF" 
+                                       Grid.Row="0"  VerticalTextAlignment="Center"
+                                       Margin="15,0,0,0" Font="18" FontFamily="Roboto-Medium"/>
+									<Label Text="Data Science Analyst"  TextColor="#FFFFFF" 
+                                       VerticalTextAlignment="Center" FontFamily="Roboto-Regular" 
+                                       Margin="15,0,0,0" Font="12"/>
+									<Label Text="laurasteffi@gmail.com"  TextColor="#FFFFFF" 
+										   FontFamily="Roboto-Regular" 
+                                       VerticalTextAlignment="Center" Margin="15,0,0,0" Font="12" />
+									<Label Text="011-253-321"  TextColor="#FFFFFF" FontFamily="Roboto-Regular" 
+                                       VerticalTextAlignment="Center" Margin="15,0,0,0" Font="12"/>
+								</StackLayout>
+							</Grid>
+						</sfBorder:SfBorder>
+					</Grid>
+
+				</sfEffectsView:SfEffectsView>
+
+				<!--Scale and selection effect-->
+
+				<Label Text="Scale and selection effects" Grid.Row="0" FontFamily="Roboto-Medium"
+                           HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontAttributes="Bold"
+						   TextColor="#757575" Margin="0,10,10,10" FontSize="16"/>
+
+				<Label Text="* Touch down to select a photo." FontFamily="Roboto-Regular" 
+                           HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontAttributes="Italic"
+                           TextColor="#757575"  Margin="0,10,10,10" FontSize="14"/>
+
+				<local:CustomBorder CornerRadius="5" BackgroundColor="#FFFFFF" 
+									Padding="5" x:Name="border"
+									BorderColor="#D3D3D3"
+									HasShadow="False" BorderWidth="0.5">
+
+					<local:CustomBorder.HorizontalOptions>
+						<OnIdiom
+                    x:TypeArguments="LayoutOptions"
+                    Desktop="CenterAndExpand"
+                    Phone="FillAndExpand"
+                    Tablet="CenterAndExpand" />
+					</local:CustomBorder.HorizontalOptions>
+					
+					<local:CustomBorder.VerticalOptions>
+						<OnIdiom
+                    x:TypeArguments="LayoutOptions"
+                    Desktop="FillAndExpand"
+                    Phone="FillAndExpand"
+                    Tablet="Start" />
+					</local:CustomBorder.VerticalOptions>
+					
+					<Grid>
+						<Grid.RowDefinitions>
+							<RowDefinition>
+								<RowDefinition.Height>
+									<OnPlatform x:TypeArguments="GridLength">
+										<On Platform="Android">
+											<OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="120"/>
+										</On>
+										<On Platform="iOS">
+											<OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="110"/>
+										</On>
+										<On Platform="UWP">
+											<OnIdiom x:TypeArguments="GridLength" Desktop="120" Tablet="140" Phone="110"/>
+										</On>
+									</OnPlatform>
+								</RowDefinition.Height>
+							</RowDefinition>
+							<RowDefinition>
+								<RowDefinition.Height>
+									<OnPlatform x:TypeArguments="GridLength">
+										<On Platform="Android">
+											<OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="120"/>
+										</On>
+										<On Platform="iOS">
+											<OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="110"/>
+										</On>
+										<On Platform="UWP">
+											<OnIdiom x:TypeArguments="GridLength" Desktop="120" Tablet="140" Phone="110"/>
+										</On>
+									</OnPlatform>
+								</RowDefinition.Height>
+							</RowDefinition>
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition>
+								<ColumnDefinition.Width>
+									<OnPlatform x:TypeArguments="GridLength">
+										<On Platform="Android">
+											<OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="*"/>
+										</On>
+										<On Platform="iOS">
+											<OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="*"/>
+										</On>
+										<On Platform="UWP">
+											<OnIdiom x:TypeArguments="GridLength" Desktop="120" Tablet="140" Phone="*"/>
+										</On>
+									</OnPlatform>
+								</ColumnDefinition.Width>
+							</ColumnDefinition>
+							<ColumnDefinition>
+								<ColumnDefinition.Width>
+									<OnPlatform x:TypeArguments="GridLength">
+										<On Platform="Android">
+											<OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="*"/>
+										</On>
+										<On Platform="iOS">
+											<OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="*"/>
+										</On>
+										<On Platform="UWP">
+											<OnIdiom x:TypeArguments="GridLength" Desktop="120" Tablet="140" Phone="*"/>
+										</On>
+									</OnPlatform>
+								</ColumnDefinition.Width>
+							</ColumnDefinition>
+							<ColumnDefinition>
+								<ColumnDefinition.Width>
+									<OnPlatform x:TypeArguments="GridLength">
+										<On Platform="Android">
+											<OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="*"/>
+										</On>
+										<On Platform="iOS">
+											<OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="*"/>
+										</On>
+										<On Platform="UWP">
+											<OnIdiom x:TypeArguments="GridLength" Desktop="120" Tablet="140" Phone="*"/>
+										</On>
+									</OnPlatform>
+								</ColumnDefinition.Width>
+							</ColumnDefinition>
+						</Grid.ColumnDefinitions>
+
+						<sfEffectsView:SfEffectsView x:Name="Friends" Grid.Row="0" Grid.Column="0" 
+														 TouchUpEffects="{Binding TouchUpEffectsValue}"  
+													     TouchDownEffects="None"
+														 BackgroundColor="AliceBlue"  
+														 SelectionColor="Transparent" 
+														 ScaleFactor="{Binding ScaleFactorValue}" 
+														 ScaleAnimationDuration="{Binding ScaleDuration}"
+													     AnimationCompleted="AnimationCompleted">
+
+							<Image x:Name="FriendsImage" Source="Friends.jpg" Aspect="AspectFill"  HorizontalOptions="FillAndExpand" 
+									   VerticalOptions="FillAndExpand">
+							</Image>
+
+						</sfEffectsView:SfEffectsView>
+
+						<Image x:Name="FriendsSelectionImage" Grid.Row="0" Grid.Column="0" 
+							   HorizontalOptions="End" VerticalOptions="Start"
+							   Source="EffectView_Selection.png"
+							   Margin="0,12,12,0" BindingContext="{x:Reference Friends}"
+							   IsVisible="{Binding Path=ScaleFactor, Converter={StaticResource visibility}, 
+							ConverterParameter={x:Reference Friends}}"
+							   HeightRequest="20" WidthRequest="20"/>
+
+						<sfEffectsView:SfEffectsView x:Name="Person" Grid.Row="0" Grid.Column="1" 
+													 TouchUpEffects="{Binding TouchUpEffectsValue}" 
+													 TouchDownEffects="None"
+													 BackgroundColor="AliceBlue"  
+													 SelectionColor="Transparent" 
+												     ScaleFactor="{Binding ScaleFactorValue}" 
+													 ScaleAnimationDuration="{Binding ScaleDuration}"
+													 AnimationCompleted="AnimationCompleted">
+
+							<Image x:Name="PersonImage" Source="Person4.jpg" Aspect="AspectFill"  
+								   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+							</Image>
+						</sfEffectsView:SfEffectsView>
+
+						<Image x:Name="PersonSelectionImage"  Grid.Row="0" Grid.Column="1" 
+							   HorizontalOptions="End" VerticalOptions="Start"
+							   Source="EffectView_Selection.png"
+							   Margin="0,12,12,0" BindingContext="{x:Reference Person}" 
+							   IsVisible="{Binding Path=ScaleFactor, Converter={StaticResource visibility}, 
+							ConverterParameter={x:Reference Person}}"
+							   HeightRequest="20" WidthRequest="20"/>
+
+						<sfEffectsView:SfEffectsView x:Name="Hight" Grid.Row="0" Grid.Column="2"
+													 TouchUpEffects="{Binding TouchUpEffectsValue}" 
+													 TouchDownEffects="None"
+													 BackgroundColor="AliceBlue"  
+												     SelectionColor="Transparent" 
+												     ScaleFactor="{Binding ScaleFactorValue}" 
+													 ScaleAnimationDuration="{Binding ScaleDuration}"
+													 AnimationCompleted="AnimationCompleted">
+
+							<Image x:Name="HightImage" Source="Hight.jpg" Aspect="AspectFill" 
+								   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+							</Image>
+
+						</sfEffectsView:SfEffectsView>
+
+						<Image x:Name="HightSelectionImage"  Grid.Row="0" Grid.Column="2" 
+							   HorizontalOptions="End" VerticalOptions="Start"
+							   Source="EffectView_Selection.png"
+							   Margin="0,12,12,0" BindingContext="{x:Reference Hight}" 
+							   IsVisible="{Binding Path=ScaleFactor, Converter={StaticResource visibility}, 
+							ConverterParameter={x:Reference Hight}}"
+							   HeightRequest="20" WidthRequest="20"/>
+
+						<sfEffectsView:SfEffectsView x:Name="Ladybug" Grid.Row="1" Grid.Column="0"
+													 TouchUpEffects="{Binding TouchUpEffectsValue}" 
+													 TouchDownEffects="None"
+													 BackgroundColor="AliceBlue"  
+												     SelectionColor="Transparent" 
+												     ScaleFactor="{Binding ScaleFactorValue}" 
+													 ScaleAnimationDuration="{Binding ScaleDuration}"
+													 AnimationCompleted="AnimationCompleted">
+
+							<Image x:Name="LadybugImage" Aspect="AspectFill" Source="Ladybug.jpg"
+								   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+							</Image>
+
+						</sfEffectsView:SfEffectsView>
+
+						<Image x:Name="LadybugSelectionImage" Grid.Row="1" Grid.Column="0" 
+							   HorizontalOptions="End" VerticalOptions="Start"
+							   Source="EffectView_Selection.png"
+							   Margin="0,12,12,0" BindingContext="{x:Reference Ladybug}" 
+							   IsVisible="{Binding Path=ScaleFactor, Converter={StaticResource visibility}, 
+							ConverterParameter={x:Reference Ladybug}}" 
+							   HeightRequest="20" WidthRequest="20"/>
+
+						<sfEffectsView:SfEffectsView x:Name="IdealHouse" Grid.Row="1" Grid.Column="1"
+													 TouchUpEffects="{Binding TouchUpEffectsValue}" 
+													 TouchDownEffects="None"
+													 BackgroundColor="AliceBlue"  
+												     SelectionColor="Transparent" 
+												     ScaleFactor="{Binding ScaleFactorValue}" 
+													 ScaleAnimationDuration="{Binding ScaleDuration}"
+													 AnimationCompleted="AnimationCompleted">
+
+							<Image x:Name="IdealHouseImage" Aspect="AspectFill" Source="IdealHouse.jpg" 
+								   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+							</Image>
+
+						</sfEffectsView:SfEffectsView>
+
+						<Image x:Name="IdealHouseSelectionImagee"  Grid.Row="1" Grid.Column="1" 
+							   HorizontalOptions="End" VerticalOptions="Start"
+							   Source="EffectView_Selection.png"
+							   Margin="0,12,12,0" BindingContext="{x:Reference IdealHouse}" 
+							   IsVisible="{Binding Path=ScaleFactor, Converter={StaticResource visibility}, 
+							ConverterParameter={x:Reference IdealHouse}}" 
+							   HeightRequest="20" WidthRequest="20"/>
+
+						<sfEffectsView:SfEffectsView Grid.Row="1" Grid.Column="2" x:Name="NaughtyBoy"
+													 TouchUpEffects="{Binding TouchUpEffectsValue}"  
+													 TouchDownEffects="None"
+													 BackgroundColor="AliceBlue"  
+												     SelectionColor="Transparent" 
+												     ScaleFactor="{Binding ScaleFactorValue}" 
+													 AnimationCompleted="AnimationCompleted"
+													 ScaleAnimationDuration="{Binding ScaleDuration}">
+
+							<Image x:Name="NaughtyBoyImage" Aspect="AspectFill" Source="NaughtyBoy.jpg"
+								   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+							</Image>
+
+						</sfEffectsView:SfEffectsView>
+
+						<Image x:Name="NaughtyBoySelectionImage" Grid.Row="1" Grid.Column="2" 
+							   HorizontalOptions="End" VerticalOptions="Start"
+							   Source="EffectView_Selection.png"
+							   Margin="0,12,12,0" BindingContext="{x:Reference NaughtyBoy}"
+							   IsVisible="{Binding Path=ScaleFactor, Converter={StaticResource visibility}, 
+							ConverterParameter={x:Reference NaughtyBoy}}" 
+							   HeightRequest="20" WidthRequest="20"/>
+
+					</Grid>
+				</local:CustomBorder>
+
+				<!--Rotation effect-->
+
+				<Label Text="Ripple and rotation effects"  FontAttributes="Bold"
+                           HorizontalTextAlignment="Start" VerticalTextAlignment="Center"
+                           FontFamily="Roboto-Medium" TextColor=" #757575" 
+                           VerticalOptions="Center" Margin="0,25,10,10" FontSize="16"/>
+
+				<Label Text="* Touch the icon to rotate it." FontFamily="Roboto-Regular" 
+                           HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontAttributes="Italic"
+                           TextColor="#757575"  Margin="0,10,10,10" FontSize="14"/>
+				
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+
+					<sfEffectsView:SfEffectsView x:Name="RotationEffectsView" Margin="12"  
+												 TouchDownEffects="Ripple" TouchUpEffects="Rotation" 
+												 RippleAnimationDuration="150" 
+												 RotationAnimationDuration="150" Angle="180" 
+												 CornerRadius="35" InitialRippleFactor="0"
+												 WidthRequest="70" HeightRequest="70" 
+												 HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+												 AnimationCompleted="RotationEffectsViewAnimationCompleted">
+
+						<Label Text="&#xe701;"  TextColor="Black"
+							   HorizontalOptions="CenterAndExpand"
+							   VerticalOptions="CenterAndExpand" 
+							   HorizontalTextAlignment="Center"
+							   VerticalTextAlignment="Center" FontSize="40"
+							   WidthRequest="70" HeightRequest="70">
+							
+							<Label.FontFamily>
+								<OnPlatform Android="Font Effect View icon.ttf#Font Effect View icon" 
+                                                iOS="Font Effect View icon" 
+											UWP="Assets/Fonts/Font Effect View icon.ttf#Font Effect View icon"/>
+							</Label.FontFamily>
+						</Label>
+
+					</sfEffectsView:SfEffectsView>
+
+					<Button Grid.Column="1" x:Name="ApplyRotationEffectButton" 
+							HeightRequest="40" WidthRequest="160" 
+							VerticalOptions="CenterAndExpand" HorizontalOptions="Start"  
+							Text="Rotate to 180°" BackgroundColor="#2196F3" TextColor="White"
+							Clicked="ApplyRotationEffectButtonClicked"/>
+				</Grid>
+				
+			</StackLayout>
+		</ScrollView>
+	</sfSampleView:SampleView.Content>
+</sfSampleView:SampleView>

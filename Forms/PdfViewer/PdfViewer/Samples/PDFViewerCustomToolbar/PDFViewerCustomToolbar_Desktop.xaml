@@ -1,0 +1,3069 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<local:SampleView
+    x:Class="SampleBrowser.SfPdfViewer.PDFViewerCustomToolbar_Desktop"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:cr="clr-namespace:SampleBrowser.SfPdfViewer"
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:range="clr-namespace:Syncfusion.SfRangeSlider.XForms;assembly=Syncfusion.SfRangeSlider.XForms"
+    xmlns:sfpdfviewer="clr-namespace:Syncfusion.SfPdfViewer.XForms;assembly=Syncfusion.SfPdfViewer.XForms">
+    <local:SampleView.BindingContext>
+        <cr:PdfViewerViewModel />
+    </local:SampleView.BindingContext>
+    <local:SampleView.Content>
+        <Grid
+            x:Name="mainGrid"
+            HorizontalOptions="FillAndExpand"
+            RowSpacing="0"
+            VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <AbsoluteLayout>
+                <Grid
+                    x:Name="toolbar"
+                    Grid.Row="0"
+                    BackgroundColor="#E9E9E9"
+                    HorizontalOptions="Fill"
+                    IsVisible="{Binding IsToolbarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="Fill">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="2" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="1.5*" />
+                            <ColumnDefinition Width="0.2*" />
+                            <ColumnDefinition Width="0.5*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="2" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="10*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1*" />
+                        </Grid.ColumnDefinitions>
+
+                        <cr:SfFontButton
+                            x:Name="showFileBtn"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            Command="{Binding FileOpenCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="FillAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.ShowFile}"
+                            TextColor="#0076FF"
+                            VerticalOptions="FillAndExpand" />
+
+                        <cr:SfFontButton
+                            x:Name="saveBtn"
+                            Grid.Column="2"
+                            BackgroundColor="Transparent"
+                            Clicked="SaveButton_Clicked"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="FillAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Save}"
+                            TextColor="#0076FF"
+                            VerticalOptions="FillAndExpand" />
+                        <cr:SfFontButton
+                            x:Name="printBtn"
+                            Grid.Column="3"
+                            BackgroundColor="Transparent"
+                            Clicked="PrintButton_Clicked"
+                            FontFamily="{x:Static cr:FontMappingHelper.printFont}"
+                            FontSize="25"
+                            HorizontalOptions="FillAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Print}"
+                            TextColor="#0076FF"
+                            VerticalOptions="FillAndExpand" />
+                        <Grid
+                            Grid.Column="4"
+                            Margin="0,8,0,8"
+                            BackgroundColor="Gray" />
+                        <cr:CustomEntry
+                            x:Name="pageNumberEntry"
+                            Grid.Column="6"
+                            Margin="10,0,0,0"
+                            FontSize="18"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Center"
+                            Keyboard="Numeric"
+                            Text="{Binding PageNumber, Source={x:Reference Name=pdfViewerControl}}"
+                            TextColor="#0076FF"
+                            VerticalOptions="Center">
+                            <cr:CustomEntry.Behaviors>
+                                <cr:EventToCommandBehavior
+                                    Command="{Binding GoToPageCommand, Source={x:Reference Name=pdfViewerControl}}"
+                                    CommandParameter="{Binding Source={x:Reference pageNumberEntry}, Path=Text}"
+                                    EventName="Completed" />
+                            </cr:CustomEntry.Behaviors>
+                        </cr:CustomEntry>
+
+                        <Label
+                            x:Name="pageDivSeparator"
+                            Grid.Column="7"
+                            FontSize="18"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Center"
+                            Text="/"
+                            TextColor="#0076FF"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center" />
+
+                        <Label
+                            x:Name="pageCountLabel"
+                            Grid.Column="8"
+                            FontSize="18"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding PageCount, Source={x:Reference Name=pdfViewerControl}}"
+                            TextColor="#0076FF"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center" />
+
+
+                        <cr:SfFontButton
+                            x:Name="goToPreviousButton"
+                            Grid.Column="9"
+                            BackgroundColor="Transparent"
+                            Command="{Binding GoToPreviousPageCommand, Source={x:Reference Name=pdfViewerControl}}"
+                            FontFamily="{x:Static cr:FontMappingHelper.TextPath}"
+                            FontSize="25"
+                            HorizontalOptions="FillAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.PageUp}"
+                            TextColor="#0076FF"
+                            VerticalOptions="FillAndExpand" />
+
+                        <cr:SfFontButton
+                            x:Name="goToNextButton"
+                            Grid.Column="10"
+                            BackgroundColor="Transparent"
+                            Command="{Binding GoToNextPageCommand, Source={x:Reference Name=pdfViewerControl}}"
+                            FontFamily="{x:Static cr:FontMappingHelper.TextPath}"
+                            FontSize="25"
+                            HorizontalOptions="FillAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.PageDown}"
+                            TextColor="#0076FF"
+                            VerticalOptions="FillAndExpand" />
+                        <Grid
+                            Grid.Column="11"
+                            Margin="0,8,0,8"
+                            BackgroundColor="Gray" />
+                        <cr:SfFontButton
+                            x:Name="continousView"
+                            Grid.Column="12"
+                            BackgroundColor="Transparent"
+                            Command="{Binding ToggleViewModeCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.ViewModeFont}"
+                            FontSize="25"
+                            HorizontalOptions="FillAndExpand"
+                            Text="{Binding CurrentViewModeIconText}"
+                            TextColor="#0076FF"
+                            VerticalOptions="FillAndExpand" />
+                        <cr:SfFontButton
+                            x:Name="annotationButton"
+                            Grid.Column="13"
+                            BackgroundColor="Transparent"
+                            Clicked="AnnotationButtonClicked"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="FillAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Annotation}"
+                            TextColor="#0076FF"
+                            VerticalOptions="FillAndExpand">
+                            <cr:SfFontButton.Behaviors>
+                                <cr:EventToCommandBehavior
+                                    Command="{Binding AnnotationModeCommand, Source={x:Reference Name=pdfViewerControl}}"
+                                    CommandParameter="None"
+                                    EventName="Clicked" />
+                                <cr:EventToCommandBehavior Command="{Binding AnnotationCommand}" EventName="Clicked" />
+                                <cr:EventToCommandBehavior Command="{Binding CancelSearchTextCommand, Source={x:Reference Name=pdfViewerControl}}" EventName="Clicked" />
+                            </cr:SfFontButton.Behaviors>
+                        </cr:SfFontButton>
+
+                        <cr:SfFontButton
+                            x:Name="undoButton"
+                            Grid.Column="15"
+                            BackgroundColor="Transparent"
+                            Command="{Binding PerformUndoCommand, Source={x:Reference Name=pdfViewerControl}}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="FillAndExpand"
+                            InputTransparent="true"
+                            Text="{x:Static cr:FontMappingHelper.Undo}"
+                            TextColor="#808080"
+                            VerticalOptions="FillAndExpand" />
+
+                        <cr:SfFontButton
+                            x:Name="redoButton"
+                            Grid.Column="16"
+                            BackgroundColor="Transparent"
+                            Command="{Binding PerformRedoCommand, Source={x:Reference Name=pdfViewerControl}}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="FillAndExpand"
+                            InputTransparent="true"
+                            Text="{x:Static cr:FontMappingHelper.Redo}"
+                            TextColor="#808080"
+                            VerticalOptions="FillAndExpand" />
+
+                        <cr:SfFontButton
+                            x:Name="searchButton"
+                            Grid.Column="17"
+                            BackgroundColor="Transparent"
+                            Clicked="OnSearchClicked"
+                            Command="{Binding SearchAndToolbarToggleCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="FillAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Search}"
+                            TextColor="#0076FF"
+                            VerticalOptions="FillAndExpand" />
+
+                    </Grid>
+                </Grid>
+                <Grid
+                    x:Name="searchBar"
+                    Grid.Row="0"
+                    BackgroundColor="#E9E9E9"
+                    HorizontalOptions="Fill"
+                    IsVisible="{Binding IsSearchbarVisible}"
+                    VerticalOptions="Fill">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="20*" />
+                            <ColumnDefinition Width="1.5*" />
+                            <ColumnDefinition Width="1.5*" />
+                            <ColumnDefinition Width="1.5*" />
+                        </Grid.ColumnDefinitions>
+
+                        <cr:SfFontButton
+                            x:Name="backIcon"
+                            Grid.Column="0"
+                            BackgroundColor="Transparent"
+                            Command="{Binding SearchAndToolbarToggleCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="Center"
+                            Text="{x:Static cr:FontMappingHelper.SearchBack}"
+                            TextColor="#0076FF"
+                            VerticalOptions="Center">
+                            <cr:SfFontButton.Behaviors>
+                                <cr:EventToCommandBehavior Command="{Binding CancelSearchCommand, Source={x:Reference Name=pdfViewerControl}}" EventName="Clicked" />
+                            </cr:SfFontButton.Behaviors>
+                        </cr:SfFontButton>
+
+                        <cr:CustomEntry
+                            x:Name="textSearchEntry"
+                            Grid.Column="1"
+                            FontSize="18"
+                            HorizontalOptions="Fill"
+                            Text="{Binding SearchedText}"
+                            VerticalOptions="Center">
+                            <cr:CustomEntry.Behaviors>
+                                <cr:EventToCommandBehavior
+                                    Command="{Binding SearchNextTextCommand, Source={x:Reference Name=pdfViewerControl}}"
+                                    CommandParameter="{Binding Source={x:Reference Name=textSearchEntry}, Path=Text}"
+                                    EventName="Completed" />
+                            </cr:CustomEntry.Behaviors>
+                        </cr:CustomEntry>
+
+                        <cr:SfFontButton
+                            x:Name="searchPreviousButton"
+                            Grid.Column="2"
+                            BackgroundColor="Transparent"
+                            Command="{Binding SearchPreviousTextCommand, Source={x:Reference Name=pdfViewerControl}}"
+                            CommandParameter="{Binding Source={x:Reference Name=textSearchEntry}, Path=Text}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="End"
+                            IsVisible="false"
+                            Text="{x:Static cr:FontMappingHelper.Previous}"
+                            TextColor="#0076FF"
+                            VerticalOptions="Center" />
+
+                        <cr:SfFontButton
+                            x:Name="searchNextButton"
+                            Grid.Column="3"
+                            BackgroundColor="Transparent"
+                            Command="{Binding SearchNextTextCommand, Source={x:Reference Name=pdfViewerControl}}"
+                            CommandParameter="{Binding Source={x:Reference Name=textSearchEntry}, Path=Text}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="End"
+                            IsVisible="false"
+                            Text="{x:Static cr:FontMappingHelper.Next}"
+                            TextColor="#0076FF"
+                            VerticalOptions="Center" />
+
+                    </Grid>
+                </Grid>
+
+                <Grid
+                    x:Name="inkToolBar"
+                    Grid.Row="0"
+                    BackgroundColor="#E9E9E9"
+                    HorizontalOptions="FillAndExpand"
+                    IsVisible="{Binding IsInkBarVisible}"
+                    VerticalOptions="Fill">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="300*" />
+                            <ColumnDefinition Width="7*" />
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="7*" />
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="7*" />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+
+                        <cr:SfFontButton
+                            x:Name="inkUndoBtn"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            Clicked="UndoInk_Clicked"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="FillAndExpand"
+                            InputTransparent="true"
+                            Text="{x:Static cr:FontMappingHelper.Undo}"
+                            TextColor="DarkGray"
+                            VerticalOptions="FillAndExpand" />
+                        <cr:SfFontButton
+                            x:Name="inkRedoBtn"
+                            Grid.Column="3"
+                            BackgroundColor="Transparent"
+                            Clicked="RedoInk_Clicked"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="FillAndExpand"
+                            InputTransparent="true"
+                            Text="{x:Static cr:FontMappingHelper.Redo}"
+                            TextColor="DarkGray"
+                            VerticalOptions="FillAndExpand" />
+                        <cr:SfFontButton
+                            x:Name="endSessionButton"
+                            Grid.Column="5"
+                            BackgroundColor="Transparent"
+                            Clicked="EndSession_Clicked"
+                            Command="{Binding InkBackButtonCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="FillAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Select}"
+                            TextColor="#0076FF"
+                            VerticalOptions="FillAndExpand" />
+
+                    </Grid>
+                </Grid>
+            </AbsoluteLayout>
+            <Grid
+                x:Name="pdfViewGrid"
+                Grid.Row="1"
+                ColumnSpacing="0"
+                RowSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50" />
+                    <ColumnDefinition Width="1" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+
+                </Grid.ColumnDefinitions>
+                <StackLayout
+                    x:Name="BookMarkLayout"
+                    Grid.Column="0"
+                    BackgroundColor="#E9E9E9" />
+                <Button
+                    x:Name="BookMarkButton"
+                    BackgroundColor="Transparent"
+                    Clicked="BookMarkClicked"
+                    FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                    FontSize="30"
+                    HeightRequest="48"
+                    HorizontalOptions="Center"
+                    Text="{x:Static cr:FontMappingHelper.Bookmark}"
+                    TextColor="#0076FF"
+                    VerticalOptions="Start"
+                    WidthRequest="48" />
+                <StackLayout
+                    x:Name="BookmarkSeparator"
+                    Grid.Column="1"
+                    BackgroundColor="AliceBlue"
+                    IsVisible="True"
+                    WidthRequest="1" />
+                <StackLayout
+                    x:Name="bookpane"
+                    Grid.Column="2"
+                    BackgroundColor="#E9E9E9"
+                    HorizontalOptions="StartAndExpand"
+                    IsVisible="{Binding IsBookMarkVisible}"
+                    VerticalOptions="StartAndExpand" />
+
+                <sfpdfviewer:SfPdfViewer
+                    x:Name="pdfViewerControl"
+                    Grid.Column="3"
+                    InkDeselected="PdfViewerControl_InkDeselected"
+                    InkSelected="PdfViewerControl_InkSelected"
+                    InputFileStream="{Binding PdfDocumentStream}"
+                    PageViewMode="{Binding CurrentPageViewMode}"
+                    StampAnnotationDeselected="PdfViewerControl_StampAnnotationDeselected"
+                    StampAnnotationSelected="PdfViewerControl_StampAnnotationSelected"
+                    TextMarkupDeselected="PdfViewerControl_TextMarkupDeselected"
+                    TextMarkupSelected="PdfViewerControl_TextMarkupSelected">
+                    <sfpdfviewer:SfPdfViewer.Behaviors>
+                        <cr:EventToCommandBehavior Command="{Binding DocumentLoadedCommand}" EventName="DocumentLoaded" />
+                        <cr:EventToCommandBehavior
+                            Command="{Binding AnnotationModeCommand, Source={x:Reference Name=pdfViewerControl}}"
+                            CommandParameter="None"
+                            EventName="DocumentLoaded" />
+                        <cr:EventToCommandBehavior Command="{Binding TextMarkupSelectedCommand}" EventName="TextMarkupSelected" />
+                        <cr:EventToCommandBehavior Command="{Binding TextMarkupDeselectedCommand}" EventName="TextMarkupDeselected" />
+                        <cr:EventToCommandBehavior Command="{Binding InkSelectedCommand}" EventName="InkSelected" />
+                        <cr:EventToCommandBehavior Command="{Binding InkDeselectedCommand}" EventName="InkDeselected" />
+                        <cr:EventToCommandBehavior Command="{Binding ShapeSelectedCommand}" EventName="ShapeAnnotationSelected" />
+                        <cr:EventToCommandBehavior Command="{Binding ShapeDeselectedCommand}" EventName="ShapeAnnotationDeselected" />
+                        <cr:EventToCommandBehavior Command="{Binding FreeTextSelectedCommand}" EventName="FreeTextAnnotationSelected" />
+                        <cr:EventToCommandBehavior Command="{Binding FreeTextDeselectedCommand}" EventName="FreeTextAnnotationDeselected" />
+                        <cr:EventToCommandBehavior Command="{Binding StampAnnotationSelectedCommand}" EventName="StampAnnotationSelected" />
+                        <cr:EventToCommandBehavior Command="{Binding StampAnnotationDeselectedCommand}" EventName="StampAnnotationDeselected" />
+                    </sfpdfviewer:SfPdfViewer.Behaviors>
+                </sfpdfviewer:SfPdfViewer>
+            </Grid>
+            <Grid
+                x:Name="AnnotationGrid"
+                Grid.Row="1"
+                BackgroundColor="Transparent"
+                HeightRequest="{Binding AnnotationGridHeightRequest}"
+                HorizontalOptions="Fill"
+                IsVisible="{Binding AnnotationGridVisible}"
+                RowSpacing="0"
+                VerticalOptions="StartAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+
+                <Grid
+                    x:Name="highlightAnnotationBar"
+                    Grid.Row="0"
+                    BackgroundColor="#E9E9E9"
+                    HorizontalOptions="Fill"
+                    IsVisible="{Binding IsHighlightBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="150" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="80" />
+                            <ColumnDefinition Width="10" />
+                        </Grid.ColumnDefinitions>
+
+
+                        <cr:SfFontButton
+                            x:Name="highlightAnnotationButton"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            InputTransparent="true"
+                            Text="{x:Static cr:FontMappingHelper.Highlight}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+
+                        <cr:SfFontButton
+                            x:Name="colorButton"
+                            Grid.Column="4"
+                            BackgroundColor="{Binding HighlightColor}"
+                            Command="{Binding ColorButtonClickedCommand}"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <cr:SfFontButton
+                            x:Name="backButton"
+                            Grid.Column="5"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Select}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand">
+                            <cr:SfFontButton.Behaviors>
+                                <cr:EventToCommandBehavior Command="{Binding AnnotationBackCommand}" EventName="Clicked" />
+                                <cr:EventToCommandBehavior
+                                    Command="{Binding AnnotationModeCommand, Source={x:Reference Name=pdfViewerControl}}"
+                                    CommandParameter="None"
+                                    EventName="Clicked" />
+                            </cr:SfFontButton.Behaviors>
+                        </cr:SfFontButton>
+                    </Grid>
+                </Grid>
+
+                <Grid
+                    x:Name="underlineAnnotationBar"
+                    Grid.Row="0"
+                    BackgroundColor="#E9E9E9"
+                    HorizontalOptions="Fill"
+                    IsVisible="{Binding IsUnderlineBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="Fill">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="150" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="80" />
+                            <ColumnDefinition Width="10" />
+                        </Grid.ColumnDefinitions>
+
+                        <cr:SfFontButton
+                            x:Name="underlineAnnotationButton"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            InputTransparent="true"
+                            Text="{x:Static cr:FontMappingHelper.Underline}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <cr:SfFontButton
+                            x:Name="colorButton1"
+                            Grid.Column="4"
+                            BackgroundColor="{Binding UnderlineColor}"
+                            Command="{Binding ColorButtonClickedCommand}"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <cr:SfFontButton
+                            x:Name="backButton1"
+                            Grid.Column="5"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Select}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand">
+                            <cr:SfFontButton.Behaviors>
+                                <cr:EventToCommandBehavior Command="{Binding AnnotationBackCommand}" EventName="Clicked" />
+                                <cr:EventToCommandBehavior
+                                    Command="{Binding AnnotationModeCommand, Source={x:Reference Name=pdfViewerControl}}"
+                                    CommandParameter="None"
+                                    EventName="Clicked" />
+                            </cr:SfFontButton.Behaviors>
+                        </cr:SfFontButton>
+                    </Grid>
+                </Grid>
+
+                <Grid
+                    x:Name="strikeThroughAnnotationBar"
+                    Grid.Row="0"
+                    BackgroundColor="#E9E9E9"
+                    HorizontalOptions="Fill"
+                    IsVisible="{Binding IsStrikeThroughBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="150" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="80" />
+                            <ColumnDefinition Width="10" />
+                        </Grid.ColumnDefinitions>
+
+
+                        <cr:SfFontButton
+                            x:Name="strikeThroughAnnotationButton"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            InputTransparent="true"
+                            Text="{x:Static cr:FontMappingHelper.StrikeThrough}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+
+                        <cr:SfFontButton
+                            x:Name="colorButton2"
+                            Grid.Column="4"
+                            BackgroundColor="{Binding StrikeThroughColor}"
+                            Command="{Binding ColorButtonClickedCommand}"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+
+                        <cr:SfFontButton
+                            x:Name="backButton2"
+                            Grid.Column="5"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Select}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand">
+                            <cr:SfFontButton.Behaviors>
+                                <cr:EventToCommandBehavior Command="{Binding AnnotationBackCommand}" EventName="Clicked" />
+                                <cr:EventToCommandBehavior
+                                    Command="{Binding AnnotationModeCommand, Source={x:Reference Name=pdfViewerControl}}"
+                                    CommandParameter="None"
+                                    EventName="Clicked" />
+                            </cr:SfFontButton.Behaviors>
+                        </cr:SfFontButton>
+                    </Grid>
+                </Grid>
+
+                <Grid
+                    x:Name="editAnnotationBar"
+                    Grid.Row="0"
+                    BackgroundColor="#E9E9E9"
+                    HorizontalOptions="Fill"
+                    IsVisible="{Binding IsEditAnnotationBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="40" />
+                        </Grid.ColumnDefinitions>
+
+                        <cr:SfFontButton
+                            x:Name="deleteButton"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            Clicked="DeleteButton_Clicked"
+                            Command="{Binding DeleteCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Delete}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+
+                        <cr:SfFontButton
+                            x:Name="changeColorButton"
+                            Grid.Column="3"
+                            BackgroundColor="{Binding DeleteButtonColor}"
+                            Command="{Binding ColorButtonClickedCommand}"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+
+                    </Grid>
+                </Grid>
+
+                <Grid
+                    x:Name="editStampAnnotationBar"
+                    Grid.Row="0"
+                    BackgroundColor="#E9E9E9"
+                    HorizontalOptions="Fill"
+                    IsVisible="{Binding IsEditStampAnnotationBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="40" />
+                        </Grid.ColumnDefinitions>
+
+                        <cr:SfFontButton
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            Clicked="DeleteButton_Clicked"
+                            Command="{Binding DeleteCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Delete}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                    </Grid>
+                </Grid>
+
+
+                <Grid
+                    x:Name="editTextAnnotationBar"
+                    Grid.Row="0"
+                    BackgroundColor="#E9E9E9"
+                    HorizontalOptions="Fill"
+                    IsVisible="{Binding IsEditTextAnnotationBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="Fill">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="2" />
+                            <ColumnDefinition Width="15*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.6*" />
+                        </Grid.ColumnDefinitions>
+
+                        <cr:SfFontButton
+                            x:Name="editAnnotationButton"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            InputTransparent="true"
+                            Text="{x:Static cr:FontMappingHelper.EditText}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <Grid Grid.Column="2" BackgroundColor="LightGray" />
+                        <cr:SfFontButton
+                            x:Name="EditTextFontSizeButton"
+                            Grid.Column="4"
+                            BackgroundColor="Transparent"
+                            Command="{Binding EditTextFontSizeCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.EditTextFontFamily}"
+                            FontSize="30"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.FontSize}"
+                            TextColor="{Binding EditTextColor}"
+                            VerticalOptions="CenterAndExpand" />
+                        <cr:SfFontButton
+                            x:Name="editTextColorButton"
+                            Grid.Column="6"
+                            BackgroundColor="{Binding EditTextColor}"
+                            Command="{Binding ColorButtonClickedCommand}"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <cr:SfFontButton
+                            x:Name="editTextBackButton"
+                            Grid.Column="8"
+                            BackgroundColor="Transparent"
+                            Clicked="EditTextBackButton_Clicked"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Select}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand">
+                            <cr:SfFontButton.Behaviors>
+                                <cr:EventToCommandBehavior Command="{Binding EditTextBackButtonCommand}" EventName="Clicked" />
+                                <cr:EventToCommandBehavior
+                                    Command="{Binding AnnotationModeCommand, Source={x:Reference Name=pdfViewerControl}}"
+                                    CommandParameter="None"
+                                    EventName="Clicked" />
+                            </cr:SfFontButton.Behaviors>
+                        </cr:SfFontButton>
+                    </Grid>
+                </Grid>
+
+
+
+                <Grid
+                    x:Name="editInkBar"
+                    Grid.Row="0"
+                    BackgroundColor="#E9E9E9"
+                    HorizontalOptions="Fill"
+                    IsVisible="{Binding IsEditInkBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="2" />
+                            <ColumnDefinition Width="15*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="2" />
+                            <ColumnDefinition Width="0.6*" />
+                        </Grid.ColumnDefinitions>
+                        <cr:SfFontButton
+                            x:Name="editInkAnnotationButton"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            InputTransparent="true"
+                            Text="{x:Static cr:FontMappingHelper.Ink}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <Grid Grid.Column="2" BackgroundColor="LightGray" />
+                        <cr:SfFontButton
+                            x:Name="inkThicknessEditButton"
+                            Grid.Column="4"
+                            BackgroundColor="Transparent"
+                            Clicked="ThicknessButton_Clicked"
+                            Command="{Binding InkThicknessCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Thickness}"
+                            TextColor="{Binding InkDeleteColor}"
+                            VerticalOptions="CenterAndExpand" />
+
+                        <cr:SfFontButton
+                            x:Name="changeInkColorButton"
+                            Grid.Column="6"
+                            BackgroundColor="{Binding InkDeleteColor}"
+                            Clicked="ShapeAnnotationColorButton_Clicked"
+                            Command="{Binding ColorButtonClickedCommand}"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <Grid Grid.Column="8" BackgroundColor="LightGray" />
+                        <cr:SfFontButton
+                            x:Name="deleteInkButton"
+                            Grid.Column="9"
+                            BackgroundColor="Transparent"
+                            Clicked="InkDeleteButton_Clicked"
+                            Command="{Binding DeleteCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Delete}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+
+                    </Grid>
+                </Grid>
+
+                <Grid
+                    x:Name="editRectangleBar"
+                    Grid.Row="0"
+                    BackgroundColor="#E9E9E9"
+                    HorizontalOptions="Fill"
+                    IsVisible="{Binding IsEditRectangleAnnotationBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="2" />
+                            <ColumnDefinition Width="15*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="2" />
+                            <ColumnDefinition Width="0.6*" />
+                        </Grid.ColumnDefinitions>
+                        <cr:SfFontButton
+                            x:Name="editRectangleAnnotationButton"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            InputTransparent="true"
+                            Text="{x:Static cr:FontMappingHelper.Rectangle}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <Grid Grid.Column="2" BackgroundColor="LightGray" />
+                        <cr:SfFontButton
+                            x:Name="rectangleEditThicknessButton"
+                            Grid.Column="4"
+                            BackgroundColor="Transparent"
+                            Clicked="ThicknessButton_Clicked"
+                            Command="{Binding RectangleThicknessCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="30"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Thickness}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <cr:SfFontButton
+                            x:Name="rectangleEditColorButton"
+                            Grid.Column="6"
+                            BackgroundColor="{Binding RectangleDeleteColor}"
+                            Clicked="ShapeAnnotationColorButton_Clicked"
+                            Command="{Binding ColorButtonClickedCommand}"
+                            HeightRequest="25"
+                            HorizontalOptions="CenterAndExpand"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="25" />
+                        <Grid Grid.Column="8" BackgroundColor="LightGray" />
+                        <cr:SfFontButton
+                            x:Name="rectangledeleteButton"
+                            Grid.Column="9"
+                            BackgroundColor="Transparent"
+                            Clicked="ShapeDeleteButton_Clicked"
+                            Command="{Binding RectangleDeleteCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="30"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Delete}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                    </Grid>
+                </Grid>
+
+                <Grid
+                    x:Name="editCircleBar"
+                    Grid.Row="0"
+                    BackgroundColor="#E9E9E9"
+                    HorizontalOptions="Fill"
+                    IsVisible="{Binding IsEditCircleAnnotationBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="2" />
+                            <ColumnDefinition Width="15*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="2" />
+                            <ColumnDefinition Width="0.6*" />
+                        </Grid.ColumnDefinitions>
+                        <cr:SfFontButton
+                            x:Name="editCircleAnnotationButton"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            InputTransparent="true"
+                            Text="{x:Static cr:FontMappingHelper.Circle}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <Grid Grid.Column="2" BackgroundColor="LightGray" />
+                        <cr:SfFontButton
+                            x:Name="circleEditThicknessButton"
+                            Grid.Column="4"
+                            BackgroundColor="Transparent"
+                            Clicked="ThicknessButton_Clicked"
+                            Command="{Binding LineThicknessCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="30"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Thickness}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <cr:SfFontButton
+                            x:Name="circleEditColorButton"
+                            Grid.Column="6"
+                            BackgroundColor="{Binding CircleDeleteColor}"
+                            Clicked="ShapeAnnotationColorButton_Clicked"
+                            Command="{Binding ColorButtonClickedCommand}"
+                            HeightRequest="25"
+                            HorizontalOptions="CenterAndExpand"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="25" />
+                        <Grid Grid.Column="8" BackgroundColor="LightGray" />
+                        <cr:SfFontButton
+                            x:Name="circleDeleteButton"
+                            Grid.Column="9"
+                            BackgroundColor="Transparent"
+                            Clicked="ShapeDeleteButton_Clicked"
+                            Command="{Binding CircleDeleteCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="30"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Delete}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                    </Grid>
+                </Grid>
+
+                <Grid
+                    x:Name="editLineBar"
+                    Grid.Row="0"
+                    BackgroundColor="#E9E9E9"
+                    HorizontalOptions="Fill"
+                    IsVisible="{Binding IsEditLineAnnotationBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="2" />
+                            <ColumnDefinition Width="15*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="2" />
+                            <ColumnDefinition Width="0.6*" />
+                        </Grid.ColumnDefinitions>
+                        <cr:SfFontButton
+                            x:Name="editLineAnnotationButton"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            InputTransparent="true"
+                            Text="{x:Static cr:FontMappingHelper.Circle}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <Grid Grid.Column="2" BackgroundColor="LightGray" />
+                        <cr:SfFontButton
+                            x:Name="lineEditThicknessButton"
+                            Grid.Column="4"
+                            BackgroundColor="Transparent"
+                            Clicked="ThicknessButton_Clicked"
+                            Command="{Binding LineThicknessCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="30"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Thickness}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <cr:SfFontButton
+                            x:Name="lineEditColorButton"
+                            Grid.Column="6"
+                            BackgroundColor="{Binding LineDeleteColor}"
+                            Clicked="ShapeAnnotationColorButton_Clicked"
+                            Command="{Binding ColorButtonClickedCommand}"
+                            HeightRequest="25"
+                            HorizontalOptions="CenterAndExpand"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="25" />
+                        <Grid Grid.Column="8" BackgroundColor="LightGray" />
+                        <cr:SfFontButton
+                            x:Name="lineDeleteButton"
+                            Grid.Column="9"
+                            BackgroundColor="Transparent"
+                            Clicked="ShapeDeleteButton_Clicked"
+                            Command="{Binding LineDeleteCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="30"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Delete}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                    </Grid>
+                </Grid>
+
+
+                <Grid
+                    x:Name="editPolygonBar"
+                    Grid.Row="0"
+                    BackgroundColor="#E9E9E9"
+                    HorizontalOptions="Fill"
+                    IsVisible="{Binding IsEditPolygonAnnotationBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="2" />
+                            <ColumnDefinition Width="15*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="2" />
+                            <ColumnDefinition Width="0.6*" />
+                        </Grid.ColumnDefinitions>
+                        <cr:SfFontButton
+                            x:Name="editPolygonAnnotationButton"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            InputTransparent="true"
+                            Text="{x:Static cr:FontMappingHelper.Polygon}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <Grid Grid.Column="2" BackgroundColor="LightGray" />
+                        <cr:SfFontButton
+                            x:Name="polygonEditThicknessButton"
+                            Grid.Column="4"
+                            BackgroundColor="Transparent"
+                            Clicked="ThicknessButton_Clicked"
+                            Command="{Binding PolygonThicknessCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="30"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Thickness}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <cr:SfFontButton
+                            x:Name="polygonEditColorButton"
+                            Grid.Column="6"
+                            BackgroundColor="{Binding PolygonDeleteColor}"
+                            Clicked="ShapeAnnotationColorButton_Clicked"
+                            Command="{Binding ColorButtonClickedCommand}"
+                            HeightRequest="25"
+                            HorizontalOptions="CenterAndExpand"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="25" />
+                        <Grid Grid.Column="8" BackgroundColor="LightGray" />
+                        <cr:SfFontButton
+                            x:Name="polygonDeleteButton"
+                            Grid.Column="9"
+                            BackgroundColor="Transparent"
+                            Clicked="ShapeDeleteButton_Clicked"
+                            Command="{Binding PolygonDeleteCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="30"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Delete}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                    </Grid>
+                </Grid>
+
+                <Grid
+                    x:Name="editCloudBar"
+                    Grid.Row="0"
+                    BackgroundColor="#E9E9E9"
+                    HorizontalOptions="Fill"
+                    IsVisible="{Binding IsEditCloudAnnotationBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="2" />
+                            <ColumnDefinition Width="15*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="2" />
+                            <ColumnDefinition Width="0.6*" />
+                        </Grid.ColumnDefinitions>
+                        <cr:SfFontButton
+                            x:Name="editCloudAnnotationButton"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.CloudFont}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            InputTransparent="true"
+                            Text="{x:Static cr:FontMappingHelper.Cloud}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <Grid Grid.Column="2" BackgroundColor="LightGray" />
+                        <cr:SfFontButton
+                            x:Name="cloudEditThicknessButton"
+                            Grid.Column="4"
+                            BackgroundColor="Transparent"
+                            Clicked="ThicknessButton_Clicked"
+                            Command="{Binding CloudThicknessCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="30"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Thickness}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <cr:SfFontButton
+                            x:Name="cloudEditColorButton"
+                            Grid.Column="6"
+                            BackgroundColor="{Binding CloudDeleteColor}"
+                            Clicked="ShapeAnnotationColorButton_Clicked"
+                            Command="{Binding ColorButtonClickedCommand}"
+                            HeightRequest="25"
+                            HorizontalOptions="CenterAndExpand"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="25" />
+                        <Grid Grid.Column="8" BackgroundColor="LightGray" />
+                        <cr:SfFontButton
+                            x:Name="cloudDeleteButton"
+                            Grid.Column="9"
+                            BackgroundColor="Transparent"
+                            Clicked="ShapeDeleteButton_Clicked"
+                            Command="{Binding CloudDeleteCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="30"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Delete}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                    </Grid>
+                </Grid>
+
+                <Grid
+                    x:Name="editFreeTextAnnotationBar"
+                    Grid.Row="0"
+                    BackgroundColor="#E9E9E9"
+                    HorizontalOptions="Fill"
+                    IsVisible="{Binding IsEditFreeTextAnnotationBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="2" />
+                            <ColumnDefinition Width="15*" />
+                            <ColumnDefinition Width="0.6*" />
+
+                            <ColumnDefinition Width="0.6*" />
+
+                            <ColumnDefinition Width="0.6*" />
+
+                            <ColumnDefinition Width="2" />
+                            <ColumnDefinition Width="0.6*" />
+                        </Grid.ColumnDefinitions>
+                        <cr:SfFontButton
+                            x:Name="editFreeTextAnnotationButton"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            InputTransparent="true"
+                            Text="{x:Static cr:FontMappingHelper.EditText}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <Grid Grid.Column="2" BackgroundColor="LightGray" />
+                        <cr:SfFontButton
+                            x:Name="freeTextEditButton"
+                            Grid.Column="4"
+                            BackgroundColor="Transparent"
+                            Clicked="EditTextButton_Clicked"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="30"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Edit}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <cr:SfFontButton
+                            x:Name="EditFreeTextFontSizeButton"
+                            Grid.Column="5"
+                            BackgroundColor="Transparent"
+                            Command="{Binding EditTextFontSizeCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.EditTextFontFamily}"
+                            FontSize="30"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.FontSize}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <cr:SfFontButton
+                            x:Name="EditTextColorButton"
+                            Grid.Column="6"
+                            BackgroundColor="{Binding EditTextDeleteColor}"
+                            Command="{Binding ColorButtonClickedCommand}"
+                            HeightRequest="25"
+                            HorizontalOptions="CenterAndExpand"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="25" />
+                        <Grid Grid.Column="7" BackgroundColor="LightGray" />
+                        <cr:SfFontButton
+                            x:Name="EditTextDeleteButton"
+                            Grid.Column="8"
+                            BackgroundColor="Transparent"
+                            Clicked="EditTextDeleteButton_Clicked"
+                            Command="{Binding EditTextDeleteCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="30"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Delete}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                    </Grid>
+                </Grid>
+
+
+                <Grid
+                    x:Name="secondaryAnnotationBar"
+                    Grid.Row="0"
+                    BackgroundColor="#E9E9E9"
+                    HorizontalOptions="Fill"
+                    IsVisible="{Binding IsSecondaryAnnotationBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="Fill">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <cr:SfFontButton
+                            x:Name="textMarkupBackButton"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.SearchBack}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand">
+                            <cr:SfFontButton.Behaviors>
+                                <cr:EventToCommandBehavior Command="{Binding TextMarkupBackCommand}" EventName="Clicked" />
+                            </cr:SfFontButton.Behaviors>
+                        </cr:SfFontButton>
+
+                        <cr:SfFontButton
+                            x:Name="highlightButton"
+                            Grid.Column="3"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Highlight}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand">
+                            <cr:SfFontButton.Behaviors>
+                                <cr:EventToCommandBehavior Command="{Binding HighlightCommand}" EventName="Clicked" />
+                                <cr:EventToCommandBehavior
+                                    Command="{Binding AnnotationModeCommand, Source={x:Reference Name=pdfViewerControl}}"
+                                    CommandParameter="Highlight"
+                                    EventName="Clicked" />
+                            </cr:SfFontButton.Behaviors>
+                        </cr:SfFontButton>
+
+                        <cr:SfFontButton
+                            x:Name="underlineButton"
+                            Grid.Column="5"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Underline}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand">
+                            <cr:SfFontButton.Behaviors>
+                                <cr:EventToCommandBehavior Command="{Binding UnderlineCommand}" EventName="Clicked" />
+                                <cr:EventToCommandBehavior
+                                    Command="{Binding AnnotationModeCommand, Source={x:Reference Name=pdfViewerControl}}"
+                                    CommandParameter="Underline"
+                                    EventName="Clicked" />
+                            </cr:SfFontButton.Behaviors>
+                        </cr:SfFontButton>
+
+                        <cr:SfFontButton
+                            x:Name="strikeThroughButton"
+                            Grid.Column="7"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.StrikeThrough}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand">
+                            <cr:SfFontButton.Behaviors>
+                                <cr:EventToCommandBehavior Command="{Binding StrikeThroughCommand}" EventName="Clicked" />
+                                <cr:EventToCommandBehavior
+                                    Command="{Binding AnnotationModeCommand, Source={x:Reference Name=pdfViewerControl}}"
+                                    CommandParameter="Strikethrough"
+                                    EventName="Clicked" />
+                            </cr:SfFontButton.Behaviors>
+                        </cr:SfFontButton>
+                    </Grid>
+                </Grid>
+
+                <Grid
+                    x:Name="mainAnnotationBar"
+                    Grid.Row="0"
+                    BackgroundColor="#E9E9E9"
+                    HorizontalOptions="Fill"
+                    IsVisible="{Binding IsMainAnnotationBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="Fill">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <cr:SfFontButton
+                            x:Name="textMarkupButton"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.TextMarkup}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand">
+                            <cr:SfFontButton.Behaviors>
+                                <cr:EventToCommandBehavior Command="{Binding TextMarkupCommand}" EventName="Clicked" />
+                            </cr:SfFontButton.Behaviors>
+                        </cr:SfFontButton>
+
+                        <cr:SfFontButton
+                            x:Name="inkButton"
+                            Grid.Column="3"
+                            BackgroundColor="Transparent"
+                            Clicked="InkButton_Clicked"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Ink}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand">
+                            <cr:SfFontButton.Behaviors>
+                                <cr:EventToCommandBehavior Command="{Binding InkCommand}" EventName="Clicked" />
+                            </cr:SfFontButton.Behaviors>
+                        </cr:SfFontButton>
+
+                        <cr:SfFontButton
+                            x:Name="shapeButton"
+                            Grid.Column="5"
+                            BackgroundColor="Transparent"
+                            Clicked="Shape_Clicked"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Shape}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand">
+                            <cr:SfFontButton.Behaviors>
+                                <cr:EventToCommandBehavior Command="{Binding ShapeCommand}" EventName="Clicked" />
+                            </cr:SfFontButton.Behaviors>
+                        </cr:SfFontButton>
+
+                        <cr:SfFontButton
+                            x:Name="editTextButton"
+                            Grid.Column="7"
+                            BackgroundColor="Transparent"
+                            Clicked="EditText_Clicked"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.EditText}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand">
+                            <cr:SfFontButton.Behaviors>
+                                <cr:EventToCommandBehavior Command="{Binding EditTextCommand}" EventName="Clicked" />
+                            </cr:SfFontButton.Behaviors>
+                        </cr:SfFontButton>
+
+                        <cr:SfFontButton
+                            x:Name="signaturebutton"
+                            Grid.Column="9"
+                            BackgroundColor="Transparent"
+                            Clicked="Signature_Clicked"
+                            FontFamily="{x:Static cr:FontMappingHelper.SignatureFont}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.SignatureFont}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+
+                        <cr:SfFontButton
+                            x:Name="stampButton"
+                            Grid.Column="11"
+                            BackgroundColor="Transparent"
+                            Clicked="StampButton_Clicked"
+                            FontFamily="{x:Static cr:FontMappingHelper.StampFont}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Stamp}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+
+                    </Grid>
+                </Grid>
+
+
+                <Grid
+                    x:Name="shapeAnnotationBar"
+                    Grid.Row="0"
+                    BackgroundColor="#E9E9E9"
+                    HorizontalOptions="Fill"
+                    IsVisible="{Binding IsShapeAnnotationBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="Fill">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="2" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.5*" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.5*" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.5*" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.5*" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.5*" />
+                            <ColumnDefinition Width="15*" />
+                        </Grid.ColumnDefinitions>
+
+                        <cr:SfFontButton
+                            x:Name="shapeAnnotationBackButton"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.SearchBack}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand">
+                            <cr:SfFontButton.Behaviors>
+                                <cr:EventToCommandBehavior Command="{Binding ShapeBackButtonCommand}" EventName="Clicked" />
+                            </cr:SfFontButton.Behaviors>
+                        </cr:SfFontButton>
+                        <Grid Grid.Column="2" BackgroundColor="LightGray" />
+                        <cr:SfFontButton
+                            x:Name="rectangleButton"
+                            Grid.Column="4"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Rectangle}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand">
+                            <cr:SfFontButton.Behaviors>
+                                <cr:EventToCommandBehavior Command="{Binding RectangleCommand}" EventName="Clicked" />
+                                <cr:EventToCommandBehavior
+                                    Command="{Binding AnnotationModeCommand, Source={x:Reference Name=pdfViewerControl}}"
+                                    CommandParameter="Rectangle"
+                                    EventName="Clicked" />
+                            </cr:SfFontButton.Behaviors>
+                        </cr:SfFontButton>
+
+                        <cr:SfFontButton
+                            x:Name="circleButton"
+                            Grid.Column="6"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Circle}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand">
+                            <cr:SfFontButton.Behaviors>
+                                <cr:EventToCommandBehavior Command="{Binding CircleCommand}" EventName="Clicked" />
+                                <cr:EventToCommandBehavior
+                                    Command="{Binding AnnotationModeCommand, Source={x:Reference Name=pdfViewerControl}}"
+                                    CommandParameter="Circle"
+                                    EventName="Clicked" />
+                            </cr:SfFontButton.Behaviors>
+                        </cr:SfFontButton>
+
+                        <cr:SfFontButton
+                            x:Name="lineButton"
+                            Grid.Column="8"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Line}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand">
+                            <cr:SfFontButton.Behaviors>
+                                <cr:EventToCommandBehavior Command="{Binding LineCommand}" EventName="Clicked" />
+                                <cr:EventToCommandBehavior
+                                    Command="{Binding AnnotationModeCommand, Source={x:Reference Name=pdfViewerControl}}"
+                                    CommandParameter="Line"
+                                    EventName="Clicked" />
+                            </cr:SfFontButton.Behaviors>
+                        </cr:SfFontButton>
+
+                        <cr:SfFontButton
+                            x:Name="polygonButton"
+                            Grid.Column="10"
+                            BackgroundColor="Transparent"
+                            Clicked="polygonButton_Clicked"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Polygon}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand">
+                            <cr:SfFontButton.Behaviors>
+                                <cr:EventToCommandBehavior Command="{Binding PolygonCommand}" EventName="Clicked" />
+                                <cr:EventToCommandBehavior
+                                    Command="{Binding AnnotationModeCommand, Source={x:Reference Name=pdfViewerControl}}"
+                                    CommandParameter="Polygon"
+                                    EventName="Clicked" />
+                            </cr:SfFontButton.Behaviors>
+                        </cr:SfFontButton>
+
+                        <cr:SfFontButton
+                            x:Name="cloudButton"
+                            Grid.Column="12"
+                            BackgroundColor="Transparent"
+                            Clicked="cloudButton_Clicked"
+                            FontFamily="{x:Static cr:FontMappingHelper.CloudFont}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Cloud}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand">
+                            <cr:SfFontButton.Behaviors>
+                                <cr:EventToCommandBehavior Command="{Binding CloudCommand}" EventName="Clicked" />
+                                <cr:EventToCommandBehavior
+                                    Command="{Binding AnnotationModeCommand, Source={x:Reference Name=pdfViewerControl}}"
+                                    CommandParameter="Polygon"
+                                    EventName="Clicked" />
+                            </cr:SfFontButton.Behaviors>
+                        </cr:SfFontButton>
+
+                    </Grid>
+                </Grid>
+
+                <Grid
+                    x:Name="rectangleAnnotationBar"
+                    Grid.Row="0"
+                    BackgroundColor="#E9E9E9"
+                    HorizontalOptions="Fill"
+                    IsVisible="{Binding IsRectangleBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="2" />
+                            <ColumnDefinition Width="15*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.6*" />
+                        </Grid.ColumnDefinitions>
+
+
+                        <cr:SfFontButton
+                            x:Name="rectangleAnnotationButton"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            InputTransparent="true"
+                            Text="{x:Static cr:FontMappingHelper.Rectangle}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <Grid Grid.Column="2" BackgroundColor="LightGray" />
+                        <cr:SfFontButton
+                            x:Name="rectangleThicknessEditButton"
+                            Grid.Column="4"
+                            BackgroundColor="Transparent"
+                            Clicked="ThicknessButton_Clicked"
+                            Command="{Binding RectangleThicknessCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Thickness}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <cr:SfFontButton
+                            x:Name="rectangleColorButton"
+                            Grid.Column="6"
+                            BackgroundColor="{Binding RectangleStrokeColor}"
+                            Command="{Binding ColorButtonClickedCommand}"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <cr:SfFontButton
+                            x:Name="rectangleBackButton"
+                            Grid.Column="8"
+                            BackgroundColor="Transparent"
+                            Clicked="RectangleBackButton_Clicked"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Select}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand">
+                            <cr:SfFontButton.Behaviors>
+                                <cr:EventToCommandBehavior Command="{Binding RectangleBackButtonCommand}" EventName="Clicked" />
+                                <cr:EventToCommandBehavior
+                                    Command="{Binding AnnotationModeCommand, Source={x:Reference Name=pdfViewerControl}}"
+                                    CommandParameter="None"
+                                    EventName="Clicked" />
+                            </cr:SfFontButton.Behaviors>
+                        </cr:SfFontButton>
+                    </Grid>
+                </Grid>
+
+                <Grid
+                    x:Name="circleAnnotationBar"
+                    Grid.Row="0"
+                    BackgroundColor="#E9E9E9"
+                    HorizontalOptions="Fill"
+                    IsVisible="{Binding IsCircleBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="2" />
+                            <ColumnDefinition Width="15*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.6*" />
+                        </Grid.ColumnDefinitions>
+
+
+                        <cr:SfFontButton
+                            x:Name="circleAnnotationButton"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            InputTransparent="true"
+                            Text="{x:Static cr:FontMappingHelper.Circle}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <Grid Grid.Column="2" BackgroundColor="LightGray" />
+                        <cr:SfFontButton
+                            x:Name="circleThicknessEditButton"
+                            Grid.Column="4"
+                            BackgroundColor="Transparent"
+                            Clicked="ThicknessButton_Clicked"
+                            Command="{Binding CircleThicknessCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Thickness}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <cr:SfFontButton
+                            x:Name="circleColorButton"
+                            Grid.Column="6"
+                            BackgroundColor="{Binding CircleStrokeColor}"
+                            Command="{Binding ColorButtonClickedCommand}"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <cr:SfFontButton
+                            x:Name="circleBackButton"
+                            Grid.Column="8"
+                            BackgroundColor="Transparent"
+                            Clicked="CircleBackButton_Clicked"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Select}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand">
+                            <cr:SfFontButton.Behaviors>
+                                <cr:EventToCommandBehavior Command="{Binding CircleBackButtonCommand}" EventName="Clicked" />
+                                <cr:EventToCommandBehavior
+                                    Command="{Binding AnnotationModeCommand, Source={x:Reference Name=pdfViewerControl}}"
+                                    CommandParameter="None"
+                                    EventName="Clicked" />
+                            </cr:SfFontButton.Behaviors>
+                        </cr:SfFontButton>
+                    </Grid>
+                </Grid>
+
+                <Grid
+                    x:Name="lineAnnotationBar"
+                    Grid.Row="0"
+                    BackgroundColor="#E9E9E9"
+                    HorizontalOptions="Fill"
+                    IsVisible="{Binding IsLineBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="2" />
+                            <ColumnDefinition Width="15*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.6*" />
+                        </Grid.ColumnDefinitions>
+
+
+                        <cr:SfFontButton
+                            x:Name="lineAnnotationButton"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            InputTransparent="true"
+                            Text="{x:Static cr:FontMappingHelper.Line}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <Grid Grid.Column="2" BackgroundColor="LightGray" />
+                        <cr:SfFontButton
+                            x:Name="lineThicknessEditButton"
+                            Grid.Column="4"
+                            BackgroundColor="Transparent"
+                            Clicked="ThicknessButton_Clicked"
+                            Command="{Binding LineThicknessCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Thickness}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <cr:SfFontButton
+                            x:Name="lineColorButton"
+                            Grid.Column="6"
+                            BackgroundColor="{Binding LineStrokeColor}"
+                            Command="{Binding ColorButtonClickedCommand}"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <cr:SfFontButton
+                            x:Name="lineBackButton"
+                            Grid.Column="8"
+                            BackgroundColor="Transparent"
+                            Clicked="LineBackButton_Clicked"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Select}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand">
+                            <cr:SfFontButton.Behaviors>
+                                <cr:EventToCommandBehavior Command="{Binding LineBackButtonCommand}" EventName="Clicked" />
+                                <cr:EventToCommandBehavior
+                                    Command="{Binding AnnotationModeCommand, Source={x:Reference Name=pdfViewerControl}}"
+                                    CommandParameter="None"
+                                    EventName="Clicked" />
+                            </cr:SfFontButton.Behaviors>
+                        </cr:SfFontButton>
+                    </Grid>
+                </Grid>
+
+
+                <Grid
+                    x:Name="PolygonAnnotationBar"
+                    Grid.Row="0"
+                    BackgroundColor="#E9E9E9"
+                    HorizontalOptions="Fill"
+                    IsVisible="{Binding IsPolygonBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="2" />
+                            <ColumnDefinition Width="15*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.6*" />
+                        </Grid.ColumnDefinitions>
+
+
+                        <cr:SfFontButton
+                            x:Name="polygonAnnotationButton"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            InputTransparent="true"
+                            Text="{x:Static cr:FontMappingHelper.Polygon}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <Grid Grid.Column="2" BackgroundColor="LightGray" />
+                        <cr:SfFontButton
+                            x:Name="polygonThicknessEditButton"
+                            Grid.Column="4"
+                            BackgroundColor="Transparent"
+                            Clicked="ThicknessButton_Clicked"
+                            Command="{Binding PolygonThicknessCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Thickness}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <cr:SfFontButton
+                            x:Name="polygonColorButton"
+                            Grid.Column="6"
+                            BackgroundColor="{Binding PolygonStrokeColor}"
+                            Command="{Binding ColorButtonClickedCommand}"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <cr:SfFontButton
+                            x:Name="polygonBackButton"
+                            Grid.Column="8"
+                            BackgroundColor="Transparent"
+                            Clicked="PolygonBackButton_Clicked"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Select}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand">
+                            <cr:SfFontButton.Behaviors>
+                                <cr:EventToCommandBehavior Command="{Binding PolygonBackButtonCommand}" EventName="Clicked" />
+                                <cr:EventToCommandBehavior
+                                    Command="{Binding AnnotationModeCommand, Source={x:Reference Name=pdfViewerControl}}"
+                                    CommandParameter="None"
+                                    EventName="Clicked" />
+                            </cr:SfFontButton.Behaviors>
+                        </cr:SfFontButton>
+                    </Grid>
+                </Grid>
+
+                <Grid
+                    x:Name="cloudAnnotationBar"
+                    Grid.Row="0"
+                    BackgroundColor="#E9E9E9"
+                    HorizontalOptions="Fill"
+                    IsVisible="{Binding IsCloudBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="2" />
+                            <ColumnDefinition Width="15*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.6*" />
+                        </Grid.ColumnDefinitions>
+
+
+                        <cr:SfFontButton
+                            x:Name="cloudAnnotationButton"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.CloudFont}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            InputTransparent="true"
+                            Text="{x:Static cr:FontMappingHelper.Cloud}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <Grid Grid.Column="2" BackgroundColor="LightGray" />
+                        <cr:SfFontButton
+                            x:Name="cloudThicknessEditButton"
+                            Grid.Column="4"
+                            BackgroundColor="Transparent"
+                            Clicked="ThicknessButton_Clicked"
+                            Command="{Binding CloudThicknessCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Thickness}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <cr:SfFontButton
+                            x:Name="cloudColorButton"
+                            Grid.Column="6"
+                            BackgroundColor="{Binding CloudStrokeColor}"
+                            Command="{Binding ColorButtonClickedCommand}"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <cr:SfFontButton
+                            x:Name="cloudBackButton"
+                            Grid.Column="8"
+                            BackgroundColor="Transparent"
+                            Clicked="CloudBackButton_Clicked"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Select}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand">
+                            <cr:SfFontButton.Behaviors>
+                                <cr:EventToCommandBehavior Command="{Binding CloudBackButtonCommand}" EventName="Clicked" />
+                                <cr:EventToCommandBehavior
+                                    Command="{Binding AnnotationModeCommand, Source={x:Reference Name=pdfViewerControl}}"
+                                    CommandParameter="None"
+                                    EventName="Clicked" />
+                            </cr:SfFontButton.Behaviors>
+                        </cr:SfFontButton>
+                    </Grid>
+                </Grid>
+
+
+                <Grid
+                    x:Name="inkBar"
+                    Grid.Row="0"
+                    BackgroundColor="#E9E9E9"
+                    HorizontalOptions="Fill"
+                    IsVisible="{Binding IsInkBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="Fill">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="2" />
+                            <ColumnDefinition Width="15*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.6*" />
+                        </Grid.ColumnDefinitions>
+
+                        <cr:SfFontButton
+                            x:Name="inkBackButton"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            Clicked="InkBackButton_Clicked"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.SearchBack}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand">
+                            <cr:SfFontButton.Behaviors>
+                                <cr:EventToCommandBehavior Command="{Binding InkBackButtonCommand}" EventName="Clicked" />
+                            </cr:SfFontButton.Behaviors>
+                        </cr:SfFontButton>
+                        <Grid Grid.Column="2" BackgroundColor="LightGray" />
+                        <cr:SfFontButton
+                            x:Name="inkAnnotationButton"
+                            Grid.Column="4"
+                            BackgroundColor="Transparent"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            InputTransparent="true"
+                            Text="{x:Static cr:FontMappingHelper.Ink}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <cr:SfFontButton
+                            x:Name="thicknessButton"
+                            Grid.Column="6"
+                            BackgroundColor="Transparent"
+                            Clicked="ThicknessButton_Clicked"
+                            Command="{Binding InkThicknessCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Thickness}"
+                            TextColor="#0076FF"
+                            VerticalOptions="CenterAndExpand" />
+                        <cr:SfFontButton
+                            x:Name="inkColorButton"
+                            Grid.Column="8"
+                            BackgroundColor="{Binding InkColor}"
+                            Command="{Binding ColorButtonClickedCommand}"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                    </Grid>
+                </Grid>
+
+                <Grid
+                    x:Name="colorBar"
+                    Grid.Row="1"
+                    BackgroundColor="#E9E9E9"
+                    ColumnSpacing="0"
+                    HeightRequest="50"
+                    HorizontalOptions="End"
+                    IsVisible="{Binding IsColorBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="StartAndExpand"
+                    WidthRequest="500">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="1198*" />
+                    </Grid.ColumnDefinitions>
+                    <BoxView
+                        Grid.Row="0"
+                        Grid.RowSpan="2"
+                        Grid.Column="0"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <BoxView
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.3*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="0.27*" />
+                        </Grid.ColumnDefinitions>
+
+                        <cr:SfFontButton
+                            x:Name="cyanButton"
+                            Grid.Column="1"
+                            BackgroundColor="#00FFFF"
+                            Clicked="ColorButton_Clicked"
+                            Command="{Binding ColorCommand}"
+                            CommandParameter="Cyan"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <cr:SfFontButton
+                            x:Name="greenButton"
+                            Grid.Column="2"
+                            BackgroundColor="#008000"
+                            Clicked="ColorButton_Clicked"
+                            Command="{Binding ColorCommand}"
+                            CommandParameter="Green"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <cr:SfFontButton
+                            x:Name="yellowButton"
+                            Grid.Column="3"
+                            BackgroundColor="#FFFF00"
+                            Clicked="ColorButton_Clicked"
+                            Command="{Binding ColorCommand}"
+                            CommandParameter="Yellow"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <cr:SfFontButton
+                            x:Name="magentaButton"
+                            Grid.Column="4"
+                            BackgroundColor="#FF00FF"
+                            Clicked="ColorButton_Clicked"
+                            Command="{Binding ColorCommand}"
+                            CommandParameter="Magenta"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <cr:SfFontButton
+                            x:Name="whiteButton"
+                            Grid.Column="5"
+                            BackgroundColor="#FFFFFF"
+                            Clicked="ColorButton_Clicked"
+                            Command="{Binding ColorCommand}"
+                            CommandParameter="White"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <cr:SfFontButton
+                            x:Name="blackButton"
+                            Grid.Column="6"
+                            BackgroundColor="#000000"
+                            Clicked="ColorButton_Clicked"
+                            Command="{Binding ColorCommand}"
+                            CommandParameter="Black"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <!--<cr:SfFontButton x:Name="opacityButton" FontSize="25" FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"  Text="{x:Static cr:FontMappingHelper.Transparent}" Grid.Column="7" BackgroundColor="Transparent" TextColor="{Binding OpacityButtonColor}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Command="{Binding OpacityButtonCommand}" Clicked="OpacityButton_Clicked"/>-->
+                    </Grid>
+                </Grid>
+
+                <Grid
+                    x:Name="shapeColorBar"
+                    Grid.Row="1"
+                    BackgroundColor="#E9E9E9"
+                    ColumnSpacing="0"
+                    HeightRequest="50"
+                    HorizontalOptions="End"
+                    IsVisible="{Binding IsShapeColorBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="StartAndExpand"
+                    WidthRequest="500">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="1198*" />
+                    </Grid.ColumnDefinitions>
+                    <BoxView
+                        Grid.Row="0"
+                        Grid.RowSpan="2"
+                        Grid.Column="0"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <BoxView
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.3*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="0.27*" />
+                        </Grid.ColumnDefinitions>
+
+                        <cr:SfFontButton
+                            x:Name="cyanShapeButton"
+                            Grid.Column="1"
+                            BackgroundColor="#00FFFF"
+                            Clicked="ColorButton_Clicked"
+                            Command="{Binding ColorCommand}"
+                            CommandParameter="Cyan"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <cr:SfFontButton
+                            x:Name="greenShapeButton"
+                            Grid.Column="2"
+                            BackgroundColor="#008000"
+                            Clicked="ColorButton_Clicked"
+                            Command="{Binding ColorCommand}"
+                            CommandParameter="Green"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <cr:SfFontButton
+                            x:Name="yellowShapeButton"
+                            Grid.Column="3"
+                            BackgroundColor="#FFFF00"
+                            Clicked="ColorButton_Clicked"
+                            Command="{Binding ColorCommand}"
+                            CommandParameter="Yellow"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <cr:SfFontButton
+                            x:Name="magentaShapeButton"
+                            Grid.Column="4"
+                            BackgroundColor="#FF00FF"
+                            Clicked="ColorButton_Clicked"
+                            Command="{Binding ColorCommand}"
+                            CommandParameter="Magenta"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <cr:SfFontButton
+                            x:Name="whiteShapeButton"
+                            Grid.Column="5"
+                            BackgroundColor="#FFFFFF"
+                            Clicked="ColorButton_Clicked"
+                            Command="{Binding ColorCommand}"
+                            CommandParameter="White"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <cr:SfFontButton
+                            x:Name="blackShapeButton"
+                            Grid.Column="6"
+                            BackgroundColor="#000000"
+                            Clicked="ColorButton_Clicked"
+                            Command="{Binding ColorCommand}"
+                            CommandParameter="Black"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <cr:SfFontButton
+                            x:Name="opacityShapeButton"
+                            Grid.Column="7"
+                            BackgroundColor="Transparent"
+                            Clicked="OpacityButton_Clicked"
+                            Command="{Binding OpacityButtonCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Transparent}"
+                            TextColor="{Binding OpacityButtonColor}"
+                            VerticalOptions="CenterAndExpand" />
+                    </Grid>
+                </Grid>
+
+
+                <Grid
+                    x:Name="inkColorBar"
+                    Grid.Row="1"
+                    BackgroundColor="#E9E9E9"
+                    ColumnSpacing="0"
+                    HeightRequest="50"
+                    HorizontalOptions="End"
+                    IsVisible="{Binding IsInkColorBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="StartAndExpand"
+                    WidthRequest="500">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="1198*" />
+                    </Grid.ColumnDefinitions>
+                    <BoxView
+                        Grid.Row="0"
+                        Grid.RowSpan="2"
+                        Grid.Column="0"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <BoxView
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.3*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="0.27*" />
+                        </Grid.ColumnDefinitions>
+
+                        <cr:SfFontButton
+                            x:Name="cyanInkButton"
+                            Grid.Column="1"
+                            BackgroundColor="#00FFFF"
+                            Clicked="ColorButton_Clicked"
+                            Command="{Binding ColorCommand}"
+                            CommandParameter="Cyan"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <cr:SfFontButton
+                            x:Name="greenInkButton"
+                            Grid.Column="2"
+                            BackgroundColor="#008000"
+                            Clicked="ColorButton_Clicked"
+                            Command="{Binding ColorCommand}"
+                            CommandParameter="Green"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <cr:SfFontButton
+                            x:Name="yellowInkButton"
+                            Grid.Column="3"
+                            BackgroundColor="#FFFF00"
+                            Clicked="ColorButton_Clicked"
+                            Command="{Binding ColorCommand}"
+                            CommandParameter="Yellow"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <cr:SfFontButton
+                            x:Name="magentaInkButton"
+                            Grid.Column="4"
+                            BackgroundColor="#FF00FF"
+                            Clicked="ColorButton_Clicked"
+                            Command="{Binding ColorCommand}"
+                            CommandParameter="Magenta"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <cr:SfFontButton
+                            x:Name="whiteInkButton"
+                            Grid.Column="5"
+                            BackgroundColor="#FFFFFF"
+                            Clicked="ColorButton_Clicked"
+                            Command="{Binding ColorCommand}"
+                            CommandParameter="White"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <cr:SfFontButton
+                            x:Name="blackInkButton"
+                            Grid.Column="6"
+                            BackgroundColor="#000000"
+                            Clicked="ColorButton_Clicked"
+                            Command="{Binding ColorCommand}"
+                            CommandParameter="Black"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+                        <cr:SfFontButton
+                            x:Name="inkOpacityButton"
+                            Grid.Column="7"
+                            BackgroundColor="Transparent"
+                            Command="{Binding InkOpacityCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{x:Static cr:FontMappingHelper.Transparent}"
+                            TextColor="{Binding InkColor}"
+                            VerticalOptions="CenterAndExpand" />
+                        <cr:SfFontButton
+                            x:Name="inkOpacityButton1"
+                            Grid.Column="7"
+                            BackgroundColor="Transparent"
+                            Command="{Binding InkOpacityCommand}"
+                            FontFamily="{x:Static cr:FontMappingHelper.FontFamily}"
+                            FontSize="25"
+                            HorizontalOptions="CenterAndExpand"
+                            IsVisible="{Binding IsEditInkBarVisible}"
+                            Text="{x:Static cr:FontMappingHelper.Transparent}"
+                            TextColor="{Binding InkDeleteColor}"
+                            VerticalOptions="CenterAndExpand" />
+                    </Grid>
+                </Grid>
+
+
+                <Grid
+                    x:Name="thicknessBar"
+                    Grid.Row="1"
+                    BackgroundColor="#E9E9E9"
+                    ColumnSpacing="0"
+                    HeightRequest="50"
+                    HorizontalOptions="End"
+                    IsVisible="{Binding IsThicknessBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="StartAndExpand"
+                    WidthRequest="500">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10*" />
+                        <RowDefinition Height="0.1*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="200*" />
+                        <ColumnDefinition Width="1158*" />
+                        <ColumnDefinition Width="20*" />
+                    </Grid.ColumnDefinitions>
+                    <BoxView
+                        Grid.Row="0"
+                        Grid.RowSpan="2"
+                        Grid.Column="0"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <BoxView
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <BoxView
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20*" />
+                            <ColumnDefinition Width="4*" />
+                        </Grid.ColumnDefinitions>
+                        <Slider
+                            x:Name="thicknessSlider"
+                            Grid.Column="0"
+                            Maximum="10"
+                            Minimum="1" />
+                        <Label
+                            x:Name="sliderValue"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            HeightRequest="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="5"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="25" />
+                    </Grid>
+                </Grid>
+
+                <Grid
+                    x:Name="fontSizeSliderBar"
+                    Grid.Row="1"
+                    BackgroundColor="#E9E9E9"
+                    ColumnSpacing="0"
+                    HeightRequest="100"
+                    HorizontalOptions="End"
+                    IsVisible="{Binding IsFontSizeSliderBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="StartAndExpand"
+                    WidthRequest="500">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10*" />
+                        <RowDefinition Height="0.1*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="1158*" />
+                        <ColumnDefinition Width="20*" />
+                    </Grid.ColumnDefinitions>
+                    <BoxView
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <BoxView
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <BoxView
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Margin="10,2,10,0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="2*" />
+                            <RowDefinition Height="2*" />
+                        </Grid.RowDefinitions>
+                        <range:SfRangeSlider
+                            x:Name="fontSizeSlider"
+                            Grid.Row="0"
+                            Maximum="10"
+                            Minimum="1" />
+                        <Grid
+                            Grid.Row="1"
+                            Margin="-1"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Label
+                                x:Name="fontsize"
+                                Grid.Column="0"
+                                BackgroundColor="Transparent"
+                                FontSize="12"
+                                HorizontalOptions="CenterAndExpand"
+                                Text="FontSize:"
+                                VerticalOptions="CenterAndExpand" />
+                            <Label
+                                x:Name="fontSizeSliderValue"
+                                Grid.Column="1"
+                                BackgroundColor="Transparent"
+                                FontSize="12"
+                                HorizontalOptions="CenterAndExpand"
+                                Text="5"
+                                VerticalOptions="CenterAndExpand" />
+                            <Label
+                                x:Name="points"
+                                Grid.Column="2"
+                                BackgroundColor="Transparent"
+                                FontSize="12"
+                                HorizontalOptions="CenterAndExpand"
+                                Text="pt"
+                                VerticalOptions="CenterAndExpand" />
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+                <Grid
+                    x:Name="opacityslider"
+                    Grid.Row="2"
+                    BackgroundColor="#E9E9E9"
+                    ColumnSpacing="0"
+                    HeightRequest="50"
+                    HorizontalOptions="End"
+                    IsVisible="{Binding IsOpacityBarVisible}"
+                    RowSpacing="0"
+                    VerticalOptions="StartAndExpand"
+                    WidthRequest="500">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="98*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="200*" />
+                        <ColumnDefinition Width="1158*" />
+                        <ColumnDefinition Width="20*" />
+                    </Grid.ColumnDefinitions>
+                    <BoxView
+                        Grid.Row="0"
+                        Grid.RowSpan="2"
+                        Grid.Column="0"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <BoxView
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <BoxView
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+                    <Grid
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20*" />
+                            <ColumnDefinition Width="5*" />
+                        </Grid.ColumnDefinitions>
+                        <Slider
+                            x:Name="opacitySlider"
+                            Grid.Column="0"
+                            Maximum="100"
+                            Minimum="0" />
+                        <Label
+                            x:Name="opacityValue"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            HeightRequest="25"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="100%"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="45" />
+                    </Grid>
+                </Grid>
+
+            </Grid>
+
+            <Grid
+                Grid.Row="1"
+                BackgroundColor="#E9E9E9"
+                HeightRequest="230"
+                HorizontalOptions="Start"
+                IsVisible="{Binding IsPickerVisible}"
+                VerticalOptions="Start"
+                WidthRequest="250">
+                <ListView
+                    ItemSelected="ListView_ItemSelected"
+                    ItemsSource="{Binding PdfDocumentCollection}"
+                    SelectedItem="{Binding SelectedItem}"
+                    SeparatorVisibility="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <cr:CustomViewCell SelectedBackgroundColor="#CCCCCC">
+                                <Grid Padding="12">
+                                    <Label
+                                        FontSize="16"
+                                        Text="{Binding FileName}"
+                                        TextColor="Black" />
+                                </Grid>
+                            </cr:CustomViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </Grid>
+    </local:SampleView.Content>
+</local:SampleView>

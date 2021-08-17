@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
+    x:Class="SampleBrowser.SfStepProgressBar.UserRegistration"
+    xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+    xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+    xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=netstandard"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <ContentView.Content>
+        <Grid RowSpacing="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid x:Name="StepperGrid" Grid.Row="0" Margin="0,20,0,0" BackgroundColor="White">
+                <progressBar:SfStepProgressBar x:Name="stepProgressBar" HorizontalOptions="Center" Padding="0,15,0,15">
+
+                    <progressBar:StepView PrimaryText="Account Setup" ProgressValue="100">
+                        <progressBar:StepView.ImageSource>
+                            <FontImageSource Glyph="&#xe70c;" x:Name="AccountIcon"
+                        Color="#007aff" 
+                        FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" 
+                                             />
+                        </progressBar:StepView.ImageSource>
+                    </progressBar:StepView>
+
+                    <progressBar:StepView PrimaryText="Security Questions" ProgressValue="100">
+                        <progressBar:StepView.ImageSource>
+                            <FontImageSource Glyph="&#xe75f;" x:Name="SecurityIcon"
+                        Color="#868686" 
+                        FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" 
+                        />
+                        </progressBar:StepView.ImageSource>
+                    </progressBar:StepView>
+
+                    <progressBar:StepView PrimaryText="Personal Details" ProgressValue="100">
+                        <progressBar:StepView.ImageSource>
+                            <FontImageSource Glyph="&#xe72a;"  x:Name="PersonalIcon"
+                        Color="#868686" 
+                        FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" 
+                         />
+                        </progressBar:StepView.ImageSource>
+                    </progressBar:StepView>
+
+                </progressBar:SfStepProgressBar>
+            </Grid>
+            <ContentView Grid.Row="1">
+                <ScrollView  Orientation="Vertical" IsClippedToBounds="True">
+                    <StackLayout>
+
+                        <StackLayout x:Name="AccountSetupPage" BackgroundColor="White" Margin="0,20,0,0" VerticalOptions="FillAndExpand">
+                            <Entry x:Name="EmailEntryField" TextChanged="EntryField_TextChanged" FontSize="12" Placeholder="Email" Margin="30,10,30,0"/>
+                            <Entry x:Name="PasswordEntryField" TextChanged="EntryField_TextChanged" FontSize="12" Placeholder="Password" IsPassword="True" Margin="30,10,30,0"/>
+                            <Entry x:Name="ConfirmPasswordField" TextChanged="EntryField_TextChanged" FontSize="12" Placeholder="Confirm Password" IsPassword="True" Margin="30,10,30,0"/>
+                            <Button x:Name="ProfilePageNextButton" IsEnabled="False" Text="Next" TextColor="White" Clicked="NextButton_Clicked" VerticalOptions="EndAndExpand"/>
+                        </StackLayout>
+
+                        <StackLayout x:Name="SecurityQuestionPage" BackgroundColor="White" VerticalOptions="FillAndExpand" IsVisible="false" Margin="0,20,0,0">
+                            <combobox:SfComboBox x:Name="comboBox1" Watermark="Security Question 1" Text="{Binding QuestionOne}" TextSize="12" DropDownTextSize="12" SelectionChanged="ComboBox1_SelectionChanged" Margin="30,10,30,0">
+                            </combobox:SfComboBox>
+                            <Entry x:Name="question1" Placeholder="Answer" IsEnabled="False" TextChanged="EntryField_TextChanged"  FontSize="12" Margin="30,10,30,0"/>
+                            <combobox:SfComboBox x:Name="comboBox2" Watermark="Security Question 2" Text="{Binding QuestionTwo}" TextSize="12" DropDownTextSize="12" SelectionChanged="ComboBox2_SelectionChanged" Margin="30,10,30,0">
+                            </combobox:SfComboBox>
+                            <Entry x:Name="question2" Placeholder="Answer" IsEnabled="False" TextChanged="EntryField_TextChanged"  FontSize="12" Margin="30,10,0,0"/>
+                            <Grid ColumnSpacing="0" VerticalOptions="EndAndExpand">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button x:Name="AccountsPagePreviousButton" Text="Previous" Grid.Column="0" BorderWidth="1" VerticalOptions="End" Clicked="PreviousButton_Clicked"/>
+                                <Button x:Name="AccountsPageNextButton" Text="Next" IsEnabled="False" TextColor="White" Grid.Column="1" VerticalOptions="End" Clicked="NextButton_Clicked"/>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout x:Name="ProfilePage" BackgroundColor="White" IsVisible="false" VerticalOptions="FillAndExpand" Margin="0,20,0,0">
+                            <Entry x:Name="NameEntryField" TextChanged="EntryField_TextChanged"  Placeholder="Name" Margin="30,10,30,0"/>
+                            <syncfusion:SfRadioGroup x:Name="radioGroup" Orientation="Horizontal" Margin="30,0,30,0" HeightRequest="50">
+                                <syncfusion:SfRadioButton x:Name="male" Text="Male" />
+                                <syncfusion:SfRadioButton x:Name="female" Text="Female" />
+                            </syncfusion:SfRadioGroup>
+                            <Entry x:Name="PhoneNumberEntryField" TextChanged="EntryField_TextChanged"  FontSize="12" Placeholder="Phone Number" Keyboard="Numeric" Margin="30,10,30,0"/>
+                            <Entry x:Name="DOBEntryField"  TextChanged="EntryField_TextChanged" FontSize="12" Placeholder="Date of Birth" Margin="30,10,30,0" Focused="DOBEntryField_Focused"/>
+                            <DatePicker x:Name="datePicker" MaximumDate="{x:Static sys:DateTime.Now}" IsVisible="False" Margin="30,10,30,0" />
+                            <Grid ColumnSpacing="0" VerticalOptions="EndAndExpand">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button x:Name="PersonalPagePreviousButton" Text="Previous" Grid.Column="0" VerticalOptions="End" BorderWidth="1" Clicked="PreviousButton_Clicked"/>
+                                <Button x:Name="PersonalPageNextButton" Text="Done" IsEnabled="False" TextColor="White" Grid.Column="1" VerticalOptions="End" Clicked="Done"/>
+                            </Grid>
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
+            </ContentView>
+        </Grid>
+    </ContentView.Content>
+</local:SampleView>

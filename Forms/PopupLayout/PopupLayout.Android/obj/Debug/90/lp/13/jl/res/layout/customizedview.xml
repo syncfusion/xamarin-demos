@@ -1,0 +1,1 @@
+<TextView android:layout_width="wrap_content" android:layout_height="match_parent" android:id="@+id/Itemname" android:textSize="20sp" android:gravity="center_vertical" xmlns:android="http://schemas.android.com/apk/res/android" />

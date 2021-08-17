@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell IsEnabled="false" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfTabView.ProductView"
+             xmlns:local="clr-namespace:SampleBrowser.SfTabView">
+  <ViewCell.View>
+    <local:CustomFrame Padding="5,5,5,5" BackgroundColor="White" HasShadow="false" >
+      <Grid Padding="5" BackgroundColor="White">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="200" />
+          <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="{Binding ImagePath}" Aspect="AspectFit" />
+        <Grid Grid.Column="1" Margin="5,0,0,0">
+                    <Grid.Resources>
+                        <ResourceDictionary>
+                        <local:ProductViewFontConverter x:Key="ProductViewFontConverter" />
+                        </ResourceDictionary>
+                    </Grid.Resources>
+                    <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="40" />
+          </Grid.ColumnDefinitions>
+          <Label  Text="{Binding Name}" TextColor="Black" FontSize="18" LineBreakMode="WordWrap" />
+          <Grid Grid.Row="1" Grid.ColumnSpan="2" VerticalOptions="CenterAndExpand">
+            <StackLayout  Orientation="Horizontal" VerticalOptions="CenterAndExpand"  >
+              <Label VerticalOptions="Center" Text="$" TextColor="#80cf35" FontSize="16" Margin="0,0,-5,0" WidthRequest="10" HeightRequest="25"/>
+              <Label VerticalOptions="Center" Text="{Binding Price}" TextColor="#80cf35" FontSize="16" WidthRequest="60" HeightRequest="25" />
+              <Label VerticalOptions="Center" Text="{Binding Offer}" FontSize="16" TextColor="#80cf35" WidthRequest="140" HeightRequest="25"/>
+            </StackLayout>
+          </Grid>
+          <local:CustomFrame Grid.Column="1" HasShadow="false" WidthRequest="60" CornerRadius="10" BackgroundColor="#4d92df" Padding="2,0,0,0" VerticalOptions="Start" >
+            <StackLayout  Orientation="Horizontal"  HorizontalOptions="Center" VerticalOptions="Center">
+              <Label  Text="&#xe735;" 
+                      TextColor="White" 
+                      VerticalTextAlignment="Center" 
+                      FontSize="12" 
+                      WidthRequest="14" 
+                      HeightRequest="20"
+                      FontFamily="{Binding Converter={StaticResource ProductViewFontConverter}}" >
+                <!--<Label.FontFamily>
+                  <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="iOS" Value="Segoe MDL2 Assets" />
+                    <On Platform="Android" Value="Segoe MDL2 Assets.ttf#Segoe MDL2 Assets" />
+                    <On Platform="UWP" Value="/Assets/Fonts/Segoe MDL2 Assets.ttf#Segoe MDL2 Assets" />
+                  </OnPlatform>
+                </Label.FontFamily>-->
+              </Label>
+              <Label  Text="{Binding Rating}" FontSize="12" VerticalTextAlignment="Center" Margin="-5,0,-5,0" TextColor="White" WidthRequest="30" HeightRequest="20"/>
+            </StackLayout>
+          </local:CustomFrame>
+          <Label Margin="0,0,-50,0" FontSize="10" TextColor="#868686" Grid.Row="2" Text="{Binding Description}">
+          </Label>
+        </Grid>
+      </Grid>
+    </local:CustomFrame>
+
+  </ViewCell.View>
+</ViewCell>
