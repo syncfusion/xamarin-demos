@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Samples>
+  <Sample Platforms="All" Title="Organization Chart" Category="Types" Name="OrganizationChart" SearchTags="layout,organization, datasource" Description="This sample demonstates creating a simple chart layout using diagram control" />
+  <Sample Platforms="Android,iOS"  Title="Mind Map"  Name="MindMap" Category="Types" SearchTags="layout,mindmap, datasource" Description="This sample demonstates creating a simple mind map layout using diagram control" />
+  <Sample Platforms="All" Title="Flow Diagram"  Name="FlowDiagram" Category="Types" SearchTags="workflow, diagram, process" Description="This sample demonstates creating a simple flow diagam using diagram control" />
+  <Sample Platforms="All" Title="Node Customization"  Name="NodeContent" Category="Types" SearchTags="custom, sfgraphics, annotation" Description="This sample demonstates creating a node with different type content"/>
+  <Sample Platforms="All" Title="Connectors"  Name="Connectors" Category="Types"  Description="This sample demonstates creating a simple flow diagam using diagram control"/>
+</Samples>

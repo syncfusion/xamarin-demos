@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  
+  <ItemGroup>
+	<Resource Include="$(MSBuildThisFileDirectory)\Assets\Fonts\Segmented.ttf" >
+		<Link>Assets\Fonts\Segmented.ttf</Link>
+	</Resource>
+	
+	<Resource Include="$(MSBuildThisFileDirectory)\Assets\Fonts\SegmentIcon.ttf" >
+		<Link>Assets\Fonts\SegmentIcon.ttf</Link>
+	</Resource>
+	
+	<Resource Include="$(MSBuildThisFileDirectory)\Assets\Fonts\Segoe_MDL2_Assets.ttf" >
+		<Link>Assets\Fonts\Segoe_MDL2_Assets.ttf</Link>
+	</Resource>
+  </ItemGroup>
+  
+</Project>

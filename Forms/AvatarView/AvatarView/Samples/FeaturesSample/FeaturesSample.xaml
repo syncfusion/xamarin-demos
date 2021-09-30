@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             x:Class="SampleBrowser.SfAvatarView.FeaturesSample">
+    <local:SampleView.Content>
+        <Grid BackgroundColor="#FFF7FBFC" RowSpacing="0">
+                
+        </Grid>
+    </local:SampleView.Content>
+
+</local:SampleView>

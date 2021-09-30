@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.OHLCChart" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+    <local:SampleView.Content>
+        <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <chart:SfChart.Margin>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="0,0,20,0" />
+            </chart:SfChart.Margin>
+            <chart:SfChart.Title>
+                <chart:ChartTitle Text="Financial Analysis in Year 2000"  />
+            </chart:SfChart.Title>
+            <chart:SfChart.BindingContext>
+                <sampleBrowser:OHLCSeriesViewModel />
+            </chart:SfChart.BindingContext>
+            <chart:SfChart.PrimaryAxis>
+                <chart:DateTimeAxis LabelRotationAngle="-45">
+                    <chart:DateTimeAxis.Title>
+                        <chart:ChartAxisTitle Text="Date">
+                            <chart:ChartAxisTitle.Margin>
+                                <OnPlatform x:TypeArguments="Thickness" Android="0,10,0,0" />
+                            </chart:ChartAxisTitle.Margin>
+                        </chart:ChartAxisTitle>
+                    </chart:DateTimeAxis.Title>
+                    <chart:DateTimeAxis.LabelStyle>
+                        <chart:ChartAxisLabelStyle LabelFormat="MM/dd" />
+                    </chart:DateTimeAxis.LabelStyle>
+                </chart:DateTimeAxis>
+            </chart:SfChart.PrimaryAxis>
+            <chart:SfChart.SecondaryAxis>
+                <chart:NumericalAxis Minimum="0" Maximum="250" Interval="50">
+                    <chart:NumericalAxis.Title>
+                        <chart:ChartAxisTitle Text="Price in Dollar">
+                            <chart:ChartAxisTitle.Margin>
+                                <OnPlatform x:TypeArguments="Thickness" Android="0,0,10,0" />
+                            </chart:ChartAxisTitle.Margin>
+                        </chart:ChartAxisTitle>
+                    </chart:NumericalAxis.Title>
+                    <chart:NumericalAxis.LabelStyle>
+                        <chart:ChartAxisLabelStyle x:Name="secondaryAxisLabelStyle"/>
+                    </chart:NumericalAxis.LabelStyle>
+                </chart:NumericalAxis>
+            </chart:SfChart.SecondaryAxis>
+            <chart:SfChart.Series>
+                <chart:HiLoOpenCloseSeries ItemsSource="{Binding FinancialData}" StrokeWidth="5" XBindingPath="Date" High="High" Low="Low" Open="Value" Close="Size" EnableTooltip="True" EnableAnimation="True">
+                </chart:HiLoOpenCloseSeries>
+            </chart:SfChart.Series>
+        </chart:SfChart>
+    </local:SampleView.Content>
+</local:SampleView>

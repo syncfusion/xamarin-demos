@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Samples>
+  <Sample Platforms="Android,iOS,UWP" Title = "Getting Started" Name = "GettingStarted"
+            Description = "This sample illustrates about getting started with Expander by loading a set of expandable items in a predefined template." />
+  <Sample Platforms="Android,iOS,UWP" Title = "Expandable ListView" Name = "ExpandableListView"
+            Description = "This sample showcases the Expandable view using SfListView which expand or collapse when tapped over the expander item." />
+</Samples>
