@@ -1,2 +1,0 @@
-Values/dimens.xml;values/dimens.xml
-Values/attrs.xml;values/attrs.xml

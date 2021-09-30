@@ -1,5 +1,0 @@
-Values/Strings.xml;values/strings.xml
-Drawable/popup_forms_android_shadow.xml;drawable/popup_forms_android_shadow.xml
-Drawable/popup_forms_android_close_icon.png;drawable/popup_forms_android_close_icon.png
-Drawable/popup_forms_light_theme_close_icon.png;drawable/popup_forms_light_theme_close_icon.png
-Drawable/popup_forms_dark_theme_close_icon.png;drawable/popup_forms_dark_theme_close_icon.png
