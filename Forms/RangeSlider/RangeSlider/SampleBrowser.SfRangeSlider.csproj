@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+ 	<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <Configurations>Debug;Release;Release-xml</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="SampleBrowser.SfRangeSlider.nuspec" />
+	<None Remove="SampleBrowser.SfRangeSlider.props" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SampleBrowser.Core" Version="19.3.0.53" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="19.3.0.53" />
+    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="19.3.0.53" />
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="19.3.0.53" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="19.3.0.53" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRangeSlider" Version="19.3.0.53" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.617" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SamplesList\SamplesList.xml" />
+  </ItemGroup>
+</Project>

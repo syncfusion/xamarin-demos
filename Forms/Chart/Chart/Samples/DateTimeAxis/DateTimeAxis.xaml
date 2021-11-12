@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.DateTimeAxis" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+    <local:SampleView.Content>
+        <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <chart:SfChart.Margin>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="0,0,15,0" />
+            </chart:SfChart.Margin>
+            <chart:SfChart.Title>
+                <chart:ChartTitle Text="Food Production - 2017 " />
+            </chart:SfChart.Title>
+            <chart:SfChart.BindingContext>
+                <sampleBrowser:DateTimeAxisViewModel />
+            </chart:SfChart.BindingContext>
+            <chart:SfChart.PrimaryAxis>
+                <chart:DateTimeAxis EdgeLabelsDrawingMode="Shift" ZoomFactor="0.2" ZoomPosition="0.6">
+                    <chart:DateTimeAxis.Title>
+                        <chart:ChartAxisTitle Text="Production across year">
+                        </chart:ChartAxisTitle>
+                    </chart:DateTimeAxis.Title>
+                </chart:DateTimeAxis>
+            </chart:SfChart.PrimaryAxis>
+            <chart:SfChart.SecondaryAxis>
+                <chart:NumericalAxis>
+                    <chart:NumericalAxis.Title>
+                        <chart:ChartAxisTitle Text="Growth (In Metric Tonnes)">
+                        </chart:ChartAxisTitle>
+                    </chart:NumericalAxis.Title>
+                </chart:NumericalAxis>
+            </chart:SfChart.SecondaryAxis>
+            <chart:SfChart.ChartBehaviors>
+                <chart:ChartZoomPanBehavior EnableSelectionZooming="False" ZoomMode="X" MaximumZoomLevel="200" />
+            </chart:SfChart.ChartBehaviors>
+            <chart:SfChart.Series>
+                <chart:FastLineSeries ItemsSource="{Binding DateTimeData}" XBindingPath="Date" YBindingPath="Growth" EnableTooltip="True">
+                    <chart:FastLineSeries.ColorModel>
+                        <chart:ChartColorModel Palette="Natural" />
+                    </chart:FastLineSeries.ColorModel>
+                </chart:FastLineSeries>
+            </chart:SfChart.Series>
+        </chart:SfChart>
+    </local:SampleView.Content>
+</local:SampleView>

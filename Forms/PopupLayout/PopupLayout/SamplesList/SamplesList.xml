@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<Samples>	
+<Group Title="Popup" SearchTags="popup, dialog, alert, window, toast"
+     Description="Component that helps you to display popup views in an application.">
+    <Sample Name="GettingStarted" Title="Getting Started" SearchTags="popup, popupLayout, Alert, Dialogs" 
+          Description="This sample showcases the built-in popups or dialogs and its customizations." />
+    <Sample Name="OnBoardHelps" Title="Onboard Help" SearchTags="popup, popupLayout, Alert" 
+          Description="This sample show case the popup layout with animating view." />
+    <Sample Name="DetailsView" Title ="Popup Menu" SearchTags="popup, popupLayout, Alert"
+          Description="This sample showcases popup layout default rendering based on Relative position and rendering at touch point of screen,etc." />
+    <Sample Name="PopupCustomizations" Title="Popup Customizations" SearchTags="popup, popupLayout, Alert"
+          Description="This sample showcases the various layouts of the SfPopup that comes in handy in a sleek ticket booking app." /> 
+</Group>
+</Samples>

@@ -1,0 +1,3749 @@
+{
+  "version": 3,
+  "targets": {
+    "Xamarin.iOS,Version=v1.0": {
+      "SkiaSharp/2.80.2": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
+        },
+        "build": {
+          "build/xamarinios1.0/SkiaSharp.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/osx/native/libSkiaSharp.dylib": {
+            "assetType": "native",
+            "rid": "osx"
+          },
+          "runtimes/win-arm64/native/libSkiaSharp.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-x64/native/libSkiaSharp.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/libSkiaSharp.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "Syncfusion.Licensing/19.3.0.53": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Buttons.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Calculate/19.3.0.53": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.Calculate.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Calculate.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Compression/19.3.0.53": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.Compression.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Compression.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DataGridExport.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Compression": "19.3.0.53",
+          "Syncfusion.Xamarin.Pdf": "19.3.0.53",
+          "Syncfusion.Xamarin.SfDataGrid.IOS": "19.3.0.53",
+          "Syncfusion.Xamarin.XlsIO": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfGridConverter.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfGridConverter.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DataSource/19.3.0.53": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DocIO/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.Compression": "19.3.0.53",
+          "Syncfusion.Xamarin.OfficeChart": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.DocIO.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.DocIO.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DocIORenderer/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Compression": "19.3.0.53",
+          "Syncfusion.Xamarin.DocIO": "19.3.0.53",
+          "Syncfusion.Xamarin.OfficeChart": "19.3.0.53",
+          "Syncfusion.Xamarin.Pdf": "19.3.0.53",
+          "Syncfusion.Xamarin.SkiaSharpHelper": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.DocIORenderer.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.DocIORenderer.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.GridCommon/19.3.0.53": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.OfficeChart/19.3.0.53": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.OfficeChart.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.OfficeChart.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Pdf/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.Compression": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.Pdf.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Pdf.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Presentation/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.Compression": "19.3.0.53",
+          "Syncfusion.Xamarin.OfficeChart": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.Presentation.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Presentation.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.PresentationRenderer/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Compression": "19.3.0.53",
+          "Syncfusion.Xamarin.OfficeChart": "19.3.0.53",
+          "Syncfusion.Xamarin.Pdf": "19.3.0.53",
+          "Syncfusion.Xamarin.Presentation": "19.3.0.53",
+          "Syncfusion.Xamarin.SkiaSharpHelper": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.PresentationRenderer.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.PresentationRenderer.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfAutoComplete.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfAutoComplete.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfAutoComplete.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfBarCode.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfBarcode.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfBarcode.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfBusyIndicator.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfCalendar.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfCalendar.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfCalendar.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfCarousel.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfCarousel.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfCarousel.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfChart.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SFChart.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SFChart.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfComboBox.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfDataForm.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.SfMaskedEdit.iOS": "19.3.0.53",
+          "Syncfusion.Xamarin.SfNumericTextBox.iOS": "19.3.0.53",
+          "Syncfusion.Xamarin.SfNumericUpDown.iOS": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfDataForm.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfDataForm.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfDataGrid.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.GridCommon": "19.3.0.53",
+          "Syncfusion.Xamarin.SfNumericTextBox.iOS": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Linq.iOS.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfDataGrid.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Linq.iOS.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfDataGrid.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfDiagram.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfDiagram.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfDiagram.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfGauge.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfGauge.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfGauge.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfImageEditor.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfImageEditor.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfImageEditor.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfKanban.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfKanban.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfKanban.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfMaps.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfMaps.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfMaps.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfMaskedEdit.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfMaskedEdit.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfMaskedEdit.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfNavigationDrawer.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfNavigationDrawer.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfNavigationDrawer.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfNumericTextBox.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfNumericTextBox.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfNumericTextBox.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfNumericUpDown.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfNumericUpDown.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfNumericUpDown.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfPdfViewer.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.Pdf": "19.3.0.53",
+          "Syncfusion.Xamarin.SfBusyIndicator.iOS": "19.3.0.53",
+          "Syncfusion.Xamarin.SfComboBox.iOS": "19.3.0.53",
+          "Syncfusion.Xamarin.SfProgressBar.iOS": "19.3.0.53",
+          "Syncfusion.Xamarin.SfRangeSlider.iOS": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPdfViewer.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPdfViewer.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfPicker.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPicker.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPicker.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfPopupLayout.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfProgressBar.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfProgressBar.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfProgressBar.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfPullToRefresh.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPullToRefresh.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPullToRefresh.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRadialMenu.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRadialMenu.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRadialMenu.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRangeSlider.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRangeSlider.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRangeSlider.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRating.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRotator.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRotator.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRotator.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfSchedule.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfSchedule.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfSchedule.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfSparkline.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfSparkline.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfSparkline.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfSunburstChart.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfSunburstChart.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfSunburstChart.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfTabView.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfTabView.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfTabView.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfTreeMap.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfTreeMap.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfTreeMap.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfTreeView.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.GridCommon": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfTreeView.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfTreeView.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SkiaSharpHelper/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.80.2",
+          "Syncfusion.Xamarin.Compression": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.SkiaSharpHelper.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.SkiaSharpHelper.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.XlsIO/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.Compression": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.XlsIO.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.XlsIO.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.XlsIORenderer/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.Compression": "19.3.0.53",
+          "Syncfusion.Xamarin.Pdf": "19.3.0.53",
+          "Syncfusion.Xamarin.SkiaSharpHelper": "19.3.0.53",
+          "Syncfusion.Xamarin.XlsIO": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.XlsIORenderer.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.XlsIORenderer.Portable.dll": {}
+        }
+      }
+    },
+    "Xamarin.iOS,Version=v1.0/win": {
+      "SkiaSharp/2.80.2": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
+        },
+        "build": {
+          "build/xamarinios1.0/SkiaSharp.targets": {}
+        }
+      },
+      "Syncfusion.Licensing/19.3.0.53": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Buttons.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Calculate/19.3.0.53": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.Calculate.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Calculate.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Compression/19.3.0.53": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.Compression.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Compression.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DataGridExport.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Compression": "19.3.0.53",
+          "Syncfusion.Xamarin.Pdf": "19.3.0.53",
+          "Syncfusion.Xamarin.SfDataGrid.IOS": "19.3.0.53",
+          "Syncfusion.Xamarin.XlsIO": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfGridConverter.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfGridConverter.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DataSource/19.3.0.53": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DocIO/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.Compression": "19.3.0.53",
+          "Syncfusion.Xamarin.OfficeChart": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.DocIO.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.DocIO.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DocIORenderer/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Compression": "19.3.0.53",
+          "Syncfusion.Xamarin.DocIO": "19.3.0.53",
+          "Syncfusion.Xamarin.OfficeChart": "19.3.0.53",
+          "Syncfusion.Xamarin.Pdf": "19.3.0.53",
+          "Syncfusion.Xamarin.SkiaSharpHelper": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.DocIORenderer.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.DocIORenderer.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.GridCommon/19.3.0.53": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.OfficeChart/19.3.0.53": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.OfficeChart.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.OfficeChart.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Pdf/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.Compression": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.Pdf.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Pdf.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Presentation/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.Compression": "19.3.0.53",
+          "Syncfusion.Xamarin.OfficeChart": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.Presentation.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Presentation.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.PresentationRenderer/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Compression": "19.3.0.53",
+          "Syncfusion.Xamarin.OfficeChart": "19.3.0.53",
+          "Syncfusion.Xamarin.Pdf": "19.3.0.53",
+          "Syncfusion.Xamarin.Presentation": "19.3.0.53",
+          "Syncfusion.Xamarin.SkiaSharpHelper": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.PresentationRenderer.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.PresentationRenderer.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfAutoComplete.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfAutoComplete.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfAutoComplete.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfBarCode.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfBarcode.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfBarcode.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfBusyIndicator.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfCalendar.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfCalendar.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfCalendar.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfCarousel.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfCarousel.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfCarousel.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfChart.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SFChart.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SFChart.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfComboBox.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfDataForm.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.SfMaskedEdit.iOS": "19.3.0.53",
+          "Syncfusion.Xamarin.SfNumericTextBox.iOS": "19.3.0.53",
+          "Syncfusion.Xamarin.SfNumericUpDown.iOS": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfDataForm.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfDataForm.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfDataGrid.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.GridCommon": "19.3.0.53",
+          "Syncfusion.Xamarin.SfNumericTextBox.iOS": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Linq.iOS.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfDataGrid.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Linq.iOS.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfDataGrid.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfDiagram.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfDiagram.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfDiagram.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfGauge.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfGauge.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfGauge.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfImageEditor.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfImageEditor.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfImageEditor.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfKanban.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfKanban.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfKanban.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfMaps.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfMaps.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfMaps.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfMaskedEdit.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfMaskedEdit.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfMaskedEdit.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfNavigationDrawer.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfNavigationDrawer.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfNavigationDrawer.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfNumericTextBox.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfNumericTextBox.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfNumericTextBox.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfNumericUpDown.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfNumericUpDown.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfNumericUpDown.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfPdfViewer.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.Pdf": "19.3.0.53",
+          "Syncfusion.Xamarin.SfBusyIndicator.iOS": "19.3.0.53",
+          "Syncfusion.Xamarin.SfComboBox.iOS": "19.3.0.53",
+          "Syncfusion.Xamarin.SfProgressBar.iOS": "19.3.0.53",
+          "Syncfusion.Xamarin.SfRangeSlider.iOS": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPdfViewer.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPdfViewer.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfPicker.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPicker.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPicker.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfPopupLayout.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfProgressBar.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfProgressBar.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfProgressBar.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfPullToRefresh.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPullToRefresh.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPullToRefresh.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRadialMenu.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRadialMenu.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRadialMenu.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRangeSlider.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRangeSlider.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRangeSlider.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRating.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRotator.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRotator.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRotator.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfSchedule.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfSchedule.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfSchedule.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfSparkline.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfSparkline.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfSparkline.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfSunburstChart.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfSunburstChart.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfSunburstChart.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfTabView.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfTabView.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfTabView.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfTreeMap.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfTreeMap.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfTreeMap.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfTreeView.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.GridCommon": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfTreeView.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfTreeView.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SkiaSharpHelper/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.80.2",
+          "Syncfusion.Xamarin.Compression": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.SkiaSharpHelper.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.SkiaSharpHelper.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.XlsIO/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.Compression": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.XlsIO.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.XlsIO.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.XlsIORenderer/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.Compression": "19.3.0.53",
+          "Syncfusion.Xamarin.Pdf": "19.3.0.53",
+          "Syncfusion.Xamarin.SkiaSharpHelper": "19.3.0.53",
+          "Syncfusion.Xamarin.XlsIO": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.XlsIORenderer.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.XlsIORenderer.Portable.dll": {}
+        }
+      }
+    },
+    "Xamarin.iOS,Version=v1.0/win-x64": {
+      "SkiaSharp/2.80.2": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
+        },
+        "native": {
+          "runtimes/win-x64/native/libSkiaSharp.dll": {}
+        },
+        "build": {
+          "build/xamarinios1.0/SkiaSharp.targets": {}
+        }
+      },
+      "Syncfusion.Licensing/19.3.0.53": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Buttons.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Calculate/19.3.0.53": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.Calculate.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Calculate.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Compression/19.3.0.53": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.Compression.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Compression.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DataGridExport.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Compression": "19.3.0.53",
+          "Syncfusion.Xamarin.Pdf": "19.3.0.53",
+          "Syncfusion.Xamarin.SfDataGrid.IOS": "19.3.0.53",
+          "Syncfusion.Xamarin.XlsIO": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfGridConverter.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfGridConverter.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DataSource/19.3.0.53": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DocIO/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.Compression": "19.3.0.53",
+          "Syncfusion.Xamarin.OfficeChart": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.DocIO.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.DocIO.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DocIORenderer/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Compression": "19.3.0.53",
+          "Syncfusion.Xamarin.DocIO": "19.3.0.53",
+          "Syncfusion.Xamarin.OfficeChart": "19.3.0.53",
+          "Syncfusion.Xamarin.Pdf": "19.3.0.53",
+          "Syncfusion.Xamarin.SkiaSharpHelper": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.DocIORenderer.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.DocIORenderer.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.GridCommon/19.3.0.53": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.OfficeChart/19.3.0.53": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.OfficeChart.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.OfficeChart.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Pdf/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.Compression": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.Pdf.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Pdf.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Presentation/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.Compression": "19.3.0.53",
+          "Syncfusion.Xamarin.OfficeChart": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.Presentation.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Presentation.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.PresentationRenderer/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Compression": "19.3.0.53",
+          "Syncfusion.Xamarin.OfficeChart": "19.3.0.53",
+          "Syncfusion.Xamarin.Pdf": "19.3.0.53",
+          "Syncfusion.Xamarin.Presentation": "19.3.0.53",
+          "Syncfusion.Xamarin.SkiaSharpHelper": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.PresentationRenderer.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.PresentationRenderer.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfAutoComplete.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfAutoComplete.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfAutoComplete.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfBarCode.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfBarcode.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfBarcode.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfBusyIndicator.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfCalendar.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfCalendar.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfCalendar.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfCarousel.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfCarousel.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfCarousel.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfChart.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SFChart.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SFChart.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfComboBox.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfDataForm.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.SfMaskedEdit.iOS": "19.3.0.53",
+          "Syncfusion.Xamarin.SfNumericTextBox.iOS": "19.3.0.53",
+          "Syncfusion.Xamarin.SfNumericUpDown.iOS": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfDataForm.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfDataForm.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfDataGrid.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.GridCommon": "19.3.0.53",
+          "Syncfusion.Xamarin.SfNumericTextBox.iOS": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Linq.iOS.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfDataGrid.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Linq.iOS.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfDataGrid.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfDiagram.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfDiagram.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfDiagram.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfGauge.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfGauge.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfGauge.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfImageEditor.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfImageEditor.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfImageEditor.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfKanban.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfKanban.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfKanban.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfMaps.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfMaps.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfMaps.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfMaskedEdit.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfMaskedEdit.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfMaskedEdit.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfNavigationDrawer.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfNavigationDrawer.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfNavigationDrawer.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfNumericTextBox.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfNumericTextBox.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfNumericTextBox.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfNumericUpDown.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfNumericUpDown.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfNumericUpDown.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfPdfViewer.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.Pdf": "19.3.0.53",
+          "Syncfusion.Xamarin.SfBusyIndicator.iOS": "19.3.0.53",
+          "Syncfusion.Xamarin.SfComboBox.iOS": "19.3.0.53",
+          "Syncfusion.Xamarin.SfProgressBar.iOS": "19.3.0.53",
+          "Syncfusion.Xamarin.SfRangeSlider.iOS": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPdfViewer.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPdfViewer.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfPicker.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPicker.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPicker.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfPopupLayout.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfProgressBar.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfProgressBar.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfProgressBar.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfPullToRefresh.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPullToRefresh.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPullToRefresh.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRadialMenu.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRadialMenu.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRadialMenu.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRangeSlider.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRangeSlider.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRangeSlider.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRating.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRotator.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRotator.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRotator.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfSchedule.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfSchedule.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfSchedule.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfSparkline.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfSparkline.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfSparkline.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfSunburstChart.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfSunburstChart.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfSunburstChart.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfTabView.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfTabView.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfTabView.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfTreeMap.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfTreeMap.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfTreeMap.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfTreeView.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.GridCommon": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfTreeView.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfTreeView.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SkiaSharpHelper/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.80.2",
+          "Syncfusion.Xamarin.Compression": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.SkiaSharpHelper.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.SkiaSharpHelper.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.XlsIO/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.Compression": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.XlsIO.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.XlsIO.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.XlsIORenderer/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.Compression": "19.3.0.53",
+          "Syncfusion.Xamarin.Pdf": "19.3.0.53",
+          "Syncfusion.Xamarin.SkiaSharpHelper": "19.3.0.53",
+          "Syncfusion.Xamarin.XlsIO": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.XlsIORenderer.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.XlsIORenderer.Portable.dll": {}
+        }
+      }
+    },
+    "Xamarin.iOS,Version=v1.0/win-x86": {
+      "SkiaSharp/2.80.2": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
+        },
+        "native": {
+          "runtimes/win-x86/native/libSkiaSharp.dll": {}
+        },
+        "build": {
+          "build/xamarinios1.0/SkiaSharp.targets": {}
+        }
+      },
+      "Syncfusion.Licensing/19.3.0.53": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Buttons.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Calculate/19.3.0.53": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.Calculate.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Calculate.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Compression/19.3.0.53": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.Compression.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Compression.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DataGridExport.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Compression": "19.3.0.53",
+          "Syncfusion.Xamarin.Pdf": "19.3.0.53",
+          "Syncfusion.Xamarin.SfDataGrid.IOS": "19.3.0.53",
+          "Syncfusion.Xamarin.XlsIO": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfGridConverter.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfGridConverter.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DataSource/19.3.0.53": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DocIO/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.Compression": "19.3.0.53",
+          "Syncfusion.Xamarin.OfficeChart": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.DocIO.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.DocIO.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DocIORenderer/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Compression": "19.3.0.53",
+          "Syncfusion.Xamarin.DocIO": "19.3.0.53",
+          "Syncfusion.Xamarin.OfficeChart": "19.3.0.53",
+          "Syncfusion.Xamarin.Pdf": "19.3.0.53",
+          "Syncfusion.Xamarin.SkiaSharpHelper": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.DocIORenderer.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.DocIORenderer.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.GridCommon/19.3.0.53": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.OfficeChart/19.3.0.53": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.OfficeChart.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.OfficeChart.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Pdf/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.Compression": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.Pdf.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Pdf.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Presentation/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.Compression": "19.3.0.53",
+          "Syncfusion.Xamarin.OfficeChart": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.Presentation.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Presentation.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.PresentationRenderer/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Compression": "19.3.0.53",
+          "Syncfusion.Xamarin.OfficeChart": "19.3.0.53",
+          "Syncfusion.Xamarin.Pdf": "19.3.0.53",
+          "Syncfusion.Xamarin.Presentation": "19.3.0.53",
+          "Syncfusion.Xamarin.SkiaSharpHelper": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.PresentationRenderer.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.PresentationRenderer.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfAutoComplete.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfAutoComplete.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfAutoComplete.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfBarCode.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfBarcode.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfBarcode.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfBusyIndicator.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfCalendar.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfCalendar.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfCalendar.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfCarousel.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfCarousel.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfCarousel.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfChart.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SFChart.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SFChart.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfComboBox.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfDataForm.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.SfMaskedEdit.iOS": "19.3.0.53",
+          "Syncfusion.Xamarin.SfNumericTextBox.iOS": "19.3.0.53",
+          "Syncfusion.Xamarin.SfNumericUpDown.iOS": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfDataForm.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfDataForm.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfDataGrid.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.GridCommon": "19.3.0.53",
+          "Syncfusion.Xamarin.SfNumericTextBox.iOS": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Linq.iOS.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfDataGrid.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Linq.iOS.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfDataGrid.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfDiagram.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfDiagram.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfDiagram.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfGauge.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfGauge.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfGauge.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfImageEditor.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfImageEditor.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfImageEditor.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfKanban.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfKanban.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfKanban.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfMaps.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfMaps.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfMaps.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfMaskedEdit.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfMaskedEdit.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfMaskedEdit.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfNavigationDrawer.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfNavigationDrawer.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfNavigationDrawer.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfNumericTextBox.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfNumericTextBox.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfNumericTextBox.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfNumericUpDown.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfNumericUpDown.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfNumericUpDown.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfPdfViewer.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.Pdf": "19.3.0.53",
+          "Syncfusion.Xamarin.SfBusyIndicator.iOS": "19.3.0.53",
+          "Syncfusion.Xamarin.SfComboBox.iOS": "19.3.0.53",
+          "Syncfusion.Xamarin.SfProgressBar.iOS": "19.3.0.53",
+          "Syncfusion.Xamarin.SfRangeSlider.iOS": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPdfViewer.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPdfViewer.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfPicker.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPicker.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPicker.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfPopupLayout.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfProgressBar.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfProgressBar.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfProgressBar.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfPullToRefresh.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPullToRefresh.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPullToRefresh.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRadialMenu.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRadialMenu.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRadialMenu.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRangeSlider.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRangeSlider.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRangeSlider.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRating.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRotator.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRotator.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRotator.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfSchedule.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfSchedule.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfSchedule.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfSparkline.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfSparkline.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfSparkline.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfSunburstChart.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfSunburstChart.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfSunburstChart.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfTabView.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfTabView.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfTabView.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfTreeMap.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfTreeMap.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfTreeMap.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfTreeView.IOS/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.GridCommon": "19.3.0.53"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfTreeView.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfTreeView.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SkiaSharpHelper/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.80.2",
+          "Syncfusion.Xamarin.Compression": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.SkiaSharpHelper.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.SkiaSharpHelper.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.XlsIO/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.Compression": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.XlsIO.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.XlsIO.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.XlsIORenderer/19.3.0.53": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.3.0.53",
+          "Syncfusion.Xamarin.Compression": "19.3.0.53",
+          "Syncfusion.Xamarin.Pdf": "19.3.0.53",
+          "Syncfusion.Xamarin.SkiaSharpHelper": "19.3.0.53",
+          "Syncfusion.Xamarin.XlsIO": "19.3.0.53"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.XlsIORenderer.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.XlsIORenderer.Portable.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SkiaSharp/2.80.2": {
+      "sha512": "D25rzdCwh+3L+XyXqpNa+H/yiLJbE3/R3K/XexwHyQjGdzZvSufFW3oqf3En7hhqSIsxsJ8f5NEZ0J5W5wlGBg==",
+      "type": "package",
+      "path": "skiasharp/2.80.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/monoandroid1.0/SkiaSharp.targets",
+        "build/monoandroid1.0/arm/libSkiaSharp.so",
+        "build/monoandroid1.0/arm64/libSkiaSharp.so",
+        "build/monoandroid1.0/x64/libSkiaSharp.so",
+        "build/monoandroid1.0/x86/libSkiaSharp.so",
+        "build/net462/SkiaSharp.targets",
+        "build/tizen40/SkiaSharp.targets",
+        "build/tizen40/arm/libSkiaSharp.so",
+        "build/tizen40/x86/libSkiaSharp.so",
+        "build/xamarinios1.0/SkiaSharp.targets",
+        "build/xamarinios1.0/libSkiaSharp.framework/Info.plist",
+        "build/xamarinios1.0/libSkiaSharp.framework/Modules/module.modulemap",
+        "build/xamarinios1.0/libSkiaSharp.framework/_CodeSignature/CodeResources",
+        "build/xamarinios1.0/libSkiaSharp.framework/libSkiaSharp",
+        "build/xamarinmac2.0/SkiaSharp.targets",
+        "build/xamarintvos1.0/SkiaSharp.targets",
+        "build/xamarintvos1.0/libSkiaSharp.framework/Info.plist",
+        "build/xamarintvos1.0/libSkiaSharp.framework/Modules/module.modulemap",
+        "build/xamarintvos1.0/libSkiaSharp.framework/_CodeSignature/CodeResources",
+        "build/xamarintvos1.0/libSkiaSharp.framework/libSkiaSharp",
+        "build/xamarinwatchos1.0/SkiaSharp.targets",
+        "build/xamarinwatchos1.0/libSkiaSharp.framework/Info.plist",
+        "build/xamarinwatchos1.0/libSkiaSharp.framework/Modules/module.modulemap",
+        "build/xamarinwatchos1.0/libSkiaSharp.framework/_CodeSignature/CodeResources",
+        "build/xamarinwatchos1.0/libSkiaSharp.framework/libSkiaSharp",
+        "buildTransitive/monoandroid1.0/SkiaSharp.targets",
+        "buildTransitive/net462/SkiaSharp.targets",
+        "buildTransitive/tizen40/SkiaSharp.targets",
+        "buildTransitive/xamarinios1.0/SkiaSharp.targets",
+        "buildTransitive/xamarinmac2.0/SkiaSharp.targets",
+        "buildTransitive/xamarintvos1.0/SkiaSharp.targets",
+        "buildTransitive/xamarinwatchos1.0/SkiaSharp.targets",
+        "lib/monoandroid1.0/SkiaSharp.dll",
+        "lib/monoandroid1.0/SkiaSharp.xml",
+        "lib/net462/SkiaSharp.dll",
+        "lib/net462/SkiaSharp.xml",
+        "lib/netstandard1.3/SkiaSharp.dll",
+        "lib/netstandard1.3/SkiaSharp.xml",
+        "lib/netstandard2.0/SkiaSharp.dll",
+        "lib/netstandard2.0/SkiaSharp.xml",
+        "lib/tizen40/SkiaSharp.dll",
+        "lib/tizen40/SkiaSharp.xml",
+        "lib/uap10.0.10240/SkiaSharp.dll",
+        "lib/uap10.0.10240/SkiaSharp.xml",
+        "lib/uap10.0.16299/SkiaSharp.dll",
+        "lib/uap10.0.16299/SkiaSharp.xml",
+        "lib/xamarinios1.0/SkiaSharp.dll",
+        "lib/xamarinios1.0/SkiaSharp.xml",
+        "lib/xamarinmac2.0/SkiaSharp.dll",
+        "lib/xamarinmac2.0/SkiaSharp.xml",
+        "lib/xamarintvos1.0/SkiaSharp.dll",
+        "lib/xamarintvos1.0/SkiaSharp.xml",
+        "lib/xamarinwatchos1.0/SkiaSharp.dll",
+        "lib/xamarinwatchos1.0/SkiaSharp.xml",
+        "runtimes/osx/native/libSkiaSharp.dylib",
+        "runtimes/win-arm64/native/libSkiaSharp.dll",
+        "runtimes/win-x64/native/libSkiaSharp.dll",
+        "runtimes/win-x86/native/libSkiaSharp.dll",
+        "runtimes/win10-arm/nativeassets/uap10.0/libEGL.dll",
+        "runtimes/win10-arm/nativeassets/uap10.0/libGLESv2.dll",
+        "runtimes/win10-arm/nativeassets/uap10.0/libSkiaSharp.dll",
+        "runtimes/win10-arm64/nativeassets/uap10.0/libEGL.dll",
+        "runtimes/win10-arm64/nativeassets/uap10.0/libGLESv2.dll",
+        "runtimes/win10-arm64/nativeassets/uap10.0/libSkiaSharp.dll",
+        "runtimes/win10-x64/nativeassets/uap10.0/libEGL.dll",
+        "runtimes/win10-x64/nativeassets/uap10.0/libGLESv2.dll",
+        "runtimes/win10-x64/nativeassets/uap10.0/libSkiaSharp.dll",
+        "runtimes/win10-x86/nativeassets/uap10.0/libEGL.dll",
+        "runtimes/win10-x86/nativeassets/uap10.0/libGLESv2.dll",
+        "runtimes/win10-x86/nativeassets/uap10.0/libSkiaSharp.dll",
+        "skiasharp.2.80.2.nupkg.sha512",
+        "skiasharp.nuspec"
+      ]
+    },
+    "Syncfusion.Licensing/19.3.0.53": {
+      "sha512": "4T+7hY4QIoSxgGS8ymSuAkdUHPVt5X2t0N/77ZqHm0nlPKQvVcVpoDuW49rThiaiqKQBf0XJSyBMZ9LsPMhAeA==",
+      "type": "package",
+      "path": "syncfusion.licensing/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/MonoAndroid10.0/Syncfusion.Licensing.dll",
+        "lib/MonoAndroid90/Syncfusion.Licensing.dll",
+        "lib/Xamarin.Mac/Syncfusion.Licensing.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Licensing.dll",
+        "lib/net20/Syncfusion.Licensing.dll",
+        "lib/net35/Syncfusion.Licensing.dll",
+        "lib/net40/Syncfusion.Licensing.dll",
+        "lib/net45/Syncfusion.Licensing.dll",
+        "lib/net451/Syncfusion.Licensing.dll",
+        "lib/net46/Syncfusion.Licensing.dll",
+        "lib/net5.0-windows10.0/Syncfusion.Licensing.dll",
+        "lib/net5.0/Syncfusion.Licensing.dll",
+        "lib/netcoreapp3.1/Syncfusion.Licensing.dll",
+        "lib/netstandard1.0/Syncfusion.Licensing.dll",
+        "lib/netstandard1.2/Syncfusion.Licensing.dll",
+        "lib/netstandard1.4/Syncfusion.Licensing.dll",
+        "lib/netstandard2.0/Syncfusion.Licensing.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Licensing.dll",
+        "lib/uap10.0/Syncfusion.Licensing.dll",
+        "syncfusion.licensing.19.3.0.53.nupkg.sha512",
+        "syncfusion.licensing.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.Buttons.IOS/19.3.0.53": {
+      "sha512": "rQ9U3tL8gCQ+G2WaQIcFjSVa89giar+DX0pY/lZw6jtfB9xziVCTxUd/NdMn2NrBjrTlcVHoRoL7uuuCsiIKYw==",
+      "type": "package",
+      "path": "syncfusion.xamarin.buttons.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.Buttons.iOS.XML",
+        "lib/Xamarin.iOS10/Syncfusion.Buttons.iOS.dll",
+        "syncfusion.xamarin.buttons.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.buttons.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.Calculate/19.3.0.53": {
+      "sha512": "RpKXyMkWXG8CL3g9vBsyU5wiHb1yPekJq2Ho+7ieiDeyvW9KY0WfWzecE7Esr2wtDAalfi3evPFHloVRTBXqDQ==",
+      "type": "package",
+      "path": "syncfusion.xamarin.calculate/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/netstandard2.0/Syncfusion.Calculate.Portable.XML",
+        "lib/netstandard2.0/Syncfusion.Calculate.Portable.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Calculate.Portable.XML",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Calculate.Portable.dll",
+        "syncfusion.xamarin.calculate.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.calculate.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.Compression/19.3.0.53": {
+      "sha512": "qru9pDv9cEeJS9EFNdX6EZaTgjsWxgPe84pSRYMtPcgYYZ6xGg41oN1IQaLYj5aHKgbu9Xh+GdaO2j6pn/W99g==",
+      "type": "package",
+      "path": "syncfusion.xamarin.compression/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/netstandard1.4/Syncfusion.Compression.Portable.dll",
+        "lib/netstandard1.4/Syncfusion.Compression.Portable.xml",
+        "lib/netstandard2.0/Syncfusion.Compression.Portable.dll",
+        "lib/netstandard2.0/Syncfusion.Compression.Portable.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Compression.Portable.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Compression.Portable.xml",
+        "syncfusion.xamarin.compression.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.compression.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.DataGridExport.IOS/19.3.0.53": {
+      "sha512": "AvzhzlaCeSNTC9rXdQLf5rFPDGKTSYEIrKsfRhFEg44PwC9jCxvz92XB0Im5LOg63EtV5ZxK80li3M/JtpYCrg==",
+      "type": "package",
+      "path": "syncfusion.xamarin.datagridexport.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfGridConverter.iOS.XML",
+        "lib/Xamarin.iOS10/Syncfusion.SfGridConverter.iOS.dll",
+        "syncfusion.xamarin.datagridexport.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.datagridexport.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.DataSource/19.3.0.53": {
+      "sha512": "Eb6U8WNtPDoAKfucP71UjpZ+A53Cm+V7KucIbWPScQzzYj84TNFR9KzukiYnPbgl1c+fVt7v1ukPGcuvlfE6mQ==",
+      "type": "package",
+      "path": "syncfusion.xamarin.datasource/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/MonoAndroid10.0/Syncfusion.DataSource.Portable.XML",
+        "lib/MonoAndroid10.0/Syncfusion.DataSource.Portable.dll",
+        "lib/MonoAndroid90/Syncfusion.DataSource.Portable.XML",
+        "lib/MonoAndroid90/Syncfusion.DataSource.Portable.dll",
+        "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.XML",
+        "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll",
+        "lib/netstandard2.0/Syncfusion.DataSource.Portable.XML",
+        "lib/netstandard2.0/Syncfusion.DataSource.Portable.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.DataSource.Portable.XML",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.DataSource.Portable.dll",
+        "lib/uap10.0/Syncfusion.DataSource.Portable.XML",
+        "lib/uap10.0/Syncfusion.DataSource.Portable.dll",
+        "syncfusion.xamarin.datasource.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.datasource.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.DocIO/19.3.0.53": {
+      "sha512": "0q4VhVcP/9VZSUttjZgooTHFZiWyWW0cpGw+HLOa27AF9U4qGG2kf+zcGspjVT+XMtH+nr0J6PnLvd7aOxaTBg==",
+      "type": "package",
+      "path": "syncfusion.xamarin.docio/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/netstandard1.4/Syncfusion.DocIO.Portable.dll",
+        "lib/netstandard1.4/Syncfusion.DocIO.Portable.xml",
+        "lib/netstandard2.0/Syncfusion.DocIO.Portable.dll",
+        "lib/netstandard2.0/Syncfusion.DocIO.Portable.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.DocIO.Portable.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.DocIO.Portable.xml",
+        "syncfusion.xamarin.docio.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.docio.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.DocIORenderer/19.3.0.53": {
+      "sha512": "/V0aOqjTh1+PvVW2hRPIE5gZShBP2iVZgFTY4Ay3yFBBCb1DQj4+sBdl+vwZ+BGUZo3J4POuqlaIZVnKTkgROg==",
+      "type": "package",
+      "path": "syncfusion.xamarin.dociorenderer/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/netstandard1.4/Syncfusion.DocIORenderer.Portable.dll",
+        "lib/netstandard2.0/Syncfusion.DocIORenderer.Portable.dll",
+        "syncfusion.xamarin.dociorenderer.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.dociorenderer.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.GridCommon/19.3.0.53": {
+      "sha512": "OVFlr42+GEUhc0kiSMI7q76n3aeBq0Bo6j3T0zSJzEVOYqesQfyPopdQUHHmEHS1TzNYCbFwo58x82JUUsPHMw==",
+      "type": "package",
+      "path": "syncfusion.xamarin.gridcommon/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/MonoAndroid10.0/Syncfusion.GridCommon.Portable.XML",
+        "lib/MonoAndroid10.0/Syncfusion.GridCommon.Portable.dll",
+        "lib/MonoAndroid90/Syncfusion.GridCommon.Portable.XML",
+        "lib/MonoAndroid90/Syncfusion.GridCommon.Portable.dll",
+        "lib/Xamarin.Mac/Syncfusion.GridCommon.Portable.XML",
+        "lib/Xamarin.Mac/Syncfusion.GridCommon.Portable.dll",
+        "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.XML",
+        "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll",
+        "lib/netstandard2.0/Syncfusion.GridCommon.Portable.XML",
+        "lib/netstandard2.0/Syncfusion.GridCommon.Portable.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.GridCommon.Portable.XML",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.GridCommon.Portable.dll",
+        "lib/uap10.0/Syncfusion.GridCommon.Portable.XML",
+        "lib/uap10.0/Syncfusion.GridCommon.Portable.dll",
+        "syncfusion.xamarin.gridcommon.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.gridcommon.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.OfficeChart/19.3.0.53": {
+      "sha512": "wfEmJAh1F/81xL3cNA5qVZbQaohGGH3kvjpkM26KlgvLBFO/e6wCo1aMsAAjYyHLQfXm9Rto0U7k4X3HkgH7/g==",
+      "type": "package",
+      "path": "syncfusion.xamarin.officechart/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/netstandard1.4/Syncfusion.OfficeChart.Portable.dll",
+        "lib/netstandard1.4/Syncfusion.OfficeChart.Portable.xml",
+        "lib/netstandard2.0/Syncfusion.OfficeChart.Portable.dll",
+        "lib/netstandard2.0/Syncfusion.OfficeChart.Portable.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.OfficeChart.Portable.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.OfficeChart.Portable.xml",
+        "syncfusion.xamarin.officechart.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.officechart.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.Pdf/19.3.0.53": {
+      "sha512": "oA3t/QfDj0KGIsHKUTx6hNF/veHpdvx+WD5XevgtSxsSupCU3nsR2akECpBlvBvKjuz4w6DWFrQxlyz5Kbr+LA==",
+      "type": "package",
+      "path": "syncfusion.xamarin.pdf/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/netstandard1.4/Syncfusion.Pdf.Portable.XML",
+        "lib/netstandard1.4/Syncfusion.Pdf.Portable.dll",
+        "lib/netstandard2.0/Syncfusion.Pdf.Portable.XML",
+        "lib/netstandard2.0/Syncfusion.Pdf.Portable.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Pdf.Portable.XML",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Pdf.Portable.dll",
+        "syncfusion.xamarin.pdf.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.pdf.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.Presentation/19.3.0.53": {
+      "sha512": "QrbhLYunHciwShOPdDUwdS94TaaDZLvzP4ELhBqd98b5BnEimnTRwk3dZ8iMV6a/KOo+riYvO4zzKbJdf4FDUQ==",
+      "type": "package",
+      "path": "syncfusion.xamarin.presentation/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/netstandard1.4/Syncfusion.Presentation.Portable.dll",
+        "lib/netstandard1.4/Syncfusion.Presentation.Portable.xml",
+        "lib/netstandard2.0/Syncfusion.Presentation.Portable.dll",
+        "lib/netstandard2.0/Syncfusion.Presentation.Portable.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Presentation.Portable.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Presentation.Portable.xml",
+        "syncfusion.xamarin.presentation.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.presentation.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.PresentationRenderer/19.3.0.53": {
+      "sha512": "c3D+SFBLNwvUUJJI2emVEfiqmQPfiB1qic3JVaKOSj1ynPuHO+P2OCQrGDSJDz0E4PK8lt40OEDWiEHPHgBtXg==",
+      "type": "package",
+      "path": "syncfusion.xamarin.presentationrenderer/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/netstandard1.4/Syncfusion.PresentationRenderer.Portable.dll",
+        "lib/netstandard2.0/Syncfusion.PresentationRenderer.Portable.dll",
+        "syncfusion.xamarin.presentationrenderer.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.presentationrenderer.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfAutoComplete.IOS/19.3.0.53": {
+      "sha512": "csXdRtA+Ujl+KWD2+e72t/IwKkS3ZL7PVwfd+6W1+YKsUO9AGczKhuIGDucicfiZRF+EUZxJ+hmfpzAx8CPIlg==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfautocomplete.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfAutoComplete.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfAutoComplete.iOS.xml",
+        "syncfusion.xamarin.sfautocomplete.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfautocomplete.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfBarCode.IOS/19.3.0.53": {
+      "sha512": "/4kHjzO9Jn8JLslfqFrOrXjJFBFaiLvi+BbhAA9EFxR2p4mCmInHotCFZd5qv7CkQBHgv4NR0998/BMqiaxeAg==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfbarcode.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfBarcode.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfBarcode.iOS.xml",
+        "syncfusion.xamarin.sfbarcode.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfbarcode.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfBusyIndicator.IOS/19.3.0.53": {
+      "sha512": "kIHFVlYlAT6NEU8Lcg4odbyE75wI2r+fh3YFktiMavMxiH4dHSJ8sQdJ+SW0WK8/H08gL2LBNG8VZbmTYNKQZQ==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfbusyindicator.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.iOS.xml",
+        "syncfusion.xamarin.sfbusyindicator.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfbusyindicator.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfCalendar.IOS/19.3.0.53": {
+      "sha512": "X3eLB/anecSd/14+EAxr5ywHfg06JJVDVmS2tJbnOtLDUbxp8HLb6+GwSgmVItUpNsHCC92KOPnXTFzYAD/AmA==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfcalendar.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfCalendar.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfCalendar.iOS.xml",
+        "syncfusion.xamarin.sfcalendar.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfcalendar.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfCarousel.IOS/19.3.0.53": {
+      "sha512": "wz7/B40OZaIEBSJZ/8NPCspsXYrnLTuovstcrrJu0vW98xn5pZlPavRJDJppHkrDtSFg3dZ1uBMMcGEgpeTgEA==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfcarousel.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfCarousel.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfCarousel.iOS.xml",
+        "syncfusion.xamarin.sfcarousel.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfcarousel.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfChart.IOS/19.3.0.53": {
+      "sha512": "CaKkbmfKgjW5SvboHhof+cBIvMbko1ViybcfTkBIR1y5IYjzHHZA4uxZ+DWwpNbErmlBXVBmD76PsIhC+92oYw==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfchart.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SFChart.iOS.XML",
+        "lib/Xamarin.iOS10/Syncfusion.SFChart.iOS.dll",
+        "syncfusion.xamarin.sfchart.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfchart.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfComboBox.IOS/19.3.0.53": {
+      "sha512": "1Xeul1u3JLsTJwzHJC91AuNr5qBZYwaB8V8eUAE65zG/mq3Esj6uqd5JOVOlSVUxVNSLzwH/d6O9PnG73mWaMg==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfcombobox.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.iOS.xml",
+        "syncfusion.xamarin.sfcombobox.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfcombobox.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfDataForm.IOS/19.3.0.53": {
+      "sha512": "NJwE5mYPqNiYfkNU77llWN8FAF/JaFnqL3yukpiYKbmEjMBh0M+MoLt6MQYzfXj5M96LilbN715faDGKvLa7eg==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfdataform.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfDataForm.iOS.XML",
+        "lib/Xamarin.iOS10/Syncfusion.SfDataForm.iOS.dll",
+        "syncfusion.xamarin.sfdataform.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfdataform.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfDataGrid.IOS/19.3.0.53": {
+      "sha512": "BbAd4zD+QuIW3CG8hPAfVceRqH8iSm5Qfrjpr6kwdNnhcWoK0XLnQFHiP2gJQW7rcLWNc0EGBEbmFjfnR56tPA==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfdatagrid.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.Linq.iOS.XML",
+        "lib/Xamarin.iOS10/Syncfusion.Linq.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfDataGrid.iOS.XML",
+        "lib/Xamarin.iOS10/Syncfusion.SfDataGrid.iOS.dll",
+        "syncfusion.xamarin.sfdatagrid.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfdatagrid.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfDiagram.IOS/19.3.0.53": {
+      "sha512": "V/M+rYXrWqwXGz6qGfR3erEshrRffglomPkA/nTXnqk7qQsvixBMRak9dVMjeqMtIgnCClwp7H5MnNNwjnsGhA==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfdiagram.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfDiagram.iOS.XML",
+        "lib/Xamarin.iOS10/Syncfusion.SfDiagram.iOS.dll",
+        "syncfusion.xamarin.sfdiagram.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfdiagram.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfGauge.IOS/19.3.0.53": {
+      "sha512": "eEGRf6EAPh5KElGzJQ6dKAOZRjka4QiFHzqijsUxd8OWl/OAqmFLdAsHuwNacIpCHvhiLbgMmeG11b490Lcb0Q==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfgauge.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfGauge.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfGauge.iOS.xml",
+        "syncfusion.xamarin.sfgauge.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfgauge.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfImageEditor.IOS/19.3.0.53": {
+      "sha512": "lRV6tnrdT2nJ/dXPHS9V8UbIvvfW4Jlpwice5lESDPZUlk3WjedesFk5+wFVk1M+Kv4Ng/GqitbDzuHkdijGcA==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfimageeditor.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfImageEditor.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfImageEditor.iOS.xml",
+        "syncfusion.xamarin.sfimageeditor.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfimageeditor.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfKanban.IOS/19.3.0.53": {
+      "sha512": "b/+PuHZiU/kl5a2cU7FxEWxScLZJBW7+s05iADWPNxuUSx36kgSv249MsUr7CXcXw6OJ9ujCBvE1eG+/YR5G3w==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfkanban.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfKanban.iOS.XML",
+        "lib/Xamarin.iOS10/Syncfusion.SfKanban.iOS.dll",
+        "syncfusion.xamarin.sfkanban.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfkanban.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfMaps.IOS/19.3.0.53": {
+      "sha512": "TbpXPEV6Z6Fc79vOP/pTPcS/0N98po8KOJzEKsIv1Zi+YmMhT1NF3IXaM4L7ZYpGIaD5BGSbJCUa7RozTYwlxQ==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfmaps.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfMaps.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfMaps.iOS.xml",
+        "syncfusion.xamarin.sfmaps.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfmaps.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfMaskedEdit.IOS/19.3.0.53": {
+      "sha512": "3HO38kWvhsB5cGKA6kyPngGB0lMtetB4xpxGxU2/PtgpkcBZFAY4c4Q6nOM55+Pj7HnMAxgM91Cfklet4nW5zg==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfmaskededit.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfMaskedEdit.iOS.XML",
+        "lib/Xamarin.iOS10/Syncfusion.SfMaskedEdit.iOS.dll",
+        "syncfusion.xamarin.sfmaskededit.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfmaskededit.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfNavigationDrawer.IOS/19.3.0.53": {
+      "sha512": "in63+X9IiAKKgosZleBoxAC/fBZTlLZdqagYbn8YC8+o3JEXGjUHYPcKL7yEK8cwaWV2G9ACoBCZKKIYcUbtNg==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfnavigationdrawer.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfNavigationDrawer.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfNavigationDrawer.iOS.xml",
+        "syncfusion.xamarin.sfnavigationdrawer.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfnavigationdrawer.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfNumericTextBox.IOS/19.3.0.53": {
+      "sha512": "VgtHIZo4Nk3mHZjsSNArg+r3M8h92IG4E4K8WZ4Jq5lMEBZE0CihVjlPX8MYIQl83p2w+qW9b43+X4Q700jrHg==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfnumerictextbox.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfNumericTextBox.iOS.XML",
+        "lib/Xamarin.iOS10/Syncfusion.SfNumericTextBox.iOS.dll",
+        "syncfusion.xamarin.sfnumerictextbox.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfnumerictextbox.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfNumericUpDown.IOS/19.3.0.53": {
+      "sha512": "sakBHFKer4AP5CoSGwANOnNyo4Rt8GruNoVi5nV2pj4nuSW5f0psngx/dDlbc3/trjQyg7gsTTWJqXjLuYAgXQ==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfnumericupdown.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfNumericUpDown.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfNumericUpDown.iOS.xml",
+        "syncfusion.xamarin.sfnumericupdown.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfnumericupdown.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfPdfViewer.IOS/19.3.0.53": {
+      "sha512": "rrPSyFsY4sMmYI0hBKUaGUQlPGWJMo1GvQbOhFCmyyRm55jt4kEsqQwV57SKV3AJJn/qlZ/7ousoxyY5zJXmQA==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfpdfviewer.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfPdfViewer.iOS.XML",
+        "lib/Xamarin.iOS10/Syncfusion.SfPdfViewer.iOS.dll",
+        "syncfusion.xamarin.sfpdfviewer.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfpdfviewer.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfPicker.IOS/19.3.0.53": {
+      "sha512": "6MvZQf57GyEy0d7kiz7J0XjTg0zSQ+f/e8Dj2dRlrRN9lCMMVur7mIOyBVRzA8Tu6+E0QwmY+4XjpWf71qw6aQ==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfpicker.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfPicker.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfPicker.iOS.xml",
+        "syncfusion.xamarin.sfpicker.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfpicker.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfPopupLayout.IOS/19.3.0.53": {
+      "sha512": "JAhnRRTnv1SjLVXxV84wtsnyijlYUoWEtDmsLmk88OjTd14ccU8n7m2C6+8Hgsoaa/NRTcKhzfUOuV9HD3qflQ==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfpopuplayout.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.iOS.XML",
+        "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.iOS.dll",
+        "syncfusion.xamarin.sfpopuplayout.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfpopuplayout.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfProgressBar.IOS/19.3.0.53": {
+      "sha512": "ZVDtxhYCdgnxnIwJ0uqH5JmxKoH8/DbVu2oyr0q9+o+LnKwgltzGL16wt0JOhwLL/+6PeKhNrlslIBdtDcE6FQ==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfprogressbar.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfProgressBar.iOS.XML",
+        "lib/Xamarin.iOS10/Syncfusion.SfProgressBar.iOS.dll",
+        "syncfusion.xamarin.sfprogressbar.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfprogressbar.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfPullToRefresh.IOS/19.3.0.53": {
+      "sha512": "KZacSA/hz8JcRDuxAGXI9YJnxjSyObKbnUiF7FXESY+TQ/6znn37nzb1hgj3TbwcAcEUZ76LPm+BzxhcHZJLdw==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfpulltorefresh.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfPullToRefresh.iOS.XML",
+        "lib/Xamarin.iOS10/Syncfusion.SfPullToRefresh.iOS.dll",
+        "syncfusion.xamarin.sfpulltorefresh.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfpulltorefresh.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfRadialMenu.IOS/19.3.0.53": {
+      "sha512": "nsFNXQt17NLJFClt6a+OLKFvxvtthpkd1P4MnQsNB6CIKsNimCEtKIJn5XNSDuPzNqMRSnVW+6us5xlyDo3PmA==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfradialmenu.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfRadialMenu.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfRadialMenu.iOS.xml",
+        "syncfusion.xamarin.sfradialmenu.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfradialmenu.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfRangeSlider.IOS/19.3.0.53": {
+      "sha512": "Ck6Y+LJAAqcVCI2h1194FlGOWDkhK0MBxNv8Q9O6b4904En7SNUi/wdNcsFvkwzwsv7HARCBHULHevwuOfz0aQ==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfrangeslider.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfRangeSlider.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfRangeSlider.iOS.xml",
+        "syncfusion.xamarin.sfrangeslider.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfrangeslider.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfRating.IOS/19.3.0.53": {
+      "sha512": "IqShFpxD1bpPI1tD8uhNalMhtA+ptrNrSdupyGrjVRlq9JBDUVyAgnK6fPZnUoYiQgS7m6b2RPo1oWcg/tL6VA==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfrating.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfRating.iOS.dll",
+        "syncfusion.xamarin.sfrating.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfrating.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfRotator.IOS/19.3.0.53": {
+      "sha512": "AyuSJVg1nNLEsHkL7JSdv2isBQgeLl6v/UCFCi32VGdejDEjLzzmr0xyt8WdqLE0U9nfLHwwZBFNajkezDoy1g==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfrotator.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfRotator.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfRotator.iOS.xml",
+        "syncfusion.xamarin.sfrotator.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfrotator.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfSchedule.IOS/19.3.0.53": {
+      "sha512": "3YJsR/JBCEwYiTlk/6oXMGTkdVTjRzaIoUoi6nnjRmhvZ7RWjiHAbQinkSBEq4B8cCVb5MHqk839pMyf/Xykog==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfschedule.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfSchedule.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfSchedule.iOS.xml",
+        "syncfusion.xamarin.sfschedule.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfschedule.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfSparkline.IOS/19.3.0.53": {
+      "sha512": "eBm4xdHzwW3vLv8l+4wF6GMcdV1K7xgCODDgk++rT8Xt72ZvpsofD0iagmJQgqhRHNCEtiipxKejjUn959AYyQ==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfsparkline.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfSparkline.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfSparkline.iOS.xml",
+        "syncfusion.xamarin.sfsparkline.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfsparkline.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfSunburstChart.IOS/19.3.0.53": {
+      "sha512": "1f7U3WXgbhXbjV5c5tmt1+JgJGn/CPcm3RilNlCFX19/o0Vpr19repblhxcnFbi/x4v7fpqwRFy3yTEc5VQFDA==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfsunburstchart.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfSunburstChart.iOS.XML",
+        "lib/Xamarin.iOS10/Syncfusion.SfSunburstChart.iOS.dll",
+        "syncfusion.xamarin.sfsunburstchart.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sfsunburstchart.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfTabView.IOS/19.3.0.53": {
+      "sha512": "LYRMouV8igvq3LbBHHHN5rqEbKpZUVowESiPCczmEV6TwHxmcjJ4Fm/mDxqcpvUciix5zqpE7vdPBoqR+efq6g==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sftabview.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfTabView.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfTabView.iOS.xml",
+        "syncfusion.xamarin.sftabview.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sftabview.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfTreeMap.IOS/19.3.0.53": {
+      "sha512": "4EojqaoPeH15sBTI26N/zCsfGKaFrRmFgC4TNFew8Gs76CkNhhv7r6gtNyn18zYQvDWpgn6VWd7wjuHgVrwUTQ==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sftreemap.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfTreeMap.iOS.XML",
+        "lib/Xamarin.iOS10/Syncfusion.SfTreeMap.iOS.dll",
+        "syncfusion.xamarin.sftreemap.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sftreemap.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfTreeView.IOS/19.3.0.53": {
+      "sha512": "8Jc94tFEnHZig/ckFesRxdY8vJgI6uCMwC5Fe6rExay2KvNwadiTmj3j7KCLOBNIp4VSjDt8nX7981M+a9uRWQ==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sftreeview.ios/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/Xamarin.iOS10/Syncfusion.SfTreeView.iOS.XML",
+        "lib/Xamarin.iOS10/Syncfusion.SfTreeView.iOS.dll",
+        "syncfusion.xamarin.sftreeview.ios.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.sftreeview.ios.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SkiaSharpHelper/19.3.0.53": {
+      "sha512": "5v4eeHsw80zNxCu1lqNPlbSp07SUZseImnW7iyT14KpjRjRktBSnofpsRKl5QpB0BA35BTE0gB1Ln7ZAESNuBA==",
+      "type": "package",
+      "path": "syncfusion.xamarin.skiasharphelper/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/netstandard1.4/Syncfusion.SkiaSharpHelper.Portable.dll",
+        "lib/netstandard2.0/Syncfusion.SkiaSharpHelper.Portable.dll",
+        "syncfusion.xamarin.skiasharphelper.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.skiasharphelper.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.XlsIO/19.3.0.53": {
+      "sha512": "WaQwSuDRNXSpL+zQCdh9Mlt+BrzX/EXEdUmgAZa0xSK0ISETNI8JAyZiiWcNB+QeEwXtrQq3GoNR/Wtj4oIKfw==",
+      "type": "package",
+      "path": "syncfusion.xamarin.xlsio/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/netstandard1.4/Syncfusion.XlsIO.Portable.dll",
+        "lib/netstandard1.4/Syncfusion.XlsIO.Portable.xml",
+        "lib/netstandard2.0/Syncfusion.XlsIO.Portable.dll",
+        "lib/netstandard2.0/Syncfusion.XlsIO.Portable.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.XlsIO.Portable.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.XlsIO.Portable.xml",
+        "syncfusion.xamarin.xlsio.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.xlsio.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.XlsIORenderer/19.3.0.53": {
+      "sha512": "Jl8NhVcPL0TzsOjjd0HBiNa+tPv/xXhFbwhwFVDTghcPhGooywPTgDpM8RNMXmBPw7/fnWXfOVLdyi+YAi6J9w==",
+      "type": "package",
+      "path": "syncfusion.xamarin.xlsiorenderer/19.3.0.53",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/netstandard1.4/Syncfusion.XlsIORenderer.Portable.dll",
+        "lib/netstandard2.0/Syncfusion.XlsIORenderer.Portable.dll",
+        "syncfusion.xamarin.xlsiorenderer.19.3.0.53.nupkg.sha512",
+        "syncfusion.xamarin.xlsiorenderer.nuspec",
+        "syncfusion_logo.png"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "Xamarin.iOS,Version=v1.0": [
+      "SkiaSharp >= 2.80.2",
+      "Syncfusion.Licensing >= 19.3.0.53",
+      "Syncfusion.Xamarin.Buttons.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.Calculate >= 19.3.0.53",
+      "Syncfusion.Xamarin.Compression >= 19.3.0.53",
+      "Syncfusion.Xamarin.DataGridExport.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.DataSource >= 19.3.0.53",
+      "Syncfusion.Xamarin.DocIO >= 19.3.0.53",
+      "Syncfusion.Xamarin.DocIORenderer >= 19.3.0.53",
+      "Syncfusion.Xamarin.GridCommon >= 19.3.0.53",
+      "Syncfusion.Xamarin.OfficeChart >= 19.3.0.53",
+      "Syncfusion.Xamarin.Pdf >= 19.3.0.53",
+      "Syncfusion.Xamarin.Presentation >= 19.3.0.53",
+      "Syncfusion.Xamarin.PresentationRenderer >= 19.3.0.53",
+      "Syncfusion.Xamarin.SFChart.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfAutoComplete.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfBarcode.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfBusyIndicator.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfCalendar.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfCarousel.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfComboBox.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfDataForm.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfDataGrid.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfDiagram.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfGauge.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfImageEditor.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfKanban.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfMaps.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfMaskedEdit.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfNavigationDrawer.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfNumericTextBox.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfNumericUpDown.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfPdfViewer.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfPicker.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfPopupLayout.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfProgressBar.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfPullToRefresh.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfRadialMenu.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfRangeSlider.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfRating.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfRotator.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfSchedule.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfSparkline.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfSunburstChart.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfTabView.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfTreeMap.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SfTreeView.iOS >= 19.3.0.53",
+      "Syncfusion.Xamarin.SkiaSharpHelper >= 19.3.0.53",
+      "Syncfusion.Xamarin.XlsIO >= 19.3.0.53",
+      "Syncfusion.Xamarin.XlsIORenderer >= 19.3.0.53"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\BuildAutomation\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Samples_19.3.0.53\\Xamarin\\iOS\\SampleBrowser\\SampleBrowser.csproj",
+      "projectName": "SampleBrowser",
+      "projectPath": "D:\\Samples_19.3.0.53\\Xamarin\\iOS\\SampleBrowser\\SampleBrowser.csproj",
+      "packagesPath": "C:\\Users\\BuildAutomation\\.nuget\\packages\\",
+      "outputPath": "D:\\Samples_19.3.0.53\\Xamarin\\iOS\\SampleBrowser\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
+      "configFilePaths": [
+        "D:\\Samples_19.3.0.53\\Xamarin\\iOS\\SampleBrowser\\NuGet.Config",
+        "C:\\Users\\BuildAutomation\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "xamarinios10"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://nexus.syncfusion.com/repository/nuget-hosted/": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "xamarinios10": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "xamarinios10": {
+        "dependencies": {
+          "SkiaSharp": {
+            "target": "Package",
+            "version": "[2.80.2, )"
+          },
+          "Syncfusion.Licensing": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.Buttons.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.Calculate": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.Compression": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.DataGridExport.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.DataSource": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.DocIO": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.DocIORenderer": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.GridCommon": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.OfficeChart": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.Pdf": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.Presentation": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.PresentationRenderer": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SFChart.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfAutoComplete.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfBarcode.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfBusyIndicator.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfCalendar.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfCarousel.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfComboBox.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfDataForm.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfDataGrid.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfDiagram.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfGauge.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfImageEditor.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfKanban.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfMaps.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfMaskedEdit.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfNavigationDrawer.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfNumericTextBox.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfNumericUpDown.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfPdfViewer.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfPicker.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfPopupLayout.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfProgressBar.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfPullToRefresh.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfRadialMenu.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfRangeSlider.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfRating.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfRotator.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfSchedule.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfSparkline.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfSunburstChart.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfTabView.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfTreeMap.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfTreeView.iOS": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.SkiaSharpHelper": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.XlsIO": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          },
+          "Syncfusion.Xamarin.XlsIORenderer": {
+            "target": "Package",
+            "version": "[19.3.0.53, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

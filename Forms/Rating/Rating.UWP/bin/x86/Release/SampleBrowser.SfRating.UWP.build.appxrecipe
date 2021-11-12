@@ -1,0 +1,963 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>SYNCDESKN15780</Machine>
+    <WindowsUser>BuildAutomation</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Release|x86</SolutionConfiguration>
+    <PackageArchitecture>x86</PackageArchitecture>
+    <PackageIdentityName>352cb9cd-f2e6-4411-889a-2348c0dcbe52</PackageIdentityName>
+    <PackageIdentityPublisher>CN=Syncfusion</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\Work_PSA\Obj\</IntermediateOutputPath>
+    <RemoteDeploymentType></RemoteDeploymentType>
+    <PackageRegistrationPath></PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
+    <LayoutDir>D:\Samples_19.3.0.53\Xamarin\Forms\Rating\Rating.UWP\bin\x86\Release\AppX</LayoutDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\Samples_19.3.0.53\Xamarin\Forms\Rating\Rating.UWP\bin\x86\Release\Core\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\Samples_19.3.0.53\Xamarin\Forms\Rating\Rating.UWP\bin\x86\Release\SampleBrowser.SfRating.UWP.exe">
+      <PackagePath>entrypoint\SampleBrowser.SfRating.UWP.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\nativeassets\uap10.0.15138\clrcompression.dll">
+      <PackagePath>clrcompression.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\Microsoft.CSharp.dll">
+      <PackagePath>Microsoft.CSharp.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\Microsoft.VisualBasic.dll">
+      <PackagePath>Microsoft.VisualBasic.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\Microsoft.Win32.Primitives.dll">
+      <PackagePath>Microsoft.Win32.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.AppContext.dll">
+      <PackagePath>System.AppContext.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Buffers.dll">
+      <PackagePath>System.Buffers.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Collections.Concurrent.dll">
+      <PackagePath>System.Collections.Concurrent.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Collections.Immutable.dll">
+      <PackagePath>System.Collections.Immutable.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Collections.NonGeneric.dll">
+      <PackagePath>System.Collections.NonGeneric.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Collections.Specialized.dll">
+      <PackagePath>System.Collections.Specialized.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Collections.dll">
+      <PackagePath>System.Collections.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.ComponentModel.Annotations.dll">
+      <PackagePath>System.ComponentModel.Annotations.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.ComponentModel.Composition.dll">
+      <PackagePath>System.ComponentModel.Composition.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.ComponentModel.DataAnnotations.dll">
+      <PackagePath>System.ComponentModel.DataAnnotations.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.ComponentModel.EventBasedAsync.dll">
+      <PackagePath>System.ComponentModel.EventBasedAsync.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.ComponentModel.Primitives.dll">
+      <PackagePath>System.ComponentModel.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.ComponentModel.TypeConverter.dll">
+      <PackagePath>System.ComponentModel.TypeConverter.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.ComponentModel.dll">
+      <PackagePath>System.ComponentModel.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Configuration.dll">
+      <PackagePath>System.Configuration.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Console.dll">
+      <PackagePath>System.Console.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Core.dll">
+      <PackagePath>System.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Data.Common.dll">
+      <PackagePath>System.Data.Common.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Data.SqlClient.dll">
+      <PackagePath>System.Data.SqlClient.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Data.dll">
+      <PackagePath>System.Data.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Diagnostics.Contracts.dll">
+      <PackagePath>System.Diagnostics.Contracts.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Diagnostics.Debug.dll">
+      <PackagePath>System.Diagnostics.Debug.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Diagnostics.DiagnosticSource.dll">
+      <PackagePath>System.Diagnostics.DiagnosticSource.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Diagnostics.FileVersionInfo.dll">
+      <PackagePath>System.Diagnostics.FileVersionInfo.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Diagnostics.Process.dll">
+      <PackagePath>System.Diagnostics.Process.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Diagnostics.StackTrace.dll">
+      <PackagePath>System.Diagnostics.StackTrace.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Diagnostics.TextWriterTraceListener.dll">
+      <PackagePath>System.Diagnostics.TextWriterTraceListener.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Diagnostics.Tools.dll">
+      <PackagePath>System.Diagnostics.Tools.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Diagnostics.TraceSource.dll">
+      <PackagePath>System.Diagnostics.TraceSource.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Diagnostics.Tracing.dll">
+      <PackagePath>System.Diagnostics.Tracing.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Drawing.Primitives.dll">
+      <PackagePath>System.Drawing.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Drawing.dll">
+      <PackagePath>System.Drawing.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Dynamic.Runtime.dll">
+      <PackagePath>System.Dynamic.Runtime.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Globalization.Calendars.dll">
+      <PackagePath>System.Globalization.Calendars.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Globalization.Extensions.dll">
+      <PackagePath>System.Globalization.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Globalization.dll">
+      <PackagePath>System.Globalization.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.IO.Compression.FileSystem.dll">
+      <PackagePath>System.IO.Compression.FileSystem.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.IO.Compression.ZipFile.dll">
+      <PackagePath>System.IO.Compression.ZipFile.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.IO.Compression.dll">
+      <PackagePath>System.IO.Compression.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.IO.FileSystem.DriveInfo.dll">
+      <PackagePath>System.IO.FileSystem.DriveInfo.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.IO.FileSystem.Primitives.dll">
+      <PackagePath>System.IO.FileSystem.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.IO.FileSystem.Watcher.dll">
+      <PackagePath>System.IO.FileSystem.Watcher.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.IO.FileSystem.dll">
+      <PackagePath>System.IO.FileSystem.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.IO.IsolatedStorage.dll">
+      <PackagePath>System.IO.IsolatedStorage.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.IO.MemoryMappedFiles.dll">
+      <PackagePath>System.IO.MemoryMappedFiles.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.IO.Pipes.dll">
+      <PackagePath>System.IO.Pipes.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.IO.Ports.dll">
+      <PackagePath>System.IO.Ports.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.IO.UnmanagedMemoryStream.dll">
+      <PackagePath>System.IO.UnmanagedMemoryStream.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.IO.dll">
+      <PackagePath>System.IO.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Linq.Expressions.dll">
+      <PackagePath>System.Linq.Expressions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Linq.Parallel.dll">
+      <PackagePath>System.Linq.Parallel.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Linq.Queryable.dll">
+      <PackagePath>System.Linq.Queryable.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Linq.dll">
+      <PackagePath>System.Linq.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Net.Http.Rtc.dll">
+      <PackagePath>System.Net.Http.Rtc.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Net.Http.dll">
+      <PackagePath>System.Net.Http.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Net.HttpListener.dll">
+      <PackagePath>System.Net.HttpListener.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Net.Mail.dll">
+      <PackagePath>System.Net.Mail.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Net.NameResolution.dll">
+      <PackagePath>System.Net.NameResolution.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Net.NetworkInformation.dll">
+      <PackagePath>System.Net.NetworkInformation.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Net.Ping.dll">
+      <PackagePath>System.Net.Ping.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Net.Primitives.dll">
+      <PackagePath>System.Net.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Net.Requests.dll">
+      <PackagePath>System.Net.Requests.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Net.Security.dll">
+      <PackagePath>System.Net.Security.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Net.ServicePoint.dll">
+      <PackagePath>System.Net.ServicePoint.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Net.Sockets.dll">
+      <PackagePath>System.Net.Sockets.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Net.WebClient.dll">
+      <PackagePath>System.Net.WebClient.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Net.WebHeaderCollection.dll">
+      <PackagePath>System.Net.WebHeaderCollection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Net.WebProxy.dll">
+      <PackagePath>System.Net.WebProxy.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Net.WebSockets.Client.dll">
+      <PackagePath>System.Net.WebSockets.Client.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Net.WebSockets.dll">
+      <PackagePath>System.Net.WebSockets.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Net.dll">
+      <PackagePath>System.Net.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Numerics.Vectors.WindowsRuntime.dll">
+      <PackagePath>System.Numerics.Vectors.WindowsRuntime.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Numerics.Vectors.dll">
+      <PackagePath>System.Numerics.Vectors.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Numerics.dll">
+      <PackagePath>System.Numerics.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.ObjectModel.dll">
+      <PackagePath>System.ObjectModel.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Private.DataContractSerialization.dll">
+      <PackagePath>System.Private.DataContractSerialization.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Private.ServiceModel.dll">
+      <PackagePath>System.Private.ServiceModel.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Private.Uri.dll">
+      <PackagePath>System.Private.Uri.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Private.Xml.Linq.dll">
+      <PackagePath>System.Private.Xml.Linq.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Private.Xml.dll">
+      <PackagePath>System.Private.Xml.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Reflection.Context.dll">
+      <PackagePath>System.Reflection.Context.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Reflection.DispatchProxy.dll">
+      <PackagePath>System.Reflection.DispatchProxy.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Reflection.Emit.ILGeneration.dll">
+      <PackagePath>System.Reflection.Emit.ILGeneration.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Reflection.Emit.Lightweight.dll">
+      <PackagePath>System.Reflection.Emit.Lightweight.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Reflection.Emit.dll">
+      <PackagePath>System.Reflection.Emit.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Reflection.Extensions.dll">
+      <PackagePath>System.Reflection.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Reflection.Metadata.dll">
+      <PackagePath>System.Reflection.Metadata.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Reflection.Primitives.dll">
+      <PackagePath>System.Reflection.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Reflection.TypeExtensions.dll">
+      <PackagePath>System.Reflection.TypeExtensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Reflection.dll">
+      <PackagePath>System.Reflection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Resources.Reader.dll">
+      <PackagePath>System.Resources.Reader.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Resources.ResourceManager.dll">
+      <PackagePath>System.Resources.ResourceManager.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Resources.Writer.dll">
+      <PackagePath>System.Resources.Writer.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.CompilerServices.VisualC.dll">
+      <PackagePath>System.Runtime.CompilerServices.VisualC.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.Extensions.dll">
+      <PackagePath>System.Runtime.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.Handles.dll">
+      <PackagePath>System.Runtime.Handles.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.InteropServices.RuntimeInformation.dll">
+      <PackagePath>System.Runtime.InteropServices.RuntimeInformation.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.InteropServices.WindowsRuntime.dll">
+      <PackagePath>System.Runtime.InteropServices.WindowsRuntime.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.InteropServices.dll">
+      <PackagePath>System.Runtime.InteropServices.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.Numerics.dll">
+      <PackagePath>System.Runtime.Numerics.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.Serialization.Formatters.dll">
+      <PackagePath>System.Runtime.Serialization.Formatters.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.Serialization.Json.dll">
+      <PackagePath>System.Runtime.Serialization.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.Serialization.Primitives.dll">
+      <PackagePath>System.Runtime.Serialization.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.Serialization.Xml.dll">
+      <PackagePath>System.Runtime.Serialization.Xml.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.Serialization.dll">
+      <PackagePath>System.Runtime.Serialization.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.WindowsRuntime.UI.Xaml.dll">
+      <PackagePath>System.Runtime.WindowsRuntime.UI.Xaml.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.WindowsRuntime.dll">
+      <PackagePath>System.Runtime.WindowsRuntime.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
+      <PackagePath>System.Runtime.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Security.AccessControl.dll">
+      <PackagePath>System.Security.AccessControl.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Security.Claims.dll">
+      <PackagePath>System.Security.Claims.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Security.Cryptography.Algorithms.dll">
+      <PackagePath>System.Security.Cryptography.Algorithms.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Security.Cryptography.Cng.dll">
+      <PackagePath>System.Security.Cryptography.Cng.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Security.Cryptography.Csp.dll">
+      <PackagePath>System.Security.Cryptography.Csp.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Security.Cryptography.Encoding.dll">
+      <PackagePath>System.Security.Cryptography.Encoding.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Security.Cryptography.Primitives.dll">
+      <PackagePath>System.Security.Cryptography.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Security.Cryptography.X509Certificates.dll">
+      <PackagePath>System.Security.Cryptography.X509Certificates.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Security.Principal.Windows.dll">
+      <PackagePath>System.Security.Principal.Windows.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Security.Principal.dll">
+      <PackagePath>System.Security.Principal.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Security.SecureString.dll">
+      <PackagePath>System.Security.SecureString.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Security.dll">
+      <PackagePath>System.Security.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.ServiceModel.Duplex.dll">
+      <PackagePath>System.ServiceModel.Duplex.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.ServiceModel.Http.dll">
+      <PackagePath>System.ServiceModel.Http.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.ServiceModel.NetTcp.dll">
+      <PackagePath>System.ServiceModel.NetTcp.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.ServiceModel.Primitives.dll">
+      <PackagePath>System.ServiceModel.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.ServiceModel.Security.dll">
+      <PackagePath>System.ServiceModel.Security.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.ServiceModel.Web.dll">
+      <PackagePath>System.ServiceModel.Web.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.ServiceModel.dll">
+      <PackagePath>System.ServiceModel.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.ServiceProcess.dll">
+      <PackagePath>System.ServiceProcess.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Text.Encoding.CodePages.dll">
+      <PackagePath>System.Text.Encoding.CodePages.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Text.Encoding.Extensions.dll">
+      <PackagePath>System.Text.Encoding.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Text.Encoding.dll">
+      <PackagePath>System.Text.Encoding.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Text.RegularExpressions.dll">
+      <PackagePath>System.Text.RegularExpressions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Threading.Overlapped.dll">
+      <PackagePath>System.Threading.Overlapped.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Threading.Tasks.Dataflow.dll">
+      <PackagePath>System.Threading.Tasks.Dataflow.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Threading.Tasks.Extensions.dll">
+      <PackagePath>System.Threading.Tasks.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Threading.Tasks.Parallel.dll">
+      <PackagePath>System.Threading.Tasks.Parallel.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Threading.Tasks.dll">
+      <PackagePath>System.Threading.Tasks.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Threading.Thread.dll">
+      <PackagePath>System.Threading.Thread.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Threading.ThreadPool.dll">
+      <PackagePath>System.Threading.ThreadPool.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Threading.Timer.dll">
+      <PackagePath>System.Threading.Timer.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Threading.dll">
+      <PackagePath>System.Threading.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Transactions.Local.dll">
+      <PackagePath>System.Transactions.Local.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Transactions.dll">
+      <PackagePath>System.Transactions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.ValueTuple.dll">
+      <PackagePath>System.ValueTuple.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Web.HttpUtility.dll">
+      <PackagePath>System.Web.HttpUtility.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Web.dll">
+      <PackagePath>System.Web.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Windows.dll">
+      <PackagePath>System.Windows.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Xml.Linq.dll">
+      <PackagePath>System.Xml.Linq.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Xml.ReaderWriter.dll">
+      <PackagePath>System.Xml.ReaderWriter.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Xml.Serialization.dll">
+      <PackagePath>System.Xml.Serialization.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Xml.XDocument.dll">
+      <PackagePath>System.Xml.XDocument.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Xml.XPath.XDocument.dll">
+      <PackagePath>System.Xml.XPath.XDocument.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Xml.XPath.dll">
+      <PackagePath>System.Xml.XPath.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Xml.XmlDocument.dll">
+      <PackagePath>System.Xml.XmlDocument.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Xml.XmlSerializer.dll">
+      <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.Xml.dll">
+      <PackagePath>System.Xml.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\System.dll">
+      <PackagePath>System.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\WindowsBase.dll">
+      <PackagePath>WindowsBase.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\mscorlib.dll">
+      <PackagePath>mscorlib.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.15\runtimes\win10-x86\lib\uap10.0.15138\netstandard.dll">
+      <PackagePath>netstandard.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP.dll">
+      <PackagePath>SampleBrowser.Core.UWP.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.dll">
+      <PackagePath>SampleBrowser.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\syncfusion.licensing\19.3.0.53\lib\uap10.0\Syncfusion.Licensing.dll">
+      <PackagePath>Syncfusion.Licensing.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\syncfusion.sfinput.uwp\19.3.0.53\lib\uap10.0\Syncfusion.SfInput.UWP.dll">
+      <PackagePath>Syncfusion.SfInput.UWP.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\syncfusion.sfshared.uwp\19.3.0.53\lib\uap10.0\Syncfusion.SfShared.UWP.dll">
+      <PackagePath>Syncfusion.SfShared.UWP.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\syncfusion.xamarin.core\19.3.0.53\lib\uap10.0\Syncfusion.Core.XForms.UWP.dll">
+      <PackagePath>Syncfusion.Core.XForms.UWP.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\syncfusion.xamarin.core\19.3.0.53\lib\uap10.0\Syncfusion.Core.XForms.dll">
+      <PackagePath>Syncfusion.Core.XForms.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\syncfusion.xamarin.datasource\19.3.0.53\lib\uap10.0\Syncfusion.DataSource.Portable.dll">
+      <PackagePath>Syncfusion.DataSource.Portable.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\syncfusion.xamarin.gridcommon\19.3.0.53\lib\uap10.0\Syncfusion.GridCommon.Portable.dll">
+      <PackagePath>Syncfusion.GridCommon.Portable.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\syncfusion.xamarin.sflistview\19.3.0.53\lib\uap10.0\Syncfusion.SfListView.XForms.UWP.dll">
+      <PackagePath>Syncfusion.SfListView.XForms.UWP.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\syncfusion.xamarin.sflistview\19.3.0.53\lib\uap10.0\Syncfusion.SfListView.XForms.dll">
+      <PackagePath>Syncfusion.SfListView.XForms.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\syncfusion.xamarin.sfnumericupdown\19.3.0.53\lib\uap10.0\Syncfusion.SfNumericUpDown.XForms.UWP.dll">
+      <PackagePath>Syncfusion.SfNumericUpDown.XForms.UWP.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\syncfusion.xamarin.sfnumericupdown\19.3.0.53\lib\uap10.0\Syncfusion.SfNumericUpDown.XForms.dll">
+      <PackagePath>Syncfusion.SfNumericUpDown.XForms.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\syncfusion.xamarin.sfrating\19.3.0.53\lib\uap10.0\Syncfusion.SfRating.XForms.UWP.dll">
+      <PackagePath>Syncfusion.SfRating.XForms.UWP.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\syncfusion.xamarin.sfrating\19.3.0.53\lib\uap10.0\Syncfusion.SfRating.XForms.dll">
+      <PackagePath>Syncfusion.SfRating.XForms.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\win2d.uwp\1.20.0\runtimes\win10-x86\native\Microsoft.Graphics.Canvas.dll">
+      <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\xamarin.forms\4.5.0.617\lib\uap10.0.16299\Xamarin.Forms.Core.dll">
+      <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\xamarin.forms\4.5.0.617\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP.dll">
+      <PackagePath>Xamarin.Forms.Platform.UAP.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\xamarin.forms\4.5.0.617\lib\uap10.0.16299\Xamarin.Forms.Platform.dll">
+      <PackagePath>Xamarin.Forms.Platform.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\xamarin.forms\4.5.0.617\lib\uap10.0.16299\Xamarin.Forms.Xaml.dll">
+      <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Samples_19.3.0.53\Xamarin\Forms\Rating\Rating\bin\Release\netstandard2.0\SampleBrowser.SfRating.dll">
+      <PackagePath>SampleBrowser.SfRating.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
+      <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Samples_19.3.0.53\Xamarin\Forms\Resources\Image\Smiley\Angry.png">
+      <PackagePath>Angry.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Samples_19.3.0.53\Xamarin\Forms\Resources\Image\Smiley\AngrySelected.png">
+      <PackagePath>AngrySelected.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Samples_19.3.0.53\Xamarin\Forms\Resources\Image\Smiley\AngryUnselected.png">
+      <PackagePath>AngryUnselected.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Samples_19.3.0.53\Xamarin\Forms\Resources\Image\Smiley\ExcitedSelected.png">
+      <PackagePath>ExcitedSelected.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Samples_19.3.0.53\Xamarin\Forms\Resources\Image\Smiley\ExcitedUnselected.png">
+      <PackagePath>ExcitedUnselected.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Samples_19.3.0.53\Xamarin\Forms\Resources\Image\Smiley\HappySelected.png">
+      <PackagePath>HappySelected.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Samples_19.3.0.53\Xamarin\Forms\Resources\Image\Smiley\HappyUnselected.png">
+      <PackagePath>HappyUnselected.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Samples_19.3.0.53\Xamarin\Forms\Resources\Image\Smiley\NeutralSelected.png">
+      <PackagePath>NeutralSelected.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Samples_19.3.0.53\Xamarin\Forms\Resources\Image\Smiley\NeutralUnselected.png">
+      <PackagePath>NeutralUnselected.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Samples_19.3.0.53\Xamarin\Forms\Resources\Image\Smiley\UnhappySelected.png">
+      <PackagePath>UnhappySelected.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Samples_19.3.0.53\Xamarin\Forms\Resources\Image\Smiley\UnhappyUnselected.png">
+      <PackagePath>UnhappyUnselected.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Samples_19.3.0.53\Xamarin\Forms\Resources\Image\Movie\movie.png">
+      <PackagePath>movie.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Samples_19.3.0.53\Xamarin\Forms\Rating\Rating.UWP\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Samples_19.3.0.53\Xamarin\Forms\Rating\Rating.UWP\bin\x86\Release\SampleBrowser.SfRating.UWP.xr.xml">
+      <PackagePath>SampleBrowser.SfRating.UWP.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
+      <PackagePath>WinMetadata\Windows.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\microsoft.ui.xaml\2.3.191211002\build\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
+      <PackagePath>WinMetadata\Microsoft.UI.Xaml.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Option.png">
+      <PackagePath>SampleBrowser.Core.UWP\Option.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\ViewCode.png">
+      <PackagePath>SampleBrowser.Core.UWP\ViewCode.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\LockScreenLogo.scale-400.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\LockScreenLogo.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\LockScreenLogo.scale-200.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\LockScreenLogo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\LockScreenLogo.scale-150.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\LockScreenLogo.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\LockScreenLogo.scale-125.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\LockScreenLogo.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\LockScreenLogo.scale-100.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\LockScreenLogo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\SplashScreen.scale-400.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\SplashScreen.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\SplashScreen.scale-200.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\SplashScreen.scale-150.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\SplashScreen.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\SplashScreen.scale-125.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\SplashScreen.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\SplashScreen.scale-100.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\Square150x150Logo.scale-400.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\Square150x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\Square150x150Logo.scale-200.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\Square150x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\Square150x150Logo.scale-150.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\Square150x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\Square150x150Logo.scale-125.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\Square150x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\Square150x150Logo.scale-100.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\Square44x44Logo.targetsize-48_altform-unplated.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\Square44x44Logo.targetsize-48_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\Square44x44Logo.targetsize-32_altform-unplated.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\Square44x44Logo.targetsize-32_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\Square44x44Logo.targetsize-256_altform-unplated.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\Square44x44Logo.targetsize-256_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\Square44x44Logo.targetsize-16_altform-unplated.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\Square44x44Logo.targetsize-16_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\Square44x44Logo.scale-400.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\Square44x44Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\Square44x44Logo.scale-200.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\Square44x44Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\Square44x44Logo.scale-150.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\Square44x44Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\Square44x44Logo.scale-125.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\Square44x44Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\Square44x44Logo.scale-100.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\StoreLogo.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\Wide310x150Logo.scale-400.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\Wide310x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\Wide310x150Logo.scale-200.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\Wide310x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\Wide310x150Logo.scale-150.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\Wide310x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\Wide310x150Logo.scale-125.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\Wide310x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Assets\Wide310x150Logo.scale-100.png">
+      <PackagePath>SampleBrowser.Core.UWP\Assets\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Properties\Default.rd.xml">
+      <PackagePath>SampleBrowser.Core.UWP\Properties\Default.rd.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Tags\newimage.png">
+      <PackagePath>SampleBrowser.Core.UWP\Tags\newimage.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Tags\preview.png">
+      <PackagePath>SampleBrowser.Core.UWP\Tags\preview.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Tags\updated.png">
+      <PackagePath>SampleBrowser.Core.UWP\Tags\updated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Tags\x_new.png">
+      <PackagePath>SampleBrowser.Core.UWP\Tags\x_new.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\samplebrowser.core\19.3.0.53\lib\uap10.0\SampleBrowser.Core.UWP\Tags\x_update.png">
+      <PackagePath>SampleBrowser.Core.UWP\Tags\x_update.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\syncfusion.sfinput.uwp\19.3.0.53\lib\uap10.0\Syncfusion.SfInput.UWP\Syncfusion.SfInput.UWP.xr.xml">
+      <PackagePath>Syncfusion.SfInput.UWP\Syncfusion.SfInput.UWP.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\syncfusion.sfinput.uwp\19.3.0.53\lib\uap10.0\Syncfusion.SfInput.UWP\Properties\Syncfusion.SfInput.UWP.rd.xml">
+      <PackagePath>Syncfusion.SfInput.UWP\Properties\Syncfusion.SfInput.UWP.rd.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\syncfusion.sfshared.uwp\19.3.0.53\lib\uap10.0\Syncfusion.SfShared.UWP\Syncfusion.SfShared.UWP.xr.xml">
+      <PackagePath>Syncfusion.SfShared.UWP\Syncfusion.SfShared.UWP.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\syncfusion.sfshared.uwp\19.3.0.53\lib\uap10.0\Syncfusion.SfShared.UWP\Properties\Syncfusion.SfShared.UWP.rd.xml">
+      <PackagePath>Syncfusion.SfShared.UWP\Properties\Syncfusion.SfShared.UWP.rd.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\syncfusion.xamarin.core\19.3.0.53\lib\uap10.0\Syncfusion.Core.XForms.UWP\Syncfusion.Core.XForms.UWP.xr.xml">
+      <PackagePath>Syncfusion.Core.XForms.UWP\Syncfusion.Core.XForms.UWP.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\syncfusion.xamarin.core\19.3.0.53\lib\uap10.0\Syncfusion.Core.XForms.UWP\TILRenderer\ToggleIcons\ClearButtonViewVisibleIcon.xaml">
+      <PackagePath>Syncfusion.Core.XForms.UWP\TILRenderer\ToggleIcons\ClearButtonViewVisibleIcon.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\syncfusion.xamarin.core\19.3.0.53\lib\uap10.0\Syncfusion.Core.XForms.UWP\TILRenderer\ToggleIcons\DropDownIcon.xaml">
+      <PackagePath>Syncfusion.Core.XForms.UWP\TILRenderer\ToggleIcons\DropDownIcon.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\syncfusion.xamarin.core\19.3.0.53\lib\uap10.0\Syncfusion.Core.XForms.UWP\TILRenderer\ToggleIcons\ToggleCollapsedIcon.xaml">
+      <PackagePath>Syncfusion.Core.XForms.UWP\TILRenderer\ToggleIcons\ToggleCollapsedIcon.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\syncfusion.xamarin.core\19.3.0.53\lib\uap10.0\Syncfusion.Core.XForms.UWP\TILRenderer\ToggleIcons\ToggleVisibleIcon.xaml">
+      <PackagePath>Syncfusion.Core.XForms.UWP\TILRenderer\ToggleIcons\ToggleVisibleIcon.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\xamarin.forms\4.5.0.617\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\FormsAutoSuggestBoxStyle.xaml">
+      <PackagePath>Xamarin.Forms.Platform.UAP\FormsAutoSuggestBoxStyle.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\xamarin.forms\4.5.0.617\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\FormsCheckBoxStyle.xaml">
+      <PackagePath>Xamarin.Forms.Platform.UAP\FormsCheckBoxStyle.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\xamarin.forms\4.5.0.617\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\FormsCommandBarStyle.xaml">
+      <PackagePath>Xamarin.Forms.Platform.UAP\FormsCommandBarStyle.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\xamarin.forms\4.5.0.617\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\FormsEmbeddedPageWrapper.xaml">
+      <PackagePath>Xamarin.Forms.Platform.UAP\FormsEmbeddedPageWrapper.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\xamarin.forms\4.5.0.617\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\FormsFlyout.xaml">
+      <PackagePath>Xamarin.Forms.Platform.UAP\FormsFlyout.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\xamarin.forms\4.5.0.617\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\FormsProgressBarStyle.xaml">
+      <PackagePath>Xamarin.Forms.Platform.UAP\FormsProgressBarStyle.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\xamarin.forms\4.5.0.617\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\FormsTextBoxStyle.xaml">
+      <PackagePath>Xamarin.Forms.Platform.UAP\FormsTextBoxStyle.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\xamarin.forms\4.5.0.617\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\MasterDetailControlStyle.xaml">
+      <PackagePath>Xamarin.Forms.Platform.UAP\MasterDetailControlStyle.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\xamarin.forms\4.5.0.617\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\PageControlStyle.xaml">
+      <PackagePath>Xamarin.Forms.Platform.UAP\PageControlStyle.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\xamarin.forms\4.5.0.617\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\PickerStyle.xaml">
+      <PackagePath>Xamarin.Forms.Platform.UAP\PickerStyle.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\xamarin.forms\4.5.0.617\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\Resources.xaml">
+      <PackagePath>Xamarin.Forms.Platform.UAP\Resources.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\xamarin.forms\4.5.0.617\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\SliderStyle.xaml">
+      <PackagePath>Xamarin.Forms.Platform.UAP\SliderStyle.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\xamarin.forms\4.5.0.617\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\StepperControl.xaml">
+      <PackagePath>Xamarin.Forms.Platform.UAP\StepperControl.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\xamarin.forms\4.5.0.617\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\TabbedPageStyle.xaml">
+      <PackagePath>Xamarin.Forms.Platform.UAP\TabbedPageStyle.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\xamarin.forms\4.5.0.617\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml">
+      <PackagePath>Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\xamarin.forms\4.5.0.617\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\CollectionView\ItemsViewStyles.xaml">
+      <PackagePath>Xamarin.Forms.Platform.UAP\CollectionView\ItemsViewStyles.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BuildAutomation\.nuget\packages\xamarin.forms\4.5.0.617\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\Shell\ShellStyles.xaml">
+      <PackagePath>Xamarin.Forms.Platform.UAP\Shell\ShellStyles.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Samples_19.3.0.53\Xamarin\Forms\Rating\Rating.UWP\bin\x86\Release\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Samples_19.3.0.53\Xamarin\Forms\Rating\Rating.UWP\bin\x86\Release\Core\SampleBrowser.SfRating.UWP.exe">
+      <PackagePath>SampleBrowser.SfRating.UWP.exe</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Users\BuildAutomation\.nuget\packages\microsoft.ui.xaml\2.3.191211002\build\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.3.appx">
+      <Name>Microsoft.UI.Xaml.2.3</Name>
+      <Version>2.31912.11002.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.3, MinVersion = 2.31912.11002.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\BuildAutomation\.nuget\packages\microsoft.ui.xaml\2.3.191211002\build\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.3.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\BuildAutomation\.nuget\packages\microsoft.ui.xaml\2.3.191211002\build\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.3.appx">
+      <Name>Microsoft.UI.Xaml.2.3</Name>
+      <Version>2.31912.11002.0</Version>
+      <Architecture>Win32</Architecture>
+      <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.3, MinVersion = 2.31912.11002.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\BuildAutomation\.nuget\packages\microsoft.ui.xaml\2.3.191211002\build\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.3.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\BuildAutomation\.nuget\packages\microsoft.ui.xaml\2.3.191211002\build\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.3.appx">
+      <Name>Microsoft.UI.Xaml.2.3</Name>
+      <Version>2.31912.11002.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.3, MinVersion = 2.31912.11002.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\BuildAutomation\.nuget\packages\microsoft.ui.xaml\2.3.191211002\build\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.3.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\BuildAutomation\.nuget\packages\microsoft.ui.xaml\2.3.191211002\build\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.3.appx">
+      <Name>Microsoft.UI.Xaml.2.3</Name>
+      <Version>2.31912.11002.0</Version>
+      <Architecture>arm</Architecture>
+      <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.3, MinVersion = 2.31912.11002.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\BuildAutomation\.nuget\packages\microsoft.ui.xaml\2.3.191211002\build\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.3.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\BuildAutomation\.nuget\packages\microsoft.ui.xaml\2.3.191211002\build\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.3.appx">
+      <Name>Microsoft.UI.Xaml.2.3</Name>
+      <Version>2.31912.11002.0</Version>
+      <Architecture>arm64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.3, MinVersion = 2.31912.11002.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\BuildAutomation\.nuget\packages\microsoft.ui.xaml\2.3.191211002\build\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.3.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.1.2\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.1.appx">
+      <Name>Microsoft.NET.CoreRuntime.2.1</Name>
+      <Version>2.1.26124.5</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.1, MinVersion = 2.1.26124.5, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.1.2\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.1.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.1.2\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.1.appx">
+      <Name>Microsoft.NET.CoreRuntime.2.1</Name>
+      <Version>2.1.26124.5</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.1, MinVersion = 2.1.26124.5, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\BuildAutomation\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.1.2\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.1.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\BuildAutomation\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.1.2\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.1.appx">
+      <Name>Microsoft.NET.CoreRuntime.2.1</Name>
+      <Version>2.1.26124.5</Version>
+      <Architecture>arm</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.1, MinVersion = 2.1.26124.5, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\BuildAutomation\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.1.2\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.1.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00</Name>
+      <Version>14.0.30035.0</Version>
+      <Architecture>ARM</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00, MinVersion = 14.0.30035.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Retail\ARM\Microsoft.VCLibs.ARM.14.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00</Name>
+      <Version>14.0.30035.0</Version>
+      <Architecture>ARM64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00, MinVersion = 14.0.30035.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Retail\ARM64\Microsoft.VCLibs.ARM64.14.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00</Name>
+      <Version>14.0.30035.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00, MinVersion = 14.0.30035.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Retail\x64\Microsoft.VCLibs.x64.14.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00</Name>
+      <Version>14.0.30035.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00, MinVersion = 14.0.30035.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Retail\x86\Microsoft.VCLibs.x86.14.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

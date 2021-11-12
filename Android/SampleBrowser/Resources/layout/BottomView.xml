@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomView"
+    android:layout_height="150dp"
+    android:layout_width="350dp"
+    android:paddingRight="15dp"
+    android:orientation="horizontal">
+    <EditText
+        android:id="@+id/captionText"
+        android:layout_height="match_parent"
+        android:singleLine="true"
+        android:autoText="false"
+        android:layout_weight="0.2"
+        android:layout_gravity="left"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/edittext_bg"
+        android:layout_width="250dp"
+        android:hint="Enter a Caption"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="30dp"
+        android:paddingLeft="10dp" />
+    <ImageButton
+        android:layout_marginRight="10dp"
+        android:src="@drawable/share_customization"
+        android:layout_width="35dp"
+        android:id="@+id/sharecustomization"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:layout_height="match_parent" />
+</LinearLayout>

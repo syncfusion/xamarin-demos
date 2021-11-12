@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.CategoryAxis" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+  <local:SampleView.Content>
+    <StackLayout x:Name="stack">
+      <StackLayout.Resources>
+        <ResourceDictionary>
+          <DataTemplate x:Key="toolTipTemplate1">
+            <StackLayout BackgroundColor="#404041">
+              <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="3,3,3,3" />
+              </StackLayout.Padding>
+              <Label Text="Users" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,4,0,0'}" FontSize="12" Grid.Row="0"/>
+              <BoxView Color="White" HeightRequest="{OnPlatform Default='0.75', WPF='0.35'}" Margin="{OnPlatform Default='0', WPF='4,0,4,0'}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+              <StackLayout Orientation="Horizontal"  VerticalOptions="FillAndExpand" BackgroundColor="#404041" Spacing="0" Padding="3" Margin="0">
+                <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="#CCCCCC" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" Margin="{OnPlatform Default='0', WPF='3,0,0,0'}"/>
+                <Label Text="{Binding Value,StringFormat=' :  {0}M'}" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,0,3,0'}" FontSize="12" />
+              </StackLayout>
+            </StackLayout>
+          </DataTemplate>
+        </ResourceDictionary>
+      </StackLayout.Resources>
+      <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Padding="10,10,0,0">
+            <Label Text="Arrange by Index" HorizontalOptions="Start" VerticalOptions="Center"/>
+            <Switch IsToggled="False" Toggled="Switch_Toggled" />
+      </StackLayout>
+      <chart:SfChart x:Name="Chart" SideBySideSeriesPlacement="False" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <chart:SfChart.Margin>
+          <OnPlatform x:TypeArguments="Thickness" WinPhone="0,0,15,0" />
+        </chart:SfChart.Margin>
+        <chart:SfChart.Title>
+          <chart:ChartTitle Text="Internet Users - 2016" />
+        </chart:SfChart.Title>
+        <chart:SfChart.BindingContext>
+          <sampleBrowser:CategoryAxisViewModel x:Name="viewmodel"/>
+        </chart:SfChart.BindingContext>
+        <chart:SfChart.ChartBehaviors>
+          <chart:ChartTooltipBehavior BackgroundColor="#404041" />
+        </chart:SfChart.ChartBehaviors>
+        <chart:SfChart.PrimaryAxis>
+          <chart:CategoryAxis x:Name="primary" ArrangeByIndex="False" LabelPlacement="BetweenTicks" ShowMajorGridLines="false">
+            <chart:CategoryAxis.LabelStyle>
+              <chart:ChartAxisLabelStyle x:Name="axisLabelStyle" WrappedLabelAlignment="Center" TextColor="Black">
+                  <chart:ChartAxisLabelStyle.MaxWidth>
+                  <OnPlatform x:TypeArguments="x:Double" WinPhone="80" Android="40" iOS="40" >
+                      <On Platform="WPF" Value="80"/> 
+                  </OnPlatform>
+                </chart:ChartAxisLabelStyle.MaxWidth>
+              </chart:ChartAxisLabelStyle>
+            </chart:CategoryAxis.LabelStyle>
+          </chart:CategoryAxis>
+        </chart:SfChart.PrimaryAxis>
+        <chart:SfChart.SecondaryAxis>
+          <chart:NumericalAxis Minimum="0" Maximum="80" IsVisible="false" ShowMajorGridLines="false">
+          </chart:NumericalAxis>
+        </chart:SfChart.SecondaryAxis>
+        <chart:SfChart.Series>
+          <chart:ColumnSeries x:Name="Series1" ItemsSource="{Binding CategoryData1}" XBindingPath="Name" YBindingPath="Value" EnableTooltip="true" TooltipTemplate="{StaticResource toolTipTemplate1}">
+            <chart:ColumnSeries.DataMarker>
+              <chart:ChartDataMarker >
+                <chart:ChartDataMarker.LabelStyle>
+                  <chart:DataMarkerLabelStyle LabelPosition="Outer" LabelFormat="#.#'M'" Font="12">
+                  </chart:DataMarkerLabelStyle>
+                </chart:ChartDataMarker.LabelStyle>
+              </chart:ChartDataMarker>
+            </chart:ColumnSeries.DataMarker>
+          </chart:ColumnSeries>
+          <chart:ColumnSeries x:Name="Series2" ItemsSource="{Binding CategoryData2}" XBindingPath="Name" YBindingPath="Value" EnableTooltip="true" TooltipTemplate="{StaticResource toolTipTemplate1}">
+            <chart:ColumnSeries.DataMarker>
+              <chart:ChartDataMarker >
+                <chart:ChartDataMarker.LabelStyle>
+                  <chart:DataMarkerLabelStyle LabelPosition="Outer" LabelFormat="#.#'M'" Font="12">
+                  </chart:DataMarkerLabelStyle>
+                </chart:ChartDataMarker.LabelStyle>
+              </chart:ChartDataMarker>
+            </chart:ColumnSeries.DataMarker>
+          </chart:ColumnSeries>
+        </chart:SfChart.Series>
+        <chart:SfChart.ColorModel>
+            <chart:ChartColorModel Palette="Natural"/>
+        </chart:SfChart.ColorModel>  
+      </chart:SfChart>
+    </StackLayout>
+  </local:SampleView.Content>
+</local:SampleView>

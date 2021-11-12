@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Samples>
+  <Sample Title="Getting Started" Name="GettingStarted"  Platform="All" SearchTags="Gradient, Gradient view, Linear gradient, Radial gradient" Description = "Gradient view control provides gradient background to various views in an application." />
+</Samples>

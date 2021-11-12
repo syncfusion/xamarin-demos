@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+    xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfChart.StackedLineChart" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+    <local:SampleView.Content>
+        <StackLayout x:Name="stack">
+            <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <chart:SfChart.Margin>
+                    <OnPlatform x:TypeArguments="Thickness" />
+                </chart:SfChart.Margin>
+                <chart:SfChart.ColorModel>
+                    <chart:ChartColorModel Palette="Natural" />
+                </chart:SfChart.ColorModel>
+                <chart:SfChart.Title>
+                    <chart:ChartTitle Text="Monthly Expenses of a Family"  />
+                </chart:SfChart.Title>
+                <chart:SfChart.BindingContext>
+                    <sampleBrowser:StackedLineChartViewModel />
+                </chart:SfChart.BindingContext>
+                <chart:SfChart.PrimaryAxis>
+                    <chart:CategoryAxis ShowMajorGridLines="false" LabelPlacement="BetweenTicks">
+                        <chart:CategoryAxis.MajorTickStyle>
+                            <chart:ChartAxisTickStyle TickSize="8">
+                            </chart:ChartAxisTickStyle>
+                        </chart:CategoryAxis.MajorTickStyle>
+                    </chart:CategoryAxis>
+                </chart:SfChart.PrimaryAxis>
+                <chart:SfChart.SecondaryAxis>
+                    <chart:NumericalAxis Maximum="200" Minimum="0" Interval="20">
+                        <chart:NumericalAxis.LabelStyle>
+                            <chart:ChartAxisLabelStyle x:Name="secondaryAxisLabelStyle"/>
+                        </chart:NumericalAxis.LabelStyle>
+                        <chart:NumericalAxis.AxisLineStyle>
+                            <chart:ChartLineStyle StrokeWidth="0" />
+                        </chart:NumericalAxis.AxisLineStyle>
+                        <chart:NumericalAxis.MajorTickStyle>
+                            <chart:ChartAxisTickStyle TickSize="0" />
+                        </chart:NumericalAxis.MajorTickStyle>
+                    </chart:NumericalAxis>
+                </chart:SfChart.SecondaryAxis>
+                <chart:SfChart.Legend>
+                    <chart:ChartLegend ToggleSeriesVisibility="True" DockPosition="Bottom" IconWidth="14" IconHeight="14" />
+                </chart:SfChart.Legend>
+                <chart:SfChart.Series>
+                    <chart:StackingLineSeries x:Name="series1" ItemsSource="{Binding StackedLineData1}" XBindingPath="Name" YBindingPath="Value" Label="Daughter" LegendIcon="SeriesType" EnableTooltip="True" EnableAnimation="True" StrokeWidth="3">
+                        <chart:StackingLineSeries.DataMarker>
+                            <chart:ChartDataMarker MarkerWidth="10" MarkerHeight="10"  ShowLabel="false" ShowMarker="true" MarkerBorderColor="#00bdae" MarkerBorderWidth="2" MarkerColor="White">
+                            </chart:ChartDataMarker>
+                        </chart:StackingLineSeries.DataMarker>
+                    </chart:StackingLineSeries>
+                    <chart:StackingLineSeries x:Name="series2" ItemsSource="{Binding StackedLineData2}" XBindingPath="Name" YBindingPath="Value" Label="Son" LegendIcon="SeriesType" EnableTooltip="True" EnableAnimation="True" StrokeWidth="3">
+                        <chart:StackingLineSeries.DataMarker>
+                            <chart:ChartDataMarker MarkerWidth="10" MarkerHeight="10"  ShowLabel="false" ShowMarker="true"  MarkerBorderColor="#404041" MarkerBorderWidth="2" MarkerColor="White">
+                            </chart:ChartDataMarker>
+                        </chart:StackingLineSeries.DataMarker>
+                    </chart:StackingLineSeries>
+                    <chart:StackingLineSeries x:Name="series3" ItemsSource="{Binding StackedLineData3}" XBindingPath="Name" YBindingPath="Value" Label="Mother" LegendIcon="SeriesType" EnableTooltip="True" EnableAnimation="True" StrokeWidth="3">
+                        <chart:StackingLineSeries.DataMarker>
+                            <chart:ChartDataMarker MarkerWidth="10" MarkerHeight="10"  ShowLabel="false" ShowMarker="true" MarkerBorderColor="#357cd2" MarkerBorderWidth="2" MarkerColor="White">
+                            </chart:ChartDataMarker>
+                        </chart:StackingLineSeries.DataMarker>
+                    </chart:StackingLineSeries>
+                    <chart:StackingLineSeries x:Name="series4" ItemsSource="{Binding StackedLineData4}" XBindingPath="Name" YBindingPath="Value" Label="Father" LegendIcon="SeriesType" EnableTooltip="True" EnableAnimation="True" StrokeWidth="3">
+                        <chart:StackingLineSeries.DataMarker>
+                            <chart:ChartDataMarker MarkerWidth="10" MarkerHeight="10"  ShowLabel="false" ShowMarker="true" MarkerBorderColor="#e56590" MarkerBorderWidth="2" MarkerColor="White">
+                            </chart:ChartDataMarker>
+                        </chart:StackingLineSeries.DataMarker>
+                    </chart:StackingLineSeries>
+                </chart:SfChart.Series>
+            </chart:SfChart>
+        </StackLayout>
+    </local:SampleView.Content>
+</local:SampleView>

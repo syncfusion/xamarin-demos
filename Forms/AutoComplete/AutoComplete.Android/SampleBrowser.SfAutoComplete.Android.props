@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\autocompleteplayer.ttf">
+            <Link>Assets\autocompleteplayer.ttf</Link>
+        </AndroidAsset>
+        <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\icon.ttf">
+            <Link>Assets\icon.ttf</Link>
+        </AndroidAsset>
+        <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\Sample.ttf">
+            <Link>Assets\Sample.ttf</Link>
+        </AndroidAsset>
+        <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\Segoe_MDL2_Assets.ttf">
+            <Link>Assets\Segoe_MDL2_Assets.ttf</Link>
+        </AndroidAsset>
+    </ItemGroup>
+</Project>

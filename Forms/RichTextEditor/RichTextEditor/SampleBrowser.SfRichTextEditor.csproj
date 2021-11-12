@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <Configurations>Debug;Release;Release-xml</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\Boogaloo.ttf" />
+    <None Remove="Fonts\iOSFont.ttf" />
+    <None Remove="Fonts\Handlee.ttf" />
+    <None Remove="Fonts\Kaushan Script.ttf" />
+    <None Remove="Fonts\Pinyon Script.ttf" />
+    <None Remove="SamplesList\SamplesList.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Fonts\Boogaloo.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fonts\iOSFont.ttf" >
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fonts\Handlee.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fonts\Kaushan Script.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fonts\Pinyon Script.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SamplesList\SamplesList.xml" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="SampleBrowser.Core" Version="19.3.0.53" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="19.3.0.53" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="19.3.0.53" />
+    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="19.3.0.53" />
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="19.3.0.53" />
+    <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="19.3.0.53" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="19.3.0.53" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="19.3.0.53" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRichTextEditor" Version="19.3.0.53" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.617" />
+  </ItemGroup>
+   
+  <ItemGroup>
+    <EmbeddedResource Update="Samples\CustomToolbar\CustomToolbar.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Samples\MailPage\MailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Samples\Themes\Themes.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+</Project>

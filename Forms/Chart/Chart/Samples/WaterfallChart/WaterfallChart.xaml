@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.WaterfallChart" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+    <local:SampleView.Content>
+        <chart:SfChart HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <chart:SfChart.Margin>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="0,0,20,0" />
+            </chart:SfChart.Margin>
+            <chart:SfChart.Legend>
+                <chart:ChartLegend>
+                    <chart:ChartLegend.Title>
+                        <chart:ChartTitle Text="Company Revenue and Profit" >
+                            <chart:ChartTitle.Margin>
+                                <OnPlatform iOS="0, 0, 0, 20" UWP="18, 0, 0, 0" />
+                            </chart:ChartTitle.Margin>
+                        </chart:ChartTitle>
+                    </chart:ChartLegend.Title>
+                </chart:ChartLegend>
+            </chart:SfChart.Legend>
+            <chart:SfChart.BindingContext>
+                <sampleBrowser:WaterfallSeriesViewModel />
+            </chart:SfChart.BindingContext>
+            <chart:SfChart.PrimaryAxis>
+                <chart:CategoryAxis ShowMajorGridLines="False">
+                </chart:CategoryAxis>
+            </chart:SfChart.PrimaryAxis>
+            <chart:SfChart.SecondaryAxis>
+                <chart:NumericalAxis Maximum="180">
+                    <chart:NumericalAxis.LabelStyle>
+                        <chart:ChartAxisLabelStyle x:Name="secondaryAxisLabelStyle"/>
+                    </chart:NumericalAxis.LabelStyle>
+                </chart:NumericalAxis>
+            </chart:SfChart.SecondaryAxis>
+            <chart:SfChart.Series>
+                <chart:WaterfallSeries x:Name="series" ItemsSource="{Binding RevenueDetails}" XBindingPath="Name" YBindingPath="Value" SummaryBindingPath="IsSummary" NegativeSegmentColor="#F14C72" SummarySegmentColor="#8C8C8C" Color="#50C380" DataMarkerPosition="Center">
+                    <chart:WaterfallSeries.DataMarker>
+                        <chart:ChartDataMarker>
+                            <chart:ChartDataMarker.LabelStyle>
+                                <chart:DataMarkerLabelStyle LabelPosition="Center" LabelFormat="#.#'M'" />
+                            </chart:ChartDataMarker.LabelStyle>
+                        </chart:ChartDataMarker>
+                    </chart:WaterfallSeries.DataMarker>
+                </chart:WaterfallSeries>
+            </chart:SfChart.Series>
+        </chart:SfChart>
+    </local:SampleView.Content>
+</local:SampleView>
