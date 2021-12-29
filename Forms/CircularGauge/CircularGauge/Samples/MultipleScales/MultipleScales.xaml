@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:sample="clr-namespace:SampleBrowser.SfCircularGauge"
+             x:Class="SampleBrowser.SfCircularGauge.MultipleScales">
+	
+  <local:SampleView.BindingContext>
+    <sample:CircularGaugeViewModel x:Name="viewModel" Scale1_StartAngle="135" Scale1_SweepAngle="270"
+                                   Scale2_StartAngle="135" Scale2_SweepAngle="270"/>
+  </local:SampleView.BindingContext>
+
+  <local:SampleView.Content BackgroundColor="White">
+      <gauge:SfCircularGauge x:Name="circularGauge"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+        <gauge:SfCircularGauge.Scales>
+          <gauge:Scale x:Name="scale1" StartAngle="{Binding Scale1_StartAngle}" SweepAngle="{Binding Scale1_SweepAngle}"
+                   StartValue="0" EndValue="240" Interval="20" MinorTicksPerInterval="1" RimColor="#C62E0A"
+                   LabelOffset="0.88" LabelColor="#C62E0A" ScaleStartOffset="0.7" ScaleEndOffset="0.69">
+          
+            <gauge:Scale.MajorTickSettings>
+              <gauge:TickSettings StartOffset="0.7" EndOffset="0.77" Thickness="2" Color="#C62E0A"/>
+            </gauge:Scale.MajorTickSettings>
+
+            <gauge:Scale.MinorTickSettings>
+              <gauge:TickSettings StartOffset="0.7" EndOffset="0.75" Thickness="2" Color="#C62E0A"/>
+            </gauge:Scale.MinorTickSettings>
+            
+            <gauge:Scale.Pointers>
+              <gauge:MarkerPointer x:Name="pointer1" Value="120"  Color="#C62E0A" Offset="0.69" MarkerShape="InvertedTriangle" EnableAnimation="False"/>
+            </gauge:Scale.Pointers>
+
+          </gauge:Scale>
+          
+          <gauge:Scale x:Name="scale2" StartAngle="{Binding Scale2_StartAngle}" SweepAngle="{Binding Scale2_SweepAngle}"
+                       StartValue="0" EndValue="160" Interval="40" MinorTicksPerInterval="1"  RimColor="#333333"
+                       LabelOffset="0.45" LabelColor="#333333" ScaleStartOffset="0.65" ScaleEndOffset="0.64">
+            
+            <gauge:Scale.MajorTickSettings>
+              <gauge:TickSettings StartOffset="0.64" EndOffset="0.57" Thickness="2" Color="#333333"/>
+            </gauge:Scale.MajorTickSettings>
+
+            <gauge:Scale.MinorTickSettings>
+              <gauge:TickSettings StartOffset="0.64" EndOffset="0.59" Thickness="2" Color="#333333"/>
+            </gauge:Scale.MinorTickSettings>
+            
+            <gauge:Scale.Pointers>
+              <gauge:MarkerPointer x:Name="pointer2" Value="80"  Color="#333333" Offset="0.65" MarkerShape="Triangle" EnableAnimation="False"/>
+            </gauge:Scale.Pointers>
+
+          </gauge:Scale>
+        </gauge:SfCircularGauge.Scales>
+
+      </gauge:SfCircularGauge>
+  </local:SampleView.Content>
+
+  <local:SampleView.PropertyView>
+
+    <StackLayout Orientation="Vertical" >
+      <Label x:Name="scale1Text" Text="Scale 1:" FontAttributes="Bold" TextColor="Black"/>
+      
+      <StackLayout BackgroundColor="White" Orientation="Horizontal">
+        <Label x:Name="scale1_StartAngleText" Text="Start Angle: " TextColor="Black"/>
+        <Label x:Name="scale1_StartAngleValue" TextColor="Black"
+               BindingContext="{x:Reference scale1_StartAngle_slider}" Text="{Binding Value, StringFormat='{0:N}'}"/>
+      </StackLayout>
+      
+      <Slider x:Name="scale1_StartAngle_slider" MinimumTrackColor="#177CE7" ThumbColor="#1a1aff" MaximumTrackColor="DarkGray" 
+       Value="{Binding Scale1_StartAngle, Mode=TwoWay}"
+        Maximum="350"/>
+
+      <StackLayout BackgroundColor="White" Orientation="Horizontal">
+        <Label x:Name="scale1_SweepAngleText" Text="Sweep Angle: " TextColor="Black"/>
+        <Label x:Name="scale1_SweepAngleValue" TextColor="Black"
+               BindingContext="{x:Reference scale1_SweepAngle_slider}" Text="{Binding Value, StringFormat='{0:N}'}"/>
+      </StackLayout>
+     
+      <Slider x:Name="scale1_SweepAngle_slider" MinimumTrackColor="#177CE7" ThumbColor="#1a1aff" MaximumTrackColor="DarkGray" Value="{Binding Scale1_SweepAngle, Mode=TwoWay}"
+              Maximum="350"/>
+
+      <Label x:Name="scale2Text" Text="Scale 2:" FontAttributes="Bold" TextColor="Black"/>
+      
+      <StackLayout BackgroundColor="White" Orientation="Horizontal">
+        <Label x:Name="scale2_StartAngleText" Text="Start Angle: " TextColor="Black"/>
+        <Label x:Name="scale2_StartAngleValue" TextColor="Black"
+               BindingContext="{x:Reference scale2_StartAngle_slider}" Text="{Binding Value, StringFormat='{0:N}'}"/>
+      </StackLayout>
+     
+      <Slider x:Name="scale2_StartAngle_slider" MinimumTrackColor="#177CE7" ThumbColor="#1a1aff" MaximumTrackColor="DarkGray" 
+       Value="{Binding Scale2_StartAngle, Mode=TwoWay}"
+        Maximum="350"/>
+
+      <StackLayout BackgroundColor="White" Orientation="Horizontal">
+        <Label x:Name="scale2_SweepAngleText" Text="Sweep Angle: " TextColor="Black"/>
+        <Label x:Name="scale2_SweepAngleValue" TextColor="Black"
+                BindingContext="{x:Reference scale2_SweepAngle_slider}" Text="{Binding Value, StringFormat='{0:N}'}"/>
+      </StackLayout>
+      
+      <Slider x:Name="scale2_SweepAngle_slider" MinimumTrackColor="#177CE7" ThumbColor="#1a1aff" MaximumTrackColor="DarkGray" Value="{Binding Scale2_SweepAngle, Mode=TwoWay}"
+              Maximum="350"/>
+      
+      <!--<StackLayout Orientation="Vertical" >
+        <Label  x:Name="direction" Text="Direction : " TextColor="Black" FontAttributes="Bold"/>
+        <Picker x:Name="directionPicker" HorizontalOptions="FillAndExpand" VerticalOptions="Center" >
+          <Picker.Items>
+            <x:String>ClockWise</x:String>
+            <x:String>AntiClockWise</x:String>
+          </Picker.Items>
+        </Picker>
+      </StackLayout>-->
+      
+    </StackLayout>
+  </local:SampleView.PropertyView>
+</local:SampleView>

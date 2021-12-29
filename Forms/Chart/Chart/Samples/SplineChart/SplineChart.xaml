@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.SplineChart" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+    <local:SampleView.Content>
+        <StackLayout x:Name="stack">
+            <StackLayout.Resources>
+                <ResourceDictionary>
+                    <DataTemplate x:Key="toolTipTemplate1">
+                        <StackLayout BackgroundColor="#404041">
+                            <StackLayout.Padding>
+                                <OnPlatform x:TypeArguments="Thickness" WinPhone="3,3,3,3" />
+                            </StackLayout.Padding>
+                            <Label Text="Max Temp" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,4,0,0'}" FontSize="12" Grid.Row="0" />
+                            <BoxView Grid.Row="1" Color="White" HeightRequest="0.75" Margin="{OnPlatform Default='0', WPF='4,0,4,0'}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+                            <StackLayout Orientation="Horizontal"  VerticalOptions="FillAndExpand" BackgroundColor="#404041" Spacing="0" Padding="3" Margin="0">
+                                <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="#CCCCCC" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" Margin="{OnPlatform Default='0', WPF='3,0,0,0'}" />
+                                <Label Text="{Binding Value,StringFormat=' :  {0}°C'}" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,0,3,0'}" FontSize="12" />
+                            </StackLayout>
+                        </StackLayout>
+                    </DataTemplate>
+                    <DataTemplate x:Key="toolTipTemplate2">
+                        <StackLayout BackgroundColor="#404041">
+                            <StackLayout.Padding>
+                                <OnPlatform x:TypeArguments="Thickness" WinPhone="3,3,3,3" />
+                            </StackLayout.Padding>
+                            <Label Text="Avg Temp" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,4,0,0'}" FontSize="12" Grid.Row="0" />
+                            <BoxView Grid.Row="1" Color="White" HeightRequest="0.75" Margin="{OnPlatform Default='0', WPF='4,0,4,0'}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+                            <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" BackgroundColor="#404041" Spacing="0" Padding="3" Margin="0">
+                                <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="#CCCCCC" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" Margin="{OnPlatform Default='0', WPF='3,0,0,0'}" />
+                                <Label Text="{Binding Value,StringFormat=' :  {0}°C'}" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,0,3,0'}" FontSize="12" />
+                            </StackLayout>
+                        </StackLayout>
+                    </DataTemplate>
+                    <DataTemplate x:Key="toolTipTemplate3">
+                        <StackLayout BackgroundColor="#404041">
+                            <StackLayout.Padding>
+                                <OnPlatform x:TypeArguments="Thickness" WinPhone="3,3,3,3" />
+                            </StackLayout.Padding>
+                            <Label Text="Min Temp" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,4,0,0'}" FontSize="12" Grid.Row="0" />
+                            <BoxView Grid.Row="1" Color="White" HeightRequest="0.75" Margin="{OnPlatform Default='0', WPF='4,0,4,0'}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+                            <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" BackgroundColor="#404041" Spacing="0" Padding="3" Margin="0">
+                                <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="#CCCCCC" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" Margin="{OnPlatform Default='0', WPF='3,0,0,0'}" />
+                                <Label Text="{Binding Value,StringFormat=' :  {0}°C'}" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,0,3,0'}" FontSize="12" />
+                            </StackLayout>
+                        </StackLayout>
+                    </DataTemplate>
+                </ResourceDictionary>
+            </StackLayout.Resources>
+            <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <chart:SfChart.Margin>
+                    <OnPlatform x:TypeArguments="Thickness" WinPhone="0,0,15,0" />
+                </chart:SfChart.Margin>
+                <chart:SfChart.Title>
+                    <chart:ChartTitle Text="NC Weather Report"  />
+                </chart:SfChart.Title>
+                <chart:SfChart.BindingContext>
+                    <sampleBrowser:SplineSeriesViewModel />
+                </chart:SfChart.BindingContext>
+                <chart:SfChart.ChartBehaviors>
+                    <chart:ChartTooltipBehavior BackgroundColor="#404041" />
+                </chart:SfChart.ChartBehaviors>
+                <chart:SfChart.PrimaryAxis>
+                    <chart:CategoryAxis LabelPlacement="BetweenTicks" ShowMajorGridLines="false">
+                    </chart:CategoryAxis>
+                </chart:SfChart.PrimaryAxis>
+                <chart:SfChart.SecondaryAxis>
+                    <chart:NumericalAxis Maximum="40" Minimum="0" Interval="10">
+                        <chart:NumericalAxis.AxisLineStyle>
+                            <chart:ChartLineStyle StrokeWidth="0">
+                            </chart:ChartLineStyle>
+                        </chart:NumericalAxis.AxisLineStyle>
+                        <chart:NumericalAxis.MajorTickStyle>
+                            <chart:ChartAxisTickStyle TickSize="0" />
+                        </chart:NumericalAxis.MajorTickStyle>
+                        <chart:NumericalAxis.LabelStyle>
+                            <chart:ChartAxisLabelStyle x:Name="secondaryAxisLabelStyle"/>
+                        </chart:NumericalAxis.LabelStyle>
+                    </chart:NumericalAxis>
+                </chart:SfChart.SecondaryAxis>
+                <chart:SfChart.Legend>
+                    <chart:ChartLegend DockPosition="Bottom" ToggleSeriesVisibility="True" IconWidth="14" IconHeight="14" />
+                </chart:SfChart.Legend>
+                <chart:SfChart.ColorModel>
+                    <chart:ChartColorModel Palette="Natural" />
+                </chart:SfChart.ColorModel>
+                <chart:SfChart.Series>
+                    <chart:SplineSeries x:Name="splineSeries1" ItemsSource="{Binding SplineData1}" XBindingPath="Name" YBindingPath="Value" StrokeWidth="2" Label="Max Temp" LegendIcon="SeriesType" EnableTooltip="true" TooltipTemplate="{StaticResource toolTipTemplate1}">
+                        <chart:SplineSeries.DataMarker>
+                            <chart:ChartDataMarker ShowLabel="false" ShowMarker="true" MarkerBorderColor="#00bdae" MarkerBorderWidth="2" MarkerColor="White">
+                                <chart:ChartDataMarker.MarkerWidth>
+                                    <OnPlatform x:TypeArguments="x:Double" Android="10" iOS="10" WinPhone="15" />
+                                </chart:ChartDataMarker.MarkerWidth>
+                                <chart:ChartDataMarker.MarkerHeight>
+                                    <OnPlatform x:TypeArguments="x:Double" Android="10" iOS="10" WinPhone="15" />
+                                </chart:ChartDataMarker.MarkerHeight>
+                            </chart:ChartDataMarker>
+                        </chart:SplineSeries.DataMarker>
+                        <chart:SplineSeries.StrokeDashArray>
+                            <x:Array Type="{x:Type sys:Double}">
+                                <sys:Double>13</sys:Double>
+                                <sys:Double>4</sys:Double>
+                            </x:Array>
+                        </chart:SplineSeries.StrokeDashArray>
+                    </chart:SplineSeries>
+                    <chart:SplineSeries x:Name="splineSeries2" ItemsSource="{Binding SplineData2}" XBindingPath="Name" YBindingPath="Value" StrokeWidth="2" Label="Avg Temp" LegendIcon="SeriesType" EnableTooltip="true" TooltipTemplate="{StaticResource toolTipTemplate2}">
+                        <chart:SplineSeries.DataMarker>
+                            <chart:ChartDataMarker ShowLabel="false" ShowMarker="true" MarkerBorderColor="#404041" MarkerBorderWidth="2" MarkerColor="White">
+                                <chart:ChartDataMarker.MarkerWidth>
+                                    <OnPlatform x:TypeArguments="x:Double" Android="10" iOS="10" WinPhone="15" />
+                                </chart:ChartDataMarker.MarkerWidth>
+                                <chart:ChartDataMarker.MarkerHeight>
+                                    <OnPlatform x:TypeArguments="x:Double" Android="10" iOS="10" WinPhone="15" />
+                                </chart:ChartDataMarker.MarkerHeight>
+                            </chart:ChartDataMarker>
+                        </chart:SplineSeries.DataMarker>
+                        <chart:SplineSeries.StrokeDashArray>
+                            <x:Array Type="{x:Type sys:Double}">
+                                <sys:Double>13</sys:Double>
+                                <sys:Double>4</sys:Double>
+                            </x:Array>
+                        </chart:SplineSeries.StrokeDashArray>
+                    </chart:SplineSeries>
+                    <chart:SplineSeries x:Name="splineSeries3" ItemsSource="{Binding SplineData3}" XBindingPath="Name" YBindingPath="Value" StrokeWidth="2" Label="Min Temp" LegendIcon="SeriesType" EnableTooltip="true" TooltipTemplate="{StaticResource toolTipTemplate3}">
+                        <chart:SplineSeries.DataMarker>
+                            <chart:ChartDataMarker ShowLabel="false" ShowMarker="true" MarkerBorderColor="#357CD2" MarkerBorderWidth="2" MarkerColor="White">
+                                <chart:ChartDataMarker.MarkerWidth>
+                                    <OnPlatform x:TypeArguments="x:Double" Android="10" iOS="10" WinPhone="15" />
+                                </chart:ChartDataMarker.MarkerWidth>
+                                <chart:ChartDataMarker.MarkerHeight>
+                                    <OnPlatform x:TypeArguments="x:Double" Android="10" iOS="10" WinPhone="15" />
+                                </chart:ChartDataMarker.MarkerHeight>
+                            </chart:ChartDataMarker>
+                        </chart:SplineSeries.DataMarker>
+                        <chart:SplineSeries.StrokeDashArray>
+                            <x:Array Type="{x:Type sys:Double}">
+                                <sys:Double>13</sys:Double>
+                                <sys:Double>4</sys:Double>
+                            </x:Array>
+                        </chart:SplineSeries.StrokeDashArray>
+                    </chart:SplineSeries>
+                </chart:SfChart.Series>
+            </chart:SfChart>
+        </StackLayout>
+    </local:SampleView.Content>
+</local:SampleView>                

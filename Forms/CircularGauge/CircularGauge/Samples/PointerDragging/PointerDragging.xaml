@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:samplelocal="clr-namespace:SampleBrowser.SfCircularGauge"
+             x:Class="SampleBrowser.SfCircularGauge.PointerDragging">
+    <local:SampleView.Content>
+        <Grid x:Name="grid">
+            <Grid.BindingContext>
+                <samplelocal:PointerViewModel></samplelocal:PointerViewModel>
+            </Grid.BindingContext>
+            <gauge:SfCircularGauge x:Name="gauge" SizeChanged="gauge_SizeChanged">
+
+                <gauge:SfCircularGauge.Headers>
+                    <gauge:Header x:Name="header" Position="0.5, 0.5" TextSize="25"
+                                  FontAttributes="Bold" ForegroundColor="#FF4500"></gauge:Header>
+                </gauge:SfCircularGauge.Headers>
+
+                <gauge:SfCircularGauge.Scales>
+                    <gauge:Scale  StartValue="0" EndValue="12" Interval="1" StartAngle="270"  SweepAngle="360" LabelOffset="0.67"
+                                  ShowFirstLabel="False" ScaleStartOffset="0.9" ScaleEndOffset="0.8" MinorTicksPerInterval="4">
+                        <gauge:Scale.MajorTickSettings>
+                            <gauge:TickSettings StartOffset="0.8" EndOffset="0.72" Thickness="2" Color="DarkGray"></gauge:TickSettings>
+                        </gauge:Scale.MajorTickSettings>
+                        <gauge:Scale.MinorTickSettings>
+                            <gauge:TickSettings StartOffset="0.8" EndOffset="0.75" ></gauge:TickSettings>
+                        </gauge:Scale.MinorTickSettings>
+
+                        <gauge:Scale.Ranges>
+                            <gauge:Range x:Name="range" StartValue="{Binding FirstMarkerValue}"
+                                         EndValue="{Binding SecondMarkerValue}"
+                                         InnerStartOffset="0.8" InnerEndOffset="0.8"
+                                         OuterStartOffset="0.9" OuterEndOffset="0.9" Color="#E57982"
+                                         ></gauge:Range>
+                        </gauge:Scale.Ranges>
+                    
+                        <gauge:Scale.Pointers>
+                            <gauge:MarkerPointer x:Name="pointer1" EnableDragging="True" Value="2" Color="#F7CE72" 
+                                                 ValueChanging="Pointer1_ValueChanging" Offset="0.9" 
+                                                 StepFrequency="{Binding Source={x:Reference frequency_slider}, Path=Value}"
+                                                 EnableAnimation="False" ValueChanged="Pointer1_ValueChanged"
+                                                 MarkerShape="Circle" MarkerHeight="{Binding PointerSize}" MarkerWidth="{Binding PointerSize}">
+                                                         
+                            </gauge:MarkerPointer>
+
+                            <gauge:MarkerPointer x:Name="pointer2"  EnableDragging="True" Value="10" Color="#F7CE72" 
+                                                 ValueChanging="Pointer2_ValueChanging" EnableAnimation="False"
+                                                 StepFrequency="{Binding Source={x:Reference frequency_slider}, Path=Value}"
+                                                 MarkerShape="Circle" ValueChanged="Pointer2_ValueChanged" Offset="0.9"
+                                                 MarkerHeight="{Binding PointerSize}" MarkerWidth="{Binding PointerSize}">
+                                                          
+                            </gauge:MarkerPointer>
+                        </gauge:Scale.Pointers>
+                    </gauge:Scale>
+                </gauge:SfCircularGauge.Scales>
+            </gauge:SfCircularGauge>
+        </Grid>
+    </local:SampleView.Content>
+    <local:SampleView.PropertyView>
+
+        <StackLayout Orientation="Vertical" >
+            <StackLayout BackgroundColor="White" Orientation="Horizontal">
+                <Label x:Name="frequency_text" Text="Step Frequency : " FontAttributes="Bold" TextColor="Black"/>
+                <Label x:Name="frequency_value" FontAttributes="Bold" TextColor="Black"
+                BindingContext="{x:Reference frequency_slider}" Text="{Binding Value, StringFormat='{0:N1}'}"/>
+            </StackLayout>
+
+            <Slider x:Name="frequency_slider" MinimumTrackColor="#177CE7" ThumbColor="#1a1aff" 
+                    ValueChanged="frequency_slider_ValueChanged"
+                    MaximumTrackColor="DarkGray" 
+                    Minimum="0" Value="0.2" Maximum="1" />
+
+        </StackLayout>
+    </local:SampleView.PropertyView>
+</local:SampleView>

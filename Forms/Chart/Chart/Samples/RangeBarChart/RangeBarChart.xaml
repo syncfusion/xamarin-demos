@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.RangeBarChart" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+  <local:SampleView.Content>
+    <StackLayout x:Name="stack">
+      <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <chart:SfChart.Margin>
+          <OnPlatform x:TypeArguments="Thickness" WinPhone="0,0,15,0" />
+        </chart:SfChart.Margin>
+        <chart:SfChart.Title>
+          <chart:ChartTitle Text="Pipeline Volume" TextColor="Black"  />
+        </chart:SfChart.Title>
+        <chart:SfChart.BindingContext>
+          <sampleBrowser:RangeBarViewModel />
+        </chart:SfChart.BindingContext>
+        <chart:SfChart.PrimaryAxis>
+          <chart:CategoryAxis ShowMajorGridLines="false" >
+            <chart:CategoryAxis.AxisLineStyle>
+              <chart:ChartLineStyle StrokeWidth="0">
+              </chart:ChartLineStyle>       
+            </chart:CategoryAxis.AxisLineStyle>
+                    <chart:CategoryAxis.MajorTickStyle>
+                        <chart:ChartAxisTickStyle StrokeWidth="0" StrokeColor="White"/>
+                    </chart:CategoryAxis.MajorTickStyle>
+            <chart:CategoryAxis.LabelStyle>
+                <chart:ChartAxisLabelStyle FontSize="11" TextColor="Black" />
+            </chart:CategoryAxis.LabelStyle>
+          </chart:CategoryAxis>
+        </chart:SfChart.PrimaryAxis>
+        <chart:SfChart.SecondaryAxis>
+          <chart:NumericalAxis IsVisible="false" ShowMajorGridLines="false">
+            <chart:NumericalAxis.LabelStyle>
+              <chart:ChartAxisLabelStyle TextColor="Black"/>
+            </chart:NumericalAxis.LabelStyle>
+          </chart:NumericalAxis>
+        </chart:SfChart.SecondaryAxis>
+        <chart:SfChart.Series>
+          <chart:RangeColumnSeries x:Name="rangeBarSeries" ItemsSource="{Binding RangeBarData}" XBindingPath="Name" High="Value" Low="" IsTransposed="true">
+                <chart:RangeColumnSeries.DataMarker>
+                    <chart:ChartDataMarker>
+                        <chart:ChartDataMarker.LabelStyle>
+                            <chart:DataMarkerLabelStyle LabelFormat="'$'#,###" />
+                        </chart:ChartDataMarker.LabelStyle>
+                    </chart:ChartDataMarker>           
+                </chart:RangeColumnSeries.DataMarker>
+            <chart:RangeColumnSeries.ColorModel>
+             <chart:ChartColorModel Palette="Natural"/>
+            </chart:RangeColumnSeries.ColorModel>
+          </chart:RangeColumnSeries>
+        </chart:SfChart.Series>
+      </chart:SfChart>
+    </StackLayout>
+  </local:SampleView.Content>
+</local:SampleView>
