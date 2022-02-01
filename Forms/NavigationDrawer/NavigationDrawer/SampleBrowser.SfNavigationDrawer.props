@@ -1,0 +1,47 @@
+<Project >
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\NavigationDrawer_Main\ArchiveModel.cs" >
+    <Link>Samples\NavigationDrawer\NavigationDrawer_Main\ArchiveModel.cs</Link>
+   </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\NavigationDrawer_Main\MenuCollection.cs" >
+        <Link>Samples\NavigationDrawer\NavigationDrawer_Main\MenuCollection.cs</Link>
+   </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\NavigationDrawer_Main\Archive_Default.xaml.cs">
+        <Link>Samples\NavigationDrawer\NavigationDrawer_Main\Archive_Default.xaml.cs</Link>
+      <DependentUpon>Archive_Default.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\NavigationDrawer_Main\NavigationDrawer_Default.xaml.cs">
+          <Link>Samples\NavigationDrawer\NavigationDrawer_Main\NavigationDrawer_Default.xaml.cs</Link>
+      <DependentUpon>NavigationDrawer_Default.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\NavigationDrawer_Main\NavigationDrawer_Main.xaml.cs">
+         <Link>Samples\NavigationDrawer\NavigationDrawer_Main\NavigationDrawer_Main.xaml.cs</Link>
+      <DependentUpon>NavigationDrawer_Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\NavigationDrawer_Main\NavigationDrawer_Tablet.xaml.cs">
+         <Link>Samples\NavigationDrawer\NavigationDrawer_Main\NavigationDrawer_Tablet.xaml.cs</Link>
+      <DependentUpon>NavigationDrawer_Tablet.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml" >
+       <Link>Samples\NavigationDrawer\SamplesList\SamplesList.xml</Link>
+       </EmbeddedResource>
+   <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\NavigationDrawer_Main\Archive_Default.xaml">
+         <Link>Samples\NavigationDrawer\NavigationDrawer_Main\Archive_Default.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\NavigationDrawer_Main\NavigationDrawer_Default.xaml">
+          <Link>Samples\NavigationDrawer\NavigationDrawer_Main\NavigationDrawer_Default.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\NavigationDrawer_Main\NavigationDrawer_Main.xaml">
+         <Link>Samples\NavigationDrawer\NavigationDrawer_Main\NavigationDrawer_Main.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\NavigationDrawer_Main\NavigationDrawer_Tablet.xaml">
+         <Link>Samples\NavigationDrawer\NavigationDrawer_Main\NavigationDrawer_Tablet.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

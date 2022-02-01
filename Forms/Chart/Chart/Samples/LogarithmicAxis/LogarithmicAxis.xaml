@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.LogarithmicAxis" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+  <local:SampleView.Content>
+    <StackLayout x:Name="stack">
+      <StackLayout.Resources>
+        <ResourceDictionary>
+          <DataTemplate x:Key="toolTipTemplate1">
+            <StackLayout BackgroundColor="#404041">
+              <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="3,3,3,3" />
+              </StackLayout.Padding>
+              <Label Text="Profit" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,4,0,0'}" FontSize="12" Grid.Row="0" />
+                            <BoxView Color="White" HeightRequest="0.75" Margin="{OnPlatform Default='0', WPF='4,0,4,0'}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+              <StackLayout Orientation="Horizontal"  VerticalOptions="FillAndExpand" BackgroundColor="#404041" Spacing="0" Padding="3" Margin="0">
+                <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="#CCCCCC" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" Margin="{OnPlatform Default='0', WPF='3,0,0,0'}"/>
+                <Label Text="{Binding Value,StringFormat=' :  ${0}'}" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,0,3,0'}" FontSize="12" />
+              </StackLayout>
+            </StackLayout>
+          </DataTemplate>
+        </ResourceDictionary>
+      </StackLayout.Resources>
+      <chart:SfChart HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <chart:SfChart.Margin>
+          <OnPlatform x:TypeArguments="Thickness" WinPhone="0,0,15,0" />
+        </chart:SfChart.Margin>
+        <chart:SfChart.Title>
+          <chart:ChartTitle Text="Product X Growth [1995-2005]" />
+        </chart:SfChart.Title>
+        <chart:SfChart.BindingContext>
+          <sampleBrowser:LogarithmicAxisViewModel />
+        </chart:SfChart.BindingContext>
+        <chart:SfChart.ChartBehaviors>
+          <chart:ChartTooltipBehavior BackgroundColor="#404041" />
+        </chart:SfChart.ChartBehaviors>
+        <chart:SfChart.PrimaryAxis>
+          <chart:CategoryAxis PlotOffset="10" AxisLineOffset="10" Interval="2" ShowMajorGridLines="false" EdgeLabelsDrawingMode="Shift">
+            <chart:CategoryAxis.Title>
+              <chart:ChartAxisTitle Text="Year">
+              </chart:ChartAxisTitle>
+            </chart:CategoryAxis.Title>
+          </chart:CategoryAxis>
+        </chart:SfChart.PrimaryAxis>
+        <chart:SfChart.SecondaryAxis>
+          <chart:LogarithmicAxis MinorTicksPerInterval="5" ShowMinorGridLines="true" LabelCreated="Handle_LabelCreated">
+            <chart:LogarithmicAxis.Title>
+              <chart:ChartAxisTitle Text="Profit">
+              </chart:ChartAxisTitle>
+            </chart:LogarithmicAxis.Title>
+          </chart:LogarithmicAxis>
+        </chart:SfChart.SecondaryAxis>
+        <chart:SfChart.ColorModel>
+          <chart:ChartColorModel Palette="Natural" />
+        </chart:SfChart.ColorModel>
+        <chart:SfChart.Series>
+          <chart:LineSeries ItemsSource="{Binding LogarithmicData}" XBindingPath="Name" YBindingPath="Value" EnableTooltip="True" TooltipTemplate="{StaticResource toolTipTemplate1}">
+            <chart:LineSeries.DataMarker>
+              <chart:ChartDataMarker MarkerWidth="10" MarkerHeight="10" ShowLabel="false" ShowMarker="true" MarkerBorderColor="#00bdae" MarkerBorderWidth="2" MarkerColor="White">
+              </chart:ChartDataMarker>
+            </chart:LineSeries.DataMarker>
+          </chart:LineSeries>
+        </chart:SfChart.Series>
+      </chart:SfChart>
+    </StackLayout>
+  </local:SampleView.Content>
+</local:SampleView>

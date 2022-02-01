@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView  xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPicker.XForms"
+                   xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                   xmlns:custom="clr-namespace:SampleBrowser.SfPicker" 
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   x:Class="SampleBrowser.SfPicker.PopupPicker">
+	<local:SampleView.Content>
+      <ScrollView Margin="10" >
+       <Grid x:Name="tempGrid">
+         <Grid.Resources>
+           <ResourceDictionary>
+             <local:ImagePathConverter x:Key="ImagePathConverter" />
+           </ResourceDictionary>
+         </Grid.Resources>
+        <StackLayout x:Name="grid" VerticalOptions="CenterAndExpand" Padding="0,0,0,20" HorizontalOptions="CenterAndExpand">
+            <Label x:Name="header" Text="Pick your vacation" HorizontalOptions="Center" FontSize="20" />
+           
+            <Grid x:Name="innergrid" HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <StackLayout Margin="5" x:Name="layout1">
+                    <Label Text="Start Date" x:Name="startlabel" />
+                    <StackLayout x:Name="startlayout" Orientation="Horizontal">
+                      <custom:CustomPickerEntry x:Name="startdatetxt"  WidthRequest="200" HeightRequest="30"/>
+                      <custom:CustomButton x:Name="startdatebutton" BackgroundColor="Transparent" Clicked="Button_Click" Image="{Binding Converter={StaticResource ImagePathConverter},ConverterParameter=SampleBrowser.SfPicker.date.png}" Margin="10,0,0,0" VerticalOptions="Center">
+                        </custom:CustomButton>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="1" x:Name="layout2" Margin="5">
+                    <Label Text="End Date" x:Name="endlabel"/>
+                    <StackLayout x:Name="endlayout" Orientation="Horizontal">
+                      <custom:CustomPickerEntry x:Name="enddatetxt"  WidthRequest="200" HeightRequest="30" />
+                      <custom:CustomButton x:Name="enddatebutton" BackgroundColor="Transparent" Clicked="Button_Click_1" Image="{Binding Converter={StaticResource ImagePathConverter},ConverterParameter=SampleBrowser.SfPicker.date.png}" Margin="10,0,0,0" VerticalOptions="Center">
+                        </custom:CustomButton>
+                    </StackLayout>
+                </StackLayout>
+
+                <Button Text="Submit" x:Name="submit" HorizontalOptions="Center" BorderRadius="5" BorderWidth="2" WidthRequest="100" Clicked="Button_Clicked" Grid.Row="2" Margin="10" />
+            </Grid>
+          
+        </StackLayout>
+
+         <custom:CustomDatePicker  x:Name="startdate" ShowColumnHeader="true" ColumnHeaderHeight="40" SelectedItem="{Binding StartDate,Mode=TwoWay}" PickerMode="Dialog" HeaderText="Date Picker" OkButtonClicked="startdate_OkButtonClicked"   PickerHeight="300" PickerWidth="300" ShowFooter="true" >
+           <custom:CustomDatePicker.Behaviors>
+             <custom:SfPickerBehavior />
+           </custom:CustomDatePicker.Behaviors>
+        </custom:CustomDatePicker>
+         <custom:CustomDatePicker x:Name="enddate" ShowColumnHeader="true" ColumnHeaderHeight="40" SelectedItem="{Binding EndDate,Mode=TwoWay}" PickerMode="Dialog"  HeaderText="Date Picker" OkButtonClicked="enddate_OkButtonClicked"  PickerHeight="300" PickerWidth="300" ShowFooter="true" >
+           <custom:CustomDatePicker.Behaviors>
+             <custom:SfPickerBehavior />
+           </custom:CustomDatePicker.Behaviors>
+        </custom:CustomDatePicker>
+    </Grid>
+    </ScrollView>
+  </local:SampleView.Content>
+</local:SampleView>

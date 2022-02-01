@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.HistogramChart" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+    <local:SampleView.BindingContext>
+        <sampleBrowser:HistogramSeriesViewModel />
+    </local:SampleView.BindingContext>
+    <local:SampleView.Resources>
+        <ResourceDictionary>
+            <sampleBrowser:TooltipConverter x:Key="converter" />
+            <sampleBrowser:TooltipLabelConverter x:Key="labelConverter" />
+            <DataTemplate x:Key="toolTipTemplate">
+                <StackLayout BackgroundColor="#404041">
+                    <StackLayout.Padding>
+                        <OnPlatform x:TypeArguments="Thickness" WinPhone="3,3,3,3" />
+                    </StackLayout.Padding>
+                    <Label Text="Score" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,4,0,0'}" FontSize="12" Grid.Row="0"/>
+                    <BoxView Grid.Row="1" Color="White" HeightRequest="0.75" Margin="{OnPlatform Default='0', WPF='4,0,4,0'}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+                    <StackLayout Orientation="Horizontal"  VerticalOptions="FillAndExpand" BackgroundColor="#404041" Spacing="0" Padding="3" Margin="0">
+                        <Label Text="{Binding Converter={StaticResource labelConverter}, ConverterParameter='20'}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="#CCCCCC" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" Margin="{OnPlatform Default='0', WPF='3,0,0,0'}"/>
+                        <Label Text="{Binding Converter={StaticResource converter}}" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,0,3,0'}" FontSize="12" />
+                    </StackLayout>
+                </StackLayout>
+            </DataTemplate>
+        </ResourceDictionary>
+    </local:SampleView.Resources>
+    <local:SampleView.Content>
+        <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <chart:SfChart.ColorModel>
+                <chart:ChartColorModel Palette="Natural" />
+            </chart:SfChart.ColorModel>
+            <chart:SfChart.Title>
+                <chart:ChartTitle Text="Examination Result" />
+            </chart:SfChart.Title>
+            <chart:SfChart.ChartBehaviors>
+                <chart:ChartTooltipBehavior BackgroundColor="#404041" />
+            </chart:SfChart.ChartBehaviors>
+            <chart:SfChart.PrimaryAxis>
+                <chart:NumericalAxis EdgeLabelsDrawingMode="Shift" IsVisible="true" ShowMajorGridLines="false" >
+                    <chart:NumericalAxis.Title>
+                        <chart:ChartAxisTitle Text="Score of Final Examination">
+                            <chart:ChartAxisTitle.Font>
+                                <OnPlatform x:TypeArguments="Font" iOS="12" />
+                            </chart:ChartAxisTitle.Font>
+                            <chart:ChartAxisTitle.Margin>
+                                <OnPlatform x:TypeArguments="Thickness" Android="0,0,10,0" />
+                            </chart:ChartAxisTitle.Margin>
+                        </chart:ChartAxisTitle>
+                    </chart:NumericalAxis.Title>
+                </chart:NumericalAxis>
+            </chart:SfChart.PrimaryAxis>
+            <chart:SfChart.SecondaryAxis>
+                <chart:NumericalAxis IsVisible="True" ShowMajorGridLines="True" ShowMinorGridLines="false">
+                    <chart:NumericalAxis.Title>
+                        <chart:ChartAxisTitle Text="Number of Students">
+                            <chart:ChartAxisTitle.Font>
+                                <OnPlatform x:TypeArguments="Font" iOS="12" />
+                            </chart:ChartAxisTitle.Font>
+                            <chart:ChartAxisTitle.Margin>
+                                <OnPlatform x:TypeArguments="Thickness" Android="0,0,10,0" />
+                            </chart:ChartAxisTitle.Margin>
+                        </chart:ChartAxisTitle>
+                    </chart:NumericalAxis.Title>
+                    <chart:NumericalAxis.LabelStyle>
+                        <chart:ChartAxisLabelStyle x:Name="secondaryAxisLabelStyle" />
+                    </chart:NumericalAxis.LabelStyle>
+                    <chart:NumericalAxis.AxisLineStyle>
+                        <chart:ChartLineStyle StrokeWidth="0">
+                        </chart:ChartLineStyle>
+                    </chart:NumericalAxis.AxisLineStyle>
+                    <chart:NumericalAxis.MajorTickStyle>
+                        <chart:ChartAxisTickStyle TickSize="0" />
+                    </chart:NumericalAxis.MajorTickStyle>
+                </chart:NumericalAxis>
+            </chart:SfChart.SecondaryAxis>
+            <chart:SfChart.Series>
+                <chart:HistogramSeries x:Name="histogramSeries" ItemsSource="{Binding HistogramData}" XBindingPath="Value" YBindingPath="Size" Interval="20" EnableTooltip="true" EnableAnimation="True" TooltipTemplate="{StaticResource toolTipTemplate}" StrokeColor="White" StrokeWidth="1">
+                    <chart:HistogramSeries.DataMarker>
+                        <chart:ChartDataMarker ShowLabel="True">
+                            <chart:ChartDataMarker.LabelStyle>
+                                <chart:DataMarkerLabelStyle LabelPosition="Inner" BackgroundColor="Transparent" TextColor="White" >
+                                    <chart:DataMarkerLabelStyle.Font>
+                                        <OnPlatform x:TypeArguments="Font" iOS="12" />
+                                    </chart:DataMarkerLabelStyle.Font>
+                                </chart:DataMarkerLabelStyle>
+                            </chart:ChartDataMarker.LabelStyle>
+                        </chart:ChartDataMarker>
+                    </chart:HistogramSeries.DataMarker>
+                </chart:HistogramSeries>
+            </chart:SfChart.Series>
+        </chart:SfChart>
+    </local:SampleView.Content>
+</local:SampleView>

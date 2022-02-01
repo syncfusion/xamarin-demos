@@ -1,0 +1,55 @@
+<Project>
+
+   <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+     <Link>Samples\SunburstChart\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+   </ItemGroup>
+
+   <ItemGroup>
+   
+
+   <Compile Include="$(MSBuildThisFileDirectory)\Samples\Drilldown\Drilldown.xaml.cs">
+        <Link>Samples\SunburstChart\Samples\Drilldown\Drilldown.xaml.cs</Link>
+      <DependentUpon>Drilldown.xaml</DependentUpon>
+    </Compile>
+
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\GettingStarted.xaml.cs">
+        <Link>Samples\SunburstChart\Samples\GettingStarted\GettingStarted.xaml.cs</Link>
+      <DependentUpon>GettingStarted.xaml</DependentUpon>
+    </Compile>
+   
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\SunburstModel.cs" >
+   <Link>Samples\SunburstChart\Samples\SunburstModel.cs</Link>
+   </Compile>
+  
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\SunburstViewModel.cs" >
+   <Link>Samples\SunburstChart\Samples\SunburstViewModel.cs</Link>
+   </Compile>
+
+   <Compile Include="$(MSBuildThisFileDirectory)\Samples\Selection\Selection.xaml.cs">
+        <Link>Samples\SunburstChart\Samples\Selection\Selection.xaml.cs</Link>
+      <DependentUpon>Selection.xaml</DependentUpon>
+    </Compile>
+
+ <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Drilldown\Drilldown.xaml">
+      <Link>Samples\SunburstChart\Samples\Drilldown\Drilldown.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+
+     <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Selection\Selection.xaml">
+      <Link>Samples\SunburstChart\Samples\Selection\Selection.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\GettingStarted.xaml">
+      <Link>Samples\SunburstChart\Samples\GettingStarted\GettingStarted.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+
+
+  </ItemGroup>
+
+
+</Project>

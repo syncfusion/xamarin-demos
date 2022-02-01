@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Samples>
+	<Sample Title="Getting Started" Name = "CalendarGettingStarted" Description="Showcases the single and multiple selections support to restrict navigation beyond the specified minimum and maximum dates and month view lines appearance customization." />
+    <Sample Title="Blackout Dates" Name = "BlackoutDates" SearchTags="disabled,blackout"  Description="Showcases the specific date blackout capability of calendar." />
+  <Sample Title="Week View" Name = "WeekView" SearchTags= "week, week view, calendar week"  Description = "Showcases the week view mode and displaying appointments in agenda view mode in the specific date of week days." />
+  <Sample Title="Agenda View" Name = "InlineEvents" SearchTags="inline,appointments"  Description="Showcases the inline events in inline view mode and agenda view mode in a specific date of the month." />
+    <Sample Title="Customization" Name = "CalendarCustomization" SearchTags="customview, celltemplate"  Description="Showcases customization."  />
+    <Sample Title="Globalization" Name = "CalendarLocalization" SearchTags="culture,localize"  Description="Showcases localization and globalization."  />
+</Samples>  

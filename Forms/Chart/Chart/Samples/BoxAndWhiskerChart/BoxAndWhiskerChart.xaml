@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.BoxAndWhiskerChart" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+    
+    <local:SampleView.Content>
+        <StackLayout x:Name="stack">
+            <StackLayout.Resources>
+                <ResourceDictionary>
+                    <chart:ChartColorCollection x:Key="Colors">
+                    <Color>#01BDAE</Color>
+                    <Color>#8084E8</Color>
+                    <Color>#367CD2</Color>
+                    <Color>#E66490</Color>
+                    <Color>#F7B883</Color>
+                    </chart:ChartColorCollection>
+                </ResourceDictionary>
+            </StackLayout.Resources>
+            <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <chart:SfChart.Title>
+                    <chart:ChartTitle Text="Age Structure of Employees in Various Departments"/>
+                </chart:SfChart.Title>
+                <chart:SfChart.BindingContext>
+                    <sampleBrowser:BoxAndWhiskerSeriesViewModel/>
+                </chart:SfChart.BindingContext>
+                <chart:SfChart.ChartBehaviors>
+                    <chart:ChartTooltipBehavior BackgroundColor="#404041" />
+                </chart:SfChart.ChartBehaviors>
+                <chart:SfChart.PrimaryAxis>
+                    <chart:CategoryAxis LabelPlacement="BetweenTicks" ShowMajorGridLines="False" >
+                        <chart:CategoryAxis.Title>
+                            <chart:ChartAxisTitle Text="Department"/>
+                        </chart:CategoryAxis.Title>
+                    </chart:CategoryAxis>
+                </chart:SfChart.PrimaryAxis>
+                
+                <chart:SfChart.SecondaryAxis>
+                    <chart:NumericalAxis IsVisible="True" Maximum="60" Minimum="20" Interval="5" >
+                        <chart:NumericalAxis.Title>
+                            <chart:ChartAxisTitle Text="Age">
+                                <chart:ChartAxisTitle.Font>
+                                    <OnPlatform x:TypeArguments="Font" iOS="12" />
+                                </chart:ChartAxisTitle.Font>
+                                <chart:ChartAxisTitle.Margin>
+                                    <OnPlatform x:TypeArguments="Thickness" Android="0,0,10,0" />
+                                </chart:ChartAxisTitle.Margin>
+                            </chart:ChartAxisTitle>
+                        </chart:NumericalAxis.Title>
+                        <chart:NumericalAxis.AxisLineStyle>
+                            <chart:ChartLineStyle StrokeWidth="0">
+                            </chart:ChartLineStyle>
+                        </chart:NumericalAxis.AxisLineStyle>
+                        <chart:NumericalAxis.MajorTickStyle>
+                            <chart:ChartAxisTickStyle TickSize="0" />
+                        </chart:NumericalAxis.MajorTickStyle>
+                    </chart:NumericalAxis>
+                </chart:SfChart.SecondaryAxis>
+                <chart:SfChart.Series>
+                    <chart:BoxAndWhiskerSeries x:Name="boxPlotSeries" Width="0.5" ItemsSource="{Binding BoxWhiskerData}"
+                                               XBindingPath="Department" YBindingPath="EmployeeAges" >
+                        <chart:BoxAndWhiskerSeries.ColorModel>
+                            <chart:ChartColorModel Palette="Custom" CustomBrushes="{StaticResource Colors}"/>
+                        </chart:BoxAndWhiskerSeries.ColorModel>
+                    </chart:BoxAndWhiskerSeries>
+                </chart:SfChart.Series>
+            </chart:SfChart>
+        </StackLayout>
+    </local:SampleView.Content>
+    <local:SampleView.PropertyView>
+        <StackLayout>
+            <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness"  WinPhone="20,20,20,20"/>
+            </StackLayout.Padding>
+            <StackLayout.WidthRequest>
+                <OnPlatform x:TypeArguments="x:Double"  WinPhone="200" />
+            </StackLayout.WidthRequest>
+            <StackLayout.HorizontalOptions>
+                <OnPlatform x:TypeArguments="LayoutOptions" iOS="FillAndExpand" Android="FillAndExpand" WinPhone="Center"/>
+            </StackLayout.HorizontalOptions>
+            <StackLayout.VerticalOptions>
+                <OnPlatform x:TypeArguments="LayoutOptions" iOS="FillAndExpand" Android="FillAndExpand" WinPhone="Center"/>
+            </StackLayout.VerticalOptions>
+            <Label VerticalOptions="Center" Text="Box Plot Mode"/>
+            <Picker Margin="0,0,0,15" HorizontalOptions="FillAndExpand" VerticalOptions="Center" x:Name="boxPlotMode" WidthRequest="400">
+                <Picker.Items>
+                    <x:String>Exclusive</x:String>
+                    <x:String>Inclusive</x:String>
+                    <x:String>Normal</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label VerticalOptions="Center" Text="Symbol Type"/>
+            <Picker Margin="0,0,0,15" HorizontalOptions="FillAndExpand" VerticalOptions="Center" x:Name="symbolType" WidthRequest="400">
+                <Picker.Items>
+                    <x:String>Ellipse</x:String>
+                    <x:String>Diamond</x:String>
+                    <x:String>Cross</x:String>
+                    <x:String>Hexagon</x:String>
+                    <x:String>InvertedTriangle</x:String>
+                    <x:String>Pentagon</x:String>
+                    <x:String>Plus</x:String>
+                    <x:String>Rectangle</x:String>
+                    <x:String>Triangle</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label VerticalOptions="Center" Text="Show Median"></Label>
+            <Switch x:Name="showMedian" HorizontalOptions="Start" Toggled="ShowMedian_Toggled" IsToggled="True"/>
+        </StackLayout>
+    </local:SampleView.PropertyView>
+</local:SampleView>
+    

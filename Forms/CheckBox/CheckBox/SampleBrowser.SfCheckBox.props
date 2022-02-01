@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\CheckBox\CheckBox.xaml.cs">
+	  <Link>Samples\CheckBox\Samples\CheckBox.xaml.cs</Link>
+      <DependentUpon>CheckBox.xaml</DependentUpon>
+    </Compile>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml.cs">
+    <Link>Samples\CheckBox\Samples\Themes\Themes.xaml.cs</Link>
+    <DependentUpon>Themes.xaml</DependentUpon>
+  </Compile>
+  </ItemGroup>
+    <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml" >
+	<Link>Samples\CheckBox\SamplesList\SamplesList.xml</Link>
+	</EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CheckBox\CheckBox.xaml">
+	  <Link>Samples\CheckBox\Samples\CheckBox.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml">
+      <Link>Samples\CheckBox\Samples\Themes\Themes.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  
+</Project>

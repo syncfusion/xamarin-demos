@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<core:SampleView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:SyncfusionButton="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SampleBrowser.Chips"
+    xmlns:Border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+    xmlns:core="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    x:Class="SampleBrowser.Chips.ChipTypes">
+
+     <core:SampleView.BindingContext>
+        <local:ChipViewModel />
+    </core:SampleView.BindingContext>
+    <core:SampleView.Resources>
+        <ResourceDictionary>
+            <Thickness Left="10" Right="0" Top="25" Bottom="0" x:Key="LabelMargin"/>
+            <Thickness Left="5" Right="0" Top="10" Bottom="0" x:Key="ChipMargin"/>
+        </ResourceDictionary>
+    </core:SampleView.Resources>
+    <core:SampleView.Content>
+        <StackLayout>
+            <ScrollView Orientation="Vertical">
+                <StackLayout>
+                    <Label
+                        FontAttributes="Bold"
+                        Margin="{StaticResource LabelMargin}" 
+                        Text="Pick an electronic item (Choice chips)"/>
+                    <ScrollView 
+                        Margin="{StaticResource ChipMargin}">
+                        <ScrollView.Orientation>
+                            <OnPlatform WPF="Vertical" Default="Horizontal"/>
+                        </ScrollView.Orientation>
+                        <SyncfusionButton:SfChipGroup 
+                            ChipPadding="2,0,0,0" 
+                            SelectedItem="{Binding SelectedItem}"
+                            ItemsSource="{Binding ChoiceItems}" 
+                            Type="Choice"/>
+                    </ScrollView>      
+                    <Label 
+                        FontAttributes="Bold" 
+                        Margin="{StaticResource LabelMargin}" 
+                        Text="Enter brands (Input Chips)"/>
+                    <ScrollView Orientation="Vertical" Margin="0">
+                        <SyncfusionButton:SfChipGroup 
+                            VerticalOptions="Center"
+                            x:Name="inputChipGroup" 
+                            ItemsSource="{Binding InputItems,Mode=TwoWay}" 
+                            Type="Input"
+                            ChipPadding="8,8,0,0">
+                    <SyncfusionButton:SfChipGroup.InputView>
+                        <Entry 
+                            VerticalOptions="Center" 
+                            FontSize="15" 
+                            Placeholder="{Binding PlaceHolderText,Mode=TwoWay}"
+                            WidthRequest="110" 
+                            Text="{Binding InputText,Mode=TwoWay}" 
+                            Margin="10,10,0,0">
+                        <Entry.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="Android" Value ="40"/>
+                                <On Platform="WPF" Value="32"/>
+                                <On Platform="iOS" Value="33"/>
+                                <On Platform="UWP" Value="32"/>
+                            </OnPlatform>
+                        </Entry.HeightRequest>
+                        <Entry.Behaviors>
+                             <local:EntryBehavior InputChipGroup="{x:Reference inputChipGroup}" />
+                        </Entry.Behaviors>
+                        </Entry>
+                    </SyncfusionButton:SfChipGroup.InputView>
+                    <SyncfusionButton:SfChipGroup.ChipLayout>
+                        <FlexLayout
+                                HorizontalOptions="Start" 
+                                VerticalOptions="Center" 
+                                Direction="Row" 
+                                Wrap="Wrap" 
+                                JustifyContent="Start" 
+                                AlignContent="Start" 
+                                AlignItems="Start"/>
+                    </SyncfusionButton:SfChipGroup.ChipLayout>
+                    </SyncfusionButton:SfChipGroup>
+                    </ScrollView>
+                        <Label
+                            FontAttributes="Bold" 
+                            Margin="{StaticResource LabelMargin}" 
+                            Text="Select features (Filter chips)"/>
+                        <ScrollView  Margin="{StaticResource ChipMargin}">
+                        <ScrollView.Orientation>
+                            <OnPlatform WPF="Vertical" Default="Horizontal"/>
+                        </ScrollView.Orientation>
+                        <SyncfusionButton:SfChipGroup 
+                                SelectedChipTextColor="#FF202020"
+                                SelectedItems="{Binding SelectedItems}"              
+                                SelectedChipBackgroundColor="#FFB6B6B6" 
+                                SelectionIndicatorColor="#FF353535"
+                                ChipPadding="2,0,0,0"
+                                ItemsSource="{Binding FilterItems,Mode=TwoWay}" 
+                                Type="Filter">
+                            </SyncfusionButton:SfChipGroup>
+                        </ScrollView>           
+                   <Label 
+                        FontAttributes="Bold"
+                        Margin="{StaticResource LabelMargin}"
+                        Text="Select result (Action chips)"/>
+                <ScrollView Margin="{StaticResource ChipMargin}">
+                        <ScrollView.Orientation>
+                            <OnPlatform WPF="Vertical" Default="Horizontal"/>
+                        </ScrollView.Orientation>
+                        <SyncfusionButton:SfChipGroup
+                        Command="{Binding ActionCommand}" 
+                        ChipPadding="2,0,0,0" 
+                        ItemsSource="{Binding ActionItems,Mode=TwoWay}" 
+                        Type="Action">
+                </SyncfusionButton:SfChipGroup>
+                </ScrollView>
+                <Label 
+                    FontAttributes="Bold" 
+                    Text="Search results"
+                    Margin="{StaticResource LabelMargin}" />
+                <Label
+                    x:Name="labelText"
+                    Text="{Binding Result,Mode=TwoWay}" 
+                    Margin="12,0,0,15"/>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </core:SampleView.Content>
+</core:SampleView>

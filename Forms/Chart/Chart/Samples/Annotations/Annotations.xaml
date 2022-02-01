@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.Annotations" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+    <local:SampleView.Resources>
+          <ResourceDictionary>
+              <Color x:Key="BackColor">
+                <x:Arguments>   
+                    <x:Double>0.96</x:Double>
+                    <x:Double>0.97</x:Double>
+                    <x:Double>0.96</x:Double>
+                </x:Arguments>
+              </Color>
+          </ResourceDictionary>
+    </local:SampleView.Resources>
+    <local:SampleView.Content>
+        <chart:SfChart AreaBackgroundColor="{StaticResource BackColor}" x:Name="chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <chart:SfChart.PrimaryAxis>
+                <chart:NumericalAxis Minimum="0" ShowMajorGridLines="false" Maximum="4" >
+                    <chart:NumericalAxis.AxisLineStyle>
+                        <chart:ChartLineStyle StrokeColor="White"/>
+                    </chart:NumericalAxis.AxisLineStyle>
+                </chart:NumericalAxis>
+            </chart:SfChart.PrimaryAxis>
+            <chart:SfChart.SecondaryAxis>
+                <chart:NumericalAxis Minimum="20" Maximum="70" ShowMajorGridLines="false" >
+                    <chart:NumericalAxis.AxisLineStyle>
+                        <chart:ChartLineStyle StrokeColor="White"/>
+                    </chart:NumericalAxis.AxisLineStyle>
+                </chart:NumericalAxis>
+            </chart:SfChart.SecondaryAxis>
+            <chart:SfChart.ChartAnnotations>
+                <chart:VerticalLineAnnotation X1="2" LineCap="Arrow" ShowAxisLabel="true" Text="Vertical Line" x:Name="verticalLineAnnotation" />
+                <chart:HorizontalLineAnnotation Y1="45" LineCap="Arrow" ShowAxisLabel="true" Text="Horizontal Line" x:Name="horizontalLineAnnotation" />
+                <chart:LineAnnotation X1="2.5" X2="3.5" Y1="52" Y2="63" LineCap="Arrow" Text="Line" >
+					<chart:LineAnnotation.LabelStyle>
+						<chart:ChartAnnotationLabelStyle VerticalTextAlignment="Start">
+							<chart:ChartAnnotationLabelStyle.Margin>
+                 				<OnPlatform x:TypeArguments="Thickness" iOS="0,0,0,5" Android="0,0,0,20" />
+                			</chart:ChartAnnotationLabelStyle.Margin>
+						</chart:ChartAnnotationLabelStyle>
+					</chart:LineAnnotation.LabelStyle>
+				</chart:LineAnnotation>
+                <chart:RectangleAnnotation X1="0.5" X2="1.5" Y1="25" Y2="35" Text="Rectangle" x:Name="rectangleAnnotation" />
+                <chart:EllipseAnnotation X1="2.5" X2="3.5" Y1="25" Y2="35" Text="Ellipse" x:Name="ellipseAnnotation" />
+                <chart:TextAnnotation X1="1" Y1="57.5" Text="Text Annotation" x:Name="textAnnotation" />
+            </chart:SfChart.ChartAnnotations>
+        </chart:SfChart>
+    </local:SampleView.Content>
+</local:SampleView>
