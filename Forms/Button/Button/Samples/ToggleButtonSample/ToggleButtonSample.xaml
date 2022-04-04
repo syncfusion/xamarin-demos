@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+                  x:Class="SampleBrowser.SfButton.ToggleButtonSample">
+    <local:SampleView.Resources>
+        <ResourceDictionary>
+            <Style x:Key="LabelNormalStyle"  TargetType="Label">
+                <Setter Property="TextColor" Value="#000000"/>
+                <Setter Property="FontSize" Value="15"/>
+            </Style>
+            <OnPlatform x:TypeArguments="x:String" x:Key="FontIcon">
+                <On Platform="Android" Value="Sync FontIcons.ttf#Sync FontIcons" />
+                <On Platform="iOS" Value="Sync FontIcons" />
+                <On Platform="UWP" Value="Sync FontIcons.ttf#Sync FontIcons"/>
+            </OnPlatform>
+            <FontImageSource x:Key="AlignLeft_Icon"
+                             FontFamily="{StaticResource FontIcon}" 
+                             Glyph="&#xe74f;" Size="44"
+                             Color="Black" />
+            <FontImageSource x:Key="AlignCenter_Icon"
+                             FontFamily="{StaticResource FontIcon}" 
+                             Glyph="&#xe765;" Size="44"
+                             Color="Black" />
+            <FontImageSource x:Key="AlignRight_Icon"
+                             FontFamily="{StaticResource FontIcon}" 
+                             Glyph="&#xe73a;" Size="44"
+                             Color="Black" />
+        </ResourceDictionary>
+    </local:SampleView.Resources>
+    <local:SampleView.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.HorizontalOptions>
+                    <OnPlatform WPF="Center"/>
+                </Grid.HorizontalOptions>
+                <Grid.VerticalOptions>
+                    <OnPlatform WPF="Center"/>
+                </Grid.VerticalOptions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition>
+                        <ColumnDefinition.Width>
+                            <OnPlatform x:TypeArguments="GridLength">
+                                <On Platform="UWP">
+                                    <OnIdiom x:TypeArguments="GridLength" Desktop="400" Tablet="400" Phone="*" />
+                                </On>
+                                <On Platform="WPF" Value="400"/>
+                                <On Platform="Android">
+                                    <OnIdiom x:TypeArguments="GridLength" Desktop="400" Tablet="400" Phone="*"/>
+                                </On>
+                                <On Platform="iOS">
+                                    <OnIdiom x:TypeArguments="GridLength" Desktop="400" Tablet="400" Phone="*"/>
+                                </On>
+                            </OnPlatform>
+                        </ColumnDefinition.Width>
+                    </ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Row="0" BackgroundColor="#D3D3DF">
+                    <Image x:Name="imageBack"                                
+                               Source="button_backgroundImage.png" 
+                               Aspect="Fill"
+                               IsVisible="{Binding Source={x:Reference transparentButton},Path=IsChecked}"/>
+                    <StackLayout x:Name="textStack"                                   
+                                     HorizontalOptions="Center" 
+                                     VerticalOptions="Center" 
+                                     Spacing="0">
+                        <Label x:Name="hellowWorld"                   
+                                Text=" Hello Welcome!! "
+                                FontSize="Large"                          
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center"/>
+                        <BoxView x:Name="underlineBoxView" 
+                                 HeightRequest="1" 
+                                 BackgroundColor="Gray" 
+                                 IsVisible="false"/>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="1"
+                      Padding="10,15,10,10"
+                      RowSpacing="20"
+                      HorizontalOptions="Start">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout HorizontalOptions="Start" 
+                                 Spacing="10"
+                                 VerticalOptions="Start">
+                        <Label Text="Text style (Multiple Selection)" 
+                               Style="{StaticResource LabelNormalStyle}" />
+                        <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="Start">
+                            <syncfusion:SfButton x:Name="boldButton"
+                                                     Text="&#xE8DD;" 
+                                                     FontSize="18"
+                                                     BorderWidth="1" 
+                                                     BorderColor="Gray" 
+                                                     CornerRadius="0"
+                                                     TextColor="Black"
+                                                     IsCheckable="true"
+                                                     HorizontalOptions="Start"
+                                                     VerticalOptions="Start"
+                                                     BackgroundColor="Transparent"                                                   
+                                                     Clicked="FontButton_Clicked">
+                                <syncfusion:SfButton.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <On Platform="iOS" Value="Segoe MDL2 Assets" />
+                                        <On Platform="WPF" Value="/Assets/Fonts/button_Segoe MDL2 Assets.ttf#Segoe MDL2 Assets"/>
+                                        <On Platform="Android" Value="button_Segoe MDL2 Assets.ttf#Segoe MDL2 Assets" />
+                                        <On Platform="UWP" Value="/Assets/Fonts/button_Segoe MDL2 Assets.ttf#Segoe MDL2 Assets" />
+                                    </OnPlatform>
+                                </syncfusion:SfButton.FontFamily>
+                            </syncfusion:SfButton>
+                            <syncfusion:SfButton x:Name="italicButton"
+                                                     Text="&#xE8DB;" 
+                                                     Margin="-1,0,-1,0"
+                                                     FontSize="20"
+                                                     TextColor="Black"
+                                                     BorderWidth="1"
+                                                     BorderColor="Gray"
+                                                     CornerRadius="0"
+                                                     IsCheckable="true"
+                                                     HorizontalOptions="Start"
+                                                     VerticalOptions="Start"
+                                                     BackgroundColor="Transparent"
+                                                     Clicked="FontButton_Clicked">
+                                <syncfusion:SfButton.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <On Platform="iOS" Value="Segoe MDL2 Assets" />
+                                        <On Platform="WPF" Value="/Assets/Fonts/button_Segoe MDL2 Assets.ttf#Segoe MDL2 Assets"/>
+                                        <On Platform="Android" Value="button_Segoe MDL2 Assets.ttf#Segoe MDL2 Assets" />
+                                        <On Platform="UWP" Value="/Assets/Fonts/button_Segoe MDL2 Assets.ttf#Segoe MDL2 Assets" />
+                                    </OnPlatform>
+                                </syncfusion:SfButton.FontFamily>
+                            </syncfusion:SfButton>
+                            <syncfusion:SfButton x:Name="underlineButton"
+                                                     Text="&#xE8DC;" 
+                                                     FontSize="18"
+                                                     BorderWidth="1" 
+                                                     BorderColor="Gray" 
+                                                     CornerRadius="0"
+                                                     TextColor="Black"
+                                                     IsCheckable="true"
+                                                     HorizontalOptions="Start"
+                                                     VerticalOptions="Start"
+                                                     BackgroundColor="Transparent"
+                                                     Clicked="FontButton_Clicked">
+                                <syncfusion:SfButton.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <On Platform="iOS" Value="Segoe MDL2 Assets" />
+                                        <On Platform="WPF" Value="/Assets/Fonts/button_Segoe MDL2 Assets.ttf#Segoe MDL2 Assets"/>
+                                        <On Platform="Android" Value="button_Segoe MDL2 Assets.ttf#Segoe MDL2 Assets" />
+                                        <On Platform="UWP" Value="/Assets/Fonts/button_Segoe MDL2 Assets.ttf#Segoe MDL2 Assets" />
+                                    </OnPlatform>
+                                </syncfusion:SfButton.FontFamily>
+                            </syncfusion:SfButton>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="1" 
+                                 HorizontalOptions="Start" 
+                                 VerticalOptions="Start">
+                        <Label Text="Text Alignment (Single Selection)" 
+                               Style="{StaticResource LabelNormalStyle}" />
+                        <StackLayout x:Name="layout"
+                                     Orientation="Horizontal"
+                                     Spacing="0"
+                                     VerticalOptions="Start" 
+                                     HorizontalOptions="Start">
+                            <syncfusion:SfButton x:Name="leftAlignButton" 
+                                                 ShowIcon="True"
+                                                 ImageSource="{StaticResource AlignLeft_Icon}"
+                                                 Text="Left" 
+                                                 FontSize="16"
+                                                 BorderWidth="1" 
+                                                 BorderColor="Gray" 
+                                                 CornerRadius="0"
+                                                 TextColor="Black"   
+                                                 HorizontalOptions="Start"
+                                                 VerticalOptions="Start"
+                                                 BackgroundColor="Transparent"
+                                                 Clicked="Handle_Clicked">
+                            </syncfusion:SfButton>
+                            <syncfusion:SfButton x:Name="centerAlignButton" 
+                                                 ShowIcon="True"
+                                                 HorizontalOptions="Start"
+                                                 VerticalOptions="Start"
+                                                 ImageSource="{StaticResource AlignCenter_Icon}"
+                                                 Text="Center" 
+                                                 FontSize="16"
+                                                 BorderWidth="1" 
+                                                 Margin="-1,0,-1,0"
+                                                 BorderColor="Gray" 
+                                                 CornerRadius="0"
+                                                 TextColor="Black"        
+                                                 BackgroundColor="LightGray"
+                                                 Clicked="Handle_Clicked">
+                            </syncfusion:SfButton>
+                            <syncfusion:SfButton x:Name="rightAlignButton" 
+                                                 ShowIcon="True"
+                                                 ImageSource="{StaticResource AlignRight_Icon}"
+                                                 Text="Right" 
+                                                 FontSize="16"
+                                                 BorderWidth="1" 
+                                                 BorderColor="Gray" 
+                                                 CornerRadius="0"
+                                                 TextColor="Black"
+                                                 HorizontalOptions="Start"
+                                                 VerticalOptions="Start"      
+                                                 BackgroundColor="Transparent"
+                                                 Clicked="Handle_Clicked">
+                            </syncfusion:SfButton>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <Grid Grid.Row="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Label Text="Text Background" 
+                               Grid.Row="0"  
+                               HorizontalOptions="Start" 
+                               VerticalOptions="Start"
+                               Style="{StaticResource LabelNormalStyle}"/>
+
+                        <syncfusion:SfButton Grid.Row="1"
+                                             x:Name="transparentButton"
+                                             HorizontalOptions="Start"
+                                             VerticalOptions="Start"
+                                             FontSize="18"
+                                             BorderWidth="1"
+                                             BorderColor="Gray"
+                                             CornerRadius="0"
+                                             IsCheckable="true"                                           
+                                             Text="OFF"
+                                             BackgroundColor="Transparent"
+                                             TextColor="Black"
+                                             Clicked="FontButton_Clicked">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Checked" >
+                                        <VisualState.Setters>
+                                            <Setter Property="Text" Value="ON"/>
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <VisualState x:Name="Unchecked">
+                                        <VisualState.Setters>
+                                            <Setter Property="Text" Value="OFF" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </syncfusion:SfButton>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </local:SampleView.Content>
+</local:SampleView>

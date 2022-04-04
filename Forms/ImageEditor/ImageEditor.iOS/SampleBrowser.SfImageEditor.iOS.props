@@ -1,0 +1,43 @@
+<Project>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\FileStore.cs">
+   <Link>ImageEditor\FileStore.cs</Link>
+    </Compile>
+   <Compile Include="$(MSBuildThisFileDirectory)\Renderers\CustomRenderers.cs">
+   <Link>ImageEditor\Renderers\CustomRenderers.cs </Link>
+    </Compile>        
+   <Compile Include="$(MSBuildThisFileDirectory)\Share.cs">
+   <Link>ImageEditor\Share.cs</Link>
+    </Compile>        
+    </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Typogy1.svg">
+    <Link>Resources\Typogy1.svg</Link>
+       </BundleResource>          
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Typogy2.svg">
+    <Link>Resources\Typogy2.svg</Link>
+       </BundleResource>          
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Typogy3.svg">
+    <Link>Resources\Typogy3.svg</Link>
+       </BundleResource>          
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Typogy4.svg">
+    <Link>Resources\Typogy4.svg</Link>
+       </BundleResource>          
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Typogy5.svg">
+    <Link>Resources\Typogy5.svg</Link>
+        </BundleResource>         
+  </ItemGroup>
+  <ItemGroup>
+   <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Typogy6.svg">
+    <Link>Resources\Typogy6.svg</Link>
+      </BundleResource>           
+  </ItemGroup>
+  </Project>

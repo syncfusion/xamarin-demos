@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfTreeMap.TreeMapGettingStarted"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfTreeMap"
+             xmlns:tree="clr-namespace:Syncfusion.SfTreeMap.XForms;assembly=Syncfusion.SfTreeMap.XForms">
+
+    <local:SampleView.Content>
+         <Grid x:Name="grid">
+            <Grid.BindingContext>
+            <sampleBrowser:PopulationViewModel x:Name="model"/>
+        </Grid.BindingContext>
+        <tree:SfTreeMap  x:Name="TreeMap"  HorizontalOptions="FillAndExpand" ShowTooltip="True"
+      VerticalOptions="FillAndExpand" WeightValuePath="Population" ColorValuePath="Growth">
+            <tree:SfTreeMap.LeafItemSettings>
+                    <tree:LeafItemSettings  Gap="2" BorderColor="#A9D9F7" LabelPath="Country" >
+                </tree:LeafItemSettings>
+            </tree:SfTreeMap.LeafItemSettings>
+            <tree:SfTreeMap.LegendSettings>
+                <tree:LegendSettings ShowLegend="True" Size="700,45">
+                    <tree:LegendSettings.LabelStyle>
+                            <tree:Style Font="14" Color="Gray" >
+                        </tree:Style>
+                    </tree:LegendSettings.LabelStyle>
+                </tree:LegendSettings>
+            </tree:SfTreeMap.LegendSettings>
+                <tree:SfTreeMap.TooltipSettings>
+                    <tree:TooltipSetting>
+                        <tree:TooltipSetting.TooltipTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+                                    <Label Text="{Binding Country}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#FFFFFF" FontAttributes="Bold" FontFamily="Helvetica" Margin="0" FontSize="12" Grid.Row="0" />
+                                    <BoxView Color="#888C91" HeightRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+                                    <Label Text="{Binding Growth,StringFormat='{0}%'}" VerticalTextAlignment="Center" HorizontalOptions="Center" TextColor="#FFFFFF" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" />
+                                </StackLayout>
+                            </DataTemplate>
+                        </tree:TooltipSetting.TooltipTemplate>
+                    </tree:TooltipSetting>
+                </tree:SfTreeMap.TooltipSettings>
+                <tree:SfTreeMap.Levels>
+                    <tree:TreeMapFlatLevel  HeaderHeight="20" GroupPath = "Continent" GroupGap =" 5" ShowHeader = "true">
+                    </tree:TreeMapFlatLevel>
+            </tree:SfTreeMap.Levels>
+        </tree:SfTreeMap>
+            </Grid>
+    </local:SampleView.Content>
+
+</local:SampleView>

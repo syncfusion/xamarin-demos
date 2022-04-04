@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Renderer\AlertViewAndroid.cs">
+      <Link>Renderer\PdfViewer\AlertViewAndroid.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Renderer\CustomEntryRenderer.cs">
+      <Link>Renderer\PdfViewer\CustomEntryRenderer.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Renderer\SfFontButtonRenderer.cs">
+      <Link>Renderer\PdfViewer\SfFontButtonRenderer.cs</Link>
+    </Compile>
+	 <Compile Include="$(MSBuildThisFileDirectory)\SaveAndroid.cs">
+      <Link>Renderer\PdfViewer\SaveAndroid.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\Final_PDFViewer_Android_FontUpdate.ttf">
+      <Link>Assets\Final_PDFViewer_Android_FontUpdate.ttf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\PDFViewer_Android.ttf">
+      <Link>Assets\PDFViewer_Android.ttf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\Font size Font.ttf">
+      <Link>Assets\Font size Font.ttf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\Font Print.ttf">
+      <Link>Assets\Font Print.ttf</Link>
+    </AndroidAsset>
+	<AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\Android Page icons.ttf">
+      <Link>Assets\Android Page icons.ttf</Link>
+    </AndroidAsset>
+	<AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\PdfViewer_FONT.ttf">
+      <Link>Assets\PdfViewer_FONT.ttf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\Font Text edit stamp.ttf">
+      <Link>Assets\Font Text edit stamp.ttf</Link>
+    </AndroidAsset>
+  </ItemGroup>
+  </Project>

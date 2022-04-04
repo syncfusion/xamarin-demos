@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.BubbleChart" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+  <local:SampleView.Content>
+    <StackLayout x:Name="stackLayout">
+      <StackLayout.Resources>
+        <ResourceDictionary>
+          <DataTemplate x:Key="toolTipTemplate1">
+            <StackLayout BackgroundColor="#404041">
+              <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="3,3,3,3" />
+              </StackLayout.Padding>
+              <Label Text="{Binding Label}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,4,0,0'}" FontSize="12" Grid.Row="0"/>
+                            <BoxView Color="White" HeightRequest="0.75" Margin="{OnPlatform Default='0', WPF='4,0,4,0'}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+              <StackLayout Orientation="Horizontal"  VerticalOptions="FillAndExpand" BackgroundColor="#404041" Spacing="0" Padding="3" Margin="0">
+                <Label Text="Literacy Rate" VerticalTextAlignment="Center" HorizontalOptions="Start" TextColor="#CCCCCC" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" Margin="{OnPlatform Default='0', WPF='3,0,0,0'}" />
+                <Label Text="{Binding Value1,StringFormat=' :  {0}%'}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,0,3,0'}" FontSize="12" />
+              </StackLayout>
+              <StackLayout Orientation="Horizontal"  VerticalOptions="FillAndExpand" BackgroundColor="#404041" Spacing="0" Padding="3" Margin="0">
+                <Label Text="GDP Growth Rate" VerticalTextAlignment="Center" HorizontalOptions="Start" TextColor="#CCCCCC" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" Margin="{OnPlatform Default='0', WPF='3,0,0,0'}"/>
+                <Label Text="{Binding Value,StringFormat=' :  {0}'}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,0,3,0'}" FontSize="12" />
+              </StackLayout>
+              <StackLayout Orientation="Horizontal"  VerticalOptions="FillAndExpand" BackgroundColor="#404041" Spacing="0" Padding="3" Margin="0">
+                <Label Text="Population" VerticalTextAlignment="Center" HorizontalOptions="Start" TextColor="#CCCCCC" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" Margin="{OnPlatform Default='0', WPF='3,0,0,0'}"/>
+                <Label Text="{Binding Size,StringFormat=' :  {0} Billion'}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,0,3,0'}" FontSize="12" />
+              </StackLayout>
+            </StackLayout>
+          </DataTemplate>
+        </ResourceDictionary>
+      </StackLayout.Resources>
+      <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <chart:SfChart.Margin>
+          <OnPlatform x:TypeArguments="Thickness" WinPhone="0,0,15,0" />
+        </chart:SfChart.Margin>
+        <chart:SfChart.Title>
+          <chart:ChartTitle Text="World Countries Details"  />
+        </chart:SfChart.Title>
+        <chart:SfChart.BindingContext>
+          <sampleBrowser:BubbleSeriesViewModel />
+        </chart:SfChart.BindingContext>
+        <chart:SfChart.ChartBehaviors>
+          <chart:ChartTooltipBehavior BackgroundColor="#404041" />
+        </chart:SfChart.ChartBehaviors>
+        <chart:SfChart.PrimaryAxis>
+          <chart:NumericalAxis ShowMajorGridLines="false" EdgeLabelsDrawingMode="Shift" Minimum="60" Maximum="100" Interval="5">
+            <chart:NumericalAxis.Title>
+              <chart:ChartAxisTitle Text="Literacy Rate">
+                <chart:ChartAxisTitle.Margin>
+                  <OnPlatform x:TypeArguments="Thickness" Android="0,10,0,0" />
+                </chart:ChartAxisTitle.Margin>
+              </chart:ChartAxisTitle>
+            </chart:NumericalAxis.Title>
+          </chart:NumericalAxis>
+        </chart:SfChart.PrimaryAxis>
+        <chart:SfChart.SecondaryAxis>
+          <chart:NumericalAxis ShowMajorGridLines="false" Maximum="10" Minimum="0" Interval="2.5">
+            <chart:NumericalAxis.Title>
+              <chart:ChartAxisTitle Text="GDP Growth Rate">
+                <chart:ChartAxisTitle.Margin>
+                  <OnPlatform x:TypeArguments="Thickness" Android="0,0,10,0" />
+                </chart:ChartAxisTitle.Margin>
+              </chart:ChartAxisTitle>
+            </chart:NumericalAxis.Title>
+          </chart:NumericalAxis>
+        </chart:SfChart.SecondaryAxis>
+        <chart:SfChart.Series>
+          <chart:BubbleSeries x:Name="series" Opacity="0.5" ItemsSource="{Binding BubbleData}" XBindingPath="Value1" YBindingPath="Value" Size="Size" MinimumRadius="5" MaximumRadius="40" EnableTooltip="true" EnableAnimation="false" TooltipTemplate="{StaticResource toolTipTemplate1}">
+            <chart:BubbleSeries.ColorModel>
+              <chart:ChartColorModel Palette="Natural" />
+            </chart:BubbleSeries.ColorModel>
+          </chart:BubbleSeries>
+        </chart:SfChart.Series>
+      </chart:SfChart>
+    </StackLayout>
+  </local:SampleView.Content>
+</local:SampleView>

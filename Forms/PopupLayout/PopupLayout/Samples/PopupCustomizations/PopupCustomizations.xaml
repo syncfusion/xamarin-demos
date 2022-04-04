@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sample:SampleView xmlns="http://xamarin.com/schemas/2014/forms" 
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                   xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" 
+                   xmlns:local="clr-namespace:SampleBrowser.SfPopupLayout" 
+                   x:Class="SampleBrowser.SfPopupLayout.PopupCustomizations" 
+                   xmlns:behavior="clr-namespace:SampleBrowser.SfPopupLayout"
+                   xmlns:sfgrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms" 
+                   xmlns:popuplayout="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms">
+    <sample:SampleView.Resources>
+        <popuplayout:SfPopupLayout x:Key="BookingNotification" StaysOpen="True">
+            <popuplayout:SfPopupLayout.PopupView>
+                <popuplayout:PopupView ShowFooter="False" HeaderTitle="Book Tickets !" HeightRequest="130">
+                    <popuplayout:PopupView.ContentTemplate>
+                        <DataTemplate>
+                            <Grid BackgroundColor="White" Padding="10,10,10,10">
+                                <Label FontSize="14"  
+                                       BackgroundColor="White" 
+                                       TextColor="Black" 
+                                       Text="Click on the book button to start booking tickets"/>
+                            </Grid>
+                        </DataTemplate>
+                    </popuplayout:PopupView.ContentTemplate>
+                </popuplayout:PopupView>
+            </popuplayout:SfPopupLayout.PopupView>
+        </popuplayout:SfPopupLayout>
+    </sample:SampleView.Resources>
+    
+    <sample:SampleView.BindingContext>
+        <local:TicketBookingViewModel x:Name="viewModel"/>
+    </sample:SampleView.BindingContext>
+ 
+    <sample:SampleView.Content>
+             <sfgrid:SfDataGrid x:Name="dataGrid"
+                                   ItemsSource="{Binding TheaterInformation}"
+                                   AutoGenerateColumns="False"
+                                   VerticalOverScrollMode="None"
+                                   HeaderRowHeight="0"
+                                   RowHeight="140"
+                                   ColumnSizer="Star">
+                    <sfgrid:SfDataGrid.Columns x:TypeArguments="syncfusion:Columns">
+                        <sfgrid:GridTemplateColumn MappingName="MovieName">
+                            <sfgrid:GridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackLayout x:Name="mainLayout" 
+                                                 Orientation="Horizontal" 
+                                                 Margin="0,16,0,16">
+                                        <Image x:Name="movieImage" 
+                                               Source="{Binding MovieImage}" 
+                                               WidthRequest="80" 
+                                               VerticalOptions="FillAndExpand" 
+                                               Margin="16,0,0,0" />
+                                        <StackLayout x:Name="detailsLayout" 
+                                                     WidthRequest="500" 
+                                                     Orientation="Vertical" 
+                                                     Margin="12,0,0,0">
+                                          <Label Text="{Binding MovieName}" 
+                                                 Opacity="100" 
+                                                 FontSize = "15" 
+                                                 TextColor="Black" 
+                                                 HorizontalOptions="StartAndExpand" 
+                                                 VerticalOptions="Center" 
+                                                 Margin="0,0,0,8"/>
+                                          <Label Text="{Binding Cast}" 
+                                                 Opacity="54" 
+                                                 FontSize = "12" 
+                                                 TextColor="Black" 
+                                                 HorizontalOptions="StartAndExpand" 
+                                                 VerticalOptions="Center" 
+                                                 Margin="0,0,0,10" />
+                                          <StackLayout Orientation="Horizontal">
+                                            <sfgrid:BorderView BorderColor="Gray" Opacity="80" >
+                                              <Label Text="2D" 
+                                                     WidthRequest="25" 
+                                                     TextColor="Black" 
+                                                     HeightRequest="20" 
+                                                     Opacity="54" 
+                                                     FontSize="10" 
+                                                     HorizontalTextAlignment="Center" 
+                                                     VerticalTextAlignment="Center" 
+                                                     Margin="5,0,5,0" />
+                                            </sfgrid:BorderView>
+                                            <sfgrid:BorderView BorderColor="Gray" 
+                                                               Opacity="80" >
+                                              <Label Text="3D" 
+                                                     WidthRequest="25" 
+                                                     TextColor="Black" 
+                                                     HeightRequest="20" 
+                                                     Opacity="54" 
+                                                     FontSize="10" 
+                                                     HorizontalTextAlignment="Center" 
+                                                     VerticalTextAlignment="Center" 
+                                                     Margin="5,0,5,0" />
+                                            </sfgrid:BorderView>
+                                           </StackLayout>
+                                        </StackLayout>
+                                        <Button x:Name="bookbutton" 
+                                                Command="{Binding BookingCommand, Source={x:Reference viewModel}}" 
+                                                CommandParameter="{x:Reference dataGrid}" 
+                                                Text="Book" 
+                                                Opacity="100" 
+                                                VerticalOptions="CenterAndExpand" 
+                                                HorizontalOptions="EndAndExpand" 
+                                                HeightRequest="35" 
+                                                FontSize = "10" 
+                                                WidthRequest="70" 
+                                                BackgroundColor="#007CEE" 
+                                                TextColor="White" 
+                                                Margin="10,0,12,10" 
+                                                InputTransparent="false"/>
+                                     </StackLayout>
+                                </DataTemplate>
+                            </sfgrid:GridTemplateColumn.CellTemplate>
+                        </sfgrid:GridTemplateColumn>
+                    </sfgrid:SfDataGrid.Columns>
+                </sfgrid:SfDataGrid>
+    </sample:SampleView.Content>
+    <sample:SampleView.Behaviors>
+        <behavior:PopupCustomizationsBehavior />
+    </sample:SampleView.Behaviors>
+</sample:SampleView>

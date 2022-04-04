@@ -1,0 +1,86 @@
+<Project>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+      <Link>Samples\TreeMap\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Hierarchical\Hierarchical.xaml.cs">
+      <Link>Samples\TreeMap\Samples\Hierarchical\Hierarchical.xaml.cs</Link>
+      <DependentUpon>Hierarchical.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Hierarchical\HierarchicalModel.cs">
+      <Link>Samples\TreeMap\Samples\Hierarchical\HierarchicalModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Hierarchical\HierarchicalViewModel.cs">
+      <Link>Samples\TreeMap\Samples\Hierarchical\HierarchicalViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\TreeMapCustomization\TreeMapCustomization.xaml.cs">
+      <Link>Samples\TreeMap\Samples\TreeMapCustomization\TreeMapCustomization.xaml.cs</Link>
+      <DependentUpon>TreeMapCustomization.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\TreeMapCustomization\TreeMapCustomizationModel.cs">
+      <Link>Samples\TreeMap\Samples\TreeMapCustomization\TreeMapCustomizationModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\TreeMapCustomization\TreeMapCustomizationViewModel.cs">
+      <Link>Samples\TreeMap\Samples\TreeMapCustomization\TreeMapCustomizationViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\TreeMapGettingStarted\TreeMapGettingStarted.xaml.cs">
+      <Link>Samples\TreeMap\Samples\TreeMapGettingStarted\TreeMapGettingStarted.xaml.cs</Link>
+      <DependentUpon>TreeMapGettingStarted.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\TreeMapGettingStarted\TreeMapGettingStartedModel.cs">
+      <Link>Samples\TreeMap\Samples\TreeMapGettingStarted\TreeMapGettingStartedModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\TreeMapGettingStarted\TreeMapGettingStartedViewModel.cs">
+      <Link>Samples\TreeMap\Samples\TreeMapGettingStarted\TreeMapGettingStartedViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataLabel\DataLabel.xaml.cs">
+      <Link>Samples\TreeMap\Samples\DataLabel\DataLabel.xaml.cs</Link>
+      <DependentUpon>DataLabel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataLabel\DataLabelModel.cs">
+      <Link>Samples\TreeMap\Samples\DataLabel\DataLabelModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataLabel\DataLabelViewModel.cs">
+      <Link>Samples\TreeMap\Samples\DataLabel\DataLabelViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Drilldown\Drilldown.xaml.cs">
+      <Link>Samples\TreeMap\Samples\Drilldown\Drilldown.xaml.cs</Link>
+      <DependentUpon>Drilldown.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Drilldown\DrilldownModel.cs">
+      <Link>Samples\TreeMap\Samples\Drilldown\DrilldownModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Drilldown\DrilldownViewModel.cs">
+      <Link>Samples\TreeMap\Samples\Drilldown\DrilldownViewModel.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Hierarchical\Hierarchical.xaml">
+      <Link>Samples\TreeMap\Samples\Hierarchical\Hierarchical.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\TreeMapCustomization\TreeMapCustomization.xaml">
+      <Link>Samples\TreeMap\Samples\TreeMapCustomization\TreeMapCustomization.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\TreeMapGettingStarted\TreeMapGettingStarted.xaml">
+      <Link>Samples\TreeMap\Samples\TreeMapGettingStarted\TreeMapGettingStarted.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DataLabel\DataLabel.xaml">
+      <Link>Samples\TreeMap\Samples\DataLabel\DataLabel.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Drilldown\Drilldown.xaml">
+      <Link>Samples\TreeMap\Samples\Drilldown\Drilldown.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

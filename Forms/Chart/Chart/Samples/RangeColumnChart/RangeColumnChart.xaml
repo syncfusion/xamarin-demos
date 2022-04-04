@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.RangeColumnChart" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+  <local:SampleView.Content>
+    <StackLayout x:Name="stack">
+      <StackLayout.Resources>
+        <ResourceDictionary>
+          <DataTemplate x:Key="toolTipTemplate1">
+            <StackLayout BackgroundColor="#404041">
+              <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="3,3,3,3" />
+              </StackLayout.Padding>
+              <Label Text="India" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,4,0,0'}" FontSize="12" Grid.Row="0" />
+                            <BoxView Color="White" HeightRequest="0.75" Margin="{OnPlatform Default='0', WPF='4,0,4,0'}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+              <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="#404041" Spacing="0" Padding="3" Margin="0">
+                <Label Text="{Binding High,StringFormat='High :  {0}°C'}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='3,0,0,0'}" FontSize="12" />
+                <Label Text="{Binding Low,StringFormat='Low :  {0}°C'}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='3,0,0,0'}" FontSize="12" />
+              </StackLayout>
+            </StackLayout>
+          </DataTemplate>
+          <DataTemplate x:Key="toolTipTemplate2">
+            <StackLayout BackgroundColor="#404041">
+              <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="3,3,3,3" />
+              </StackLayout.Padding>
+              <Label Text="Germany" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,4,0,0'}" FontSize="12" Grid.Row="0" />
+                            <BoxView Grid.Row="1" Color="White" HeightRequest="0.75" Margin="{OnPlatform Default='0', WPF='4,0,4,0'}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+              <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="#404041" Spacing="0" Padding="3" Margin="0">
+                <Label Text="{Binding High,StringFormat='High :  {0}°C'}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='3,0,0,0'}" FontSize="12" />
+                <Label Text="{Binding Low,StringFormat='Low :  {0}°C'}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='3,0,0,0'}" FontSize="12" />
+              </StackLayout>
+            </StackLayout>
+          </DataTemplate>
+        </ResourceDictionary>
+      </StackLayout.Resources>
+      <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <chart:SfChart.Margin>
+          <OnPlatform x:TypeArguments="Thickness" WinPhone="0,0,15,0" />
+        </chart:SfChart.Margin>
+        <chart:SfChart.Title>
+          <chart:ChartTitle Text="Temperature Variation"  />
+        </chart:SfChart.Title>
+        <chart:SfChart.BindingContext>
+          <sampleBrowser:RangeColumnSeriesViewModel />
+        </chart:SfChart.BindingContext>
+        <chart:SfChart.ChartBehaviors>
+          <chart:ChartTooltipBehavior BackgroundColor="#404041" />
+        </chart:SfChart.ChartBehaviors>
+        <chart:SfChart.PrimaryAxis>
+          <chart:CategoryAxis ShowMajorGridLines="false" LabelPlacement="BetweenTicks">
+          </chart:CategoryAxis>
+        </chart:SfChart.PrimaryAxis>
+        <chart:SfChart.SecondaryAxis>
+          <chart:NumericalAxis Interval="5">
+            <chart:NumericalAxis.AxisLineStyle>
+              <chart:ChartLineStyle StrokeWidth="0">
+              </chart:ChartLineStyle>
+            </chart:NumericalAxis.AxisLineStyle>
+            <chart:NumericalAxis.MajorTickStyle>
+              <chart:ChartAxisTickStyle TickSize="0" />
+            </chart:NumericalAxis.MajorTickStyle>
+            <chart:NumericalAxis.LabelStyle>
+              <chart:ChartAxisLabelStyle x:Name="secondaryAxisLabelStyle"/>
+            </chart:NumericalAxis.LabelStyle>
+          </chart:NumericalAxis>
+        </chart:SfChart.SecondaryAxis>
+        <chart:SfChart.Legend>
+          <chart:ChartLegend DockPosition="Bottom" ToggleSeriesVisibility="True" IconWidth="14" IconHeight="14" />
+        </chart:SfChart.Legend>
+        <chart:SfChart.ColorModel>
+          <chart:ChartColorModel Palette="Natural" />
+        </chart:SfChart.ColorModel>
+        <chart:SfChart.Series>
+          <chart:RangeColumnSeries x:Name="rangeColumnSeries1" ItemsSource="{Binding RangeColumnData1}" XBindingPath="Name" High="High" Low="Low" Label="India" LegendIcon="SeriesType" EnableTooltip="true" EnableAnimation="true" TooltipTemplate="{StaticResource toolTipTemplate1}">
+            <chart:RangeColumnSeries.DataMarker>
+              <chart:ChartDataMarker ShowLabel="False" />
+            </chart:RangeColumnSeries.DataMarker>
+          </chart:RangeColumnSeries>
+          <chart:RangeColumnSeries x:Name="rangeColumnSeries2" ItemsSource="{Binding RangeColumnData2}" XBindingPath="Name" High="High" Low="Low" Label="Germany" LegendIcon="SeriesType" EnableTooltip="true" EnableAnimation="true" TooltipTemplate="{StaticResource toolTipTemplate2}">
+            <chart:RangeColumnSeries.DataMarker>
+              <chart:ChartDataMarker ShowLabel="False" />
+            </chart:RangeColumnSeries.DataMarker>
+          </chart:RangeColumnSeries>
+        </chart:SfChart.Series>
+      </chart:SfChart>
+    </StackLayout>
+  </local:SampleView.Content>
+</local:SampleView>

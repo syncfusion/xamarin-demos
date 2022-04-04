@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<sample:SampleView x:Class="SampleBrowser.SfTreeView.Checkboxes"
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:local="clr-namespace:SampleBrowser.SfTreeView"
+                   xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                   xmlns:sfTreeView="clr-namespace:Syncfusion.XForms.TreeView;assembly=Syncfusion.SfTreeView.XForms"
+                   xmlns:SfCheckBox="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+                   xmlns:treeviewengine="clr-namespace:Syncfusion.TreeView.Engine;assembly=Syncfusion.SfTreeView.XForms">
+
+    <sample:SampleView.BindingContext>
+        <local:FileManagerViewModel/>
+    </sample:SampleView.BindingContext>
+
+    <sample:SampleView.Content>
+        <sfTreeView:SfTreeView x:Name="treeView"
+                             ItemHeight="40"
+                             Indentation="15"
+                             IsAnimationEnabled="true"
+                             ExpanderWidth="40"
+                             CheckBoxMode="Recursive"
+                             NodePopulationMode="Instant"
+                             SelectionMode="None"
+                             ItemTemplateContextType="Node"
+                             CheckedItems="{Binding CheckedItems}"
+                             ItemsSource="{Binding Folders}"
+                             AutoExpandMode="AllNodesExpanded">
+            <sfTreeView:SfTreeView.HierarchyPropertyDescriptors>
+                <treeviewengine:HierarchyPropertyDescriptor TargetType="{x:Type local:Folder}" ChildPropertyName="Files"/>
+                <treeviewengine:HierarchyPropertyDescriptor TargetType="{x:Type local:File}" ChildPropertyName="SubFiles"/>
+            </sfTreeView:SfTreeView.HierarchyPropertyDescriptors>
+            <sfTreeView:SfTreeView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Grid x:Name="grid" Padding="5" RowSpacing="0" BackgroundColor="Transparent">
+                                <SfCheckBox:SfCheckBox
+                                            x:Name="CheckBox"
+                                            IsChecked="{Binding IsChecked, Mode=TwoWay}" 
+                                            Text="{Binding Content.FileName}"
+                                            TextColor="Black" 
+											VerticalOptions="Center"
+                                            FontSize="{OnPlatform Android={OnIdiom Phone=16, Tablet=18},iOS={OnIdiom Phone=16,Tablet=18},UWP={OnIdiom Phone=18,Tablet=20,Desktop=20}}"/>
+                            </Grid>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </sfTreeView:SfTreeView.ItemTemplate>
+        </sfTreeView:SfTreeView>
+    </sample:SampleView.Content>
+</sample:SampleView>
