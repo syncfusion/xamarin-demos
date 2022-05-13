@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.Calculate"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  x:Class="SampleBrowser.Calculate.FunctionsLibrary">
+
+  <sample:SampleView.Content>
+    <ScrollView x:Name="scrollView" VerticalOptions="FillAndExpand" Orientation="Vertical" HorizontalOptions="FillAndExpand">
+      <Grid Padding="10,5,10,10" x:Name="_Grid">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.BindingContext>
+          <local:FunctionsLibraryViewModel x:Name="viewModel"/>
+        </Grid.BindingContext>
+
+        <Label Text="Functions Library" HorizontalOptions="Center" FontSize="25" />
+
+        <Grid Grid.Row="1" Padding="0,2,0,0">
+          <Label Text="This sample demonstrates the calculation using various Excel-like functions."
+                 HorizontalOptions="Fill"
+                 LineBreakMode="WordWrap"
+                 HeightRequest="40"
+                 FontSize="12" />
+        </Grid>
+
+        <Grid Grid.Row="2" Padding="0,2,0,0">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="60*"/>
+          </Grid.ColumnDefinitions>
+          <Label Text="Select a function" FontSize="14" VerticalTextAlignment="Center"/>
+          <Picker x:Name="picker" Grid.Column="1" BindingContext="{x:Reference viewModel }">
+            <Picker.Behaviors>
+              <local:PickerBehavior />
+            </Picker.Behaviors>
+          </Picker>
+        </Grid>
+
+        <Grid Grid.Row="3" Padding="0,5,0,0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+          </Grid.RowDefinitions>
+
+          <Frame OutlineColor="Black" HasShadow="False">
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+              </Grid.RowDefinitions>
+              <Grid>
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="10*"/>
+                  <ColumnDefinition Width="30*"/>
+                  <ColumnDefinition Width="30*"/>
+                  <ColumnDefinition Width="30*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="" FontSize="14" VerticalTextAlignment="Center" />
+                <Label Grid.Column="1" Text="A" FontSize="14" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Grid.Column="2" Text="B" FontSize="14" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Grid.Column="3" Text="C" FontSize="14" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+              </Grid>
+              <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="10*"/>
+                  <ColumnDefinition Width="30*"/>
+                  <ColumnDefinition Width="30*"/>
+                  <ColumnDefinition Width="30*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="1" FontSize="14" VerticalTextAlignment="Center"/>
+                <Entry Grid.Column="1" FontSize="14" BackgroundColor="#d3d3d3" Text="{Binding TxtA1}" Keyboard="Numeric"/>
+                <Entry Grid.Column="2" FontSize="14" BackgroundColor="#d3d3d3" Text="{Binding TxtB1}" Keyboard="Numeric"/>
+                <Entry Grid.Column="3" FontSize="14" BackgroundColor="#d3d3d3" Text="{Binding TxtC1}" Keyboard="Numeric"/>
+              </Grid>
+              <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="10*"/>
+                  <ColumnDefinition Width="30*"/>
+                  <ColumnDefinition Width="30*"/>
+                  <ColumnDefinition Width="30*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="2" FontSize="14" VerticalTextAlignment="Center"/>
+                <Entry Grid.Column="1" FontSize="14" BackgroundColor="#d3d3d3" Text="{Binding TxtA2}" Keyboard="Numeric"/>
+                <Entry Grid.Column="2" FontSize="14" BackgroundColor="#d3d3d3" Text="{Binding TxtB2}" Keyboard="Numeric"/>
+                <Entry Grid.Column="3" FontSize="14" BackgroundColor="#d3d3d3" Text="{Binding TxtC2}" Keyboard="Numeric"/>
+              </Grid>
+              <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="10*"/>
+                  <ColumnDefinition Width="30*"/>
+                  <ColumnDefinition Width="30*"/>
+                  <ColumnDefinition Width="30*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="3" FontSize="14" VerticalTextAlignment="Center"/>
+                <Entry Grid.Column="1" FontSize="14" BackgroundColor="#d3d3d3" Text="{Binding TxtA3}" Keyboard="Numeric"/>
+                <Entry Grid.Column="2" FontSize="14" BackgroundColor="#d3d3d3" Text="{Binding TxtB3}" Keyboard="Numeric"/>
+                <Entry Grid.Column="3" FontSize="14" BackgroundColor="#d3d3d3" Text="{Binding TxtC3}" Keyboard="Numeric"/>
+              </Grid>
+              <Grid Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="10*"/>
+                  <ColumnDefinition Width="30*"/>
+                  <ColumnDefinition Width="30*"/>
+                  <ColumnDefinition Width="30*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="4" FontSize="14" VerticalTextAlignment="Center"/>
+                <Entry Grid.Column="1" FontSize="14" BackgroundColor="#d3d3d3" Text="{Binding TxtA4}" Keyboard="Numeric"/>
+                <Entry Grid.Column="2" FontSize="14" BackgroundColor="#d3d3d3" Text="{Binding TxtB4}" Keyboard="Numeric"/>
+                <Entry Grid.Column="3" FontSize="14" BackgroundColor="#d3d3d3" Text="{Binding TxtC4}" Keyboard="Numeric"/>
+              </Grid>
+              <Grid Grid.Row="5">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="10*"/>
+                  <ColumnDefinition Width="30*"/>
+                  <ColumnDefinition Width="30*"/>
+                  <ColumnDefinition Width="30*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="5" FontSize="14" VerticalTextAlignment="Center"/>
+                <Entry Grid.Column="1" FontSize="14" BackgroundColor="#d3d3d3" Text="{Binding TxtA5}" Keyboard="Numeric"/>
+                <Entry Grid.Column="2" FontSize="14" BackgroundColor="#d3d3d3" Text="{Binding TxtB5}" Keyboard="Numeric"/>
+                <Entry Grid.Column="3" FontSize="14" BackgroundColor="#d3d3d3" Text="{Binding TxtC5}" Keyboard="Numeric"/>
+              </Grid>
+            </Grid>
+          </Frame>
+
+          <Grid Grid.Row="1" Padding="0,10,0,0">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="40*"/>
+              <ColumnDefinition Width="60*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Formula" FontSize="14" VerticalTextAlignment="Center"/>
+            <Entry Grid.Column="1" FontSize="14" BackgroundColor="#d3d3d3" Text="{Binding TxtGen}"/>
+          </Grid>
+
+          <Button Grid.Row="2" Text="Compute" FontSize="14" HeightRequest="38" Command="{Binding ComputeCommand}" BackgroundColor="#2196F3" TextColor="Black"/>
+
+          <Grid Grid.Row="3" Padding="0,10,0,0">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="40*"/>
+              <ColumnDefinition Width="60*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Computed Value" FontSize="14" VerticalTextAlignment="Center"/>
+
+            <Grid Grid.Column="1">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+              <Label FontSize="14"  Text="{Binding TxtResult}"/>
+              <BoxView Grid.Row="1" HeightRequest="1" BackgroundColor="Black"/>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
+    </ScrollView>
+  </sample:SampleView.Content>
+</sample:SampleView>

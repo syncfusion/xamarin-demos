@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<core:SampleView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:SyncfusionButton="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SampleBrowser.Chips"
+    xmlns:core="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    x:Class="SampleBrowser.Chips.Themes">
+    <core:SampleView.Content>
+        <StackLayout>
+                <StackLayout>
+                    <Label
+                        FontAttributes="Bold"
+                        Margin="10,25,0,0" 
+                        Text="Pick an electronic item"/>
+                <ScrollView 
+                        Margin="5,20,0,0">
+                    <ScrollView.Orientation>
+                        <OnPlatform WPF="Vertical" Default="Horizontal"/>
+                    </ScrollView.Orientation>
+                    <SyncfusionButton:SfChipGroup 
+                            ChipPadding="2,0,0,0" 
+                            x:Name="Electronic"
+                            SelectedItem="{Binding SelectedItem}"
+                            ItemsSource="{Binding ChoiceItems}" 
+                            Type="Choice">
+                        <SyncfusionButton:SfChipGroup.BindingContext>
+                            <local:ChipViewModel/>
+                        </SyncfusionButton:SfChipGroup.BindingContext>
+                    </SyncfusionButton:SfChipGroup>
+                </ScrollView>
+            </StackLayout>
+        </StackLayout>
+    </core:SampleView.Content>
+</core:SampleView>

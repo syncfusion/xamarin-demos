@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView
+         xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+         xmlns="http://xamarin.com/schemas/2014/forms"
+         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+         xmlns:local="clr-namespace:SampleBrowser.XlsIO"
+         x:Class="SampleBrowser.XlsIO.ImportCollectionObjectsPage"
+         xmlns:sfgrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms">
+<sample:SampleView.Content>
+    <Grid Padding="10" x:Name="CLRGridLayout">
+        <Grid.BindingContext>
+            <local:ExportingViewModel x:Name="viewModel"/>
+        </Grid.BindingContext>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.8*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="2.5*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width = "*"/>
+            <ColumnDefinition Width = "*"/>
+            <ColumnDefinition Width = "*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.ColumnSpan="3" x:Name="Content_1" Text="This sample allows you to import/export data from/to Collection Objects."
+               FontSize="Medium" VerticalOptions="Start">
+        </Label>
+        <sfgrid:SfDataGrid Grid.ColumnSpan="3" x:Name="dataGrid"
+                   Grid.Row="1"
+                   AutoGenerateColumns="false"
+                   ColumnSizer="Star"
+                   SelectionMode="Single" 
+                   IsVisible="True"
+                   AllowEditing="True"
+                   NavigationMode="Cell"
+                   EditTapAction="OnDoubleTap"
+                   ItemsSource="{Binding CustomersInfo}">
+
+            <sfgrid:SfDataGrid.HeaderRowHeight>
+                <OnPlatform x:TypeArguments="x:Double"
+                        Android="40"
+                        WinPhone="55"
+                        iOS="40" />
+            </sfgrid:SfDataGrid.HeaderRowHeight>
+
+            <sfgrid:SfDataGrid.Columns x:TypeArguments="sfgrid:Columns">
+                <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                               HeaderText="Brand"
+                               HeaderTextAlignment="Start"
+                               LineBreakMode="TailTruncation"
+                               MappingName="BrandName"
+                               Padding="5, 0, 0, 0"
+                               TextAlignment="Start">
+                    <sfgrid:GridTextColumn.HeaderCellTextSize>
+                        <OnPlatform x:TypeArguments="x:Double"
+                                    Android="14"
+                                    WinPhone="12"
+                                    iOS="12" />
+                    </sfgrid:GridTextColumn.HeaderCellTextSize>
+
+                    <sfgrid:GridTextColumn.CellTextSize>
+                        <OnPlatform x:TypeArguments="x:Double"
+                                    Android="14"
+                                    WinPhone="12"
+                                    iOS="12" />
+                    </sfgrid:GridTextColumn.CellTextSize>
+                </sfgrid:GridTextColumn>
+
+                <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                               HeaderText="Vehicle Type"
+                               HeaderTextAlignment="Start"
+                               LineBreakMode="TailTruncation"
+                               MappingName="VehicleType.VehicleName"
+                               Padding="5,0,0,0"
+                               TextAlignment="Start">
+                    <sfgrid:GridTextColumn.HeaderCellTextSize>
+                        <OnPlatform x:TypeArguments="x:Double"
+                                    Android="14"
+                                    WinPhone="12"
+                                    iOS="12" />
+                    </sfgrid:GridTextColumn.HeaderCellTextSize>
+
+                    <sfgrid:GridTextColumn.CellTextSize>
+                        <OnPlatform x:TypeArguments="x:Double"
+                                    Android="14"
+                                    WinPhone="12"
+                                    iOS="12" />
+                    </sfgrid:GridTextColumn.CellTextSize>
+                </sfgrid:GridTextColumn>
+
+                    <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                               HeaderText="Model"
+                               HeaderTextAlignment="Start"
+                               LineBreakMode="TailTruncation"
+                               MappingName="VehicleType.Model.ModelName"
+                               Padding="5,0,0,0"
+                               TextAlignment="Start">
+                        <sfgrid:GridTextColumn.HeaderCellTextSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                                    Android="14"
+                                    WinPhone="12"
+                                    iOS="12" />
+                        </sfgrid:GridTextColumn.HeaderCellTextSize>
+
+                        <sfgrid:GridTextColumn.CellTextSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                                    Android="14"
+                                    WinPhone="12"
+                                    iOS="12" />
+                        </sfgrid:GridTextColumn.CellTextSize>
+                    </sfgrid:GridTextColumn>
+                </sfgrid:SfDataGrid.Columns>
+        </sfgrid:SfDataGrid>
+        <Button x:Name="btnInput" Grid.Column="0" Grid.Row="2" Clicked ="OnInputClicked" Text ="Input Template" HorizontalOptions="Start" VerticalOptions="End"></Button>
+        <Button x:Name="btnImport" Grid.Column="1" Grid.Row="2"  Clicked ="OnImportClicked" Text ="Import From Excel" HorizontalOptions="Center" VerticalOptions="End"></Button>
+        <Button x:Name="btnGenerate" Grid.Column="2" Grid.Row="2"  Clicked ="OnExportClicked" Text ="Export To Excel" HorizontalOptions="End" VerticalOptions="End" IsEnabled ="false"></Button>
+    </Grid>
+</sample:SampleView.Content>
+</sample:SampleView>

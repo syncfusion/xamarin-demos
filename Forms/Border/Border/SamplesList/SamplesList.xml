@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Samples>
+  <Sample Title="Getting Started" Name="Customization" SearchTags="border, sfBorder, getting, Started" Description = " Border is container control to customize the border, background and corner radius" />
+
+  <Sample Title="Customization" Platforms="Android,iOS,UWP" Name="GettingStartedSample"  SearchTags="border,sfBorder, getting, customization" Description = " Border is container control to customize the border, background and corner radius" />
+</Samples>
