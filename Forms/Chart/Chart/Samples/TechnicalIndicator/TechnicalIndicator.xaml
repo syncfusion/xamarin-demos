@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.TechnicalIndicator" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+    <local:SampleView.Content>
+        <Grid x:Name="rootLayout">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+            <StackLayout x:Name="pickerLayout" Orientation="Vertical" >
+                <Label x:Name="animationPickerTitle" Text="Technical Indicator Type" TextColor="#333333" HorizontalOptions="StartAndExpand" FontSize="18" VerticalOptions="FillAndExpand" />
+                <Label x:Name="animationPickerLabel" FontSize="15" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+            </StackLayout>
+
+            <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="1">
+                <chart:SfChart.Margin>
+                    <OnPlatform x:TypeArguments="Thickness" WinPhone="10,0,10,0" />
+                </chart:SfChart.Margin>
+                <chart:SfChart.Title>
+                    <chart:ChartTitle Text="Foreign Exchange Rate Analysis" />
+                </chart:SfChart.Title>
+                <chart:SfChart.ChartBehaviors>
+                    <chart:ChartTrackballBehavior />
+                </chart:SfChart.ChartBehaviors>
+                <chart:SfChart.BindingContext>
+                    <sampleBrowser:TechnicalIndicatorViewModel />
+                </chart:SfChart.BindingContext>
+                <chart:SfChart.PrimaryAxis>
+                    <chart:DateTimeAxis>
+                        <chart:DateTimeAxis.LabelStyle>
+                            <chart:ChartAxisLabelStyle LabelFormat="MM/yyyy" />
+                        </chart:DateTimeAxis.LabelStyle>
+                    </chart:DateTimeAxis>
+                </chart:SfChart.PrimaryAxis>
+                <chart:SfChart.SecondaryAxis>
+                    <chart:NumericalAxis>
+                        <chart:NumericalAxis.LabelStyle>
+                            <chart:ChartAxisLabelStyle x:Name="secondaryAxisLabelStyle" />
+                        </chart:NumericalAxis.LabelStyle>
+                    </chart:NumericalAxis>
+                </chart:SfChart.SecondaryAxis>
+                <chart:SfChart.Series>
+                    <chart:HiLoOpenCloseSeries Name="Series" ItemsSource="{Binding TechnicalIndicatorData}" EnableAnimation="True">
+                    </chart:HiLoOpenCloseSeries>
+                </chart:SfChart.Series>
+            </chart:SfChart>
+        </Grid>
+    </local:SampleView.Content>
+</local:SampleView>

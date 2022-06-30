@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfRichTextEditor.CustomToolbar"
+                  xmlns:rte="clr-namespace:Syncfusion.XForms.RichTextEditor;assembly=Syncfusion.SfRichTextEditor.XForms">
+    <ContentView.Content>
+        <StackLayout VerticalOptions="FillAndExpand">
+            <rte:SfRichTextEditor VerticalOptions="FillAndExpand" x:Name="RTE"/>
+        </StackLayout>
+    </ContentView.Content>
+</local:SampleView>

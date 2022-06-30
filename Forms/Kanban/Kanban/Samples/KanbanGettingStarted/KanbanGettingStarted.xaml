@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView  xmlns="http://xamarin.com/schemas/2014/forms"  
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="SampleBrowser.SfKanban.KanbanGettingStarted"
+		xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:sb="clr-namespace:SampleBrowser.SfKanban"
+		xmlns:kanban="clr-namespace:Syncfusion.SfKanban.XForms;assembly=Syncfusion.SfKanban.XForms">
+
+	<local:SampleView.Content>
+
+	<StackLayout>
+			<StackLayout.BindingContext>
+				<sb:SfKanbanViewModel />
+			</StackLayout.BindingContext>
+	
+	<kanban:SfKanban x:Name="kanban" AutoGenerateColumns="False" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ItemsSource="{Binding Cards}">
+				
+		<kanban:SfKanban.Columns>
+
+			<kanban:KanbanColumn x:Name="column1" Title="To Do" MinimumLimit="5" MaximumLimit="15" >
+			</kanban:KanbanColumn>
+
+			<kanban:KanbanColumn x:Name="column2" Title="In Progress" MinimumLimit="3" MaximumLimit="8">
+			</kanban:KanbanColumn>
+
+			<kanban:KanbanColumn x:Name="column3" Title="Code Review" MinimumLimit="5" MaximumLimit="10">
+			</kanban:KanbanColumn>
+
+			<kanban:KanbanColumn x:Name="column4" Title="Done" MinimumLimit="8" MaximumLimit="12">
+			</kanban:KanbanColumn>
+
+		</kanban:SfKanban.Columns>
+
+	</kanban:SfKanban>
+
+		</StackLayout>
+
+	</local:SampleView.Content>
+</local:SampleView>

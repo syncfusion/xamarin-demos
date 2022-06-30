@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfMaps.MapsGettingStarted"
+			 xmlns:marker="clr-namespace:SampleBrowser.SfMaps"
+              xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:maps="clr-namespace:Syncfusion.SfMaps.XForms;assembly=Syncfusion.SfMaps.XForms"
+             >
+
+    <local:SampleView.Content>
+        <Grid BackgroundColor="White" x:Name="grid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+			
+			<Grid.Resources>
+                <ResourceDictionary>
+                    <DataTemplate x:Key="toolTipTemplate">
+                        <StackLayout>                            
+                            <Label Text="{Binding Label}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#FFFFFF" FontAttributes="Bold" FontFamily="Helvetica" Margin="0" FontSize="12" Grid.Row="0" />
+                            <BoxView Color="#888C91" HeightRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+                            <Label Text="{Binding Population}" VerticalTextAlignment="Center" HorizontalOptions="Center" TextColor="#FFFFFF" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" />
+                        </StackLayout>
+                    </DataTemplate>
+                </ResourceDictionary>
+            </Grid.Resources>
+			
+            <Label Grid.Row="0" Text="Top Population Countries"  Margin="20,0,0,0" FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  />
+            <maps:SfMaps Grid.Row="1" x:Name="Maps" >
+                <maps:SfMaps.Layers >
+                    <maps:ShapeFileLayer Uri="world1.shp">
+                        <maps:ShapeFileLayer.ShapeSettings>
+                            <maps:ShapeSetting ShapeFill="Gray" />
+                        </maps:ShapeFileLayer.ShapeSettings>
+                        <maps:ShapeFileLayer.Markers>
+                            <marker:CustomMarker Label="United States" Latitude="38.8833" Longitude= "-77.0167" Population="321,174,000" />
+                            <marker:CustomMarker Label="Brazil" Latitude="-15.7833" Longitude= "-47.8667" Population="204,436,000" />
+                            <marker:CustomMarker Label="India" Latitude="21.0000" Longitude= "78.0000" Population="1,272,470,000"/>
+                            <marker:CustomMarker Label="China" Latitude="35.0000" Longitude= "103.0000" Population="1,370,320,000" />
+                            <marker:CustomMarker Label="Indonesia" Latitude="-6.1750" Longitude= "106.8283" Population="255,461,700" />
+
+                        </maps:ShapeFileLayer.Markers>
+                        <maps:ShapeFileLayer.MarkerSettings>
+                            <maps:MapMarkerSetting>
+                                <maps:MapMarkerSetting.TooltipSettings>
+                                    <maps:TooltipSetting ShowTooltip="True" ValuePath="Label"/>
+                                </maps:MapMarkerSetting.TooltipSettings>
+                            </maps:MapMarkerSetting>
+                        </maps:ShapeFileLayer.MarkerSettings>
+                        <maps:ShapeFileLayer.MarkerTemplate>
+                            <DataTemplate>
+                                <StackLayout IsClippedToBounds="false" HorizontalOptions="StartAndExpand" VerticalOptions="Center" HeightRequest="30">
+                                    <Image Source="{Binding  ImageName}" Scale="1" Aspect="AspectFit " HorizontalOptions="StartAndExpand" VerticalOptions="Center"  HeightRequest="15" WidthRequest="23" />
+                                </StackLayout>
+                            </DataTemplate>
+                        </maps:ShapeFileLayer.MarkerTemplate>
+                    </maps:ShapeFileLayer>
+                </maps:SfMaps.Layers>
+            </maps:SfMaps>
+        </Grid>
+    </local:SampleView.Content>
+</local:SampleView>

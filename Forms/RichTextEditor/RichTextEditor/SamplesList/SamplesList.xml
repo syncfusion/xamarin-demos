@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Samples>
+  <Sample IsUpdated="true" Platforms="All" Name="MailPage" Title="Mail Page"  Description="This sample demonstates a compose mail page, creating a using syncfusion rich text editor control in xamarin.forms."></Sample>
+  <Sample Platforms="All" Name="Localization" Title="Localization"  Description="This sample demonstates a localization syncfusion rich text editor control in xamarin.forms."></Sample>
+  <Sample IsUpdated="true" Platforms="All" Name="CustomToolbar" Title="CustomToolbar" Description="This sample demonstates custom toolbar support in syncfusion rich text editor control in xamarin.forms."></Sample>
+</Samples>

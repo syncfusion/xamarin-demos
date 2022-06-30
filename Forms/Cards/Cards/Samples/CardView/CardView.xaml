@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<local:SampleView
+    x:Class="SampleBrowser.Cards.CardView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+    xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:sampleBrowser="clr-namespace:SampleBrowser.Cards"
+    BackgroundColor="#F0F0F0">
+
+    <local:SampleView.Content>
+        <Grid x:Name="mainGrid">
+            <ScrollView>
+                <Grid x:Name="grid" Padding="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <sampleBrowser:CardViewTemplate
+                        x:Name="cardViewOne"
+                        Grid.Row="0"
+                        CornerRadius="{Binding Source={x:Reference slider}, Path=Value}"
+                        FadeOutOnSwiping="{Binding Source={x:Reference fadeOutOnSwipingSwitch}, Path=IsToggled}"
+                        HorizontalOptions="CenterAndExpand"
+                        IndicatorColor="#b1793b"
+                        SwipeToDismiss="{Binding Source={x:Reference swipeToDismissSwitch}, Path=IsToggled}"
+                        VerticalOptions="CenterAndExpand" />
+                    <sampleBrowser:CardViewTemplate
+                        x:Name="cardViewTwo"
+                        Grid.Row="1"
+                        CornerRadius="{Binding Source={x:Reference slider}, Path=Value}"
+                        FadeOutOnSwiping="{Binding Source={x:Reference fadeOutOnSwipingSwitch}, Path=IsToggled}"
+                        HorizontalOptions="CenterAndExpand"
+                        IndicatorColor="#606472"
+                        SwipeToDismiss="{Binding Source={x:Reference swipeToDismissSwitch}, Path=IsToggled}"
+                        VerticalOptions="CenterAndExpand" />
+                    <sampleBrowser:CardViewTemplate
+                        x:Name="cardViewThree"
+                        Grid.Row="2"
+                        CornerRadius="{Binding Source={x:Reference slider}, Path=Value}"
+                        FadeOutOnSwiping="{Binding Source={x:Reference fadeOutOnSwipingSwitch}, Path=IsToggled}"
+                        HorizontalOptions="CenterAndExpand"
+                        IndicatorColor="#23221d"
+                        SwipeToDismiss="{Binding Source={x:Reference swipeToDismissSwitch}, Path=IsToggled}"
+                        VerticalOptions="CenterAndExpand" />
+
+                </Grid>
+            </ScrollView>
+            <button:SfButton
+                Grid.Row="0"
+                BackgroundColor="#4496EC"
+                Clicked="RefreshButtonClicked"
+                CornerRadius="50"
+                FontSize="20"
+                HasShadow="True"
+                HeightRequest="55"
+                HorizontalOptions="End"
+                Text="&#xe700;"
+                VerticalOptions="End"
+                WidthRequest="55">
+                <button:SfButton.Margin>
+                    <OnPlatform
+                        x:TypeArguments="Thickness"
+                        Android="0,0,10,5"
+                        WinPhone="0,0,50,5"
+                        iOS="0,0,10,5" />
+                </button:SfButton.Margin>
+                <button:SfButton.FontFamily>
+                    <OnPlatform
+                        x:TypeArguments="x:String"
+                        Android="V2 Font Refresh.ttf#V2 Font Refresh"
+                        WinPhone="Assets/V2 Font Refresh.ttf#V2 Font Refresh"
+                        iOS="V2 Font Refresh" />
+                </button:SfButton.FontFamily>
+            </button:SfButton>
+        </Grid>
+    </local:SampleView.Content>
+    <local:SampleView.PropertyView>
+        <StackLayout x:Name="propertyView">
+            <Grid Padding="5">
+                <Label
+                    x:Name="CornerRadiusValue"
+                    Text="Corner radius : 7"
+                    VerticalOptions="Center" />
+                <Slider
+                    x:Name="slider"
+                    Grid.Column="1"
+                    Margin="0"
+                    Maximum="15"
+                    MaximumTrackColor="LightBlue"
+                    Minimum="0"
+                    MinimumTrackColor="#0d5fa3"
+                    ValueChanged="CornerRadiusChanged"
+                    VerticalOptions="Center"
+                    Value="{Binding CornerRadius}" />
+            </Grid>
+            <Grid Padding="5">
+                <Label Text="Indicator" />
+                <Switch
+                    Grid.Column="1"
+                    HorizontalOptions="End"
+                    Toggled="Switch_Toggled" />
+            </Grid>
+            <Grid Padding="5">
+                <Label Text="Swipe to dismiss" />
+                <Switch
+                    x:Name="swipeToDismissSwitch"
+                    Grid.Column="1"
+                    HorizontalOptions="End"
+                    IsToggled="true"
+                    Toggled="SwipeToDismissSwitch_Toggled" />
+            </Grid>
+            <Grid Padding="5">
+                <Label Text="Fade out on swiping" />
+                <Switch
+                    x:Name="fadeOutOnSwipingSwitch"
+                    Grid.Column="1"
+                    HorizontalOptions="End"
+                    IsToggled="True"
+                    Toggled="FadeOutOnSwipingSwitch_Toggled" />
+            </Grid>
+        </StackLayout>
+    </local:SampleView.PropertyView>
+</local:SampleView>

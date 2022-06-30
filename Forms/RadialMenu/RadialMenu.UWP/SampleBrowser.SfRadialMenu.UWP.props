@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <Content Include="$(MSBuildThisFileDirectory)\radialmenu_RadialMenu.ttf">
+            <Link>radialmenu_RadialMenu.ttf</Link>
+        </Content>
+        <Content Include="$(MSBuildThisFileDirectory)\radialmenu_Segoe MDL2 Assets.ttf">
+            <Link>radialmenu_Segoe MDL2 Assets.ttf</Link>
+        </Content>
+        <Content Include="$(MSBuildThisFileDirectory)\radialmenu_socialicons.ttf">
+            <Link>radialmenu_socialicons.ttf</Link>
+        </Content>
+    </ItemGroup>
+</Project>

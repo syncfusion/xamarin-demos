@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Samples>
+  <Sample Name = "Default" 
+          SearchTags="Linear, Gauge, Scale, OneDimensional, Temperature" IsThemesSample="true"
+          Description="This sample illustrates the default rendering of linear gauge." 
+          Title = "Linear Gauge" EnableLoadingIndicator="True"/>
+  <Sample Name = "ScaleAndPointers" 
+          SearchTags="Linear, Marker, Triangle, Bar, Rounded Corner"
+          Title = "Scales and Pointers"  EnableLoadingIndicator="True"
+          Description="This sample illustrates the axis and pointers feature in the linear gauge. Axis and pointers can be customized by using various options."/>
+  <Sample Name="Ranges" 
+          SearchTags="Pointer, Spectrum"
+          Title="Ranges" EnableLoadingIndicator="True"
+         Description="This sample illustrates how to highlight a region in an axis by using ranges in gauge."/>
+  <Sample Name="Annotation" Title="Annotations"
+          SearchTags="CPU, High, Low, Moderate, Notation"
+          EnableLoadingIndicator="True"
+        Description="This sample illustrates the CPU Utilization of a resource by using annotation feature."/>
+ 
+</Samples>

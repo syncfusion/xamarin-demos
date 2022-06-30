@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+ 
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\date.png" >
+	<Link>Resources\date.png</Link>
+	</BundleResource>
+	
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\germany.png" >
+	<Link>Resources\germany.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\india.png" >
+	<Link>Resources\india.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\picker_location.png" >
+	<Link>Resources\picker_location.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\timeold.png" >
+	<Link>Resources\timeold.png</Link>
+	</BundleResource>
+	
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\uae.png" >
+	<Link>Resources\uae.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\uk.png" >
+	<Link>Resources\uk.png</Link>
+	</BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\usa.png" >
+	<Link>Resources\usa.png</Link>
+	</BundleResource>
+  </ItemGroup>
+ </Project>
