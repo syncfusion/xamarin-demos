@@ -1,0 +1,13 @@
+<Project>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\Assets\Segoe MDL2 Assets.ttf">
+      <Link>Assets\Segoe MDL2 Assets.ttf</Link>
+    </Content>
+  <Content Include="$(MSBuildThisFileDirectory)\Assets\Font Offer icon.ttf">
+      <Link>Assets\Font Offer icon.ttf</Link>
+    </Content>
+	  <Content Include="$(MSBuildThisFileDirectory)\Assets\V2 Font Refresh.ttf">
+      <Link>Assets\V2 Font Refresh.ttf</Link>
+    </Content>
+  </ItemGroup>
+</Project>

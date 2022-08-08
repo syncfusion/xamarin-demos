@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:numerictext="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfNumericTextBox.Themes">
+    <ScrollView IsClippedToBounds="true">
+        <Grid  Margin="15">
+            <StackLayout >
+                <Label x:Name="principalLabel" Text="Enter the numeric value" VerticalOptions="Start" HorizontalOptions="Start" FontSize="16"/>
+                <StackLayout x:Name="numericTextBox1">
+                    <numerictext:SfNumericTextBox MaximumNumberDecimalDigits="2" Margin="0,7,10,10" FontSize="16" HeightRequest="45" x:Name="principalNumericTextBox" AllowNull="true" ValueChangeMode="OnKeyFocus" FormatString="c" Watermark="Enter the Principal" Value="1000" ClearButtonVisibility="WhileEditing"/>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+        </ScrollView>
+</local:SampleView>

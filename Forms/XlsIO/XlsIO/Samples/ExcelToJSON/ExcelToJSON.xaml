@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:SfRadio="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.XlsIO.ExcelToJSON">
+
+    <local:SampleView.Content>
+        <StackLayout Padding="10">
+            <Label x:Name="Content_1" Text="This samples demonstrates the conversion of Excel data to JSON file."
+        FontSize="Medium" VerticalOptions="Center"/>
+                <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width = "*"/>
+                    <ColumnDefinition Width = "*"/>
+                </Grid.ColumnDefinitions>
+                <Label FontSize="Medium" Grid.Row="2" Grid.Column="0" Text="Convert"   VerticalTextAlignment="Center"/>
+                <Picker x:Name="picker"  Grid.Row="2" Grid.Column="1" VerticalOptions="Center" />
+                <SfRadio:SfCheckBox  Grid.Row="3" Grid.Column="1" FontSize="15" WidthRequest="70" x:Name="IsSchema" Text="As Scehma" HorizontalTextAlignment="Start" IsChecked="True"/>
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width = "*"/>
+                    <ColumnDefinition Width = "*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnInput" Clicked ="OnInputButtonClicked" Text ="Input Template" Grid.Row="1" Grid.Column="0" WidthRequest="150" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Button x:Name="btnGenerate" Clicked ="OnButtonClicked" Text ="Convert To JSON" Grid.Row="1" Grid.Column="1" WidthRequest="150" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Grid>
+        </StackLayout>
+    </local:SampleView.Content>
+</local:SampleView>

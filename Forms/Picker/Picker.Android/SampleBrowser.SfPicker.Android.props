@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\date.png" >
+	<Link>Resources\drawable\date.png</Link>
+	</AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\location.png" >
+	<Link>Resources\drawable\location.png</Link>
+	</AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\picker_location.png" >
+	<Link>Resources\drawable\picker_location.png</Link>
+	</AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\timeold.png" >
+	<Link>Resources\drawable\timeold.png</Link>
+	</AndroidResource>
+  </ItemGroup>
+</Project>

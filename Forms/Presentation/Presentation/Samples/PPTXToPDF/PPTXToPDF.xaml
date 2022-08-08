@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.Presentation.PPTXToPDF">
+
+  <local:SampleView.Content>
+    <StackLayout Padding="10">
+      <Label x:Name="Description" Text="This sample demonstrates how to convert a PowerPoint presentation to PDF."
+                 FontSize="Medium" VerticalOptions="Center"/>
+      <Label></Label>
+      <Button x:Name="btnInpTemplate" WidthRequest="180" Clicked ="OnInputButtonClicked" Text ="Input Template" HorizontalOptions="Center" VerticalOptions="Center"/>
+      <Button x:Name="btnGenerate" WidthRequest="180" Clicked ="OnButtonClicked" Text ="Convert" HorizontalOptions="Center" VerticalOptions="Center"/>
+    </StackLayout>
+  </local:SampleView.Content>
+</local:SampleView>
