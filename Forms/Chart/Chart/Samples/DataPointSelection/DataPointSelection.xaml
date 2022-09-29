@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.DataPointSelection" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+    <local:SampleView.Content>
+        <Grid Padding="10,10,10,10">
+            <Grid.RowDefinitions>
+                <RowDefinition>
+                </RowDefinition>
+                <RowDefinition Height="Auto">
+                </RowDefinition>
+            </Grid.RowDefinitions>
+            <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" SelectionChanged="chart_SelectionChanged">
+                <chart:SfChart.Title>
+                    <chart:ChartTitle Text="Product Sale 2016" />
+                </chart:SfChart.Title>
+                <chart:SfChart.BindingContext>
+                    <sampleBrowser:DataPointSelectionViewModel />
+                </chart:SfChart.BindingContext>
+                <chart:SfChart.PrimaryAxis>
+                    <chart:CategoryAxis ShowMajorGridLines="false" LabelPlacement="BetweenTicks">
+                    </chart:CategoryAxis>
+                </chart:SfChart.PrimaryAxis>
+                <chart:SfChart.SecondaryAxis>
+                    <chart:NumericalAxis Interval="20" ShowMajorGridLines="false" >
+                        <chart:NumericalAxis.LabelStyle>
+                            <chart:ChartAxisLabelStyle x:Name="secondaryAxisLabelStyle" />
+                        </chart:NumericalAxis.LabelStyle>
+                    </chart:NumericalAxis>
+                </chart:SfChart.SecondaryAxis>
+                <chart:SfChart.Series>
+                    <chart:ColumnSeries x:Name="column" ItemsSource="{Binding SelectionData}" Label="Product A" 
+                                        XBindingPath="Name" YBindingPath="Value"
+                                        EnableDataPointSelection="true" SelectedDataPointColor="#007168" 
+                                        Color="#00BDAE" />
+                    <chart:ColumnSeries x:Name="column1" ItemsSource="{Binding SelectionData1}" Label="Product B" 
+                                        XBindingPath="Name" YBindingPath="Value" SelectedDataPointColor="#4A4FB2"
+                                        EnableDataPointSelection="True" Color="#7F84E8"
+                                        />
+                </chart:SfChart.Series>
+            </chart:SfChart>
+            <StackLayout Padding="5,0,5,0" Grid.Row="1" Orientation="Horizontal"   HorizontalOptions="FillAndExpand" x:Name="stackLayout">
+                <Label  HorizontalOptions="FillAndExpand" Text="Tap on a bar segment to select a data point" FontSize="Small" VerticalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" x:Name="seriesSelection" >
+                </Label>
+                <Label TextColor="#007168" IsVisible="false" HorizontalOptions="StartAndExpand" FontSize="Small" VerticalOptions="Center" VerticalTextAlignment="Center" x:Name="productA" >
+                </Label>
+                <Label TextColor="#4A4FB2" IsVisible="false" HorizontalOptions="EndAndExpand" FontSize="Small" VerticalOptions="Center" VerticalTextAlignment="Center" x:Name="productB">
+                </Label>
+            </StackLayout>
+        </Grid>
+    </local:SampleView.Content>
+    <local:SampleView.PropertyView>
+        <StackLayout x:Name="stack">
+            <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" Android="10,10,0,0" iOS="10,10,0,0" WinPhone="20,20,20,20" />
+            </StackLayout.Padding>
+            <StackLayout.WidthRequest>
+                <OnPlatform x:TypeArguments="x:Double" WinPhone="200" />
+            </StackLayout.WidthRequest>
+            <StackLayout.HorizontalOptions>
+                <OnPlatform x:TypeArguments="LayoutOptions" iOS="FillAndExpand" Android="FillAndExpand" WinPhone="Center" />
+            </StackLayout.HorizontalOptions>
+            <StackLayout.VerticalOptions>
+                <OnPlatform x:TypeArguments="LayoutOptions" iOS="FillAndExpand" Android="FillAndExpand" WinPhone="Center" />
+            </StackLayout.VerticalOptions>
+            <Label Text="Selection" HorizontalOptions="FillAndExpand" />
+            <Picker HorizontalOptions="FillAndExpand" VerticalOptions="Center" x:Name="picker" WidthRequest="400"  SelectedIndex="0" SelectedIndexChanged="selectedIndex_Changed"> 
+                <Picker.Items>
+                    <x:String>Data Point Selection</x:String>
+                    <x:String>Series Selection</x:String>
+                </Picker.Items>
+            </Picker>
+        </StackLayout>
+    </local:SampleView.PropertyView>
+</local:SampleView>

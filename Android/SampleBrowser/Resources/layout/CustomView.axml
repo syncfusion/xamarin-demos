@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="102dp"
+    android:orientation="horizontal"
+    android:background="#FFFFFF">
+    <ImageView
+        android:id="@+id/Image"
+        android:layout_width="102dp"
+        android:layout_height="match_parent"
+        android:padding="6dp"
+        android:src="@drawable/icon" />
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="102dp">
+        <LinearLayout
+            android:id="@+id/Text"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="102dp"
+            android:paddingLeft="10dip">
+            <TextView
+                android:id="@+id/Text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#444444"
+                android:textSize="18dip"
+                android:paddingTop="2dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/Text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dip"
+                android:maxLines="4"
+                android:minLines="1"
+                android:layout_gravity="fill"
+                android:paddingTop="5dp"
+                android:textColor="#444444" />
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/tagText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_gravity="right"
+            android:gravity="center" />
+    </FrameLayout>
+</LinearLayout>

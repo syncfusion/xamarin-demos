@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>SampleBrowser.SfAvatarView</AssemblyName>
+    <RootNamespace>SampleBrowser.SfAvatarView</RootNamespace>
+  </PropertyGroup>
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	  <DebugType></DebugType>
+	</PropertyGroup>
+  <ItemGroup>
+    <None Remove="SampleBrowser.SfAvatarView.nuspec" />
+    <None Remove="SampleBrowser.SfAvatarView.props" />
+    <None Remove="SamplesList\SamplesList.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SamplesList\SamplesList.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SampleBrowser.Core" Version="20.3.0.47" />
+    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="20.3.0.47" />
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="20.3.0.47" />
+    <PackageReference Include="Syncfusion.Xamarin.SfBadgeView" Version="20.3.0.47" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="20.3.0.47" />
+    <PackageReference Include="System.ComponentModel" Version="4.3.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="20.3.0.47" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<core:SampleView xmlns="http://xamarin.com/schemas/2014/forms" 
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:core="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                 x:Class="SampleBrowser.SfProgressBar.Circular"
+                 xmlns:local="clr-namespace:SampleBrowser.SfProgressBar">
+    <core:SampleView.Content>
+      <ScrollView Orientation="Vertical">
+        <Grid Margin="0,20,0,0">
+            <Grid.RowDefinitions>
+              <RowDefinition>
+                <RowDefinition.Height>
+                  <OnPlatform x:TypeArguments="GridLength" iOS="140" Android="140" WinPhone="170" />
+                </RowDefinition.Height>
+              </RowDefinition>
+              <RowDefinition>
+                <RowDefinition.Height>
+                  <OnPlatform x:TypeArguments="GridLength" iOS="140" Android="140" WinPhone="170" />
+                </RowDefinition.Height>
+              </RowDefinition>
+              <RowDefinition>
+                <RowDefinition.Height>
+                  <OnPlatform x:TypeArguments="GridLength" iOS="140" Android="140" WinPhone="170" />
+                </RowDefinition.Height>
+              </RowDefinition>
+              <RowDefinition>
+                <RowDefinition.Height>
+                  <OnPlatform x:TypeArguments="GridLength" iOS="140" Android="140" WinPhone="170" />
+                </RowDefinition.Height>
+              </RowDefinition>
+              <RowDefinition>
+                <RowDefinition.Height>
+                  <OnPlatform x:TypeArguments="GridLength" iOS="140" Android="140" WinPhone="170" />
+                </RowDefinition.Height>
+              </RowDefinition>
+              <RowDefinition>
+                <RowDefinition.Height>
+                  <OnPlatform x:TypeArguments="GridLength" iOS="140" Android="140" WinPhone="170" />
+                </RowDefinition.Height>
+              </RowDefinition>
+                <RowDefinition>
+                    <RowDefinition.Height>
+                        <OnPlatform x:TypeArguments="GridLength" iOS="140" Android="140" WinPhone="170" />
+                    </RowDefinition.Height>
+                </RowDefinition>
+                </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition>
+                <ColumnDefinition.Width>
+                  <OnPlatform x:TypeArguments="GridLength">
+                    <On Platform="UWP">
+                      <OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="*" />
+                    </On>
+                    <On Platform="Android">
+                      <OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="*"/>
+                    </On>
+                    <On Platform="iOS">
+                      <OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="*"/>
+                    </On>
+                  </OnPlatform>
+                </ColumnDefinition.Width>
+              </ColumnDefinition>
+              <ColumnDefinition>
+                <ColumnDefinition.Width>
+                  <OnPlatform x:TypeArguments="GridLength">
+                    <On Platform="UWP">
+                      <OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="*" />
+                    </On>
+                    <On Platform="Android">
+                      <OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="*"/>
+                    </On>
+                    <On Platform="iOS">
+                      <OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="*"/>
+                    </On>
+                  </OnPlatform>
+                </ColumnDefinition.Width>
+              </ColumnDefinition>
+              <ColumnDefinition>
+                <ColumnDefinition.Width>
+                  <OnPlatform x:TypeArguments="GridLength">
+                    <On Platform="UWP">
+                      <OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="*" />
+                    </On>
+                    <On Platform="Android">
+                      <OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="*"/>
+                    </On>
+                    <On Platform="iOS">
+                      <OnIdiom x:TypeArguments="GridLength" Desktop="170" Tablet="140" Phone="*"/>
+                    </On>
+                  </OnPlatform>
+                </ColumnDefinition.Width>
+              </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+          
+            <local:CircularDeterminateInDeterminate Grid.Row="0"
+                                                    Grid.Column="0" Grid.ColumnSpan="3"/>
+
+            <local:CircularCustomContent Grid.Row="1"
+                                         Grid.Column="0" Grid.ColumnSpan="3"/>
+
+            <local:CircularRadiusCustomization Grid.Row="2" Grid.RowSpan="2"
+                                               Grid.Column="0" Grid.ColumnSpan="3"/>
+
+            <local:CircularSegment Grid.Row="4"
+                                   Grid.Column="0" Grid.ColumnSpan="3"/>
+          
+            <local:CircularAngleCustomization Grid.Row="5"
+                                              Grid.Column="0" Grid.ColumnSpan="3"/>
+
+                <local:CircularRangeColors Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3"/>
+
+        </Grid>
+      </ScrollView>
+    </core:SampleView.Content>
+</core:SampleView>
