@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+  <local:SampleView
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:SfRadio="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.XlsIO.ImportNestedCollectionPage">
+    <local:SampleView.Content>
+    <StackLayout Padding="10">
+      <Label x:Name="Content_1" Text="This sample illustrates how to import data from Nested Collection with Layout and Group options."
+             FontSize="Medium" VerticalOptions="Center">
+      </Label>
+      <StackLayout Padding="10">
+      <ScrollView>
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.4*"/>
+            <ColumnDefinition Width="0.6*"/>
+          </Grid.ColumnDefinitions>
+          <Label x:Name="Content_3" Grid.Row="0" Grid.Column="0" FontSize="Small" VerticalOptions="Center">Layout Options</Label>
+          <Picker x:Name="Layout" Grid.Row="0" Grid.Column="1" VerticalOptions="Center"/>
+          <Label x:Name="Label2" Grid.Row="1" Grid.Column="0" FontSize="Small" VerticalOptions="Center">Apply Group</Label>
+          <Switch x:Name="Switch1" Grid.Row="1" Grid.Column="1" Toggled="OnSwitchToggled"  HorizontalOptions="Start" VerticalOptions="Center"></Switch>
+          <Grid x:Name="GroupGrid" Grid.Row="2" Grid.Column="1" IsVisible="False">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>          
+            <Label x:Name="Label1" Grid.Row="0" FontSize="Small" VerticalOptions="Start">Options</Label>
+            <StackLayout Padding="0,0,0,10" Orientation="Horizontal" Grid.Row="1">
+                <SfRadio:SfRadioGroup VerticalOptions="Start" >
+                    <SfRadio:SfRadioButton FontSize="15" x:Name="ExpandButton"  StateChanged="OnRadioSelected" Text="Expand" IsChecked="True"/>
+                    <SfRadio:SfRadioButton FontSize="15" x:Name="CollapseButton"  StateChanged="OnRadioSelected" Text="Collapse at Level"/>
+                </SfRadio:SfRadioGroup>
+                <!--<Picker x:Name="Group" Grid.Row="1" Grid.Column="0" SelectedIndexChanged="OnItemSelected" VerticalOptions="Center"></Picker>-->
+                <Entry x:Name="Level" WidthRequest="42" VerticalOptions="CenterAndExpand" TranslationY="18" Text="1" IsVisible="False"></Entry>
+            </StackLayout>
+          </Grid>
+          <Button x:Name="btnGenerate" Grid.Row="3" Grid.Column="1" WidthRequest="218" Clicked ="OnButtonClicked" Text ="Create Excel" HorizontalOptions="FillAndExpand" VerticalOptions="Center"></Button>
+      </Grid>
+      </ScrollView>
+      </StackLayout>
+      </StackLayout>
+  
+  </local:SampleView.Content>
+  <!--<local:SampleView.PropertyView>
+
+  </local:SampleView.PropertyView>-->
+</local:SampleView>

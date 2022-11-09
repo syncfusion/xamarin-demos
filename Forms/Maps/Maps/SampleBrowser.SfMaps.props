@@ -1,0 +1,112 @@
+<Project ToolsVersion="15.0">
+  <PropertyGroup>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>Samples\Maps\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\BubbleVisualization\BubbleVisualization.xaml.cs">
+      <DependentUpon>BubbleVisualization.xaml</DependentUpon>
+      <Link>Samples\Maps\Samples\BubbleVisualization\BubbleVisualization.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\BubbleVisualization\BubbleVisualizationModel.cs">
+      <Link>Samples\Maps\Samples\BubbleVisualization\BubbleVisualizationModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\BubbleVisualization\BubbleVisualizationViewModel.cs">
+      <Link>Samples\Maps\Samples\BubbleVisualization\BubbleVisualizationViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ColorMappings\ColorMappings.xaml.cs">
+      <DependentUpon>ColorMappings.xaml</DependentUpon>
+      <Link>Samples\Maps\Samples\ColorMappings\ColorMappings.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ColorMappings\ColorMappingsModel.cs">
+      <Link>Samples\Maps\Samples\ColorMappings\ColorMappingsModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ColorMappings\ColorMappingsViewModel.cs">
+      <Link>Samples\Maps\Samples\ColorMappings\ColorMappingsViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\MapsGettingStarted\MapsGettingStarted.xaml.cs">
+      <DependentUpon>MapsGettingStarted.xaml</DependentUpon>
+      <Link>Samples\Maps\Samples\MapsGettingStarted\MapsGettingStarted.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\MapsTicketBooking\MapsTicketBooking.xaml.cs">
+      <DependentUpon>MapsTicketBooking.xaml</DependentUpon>
+      <Link>Samples\Maps\Samples\MapsTicketBooking\MapsTicketBooking.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\OSM\OSM.xaml.cs">
+      <DependentUpon>OSM.xaml</DependentUpon>
+      <Link>Samples\Maps\Samples\OSM\OSM.xaml.cs</Link>
+    </Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\DataLabels\DataLabels.xaml.cs">
+      <DependentUpon>DataLabels.xaml</DependentUpon>
+      <Link>Samples\Maps\Samples\DataLabels\DataLabels.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataLabels\DataLabelsViewModel.cs">
+      <Link>Samples\Maps\Samples\DataLabels\DataLabelsViewModel.cs</Link>
+    </Compile>	
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\Drilldown\Drilldown.xaml.cs">
+      <DependentUpon>Drilldown.xaml</DependentUpon>
+      <Link>Samples\Maps\Samples\Drilldown\Drilldown.xaml.cs</Link>
+    </Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\Drilldown\DrilldownModel.cs">
+      <Link>Samples\Maps\Samples\Drilldown\DrilldownModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Drilldown\DrilldownViewModel.cs">
+      <Link>Samples\Maps\Samples\Drilldown\DrilldownViewModel.cs</Link>
+    </Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\Sublayer\Sublayer.xaml.cs">
+      <DependentUpon>Sublayer.xaml</DependentUpon>
+      <Link>Samples\Maps\Samples\Sublayer\Sublayer.xaml.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\BubbleVisualization\BubbleVisualization.xaml">
+      <Link>Samples\Maps\Samples\BubbleVisualization\BubbleVisualization.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ColorMappings\ColorMappings.xaml">
+      <Link>Samples\Maps\Samples\ColorMappings\ColorMappings.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\MapsGettingStarted\MapsGettingStarted.xaml">
+      <Link>Samples\Maps\Samples\MapsGettingStarted\MapsGettingStarted.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\MapsTicketBooking\MapsTicketBooking.xaml">
+      <Link>Samples\Maps\Samples\MapsTicketBooking\MapsTicketBooking.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\OSM\OSM.xaml">
+      <Link>Samples\Maps\Samples\OSM\OSM.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DataLabels\DataLabels.xaml">
+      <Link>Samples\Maps\Samples\DataLabels\DataLabels.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Drilldown\Drilldown.xaml">
+      <Link>Samples\Maps\Samples\Drilldown\Drilldown.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Sublayer\Sublayer.xaml">
+      <Link>Samples\Maps\Samples\Sublayer\Sublayer.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

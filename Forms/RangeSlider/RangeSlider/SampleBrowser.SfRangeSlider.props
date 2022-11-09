@@ -1,0 +1,66 @@
+<Project>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Orientation\Orientation.xaml.cs">
+    <Link>Samples\RangeSlider\Orientation\Orientation.xaml.cs</Link>
+      <DependentUpon>Orientation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\RangeSlider\RangeSlider.xaml.cs">
+        <Link>Samples\RangeSlider\RangeSlider\RangeSlider.xaml.cs</Link>
+      <DependentUpon>RangeSlider.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\RangeSlider\RangeSlider_Default.xaml.cs">
+        <Link>Samples\RangeSlider\RangeSlider\RangeSlider_Default.xaml.cs</Link>
+      <DependentUpon>RangeSlider_Default.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\RangeSlider\RangeSlider_Tablet.xaml.cs">
+        <Link>Samples\RangeSlider\RangeSlider\RangeSlider_Tablet.xaml.cs</Link>
+      <DependentUpon>RangeSlider_Tablet.xaml</DependentUpon>
+    </Compile>
+    </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml.cs">
+	    <Link>Samples\RangeSlider\Samples\Themes\Themes.xaml.cs</Link>
+      <DependentUpon>Themes.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml" >
+        <Link>Samples\RangeSlider\SamplesList\SamplesList.xml</Link>
+   </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Orientation\Orientation.xaml">
+        <Link>Samples\RangeSlider\Orientation\Orientation.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\RangeSlider\RangeSlider.xaml">
+        <Link>Samples\RangeSlider\RangeSlider\RangeSlider.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\RangeSlider\RangeSlider_Default.xaml">
+        <Link>Samples\RangeSlider\RangeSlider\RangeSlider_Default.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\RangeSlider\RangeSlider_Tablet.xaml">
+        <Link>Samples\RangeSlider\RangeSlider\RangeSlider_Tablet.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml">
+	    <Link>Samples\RangeSlider\Samples\Themes\Themes.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

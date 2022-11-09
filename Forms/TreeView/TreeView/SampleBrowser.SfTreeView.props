@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+  
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+      <Link>Samples\TreeView\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+  
+  	<Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\GettingStarted.xaml.cs">
+      <Link>Samples\TreeView\Samples\GettingStarted\GettingStarted.xaml.cs</Link>
+      <DependentUpon>GettingStarted.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\Model\FoodSpecies.cs">
+      <Link>Samples\TreeView\Samples\GettingStarted\Model\FoodSpecies.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\ViewModel\FoodSpeciesViewModel.cs">
+      <Link>Samples\TreeView\Samples\GettingStarted\ViewModel\FoodSpeciesViewModel.cs</Link>
+    </Compile>
+	<Compile Include="$(MSBuildThisFileDirectory)\Samples\LoadOnDemand\LoadOnDemand.xaml.cs">
+      <Link>Samples\TreeView\Samples\LoadOnDemand\LoadOnDemand.xaml.cs</Link>
+      <DependentUpon>LoadOnDemand.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\LoadOnDemand\Model\MusicInfo.cs">
+      <Link>Samples\TreeView\Samples\LoadOnDemand\Model\MusicInfo.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\LoadOnDemand\ViewModel\MusicInfoRepository.cs">
+      <Link>Samples\TreeView\Samples\LoadOnDemand\ViewModel\MusicInfoRepository.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\NodeWithImage\NodeWithImage.xaml.cs">
+      <Link>Samples\TreeView\Samples\NodeWithImage\NodeWithImage.xaml.cs</Link>
+      <DependentUpon>NodeWithImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\NodeWithImage\Model\FileManager.cs">
+      <Link>Samples\TreeView\Samples\NodeWithImage\Model\FileManager.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\NodeWithImage\ViewModel\FileManagerViewModel.cs">
+      <Link>Samples\TreeView\Samples\NodeWithImage\ViewModel\FileManagerViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Selection\Selection.xaml.cs">
+      <Link>Samples\TreeView\Samples\Selection\Selection.xaml.cs</Link>
+      <DependentUpon>Selection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Selection\Model\CityInfoModel.cs">
+      <Link>Samples\TreeView\Samples\Selection\Model\CityInfoModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Selection\ViewModel\CountriesViewModel.cs">
+      <Link>Samples\TreeView\Samples\Selection\ViewModel\CountriesViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Template\Template.xaml.cs">
+      <Link>Samples\TreeView\Samples\Template\Template.xaml.cs</Link>
+      <DependentUpon>Template.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Template\Model\MailFolder.cs">
+      <Link>Samples\TreeView\Samples\Template\Model\MailFolder.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Template\ViewModel\MailFolderViewModel.cs">
+      <Link>Samples\TreeView\Samples\Template\ViewModel\MailFolderViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Template\Helper\Converter.cs">
+      <Link>Samples\TreeView\Samples\Template\Helper\Converter.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\UnboundMode\UnboundMode.xaml.cs">
+      <Link>Samples\TreeView\Samples\UnboundMode\UnboundMode.xaml.cs</Link>
+      <DependentUpon>UnboundMode.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml.cs">
+      <Link>Samples\TreeView\Samples\Themes\Themes.xaml.cs</Link>
+      <DependentUpon>Themes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Checkboxes\Checkboxes.xaml.cs">
+      <Link>Samples\TreeView\Samples\Checkboxes\Checkboxes.xaml.cs</Link>
+      <DependentUpon>Checkboxes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\AutoFitContent\AutoFitContent.xaml.cs">
+      <Link>Samples\TreeView\Samples\AutoFitContent\AutoFitContent.xaml.cs</Link>
+      <DependentUpon>AutoFitContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\AutoFitContent\Model\Conversation.cs">
+      <Link>Samples\TreeView\Samples\AutoFitContent\Model\Conversation.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\AutoFitContent\ViewModel\ChatInfo.cs">
+      <Link>Samples\TreeView\Samples\AutoFitContent\ViewModel\ChatInfo.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\AutoFitContent\Helper\ItemTemplateSelector.cs">
+      <Link>Samples\TreeView\Samples\AutoFitContent\Helper\ItemTemplateSelector.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\AutoFitContent\Helper\Converters.cs">
+      <Link>Samples\TreeView\Samples\AutoFitContent\Helper\Converters.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\AutoFitContent\Behavior.cs">
+      <Link>Samples\TreeView\Samples\AutoFitContent\Behavior.cs</Link>
+    </Compile>
+    
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Checkboxes\Checkboxes.xaml">
+      <Link>Samples\TreeView\Samples\Checkboxes\Checkboxes.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\GettingStarted.xaml">
+      <Link>Samples\TreeView\Samples\GettingStarted\GettingStarted.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+	<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\LoadOnDemand\LoadOnDemand.xaml">
+      <Link>Samples\TreeView\Samples\LoadOnDemand\LoadOnDemand.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\NodeWithImage\NodeWithImage.xaml">
+      <Link>Samples\TreeView\Samples\NodeWithImage\NodeWithImage.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Selection\Selection.xaml">
+      <Link>Samples\TreeView\Samples\Selection\Selection.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Template\Template.xaml">
+      <Link>Samples\TreeView\Samples\Template\Template.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\UnboundMode\UnboundMode.xaml">
+      <Link>Samples\TreeView\Samples\UnboundMode\UnboundMode.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\AutoFitContent\AutoFitContent.xaml">
+      <Link>Samples\TreeView\Samples\AutoFitContent\AutoFitContent.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+     <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml">
+      <Link>Samples\TreeView\Samples\Themes\Themes.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>  
+  </ItemGroup>
+</Project>

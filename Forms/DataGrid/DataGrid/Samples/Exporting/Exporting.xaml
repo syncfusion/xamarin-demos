@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfDataGrid.Exporting"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.SfDataGrid"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:sfgrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms">
+
+  <sample:SampleView.BindingContext>
+        <local:ExportingViewModel x:Name="viewModel" />
+    </sample:SampleView.BindingContext>
+
+    <sample:SampleView.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="minimumWidth"
+                      x:TypeArguments="x:Double">
+                <On Platform="iOS">
+                    <OnIdiom x:TypeArguments="x:Double"
+                          Phone="70"
+                          Tablet="20"/>
+                </On>
+            </OnPlatform>
+            <OnPlatform x:Key="opacity"
+                      x:TypeArguments="x:Double">
+                <On Platform="iOS,Android" Value="87" />
+                <On Platform="UWP,WPF" Value="80" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="padding"
+                   x:TypeArguments="Thickness">
+                <On Platform="Android,iOS" Value="8, 12, 8, 12" />
+                <On Platform="UWP,WPF" Value="8, 12, 8, 16" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="textSize"
+                  x:TypeArguments="x:Double">
+                <On Platform="iOS,UWP,WPF" Value="14" />
+                <On Platform="Android" Value="13" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="font"
+                  x:TypeArguments="x:String">
+                <On Platform="Android" Value="Roboto-Regular" />
+                <On Platform="iOS" Value="SFProText-Regular" />
+                <On Platform="UWP,WPF" Value="SegoeUI" />
+            </OnPlatform>
+             <OnPlatform x:Key="width"
+                  x:TypeArguments="x:Double">
+                <On Platform="Android,iOS,UWP,WPF" Value="120" />
+                <On Platform="macOS" Value="180" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="rowHeight" x:TypeArguments="x:Double">
+                <On Platform="Android,iOS,UWP,macOS" Value="48"/>
+                <On Platform="WPF" Value="30" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="headerHeight" x:TypeArguments="x:Double">
+                <On Platform="Android,iOS,UWP,macOS" Value="52"/>
+                <On Platform="WPF" Value="36" />
+            </OnPlatform>
+
+        </ResourceDictionary>
+    </sample:SampleView.Resources>
+    
+    <sample:SampleView.Behaviors>
+    <local:ExportingBehaviors/>
+  </sample:SampleView.Behaviors>
+
+  <sample:SampleView.Content>
+        <Grid x:Name="MainGrid"
+              BackgroundColor="#f2f2f2"
+              RowSpacing="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+          <StackLayout Grid.Row="0" Margin="5, 10, 5, 5" Spacing="10" BackgroundColor="#f2f2f2" Orientation="Horizontal" >
+            <sfgrid:BorderView BorderColor=" #999999">
+              <StackLayout x:Name="PdfStack"
+                         HorizontalOptions="FillAndExpand"
+                         WidthRequest="120"
+                         Orientation="Horizontal"
+                         HeightRequest="36">
+
+                <Image x:Name="pdfImage"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="FillAndExpand"/>
+
+                <Label x:Name="exportToPdf"
+                       HorizontalTextAlignment="Start"
+                       VerticalTextAlignment="Center"
+                       VerticalOptions="Center"
+                       WidthRequest="70"
+                       Text="Export Pdf"
+                       FontSize="12"/>
+
+              </StackLayout>
+            </sfgrid:BorderView>
+
+            <sfgrid:BorderView BorderColor=" #999999">
+              <StackLayout x:Name="ExcelStack"
+                                            HorizontalOptions="FillAndExpand"
+                                            WidthRequest="{StaticResource width}"
+                                            Orientation="Horizontal"
+                                            HeightRequest="36">
+          <Image x:Name="excelImage" 
+                         HorizontalOptions="FillAndExpand"
+                         VerticalOptions="FillAndExpand" />
+
+                <Label x:Name="exportToExcel"
+                      WidthRequest="120"
+                      HorizontalTextAlignment="Start"
+                      VerticalTextAlignment="Center"
+                      VerticalOptions="Center"
+                      Text="Export Excel"
+                      FontSize="12" />
+
+              </StackLayout>
+            </sfgrid:BorderView>
+         
+          </StackLayout>
+
+            <sfgrid:SfDataGrid x:Name="dataGrid"
+                               Grid.Row="1"
+                               ItemsSource="{Binding OrdersInfo}"
+                               AutoGenerateColumns="false"
+                               ColumnSizer="Star"
+                               GridStyle="{local:DefaultStyle}"
+                               HeaderRowHeight="{StaticResource headerHeight}"
+                               RowHeight="{StaticResource rowHeight}"
+                               SelectionMode="Single"
+                               VerticalOverScrollMode="None">
+
+                <sfgrid:SfDataGrid.Columns x:TypeArguments="sfgrid:Columns">
+
+                    <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                           HeaderText="Order ID"
+                                           HeaderTextAlignment="Start"
+                                           LineBreakMode="TailTruncation"
+                                           MappingName="OrderID"
+                                           Padding="5,0,5,0"
+                                           HeaderCellTextSize="{StaticResource textSize}"
+                                           CellTextSize="{StaticResource textSize}"
+                                           TextAlignment="End">
+                    </sfgrid:GridTextColumn>
+
+                    <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                           HeaderText="Customer ID"
+                                           HeaderTextAlignment="Start"
+                                           LineBreakMode="WordWrap"
+                                           MappingName="EmployeeID"
+                                           Padding="5,0,5,0"
+                                           HeaderCellTextSize="{StaticResource textSize}"
+                                           CellTextSize="{StaticResource textSize}"
+                                           MinimumWidth="{StaticResource minimumWidth}"
+                                           TextAlignment="End">
+                    </sfgrid:GridTextColumn>
+
+                    <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                           HeaderText="Name"
+                                           HeaderTextAlignment="Start"
+                                           LineBreakMode="WordWrap"
+                                           MappingName="CustomerID"
+                                           Padding="5, 0, 0, 0"
+                                           HeaderCellTextSize="{StaticResource textSize}"
+                                           CellTextSize="{StaticResource textSize}"
+                                           TextAlignment="Start">
+                    </sfgrid:GridTextColumn>
+
+                    <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                           HeaderText="City"
+                                           HeaderTextAlignment="Start"
+                                           LineBreakMode="WordWrap"
+                                           MappingName="ShipCity"
+                                           Padding="5, 0, 0, 0"
+                                           HeaderCellTextSize="{StaticResource textSize}"
+                                           CellTextSize="{StaticResource textSize}"
+                                           TextAlignment="Start">
+                    </sfgrid:GridTextColumn>
+
+                    <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                           HeaderText="Country"
+                                           HeaderTextAlignment="Start"
+                                           LineBreakMode="WordWrap"
+                                           MappingName="ShipCountry"
+                                           Padding="5, 0, 0, 0"
+                                           HeaderCellTextSize="{StaticResource textSize}"
+                                           CellTextSize="{StaticResource textSize}"
+                                           TextAlignment="Start">
+                    </sfgrid:GridTextColumn>
+
+                </sfgrid:SfDataGrid.Columns>
+            </sfgrid:SfDataGrid>
+        </Grid>
+    </sample:SampleView.Content>
+</sample:SampleView>
+

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+    x:Class="SampleBrowser.SegmentedControl.Themes"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms">
+    <local:SampleView.Content>
+        <StackLayout HorizontalOptions="Center" Padding="0,50,0,0">
+        <buttons:SfSegmentedControl
+                            x:Name="Image_Text"
+                            SelectionAnimationDuration="100"
+                            SegmentHeight="50"
+                            DisplayMode="ImageWithText"
+                            SegmentCornerRadius="0"
+                            CornerRadius="2"
+                            SegmentPadding="0"
+                            SelectedIndex="1"
+                            FontSize="12"
+                            VisibleSegmentsCount="3"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center">
+            <buttons:SfSegmentedControl.SelectionIndicatorSettings>
+                <buttons:SelectionIndicatorSettings
+                                    Position="Fill">
+                    
+                </buttons:SelectionIndicatorSettings>
+            </buttons:SfSegmentedControl.SelectionIndicatorSettings>
+        </buttons:SfSegmentedControl>
+        </StackLayout>
+    </local:SampleView.Content>
+</local:SampleView>

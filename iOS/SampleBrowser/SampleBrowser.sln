@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "SampleBrowser", "SampleBrowser.csproj", "{B8A581C5-F1BE-4548-BBA7-CF16C9E2E6C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8A581C5-F1BE-4548-BBA7-CF16C9E2E6C7}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{B8A581C5-F1BE-4548-BBA7-CF16C9E2E6C7}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{B8A581C5-F1BE-4548-BBA7-CF16C9E2E6C7}.Release|iPhone.ActiveCfg = Release|iPhone
+		{B8A581C5-F1BE-4548-BBA7-CF16C9E2E6C7}.Release|iPhone.Build.0 = Release|iPhone
+		{B8A581C5-F1BE-4548-BBA7-CF16C9E2E6C7}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{B8A581C5-F1BE-4548-BBA7-CF16C9E2E6C7}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{B8A581C5-F1BE-4548-BBA7-CF16C9E2E6C7}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{B8A581C5-F1BE-4548-BBA7-CF16C9E2E6C7}.Debug|iPhone.Build.0 = Debug|iPhone
+	EndGlobalSection
+EndGlobal

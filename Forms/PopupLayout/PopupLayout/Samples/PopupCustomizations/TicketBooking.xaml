@@ -1,0 +1,617 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                   xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" 
+                   xmlns:local="clr-namespace:SampleBrowser.SfPopupLayout" 
+                   x:Class="SampleBrowser.SfPopupLayout.TicketBooking" 
+                   xmlns:sfgrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms" 
+                   xmlns:popuplayout="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms">
+
+    <ContentPage.BindingContext>
+        <local:TicketBookingViewModel x:Name="viewModel"/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <popuplayout:SfPopupLayout x:Key="termsAndConditionsDialog" 
+                                       x:Name="termsAndConditionPopup" 
+                                       StaysOpen="True">
+                <popuplayout:SfPopupLayout.PopupView>
+                    <popuplayout:PopupView HeaderHeight="42" 
+                                           HeaderTitle="Terms and Conditions"
+                                           ShowCloseButton="False" 
+                                           AnimationMode="None"
+                                           AutoSizeMode="Height"
+                                           WidthRequest="{OnPlatform Android={OnIdiom Phone=300, Desktop=350, Tablet=350}, 
+                        UWP={OnIdiom Phone=300, Desktop=350, Tablet=350}, 
+                        iOS={OnIdiom Phone=300, Desktop=350, Tablet=350}}" 
+                                           MinimumWidthRequest="{OnPlatform UWP=300, iOS=300, Android=250}"
+                                       >
+                        <popuplayout:PopupView.PopupStyle>
+                            <popuplayout:PopupStyle HeaderTextAlignment="Center" 
+                                                    HeaderBackgroundColor="White" 
+                                                    HeaderTextColor="Black" 
+                                                    BorderColor="Gray" 
+                                                    BorderThickness="1" 
+                                                    HeaderFontSize="17" 
+                                                    HeaderFontAttribute="Bold">
+                            </popuplayout:PopupStyle>
+                        </popuplayout:PopupView.PopupStyle>
+                        <popuplayout:PopupView.ContentTemplate>
+                            <DataTemplate>
+                                <Grid BackgroundColor="White" Padding="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" 
+                                           Grid.Row="0" 
+                                           TextColor="Gray" 
+                                           Opacity="54" 
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        iOS={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        UWP={OnIdiom Phone=14, Tablet=18, Desktop=18}}"     
+                                           BackgroundColor="White" 
+                                           Text="1."/>
+                                    <Label Grid.Column="0" 
+                                           Grid.Row="1" 
+                                           TextColor="Gray" 
+                                           Opacity="54" 
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        iOS={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        UWP={OnIdiom Phone=14, Tablet=18, Desktop=18}}" 
+                                           BackgroundColor="White" 
+                                           Text="2."/>
+                                    <Label Grid.Column="0" 
+                                           Grid.Row="2" 
+                                           TextColor="Gray" 
+                                           Opacity="54" 
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        iOS={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        UWP={OnIdiom Phone=14, Tablet=18, Desktop=18}}" 
+                                           BackgroundColor="White" 
+                                           Text="3."/>
+                                    <Label Grid.Column="0" 
+                                           Grid.Row="3" 
+                                           TextColor="Gray" 
+                                           Opacity="54" 
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        iOS={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        UWP={OnIdiom Phone=14, Tablet=18, Desktop=18}}" 
+                                           BackgroundColor="White" 
+                                           Text="4."/>
+                                    <Label Grid.Column="1" 
+                                           Grid.Row="0" 
+                                           TextColor="Gray" 
+                                           Opacity="54" 
+                                           MinimumWidthRequest="{OnPlatform UWP=270, iOS=300, Android=300}" 
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        iOS={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        UWP={OnIdiom Phone=14, Tablet=18, Desktop=18}}" 
+                                           BackgroundColor="White" 
+                                           Text="Children below the age of 18 cannot be admitted for movies certified A."/>
+                                    <Label Grid.Column="1" 
+                                           Grid.Row="1" 
+                                           TextColor="Gray" 
+                                           Opacity="54" 
+                                           MinimumWidthRequest="{OnPlatform UWP=270, iOS=300, Android=300}" 
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        iOS={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        UWP={OnIdiom Phone=14, Tablet=18, Desktop=18}}" 
+                                           BackgroundColor="White" 
+                                           Text="Please carry proof of age for movies certified A."/>
+                                    <Label Grid.Column="1" 
+                                           Grid.Row="2" 
+                                           TextColor="Gray" 
+                                           Opacity="54" 
+                                           MinimumWidthRequest="{OnPlatform UWP=270, iOS=300, Android=300}" 
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        iOS={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        UWP={OnIdiom Phone=14, Tablet=18, Desktop=18}}" 
+                                           BackgroundColor="White" 
+                                           Text="Drinking and alcohol is strictly prohibited inside the premises."/>
+                                    <Label Grid.Column="1" 
+                                           Grid.Row="3" 
+                                           TextColor="Gray" 
+                                           Opacity="54" 
+                                           MinimumWidthRequest="{OnPlatform UWP=270, iOS=300, Android=300}" 
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        iOS={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        UWP={OnIdiom Phone=14, Tablet=18, Desktop=18}}" 
+                                           BackgroundColor="White" 
+                                           Text="Please purchase tickets for children above age of 3."/>
+                                </Grid>
+                            </DataTemplate>
+                        </popuplayout:PopupView.ContentTemplate>
+                        <popuplayout:PopupView.FooterTemplate>
+                            <DataTemplate>
+                                <StackLayout Orientation="Vertical" 
+                                             BackgroundColor="White" 
+                                             Padding="0" 
+                                             Margin="0" 
+                                             Spacing="0" >
+                                    <BoxView Color="LightGray" HeightRequest="1" Margin="0"/>
+                                    <StackLayout x:Name="footerTemplate" 
+                                                 VerticalOptions="FillAndExpand" 
+                                                 Orientation="Horizontal" 
+                                                 BackgroundColor="White" 
+                                                 Padding="0" 
+                                                 Margin="0" 
+                                                 Spacing="0">
+                                        <Button x:Name="declineButton" 
+                                                Command="{Binding DeclineCommand, Source={x:Reference viewModel}}" 
+                                                CommandParameter="{x:Reference termsAndConditionPopup}" 
+                                                Text="Decline" 
+                                                FontSize="12" 
+                                                BackgroundColor="White" 
+                                                TextColor="#007CEE" 
+                                                WidthRequest="{OnPlatform Android={OnIdiom Phone=150, Tablet=300, Desktop=300}, 
+                                            iOS={OnIdiom Phone=150, Tablet=300, Desktop=300}, 
+                                            UWP={OnIdiom Phone=150, Tablet=300, Desktop=300}}" 
+                                                MinimumWidthRequest="{OnPlatform UWP=120, iOS=140, Android=140}" />
+                                        <BoxView x:Name="separator" 
+                                                 Color="LightGray" 
+                                                 WidthRequest="2" />
+                                        <Button x:Name="acceptButton" 
+                                                Command="{Binding AcceptCommand, Source={x:Reference viewModel}}" 
+                                                CommandParameter="{StaticResource BookingDialog}" 
+                                                Text="Accept" 
+                                                FontSize="12" 
+                                                BackgroundColor="White" 
+                                                TextColor="#007CEE"  
+                                                WidthRequest="{OnPlatform Android={OnIdiom Phone=150, Tablet=300, Desktop=300}, 
+                                            iOS={OnIdiom Phone=150, Tablet=300, Desktop=300}, 
+                                            UWP={OnIdiom Phone=150, Tablet=300, Desktop=300}}" 
+                                                MinimumWidthRequest="{OnPlatform UWP=120, iOS=140, Android=140}" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </DataTemplate>
+                        </popuplayout:PopupView.FooterTemplate>
+                    </popuplayout:PopupView>
+                </popuplayout:SfPopupLayout.PopupView>
+            </popuplayout:SfPopupLayout>
+            <local:TimingVisibilityConverter x:Key="timingVisibilityConverter"/>
+            <popuplayout:SfPopupLayout x:Key="InformationDialog">
+                <popuplayout:SfPopupLayout.PopupView>
+                    <popuplayout:PopupView ShowFooter="False" 
+                                           HeightRequest="{OnPlatform Android={OnIdiom Phone=270, Tablet=350, Desktop=350}, 
+                        iOS={OnIdiom Phone=270, Tablet=350, Desktop=350}, 
+                        UWP={OnIdiom Phone=270, Tablet=350, Desktop=350}}" 
+                                           MinimumHeightRequest="{OnPlatform UWP=250 , Android=220 , iOS=270}" 
+                                           WidthRequest="{OnPlatform Android={OnIdiom Phone=300, Desktop=350, Tablet=350}, 
+                        UWP={OnIdiom Phone=300, Desktop=350, Tablet=350}, 
+                        iOS={OnIdiom Phone=300, Desktop=350, Tablet=350}}" 
+                                           MinimumWidthRequest="{OnPlatform Android=250, iOS=300, UWP=300}">
+                        <popuplayout:PopupView.PopupStyle>
+                            <popuplayout:PopupStyle HeaderTextAlignment="Center" 
+                                                    HeaderBackgroundColor="White" 
+                                                    HeaderTextColor="Black" 
+                                                    BorderColor="Gray" 
+                                                    BorderThickness="1" 
+                                                    HeaderFontSize="17" 
+                                                    HeaderFontAttribute="Bold" />
+                        </popuplayout:PopupView.PopupStyle>
+                        <popuplayout:PopupView.ContentTemplate>
+                            <DataTemplate>
+                                <StackLayout x:Name="mainLayout" 
+                                             Orientation="Vertical" 
+                                             BackgroundColor="White" 
+                                             WidthRequest="270" 
+                                             Padding="10,5,10,50">
+                                    <Label x:Name="address" 
+                                           HeightRequest="60" 
+                                           FontSize="14" 
+                                           Margin="0,10,0,0" 
+                                           Text="No.15, 12th Main Road, Sector 1, 421 E DRACHMAN TUCSON AZ 85705 - 7598 USA" 
+                                           TextColor="#007CEE" 
+                                           LineBreakMode="WordWrap"/>
+                                    <Label x:Name="facilities" 
+                                           Margin="0,20,0,10" 
+                                           Text="Available Facilities" 
+                                           HeightRequest="30" 
+                                           FontSize="16" 
+                                           TextColor="Black" 
+                                           HorizontalTextAlignment="Center"/>
+                                    <StackLayout x:Name="totalFacilities" 
+                                                 Orientation="Horizontal" 
+                                                 HorizontalOptions="FillAndExpand" 
+                                                 Padding="0,5,10,5">
+                                        <StackLayout x:Name="mticket" 
+                                                     Orientation="Vertical" 
+                                                     WidthRequest="90" 
+                                                     BackgroundColor="White" 
+                                                     HorizontalOptions="CenterAndExpand">
+                                            <Image x:Name="ticketImage" 
+                                                   HorizontalOptions="CenterAndExpand" 
+                                                   VerticalOptions="CenterAndExpand" 
+                                                   HeightRequest="30" 
+                                                   WidthRequest="30">
+                                                <Image.Source>
+                                                    <FontImageSource Glyph="&#xe73e;"
+                                                                     FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"
+                                                                     Color="#000000"/>
+                                                </Image.Source>
+                                            </Image>
+                                            <Label x:Name="ticket" 
+                                                   Text="M-Ticket" 
+                                                   TextColor="Black" 
+                                                   HeightRequest="20" 
+                                                   FontSize="12" 
+                                                   HorizontalTextAlignment="Center"/>
+                                        </StackLayout>
+                                        <StackLayout x:Name="mparking" 
+                                                     Orientation="Vertical" 
+                                                     WidthRequest="90" 
+                                                     BackgroundColor="White" 
+                                                     HorizontalOptions="CenterAndExpand">
+                                            <Image x:Name="parkingImage" 
+                                                   HorizontalOptions="CenterAndExpand" 
+                                                   VerticalOptions="CenterAndExpand" 
+                                                   HeightRequest="30"
+                                                   WidthRequest="30">
+                                                <Image.Source>
+                                                    <FontImageSource Glyph="&#xe752;"
+                                                                     FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"
+                                                                     Color="#000000"/>
+                                                </Image.Source>
+                                            </Image>
+                                            <Label x:Name="parking" 
+                                                   Text="Parking" 
+                                                   TextColor="Black" 
+                                                   HeightRequest="20" 
+                                                   FontSize="12" 
+                                                   HorizontalTextAlignment="Center"/>
+                                        </StackLayout>
+                                        <StackLayout x:Name="mfoodCourt" 
+                                                     Orientation="Vertical" 
+                                                     WidthRequest="90" 
+                                                     BackgroundColor="White" 
+                                                     HorizontalOptions="CenterAndExpand">
+                                            <Image x:Name="mfoodCourtImage" 
+                                                   HorizontalOptions="CenterAndExpand" 
+                                                   VerticalOptions="CenterAndExpand" 
+                                                   HeightRequest="30" 
+                                                   WidthRequest="30">
+                                                <Image.Source>
+                                                    <FontImageSource Glyph="&#xe74b;"
+                                                                     FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"
+                                                                     Color="#000000"></FontImageSource>
+                                                </Image.Source>
+                                            </Image>
+                                            <Label x:Name="foodCourt" 
+                                                   Text="FoodCourt" 
+                                                   TextColor="Black" 
+                                                   HeightRequest="20" 
+                                                   FontSize="12" 
+                                                   HorizontalTextAlignment="Center"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </DataTemplate>
+                        </popuplayout:PopupView.ContentTemplate>
+                    </popuplayout:PopupView>
+                </popuplayout:SfPopupLayout.PopupView>
+            </popuplayout:SfPopupLayout>
+            <popuplayout:SfPopupLayout x:Key="BookingDialog" x:Name="ticketBookingPopup">
+                <popuplayout:SfPopupLayout.PopupView>
+                    <popuplayout:PopupView ShowCloseButton="False" 
+                                       AnimationMode="None"
+                                       HeaderTitle="Select your seats"  
+                                       HeightRequest="{OnPlatform Android={OnIdiom Phone=330, Tablet=350, Desktop=350}, 
+                        iOS={OnIdiom Phone=330, Tablet=350, Desktop=350}, 
+                        UWP={OnIdiom Phone=330, Tablet=350, Desktop=350}}" 
+                                       MinimumHeightRequest="{OnPlatform UWP=250 , Android=270 , iOS=270}" 
+                                       WidthRequest="{OnPlatform Android={OnIdiom Phone=300, Desktop=350, Tablet=350}, 
+                        UWP={OnIdiom Phone=300, Desktop=350, Tablet=350}, 
+                        iOS={OnIdiom Phone=300, Desktop=350, Tablet=350}}" 
+                                       MinimumWidthRequest="{OnPlatform UWP=250, iOS=300, Android=300}"
+                                       >
+                        <popuplayout:PopupView.ContentTemplate>
+                            <DataTemplate>
+                                <StackLayout x:Name="seatSelectionPage" 
+                                             Orientation="Vertical" 
+                                             BackgroundColor="White" 
+                                             Padding="10,20,10,10">
+                                    <StackLayout x:Name="numberOfSeatsLayout" 
+                                                 Orientation="Horizontal" 
+                                                 BackgroundColor="White" >
+                                        <Label x:Name="seat1" Text="1" 
+                                               FontAttributes="Bold" 
+                                               StyleId="1" 
+                                               HorizontalTextAlignment="Center" 
+                                               HorizontalOptions="FillAndExpand" 
+                                               VerticalOptions="FillAndExpand" 
+                                               BackgroundColor="White" 
+                                               TextColor="Black" 
+                                               HeightRequest="50" 
+                                               VerticalTextAlignment="Center">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding SeatSelectionCommand, Source={x:Reference viewModel}}" CommandParameter="{x:Reference seat1}"/>
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                        <Label x:Name="seat2" 
+                                               Text="2" 
+                                               FontAttributes="Bold" 
+                                               StyleId="2" 
+                                               HorizontalTextAlignment="Center" 
+                                               HorizontalOptions="FillAndExpand" 
+                                               VerticalOptions="FillAndExpand" 
+                                               BackgroundColor="#007CEE" 
+                                               TextColor="White" 
+                                               HeightRequest="50" 
+                                               VerticalTextAlignment="Center">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding SeatSelectionCommand, Source={x:Reference viewModel}}" CommandParameter="{x:Reference seat2}"/>
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                        <Label x:Name="seat3" 
+                                               Text="3" 
+                                               FontAttributes="Bold" 
+                                               StyleId="3" 
+                                               HorizontalTextAlignment="Center" 
+                                               HorizontalOptions="FillAndExpand" 
+                                               VerticalOptions="FillAndExpand" 
+                                               BackgroundColor="White" 
+                                               TextColor="Black" 
+                                               HeightRequest="50" 
+                                               VerticalTextAlignment="Center">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding SeatSelectionCommand, Source={x:Reference viewModel}}" CommandParameter="{x:Reference seat3}"/>
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                        <Label x:Name="seat4" 
+                                               Text="4" 
+                                               FontAttributes="Bold" 
+                                               StyleId="4" 
+                                               HorizontalTextAlignment="Center" 
+                                               HorizontalOptions="FillAndExpand" 
+                                               VerticalOptions="FillAndExpand" 
+                                               BackgroundColor="White" 
+                                               TextColor="Black" 
+                                               HeightRequest="50" 
+                                               VerticalTextAlignment="Center">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding SeatSelectionCommand, Source={x:Reference viewModel}}" CommandParameter="{x:Reference seat4}"/>
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                        <Label x:Name="seat5" 
+                                               Text="5" 
+                                               FontAttributes="Bold" 
+                                               StyleId="5" 
+                                               HorizontalTextAlignment="Center" 
+                                               HorizontalOptions="FillAndExpand" 
+                                               VerticalOptions="FillAndExpand" 
+                                               BackgroundColor="White" 
+                                               TextColor="Black" 
+                                               HeightRequest="50" 
+                                               VerticalTextAlignment="Center">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding SeatSelectionCommand, Source={x:Reference viewModel}}" CommandParameter="{x:Reference seat5}"/>
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                        <Label x:Name="seat6" 
+                                               Text="6" 
+                                               FontAttributes="Bold" 
+                                               StyleId="6" 
+                                               HorizontalTextAlignment="Center" 
+                                               HorizontalOptions="FillAndExpand" 
+                                               VerticalOptions="FillAndExpand" 
+                                               BackgroundColor="White" 
+                                               TextColor="Black" 
+                                               HeightRequest="50" 
+                                               VerticalTextAlignment="Center">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding SeatSelectionCommand, Source={x:Reference viewModel}}" CommandParameter="{x:Reference seat6}"/>
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                    </StackLayout>
+                                    <Label Text="Select your seat class" 
+                                           VerticalTextAlignment="Center" 
+                                           FontSize="14" 
+                                           BackgroundColor="White" 
+                                           Margin="10,6,0,0" TextColor="Black" 
+                                           HeightRequest="{OnPlatform Android={OnIdiom Phone=60, Desktop=100, Tablet=100}, 
+                                        iOS={OnIdiom Phone=60, Desktop=100, Tablet=100}, 
+                                        UWP={OnIdiom Phone=60, Desktop=100, Tablet=100}}" 
+                                           MinimumHeightRequest="{OnPlatform UWP=60, Android=60, iOS=30}"/>
+                                    <StackLayout x:Name="seatClassLayout" Orientation="Vertical">
+                                        <StackLayout Orientation="Horizontal" 
+                                                     MinimumHeightRequest="{OnPlatform UWP=60, Android=60, iOS=30}"  
+                                                     HeightRequest="{OnPlatform Android={OnIdiom Phone=30, Tablet=60, Desktop=60}, 
+                                            iOS={OnIdiom Phone=30, Tablet=60, Desktop=60}, 
+                                            UWP={OnIdiom Phone=30, Tablet=60, Desktop=60}}">
+                                            <Label Text="Silver" 
+                                                   FontSize="14" 
+                                                   Margin="10,0,0,0" 
+                                                   TextColor= "Gray" 
+                                                   WidthRequest="100"/>
+                                            <Label Text="$19.69" 
+                                                   FontSize="14" 
+                                                   TextColor= "Black" 
+                                                   WidthRequest="80"  
+                                                   Opacity="87"/>
+                                            <Label Text="Available" 
+                                                   FontSize="14" 
+                                                   TextColor= "#00BD81" 
+                                                   WidthRequest="120" 
+                                                   Opacity="80"/>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" 
+                                                     MinimumHeightRequest="{OnPlatform UWP=60, Android=60, iOS=30}"  
+                                                     HeightRequest="{OnPlatform Android={OnIdiom Phone=30, Tablet=60, Desktop=60}, 
+                                            iOS={OnIdiom Phone=30, Tablet=60, Desktop=60}, 
+                                            UWP={OnIdiom Phone=30, Tablet=60, Desktop=60}}">
+                                            <Label Text="Premier" 
+                                                   FontSize="14" 
+                                                   Margin="10,0,0,0" 
+                                                   TextColor= "Gray" 
+                                                   WidthRequest="100"/>
+                                            <Label Text="$23.65" 
+                                                   FontSize="14" 
+                                                   TextColor= "Black" 
+                                                   WidthRequest="80" 
+                                                   Opacity="87"/>
+                                            <Label Text="Unavailable" 
+                                                   FontSize="14" 
+                                                   TextColor= "Red" 
+                                                   WidthRequest="120" 
+                                                   Opacity="80"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </DataTemplate>
+                        </popuplayout:PopupView.ContentTemplate>
+                        <popuplayout:PopupView.FooterTemplate>
+                            <DataTemplate>
+                                <Button Text="Proceed" 
+                                        FontSize="14" 
+                                        Command="{Binding ProceedCommand, Source={x:Reference viewModel}}" 
+                                        CommandParameter="{StaticResource confirmationDialog}" 
+                                        TextColor="White" 
+                                        BackgroundColor="#007CEE"/>
+                            </DataTemplate>
+                        </popuplayout:PopupView.FooterTemplate>
+                        <popuplayout:PopupView.PopupStyle>
+                            <popuplayout:PopupStyle HeaderTextAlignment="Center" 
+                                                    HeaderBackgroundColor="White" 
+                                                    HeaderTextColor="Black" 
+                                                    BorderColor="Gray" 
+                                                    BorderThickness="1" 
+                                                    HeaderFontSize="17" 
+                                                    HeaderFontAttribute="Bold">
+                            </popuplayout:PopupStyle>
+                        </popuplayout:PopupView.PopupStyle>
+                    </popuplayout:PopupView>
+                </popuplayout:SfPopupLayout.PopupView>
+            </popuplayout:SfPopupLayout>
+            <popuplayout:SfPopupLayout x:Key="confirmationDialog">
+                <popuplayout:SfPopupLayout.PopupView>
+                    <popuplayout:PopupView ShowCloseButton="False" 
+                                           HeightRequest="{OnPlatform Android=130, iOS=150, UWP=150}" 
+                                           AcceptButtonText="OK" 
+                                           HeaderTitle="Thank You !">
+                        <popuplayout:PopupView.ContentTemplate>
+                            <DataTemplate>
+                                <Grid Padding="10,0,0,0" 
+                                      BackgroundColor="White">
+                                    <Label Text="Tickets booked successfully" 
+                                           FontSize="15" 
+                                           BackgroundColor="White" 
+                                           TextColor="Black"/>
+                                </Grid>
+                            </DataTemplate>
+                        </popuplayout:PopupView.ContentTemplate>
+                    </popuplayout:PopupView>
+                </popuplayout:SfPopupLayout.PopupView>
+            </popuplayout:SfPopupLayout>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <sfgrid:SfDataGrid x:Name="seconddataGrid" 
+                           ItemsSource="{Binding TheaterInformation}"
+                           AutoGenerateColumns="False"
+                           HeaderRowHeight="72"
+                           RowHeight="110"
+                           VerticalOverScrollMode="None"
+                           ColumnSizer="Star">
+            <sfgrid:SfDataGrid.Columns x:TypeArguments="syncfusion:Columns">
+                <sfgrid:GridTemplateColumn MappingName="DayLabel">
+
+                    <sfgrid:GridTemplateColumn.HeaderTemplate>
+                        <DataTemplate>
+                            <local:CustomHeaderTemplate NumberOfLabel="7"></local:CustomHeaderTemplate>
+                        </DataTemplate>
+                    </sfgrid:GridTemplateColumn.HeaderTemplate>
+
+                    <sfgrid:GridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackLayout x:Name="mainLayout" Orientation="Horizontal" Padding="10,10,10,10">                                
+                                <StackLayout x:Name="theaterDetails" 
+                                             Orientation="Vertical" 
+                                             Padding="10,0,10,10">
+                                    <Label x:Name="TheaterNameLabel" 
+                                           Text="{Binding TheaterName}" 
+                                           Opacity="100" 
+                                           FontSize = "15" 
+                                           TextColor="Black" />
+                                    <Label Text="{Binding TheaterLocation}" 
+                                           Opacity="100" 
+                                           FontSize = "12" 
+                                           TextColor="Black"/>
+                                    <StackLayout x:Name="timing" 
+                                                 Orientation="Horizontal">
+                                        <Button Text="{Binding Timing1}" 
+                                                Command="{Binding TimingCommand, Source={x:Reference viewModel}}" 
+                                                CommandParameter="{StaticResource termsAndConditionsDialog}" 
+                                                Opacity="0.8" 
+                                                FontSize = "14" 
+                                                TextColor="#007CEE" 
+                                                BorderColor="LightBlue" 
+                                                BorderWidth="1" BorderRadius="3" 
+                                                HeightRequest="38" 
+                                                WidthRequest="90" 
+                                                Margin="0,0,5,5" 
+                                                BackgroundColor="White" />
+                                        <Button Text="{Binding Timing2}" 
+                                                Command="{Binding TimingCommand, Source={x:Reference viewModel}}" 
+                                                CommandParameter="{StaticResource termsAndConditionsDialog}"
+                                                Opacity="0.8" 
+                                                FontSize = "14"  
+                                                IsVisible="{Binding Converter={StaticResource timingVisibilityConverter}}" 
+                                                TextColor="#007CEE" 
+                                                HeightRequest="38" 
+                                                WidthRequest="90" 
+                                                Margin="0,0,5,5" 
+                                                BackgroundColor="White" 
+                                                BorderColor="LightBlue" 
+                                                BorderWidth="1" 
+                                                BorderRadius="3" />
+                                    </StackLayout>
+                                </StackLayout>
+                                
+                                <ContentView x:Name="contentView" 
+                                             WidthRequest="32" 
+                                             InputTransparent="False"  
+                                             VerticalOptions="CenterAndExpand" 
+                                             HorizontalOptions="EndAndExpand" 
+                                             Padding="0,0,0,20" >
+                                    <ContentView.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding OpenInfoCommand, Source={x:Reference viewModel}}" >
+                                            <TapGestureRecognizer.CommandParameter>
+                                                <local:InfoPopupParameters         TheatreLabel="{x:Reference TheaterNameLabel}" 
+                       InfoPopup="{StaticResource InformationDialog}"/>
+                                            </TapGestureRecognizer.CommandParameter>
+                                        </TapGestureRecognizer>
+                                    </ContentView.GestureRecognizers>
+                                  <Image x:Name="popupImage" 
+                                           WidthRequest="32" 
+                                           HeightRequest="32" 
+                                           VerticalOptions="CenterAndExpand" 
+                                           HorizontalOptions="EndAndExpand" 
+                                           Margin="0,0,10,0" 
+                                           InputTransparent="False" 
+                                           Opacity="0.5" >
+                                        <Image.Source>
+                                            <FontImageSource Glyph="&#xe767;"
+                                                             FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"
+                                                             Color="#000000"/>
+                                        </Image.Source>
+                                    </Image>
+                                </ContentView>
+                            </StackLayout>
+                        </DataTemplate>
+                    </sfgrid:GridTemplateColumn.CellTemplate>
+
+                </sfgrid:GridTemplateColumn>
+            </sfgrid:SfDataGrid.Columns>
+        </sfgrid:SfDataGrid>
+    </ContentPage.Content>
+
+</ContentPage>

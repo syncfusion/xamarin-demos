@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfDataGrid.UnboundViews"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.SfDataGrid"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:sfgrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms">
+
+    <sample:SampleView.Behaviors>
+        <local:UnboundViewsBehaviors/>
+    </sample:SampleView.Behaviors>
+
+    <sample:SampleView.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="maximumWidth"
+                        x:TypeArguments="x:Double">
+                <On Platform="Android,iOS,macOS,UWP,WPF">
+                    <OnIdiom x:TypeArguments="x:Double"
+                             Phone="150"
+                             Tablet="300"
+                             Desktop="500"/>
+                </On>
+            </OnPlatform>
+            <OnPlatform x:Key="opacity"
+                      x:TypeArguments="x:Double">
+                <On Platform="iOS,Android,macOS" Value="87" />
+                <On Platform="UWP,WPF" Value="80" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="padding"
+                   x:TypeArguments="Thickness">
+                <On Platform="Android,iOS" Value="8, 12, 8, 12" />
+                <On Platform="macOS,UWP,WPF" Value="8, 12, 8, 16" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="textSize"
+                  x:TypeArguments="x:Double">
+                <On Platform="iOS" Value="14" />
+                <On Platform="Android,macOS,UWP,WPF" Value="13" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="font"
+                  x:TypeArguments="x:String">
+                <On Platform="Android" Value="Roboto-Regular" />
+                <On Platform="iOS,macOS" Value="SFProText-Regular" />
+                <On Platform="UWP,WPF" Value="SegoeUI" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="rowHeight" x:TypeArguments="x:Double">
+                <On Platform="Android,iOS,UWP,macOS" Value="48"/>
+                <On Platform="WPF" Value="30" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="headerHeight" x:TypeArguments="x:Double">
+                <On Platform="WPF" Value="36" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </sample:SampleView.Resources>
+
+    <sample:SampleView.BindingContext>
+        <local:SalesInfoViewModel x:Name="viewModel" />
+    </sample:SampleView.BindingContext>
+
+
+    <sample:SampleView.Content>
+        <sfgrid:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding DailySalesDetails}"
+                           AutoGenerateColumns="False"
+                           ColumnSizer="Star"
+                           RowHeight="{StaticResource rowHeight}"
+                           HeaderRowHeight="{StaticResource headerHeight}"
+                           SelectionMode="Multiple"
+                           SelectedItems="{Binding SelectedItems}"
+                           VerticalOverScrollMode="None">
+
+            <sfgrid:SfDataGrid.Columns>
+
+                <sfgrid:GridTextColumn HeaderFontAttribute="Bold" 
+                               LoadUIView="True" 
+                               HeaderTextAlignment="Start"
+                               LineBreakMode="WordWrap"
+                               MappingName="Name"
+                               HeaderText="Employee"
+                               Padding="5,0,0,0"
+                               HeaderCellTextSize="{StaticResource textSize}"
+                               CellTextSize="{StaticResource textSize}"
+                               MaximumWidth="{StaticResource maximumWidth}"
+                               TextAlignment="Start">
+                </sfgrid:GridTextColumn>
+
+                <sfgrid:GridTextColumn Format="C"
+                               HeaderFontAttribute="Bold"
+                               LoadUIView="True" 
+                               HeaderTextAlignment="Start"
+                               LineBreakMode="TailTruncation"
+                               MappingName="QS2"
+                               HeaderText="2016"
+                               Padding="5,0,5,0"
+                               HeaderCellTextSize="{StaticResource textSize}"
+                               CellTextSize="{StaticResource textSize}"
+                               MaximumWidth="{StaticResource maximumWidth}"
+                               TextAlignment="End">
+                </sfgrid:GridTextColumn>
+
+                <sfgrid:GridTextColumn Format="C"
+                               HeaderFontAttribute="Bold"
+                               LoadUIView="True" 
+                               HeaderTextAlignment="Start"
+                               LineBreakMode="TailTruncation"
+                               MappingName="QS3"
+                               HeaderText="2017"
+                               Padding="5,0,5,0"
+                               HeaderCellTextSize="{StaticResource textSize}"
+                               CellTextSize="{StaticResource textSize}"
+                               MaximumWidth="{StaticResource maximumWidth}"
+                               TextAlignment="End">
+                </sfgrid:GridTextColumn>
+                <sfgrid:GridUnboundColumn Expression="( QS2 + QS3 )"
+                                          Format="C"
+                                          HeaderFontAttribute="Bold"
+                                          LoadUIView="True" 
+                                          HeaderText="Total"
+                                          HeaderTextAlignment="Start"
+                                          LineBreakMode="WordWrap"
+                                          MappingName="QS4"
+                                          HeaderCellTextSize="{StaticResource textSize}"
+                                          CellTextSize="{StaticResource textSize}"
+                                          MaximumWidth="{StaticResource maximumWidth}"
+                                          TextAlignment="End">
+                </sfgrid:GridUnboundColumn>
+            </sfgrid:SfDataGrid.Columns>
+
+            <sfgrid:SfDataGrid.UnboundRows>
+                <sfgrid:GridUnboundRow  Position="FixedBottom" />
+            </sfgrid:SfDataGrid.UnboundRows>
+            
+        </sfgrid:SfDataGrid>
+    </sample:SampleView.Content>
+</sample:SampleView>

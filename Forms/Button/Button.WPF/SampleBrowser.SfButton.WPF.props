@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<ItemGroup>
+   <Resource Include="$(MSBuildThisFileDirectory)\Assets\Fonts\button_Segoe MDL2 Assets.ttf">
+          <Link>Assets\Fonts\button_Segoe MDL2 Assets.ttf</Link>
+   </Resource>
+</ItemGroup>
+<ItemGroup>   
+  <Resource Include="$(MSBuildThisFileDirectory)\button_alignCenter.png">
+         <Link>button_alignCenter.png</Link>
+  </Resource>
+
+  <Resource Include="$(MSBuildThisFileDirectory)\button_alignLeft.png">
+         <Link>button_alignLeft.png</Link>
+  </Resource>
+
+  <Resource Include="$(MSBuildThisFileDirectory)\button_alignRight.png">
+         <Link>button_alignRight.png</Link>
+  </Resource>
+
+  <Resource Include="$(MSBuildThisFileDirectory)\button_Heart.png">
+         <Link>button_Heart.png</Link>
+  </Resource>
+
+</ItemGroup>
+</Project>

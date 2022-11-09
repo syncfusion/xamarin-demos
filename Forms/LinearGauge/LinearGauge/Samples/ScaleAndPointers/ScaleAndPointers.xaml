@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+              xmlns:linear="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"
+             x:Class="SampleBrowser.SfLinearGauge.ScaleAndPointers">
+  <local:SampleView.Content BackgroundColor="White">
+    
+      <Grid BackgroundColor="White">
+        <linear:SfLinearGauge x:Name="gauge"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        BackgroundColor="White">
+          <linear:SfLinearGauge.Scales>
+            <linear:LinearScale ScaleBarColor="#e0e9f9" ScaleBarSize="40"
+                                CornerRadius="20" CornerRadiusType="End"
+                                LabelFontSize="14" LabelColor="#424242"
+                                MinimumValue="0" MaximumValue="100" Interval="10"
+                                MinorTicksPerInterval="0">
+              <linear:LinearScale.MajorTickSettings>
+                <linear:LinearTickSettings Color="#9E9E9E" Thickness="1" Length="10">
+                </linear:LinearTickSettings>
+              </linear:LinearScale.MajorTickSettings>
+
+              <linear:LinearScale.Pointers>
+                <linear:BarPointer Value="75"
+                    CornerRadiusType="End" Thickness="30"
+                    CornerRadius="15"
+                    EnableAnimation="False">
+                  <linear:BarPointer.GradientStops>
+                    <linear:GaugeGradientStop Value="0" Color="#36d1dc"/>
+                    <linear:GaugeGradientStop Value="75" Color="#5b86e5"/>
+                  </linear:BarPointer.GradientStops>
+                </linear:BarPointer>
+                <linear:SymbolPointer Value="30" Color="#5b86e5" Thickness="12"
+                                      EnableAnimation="False" MarkerShape="Triangle"
+                                      ImageSource="lineargaugestar.jpg"
+                                      SymbolPointerPosition="Away" />
+              </linear:LinearScale.Pointers>
+
+            </linear:LinearScale>
+          </linear:SfLinearGauge.Scales>
+
+        </linear:SfLinearGauge>
+    </Grid>
+  
+  </local:SampleView.Content>
+  <local:SampleView.PropertyView>
+
+    <StackLayout>
+      <StackLayout Orientation="Vertical">
+        <Label FontSize="14" TextColor="Black" Text="Opposite Position" />
+        <Picker x:Name="opposedPosition"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center">
+          <Picker.Items>
+            <x:String>True</x:String>
+            <x:String>False</x:String>
+          </Picker.Items>
+        </Picker>
+      </StackLayout>
+
+      <StackLayout>
+        <Label FontSize="14" TextColor="Black" Text="Corner Radius Type" />
+        <Picker x:Name="rangeCap"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center">
+          <Picker.Items>
+            <x:String>Start</x:String>
+            <x:String>End</x:String>
+            <x:String>Both</x:String>
+            <x:String>None</x:String>
+          </Picker.Items>
+        </Picker>
+      </StackLayout>
+
+      <StackLayout>
+        <Label FontSize="14" TextColor="Black" Text="Marker Shape"/>
+        <Picker x:Name="markerShape"  HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center">
+          <Picker.Items>
+            <x:String>Triangle</x:String>
+            <x:String>Inverted Triangle</x:String>
+            <x:String>Circle</x:String>
+            <x:String>Diamond</x:String>
+            <x:String>Rectangle</x:String>
+            <x:String>Image</x:String>
+          </Picker.Items>
+        </Picker>
+      </StackLayout>
+    </StackLayout>
+  </local:SampleView.PropertyView>
+</local:SampleView>
