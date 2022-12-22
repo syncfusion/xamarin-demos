@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sample:SampleView x:Class="SampleBrowser.DataSource.DataSourceGettingStarted"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.DataSource"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:sfdatasource="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable">
+    <sample:SampleView.Content>
+    <Grid RowSpacing="0">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+
+      <SearchBar x:Name="filterText"
+                          Grid.Row="0"
+                          Grid.Column="0"
+                          IsVisible="true"
+                          Placeholder="Search here to filter"
+                          TextChanged="OnFilterTextChanged"
+                 HeightRequest="{OnPlatform Default=50, UWP=40}" />
+      <local:CustomListView x:Name="listView"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            HasUnevenRows="true">
+        <local:CustomListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <ViewCell.View>
+                <Grid x:Name="grid"
+                      HeightRequest="110"
+                      Padding="10"
+                      RowSpacing="20">
+                  <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                  </Grid.RowDefinitions>
+
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                  </Grid.ColumnDefinitions>
+
+                  <Image Grid.Row="0"
+                         Grid.Column="0"
+                         HeightRequest="100"
+                         Source="{Binding CustomerImage}"
+                         WidthRequest="100" />
+                  <Grid Grid.Row="0"
+                        Grid.Column="1"
+                        HeightRequest="110"
+                        Padding="15,0,0,0"
+                        RowSpacing="1"
+                        VerticalOptions="Start">
+                    <Grid.RowDefinitions>
+                      <RowDefinition Height="*" />
+                      <RowDefinition Height="*" />
+                      <RowDefinition Height="*" />
+                      <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0"
+                           Grid.Column="0"
+                           LineBreakMode="NoWrap"
+                           Text="{Binding CustomerName}"
+                           TextColor="Black"
+                           FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=16}, iOS={OnIdiom Phone=14, Tablet=16}, UWP={OnIdiom Phone=18, Desktop=20}}" />
+                    <Label Grid.Row="1"
+                           Grid.Column="0"
+                           LineBreakMode="NoWrap"
+                           Text="{Binding BookName}"
+                           TextColor="Black"
+                           FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=16}, iOS={OnIdiom Phone=14, Tablet=16}, UWP={OnIdiom Phone=18, Desktop=20}}" />
+                    <Label Grid.Row="2"
+                           Grid.Column="0"
+                           LineBreakMode="NoWrap"
+                           Text="{Binding BookID}"
+                           TextColor="Black"
+                           FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=16}, iOS={OnIdiom Phone=14, Tablet=16}, UWP={OnIdiom Phone=18, Desktop=20}}" />
+                    <Label Grid.Row="3"
+                           Grid.Column="0"
+                           LineBreakMode="NoWrap"
+                           Text="{Binding Price}"
+                           TextColor="Black"
+                           FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=16}, iOS={OnIdiom Phone=14, Tablet=16}, UWP={OnIdiom Phone=18, Desktop=20}}" />
+                  </Grid>
+                </Grid>
+              </ViewCell.View>
+            </ViewCell>
+          </DataTemplate>
+        </local:CustomListView.ItemTemplate>
+      </local:CustomListView>
+    </Grid>
+  </sample:SampleView.Content>
+
+    <sample:SampleView.PropertyView>
+    <Grid ColumnSpacing="10" Padding="20">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <ContentView Padding="10,0,0,0">
+        <Label x:Name="filterlabel"
+               Grid.Row="0"
+               Grid.Column="0"
+               FontSize="15"
+               HorizontalOptions="Start"
+               HorizontalTextAlignment="Center"
+               Text="Filter Options"
+               VerticalOptions="Center" />
+      </ContentView>
+
+      <Picker x:Name="ColumnsList"
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       HorizontalOptions="Start"
+                       SelectedIndexChanged="OnColumnsSelectionChanged"
+                       WidthRequest="200">
+        <Picker.Items>
+          <x:String>All Columns</x:String>
+          <x:String>BookID</x:String>
+          <x:String>CustomerName</x:String>
+          <x:String>BookName</x:String>
+          <x:String>Price</x:String>
+        </Picker.Items>
+      </Picker>
+
+      <Picker x:Name="OptionsList"
+                       Grid.Row="1"
+                       Grid.Column="1"
+                       HorizontalOptions="Start"
+                       IsVisible="False"
+                       SelectedIndexChanged="OnFilterOptionsChanged"
+                       WidthRequest="200">
+        <Picker.Items>
+          <x:String>Equals</x:String>
+          <x:String>NotEquals</x:String>
+          <x:String>Contains</x:String>
+        </Picker.Items>
+      </Picker>
+
+    </Grid>
+  </sample:SampleView.PropertyView>
+
+</sample:SampleView>

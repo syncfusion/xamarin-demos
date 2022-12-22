@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingBottom="2dp"
+    android:background="#f6f6f6">
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#f6f6f6"
+        android:rowCount="1"
+        android:columnCount="2">
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:orientation="vertical"
+            android:background="#f6f6f6"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="50dp"
+            android:rowCount="2">
+            <TextView
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18px"
+                android:id="@+id/starttime"
+                android:textColor="#000000"
+                android:background="#f6f6f6"
+                android:layout_weight="1" />
+            <TextView
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/endtime"
+                android:textSize="18px"
+                android:textColor="#000000"
+                android:background="#f6f6f6"
+                android:layout_weight="1" />
+        </GridLayout>
+        <TextView
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24px"
+            android:id="@+id/subject"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="50dp"
+            android:textColor="#000000"
+            android:background="#f6f6f6"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1" />
+    </GridLayout>
+</GridLayout>

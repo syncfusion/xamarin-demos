@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<core:SampleView xmlns="http://xamarin.com/schemas/2014/forms" 
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  x:Class="SampleBrowser.Cards.CardLayout" 
+                  xmlns:core="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" 
+                  xmlns:card="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
+                  xmlns:local="clr-namespace:SampleBrowser.Cards"
+                  xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+                  xmlns:segmentCollection="clr-namespace:System.Collections.Generic;assembly=System.Collections"
+                  BackgroundColor="#F0F0F0">
+
+    <core:SampleView.Content>
+        <ScrollView>
+            <Grid>
+                <Grid VerticalOptions="Center">
+                    <card:SfCardLayout x:Name="cardLayout" BackgroundColor="#F0F0F0"
+                                       SwipeDirection="Left" HeightRequest="500">
+                        <card:SfCardView>
+                            <local:CardViewContent />
+                        </card:SfCardView>
+
+                        <card:SfCardView>
+                            <local:CardViewContent />
+                        </card:SfCardView>
+
+                        <card:SfCardView>
+                            <local:CardViewContent />
+                        </card:SfCardView>
+
+                        <card:SfCardView>
+                            <local:CardViewContent />
+                        </card:SfCardView>
+
+                        <card:SfCardView>
+                            <local:CardViewContent />
+                        </card:SfCardView>
+                    </card:SfCardLayout>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </core:SampleView.Content>
+
+    <core:SampleView.PropertyView>
+        <StackLayout x:Name="stackLayout">
+            <StackLayout.Resources>
+                <Color x:Key="primaryColor">#007DE6</Color>
+                <Color x:Key="primaryTextColor">#FFFFFF</Color>
+                <OnIdiom x:Key="Width" x:TypeArguments="x:Double" Phone="-1" Tablet="200" Desktop="200"/>
+
+                <Style TargetType="buttons:SfSegmentedControl">
+                    <Setter Property="FontSize" Value="15"/>
+                    <Setter Property="VerticalOptions" Value="Center"/>
+                    <Setter Property="HorizontalOptions" Value="Start"/>
+                    <Setter Property="SegmentHeight" Value="30"/>
+                    <Setter Property="HeightRequest" Value="30"/>
+                    <Setter Property="WidthRequest" Value="{StaticResource Width}"/>
+                    <Setter Property="Margin" Value="0,0,0,15"/>
+                </Style>
+            </StackLayout.Resources>
+
+            <Label x:Name="paddingLabel" VerticalOptions="Center" Text="Padding : 10" />
+            
+            <Slider x:Name="Slider" VerticalOptions="Center" ValueChanged="OnPaddingChanged"
+                    Minimum="0" Maximum="10" Value="10" MaximumTrackColor="LightBlue" MinimumTrackColor="DarkBlue" />
+            
+            <Label Text="Swiping Direction" VerticalOptions="Center"/>
+
+            <buttons:SfSegmentedControl SelectionChanged="OnSelectionChanged">
+                <segmentCollection:List x:TypeArguments="buttons:SfSegmentItem">
+                    <buttons:SfSegmentItem Text="Left" />
+                    <buttons:SfSegmentItem Text="Right" />
+                </segmentCollection:List>
+            </buttons:SfSegmentedControl>
+        </StackLayout>
+    </core:SampleView.PropertyView>
+</core:SampleView>

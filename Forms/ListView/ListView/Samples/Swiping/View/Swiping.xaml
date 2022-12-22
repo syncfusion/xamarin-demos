@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfListView.Swiping"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.SfListView"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
+    <sample:SampleView.Resources>
+        <ResourceDictionary>
+            <local:SwipingBoolToImageConverter x:Key="BoolToImageConverter"/>
+            <local:SwipeStartConverter x:Key="SwipeStartedEventArgs"/>
+            <local:SwipeEndConverter x:Key="SwipeEndedEventArgs"/>
+            <local:ImageColorConverter x:Key="ImageColorConverter"/>
+            <DataTemplate x:Name="HeaderTemplate" x:Key="HeaderTemplate">
+                <Grid BackgroundColor="#4CA1FE" HeightRequest="45">
+                    <Label LineBreakMode="NoWrap"
+                 Margin="10,0,0,0" Text="Inbox" FontAttributes="Bold"
+                 FontSize="18" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Name="ItemTemplate"  x:Key="ItemTemplate">
+                <Grid x:Name="grid" BackgroundColor="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="1" />
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Grid Margin="5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <Label LineBreakMode="NoWrap"
+                     TextColor="#474747"
+                     FontAttributes="Bold"
+                     Text="{Binding Title}"
+                                   FontSize="{OnPlatform Android={OnIdiom Phone=17, Tablet=19}, iOS={OnIdiom Phone=18, Tablet=20}, UWP={OnIdiom Phone=18, Tablet=20, Desktop=20}, macOS=20, WPF=20}"/>
+                            <Label LineBreakMode="NoWrap"
+                     TextColor="#474747"
+                     Grid.Row="1"
+                     Text="{Binding Subject}"
+                               FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=16}, iOS={OnIdiom Phone=14, Tablet=16}, macOS=16, UWP={OnIdiom Phone=16, Tablet=20, Desktop=20}, WPF=20}" />
+                            <Label TextColor="#474747"
+                       Grid.Row="2"
+                     LineBreakMode="NoWrap"
+                     Text="{Binding Description}"
+                               FontSize="{OnPlatform Android={OnIdiom Phone=12, Tablet=14}, iOS={OnIdiom Phone=12, Tablet=14}, macOS=14, UWP={OnIdiom Phone=12, Tablet=12, Desktop=20}, WPF=20}" />
+                        </Grid>
+                        <Grid Grid.Column="1" Padding="5,10,5,10" HorizontalOptions="End">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="30" />
+                            </Grid.RowDefinitions>
+                            <Label TextColor="#474747"
+                     LineBreakMode="NoWrap"
+                     Text="{Binding Date}"
+                               FontSize="{OnPlatform Android={OnIdiom Phone=12, Tablet=14}, iOS={OnIdiom Phone=12, Tablet=14}, macOS=14, UWP={OnIdiom Phone=12, Tablet=12, Desktop=20}, WPF=20}" />
+                            <Label x:Name="NormalImage" Grid.Row="1" HorizontalOptions="Center" FontSize="{OnPlatform Android=Large, iOS=Large, macOS=Large, UWP=Medium}"
+                     HeightRequest="35" Text="{Binding Path=IsFavorite, Converter={StaticResource BoolToImageConverter}}"
+                     WidthRequest="35" TextColor="{Binding IsFavorite, Converter={StaticResource ImageColorConverter}}" FontFamily="{OnPlatform iOS=Sync FontIcons, macOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"
+                     VerticalOptions="Center"/>
+                        </Grid>
+                    </Grid>
+                    <StackLayout Grid.Row="1" BackgroundColor="#E4E4E4" HeightRequest="1"/>
+                </Grid>
+            </DataTemplate>
+        </ResourceDictionary>
+    </sample:SampleView.Resources>
+
+    <sample:SampleView.Content>
+        <sync:SfListView x:Name="listView" ItemsSource="{Binding InboxInfo}"
+                     ItemTemplate="{StaticResource ItemTemplate}"
+                     HeaderTemplate="{StaticResource HeaderTemplate}"
+                     AllowSwiping="True"
+                     SelectionMode="None"
+                     IsStickyHeader="True"
+                         ItemSize="{OnIdiom Default=100, Desktop=110}"
+                         SwipeOffset="{OnIdiom Default=200, Phone=100}"
+                         SwipeThreshold="{OnIdiom Default=100, Phone=50}">
+            <sync:SfListView.Behaviors>
+                <local:ListViewSwipingBehavior/>
+                <local:EventToCommandBehavior EventName="SwipeStarted" 
+                                        Command="{Binding SwipeStartedCommand}" 
+                                        Converter="{StaticResource SwipeStartedEventArgs}" />
+                <local:EventToCommandBehavior EventName="SwipeEnded" 
+                                        Command="{Binding SwipeEndedCommand}" 
+                                        Converter="{StaticResource SwipeEndedEventArgs}" />
+            </sync:SfListView.Behaviors>
+            <sync:SfListView.LeftSwipeTemplate>
+                <DataTemplate x:Name="LeftSwipeTemplate">
+                    <Grid BackgroundColor="#009EDA" HorizontalOptions="Fill" VerticalOptions="Fill">
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Path=BindingContext.FavoritesImageCommand, Source={x:Reference listView}}" 
+                                                  CommandParameter="{Binding .}"/>
+                        </Grid.GestureRecognizers>
+                        <Grid VerticalOptions="Center" HorizontalOptions="Center">
+                            <Label Grid.Column="0" Margin="10,5,0,0"
+                     Grid.Row="0" Text="&#xe758;" TextColor="White" FontFamily="{OnPlatform iOS=Sync FontIcons, macOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"
+                     BackgroundColor="Transparent" FontSize="{OnPlatform Android=Large, iOS=Large, macOS=Large, UWP=Medium}"
+                     HeightRequest="28"
+                     WidthRequest="28"/>
+                        </Grid>
+                    </Grid>
+                </DataTemplate>
+            </sync:SfListView.LeftSwipeTemplate>
+            <sync:SfListView.RightSwipeTemplate>
+                <DataTemplate x:Name="RightSwipeTemplate">
+                    <Grid BackgroundColor="#DC595F" HorizontalOptions="Fill" VerticalOptions="Fill">
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Path=BindingContext.DeleteImageCommand, Source={x:Reference listView}}" 
+                                                  CommandParameter="{Binding .}"/>
+                        </Grid.GestureRecognizers>
+                        <Grid VerticalOptions="Center" HorizontalOptions="Center">
+                            <Label Grid.Column="0"
+                     Grid.Row="0" Margin="10,5,0,0"
+                     HeightRequest="28" Text="&#xe735;" TextColor="White" FontSize="{OnPlatform Android=Large, iOS=Large, macOS=Large, UWP=Medium}" FontFamily="{OnPlatform iOS=Sync FontIcons, macOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"
+                     WidthRequest="28"
+                     BackgroundColor="Transparent"/>
+                        </Grid>
+                    </Grid>
+                </DataTemplate>
+            </sync:SfListView.RightSwipeTemplate>
+        </sync:SfListView>
+    </sample:SampleView.Content>
+</sample:SampleView>

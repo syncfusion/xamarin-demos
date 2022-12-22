@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Samples>  
+    <Sample  Title = "Codabar" Name = "Codabar" />
+    <Sample  Title = "DataMatrix" Name = "DataMatrix" />
+    <Sample  Title = "QRCode" Name = "QRCode" />
+</Samples>

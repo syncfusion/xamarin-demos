@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:imageeditor="clr-namespace:Syncfusion.SfImageEditor.XForms;assembly=Syncfusion.SfImageEditor.XForms" xmlns:customControls="clr-namespace:SampleBrowser.SfImageEditor.CustomControls" x:Class="SampleBrowser.SfImageEditor.SerializationContentPage">
+    <ContentPage.Content>
+        <Grid x:Name="mainGrid">
+            <Grid>
+                <imageeditor:SfImageEditor BackgroundColor="White" x:Name="imageEditor">
+                </imageeditor:SfImageEditor>
+            </Grid>
+            <Grid BackgroundColor="Black" x:Name="grid" Opacity="0.5" IsVisible="false">
+            </Grid>
+            <StackLayout x:Name="popup" Margin="0,0,0,200" Padding="10,10,10,0" HeightRequest="150" WidthRequest="300" VerticalOptions="Center" HorizontalOptions="Center" Spacing="5" IsVisible="false" BackgroundColor="White">
+                <Label Text="Save as"  BackgroundColor="Transparent" FontSize="25" HorizontalOptions="FillAndExpand" VerticalOptions="Center" TextColor="Gray" />
+                <Entry x:Name="entry" Text="" Placeholder="eg..Item" TextColor="Black" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" />
+                <StackLayout HeightRequest="40" BackgroundColor="Transparent"  HorizontalOptions="CenterAndExpand" Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                    <customControls:RoundedColorButton Clicked="Ok_Clicked"  HorizontalOptions="StartAndExpand" WidthRequest="150"  FontSize="15" Text="Save" TextColor="White"  BackgroundColor="#1E90FF" BorderRadius="1" HeightRequest="25" />
+                    <customControls:RoundedColorButton Clicked="Cancel_Clicked" HorizontalOptions="StartAndExpand" WidthRequest="150" FontSize="15" Text="Cancel" TextColor="White"  BackgroundColor="#808080" BorderRadius="1" HeightRequest="25" />
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
