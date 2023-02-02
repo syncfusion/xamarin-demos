@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" 
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:samplelocal="clr-namespace:SampleBrowser.SfCalendar" 
+                  xmlns:CalendarSample="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms"
+                  x:Class="SampleBrowser.SfCalendar.CalendarCustomization">
+    <local:SampleView.Content>
+        <Grid x:Name="grid">
+            <CalendarSample:SfCalendar x:Name="calendar"
+                                   BackgroundColor="White" 
+                                   VerticalOptions="FillAndExpand" 
+                                   HorizontalOptions="FillAndExpand">
+                <CalendarSample:SfCalendar.MonthViewSettings>
+                    <CalendarSample:MonthViewSettings DateSelectionColor="Transparent" TodaySelectionBackgroundColor="Transparent">
+                        <CalendarSample:MonthViewSettings.CellTemplate>
+                            <DataTemplate>
+                                <Grid BackgroundColor="White" 
+                                  HorizontalOptions="Center">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="2*" />
+                                    </Grid.RowDefinitions>
+                                    <Label Text="{Binding Date.Day}" 
+                                       HorizontalTextAlignment="Center"
+                                       IsVisible="{Binding IsCurrentMonth}" 
+                                       VerticalTextAlignment="Center" 
+                                       VerticalOptions="FillAndExpand" 
+                                       HorizontalOptions="FillAndExpand" 
+                                       TextColor="Black" 
+                                       FontAttributes="None" 
+                                       FontSize="10" />
+                                    <Grid Grid.Row="1" 
+                                      IsVisible="{Binding IsCurrentMonth}">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="2*" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <Grid Grid.Row="1" 
+                                          HorizontalOptions="Center" 
+                                          VerticalOptions="Center">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <Label Text="{Binding Celcius}" 
+                                               HorizontalTextAlignment="End" 
+                                               VerticalTextAlignment="Center"
+                                               VerticalOptions="FillAndExpand" 
+                                               HorizontalOptions="FillAndExpand" 
+                                               TextColor="Black" 
+                                               FontAttributes="None" 
+                                               FontSize="8" 
+                                               WidthRequest="20" 
+                                               HeightRequest="20" />
+                                            <Label Grid.Column="1" 
+                                               Text="C" 
+                                               FontSize="8" />
+                                        </Grid>
+                                        <Image Source="{Binding Image}" 
+                                           WidthRequest="20" 
+                                           HeightRequest="20" 
+                                           HorizontalOptions="Center" 
+                                           VerticalOptions="Center" />
+                                    </Grid>
+                                </Grid>
+                            </DataTemplate>
+                        </CalendarSample:MonthViewSettings.CellTemplate>
+                    </CalendarSample:MonthViewSettings>
+                </CalendarSample:SfCalendar.MonthViewSettings>
+            </CalendarSample:SfCalendar>
+        </Grid>
+    </local:SampleView.Content>
+    <local:SampleView.Behaviors>
+        <samplelocal:CalendarCustomizationBehavior />
+    </local:SampleView.Behaviors>
+</local:SampleView>

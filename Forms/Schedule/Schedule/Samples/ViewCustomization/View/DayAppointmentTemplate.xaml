@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Button xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="SampleBrowser.SfSchedule.DayAppointmentTemplate" 
+    xmlns:samplelocal="clr-namespace:SampleBrowser.SfSchedule"
+    BackgroundColor="{Binding Color}" 
+    HorizontalOptions="FillAndExpand" 
+    VerticalOptions="FillAndExpand"
+    Text="{Binding Subject}" 
+    TextColor="White"
+    Image="{Binding Subject, Converter={StaticResource imageFormatConverter}}">
+    <Button.Resources>
+        <ResourceDictionary>
+            <samplelocal:ImageFormatConverter  x:Key ="imageFormatConverter" />
+        </ResourceDictionary>
+    </Button.Resources>
+</Button>

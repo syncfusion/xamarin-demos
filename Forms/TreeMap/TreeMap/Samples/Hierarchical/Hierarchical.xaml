@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfTreeMap.Hierarchical"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:tree="clr-namespace:Syncfusion.SfTreeMap.XForms;assembly=Syncfusion.SfTreeMap.XForms">
+
+    <local:SampleView.Content>
+
+        <tree:SfTreeMap  x:Name="TreeMap"  HorizontalOptions="FillAndExpand" 
+      VerticalOptions="FillAndExpand" WeightValuePath="Sales" ColorValuePath="Expense" BackgroundColor="White"   >
+
+            <tree:SfTreeMap.LeafItemSettings>
+
+                <tree:LeafItemSettings LabelPath="Name">
+
+                </tree:LeafItemSettings>
+            </tree:SfTreeMap.LeafItemSettings>
+
+            <tree:SfTreeMap.LeafItemColorMapping>
+                <tree:DesaturationColorMapping Color="#41B8C4" From="1" To=" 0.2">
+
+                </tree:DesaturationColorMapping>
+
+            </tree:SfTreeMap.LeafItemColorMapping>
+
+            <tree:SfTreeMap.Levels>
+
+                <tree:TreeMapHierarchicalLevel  ChildPadding="4" ChildBackground="White" ShowHeader = "true"  HeaderHeight = "20"  HeaderPath = "Name"  ChildPath = "RegionalSales" >
+                    <tree:TreeMapHierarchicalLevel.HeaderStyle>
+                        <tree:Style Color= "Black"/>
+                    </tree:TreeMapHierarchicalLevel.HeaderStyle>
+
+
+                </tree:TreeMapHierarchicalLevel>
+
+            </tree:SfTreeMap.Levels>
+
+        </tree:SfTreeMap>
+    </local:SampleView.Content>
+</local:SampleView>

@@ -120,4 +120,4 @@ The Syncfusion item templates extension provides predefined UI designs for Xamar
 
 * To renew the subscription, click [here](https://www.syncfusion.com/sales/products?utm_source=github&utm_medium=listing) or contact our sales team at <salessupport@syncfusion.com>.
   
-<p>Copyright © 2001-2022 Syncfusion, Inc. Updated on 2022-12-22 at precisely 11:25:28 EST.</p> 
+<p>Copyright © 2001-2023 Syncfusion, Inc. Updated on 2023-02-02 at precisely 12:20:53 EST.</p> 

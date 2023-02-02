@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" 
+    xmlns:radialMenu="clr-namespace:Syncfusion.SfRadialMenu.XForms;assembly=Syncfusion.SfRadialMenu.XForms" 
+    x:Class="SampleBrowser.SfRadialMenu.SlotIndex_RadialMenu"  
+    xmlns:icon="clr-namespace:SampleBrowser.SfRadialMenu">
+  <local:SampleView.Resources>
+  <ResourceDictionary>
+    <icon:SlotIndexFontConversion x:Key="SlotIndexFontConversion" />
+  </ResourceDictionary>
+  </local:SampleView.Resources>
+    <local:SampleView.Content>
+        <Grid Padding="5,5,5,0">
+      <Grid.Resources>
+           <ResourceDictionary>
+             <local:ImagePathConverter x:Key="ImagePathConverter" />
+           </ResourceDictionary>
+         </Grid.Resources>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout Padding="2,5,5,0" Grid.Row="0">
+                <Label Text="About Syncfusion" FontSize="16" FontAttributes="Bold" />
+                <Label x:Name="syncfusionText" FontSize="12" FontAttributes="None" FontFamily="Roboto" Text="Syncfusion is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application lifecycle. Syncfusion has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies." />
+            </StackLayout>
+            <Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <radialMenu:SfRadialMenu x:Name="radial_Menu" RimRadius="150" LayoutType="Custom" VisibleSegmentsCount="12" CenterButtonRadius="25" CenterButtonBackgroundColor="#7ac943" RimColor="Transparent" SelectionColor="Transparent" CenterButtonText="" CenterButtonTextColor="White"
+                        IsDragEnabled="false" CenterButtonFontSize="18" EnableRotation="false" EnableCenterButtonAnimation="false" SeparatorThickness="0" AnimationDuration="10" CenterButtonFontFamily="{Binding Converter={StaticResource SlotIndexFontConversion}}" >
+                        <!--<radialMenu:SfRadialMenu.CenterButtonFontFamily>-->
+              <!--<OnPlatform x:TypeArguments="x:String" iOS="Social" Android="radialmenu_socialicons.ttf" WinPhone="radialmenu_socialicons.ttf#social_icons" />-->
+                        <!--</radialMenu:SfRadialMenu.CenterButtonFontFamily>-->
+                        <radialMenu:SfRadialMenu.Items>
+                            <radialMenu:SfRadialMenuItem ItemWidth="40" ItemHeight="40" SegmentIndex="0" >
+                <radialMenu:SfRadialMenuItem.View>
+                                    <Grid HeightRequest="40" WidthRequest="40">
+                                        <Image Source="NavyBlue.jpg" />
+                                        <Label Text="" x:Name="facebook" FontSize="20" HeightRequest="30" WidthRequest="30" XAlign="Center" YAlign="Center" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"
+                                            HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontFamily="{Binding Converter={StaticResource SlotIndexFontConversion},ConverterParameter=Social_Icons}" >
+                                        
+                                        </Label>
+                                    </Grid>
+                                </radialMenu:SfRadialMenuItem.View>
+                            </radialMenu:SfRadialMenuItem>
+                            <radialMenu:SfRadialMenuItem  ItemHeight="40" ItemWidth="40"  TextColor="White" SegmentIndex="1">
+                <radialMenu:SfRadialMenuItem.View>
+                                    <Grid HeightRequest="40" WidthRequest="40">
+                                        <Image Source="Saffron.jpg" />
+                                        <Label Text="" x:Name="google" FontSize="20" HeightRequest="30" WidthRequest="30" XAlign="Center" YAlign="Center" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"
+                                            HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontFamily="{Binding Converter={StaticResource SlotIndexFontConversion},ConverterParameter=Social_Icons}">
+                                        
+                                        </Label>
+                                    </Grid>
+                                </radialMenu:SfRadialMenuItem.View>
+                            </radialMenu:SfRadialMenuItem>
+                            <radialMenu:SfRadialMenuItem  ItemHeight="40" ItemWidth="40"  TextColor="White" SegmentIndex="2">
+                <radialMenu:SfRadialMenuItem.View>
+                                    <Grid HeightRequest="40" WidthRequest="40">
+                                        <Image Source="SkyBlue.png" />
+                                        <Label Text="" x:Name="twitter" FontSize="20" HeightRequest="30" WidthRequest="30" XAlign="Center" YAlign="Center" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"
+                                            HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontFamily="{Binding Converter={StaticResource SlotIndexFontConversion},ConverterParameter=Social_Icons}">
+                                            
+                                        </Label>
+                                    </Grid>
+                                </radialMenu:SfRadialMenuItem.View>
+                            </radialMenu:SfRadialMenuItem>
+                            <radialMenu:SfRadialMenuItem ItemHeight="40" ItemWidth="40"  TextColor="White" SegmentIndex="3">
+                <radialMenu:SfRadialMenuItem.View>
+                                    <Grid HeightRequest="40" WidthRequest="40">
+                                        <Image Source="SteelBlue.jpg" />
+                                        <Label Text="" x:Name="linkedIn" FontSize="20" HeightRequest="30" WidthRequest="30" XAlign="Center" YAlign="Center" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"
+                                            HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontFamily="{Binding Converter={StaticResource SlotIndexFontConversion},ConverterParameter=Social_Icons}">
+
+
+                                        </Label>
+                                    </Grid>
+                                </radialMenu:SfRadialMenuItem.View>
+                            </radialMenu:SfRadialMenuItem>
+                        </radialMenu:SfRadialMenu.Items>
+                    </radialMenu:SfRadialMenu>
+                </Grid>
+            </Grid>
+        </Grid>
+    </local:SampleView.Content>
+</local:SampleView>
