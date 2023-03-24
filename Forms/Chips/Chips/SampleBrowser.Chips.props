@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <ItemGroup>  
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\GettingStarted.xaml.cs">
+            <Link>Samples\Chips\Samples\GettingStarted\GettingStarted.xaml.cs</Link>
+            <DependentUpon>GettingStarted.xaml</DependentUpon>
+        </Compile>
+
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\ChipTypes\ChipTypes.xaml.cs">
+            <Link>Samples\Chips\Samples\ChipTypes\ChipTypes.xaml.cs</Link>
+            <DependentUpon>ChipTypes.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml.cs">
+            <Link>Samples\Chips\Samples\Themes\Themes.xaml.cs</Link>
+            <DependentUpon>Themes.xaml</DependentUpon>
+        </Compile>
+
+
+        <Compile Include="$(MSBuildThisFileDirectory)\Helpers\Behaviors.cs">
+            <Link>Samples\Chips\Helpers\Behaviors.cs</Link>
+        </Compile>
+
+        <Compile Include="$(MSBuildThisFileDirectory)\ViewModel\ViewModel.cs">
+            <Link>Samples\Chips\ViewModel\ViewModel.cs</Link>
+        </Compile>
+
+           <Compile Include="$(MSBuildThisFileDirectory)\Converters\StringToColorConverter.cs">
+            <Link>Samples\Chips\Converters\StringToColorConverter.cs</Link>
+        </Compile>
+
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+            <Link>Samples\Chips\SamplesList\SamplesList.xml</Link>
+        </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\GettingStarted.xaml">
+            <Link>Samples\Chips\Samples\GettingStarted\GettingStarted.xaml</Link>
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ChipTypes\ChipTypes.xaml">
+            <Link>Samples\Chips\Samples\ChipTypes\ChipTypes.xaml</Link>
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+    
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml">
+            <Link>Samples\Chips\Samples\Themes\Themes.xaml</Link>
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+    </ItemGroup>
+</Project>

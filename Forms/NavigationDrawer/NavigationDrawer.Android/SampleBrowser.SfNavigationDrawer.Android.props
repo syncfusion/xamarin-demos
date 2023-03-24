@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\navigation.ttf" >
+	<Link>Assets\navigation.ttf</Link>
+	</AndroidAsset>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\segoe-mdl2-assets.ttf" >
+	<Link>Assets\segoe-mdl2-assets.ttf</Link>
+	</AndroidAsset>
+  </ItemGroup>
+</Project>

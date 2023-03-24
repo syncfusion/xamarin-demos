@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+     <Compile Include="$(MSBuildThisFileDirectory)\ButtonRenderer.cs" > 
+	 <Link>Picker\ButtonRenderer.cs</Link> 
+	 </Compile> 
+     <Compile Include="$(MSBuildThisFileDirectory)\CustomEntryRenderer.cs" > 
+	 <Link>Picker\CustomEntryRenderer.cs</Link> 
+	</Compile> 
+    </ItemGroup>
+ <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\date.png" >
+	<Link>date.png</Link>
+	</Content>
+    <Content Include="$(MSBuildThisFileDirectory)\picker_location.png" >
+	<Link>picker_location.png</Link>
+	</Content>
+  <Content Include="$(MSBuildThisFileDirectory)\timeold.png" >
+	<Link>timeold.png</Link>
+	</Content>
+  </ItemGroup>
+  
+</Project>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+   <Compile Include="$(MSBuildThisFileDirectory)\Renderer\Renderer.cs" >
+		<Link>Renderer\Renderer.cs</Link>
+	</Compile>
+	
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\Segmented.ttf" >
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		<Link>Assets\Segmented.ttf</Link>
+	</AndroidAsset>
+	
+	<AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\SegmentIcon.ttf" >
+	      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		<Link>Assets\SegmentIcon.ttf</Link>
+	</AndroidAsset>
+	
+	<AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\Segoe_MDL2_Assets.ttf" >
+	      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		<Link>Assets\Segoe_MDL2_Assets.ttf</Link>
+	</AndroidAsset>
+  </ItemGroup>
+ 
+  <ItemGroup>
+   
+	<AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\cancelsearch.png" >
+		<Link>Resources\drawable\cancelsearch.png</Link>
+	</AndroidResource>
+  </ItemGroup>
+</Project>

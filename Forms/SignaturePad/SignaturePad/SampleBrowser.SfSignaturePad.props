@@ -1,0 +1,33 @@
+<Project>
+<ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\SignaturePadGettingStarted\View\SignaturePadGettingStarted.xaml">
+     <Link>Samples\SignaturePad\SignaturePadGettingStarted\View\SignaturePadGettingStarted.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+</ItemGroup>
+<ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\SignaturePadGettingStarted\View\SignaturePadGettingStarted.xaml.cs">
+	<Link>Samples\SignaturePad\SignaturePadGettingStarted\View\SignaturePadGettingStarted.xaml.cs</Link>
+      <DependentUpon>SignaturePadGettingStarted.xaml</DependentUpon>
+    </Compile>
+</ItemGroup>
+<ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\SignaturePadGettingStarted\View\SignatureImagePage.xaml">
+     <Link>Samples\SignaturePad\SignaturePadGettingStarted\View\SignatureImagePage.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+ </ItemGroup>
+    <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\SignaturePadGettingStarted\View\SignatureImagePage.xaml.cs">
+	<Link>Samples\SignaturePad\SignaturePadGettingStarted\View\SignatureImagePage.xaml.cs</Link>
+      <DependentUpon>SignatureImagePage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml" >
+	  <Link>Samples\SignaturePad\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

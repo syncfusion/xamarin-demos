@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+ 
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Custom.dbf">
+	<Link>Resources\Custom.dbf</Link>
+	</BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Custom.shp">	
+	<Link>Resources\Custom.shp</Link>
+	</BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Custom.shx">
+	<Link>Resources\Custom.shx</Link>
+	</BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\usa_state.dbf">
+	<Link>Resources\usa_state.dbf</Link>
+	</BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\usa_state.shp">
+	<Link>Resources\usa_state.shp</Link>
+	</BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\world1.dbf">
+	<Link>Resources\world1.dbf</Link>
+	</BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\world1.shp">
+	<Link>Resources\world1.shp</Link>
+	</BundleResource>
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\asia.dbf">
+	<Link>Resources\asia.dbf</Link>
+	</BundleResource>
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\asia.shp">
+	<Link>Resources\asia.shp</Link>
+	</BundleResource>
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\africa.dbf">
+	<Link>Resources\africa.dbf</Link>
+	</BundleResource>
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\africa.shp">
+	<Link>Resources\africa.shp</Link>
+	</BundleResource>
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\australia.dbf">
+	<Link>Resources\australia.dbf</Link>
+	</BundleResource>
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\australia.shp">
+	<Link>Resources\australia.shp</Link>
+	</BundleResource>
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\continent.dbf">
+	<Link>Resources\continent.dbf</Link>
+	</BundleResource>
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\continent.shp">
+	<Link>Resources\continent.shp</Link>
+	</BundleResource>
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\europe.dbf">
+	<Link>Resources\europe.dbf</Link>
+	</BundleResource>
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\europe.shp">
+	<Link>Resources\europe.shp</Link>
+	</BundleResource>
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\north-america.dbf">
+	<Link>Resources\north-america.dbf</Link>
+	</BundleResource>
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\north-america.shp">
+	<Link>Resources\north-america.shp</Link>
+	</BundleResource>
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\south-america.dbf">
+	<Link>Resources\south-america.dbf</Link>
+	</BundleResource>
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\south-america.shp">
+	<Link>Resources\south-america.shp</Link>
+	</BundleResource>
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\world-map.dbf">
+	<Link>Resources\world-map.dbf</Link>
+	</BundleResource>
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\world-map.shp">
+	<Link>Resources\world-map.shp</Link>
+	</BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\river.dbf">
+      <Link>Resources\river.dbf</Link>
+    </BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\river.shp">
+      <Link>Resources\river.shp</Link>
+    </BundleResource>
+  </ItemGroup>
+</Project>

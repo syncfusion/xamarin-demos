@@ -1,0 +1,70 @@
+<Project>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+      <Link>Samples\Diagram\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+    <Compile Include="$(MSBuildThisFileDirectory)\IText.cs">
+      <Link>Samples\Diagram\IText.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DataModel.cs">
+      <Link>Samples\Diagram\Samples\DataModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DiagramUtility.cs">
+      <Link>Samples\Diagram\Samples\DiagramUtility.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\FlowDiagram\FlowDiagram.xaml.cs">
+      <Link>Samples\Diagram\Samples\FlowDiagram\FlowDiagram.xaml.cs</Link>
+	  <DependentUpon>FlowDiagram.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\NodeContent\NodeContent.xaml.cs">
+      <Link>Samples\Diagram\Samples\NodeContent\NodeContent.xaml.cs</Link>
+	  <DependentUpon>NodeContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\OrganizationChart\OrganizationChart.xaml.cs">
+      <Link>Samples\Diagram\Samples\OrganizationChart\OrganizationChart.xaml.cs</Link>
+	  <DependentUpon>OrganizationChart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\MindMap\AddNote.xaml.cs">
+      <Link>Samples\Diagram\Samples\MindMap\AddNote.xaml.cs</Link>
+	  <DependentUpon>AddNote.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\MindMap\MindMap.xaml.cs">
+      <Link>Samples\Diagram\Samples\MindMap\MindMap.xaml.cs</Link>
+	  <DependentUpon>MindMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Connectors\Connectors.xaml.cs">
+      <Link>Samples\Diagram\Samples\Connectors\Connectors.xaml.cs</Link>
+	  <DependentUpon>Connectors.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\FlowDiagram\FlowDiagram.xaml">
+      <Link>Samples\Diagram\Samples\FlowDiagram\FlowDiagram.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\NodeContent\NodeContent.xaml">
+      <Link>Samples\Diagram\Samples\NodeContent\NodeContent.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\OrganizationChart\OrganizationChart.xaml">
+      <Link>Samples\Diagram\Samples\OrganizationChart\OrganizationChart.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\MindMap\AddNote.xaml">
+      <Link>Samples\Diagram\Samples\MindMap\AddNote.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\MindMap\MindMap.xaml">
+      <Link>Samples\Diagram\Samples\MindMap\MindMap.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Connectors\Connectors.xaml">
+      <Link>Samples\Diagram\Samples\Connectors\Connectors.xaml</Link>
+	  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

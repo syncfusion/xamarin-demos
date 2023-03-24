@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfPullToRefresh.PullToRefreshTemplate"
+             xmlns:local="clr-namespace:SampleBrowser.SfPullToRefresh"
+             xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:pulltoRefresh="clr-namespace:Syncfusion.SfPullToRefresh.XForms;assembly=Syncfusion.SfPullToRefresh.XForms"
+             xmlns:sfgrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms">
+
+    <sample:SampleView.Behaviors>
+        <local:PullToRefreshTemplateBehaviour />
+    </sample:SampleView.Behaviors>
+
+    <sample:SampleView.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="progressStrokeWidth"
+                        x:TypeArguments="x:Double">
+                <On Platform="UWP,iOS" Value="2" />
+                <On Platform="Android">
+                    <OnIdiom x:TypeArguments="x:Double">
+                        <OnIdiom.Phone>8</OnIdiom.Phone>
+                        <OnIdiom.Tablet>3</OnIdiom.Tablet>
+                    </OnIdiom>
+                </On>
+            </OnPlatform>
+
+            <OnPlatform x:Key="cellTextSize"
+                        x:TypeArguments="x:Double">
+                <On Platform="UWP,iOS" Value="12" />
+                <On Platform="Android" Value="14" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="minimumWidth"
+                        x:TypeArguments="x:Double">
+                <On Platform="iOS">
+
+                    <OnIdiom x:TypeArguments="x:Double">
+                        <OnIdiom.Phone>90</OnIdiom.Phone>
+                        <OnIdiom.Tablet>20</OnIdiom.Tablet>
+                    </OnIdiom>
+                </On>
+            </OnPlatform>
+
+            <OnPlatform x:Key="width"
+                        x:TypeArguments="x:Double">
+                <On Platform="Android">
+                    <OnIdiom x:TypeArguments="x:Double">
+                        <OnIdiom.Phone>0</OnIdiom.Phone>
+                    </OnIdiom>
+                </On>
+            </OnPlatform>
+        </ResourceDictionary>
+    </sample:SampleView.Resources>
+    <sample:SampleView.Content>
+        <Grid RowSpacing="0" ColumnSpacing="0" Padding="0" Margin="0">
+            <pulltoRefresh:SfPullToRefresh x:Name="pullToRefresh"
+                                           RefreshContentHeight="50"
+                                           RefreshContentThreshold="30"
+                                           PullingThreshold="150"                                          
+                                           RefreshContentWidth="50"
+                                           ProgressStrokeWidth="{StaticResource progressStrokeWidth }"
+
+                                           TransitionMode="SlideOnTop"
+                                           IsRefreshing="False">
+                <pulltoRefresh:SfPullToRefresh.PullableContent>
+                    <sfgrid:SfDataGrid x:Name="dataGrid"
+                                       AllowSorting="True"
+                                       AutoGenerateColumns="false"
+                                       ColumnSizer="Star"
+                                       HeaderRowHeight="48"
+                                       RowHeight="48"
+                                       VerticalOverScrollMode="None"
+                                       SelectionMode="Single">
+
+                        <sfgrid:SfDataGrid.Columns x:TypeArguments="sfgrid:Columns">
+
+                            <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                                   HeaderText="Order ID"
+                                                   HeaderTextAlignment="Start"
+                                                   LineBreakMode="TailTruncation"
+                                                   MappingName="OrderID"
+                                                   Padding="5,0,5,0"
+                                                   HeaderCellTextSize="{ StaticResource cellTextSize }"
+                                                   CellTextSize="{ StaticResource cellTextSize}"
+                                                   TextAlignment="End" />
+
+                            <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                                   HeaderText="Customer ID"
+                                                   HeaderTextAlignment="Start"
+                                                   LineBreakMode="TailTruncation"
+                                                   MappingName="EmployeeID"
+                                                   Padding="5,0,5,0"
+                                                   MinimumWidth="{StaticResource minimumWidth}"
+                                                   HeaderCellTextSize="{ StaticResource cellTextSize }"
+                                                   CellTextSize="{ StaticResource cellTextSize}"
+                                                   TextAlignment="End" />
+
+                            <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                                   HeaderText="Name"
+                                                   HeaderTextAlignment="Start"
+                                                   LineBreakMode="TailTruncation"
+                                                   MappingName="CustomerID"
+                                                   HeaderCellTextSize="{ StaticResource cellTextSize }"
+                                                   Padding="5, 0, 0, 0"
+                                                   TextAlignment="Start" />
+
+                            <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                                   HeaderText="City"
+                                                   HeaderTextAlignment="Start"
+                                                   LineBreakMode="TailTruncation"
+                                                   HeaderCellTextSize="{ StaticResource cellTextSize }"
+                                                   CellTextSize="{ StaticResource cellTextSize}"
+                                                   MappingName="ShipCity"
+                                                   Padding="5, 0, 0, 0"
+                                                   TextAlignment="Start" />
+
+                            <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                                   HeaderText="Country"
+                                                   HeaderTextAlignment="Start"
+                                                   LineBreakMode="TailTruncation"
+                                                   HeaderCellTextSize="{ StaticResource cellTextSize }"
+                                                   CellTextSize="{ StaticResource cellTextSize}"
+                                                   Width="{ StaticResource width}"
+                                                   MappingName="ShipCountry"
+                                                   Padding="5, 0, 0, 0"
+                                                   TextAlignment="Start" />
+                        </sfgrid:SfDataGrid.Columns>
+                    </sfgrid:SfDataGrid>
+                </pulltoRefresh:SfPullToRefresh.PullableContent>
+            </pulltoRefresh:SfPullToRefresh>
+        </Grid>
+    </sample:SampleView.Content>
+    <sample:SampleView.PropertyView>
+        <StackLayout Spacing="10">
+            <StackLayout Grid.Row="0" Orientation="Vertical">
+                <Label FontFamily="Helvetica"
+                       FontSize="16"
+                       HorizontalOptions="Start"
+                       Text="Transition Type"
+                       VerticalOptions="Center"
+                       WidthRequest="150" />
+                <local:PickerExt x:Name="transitionType"
+                                 Title="Choose"
+                                 IsEnabled="true"
+                                 WidthRequest="150" />
+            </StackLayout>
+        </StackLayout>
+    </sample:SampleView.PropertyView>
+
+
+</sample:SampleView>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                xmlns:linear="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"
+             x:Class="SampleBrowser.SfLinearGauge.Annotation">
+    <local:SampleView.Content BackgroundColor="White" >
+      <Grid BackgroundColor="White">
+        <linear:SfLinearGauge Orientation="OrientationHorizontal" BackgroundColor="White"  x:Name="gauge">
+          <linear:SfLinearGauge.Annotations>
+            <linear:LinearGaugeAnnotation  ScaleValue="15" >
+              <linear:LinearGaugeAnnotation.View>
+                   <Grid>
+                       <Image WidthRequest="30" HeightRequest="30">
+                        <Image.Source>
+                            <FontImageSource Glyph="&#xe719;" 
+                                                Color="White" 
+                                                FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" 
+                                                Size="30" />
+                        </Image.Source>
+                       </Image>
+                   </Grid>
+               </linear:LinearGaugeAnnotation.View>
+            </linear:LinearGaugeAnnotation>
+
+            <linear:LinearGaugeAnnotation ScaleValue="45" >
+              <linear:LinearGaugeAnnotation.View>
+                   <Grid>
+                       <Image WidthRequest="30" HeightRequest="30">
+                                <Image.Source>
+                                    <FontImageSource Glyph="&#xe715;" 
+                                                Color="White" 
+                                                FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" 
+                                                Size="30" />
+                                </Image.Source>
+                        </Image>
+                   </Grid>
+               </linear:LinearGaugeAnnotation.View>
+            </linear:LinearGaugeAnnotation>
+
+            <linear:LinearGaugeAnnotation ScaleValue="75" >
+              <linear:LinearGaugeAnnotation.View>
+                 <Grid>
+                     <Image WidthRequest="30" HeightRequest="30">
+                         <Image.Source>
+                             <FontImageSource Glyph="&#xe727;" 
+                                                Color="White" 
+                                                FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" 
+                                                Size="30" />
+                         </Image.Source>
+                      </Image>
+                 </Grid>
+               </linear:LinearGaugeAnnotation.View>
+            </linear:LinearGaugeAnnotation>
+
+            <linear:LinearGaugeAnnotation ScaleValue="15" >
+              <linear:LinearGaugeAnnotation.View>
+                <Grid>
+                    <Label Text="Low" TextColor="#30b32d"></Label>
+                </Grid>
+              </linear:LinearGaugeAnnotation.View>
+            </linear:LinearGaugeAnnotation>
+
+            <linear:LinearGaugeAnnotation ScaleValue="45" >
+              <linear:LinearGaugeAnnotation.View>
+                <Grid>
+                    <Label Text="Moderate" TextColor="#ffdd00"></Label>
+                </Grid>
+              </linear:LinearGaugeAnnotation.View>
+            </linear:LinearGaugeAnnotation>
+
+            <linear:LinearGaugeAnnotation ScaleValue="75" >
+              <linear:LinearGaugeAnnotation.View>
+                <Grid>
+                    <Label Text="High" TextColor="#f03e3e"></Label>
+                </Grid>
+              </linear:LinearGaugeAnnotation.View>
+            </linear:LinearGaugeAnnotation>
+
+            <linear:LinearGaugeAnnotation ScaleValue="45">
+              <linear:LinearGaugeAnnotation.View>
+                <Grid>
+                    <Label Text="CPU Utilization" FontSize="20" TextColor="Black" ></Label>
+                </Grid>
+              </linear:LinearGaugeAnnotation.View>
+            </linear:LinearGaugeAnnotation>
+
+          </linear:SfLinearGauge.Annotations>
+
+          <linear:SfLinearGauge.Scales>
+            <linear:LinearScale x:Name="scale" MinimumValue="0" MaximumValue="90"
+                                ShowLabels="False" ScaleBarColor="Transparent"
+                                Offset="-20"
+              MinorTicksPerInterval="1" ScaleBarSize="13" ScalePosition="BackWard" >
+              <linear:LinearScale.Ranges>
+                <linear:LinearRange x:Name="symbolRange" StartValue="0" Color="#30b32d" EndValue="30" StartWidth="60" EndWidth="60" />
+                <linear:LinearRange x:Name="symbolRange1" StartValue="30" Color="#ffdd00" EndValue="60" StartWidth="60" EndWidth="60" />
+                <linear:LinearRange x:Name="symbolRange2" StartValue="60" Color="#f03e3e" EndValue="90" StartWidth="60" EndWidth="60" />
+              </linear:LinearScale.Ranges>
+              <linear:LinearScale.Pointers>
+                <linear:SymbolPointer Color="Red" x:Name="symbolPointer" MarkerShape="InvertedTriangle" Value="35" Thickness="12" />
+              </linear:LinearScale.Pointers>
+              <linear:LinearScale.MajorTickSettings>
+                <linear:LinearTickSettings Thickness="1" Color="Transparent" Length="0"></linear:LinearTickSettings>
+              </linear:LinearScale.MajorTickSettings>
+              <linear:LinearScale.MinorTickSettings>
+                <linear:LinearTickSettings Thickness="1" Color="Transparent" Length="0"></linear:LinearTickSettings>
+              </linear:LinearScale.MinorTickSettings>
+            </linear:LinearScale>
+          </linear:SfLinearGauge.Scales>
+        </linear:SfLinearGauge>
+      </Grid>
+    
+
+    </local:SampleView.Content>
+ 
+</local:SampleView>
