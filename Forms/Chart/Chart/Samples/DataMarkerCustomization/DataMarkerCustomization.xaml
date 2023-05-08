@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.DataMarkerCustomization" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+  <local:SampleView.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="dataMarkerTemplate1">
+                <StackLayout Orientation="Horizontal" BackgroundColor="#00BDAE" Spacing="0" Padding="{OnPlatform Default='3', WPF='3,0,3,0'}" Margin="0">
+                    <Image Source="{OnPlatform Default='Male.png',WPF='pack://application:,,,/SampleBrowser.SfChart.WPF;component/Male.png'}" Margin="{OnPlatform WPF='0,5,0,0', Default='0'}" WidthRequest="12" HorizontalOptions="Fill" VerticalOptions="Fill">
+                        <Image.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double" Android="20" iOS="20" WinPhone="15">
+                                <On Platform="WPF" Value="20" />
+                            </OnPlatform>
+                        </Image.HeightRequest>
+                    </Image>
+                    <Label Text="{Binding Value, StringFormat='{0}M'}" VerticalOptions="Center" FontSize="10" TextColor="White"/>
+                </StackLayout>
+            </DataTemplate>
+            <DataTemplate x:Key="dataMarkerTemplate2">
+                <StackLayout Orientation="Horizontal" BackgroundColor="#404041" Spacing="0"  Padding="{OnPlatform Default='3', WPF='3,0,3,0'}" Margin="0">
+                    <Image Source="{OnPlatform Default='Female.png',WPF='pack://application:,,,/SampleBrowser.SfChart.WPF;component/Female.png'}" Margin="{OnPlatform Default='0', WPF='0,5,0,0'}" WidthRequest="12" HorizontalOptions="Fill" VerticalOptions="Fill">
+                        <Image.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double" Android="20" iOS="20" WinPhone="15">
+                                <On Platform="WPF" Value="20" />
+                            </OnPlatform>
+                        </Image.HeightRequest>
+                    </Image>
+                    <Label Text="{Binding Value, StringFormat='{0}M'}"  VerticalOptions="Center" FontSize="10" TextColor="White"/>
+                </StackLayout>
+      </DataTemplate>
+    </ResourceDictionary>
+  </local:SampleView.Resources>
+  <local:SampleView.Content>
+    <chart:SfChart x:Name="chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+      <chart:SfChart.Margin>
+        <OnPlatform x:TypeArguments="Thickness" WinPhone="0,10,15,0" />
+      </chart:SfChart.Margin>
+      <chart:SfChart.BindingContext>
+        <sampleBrowser:DataMarkerCustomizationViewModel />
+      </chart:SfChart.BindingContext>
+      <chart:SfChart.Title>
+        <chart:ChartTitle Text="Population of India (2013 - 2016)" />
+      </chart:SfChart.Title>
+      <chart:SfChart.Legend>
+        <chart:ChartLegend DockPosition="Bottom" IconWidth="14" IconHeight="14" />
+      </chart:SfChart.Legend>
+      <chart:SfChart.PrimaryAxis>
+        <chart:CategoryAxis ShowMajorGridLines="false" EdgeLabelsDrawingMode="Shift" PlotOffset="30" AxisLineOffset="30">
+        </chart:CategoryAxis>
+      </chart:SfChart.PrimaryAxis>
+      <chart:SfChart.SecondaryAxis>
+        <chart:NumericalAxis Maximum="1300" Minimum="900" Interval="80" EdgeLabelsDrawingMode="Shift">
+          <chart:NumericalAxis.LabelStyle>
+            <chart:ChartAxisLabelStyle x:Name="secondaryAxisLabelStyle"/>
+          </chart:NumericalAxis.LabelStyle>
+          <chart:NumericalAxis.Title>
+            <chart:ChartAxisTitle Text="Population">
+              <chart:ChartAxisTitle.Margin>
+                <OnPlatform x:TypeArguments="Thickness" Android="0,10,0,0" />
+              </chart:ChartAxisTitle.Margin>
+            </chart:ChartAxisTitle>
+          </chart:NumericalAxis.Title>
+        </chart:NumericalAxis>
+      </chart:SfChart.SecondaryAxis>
+      <chart:SfChart.ColorModel>
+        <chart:ChartColorModel Palette="Natural" />
+      </chart:SfChart.ColorModel>
+      <chart:SfChart.Series>
+        <chart:LineSeries x:Name="lineSeries1" ItemsSource="{Binding DataMarkerData1}" XBindingPath="Name" YBindingPath="Value" EnableAnimation="True" Label="Male">
+          <chart:LineSeries.DataMarker>
+            <chart:ChartDataMarker ShowLabel="True" ShowMarker="True" LabelTemplate="{StaticResource dataMarkerTemplate1}" MarkerColor="White" MarkerBorderWidth="2" MarkerBorderColor="#00BDAE" MarkerHeight="6" MarkerWidth="6">
+              <chart:ChartDataMarker.LabelStyle>
+                <chart:DataMarkerLabelStyle LabelPosition="Center">
+                  <chart:DataMarkerLabelStyle.OffsetY>
+                    <OnPlatform x:TypeArguments="x:Double" Android="-18" iOS="-18" WinPhone="-18"/>
+                  </chart:DataMarkerLabelStyle.OffsetY>
+                </chart:DataMarkerLabelStyle>
+              </chart:ChartDataMarker.LabelStyle>
+            </chart:ChartDataMarker>
+          </chart:LineSeries.DataMarker>
+        </chart:LineSeries>
+        <chart:LineSeries x:Name="lineSeries2" ItemsSource="{Binding DataMarkerData2}" XBindingPath="Name" YBindingPath="Value" EnableAnimation="True" Label="Female">
+          <chart:LineSeries.DataMarker>
+            <chart:ChartDataMarker ShowLabel="True" ShowMarker="True" LabelTemplate="{StaticResource dataMarkerTemplate2}" MarkerColor="White" MarkerBorderWidth="2" MarkerBorderColor="#404041" MarkerHeight="6" MarkerWidth="6" MarkerType="Square">
+              <chart:ChartDataMarker.LabelStyle>
+                <chart:DataMarkerLabelStyle LabelPosition="Center">
+                  <chart:DataMarkerLabelStyle.OffsetY>
+                    <OnPlatform x:TypeArguments="x:Double" Android="18" iOS="18" WinPhone="18"/>
+                  </chart:DataMarkerLabelStyle.OffsetY>
+                </chart:DataMarkerLabelStyle>
+              </chart:ChartDataMarker.LabelStyle>
+            </chart:ChartDataMarker>
+          </chart:LineSeries.DataMarker>
+        </chart:LineSeries>
+      </chart:SfChart.Series>
+    </chart:SfChart>
+  </local:SampleView.Content>
+
+</local:SampleView>

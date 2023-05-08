@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:SampleView x:Class="SampleBrowser.SfTabView.Themes" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:tabView="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core">
+    <local:SampleView.Content>
+          <tabView:SfTabView VisibleHeaderCount="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" DisplayMode="Text">
+            <tabView:SfTabItem Title="Furniture">
+                <tabView:SfTabItem.Content>
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Label Text="A" x:Name="furnitureLabel" HorizontalOptions="Center" VerticalOptions="Center"  FontSize="200" />
+                    </Grid>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
+            <tabView:SfTabItem Title="Clothing">
+                <tabView:SfTabItem.Content>
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Label Text="C" x:Name="clothingLabel" HorizontalOptions="Center" VerticalOptions="Center" FontSize="200" />
+                    </Grid>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
+            <tabView:SfTabItem Title="Shoes">
+                <tabView:SfTabItem.Content>
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Label Text="F" x:Name="shoesLabel" HorizontalOptions="Center" VerticalOptions="Center"  FontSize="200" />
+                    </Grid>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
+            <tabView:SfTabItem Title="Fruits">
+                <tabView:SfTabItem.Content>
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Label Text="H" x:Name="fruitsLabel" HorizontalOptions="Center" VerticalOptions="Center"  FontSize="200" />
+                    </Grid>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
+            <tabView:SfTabItem Title="Toys">
+                <tabView:SfTabItem.Content>
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Label Text="K" x:Name="toysLabel" HorizontalOptions="Center" VerticalOptions="Center"  FontSize="200" />
+                    </Grid>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
+        </tabView:SfTabView>
+    </local:SampleView.Content>
+</local:SampleView>

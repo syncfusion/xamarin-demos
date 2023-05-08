@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:richTextEditor="clr-namespace:Syncfusion.XForms.RichTextEditor;assembly=Syncfusion.SfRichTextEditor.XForms"
+    x:Class="SampleBrowser.SfRichTextEditor.Localization">
+
+    <ContentView.Content>
+        <Grid x:Name="grid" BackgroundColor="White" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        </Grid>
+    </ContentView.Content>
+    <local:SampleView.PropertyView>
+        <Grid BackgroundColor="White" 
+                HorizontalOptions="FillAndExpand" 
+                VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" x:Name="scheduleViewLabel" 
+                    VerticalOptions="Center" 
+                    Text="Change the language" 
+                    FontSize="15" TextColor="Gray" />
+
+            <Picker x:Name="localePicker" Grid.Row="1" 
+                        VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand" SelectedIndexChanged="localePicker_SelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>Japanese</x:String>
+                    <x:String>English</x:String>
+                    <x:String>German</x:String>
+                    <x:String>Spanish</x:String>
+                </Picker.Items>
+                <Picker.SelectedIndex>2</Picker.SelectedIndex>
+            </Picker>
+        </Grid>
+    </local:SampleView.PropertyView>
+</local:SampleView>
+    

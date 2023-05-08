@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="15dp"
+    android:paddingTop="10dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:background="#ffff"
+    android:gravity="top">
+    <TableLayout
+        android:paddingLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:stretchColumns="*"
+        android:shrinkColumns="*">
+        <TextView
+            android:text="Sample Pictures"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20dp" />
+    </TableLayout>
+    <TableLayout
+        android:gravity="top"
+        android:stretchColumns="*"
+        android:shrinkColumns="*">
+        <TableRow
+            android:paddingTop="10dp"
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:layout_weight="1">
+            <ImageButton
+                android:gravity="top"
+                android:padding="5dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:onClick="pictureOnClick1"
+                android:background="#0000"
+                android:id="@+id/imageview3"
+                android:src="@drawable/imageedit2"
+                android:scaleType="fitCenter"
+                android:layout_gravity="top" />
+            <ImageButton
+                android:gravity="top"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="pictureOnClick2"
+                android:background="#0000"
+                android:src="@drawable/imageedit3"
+                android:scaleType="fitCenter"
+                android:id="@+id/imageview4" />
+            <ImageButton
+                android:gravity="top"
+                android:padding="5dp"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:layout_width="wrap_content"
+                android:onClick="pictureOnClick3"
+                android:background="#0000"
+                android:src="@drawable/imageedit4"
+                android:id="@+id/imageview5" />
+        </TableRow>
+    </TableLayout>
+</TableLayout>

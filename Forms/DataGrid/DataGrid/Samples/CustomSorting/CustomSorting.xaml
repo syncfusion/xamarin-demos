@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfDataGrid.CustomSorting"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:data="clr-namespace:Syncfusion.Data;assembly=Syncfusion.Data.Portable"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:local="clr-namespace:SampleBrowser.SfDataGrid"
+                  xmlns:sfgrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms">
+
+    <sample:SampleView.Resources>
+        <ResourceDictionary>
+            <local:CustomerInfo x:Key="Comparer" />
+            <OnPlatform x:Key="headerText"
+                        x:TypeArguments="x:String">
+                <On Platform="Android,UWP,iOS,WPF">
+                    <OnIdiom x:TypeArguments="x:String"
+                             Phone="ID"
+                             Tablet="Customer ID" />
+                </On>
+            </OnPlatform>
+            <OnPlatform x:Key="opacity"
+                      x:TypeArguments="x:Double">
+                <On Platform="iOS,Android" Value="87" />
+                <On Platform="UWP,WPF" Value="80" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="padding"
+                   x:TypeArguments="Thickness">
+                <On Platform="Android,iOS" Value="8, 12, 8, 12" />
+                <On Platform="UWP,WPF" Value="8, 12, 8, 16" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="textSize"
+                  x:TypeArguments="x:Double">
+                <On Platform="iOS,UWP,WPF" Value="14" />
+                <On Platform="Android" Value="13" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="font"
+                  x:TypeArguments="x:String">
+                <On Platform="Android" Value="Roboto-Regular" />
+                <On Platform="iOS" Value="SFProText-Regular" />
+                <On Platform="UWP,WPF" Value="SegoeUI" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="rowHeight" x:TypeArguments="x:Double">
+                <On Platform="Android,iOS,UWP,macOS" Value="48"/>
+                <On Platform="WPF" Value="30" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="headerHeight" x:TypeArguments="x:Double">
+                <On Platform="Android,iOS,UWP,macOS" Value="52"/>
+                <On Platform="WPF" Value="36" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </sample:SampleView.Resources>
+
+    <sample:SampleView.BindingContext>
+        <local:CustomerViewModel x:Name="viewModel" />
+    </sample:SampleView.BindingContext>
+
+  <sample:SampleView.Content>
+        <Grid RowSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="1"
+                   Margin="16,10,16,10"
+                   BackgroundColor="Transparent"
+                   FontSize="12"
+                   Text="This sample showcases the custom sorting capabilities in SfDataGrid. Implement custom sorting logic if the standard sorting techniques does not meet your requirements. Below sample is sorted based on the length of the first name."
+                   TextColor="Gray"
+                   Opacity="100"
+                   FontFamily="SegoeUI" />
+          
+            <sfgrid:SfDataGrid x:Name="dataGrid"
+                               Grid.Row="2"
+                               AllowSorting="true"
+                               ItemsSource="{Binding CustomerInformation}"
+                               AutoGenerateColumns="false"
+                               ColumnSizer="Star"
+                               GridStyle="{local:DefaultStyle}"
+                               HeaderRowHeight="{StaticResource headerHeight}"
+                               RowHeight="{StaticResource rowHeight}"
+                               SelectionMode="Single"
+                               VerticalOverScrollMode="None">
+
+                <sfgrid:SfDataGrid.Columns>
+
+                    <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                           HeaderTextAlignment="Start"
+                                           LineBreakMode="WordWrap"
+                                           MappingName="CustomerID"
+                                           Padding="5, 0, 5, 0"     
+                                           HeaderText="{StaticResource headerText}"
+                                           HeaderCellTextSize="{StaticResource textSize}"
+                                           CellTextSize="{StaticResource textSize}"
+                                           TextAlignment="Start">
+                    </sfgrid:GridTextColumn>
+                    <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                           HeaderText="First Name"
+                                           HeaderTextAlignment="Start"
+                                           LineBreakMode="WordWrap"
+                                           MappingName="FirstName"
+                                           Padding="5, 0, 5, 0"
+                                           HeaderCellTextSize="{StaticResource textSize}"
+                                           CellTextSize="{StaticResource textSize}"
+                                           TextAlignment="Start">
+                    </sfgrid:GridTextColumn>
+                    <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                           HeaderText="Last Name"
+                                           HeaderTextAlignment="Start"
+                                           LineBreakMode="TailTruncation"
+                                           MappingName="LastName"
+                                           Padding="5, 0, 5, 0"
+                                           HeaderCellTextSize="{StaticResource textSize}"
+                                           CellTextSize="{StaticResource textSize}"
+                                           TextAlignment="Start">
+                    </sfgrid:GridTextColumn>
+                    <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                           HeaderText="Gender"
+                                           HeaderTextAlignment="Start"
+                                           LineBreakMode="TailTruncation"
+                                           MappingName="Gender"
+                                           Padding="5, 0, 5, 0"
+                                           HeaderCellTextSize="{StaticResource textSize}"
+                                           CellTextSize="{StaticResource textSize}"
+                                           TextAlignment="Start">
+                    </sfgrid:GridTextColumn>
+                    <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                           HeaderText="City"
+                                           HeaderTextAlignment="Start"
+                                           LineBreakMode="TailTruncation"
+                                           MappingName="City"
+                                           Padding="5, 0, 5, 0"
+                                           HeaderCellTextSize="{StaticResource textSize}"
+                                           CellTextSize="{StaticResource textSize}"
+                                           TextAlignment="Start">
+                    </sfgrid:GridTextColumn>
+
+                </sfgrid:SfDataGrid.Columns>
+
+                <sfgrid:SfDataGrid.SortComparers>
+                    <data:SortComparer Comparer="{StaticResource Comparer}" PropertyName="FirstName" />
+                </sfgrid:SfDataGrid.SortComparers>
+
+                <sfgrid:SfDataGrid.SortColumnDescriptions>
+                    <sfgrid:SortColumnDescription ColumnName="FirstName" SortDirection="Descending" />
+                </sfgrid:SfDataGrid.SortColumnDescriptions>
+
+            </sfgrid:SfDataGrid>
+        </Grid>
+    </sample:SampleView.Content>
+
+</sample:SampleView>
