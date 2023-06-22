@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+                   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                   xmlns:sfchat="clr-namespace:Syncfusion.XForms.Chat;assembly=Syncfusion.SfChat.XForms"
+                   xmlns:local="clr-namespace:SampleBrowser.SfChat"
+                   xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+                   mc:Ignorable="d"
+                   x:Class="SampleBrowser.SfChat.FlightBooking">
+
+    <sample:SampleView.Behaviors>
+        <local:FlightBookingBehavior/>
+    </sample:SampleView.Behaviors>
+
+    <sample:SampleView.BindingContext>
+        <local:FlightBookingViewModel x:Name="viewModel" />
+    </sample:SampleView.BindingContext>
+
+    <sample:SampleView.Content>
+        <Grid Padding="0" BackgroundColor="#F1F1F1">
+            <sfchat:SfChat x:Name="sfChat"
+                           MessageShape="RoundedRectangle"                           
+                           TypingIndicator="{Binding TypingIndicator}"
+                           ShowTypingIndicator="{Binding ShowTypingIndicator}"
+                           ShowOutgoingMessageAvatar="False"
+                           ShowIncomingMessageAvatar="True"
+                           Messages="{Binding Messages}"
+                           CurrentUser="{Binding CurrentUser}"
+                           IncomingMessageTimestampFormat="hh:mm tt"
+                           OutgoingMessageTimestampFormat="hh:mm tt" >
+            </sfchat:SfChat>
+
+            <Image Source="NoInternet.png" 
+                   Aspect="AspectFit" 
+                   BackgroundColor="White"
+                   IsVisible="{Binding IsConnectionNotEstablished}"/>
+
+            <AbsoluteLayout Grid.Row="0" Grid.Column="0"
+                            IsVisible="{Binding ShowBusyIndicator}">
+                <busyindicator:SfBusyIndicator x:Name="busyindicator" 
+                                           AbsoluteLayout.LayoutBounds="0.5,0.4,0.5,0.5"
+                                           AbsoluteLayout.LayoutFlags="All"
+                                           HorizontalOptions="FillAndExpand"
+                                           VerticalOptions="FillAndExpand"
+                                           AnimationType="SingleCircle"
+                                           BackgroundColor="Transparent"
+                                           IsBusy="{Binding ShowBusyIndicator}"
+                                           Title="Connecting to Azure..."
+                                           TextColor="#007DE6" />
+            </AbsoluteLayout>
+        </Grid>
+    </sample:SampleView.Content>
+</sample:SampleView>

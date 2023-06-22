@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                   xmlns:sfgrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
+                   xmlns:local="clr-namespace:SampleBrowser.SfPopupLayout"
+                   xmlns:popuplayout="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms"
+                   x:Class="SampleBrowser.SfPopupLayout.AutoResizingPopupLayout">
+
+    <sample:SampleView.BindingContext>
+        <local:TicketBookingViewModel x:Name="viewModel"/>
+    </sample:SampleView.BindingContext>
+
+    <sample:SampleView.Behaviors>
+        <local:AutoResizingPopupBehaviour />
+    </sample:SampleView.Behaviors>
+    
+    <sample:SampleView.Resources>
+        <ResourceDictionary>
+            <local:TimingVisibilityConverter x:Key="timingVisibilityConverter"/>
+            <popuplayout:SfPopupLayout x:Key="Notification" StaysOpen="True">
+                <popuplayout:SfPopupLayout.PopupView>
+                    <popuplayout:PopupView ShowFooter="False" HeaderTitle="Notification !" HeightRequest="130">
+                        <popuplayout:PopupView.ContentTemplate>
+                            <DataTemplate>
+                                <Grid BackgroundColor="White" Padding="10,10,10,10">
+                                    <Label FontSize="14"  
+                                       BackgroundColor="White" 
+                                       TextColor="Black" 
+                                       Text="Click on the info icon to know more"/>
+                                </Grid>
+                            </DataTemplate>
+                        </popuplayout:PopupView.ContentTemplate>
+                    </popuplayout:PopupView>
+                </popuplayout:SfPopupLayout.PopupView>
+            </popuplayout:SfPopupLayout>
+            
+            <popuplayout:SfPopupLayout x:Key="termsAndConditionsDialog" 
+                                       x:Name="termsAndConditionPopup" 
+                                       StaysOpen="True">
+
+                <popuplayout:SfPopupLayout.PopupView>
+                    <popuplayout:PopupView HeaderHeight="42" 
+                                           HeaderTitle="Terms and Conditions"
+                                           ShowCloseButton="False" 
+                                           AnimationMode="None"
+                                           AutoSizeMode="None"
+                                           HeightRequest="{OnPlatform UWP={OnIdiom Phone=250, Tablet=290, Desktop=290}, Android=250, iOS=250}" >
+
+                        <popuplayout:PopupView.PopupStyle>
+                                <popuplayout:PopupStyle HeaderTextAlignment="Center" 
+                                                    HeaderBackgroundColor="White" 
+                                                    HeaderTextColor="Black" 
+                                                    BorderColor="Gray" 
+                                                    BorderThickness="1" 
+                                                    HeaderFontSize="17" 
+                                                    HeaderFontAttribute="Bold">
+                                </popuplayout:PopupStyle>
+                            </popuplayout:PopupView.PopupStyle>
+                            <popuplayout:PopupView.ContentTemplate>
+                                <DataTemplate>
+                                    <Grid BackgroundColor="White" Padding="10">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                        <Label Grid.Column="0" 
+                                           Grid.Row="0" 
+                                           TextColor="Gray" 
+                                           Opacity="54" 
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        iOS={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        UWP={OnIdiom Phone=14, Tablet=18, Desktop=18}}"     
+                                           BackgroundColor="White" 
+                                           Text="1."/>
+                                        <Label Grid.Column="0" 
+                                           Grid.Row="1" 
+                                           TextColor="Gray" 
+                                           Opacity="54" 
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        iOS={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        UWP={OnIdiom Phone=14, Tablet=18, Desktop=18}}" 
+                                           BackgroundColor="White" 
+                                           Text="2."/>
+                                        <Label Grid.Column="1" 
+                                           Grid.Row="0" 
+                                           TextColor="Gray" 
+                                           Opacity="54" 
+                                           MinimumWidthRequest="{OnPlatform UWP=270, iOS=300, Android=300}" 
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        iOS={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        UWP={OnIdiom Phone=14, Tablet=18, Desktop=18}}" 
+                                           BackgroundColor="White" 
+                                           Text="Children below the age of 18 cannot be admitted for movies certified A."/>
+                                        <Label Grid.Column="1" 
+                                           Grid.Row="1" 
+                                           TextColor="Gray" 
+                                           Opacity="54" 
+                                           MinimumWidthRequest="{OnPlatform UWP=270, iOS=300, Android=300}" 
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        iOS={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        UWP={OnIdiom Phone=14, Tablet=18, Desktop=18}}" 
+                                           BackgroundColor="White" 
+                                           Text="Please carry proof of age for movies certified A."/>
+                                    <Label Grid.Column="1" 
+                                           Grid.Row="2" 
+                                           Opacity="54" 
+                                           MinimumWidthRequest="{OnPlatform UWP=270, iOS=300, Android=300}" 
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        iOS={OnIdiom Phone=14, Tablet=18, Desktop=18}, 
+                                        UWP={OnIdiom Phone=14, Tablet=18, Desktop=18}}" 
+                                           BackgroundColor="White" 
+                                           Text="Read more..."
+                                           TextColor="Blue"
+                                           FontAttributes="Bold">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding ReadMoreCommand, Source={x:Reference viewModel}}"
+                                                                  CommandParameter="{StaticResource termsAndConditionsDialog}">
+                                            </TapGestureRecognizer>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </Grid>
+                                </DataTemplate>
+                            </popuplayout:PopupView.ContentTemplate>
+                            <popuplayout:PopupView.FooterTemplate>
+                                <DataTemplate>
+                                    <StackLayout Orientation="Vertical" 
+                                             BackgroundColor="White" 
+                                             Padding="0" 
+                                             Margin="0" 
+                                             Spacing="0" >
+                                        <BoxView Color="LightGray" HeightRequest="1" Margin="0"/>
+                                        <StackLayout x:Name="footerTemplate" 
+                                                 VerticalOptions="FillAndExpand" 
+                                                 Orientation="Horizontal" 
+                                                 BackgroundColor="White" 
+                                                 Padding="0" 
+                                                 Margin="0" 
+                                                 Spacing="0">
+                                            <Button x:Name="declineButton" 
+                                                Command="{Binding ClosePopupCommand, Source={x:Reference viewModel}}" 
+                                                CommandParameter="{x:Reference termsAndConditionPopup}" 
+                                                Text="Decline" 
+                                                FontSize="12" 
+                                                BackgroundColor="White" 
+                                                TextColor="#007CEE" 
+                                                WidthRequest="{OnPlatform Android={OnIdiom Phone=150, Tablet=300, Desktop=300}, 
+                                            iOS={OnIdiom Phone=150, Tablet=300, Desktop=300}, 
+                                            UWP={OnIdiom Phone=150, Tablet=300, Desktop=300}}" 
+                                                MinimumWidthRequest="{OnPlatform UWP=120, iOS=140, Android=140}" />
+                                            <BoxView x:Name="separator" 
+                                                 Color="LightGray" 
+                                                 WidthRequest="2" />
+                                            <Button x:Name="acceptButton" 
+                                                Command="{Binding ClosePopupCommand, Source={x:Reference viewModel}}" 
+                                                CommandParameter="{x:Reference termsAndConditionPopup}" 
+                                                Text="Accept" 
+                                                FontSize="12" 
+                                                BackgroundColor="White" 
+                                                TextColor="#007CEE"  
+                                                WidthRequest="{OnPlatform Android={OnIdiom Phone=150, Tablet=300, Desktop=300}, 
+                                            iOS={OnIdiom Phone=150, Tablet=300, Desktop=300}, 
+                                            UWP={OnIdiom Phone=150, Tablet=300, Desktop=300}}" 
+                                                MinimumWidthRequest="{OnPlatform UWP=120, iOS=140, Android=140}" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </popuplayout:PopupView.FooterTemplate>
+                        </popuplayout:PopupView>
+                    </popuplayout:SfPopupLayout.PopupView>
+                </popuplayout:SfPopupLayout>
+            </ResourceDictionary>
+    </sample:SampleView.Resources>
+    
+    <sample:SampleView.Content>
+        <sfgrid:SfDataGrid x:Name="seconddataGrid" 
+                           ItemsSource="{Binding TheaterInformation}"
+                           AutoGenerateColumns="False"
+                           HeaderRowHeight="72"
+                           RowHeight="110"
+                           VerticalOverScrollMode="None"
+                           ColumnSizer="Star">
+            <sfgrid:SfDataGrid.Columns x:TypeArguments="syncfusion:Columns">
+                <sfgrid:GridTemplateColumn MappingName="DayLabel">
+
+                    <sfgrid:GridTemplateColumn.HeaderTemplate>
+                        <DataTemplate>
+                            <local:CustomHeaderTemplate NumberOfLabel="7"></local:CustomHeaderTemplate>
+                        </DataTemplate>
+                    </sfgrid:GridTemplateColumn.HeaderTemplate>
+
+                    <sfgrid:GridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackLayout x:Name="mainLayout" Orientation="Horizontal" Padding="10,10,10,10">
+                                <StackLayout x:Name="theaterDetails" 
+                                             Orientation="Vertical" 
+                                             Padding="10,0,10,10">
+                                    <Label x:Name="TheaterNameLabel" 
+                                           Text="{Binding TheaterName}" 
+                                           Opacity="100" 
+                                           FontSize = "15" 
+                                           TextColor="Black" />
+                                    <Label Text="{Binding TheaterLocation}" 
+                                           Opacity="100" 
+                                           FontSize = "12" 
+                                           TextColor="Black"/>
+                                    <StackLayout x:Name="timing" 
+                                                 Orientation="Horizontal">
+                                        <Button Text="{Binding Timing1}" 
+                                                Opacity="0.8" 
+                                                FontSize = "14" 
+                                                TextColor="#007CEE" 
+                                                BorderColor="LightBlue" 
+                                                BorderWidth="1" BorderRadius="3" 
+                                                HeightRequest="38" 
+                                                WidthRequest="90" 
+                                                Margin="0,0,5,5" 
+                                                BackgroundColor="White" />
+                                        <Button Text="{Binding Timing2}" 
+                                                Opacity="0.8" 
+                                                FontSize = "14"  
+                                                IsVisible="{Binding Converter={StaticResource timingVisibilityConverter}}" 
+                                                TextColor="#007CEE" 
+                                                HeightRequest="38" 
+                                                WidthRequest="90" 
+                                                Margin="0,0,5,5" 
+                                                BackgroundColor="White" 
+                                                BorderColor="LightBlue" 
+                                                BorderWidth="1" 
+                                                BorderRadius="3" />
+                                    </StackLayout>
+                                </StackLayout>
+
+                                <ContentView x:Name="contentView" 
+                                             WidthRequest="32" 
+                                             InputTransparent="False"  
+                                             VerticalOptions="CenterAndExpand" 
+                                             HorizontalOptions="EndAndExpand" 
+                                             Padding="0,0,0,20" >
+                                    <ContentView.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding AutoResizeCommand, Source={x:Reference viewModel}}" 
+                                                              CommandParameter="{StaticResource termsAndConditionsDialog}">
+                                        </TapGestureRecognizer>
+                                    </ContentView.GestureRecognizers>
+                                    
+                                    <Image x:Name="popupImage" 
+                                           WidthRequest="32" 
+                                           HeightRequest="32" 
+                                           VerticalOptions="CenterAndExpand" 
+                                           HorizontalOptions="EndAndExpand" 
+                                           Margin="0,0,10,0" 
+                                           InputTransparent="False" 
+                                           Opacity="0.5">
+                                        <Image.Source>
+                                            <FontImageSource Glyph="&#xe767;"
+                                                             FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}"
+                                                             Color="Blue"/>
+                                        </Image.Source>
+                                    </Image>
+                                </ContentView>
+                            </StackLayout>
+                        </DataTemplate>
+                    </sfgrid:GridTemplateColumn.CellTemplate>
+
+                </sfgrid:GridTemplateColumn>
+            </sfgrid:SfDataGrid.Columns>
+        </sfgrid:SfDataGrid>
+    </sample:SampleView.Content>
+            
+</sample:SampleView>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" 
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:CalendarSample="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms" 
+                  xmlns:samplelocal="clr-namespace:SampleBrowser.SfCalendar"
+                  x:Class="SampleBrowser.SfCalendar.CalendarGettingStarted">
+    <local:SampleView.BindingContext>
+        <samplelocal:GettingStartedViewModel />
+    </local:SampleView.BindingContext>
+    <local:SampleView.Content>
+        <Grid x:Name="grid"> 
+            <CalendarSample:SfCalendar x:Name="calendar"
+                                   HorizontalOptions="FillAndExpand" 
+                                   VerticalOptions="FillAndExpand" />
+        </Grid>
+    </local:SampleView.Content>
+    <local:SampleView.PropertyView>
+        <StackLayout x:Name="mainStack" 
+                     Spacing="10" 
+                     Padding="10">
+            <StackLayout Orientation="Vertical" 
+                         x:Name="selectionmodeLayout">
+                <Label x:Name="selectionModeLabel" 
+                       FontAttributes="None" 
+                       FontSize="20" 
+                       Text=" Selection Mode" 
+                       HorizontalOptions="Start" 
+                       TextColor="Gray" />
+                <Picker x:Name="selectionModePicker" 
+                        VerticalOptions="Start" 
+                        SelectedIndex="0">
+                    <Picker.Items>
+                        <x:String>Single Selection</x:String>
+                        <x:String>Multi Selection</x:String>
+                        <x:String>Range Selection</x:String>
+                        <x:String>Multi Range Selection</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" 
+                         x:Name="viewmodeLayout">
+                <Label x:Name="viewModeLabel" 
+                       FontAttributes="None" 
+                       FontSize="20" 
+                       Text=" View Mode" 
+                       HorizontalOptions="Start" 
+                       TextColor="Gray" />
+                <Picker x:Name="viewModePicker" 
+                        VerticalOptions="Start" 
+                        SelectedIndex="0">
+                    <Picker.Items>
+                        <x:String>MonthView</x:String>
+                        <x:String>YearView</x:String>
+                        <x:String>Decade</x:String>
+                        <x:String>Century</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <StackLayout Margin="0,10,0,0">
+                <Label FontAttributes="None" 
+                       FontSize="20" 
+                       Text=" Min Date" 
+                       HorizontalOptions="Start" 
+                       TextColor="Gray" />
+                <DatePicker x:Name="minDatePicker" 
+                            Date="2018, 1, 1" Format="D" />
+            </StackLayout>
+            <StackLayout Margin="0,10,0,0">
+                <Label FontAttributes="None" 
+                       FontSize="20" Text=" Max Date" 
+                       HorizontalOptions="Start" 
+                       TextColor="Gray" />
+                <DatePicker x:Name="maxDatePicker" 
+                            Date="2019, 12, 1" Format="D" />
+            </StackLayout>
+            <StackLayout Margin="0,10,0,0" x:Name="selectionShape">
+                <Label FontAttributes="None" 
+                       FontSize="20" Text="Selection Shape" 
+                       HorizontalOptions="Start" 
+                       TextColor="Gray" />
+                <Picker x:Name="selectionShapePicker" 
+                        VerticalOptions="Start" 
+                        SelectedIndex="0">
+                    <Picker.Items>
+                        <x:String>Circle</x:String>
+                        <x:String>Fill</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <StackLayout Margin="0,10,0,0">
+                <Label FontAttributes="None" 
+                       FontSize="20" 
+                       Text=" Navigation Direction" 
+                       HorizontalOptions="Start" 
+                       TextColor="Gray" />
+                <Picker x:Name="navigationDirectionPicker" 
+                        VerticalOptions="Start" 
+                        SelectedIndex="0">
+                    <Picker.Items>
+                        <x:String>Horizontal</x:String>
+                        <x:String>Vertical</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <StackLayout Margin="0,10,0,0">
+                <Label FontAttributes="None" 
+                       x:Name="horizontalLineLabel" 
+                       FontSize="20" 
+                       Text=" Grid Lines" 
+                       HorizontalOptions="Start" 
+                       TextColor="Gray" />
+                <Picker x:Name="horizontalLinePicker" 
+                        VerticalOptions="Start" 
+                        SelectedIndex="3">
+                    <Picker.Items>
+                        <x:String>Horizontal</x:String>
+                        <x:String>Vertical</x:String>
+                        <x:String>Both</x:String>
+                        <x:String>None</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <StackLayout Margin="0,10,0,0">
+                <Label FontAttributes="None" 
+                       FontSize="20" 
+                       Text=" Show YearView" 
+                       HorizontalOptions="Start" 
+                       TextColor="Gray" />
+                <Picker x:Name="yearViewPicker" 
+                        VerticalOptions="Start" 
+                        SelectedIndex="0">
+                    <Picker.Items>
+                        <x:String>True</x:String>
+                        <x:String>False</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+        </StackLayout>
+    </local:SampleView.PropertyView>
+    <local:SampleView.Behaviors>
+        <samplelocal:GettingStartedBehavior />
+    </local:SampleView.Behaviors>
+</local:SampleView>

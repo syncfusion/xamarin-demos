@@ -1,0 +1,129 @@
+<Project>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DetailsView\DetailsView.xaml.cs">
+      <Link>Samples\PopupLayout\Samples\DetailsView\DetailsView.xaml.cs</Link>
+      <DependentUpon>DetailsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DetailsView\DetailsViewBehaviors.cs">
+      <Link>Samples\PopupLayout\Samples\DetailsView\DetailsViewBehaviors.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\CustomHeaderTemplate.cs">
+      <Link>Samples\PopupLayout\Samples\Helpers\CustomHeaderTemplate.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Helpers\InfoPopupParameters.cs">
+      <Link>Samples\PopupLayout\Samples\Helpers\InfoPopupParameters.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\BookingInfo.cs">
+      <Link>Samples\PopupLayout\Samples\Model\BookingInfo.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\ContactInfo.cs">
+      <Link>Samples\PopupLayout\Samples\Model\ContactInfo.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\OrderInfo.cs">
+      <Link>Samples\PopupLayout\Samples\Model\OrderInfo.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\OrderInfoRepository.cs">
+      <Link>Samples\PopupLayout\Samples\Model\OrderInfoRepository.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\TicketInfoRepository.cs">
+      <Link>Samples\PopupLayout\Samples\Model\TicketInfoRepository.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Model\TicketBookingInfo.cs">
+      <Link>Samples\PopupLayout\Samples\Model\TicketBookingInfo.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\OnBoardHelps\OnBoardHelps.xaml.cs">
+      <Link>Samples\PopupLayout\Samples\OnBoardHelps\OnBoardHelps.xaml.cs</Link>
+      <DependentUpon>OnBoardHelps.xaml</DependentUpon>
+    </Compile>
+	 <Compile Include="$(MSBuildThisFileDirectory)\Samples\OnBoardHelps\DragAndDropBehavior.cs">
+      <Link>Samples\PopupLayout\Samples\OnBoardHelps\DragAndDropBehavior.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\OnBoardHelps\EditingBehavior.cs">
+      <Link>Samples\PopupLayout\Samples\OnBoardHelps\EditingBehavior.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\OnBoardHelps\ResizingBehavior.cs">
+      <Link>Samples\PopupLayout\Samples\OnBoardHelps\ResizingBehavior.cs</Link>
+    </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\OnBoardHelps\SwipingBehavior.cs">
+      <Link>Samples\PopupLayout\Samples\OnBoardHelps\SwipingBehavior.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\OnBoardHelps\OnBoardHelpsBehavior.cs">
+      <Link>Samples\PopupLayout\Samples\OnBoardHelps\OnBoardHelpsBehavior.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PopupCustomizations\PopupCustomizations.xaml.cs">
+      <Link>Samples\PopupLayout\Samples\PopupCustomizations\PopupCustomizations.xaml.cs</Link>
+      <DependentUpon>PopupCustomizations.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PopupCustomizations\TimingVisibilityConverter.cs">
+      <Link>Samples\PopupLayout\Samples\PopupCustomizations\TimingVisibilityConverter.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PopupCustomizations\TicketBooking.xaml.cs">
+      <Link>Samples\PopupLayout\Samples\PopupCustomizations\TicketBooking.xaml.cs</Link>
+      <DependentUpon>TicketBooking.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PopupCustomizations\PopupCustomizationsBehavior.cs">
+      <Link>Samples\PopupLayout\Samples\PopupCustomizations\PopupCustomizationsBehavior.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\GettingStarted.xaml.cs">
+      <Link>Samples\PopupLayout\Samples\GettingStarted\GettingStarted.xaml.cs</Link>
+      <DependentUpon>GettingStarted.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\ContactsViewModel.cs">
+      <Link>Samples\PopupLayout\Samples\ViewModel\ContactsViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\GettingStartedViewModel.cs">
+      <Link>Samples\PopupLayout\Samples\ViewModel\GettingStartedViewModel.cs</Link>
+    </Compile>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\OnBoardHelpsViewModel.cs">
+      <Link>Samples\PopupLayout\Samples\ViewModel\OnBoardHelpsViewModel.cs</Link>
+ </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewModel\TicketBookingViewModel.cs">
+      <Link>Samples\PopupLayout\Samples\ViewModel\TicketBookingViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml.cs">
+      <Link>Samples\PopupLayout\Samples\Themes\Themes.xaml.cs</Link>
+      <DependentUpon>Themes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\PopupThemeBehavior.cs">
+      <Link>Samples\PopupLayout\Samples\Themes\PopupThemeBehavior.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DetailsView\DetailsView.xaml">
+      <Link>Samples\PopupLayout\Samples\DetailsView\DetailsView.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\OnBoardHelps\OnBoardHelps.xaml">
+      <Link>Samples\PopupLayout\Samples\OnBoardHelps\OnBoardHelps.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\PopupCustomizations\PopupCustomizations.xaml">
+      <Link>Samples\PopupLayout\Samples\PopupCustomizations\PopupCustomizations.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\PopupCustomizations\TicketBooking.xaml">
+      <Link>Samples\PopupLayout\Samples\PopupCustomizations\TicketBooking.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\GettingStarted.xaml">
+      <Link>Samples\PopupLayout\Samples\GettingStarted\GettingStarted.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml">
+      <Link>Samples\PopupLayout\Samples\Themes\Themes.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+      <Link>Samples\PopupLayout\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

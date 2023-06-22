@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\radialmenu_RadialMenu.ttf">
+            <Link>Resources\radialmenu_RadialMenu.ttf</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\radialmenu_Segoe MDL2 Assets.ttf">
+            <Link>Resources\radialmenu_Segoe MDL2 Assets.ttf</Link>
+        </BundleResource>
+        <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\radialmenu_Social.ttf">
+            <Link>Resources\radialmenu_Social.ttf</Link>
+        </BundleResource>
+    </ItemGroup>
+</Project>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" 
+    xmlns:numeric="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms" 
+    xmlns:carousel="clr-namespace:Syncfusion.SfCarousel.XForms;assembly=Syncfusion.SfCarousel.XForms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:core="clr-namespace:SampleBrowser.SfCarousel"
+    x:Class="SampleBrowser.SfCarousel.PullToRefresh_Default">
+<local:SampleView.Resources>
+  <ResourceDictionary>
+    <core:TextToProperConveter x:Key="texttopropertext" />
+    <DataTemplate x:Key="itemTemplate">
+        <Frame 
+            x:Name="gridName" 
+            CornerRadius="7" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                 <Label 
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" 
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    TextColor="Black" >
+                        <Label.FontSize>
+                         <OnIdiom x:TypeArguments="x:Double">
+                          <OnIdiom.Tablet>
+                             <OnPlatform 
+                                x:TypeArguments="x:Double" 
+                                iOS="50" 
+                                Android="70" 
+                                WinPhone="15"/>                        
+                          </OnIdiom.Tablet>
+                          <OnIdiom.Phone>
+                             <OnPlatform 
+                                x:TypeArguments="x:Double" 
+                                iOS="50" 
+                                Android="50" 
+                                WinPhone="15"/>                        
+                          </OnIdiom.Phone>
+                        </OnIdiom>
+                        </Label.FontSize>
+                    <Label.Text>
+                        <OnPlatform  
+                            x:TypeArguments="BindingBase" 
+                            Android="{Binding Unicode}" 
+                            iOS="{Binding Unicode}"/>
+                    </Label.Text>
+                        <Label.FontFamily>
+                        <OnPlatform 
+                            x:TypeArguments="x:String" 
+                            iOS="Sample"
+                            Android="CarouselIcon.ttf#Sample"/>
+                        </Label.FontFamily>
+                </Label>
+                <Label 
+                        Grid.Row="1" 
+                        LineBreakMode="TailTruncation"
+                        HorizontalTextAlignment="Center" 
+                        VerticalTextAlignment="Center"
+                        Text="{Binding Name, 
+                        Converter={StaticResource texttopropertext}}">
+                    <Label.FontSize>
+                        <OnIdiom x:TypeArguments="x:Double">
+                            <OnIdiom.Tablet>
+                                <OnPlatform 
+                                x:TypeArguments="x:Double" 
+                                iOS="12" 
+                                Android="12" 
+                                WinPhone="12"/>                        
+                            </OnIdiom.Tablet>
+                            <OnIdiom.Phone>
+                                <OnPlatform 
+                                x:TypeArguments="x:Double" 
+                                iOS="12" 
+                                Android="12" 
+                                WinPhone="12"/>                        
+                            </OnIdiom.Phone>
+                        </OnIdiom>
+                </Label.FontSize>
+               </Label>
+                <Image 
+                    Grid.Row="2"  
+                    Source="editor.png">
+                 <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Handle_Tapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+        </Frame>
+    </DataTemplate>
+</ResourceDictionary> 
+</local:SampleView.Resources>
+    
+<local:SampleView.Content>
+   <Grid BackgroundColor="Black" x:Name="carouselLayout"> 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid BackgroundColor="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+                <Label x:Name="brand" 
+                       Text="BRAND IDENTITY ICONS"
+                       TextColor="White" 
+                       FontSize="20"
+                       FontFamily="Roboto"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Start"
+                       VerticalTextAlignment="Start"/>
+                <Grid Grid.Row="1" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                    </Grid>
+                    <carousel:SfCarousel 
+                      
+                        ItemWidth="150"
+                        x:Name="brandCarousel"
+                        ItemSpacing="25"
+                        ViewMode="Linear"
+                        ItemHeight="150"
+                        ItemTemplate="{StaticResource itemTemplate}"
+                        ItemsSource="{Binding PullBrandCollection}">
+                      </carousel:SfCarousel>
+                </Grid>
+           </Grid>
+            <Grid Grid.Row="1" BackgroundColor="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+                <Label x:Name="data" 
+                       Text="DATA ICONS"
+                       TextColor="White" 
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Start"
+                       VerticalTextAlignment="Start"/>
+               <Grid Grid.Row="1" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                    </Grid>
+                    <carousel:SfCarousel 
+                        ItemWidth="150"
+                        ViewMode="Linear"
+                        ItemSpacing="25"
+                        x:Name="dataCarousel"
+                        ItemHeight="150"
+                        ItemTemplate="{StaticResource itemTemplate}" 
+                        ItemsSource="{Binding PullDataValueCollection}">
+                      </carousel:SfCarousel>
+                </Grid>
+            </Grid>
+             <Grid Grid.Row="2" BackgroundColor="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+                <Label x:Name="gadget" 
+                       Text="GADGET ICONS"
+                       TextColor="White" 
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Start"
+                       VerticalTextAlignment="Start"/>
+                <Grid Grid.Row="1" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                    </Grid>
+                    <carousel:SfCarousel 
+                     
+                        ItemWidth="150"
+                        ViewMode="Linear"
+                        ItemHeight="150"
+                        x:Name="gadgetCarousel"
+                        ItemSpacing="25"
+                        ItemTemplate="{StaticResource itemTemplate}"
+                        ItemsSource="{Binding PullGadgetCollection}">
+                      </carousel:SfCarousel>
+                </Grid>
+            </Grid>
+     </Grid>
+    </local:SampleView.Content>
+</local:SampleView>

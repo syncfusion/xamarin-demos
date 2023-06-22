@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:sample="clr-namespace:SampleBrowser.SfCircularGauge"
+             x:Class="SampleBrowser.SfCircularGauge.DirectionCompass">
+	
+  <local:SampleView.BindingContext>
+    <sample:CircularGaugeViewModel x:Name="viewModel" NeedlePointerColor="#f03e3e" />
+  </local:SampleView.BindingContext>
+
+  <local:SampleView.Content BackgroundColor="White">
+
+      <gauge:SfCircularGauge x:Name="circularGauge" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White">
+
+        <gauge:SfCircularGauge.Scales>
+          <gauge:Scale x:Name="scale" StartAngle="270" StartValue="0" EndValue="16" Interval="2" LabelOffset="0.75"
+                      SweepAngle="360" MinorTicksPerInterval="1" ShowLastLabel="False" ScaleStartOffset="0.98" ScaleEndOffset="0.9"
+                      LabelCreated="scale_LabelCreated" RimColor="#E0E0E0" LabelColor="#4B4B4B">
+
+            <gauge:Scale.Pointers>
+              <gauge:NeedlePointer x:Name="pointer1" Value="14" Color="{Binding NeedlePointerColor}" Type="Triangle"
+                                   LengthFactor="0.65" Thickness="20" KnobRadiusFactor="0" KnobColor="White"
+                                   KnobStrokeWidth="3" KnobStrokeColor="White" EnableAnimation="False"/>
+              <gauge:NeedlePointer x:Name="pointer2" Value="6" Type="Triangle" LengthFactor="0.65" Thickness="20" Color="#9E9E9E"
+                                   KnobRadiusFactor="0.11" KnobColor="White" KnobStrokeWidth="3" KnobStrokeColor="White"
+                                   EnableAnimation="False"/>
+            </gauge:Scale.Pointers>
+
+            <gauge:Scale.MajorTickSettings>
+              <gauge:TickSettings x:Name="majorTicks" StartOffset="0.9" EndOffset="0.83" Thickness="2" Color="#9E9E9E"/>
+            </gauge:Scale.MajorTickSettings>
+
+            <gauge:Scale.MinorTickSettings>
+              <gauge:TickSettings x:Name="minorTicks" StartOffset="0.9" EndOffset="0.85" Thickness="2" Color="#9E9E9E"/>
+            </gauge:Scale.MinorTickSettings>
+
+          </gauge:Scale>
+        </gauge:SfCircularGauge.Scales>
+
+      </gauge:SfCircularGauge>
+  </local:SampleView.Content>
+
+  <local:SampleView.PropertyView>
+    <StackLayout Orientation="Vertical" >
+
+      <StackLayout Orientation="Vertical" >
+        <Label  x:Name="needlePointerColor" Text="Pointer Color" TextColor="Black" FontAttributes="Bold"/>
+        <Picker x:Name="needlePointerColorPicker" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+          <Picker.Items>
+            <x:String>Red</x:String>
+            <x:String>Blue</x:String>
+            <x:String>Orange</x:String>
+          </Picker.Items>
+        </Picker>
+      </StackLayout>
+
+    </StackLayout>
+  </local:SampleView.PropertyView>
+</local:SampleView>

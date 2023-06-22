@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView  xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:numeric="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
+              xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                   x:Class="SampleBrowser.SfCheckBox.CheckBox"
+                   xmlns:sync="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms">
+    <local:SampleView.Resources>
+        <ResourceDictionary>
+            <local:ImagePathConverter x:Key="ImagePathConverter" />
+            <Style TargetType="sync:SfCheckBox" x:Key="checkBoxStyle">
+                <Setter Property="FontSize">
+                    <Setter.Value>
+                        <OnPlatform WPF="15" Default="16"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Margin" Value="0,20,0,0"/>
+                <Setter Property="TextColor" Value="#000000"/>
+            </Style>
+        </ResourceDictionary>
+    </local:SampleView.Resources>
+  <local:SampleView.Content >
+    <ScrollView>
+      <StackLayout x:Name="MainStack">
+         <Grid x:Name="grid0" IsVisible="{OnPlatform Default='True', WPF='False',UWP='False'}">
+           <Image  Grid.Row="0" HeightRequest="150" x:Name="movieImages"  Source="PizzaBanner.png" Aspect="Fill"/>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+          </Grid.ColumnDefinitions>
+        </Grid>
+
+
+        <Frame  x:Name="frame" Margin="15,15,15,0" CornerRadius="4" OutlineColor="#29000000" HasShadow="True"
+      Padding="15" >
+
+          <StackLayout x:Name="MainStack1" >
+              <Image HeightRequest="150" x:Name="movieImage" IsVisible="{OnPlatform Default='False', UWP='True', WPF='True'}" Source="PizzaBanner.png" Aspect="Fill"/>
+              <Label x:Name="title"  Margin="0,10,0,0" Text ="Add Extra Toppings" TextColor="#007DE6" FontSize="20"></Label>
+              <sync:SfCheckBox x:Name="selectAll" Text="Select All" FontSize="{OnPlatform Default='16', WPF='14'}" Style="{StaticResource checkBoxStyle}"></sync:SfCheckBox>
+              <sync:SfCheckBox x:Name="grilledChicken" Text="Grilled Chicken"  FontSize="{OnPlatform Default='16', WPF='14'}" Style="{StaticResource checkBoxStyle}" StateChanged="NonvegToppingsChanged"></sync:SfCheckBox>
+              <sync:SfCheckBox x:Name="chickenTikka" Text="Chicken Tikka" FontSize="{OnPlatform Default='16', WPF='14'}" Style="{StaticResource checkBoxStyle}" StateChanged="NonvegToppingsChanged"   ></sync:SfCheckBox>
+              <sync:SfCheckBox x:Name="chickenSausage" Text="Chicken Sausage" FontSize="{OnPlatform Default='16', WPF='14'}" Style="{StaticResource checkBoxStyle}" StateChanged="NonvegToppingsChanged"></sync:SfCheckBox>
+              <sync:SfCheckBox x:Name="beef" Text="Beef" FontSize="{OnPlatform Default='16', WPF='14'}" Style="{StaticResource checkBoxStyle}" StateChanged="NonvegToppingsChanged"></sync:SfCheckBox>
+          </StackLayout>
+        </Frame>
+
+                <Button x:Name="button" Margin="0,10,0,0" IsEnabled="False" VerticalOptions="EndAndExpand" BackgroundColor="#007DE6" TextColor="{OnPlatform Default='#FFFFFF',WPF='Black'}"  Text="Order Now" FontSize="Medium" Clicked="Button_Clicked"></Button>
+
+      </StackLayout>
+    </ScrollView>
+
+  </local:SampleView.Content>
+</local:SampleView>

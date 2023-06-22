@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+ 	<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <Configurations>Debug;Release;Release-xml</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\FormFillingDocument.pdf" />
+    <None Remove="SampleBrowser.SfSignaturePad.nuspec" />
+	<None Remove="SampleBrowser.SfSignaturePad.props" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SampleBrowser.Core" Version="22.1.34" />
+    <PackageReference Include="Syncfusion.Xamarin.Compression" Version="22.1.34" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="22.1.34" />
+    <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="22.1.34" />
+    <PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="22.1.34" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRangeSlider" Version="22.1.34" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown" Version="22.1.34" />
+    <PackageReference Include="Syncfusion.Xamarin.SfSignaturePad" Version="22.1.34" />
+    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="22.1.34" />
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="22.1.34" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="22.1.34" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPdfViewer" Version="22.1.34" />
+    <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="22.1.34" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="System.ComponentModel" Version="4.3.0" />
+	<PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\FormFillingDocument.pdf" />
+    <EmbeddedResource Include="SamplesList\SamplesList.xml" />
+  </ItemGroup>
+</Project>

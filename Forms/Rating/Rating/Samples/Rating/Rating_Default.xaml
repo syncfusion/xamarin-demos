@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms"
+   xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" 
+   xmlns:numeric="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="SampleBrowser.SfRating.Rating_Default">
+	<local:SampleView.Content >
+   <ScrollView Margin="10" >
+    <Grid x:Name="sampleLayout">
+    	<Grid.RowDefinitions>
+        	<RowDefinition Height="Auto"/>
+        	<RowDefinition Height="Auto" x:Name="moviePic"/>
+        	<RowDefinition Height="*"/>
+        	<RowDefinition Height="Auto"/>
+      	</Grid.RowDefinitions>
+      	<Label WidthRequest="300" x:Name="title"  FontSize="20" Text="Movie Rating" HorizontalOptions="Start" />
+      	<Grid x:Name="mainGrid" Grid.Row="1" >
+        	<Grid.ColumnDefinitions >
+          		<ColumnDefinition Width="Auto" x:Name="column1"/>
+          		<ColumnDefinition Width="2*" x:Name="column2" />
+        	</Grid.ColumnDefinitions>
+        	<Image WidthRequest="150"  x:Name="movieImage" HeightRequest="150" Source="movie.png" Aspect="Fill"/>
+        	<StackLayout x:Name="descStack" Orientation="Vertical" Grid.Column="1" Padding="0,0,0,10">
+          		<Label   FontSize="18" Text="The Walk ( 2015 )" HorizontalOptions="Start" />
+          		<StackLayout Orientation="Vertical">
+            		<Label x:Name="time"   FontSize="10" Text="PG | 2h 20min" HorizontalOptions="Start" />
+            		<rating:SfRating x:Name="sfRating1"  ItemSize="25" Precision="Exact" HorizontalOptions="Start" Value="3.5" ReadOnly="true"  ItemSpacing="0" ItemCount="5" TooltipPlacement="None"/>
+          		</StackLayout>
+          			<Label   x:Name="description" FontSize="14"  HorizontalOptions="Start" >
+            			In 1973, French street performer Philippe Petit is trying to make a living in Paris with juggling acts and wire walking, much to the chagrin of his father. During one performance, he eats a hard candy which was given to him by an audience member and injures his tooth.
+          			</Label>
+
+        	</StackLayout>
+      	</Grid>
+      	<StackLayout x:Name="bottomStack" Orientation="Vertical" Grid.Row="2" Padding="0,20,0,20">
+        	<Label    FontSize="17" Text="Rate" HorizontalOptions="Start" />
+
+        	<rating:SfRating x:Name="sfRating2" ItemSize="30"  Precision="Standard"  HorizontalOptions="FillAndExpand" Value="3" ReadOnly="false"  ItemCount="5" ItemSpacing="10"  TooltipPrecision="0" TooltipPlacement="None"/>
+
+        	<StackLayout x:Name="ratingValueLayout" Orientation="Horizontal">
+          		<Label    FontSize="15" Text="Rating:" HorizontalOptions="Start" />
+          		<Label   x:Name="showValue" Text="3/5"  FontSize="15" HorizontalOptions="Start" />
+        	</StackLayout>
+      	</StackLayout>
+    </Grid>
+            </ScrollView>
+  </local:SampleView.Content>
+
+  <local:SampleView.PropertyView>
+    <StackLayout Orientation="Vertical" x:Name="optionLayout">
+      <StackLayout Orientation="Vertical" Padding="10, 10, 0, 30">
+      <Label  TextColor="#282828" Text="Precision"    VerticalOptions ="Center" HorizontalOptions ="Start"  FontFamily="Helvetica" FontSize="16" />
+      <Picker x:Name="precisionPicker" />
+        </StackLayout>
+      <Grid  Padding="10, 10, 0, 40">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="2*"/>
+          <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Label  TextColor="#282828" x:Name="toolTipLabel"  Text="Show Tooltip"    VerticalOptions ="Center" HorizontalOptions ="Start"  FontFamily="Helvetica" FontSize="16" />
+        <Switch x:Name="toolTipPlacementOption" HorizontalOptions ="End" WidthRequest ="150"  VerticalOptions ="Center"/>
+      </Grid>
+      <Grid  Padding="10, 10, 0, 40">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="2*"/>
+          <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Label  TextColor="#282828" x:Name="itemCountLabel"  Text="Items Count"    VerticalOptions ="CenterAndExpand" HorizontalOptions ="Start"  FontFamily="Helvetica" FontSize="16" />
+        <numeric:SfNumericUpDown x:Name="itemCount" MaximumDecimalDigits="0" FormatString="n" IsEditable="false" Value="5" StepValue="1" Minimum="2" Maximum="8" HorizontalOptions ="End" WidthRequest ="150" VerticalOptions ="Center"/>
+      </Grid>
+    </StackLayout>
+  </local:SampleView.PropertyView>
+
+
+</local:SampleView>
+

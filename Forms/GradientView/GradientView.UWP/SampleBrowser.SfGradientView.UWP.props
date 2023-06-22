@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ItemGroup>
+   <Content Include="$(MSBuildThisFileDirectory)\Assets\Font Gradient.ttf" >
+      <Link>Assets\Font Gradient.ttf</Link>
+    </Content>
+  </ItemGroup>
+</Project>
