@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfDataGrid.Sorting"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.SfDataGrid"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:sfgrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms">
+
+  <sample:SampleView.Behaviors>
+    <local:SortingBehaviors/>
+  </sample:SampleView.Behaviors>
+
+    <sample:SampleView.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="minimumWidth"
+                        x:TypeArguments="x:Double">
+                <On Platform="Android,UWP,iOS,WPF">
+                    <OnIdiom x:TypeArguments="x:Double"
+                             Phone="90"
+                             Tablet="20"/>
+                </On>
+            </OnPlatform>
+            <OnPlatform x:Key="width"
+                        x:TypeArguments="x:Double">
+                <On Platform="Android,UWP,iOS,WPF">
+                    <OnIdiom x:TypeArguments="x:Double"
+                             Phone="0"
+                             Tablet="NaN"
+                             Desktop="NaN" />
+                </On>
+                <On Platform="macOS">
+                    <OnIdiom x:TypeArguments="x:Double"
+                             Desktop="NaN"/>
+                </On>
+            </OnPlatform>
+            <OnPlatform x:Key="headerText"
+                        x:TypeArguments="x:String">
+                <On Platform="Android,UWP,iOS,WPF">
+                    <OnIdiom x:TypeArguments="x:String"
+                             Phone="Product"
+                             Tablet="Product Name"/>
+                </On>
+            </OnPlatform>
+            <OnPlatform x:Key="opacity"
+                      x:TypeArguments="x:Double">
+                <On Platform="iOS,Android" Value="87" />
+                <On Platform="UWP,WPF" Value="80" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="padding"
+                   x:TypeArguments="Thickness">
+                <On Platform="Android,iOS" Value="8, 12, 8, 12" />
+                <On Platform="UWP,WPF" Value="8, 12, 8, 16" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="textSize"
+                  x:TypeArguments="x:Double">
+                <On Platform="iOS,UWP,WPF" Value="14" />
+                <On Platform="Android" Value="13" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="font"
+                  x:TypeArguments="x:String">
+                <On Platform="Android" Value="Roboto-Regular" />
+                <On Platform="iOS" Value="SFProText-Regular" />
+                <On Platform="UWP,WPF" Value="SegoeUI" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="rowHeight" x:TypeArguments="x:Double">
+                <On Platform="Android,iOS,UWP,macOS" Value="48"/>
+                <On Platform="WPF" Value="30" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="headerHeight" x:TypeArguments="x:Double">
+                <On Platform="Android,iOS,UWP,macOS" Value="52"/>
+                <On Platform="WPF" Value="36" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </sample:SampleView.Resources>
+
+    <sample:SampleView.BindingContext>
+        <local:SortingViewModel x:Name="viewModel" />
+    </sample:SampleView.BindingContext>
+
+  <sample:SampleView.Content>
+        <sfgrid:SfDataGrid x:Name="dataGrid"
+                           AllowSorting="True"
+                           ItemsSource="{Binding Products}"
+                           AutoGenerateColumns="false"
+                           ColumnSizer="Star"
+                           GridStyle="{local:DefaultStyle}"
+                           HeaderRowHeight="{StaticResource headerHeight}"
+                           RowHeight="{StaticResource rowHeight}"
+                           SelectionMode="Single"
+                           VerticalOverScrollMode="None">
+
+            <sfgrid:SfDataGrid.SortColumnDescriptions>
+                <sfgrid:SortColumnDescription ColumnName="ProductID" SortDirection="Descending" />
+            </sfgrid:SfDataGrid.SortColumnDescriptions>
+
+            <sfgrid:SfDataGrid.Columns>
+                <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                       HeaderText="Product ID"
+                                       HeaderTextAlignment="Start"
+                                       LineBreakMode="TailTruncation"
+                                       MappingName="ProductID"
+                                       Padding="5,0,5,0"
+                                       MinimumWidth="{StaticResource minimumWidth}"
+                                       HeaderCellTextSize="{StaticResource textSize}"
+                                       CellTextSize="{StaticResource textSize}"
+                                       TextAlignment="End">
+                </sfgrid:GridTextColumn>
+                <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                       HeaderText="Product"
+                                       HeaderTextAlignment="Start"
+                                       LineBreakMode="TailTruncation"
+                                       MappingName="ProductName"
+                                       Padding="5,0,5,0"
+                                       MinimumWidth="{StaticResource minimumWidth}"
+                                       HeaderCellTextSize="{StaticResource textSize}"
+                                       CellTextSize="{StaticResource textSize}"
+                                       TextAlignment="Start">
+                </sfgrid:GridTextColumn>
+
+                <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                       HeaderText="Supplier ID"
+                                       HeaderTextAlignment="Start"
+                                       LineBreakMode="TailTruncation"
+                                       MappingName="SupplierID"
+                                       Padding="5,0,5,0"
+                                       Width="{StaticResource width}"
+                                       HeaderCellTextSize="{StaticResource textSize}"
+                                       CellTextSize="{StaticResource textSize}"
+                                       TextAlignment="End">
+                </sfgrid:GridTextColumn>
+
+                <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                       HeaderText="Quantity"
+                                       HeaderTextAlignment="Start"
+                                       LineBreakMode="TailTruncation"
+                                       MappingName="Quantity"
+                                       Padding="5,0,5,0"
+                                       HeaderCellTextSize="{StaticResource textSize}"
+                                       MinimumWidth="{StaticResource minimumWidth}"
+                                       CellTextSize="{StaticResource textSize}"
+                                       TextAlignment="End">
+                </sfgrid:GridTextColumn>
+                <sfgrid:GridTextColumn Format="C"
+                                       HeaderFontAttribute="Bold"
+                                       HeaderText="Unit Price"
+                                       HeaderTextAlignment="Start"
+                                       LineBreakMode="TailTruncation"
+                                       MappingName="UnitPrice"
+                                       Padding="5,0,5,0"
+                                       TextAlignment="End"
+                                       MinimumWidth="{StaticResource minimumWidth}"
+                                       HeaderCellTextSize="{StaticResource textSize}"
+                                       CellTextSize="{StaticResource textSize}">
+                </sfgrid:GridTextColumn>
+
+            </sfgrid:SfDataGrid.Columns>
+        </sfgrid:SfDataGrid>
+    </sample:SampleView.Content>
+  
+    <sample:SampleView.PropertyView>
+        <Grid ColumnSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+          
+            <Grid.Padding>
+                <OnPlatform x:TypeArguments="Thickness"
+                            Android="30, 0, 0, 0"
+                            WinPhone="0"
+                            iOS="30, 0, 0, 0" />
+            </Grid.Padding>
+
+            <Switch x:Name="switch1" HorizontalOptions="Center" VerticalOptions="Center" IsToggled="True" Grid.Column="1" Grid.Row="0"></Switch>
+            <Label x:Name="label1"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   FontSize="15"
+                   HorizontalOptions="Start"
+                   Text="Allow Sorting"
+                   VerticalOptions="Center" />
+        
+            <Switch x:Name="switch2" HorizontalOptions="Center" VerticalOptions="Center" IsToggled="False" Grid.Column="1" Grid.Row="1"></Switch>
+            <Label x:Name="label2"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   FontSize="15"
+                   HorizontalOptions="Start"
+                   Text="Allow TriState Sorting"
+                   VerticalOptions="Center" />
+        
+            <Switch x:Name="switch3" HorizontalOptions="Center" VerticalOptions="Center" IsToggled="False" Grid.Column="1" Grid.Row="2"></Switch>
+            <Label x:Name="label3"
+                   Grid.Row="2"
+                   Grid.Column="0"
+                   FontSize="15"
+                   HorizontalOptions="Start"
+                   Text="Allow Multi-Sorting"
+                   VerticalOptions="Center" />  
+  
+            <Switch x:Name="switch4" HorizontalOptions="Center" VerticalOptions="Center" IsToggled="True" Grid.Column="1" Grid.Row="3"></Switch>
+            <Label x:Name="label4"
+                   Grid.Row="3"
+                   Grid.Column="0"
+                   FontSize="15"
+                   HorizontalOptions="Start"
+                   Text="Allow Sorting For Product"
+                   VerticalOptions="Center" />    
+    
+        </Grid>
+    </sample:SampleView.PropertyView>
+
+</sample:SampleView>

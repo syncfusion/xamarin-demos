@@ -1,0 +1,8 @@
+﻿
+<Project>
+  <ItemGroup>
+   <Content Include="$(MSBuildThisFileDirectory)\Assets\BadgeViewFont.ttf" >
+      <Link>Assets\BadgeViewFont.ttf</Link>
+    </Content>
+  </ItemGroup>
+</Project>

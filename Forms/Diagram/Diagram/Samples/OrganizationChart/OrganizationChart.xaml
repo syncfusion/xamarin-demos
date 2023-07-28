@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="SampleBrowser.SfDiagram.OrganizationChart"
+        xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+        xmlns:sfdiagram="clr-namespace:Syncfusion.SfDiagram.XForms;assembly=Syncfusion.SfDiagram.XForms"
+    xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfDiagram"
+             >
+
+    <local:SampleView.Content>
+        <Grid x:Name="parent"  BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" >
+                <sfdiagram:SfDiagram x:Name="diagram" >
+                </sfdiagram:SfDiagram>
+            </Grid>
+            <Grid x:Name="OverviewPanel" Grid.Row="1"  BackgroundColor="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition  Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <sfdiagram:OverviewPanel x:Name="overview" Grid.Column="1">
+                </sfdiagram:OverviewPanel>
+            </Grid>
+        </Grid>
+    </local:SampleView.Content>
+    <local:SampleView.PropertyView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Switch x:Name="overviewSwitch" Grid.Column="1" Grid.Row="1" HorizontalOptions="EndAndExpand"  HeightRequest="35" IsToggled="True"  Toggled="overview_Toggled" />
+            <Label x:Name="LayoutTextLabel" Grid.Column="0" Grid.Row="1" Text="Enable Overview" HorizontalOptions="Start"   />
+            <Switch x:Name="LayoutNodeDrag" Grid.Column="1" Grid.Row="0" HorizontalOptions="EndAndExpand"  HeightRequest="35"  Toggled="LayoutNodeDrag_Toggled" />
+            <Label x:Name="LayoutNodeDragLabel" Grid.Column="0" Grid.Row="0" Text="Change Hierarchy" HorizontalOptions="Start"/>
+        </Grid>
+    </local:SampleView.PropertyView>
+</local:SampleView>

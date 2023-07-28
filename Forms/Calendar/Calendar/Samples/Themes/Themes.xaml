@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:samplelocal="clr-namespace:SampleBrowser.SfCalendar"
+             xmlns:CalendarSample="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms"  
+             x:Class="SampleBrowser.SfCalendar.Themes">
+     <local:SampleView.BindingContext>
+        <samplelocal:ThemesViewModel />
+    </local:SampleView.BindingContext>
+    <local:SampleView.Content>
+
+        <Grid x:Name="grid">
+            <CalendarSample:SfCalendar x:Name="calendar" 
+                                   DataSource="{Binding Appointments}"
+                                   BlackoutDates="{Binding BlackoutDates}"
+                                   VerticalOptions="FillAndExpand" 
+                                   HorizontalOptions="FillAndExpand"
+                                   ShowInlineEvents="true"
+                                   InlineViewMode="Agenda"
+                                   >
+                <CalendarSample:SfCalendar.MonthViewSettings>
+                    <CalendarSample:MonthViewSettings SelectionShape="Fill"/>
+                </CalendarSample:SfCalendar.MonthViewSettings>
+            </CalendarSample:SfCalendar>
+        </Grid>
+    </local:SampleView.Content>
+
+    <local:SampleView.Behaviors>
+        <samplelocal:CalendarThemesBehavior />
+    </local:SampleView.Behaviors>
+
+</local:SampleView>

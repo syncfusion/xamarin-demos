@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"                 
+                  x:Class="SampleBrowser.SfButton.Themes">
+    <local:SampleView.Content>
+        <Grid Padding="0,100,0,0">
+            <syncfusion:SfButton x:Name="leftAlignButton"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Start"
+                                 Text="Button" 
+                                 FontSize="16"
+                                 BorderWidth="1"
+                                 CornerRadius="0"  >
+            </syncfusion:SfButton>
+        </Grid>
+    </local:SampleView.Content>
+</local:SampleView>

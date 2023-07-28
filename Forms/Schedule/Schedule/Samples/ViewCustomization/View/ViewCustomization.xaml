@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView
+    x:Class="SampleBrowser.SfSchedule.ViewCustomization"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:samplelocal="clr-namespace:SampleBrowser.SfSchedule"
+    xmlns:schedule="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.SfSchedule.XForms">
+
+    <local:SampleView.Resources>
+        <ResourceDictionary>
+            <samplelocal:AppointmentDataTemplateSelector x:Key="appointmentDataTemplateSelector" />
+            <samplelocal:MonthCellDataTemplateSelector x:Key="monthCellDataTemplateSelector" />
+            <samplelocal:AgendaViewItemTemplateSelector x:Key="agendaViewItemTemplateSelector"/>
+        </ResourceDictionary>
+    </local:SampleView.Resources>
+
+    <local:SampleView.Content>
+        <Grid x:Name="grid_layout">
+            <Grid.BindingContext>
+          <samplelocal:CustomizationViewModel />
+        </Grid.BindingContext>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.9*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" BackgroundColor="#F7F7F7">
+                <Label
+                    x:Name="month_label"
+                    Margin="20,0,0,0"
+                    BackgroundColor="#F7F7F7"
+                    FontSize="20"
+                    Text="{Binding HeaderLabelValue}"
+                    TextColor="Black"
+                    VerticalOptions="Center" />
+            </Grid>
+          <schedule:SfSchedule BindingContext="{Binding}" HeaderHeight="0" Margin="0,-10,0,0"
+              x:Name="Schedule" ShowAppointmentsInline="True"
+              ScheduleView="MonthView"
+              Grid.Row="1" DataSource="{Binding Appointments}"
+              AppointmentTemplate="{StaticResource appointmentDataTemplateSelector}" 
+              HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand" >
+                <schedule:SfSchedule.AppointmentStyle>
+                    <schedule:AppointmentStyle SelectionTextColor="Black" />
+                </schedule:SfSchedule.AppointmentStyle>
+            <schedule:SfSchedule.DayViewSettings>
+              <schedule:DayViewSettings
+                   WorkStartHour="7"
+                   WorkEndHour="18">
+              </schedule:DayViewSettings>
+            </schedule:SfSchedule.DayViewSettings>
+            <schedule:SfSchedule.MonthViewSettings>
+              <schedule:MonthViewSettings x:Name="monthViewSettings"
+              MonthCellTemplate="{StaticResource monthCellDataTemplateSelector}" AgendaItemTemplate="{StaticResource agendaViewItemTemplateSelector}" />
+            </schedule:SfSchedule.MonthViewSettings>
+            <schedule:SfSchedule.Behaviors>
+              <samplelocal:CustomViewBehavior />
+            </schedule:SfSchedule.Behaviors>
+          </schedule:SfSchedule>
+        </Grid>
+    </local:SampleView.Content>
+  <local:SampleView.PropertyView>
+    <Grid  BackgroundColor="White"
+    HorizontalOptions="FillAndExpand"
+    VerticalOptions="FillAndExpand">
+
+      <Grid.RowDefinitions>
+        <RowDefinition Height="0.2*"/>
+        <RowDefinition Height="*"/>
+      </Grid.RowDefinitions>
+
+      <Label
+         Grid.Row="0"
+         x:Name="scheduleViewLabel"
+         Text="Change the view type"
+             FontSize="15"
+         TextColor="Gray" />
+
+      <Picker
+       x:Name="viewPicker"
+               Grid.Row="1" 
+        VerticalOptions="Start"
+               HorizontalOptions="FillAndExpand">
+
+        <Picker.Items>
+          <x:String>Day View</x:String>
+          <x:String>Week View</x:String>
+          <x:String>Work Week View</x:String>
+          <x:String>Month View</x:String>
+          <x:String>Timeline View</x:String>
+        </Picker.Items>
+      </Picker>
+    </Grid>
+  </local:SampleView.PropertyView>
+  <local:SampleView.Behaviors>
+    <samplelocal:SetScheduleViewBehavior/>
+  </local:SampleView.Behaviors>
+</local:SampleView>

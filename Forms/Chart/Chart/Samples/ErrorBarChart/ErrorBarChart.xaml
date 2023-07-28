@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+    xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.ErrorBarChart" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart"
+    xmlns:sampleBrowser1="clr-namespace:SampleBrowser.SfChart.Samples.ErrorBarChart">
+    <local:SampleView.BindingContext>
+        <sampleBrowser1:ErrorBarSeriesViewModel />
+    </local:SampleView.BindingContext>
+    <local:SampleView.Content>
+        <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <chart:SfChart.Margin>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="3,3,3,3" />
+            </chart:SfChart.Margin>
+
+            <chart:SfChart.Title>
+                <chart:ChartTitle Text="Car Sales by Region"/>
+            </chart:SfChart.Title>
+            <chart:SfChart.PrimaryAxis>
+                <chart:CategoryAxis ShowMajorGridLines="false" LabelPlacement="BetweenTicks" >
+                    <chart:CategoryAxis.MajorTickStyle>
+                        <chart:ChartAxisTickStyle TickSize="10">
+                        </chart:ChartAxisTickStyle>
+                    </chart:CategoryAxis.MajorTickStyle>
+                </chart:CategoryAxis>
+            </chart:SfChart.PrimaryAxis>
+            <chart:SfChart.SecondaryAxis>
+                <chart:NumericalAxis Minimum="15" IsVisible="True" Interval="5" >
+                    <chart:NumericalAxis.LabelStyle>
+                        <chart:ChartAxisLabelStyle x:Name="secondaryAxisLabelStyle" />
+                    </chart:NumericalAxis.LabelStyle>
+                    <chart:NumericalAxis.AxisLineStyle>
+                        <chart:ChartLineStyle StrokeWidth="0"/>
+                    </chart:NumericalAxis.AxisLineStyle>
+                </chart:NumericalAxis>
+            </chart:SfChart.SecondaryAxis>
+            <chart:SfChart.Series>
+                <chart:ErrorBarSeries x:Name="Series" ItemsSource="{Binding ErrorBarSeriesData}" XBindingPath="Name" YBindingPath="Value" HorizontalErrorValue="3" VerticalErrorValue="3" Type="Fixed" Mode="Vertical" HorizontalDirection="Both" VerticalDirection="Both" HorizontalErrorPath="High" VerticalErrorPath="Low">
+                </chart:ErrorBarSeries>
+                <chart:ScatterSeries ItemsSource="{Binding ErrorBarSeriesData}" XBindingPath="Name" YBindingPath="Value" ScatterHeight="20" ScatterWidth="20" ShapeType="Ellipse">
+                    <chart:ScatterSeries.ColorModel>
+                        <chart:ChartColorModel Palette="Natural" />
+                    </chart:ScatterSeries.ColorModel>
+                </chart:ScatterSeries>
+            </chart:SfChart.Series>
+        </chart:SfChart>
+    </local:SampleView.Content>
+    <local:SampleView.PropertyView>
+        <StackLayout HeightRequest="600">
+            <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="20,20,20,20" />
+            </StackLayout.Padding>
+            <StackLayout.WidthRequest>
+                <OnPlatform x:TypeArguments="x:Double" WinPhone="200" />
+            </StackLayout.WidthRequest>
+            <StackLayout.HorizontalOptions>
+                <OnPlatform x:TypeArguments="LayoutOptions" iOS="FillAndExpand" Android="FillAndExpand" WinPhone="Center" />
+            </StackLayout.HorizontalOptions>
+            <StackLayout.VerticalOptions>
+                <OnPlatform x:TypeArguments="LayoutOptions" iOS="FillAndExpand" Android="FillAndExpand" WinPhone="Center" />
+            </StackLayout.VerticalOptions>
+
+            <Label  VerticalOptions="Center" Text="Error Bar Type"/>
+            <Picker Margin="0,0,0,15" HorizontalOptions="FillAndExpand" VerticalOptions="Center" x:Name="ErrorBarTypeValue" WidthRequest="400">
+                <Picker.Items>
+                    <x:String>Fixed</x:String>
+                    <x:String>Percentage</x:String>
+                    <x:String>StandardDeviation</x:String>
+                    <x:String>StandardError</x:String>
+                    <x:String>Custom</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label  VerticalOptions="Center" Text="Drawing Mode"/>
+            <Picker Margin="0,0,0,15" HorizontalOptions="FillAndExpand" VerticalOptions="Center" x:Name="ErrorBarDrawingModeValue" WidthRequest="400">
+                <Picker.Items>
+                    <x:String>Both</x:String>
+                    <x:String>Horizontal</x:String>
+                    <x:String>Vertical</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label  x:Name="HorizontalError" VerticalOptions="Center" Text="Horizontal Error : " />
+            <Slider Margin="0,0,0,15" x:Name="HorizontalErrorValue" Maximum="3" Minimum="0" VerticalOptions="Center" Value="3.0" ValueChanged="Horizontal_ValueChanged" />
+
+            <Label  x:Name="VerticalError" VerticalOptions="Center" Text="Vertical Error : " />
+            <Slider Margin="0,0,0,15" x:Name="VerticalErrorValue" Maximum="3" Minimum="0" VerticalOptions="Center" Value="3.0" ValueChanged="Vertical_ValueChanged" />
+
+            <Label VerticalOptions="Center" Text="Horizontal Direction"/>
+            <Picker Margin="0,0,0,15" HorizontalOptions="FillAndExpand" VerticalOptions="Center" x:Name="HorizontalDirectionValue" WidthRequest="400">
+                <Picker.Items>
+                    <x:String>Both</x:String>
+                    <x:String>Minus</x:String>
+                    <x:String>Plus</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label VerticalOptions="Center" Text="Vertical Direction"/>
+            <Picker HorizontalOptions="FillAndExpand" VerticalOptions="Center" x:Name="VerticalDirectionValue" WidthRequest="400">
+                <Picker.Items>
+                    <x:String>Both</x:String>
+                    <x:String>Minus</x:String>
+                    <x:String>Plus</x:String>
+                </Picker.Items>
+            </Picker>
+        </StackLayout>
+    </local:SampleView.PropertyView>
+</local:SampleView>

@@ -1,0 +1,133 @@
+<Project >
+    
+    <ItemGroup>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml" >
+            <Link>Samples\DataForm\SamplesList\SamplesList.xml</Link>
+        </EmbeddedResource>
+    </ItemGroup>
+    
+    <ItemGroup>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\ContactForm\ContactForm.xaml.cs">
+            <DependentUpon>ContactForm.xaml</DependentUpon>
+            <Link>Samples\DataForm\Samples\Samples\ContactForm\ContactForm.xaml.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\ContactForm\Helpers\ContactFormBehaviors.cs" >
+            <Link>Samples\DataForm\Samples\ContactForm\Helpers\ContactFormBehaviors.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\ContactForm\Helpers\FloatingActionButtonImage.cs" >
+            <Link>Samples\DataForm\Samples\ContactForm\Helpers\FloatingActionButtonImage.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\ContactForm\Helpers\ListViewBehavior.cs" >
+            <Link>Samples\DataForm\Samples\ContactForm\Helpers\ListViewBehavior.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\ContactForm\Helpers\SfDataFormBehavior.cs" >
+            <Link>Samples\DataForm\Samples\ContactForm\Helpers\SfDataFormBehavior.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\ContactForm\Model\ContactInfo.cs" >
+            <Link>Samples\DataForm\Samples\ContactForm\Model\ContactInfo.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\ContactForm\ViewModel\ContactsInfoRepository.cs" >
+            <Link>Samples\DataForm\Samples\ContactForm\ViewModel\ContactsInfoRepository.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\ContactForm\ViewModel\ContactListViewModel.cs" >
+            <Link>Samples\DataForm\Samples\ContactForm\ViewModel\ContactListViewModel.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\ContactForm\View\DataFormPage.xaml.cs">
+            <DependentUpon>DataFormPage.xaml</DependentUpon>
+            <Link>Samples\DataForm\Samples\ContactForm\View\DataFormPage.xaml.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\GettingStarted.xaml.cs">
+            <DependentUpon>GettingStarted.xaml</DependentUpon>
+            <Link>Samples\DataForm\Samples\GettingStarted\GettingStarted.xaml.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\ContactForm\Helpers\DataFormLayoutManagerExt.cs" >
+            <Link>Samples\DataForm\Samples\ContactForm\Helpers\DataFormLayoutManagerExt.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\Helpers\SfDataFormGettingStartedBehavior.cs" >
+            <Link>Samples\DataForm\Samples\GettingStarted\Helpers\SfDataFormGettingStartedBehavior.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\Model\RecipientInfo.cs" >
+            <Link>Samples\DataForm\Samples\GettingStarted\Model\RecipientInfo.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\ViewModel\RecipientInfoViewModel.cs" >
+            <Link>Samples\DataForm\Samples\GettingStarted\ViewModel\RecipientInfoViewModel.cs</Link>
+        </Compile>
+    </ItemGroup>
+    
+    <ItemGroup>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\GettingStarted.xaml">
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+            <Link>Samples\DataForm\Samples\GettingStarted\GettingStarted.xaml</Link>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ContactForm\ContactForm.xaml">
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+            <Link>Samples\DataForm\Samples\ContactForm\ContactForm.xaml</Link>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ContactForm\View\DataFormPage.xaml">
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+            <Link>Samples\DataForm\Samples\ContactForm\View\DataFormPage.xaml</Link>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+    </ItemGroup>
+    
+    
+
+    <ItemGroup>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Model\EmployeeInfo.cs" >
+            <Link>Samples\DataForm\Samples\Themes\Model\EmployeeInfo.cs</Link>
+        </Compile>
+         <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\ViewModel\ThemesViewModel.cs" >
+            <Link>Samples\DataForm\Samples\Themes\ViewModel\ThemesViewModel.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Helpers\SfDataFormThemesBehavior.cs" >
+            <Link>Samples\DataForm\Samples\Themes\Helpers\SfDataFormThemesBehavior.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml.cs">
+            <DependentUpon>Themes.xaml</DependentUpon>
+            <Link>Samples\DataForm\Samples\Themes\Themes.xaml.cs</Link>
+        </Compile>
+         <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml">
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+            <Link>Samples\DataForm\Samples\Themes\Themes.xaml</Link>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+    </ItemGroup>
+	
+	 <ItemGroup>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\DynamicFormPage\Helper\DynamicFormBehavior.cs" >
+            <Link>Samples\DataForm\Samples\DynamicFormPage\Helper\DynamicFormBehavior.cs</Link>
+        </Compile>
+		<Compile Include="$(MSBuildThisFileDirectory)\Samples\DynamicFormPage\Helper\SfDataFormDynamicFormBehavior.cs" >
+            <Link>Samples\DataForm\Samples\DynamicFormPage\Helper\SfDataFormDynamicFormBehavior.cs</Link>
+        </Compile>
+		<Compile Include="$(MSBuildThisFileDirectory)\Samples\DynamicFormPage\Helper\SourceProviderExt.cs" >
+            <Link>Samples\DataForm\Samples\DynamicFormPage\Helper\SourceProviderExt.cs</Link>
+        </Compile>
+		<Compile Include="$(MSBuildThisFileDirectory)\Samples\DynamicFormPage\Model\Ecommerce.cs" >
+            <Link>Samples\DataForm\Samples\DynamicFormPage\Model\Ecommerce.cs</Link>
+        </Compile>
+     <Compile Include="$(MSBuildThisFileDirectory)\Samples\DynamicFormPage\Model\EmployeeForm.cs" >
+       <Link>Samples\DataForm\Samples\DynamicFormPage\Model\EmployeeForm.cs</Link>
+     </Compile>
+     <Compile Include="$(MSBuildThisFileDirectory)\Samples\DynamicFormPage\Model\OrganizationForm.cs" >
+       <Link>Samples\DataForm\Samples\DynamicFormPage\Model\OrganizationForm.cs</Link>
+     </Compile>
+		<Compile Include="$(MSBuildThisFileDirectory)\Samples\DynamicFormPage\ViewModel\ViewModel.cs" >
+            <Link>Samples\DataForm\Samples\DynamicFormPage\ViewModel\ViewModel.cs</Link>
+        </Compile>
+        <Compile Include="$(MSBuildThisFileDirectory)\Samples\DynamicFormPage\View\DynamicFormPage.xaml.cs">
+            <DependentUpon>DynamicFormPage.xaml</DependentUpon>
+            <Link>Samples\DataForm\Samples\DynamicFormPage\View\DynamicFormPage.xaml.cs</Link>
+        </Compile>
+         <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DynamicFormPage\View\DynamicFormPage.xaml">
+            <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+            <Link>Samples\DataForm\Samples\DynamicFormPage\View\DynamicFormPage.xaml</Link>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+    </ItemGroup>
+
+</Project>
+
+

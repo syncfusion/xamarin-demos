@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Samples>
+  <Sample Platforms="All" Icon = "ListGettingStarted.png" Title = "Getting Started" Name = "GettingStarted"
+            Description = "This sample illustrates about getting started with ListView by loading a set of data items with predefined template." />
+  <Sample Platforms="Android,iOS,UWP,WPF" Icon = "ListGridLayout.png" Title = "Grid Layout" Name = "GridLayout"
+            Description = "This sample showcases the grid layout which arranges the items in a predefined number of columns." />
+  <Sample Platforms="All" Icon = "ListGrouping.png" Title = "Grouping" Name = "Grouping"
+            Description = "This sample showcases the grouping capability of ListView which also provides support to freeze the group headers in view when grouped." />
+  <Sample Platforms="All" Icon = "ListSelection.png" Title = "Selection" Name = "Selection"
+            Description = "This sample showcases the selection capability of ListView which provides selection mode options like Single, Multiple and None." />
+  <Sample Platforms="All" Icon = "ListOrientation.png" Title = "Horizontal Orientation" Name = "Orientation"
+            Description = "This sample showcases the horizontal orientation support in ListView where the items are arranged in a horizontal manner." />
+  <Sample Platforms="Android,iOS,UWP,macOS" Icon = "ListSwiping.png" Title = "Swiping" Name = "Swiping"
+            Description = "This sample showcases the swiping functionalities of ListView which allows you to load the swipe views and associate them with custom actions." />
+  <Sample Platforms="Android,iOS,UWP" Icon = "ListItemReordering.png" Title = "Item Reordering" Name = "ItemReordering"
+            Description = "This sample showcases the item reordering by drag and drop on either long press or from drag indicator." />
+  <Sample Platforms="Android,iOS,UWP" Icon = "ListPullToRefresh.png" Title = "Pull To Refresh" Name = "PullToRefresh"
+            Description = "This sample showcases the pull-to-refresh capability of ListView which allows you to refresh the data source upon pull-to-refresh action." />
+  <Sample Platforms="Android,iOS,UWP" Icon = "ListLoadMore.png" Title = "Load More" Name = "LoadMore"
+            Description = "This sample showcases the loading more items automatically when end of the list is reached on scrolling." />
+  <Sample Platforms="All" Icon = "ListAutofitItems.png" Title = "Autofit Items" Name = "AutoFitContent"
+            Description = "This sample showcases the autofit feature of ListView which automatically re-size the items based on its content dynamically." />
+  <Sample Platforms="Android,iOS,UWP" Icon = "ListDataTemplateSelector.png" Title = "Data Template Selector" Name = "DataTemplateSelector"
+            Description = "This sample showcases the template selector feature of ListView which displays incoming and outgoing messsage on different template." />
+  <Sample Platforms="All" Icon = "ListFiltering.png" Title = "Sorting and Filtering" Name = "SortingFiltering"
+            Description = "This sample showcases the sorting and filtering capabilities of ListView." />
+  <Sample Platforms="Android,iOS,UWP" Icon = "ListPaging.png" Title = "Paging" Name = "Paging"
+            Description = "This sample showcases the paging capabilities of ListView using SfDataPager which allows you to load the data from the data source in an efficient way." />
+  <Sample Platforms="All" Icon = "ListPaging.png" Title = "Expandable View" Name = "Accordion"
+            Description = "This sample showcases the Expandable view using SfListView which expand or collapse when tapped over the list item." />
+</Samples>
