@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:id="@+id/linearView">
+
+    <LinearLayout
+        android:id="@+id/stampTitlebar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:background="#F6F6F6">
+        <Button
+            android:id="@+id/backButton"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="&#xE709;"
+            android:textSize="36dp"
+            android:textColor="#808080" />
+        <FrameLayout
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:minWidth="25px"
+            android:minHeight="25px">
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="20dip"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="CHOOSE STAMP"
+                android:id="@+id/title" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:orientation="horizontal" 
+        android:id="@+id/linearLayout1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout"
+            android:layout_weight="1"
+            android:layout_height="match_parent" 
+            android:paddingLeft="15dip"
+            android:paddingTop="20dip"
+            >
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="70dip"
+                android:src="@drawable/Approved"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:id="@+id/approved"/>
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="70dip"
+                android:src="@drawable/Draft"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:id="@+id/draft"/>
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="70dip"
+                android:src="@drawable/NotApproved"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:id="@+id/notapproved"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:paddingTop="20dip">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="70dip"
+                android:src="@drawable/Confidential"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:id="@+id/confidential"/>
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="70dip"
+                android:src="@drawable/Expired"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:id="@+id/expired"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:background="#F6F6F6">
+        <FrameLayout
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:minWidth="25px"
+            android:minHeight="25px">
+            <Button
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="20dip"
+                android:textSize="16dp"
+                android:text="Close"
+                android:id="@+id/closeBtn" />
+        </FrameLayout>
+    </LinearLayout>
+   </LinearLayout>
+</FrameLayout>

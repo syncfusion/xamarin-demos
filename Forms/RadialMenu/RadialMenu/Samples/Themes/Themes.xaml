@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:radialMenu="clr-namespace:Syncfusion.SfRadialMenu.XForms;assembly=Syncfusion.SfRadialMenu.XForms" x:Class="SampleBrowser.SfRadialMenu.Themes">
+   <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <radialMenu:SfRadialMenu x:Name="radial_Menu" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" CenterButtonText="" CenterButtonBackText="" CenterButtonRadius="32" EnableCenterButtonAnimation="false" SeparatorThickness="1">
+                <radialMenu:SfRadialMenu.CenterButtonFontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="radialmenu_Segoe MDL2 Assets.ttf">
+                        </On>
+                    <On Platform="UWP" Value="radialmenu_Segoe_MDL2_Assets.ttf#Segoe MDL2 Assets">
+                        </On>
+                        <On Platform="iOS" Value="Segoe MDL2 Assets">
+                        </On>
+                    </OnPlatform>
+                </radialMenu:SfRadialMenu.CenterButtonFontFamily>
+                <radialMenu:SfRadialMenu.CenterButtonBackFontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="radialmenu_Segoe MDL2 Assets.ttf">
+                        </On>
+                    <On Platform="UWP" Value="radialmenu_Segoe_MDL2_Assets.ttf#Segoe MDL2 Assets">
+                        </On>
+                        <On Platform="iOS" Value="Segoe MDL2 Assets">
+                        </On>
+                    </OnPlatform>
+                </radialMenu:SfRadialMenu.CenterButtonBackFontFamily>
+                <radialMenu:SfRadialMenu.Items>
+                    <radialMenu:SfRadialMenuItem FontIconText="">
+                        <radialMenu:SfRadialMenuItem.IconFontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="Android" Value="radialmenu_Segoe MDL2 Assets.ttf">
+                                </On>
+                            <On Platform="UWP" Value="radialmenu_Segoe_MDL2_Assets.ttf#Segoe MDL2 Assets">
+                                </On>
+                                <On Platform="iOS" Value="Segoe MDL2 Assets">
+                                </On>
+                            </OnPlatform>
+                        </radialMenu:SfRadialMenuItem.IconFontFamily>
+                    </radialMenu:SfRadialMenuItem>
+                    <radialMenu:SfRadialMenuItem  FontIconText="">
+                        <radialMenu:SfRadialMenuItem.IconFontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="Android" Value="radialmenu_Segoe MDL2 Assets.ttf">
+                                </On>
+                            <On Platform="UWP" Value="radialmenu_Segoe_MDL2_Assets.ttf#Segoe MDL2 Assets">
+                                </On>
+                                <On Platform="iOS" Value="Segoe MDL2 Assets">
+                                </On>
+                            </OnPlatform>
+                        </radialMenu:SfRadialMenuItem.IconFontFamily>
+                        </radialMenu:SfRadialMenuItem>
+                    <radialMenu:SfRadialMenuItem  FontIconText="">
+                        <radialMenu:SfRadialMenuItem.IconFontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="Android" Value="radialmenu_Segoe MDL2 Assets.ttf">
+                                </On>
+                            <On Platform="UWP" Value="radialmenu_Segoe_MDL2_Assets.ttf#Segoe MDL2 Assets">
+                                </On>
+                                <On Platform="iOS" Value="Segoe MDL2 Assets">
+                                </On>
+                            </OnPlatform>
+                        </radialMenu:SfRadialMenuItem.IconFontFamily>
+                    </radialMenu:SfRadialMenuItem>
+                    <radialMenu:SfRadialMenuItem  FontIconText="">
+                        <radialMenu:SfRadialMenuItem.IconFontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="Android" Value="radialmenu_Segoe MDL2 Assets.ttf">
+                                </On>
+                            <On Platform="UWP" Value="radialmenu_Segoe_MDL2_Assets.ttf#Segoe MDL2 Assets">
+                                </On>
+                                <On Platform="iOS" Value="Segoe MDL2 Assets">
+                                </On>
+                            </OnPlatform>
+                        </radialMenu:SfRadialMenuItem.IconFontFamily>
+                    </radialMenu:SfRadialMenuItem>
+                    <radialMenu:SfRadialMenuItem  FontIconText="">
+                        <radialMenu:SfRadialMenuItem.IconFontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="Android" Value="radialmenu_Segoe MDL2 Assets.ttf">
+                                </On>
+                            <On Platform="UWP" Value="radialmenu_Segoe_MDL2_Assets.ttf#Segoe MDL2 Assets">
+                                </On>
+                                <On Platform="iOS" Value="Segoe MDL2 Assets">
+                                </On>
+                            </OnPlatform>
+                        </radialMenu:SfRadialMenuItem.IconFontFamily>
+                           </radialMenu:SfRadialMenuItem>
+                    <radialMenu:SfRadialMenuItem FontIconText="" >
+                        <radialMenu:SfRadialMenuItem.IconFontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="Android" Value="radialmenu_Segoe MDL2 Assets.ttf">
+                                </On>
+                            <On Platform="UWP" Value="radialmenu_Segoe_MDL2_Assets.ttf#Segoe MDL2 Assets">
+                                </On>
+                                <On Platform="iOS" Value="Segoe MDL2 Assets">
+                                </On>
+                            </OnPlatform>
+                        </radialMenu:SfRadialMenuItem.IconFontFamily>
+                          </radialMenu:SfRadialMenuItem>
+                </radialMenu:SfRadialMenu.Items>
+            </radialMenu:SfRadialMenu>
+ </StackLayout>
+</local:SampleView>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView
+    x:Class="SampleBrowser.SfSchedule.Timetable"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:samplelocal="clr-namespace:SampleBrowser.SfSchedule"
+    xmlns:schedule="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.SfSchedule.XForms">
+    <local:SampleView.Content>
+        <Grid x:Name="grid_layout">
+            <Grid.BindingContext>
+                <samplelocal:TimetableViewModel/>
+            </Grid.BindingContext>
+            <schedule:SfSchedule BindingContext="{Binding}" TimeIntervalHeight="-1"
+              x:Name="Schedule" ScheduleView="DayView"
+              DataSource="{Binding Appointments}"
+              HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand" >
+                <schedule:SfSchedule.DayViewSettings>
+                    <schedule:DayViewSettings
+                   StartHour="9"
+                   EndHour="16">
+                    </schedule:DayViewSettings>
+                </schedule:SfSchedule.DayViewSettings>
+                <schedule:SfSchedule.Behaviors>
+                    <samplelocal:TimetableBehavior />
+                </schedule:SfSchedule.Behaviors>
+            </schedule:SfSchedule>
+        </Grid>
+    </local:SampleView.Content>
+</local:SampleView>

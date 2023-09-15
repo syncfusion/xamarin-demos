@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Samples>
+	<Sample Title="Getting Started" Name = "GettingStarted_RadialMenu" />
+  <Sample Title="Customization" Name = "Customization_RadialMenu" SearchTags="custom,view,colorpicker"/>
+  <Sample Title="Segmentation" Name = "SlotIndex_RadialMenu" SearchTags="segment,indexing" />
+    
+</Samples>  
