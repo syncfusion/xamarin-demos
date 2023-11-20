@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.Cards.CardViewContent"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:sampleBrowser="clr-namespace:SampleBrowser.Cards"
+             Spacing="0">
+
+    <Grid BackgroundColor="White">
+
+        <Grid.Resources>
+            <ResourceDictionary>
+                <sampleBrowser:FontConverter x:Key="fontConverter"/>
+            </ResourceDictionary>
+        </Grid.Resources>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Image Aspect="Fill" Source="{Binding ImagePath}" />
+
+        <Grid Grid.Row="1" Padding="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid Padding="5,0,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="70" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="{Binding Name}" TextColor="Black" FontSize="20" HorizontalOptions="Start" />
+                <border:SfBorder Grid.Column="1" BackgroundColor="#4496EC" BorderColor="Transparent"
+                                 CornerRadius="15" HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Label x:Name="label" Text="&#xe735;" TextColor="White" VerticalTextAlignment="Center" 
+                               FontSize="12" WidthRequest="14" HeightRequest="20"
+                               FontFamily="{Binding Converter={x:StaticResource fontConverter}}"/>
+
+                        <Label Text="{Binding Rating}" FontSize="12" VerticalTextAlignment="Center"
+                               Margin="-5,0,-5,0" TextColor="White" WidthRequest="30" HeightRequest="20"/>
+                    </StackLayout>
+                </border:SfBorder>
+            </Grid>
+
+            <Grid Padding="5,0,0,0" Grid.Row="1" VerticalOptions="Center">
+                <StackLayout  Orientation="Horizontal" VerticalOptions="Center"  >
+                    <Label VerticalOptions="Center" Text="$" TextColor="#80cf35" FontSize="16"
+                           Margin="0,0,-5,0" WidthRequest="10" HeightRequest="20"/>
+                    
+                    <Label VerticalOptions="Center" Text="{Binding Price}" TextColor="#80cf35"
+                           FontSize="16" WidthRequest="60" HeightRequest="20" />
+                    
+                    <Label VerticalOptions="Center" Text="{Binding Offer}" FontSize="16"
+                           TextColor="#80cf35" WidthRequest="140" HeightRequest="20"/>
+                </StackLayout>
+            </Grid>
+
+            <Grid Grid.Row="2" Padding="5,0,0,0">
+                <Label Text="{Binding Description}"/>
+            </Grid>
+            
+            <Button Grid.Row="3" Text="Explore" TextColor="#4496EC" BackgroundColor="Transparent" HorizontalOptions="EndAndExpand"/>
+        </Grid>
+    </Grid>
+</StackLayout>

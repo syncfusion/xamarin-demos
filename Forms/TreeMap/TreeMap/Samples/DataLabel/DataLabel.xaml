@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfTreeMap.DataLabel"
+                  xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfTreeMap"
+              xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:tree="clr-namespace:Syncfusion.SfTreeMap.XForms;assembly=Syncfusion.SfTreeMap.XForms">
+    <local:SampleView.Resources>
+        <ResourceDictionary>
+            <sampleBrowser:PopulationConverter x:Key="labelconverter" ></sampleBrowser:PopulationConverter>
+            </ResourceDictionary>
+    </local:SampleView.Resources>
+    <local:SampleView.Content>
+        <Grid x:Name="grid">
+            <Grid.BindingContext>
+                <sampleBrowser:LabelPopulationViewModel x:Name="model"/>
+            </Grid.BindingContext>
+            <tree:SfTreeMap  x:Name="TreeMap"  HorizontalOptions="FillAndExpand" ShowTooltip="True"
+      VerticalOptions="FillAndExpand" WeightValuePath="Population" 
+                       DataSource="{Binding LabelPopulationDetails}"      ColorValuePath="Population" >
+            <tree:SfTreeMap.LeafItemSettings>
+                <tree:LeafItemSettings  LabelPath="Country" >
+                </tree:LeafItemSettings>
+            </tree:SfTreeMap.LeafItemSettings>
+
+                <tree:SfTreeMap.TooltipSettings>
+                    <tree:TooltipSetting>
+                        <tree:TooltipSetting.TooltipTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+                                    <Label Text="{Binding Country}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#FFFFFF"  Margin="6,0,0,0" FontSize="12"/>
+                                    <BoxView Color="#888C91" HeightRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="0,6,0,6" Opacity="0.4"/>
+                                    <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                                        <Label Text="Population:" VerticalTextAlignment="Center" HorizontalOptions="Center" TextColor="#FFFFFF" FontSize="12" Margin="0,0,0,6"></Label>
+                                    <Label Text="{Binding Population, Converter={StaticResource labelconverter} }" VerticalTextAlignment="Center" HorizontalOptions="Start" TextColor="#FFFFFF" FontSize="12" Margin="0,0,0,6"/>
+                                </StackLayout>
+                                    </StackLayout>
+                            </DataTemplate>
+                        </tree:TooltipSetting.TooltipTemplate>
+                    </tree:TooltipSetting>
+                </tree:SfTreeMap.TooltipSettings>
+                <tree:SfTreeMap.LeafItemColorMapping>
+                    <tree:RangeColorMapping>
+                        <tree:RangeColorMapping.Ranges>
+                            <tree:Range LegendLabel = "200M - 1.3B" From = "200000000" To = "10000000000" Color =  "#4B134F"  />
+                            <tree:Range LegendLabel = "100M - 200M"  From = "100000000"  To = "200000000"   Color =  "#8C304D"  />
+                            <tree:Range LegendLabel = "20M - 100M"  From = "20000000"    To = "100000000"    Color =  "#C84B4B"  />
+                           
+                        </tree:RangeColorMapping.Ranges>
+                    </tree:RangeColorMapping>
+                </tree:SfTreeMap.LeafItemColorMapping>
+
+                <tree:SfTreeMap.LegendSettings>
+                    <tree:LegendSettings  ShowLegend ="true"  Size="700,45"  >
+                        <tree:LegendSettings.LabelStyle>
+                            <tree:Style Font="14" Color="Gray">
+                            </tree:Style>
+                        </tree:LegendSettings.LabelStyle>
+
+                    </tree:LegendSettings>
+                </tree:SfTreeMap.LegendSettings>
+            </tree:SfTreeMap>
+            </Grid>
+    </local:SampleView.Content>
+</local:SampleView>

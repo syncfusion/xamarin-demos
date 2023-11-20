@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.RangeAreaChart" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+    <local:SampleView.Content>
+        <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <chart:SfChart.BindingContext>
+                <sampleBrowser:RangeAreaSeriesViewModel />
+            </chart:SfChart.BindingContext>
+            <chart:SfChart.Margin>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="0,0,20,0" />
+            </chart:SfChart.Margin>
+            <chart:SfChart.ColorModel>
+                <chart:ChartColorModel Palette="Natural" />
+            </chart:SfChart.ColorModel>
+            <chart:SfChart.Title>
+                <chart:ChartTitle Text="Product Price Comparison" />
+            </chart:SfChart.Title>
+            <chart:SfChart.PrimaryAxis>
+                <chart:CategoryAxis EdgeLabelsDrawingMode="Shift" ShowMajorGridLines="false">
+                    <chart:CategoryAxis.LabelStyle>
+                        <chart:ChartAxisLabelStyle Margin="0,10,0,0">
+                        </chart:ChartAxisLabelStyle>
+                    </chart:CategoryAxis.LabelStyle>
+                    <chart:CategoryAxis.MajorTickStyle>
+                        <chart:ChartAxisTickStyle TickSize="10">
+                        </chart:ChartAxisTickStyle>
+                    </chart:CategoryAxis.MajorTickStyle>
+                </chart:CategoryAxis>
+            </chart:SfChart.PrimaryAxis>
+            <chart:SfChart.SecondaryAxis>
+                <chart:NumericalAxis Maximum="55" Minimum="5" Interval="5" ShowMajorGridLines="false" ShowMinorGridLines="false">
+                    <chart:NumericalAxis.LabelStyle>
+                        <chart:ChartAxisLabelStyle x:Name="secondaryAxisLabelStyle" />
+                    </chart:NumericalAxis.LabelStyle>
+                </chart:NumericalAxis>
+            </chart:SfChart.SecondaryAxis>
+            <chart:SfChart.Legend>
+                <chart:ChartLegend DockPosition="Bottom" ToggleSeriesVisibility="True" IconWidth="14" IconHeight="14" />
+            </chart:SfChart.Legend>
+            <chart:SfChart.Series>
+                <chart:RangeAreaSeries ItemsSource="{Binding RangeAreaData}" Label="Product A" LegendIcon="Circle" EnableTooltip="true" XBindingPath="Name" High="High" Low="Low" EnableAnimation="true" />
+                <chart:RangeAreaSeries ItemsSource="{Binding RangeAreaData1}" Label="Product B" LegendIcon="Circle" EnableTooltip="true" XBindingPath="Name" High="High" Low="Low" EnableAnimation="true" />
+            </chart:SfChart.Series>
+        </chart:SfChart>
+    </local:SampleView.Content>
+</local:SampleView>

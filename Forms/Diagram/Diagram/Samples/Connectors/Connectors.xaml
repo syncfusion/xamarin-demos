@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="SampleBrowser.SfDiagram.Connectors"
+        xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+        xmlns:sfdiagram="clr-namespace:Syncfusion.SfDiagram.XForms;assembly=Syncfusion.SfDiagram.XForms"
+                 xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+    xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfDiagram;assembly=SampleBrowser.SfDiagram"
+             >
+
+    <local:SampleView.Content>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid  BackgroundColor="White" Grid.Row="1" >
+                <sfdiagram:SfDiagram x:Name="diagram">
+                </sfdiagram:SfDiagram>
+            </Grid>
+            <StackLayout BackgroundColor="#F5F5F5" Grid.Row="0" Orientation="Horizontal">
+                <Label Text="Connector Types:" TextColor="Black" VerticalTextAlignment="Center" HorizontalOptions="Center" Margin="20,0,0,0"/>
+                <StackLayout x:Name="StraightStack" HorizontalOptions="Center" VerticalOptions="Center" Margin="20,0,0,0">
+                    <border:SfBorder x:Name="StraightSegment"
+                        Rotation="0"
+                               BorderColor="Black"
+                               BackgroundColor="#fdfdfd"   
+                        HeightRequest="30"
+                        WidthRequest="30"
+                        CornerRadius="15"
+                               BorderWidth="1">
+                        <Image Rotation="135" x:Name="StraightIcon" HeightRequest="25" WidthRequest="25" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Center">
+                            <Image.Source >
+                                <FontImageSource Glyph="&#xe768;"
+                        Color="#000000" 
+                        FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" />
+                            </Image.Source>
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="OnStraight"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </border:SfBorder>
+                    
+                </StackLayout>
+                <StackLayout x:Name="CurveStack" HorizontalOptions="Center" VerticalOptions="Center" Margin="20,0,0,0">
+                    <border:SfBorder x:Name="CurveSegment"
+                               BorderColor="Black"
+                               BackgroundColor="#fdfdfd"   
+                        HeightRequest="30"
+                        WidthRequest="30"
+                        CornerRadius="15"
+                               BorderWidth="1">
+                        <Image HeightRequest="25" x:Name="CurveIcon" WidthRequest="25" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Center">
+                            <Image.Source >
+                                <FontImageSource Glyph="&#xe754;"
+                        Color="#000000" 
+                        FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" />
+                            </Image.Source>
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="OnCurve"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </border:SfBorder>
+                </StackLayout>
+                <StackLayout x:Name="OrthoSegmentStack" HorizontalOptions="Center" VerticalOptions="Center" Margin="20,0,0,0">
+                    <border:SfBorder x:Name="OrthoSegment"
+                               BorderColor="Black"
+                               BackgroundColor="DodgerBlue"
+                        HeightRequest="30"
+                        WidthRequest="30"
+                        CornerRadius="15"
+                               BorderWidth="1">
+                        <Image HeightRequest="25" x:Name="OrthoIcon" WidthRequest="25" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Center">
+                            <Image.Source >
+                                <FontImageSource Glyph="&#xe73b;"
+                        Color="White" 
+                        FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" />
+                            </Image.Source>
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="OnOrtho"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </border:SfBorder>
+                   </StackLayout>
+            </StackLayout>
+            <BoxView BackgroundColor="LightGray" Grid.Row="0" HeightRequest="0.5" VerticalOptions="End" HorizontalOptions="FillAndExpand"/>
+        </Grid>
+    </local:SampleView.Content>
+    <local:SampleView.PropertyView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Connector Style" Grid.Row="0" Grid.Column="0" TextColor="Black" VerticalTextAlignment="Center" Margin="0,5,0,0"/>
+                <Picker x:Name="strokeStyle" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan ="4" Margin="0,5,0,0"/>
+                <BoxView BackgroundColor="Gray" Grid.Row="1" Grid.ColumnSpan="5" HeightRequest="1" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Margin="0,10,0,0"/>
+
+                <Label Text="Connector Size" Grid.Row="1" Grid.Column="0" TextColor="Black" VerticalOptions="Center" Margin="0,20,0,0"/>
+                <Frame OutlineColor="DodgerBlue" CornerRadius="5" VerticalOptions="Center" Grid.Row="1" Grid.Column="1" HeightRequest="25" Padding="0" Margin="12,26,6,12">
+                    <Frame.HasShadow>
+                        <OnPlatform x:TypeArguments="x:Boolean" Android="true" iOS="false"/>
+                    </Frame.HasShadow>
+                    <Image HeightRequest="35" WidthRequest="35" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent" >
+                        <Image.Source>
+                            <FontImageSource Glyph="&#xe768;"
+                        Color="#007aff" 
+                        FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" 
+                                             />
+                        </Image.Source>
+                    </Image>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnGridSizeSubtract"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Label x:Name="GridtThickness" Text="1" Grid.Row="1" Grid.Column="2"  VerticalTextAlignment="Center"  HorizontalTextAlignment="Center" Margin="0,20,0,0"/>
+                <Frame OutlineColor="DodgerBlue" CornerRadius="5" VerticalOptions="Center" Grid.Row="1" Grid.Column="3" Padding="0" HeightRequest="25" Margin="12,26,6,12">
+                    <Frame.HasShadow>
+                        <OnPlatform x:TypeArguments="x:Boolean" Android="true" iOS="false"/>
+                    </Frame.HasShadow>
+                    <Image HeightRequest="35" WidthRequest="35" Grid.Row="1" Grid.Column="3" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Image.Source>
+                            <FontImageSource Glyph="&#xe70a;"
+                        Color="#007aff" 
+                        FontFamily="{OnPlatform iOS=Sync FontIcons, Android=Sync FontIcons.ttf#, UWP=Sync FontIcons.ttf#Sync FontIcons}" />
+                        </Image.Source>
+                    </Image>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnGridSizePlus"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+            </Grid>
+        </Grid>
+    </local:SampleView.PropertyView>
+</local:SampleView>

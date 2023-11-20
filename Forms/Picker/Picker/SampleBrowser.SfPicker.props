@@ -1,0 +1,92 @@
+﻿<Project>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Cascading\Cascading.xaml.cs">
+	    <Link>Samples\Picker\Cascading\Cascading.xaml.cs</Link>
+      <DependentUpon>Cascading.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Cascading\Itemview.xaml.cs">
+	    <Link>Samples\Picker\Cascading\Itemview.xaml.cs</Link>
+      <DependentUpon>Itemview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DateTimePicker\DateTimePicker.xaml.cs">
+	    <Link>Samples\Picker\DateTimePicker\DateTimePicker.xaml.cs</Link>
+      <DependentUpon>DateTimePicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Extensions\DatePicker.cs" >
+	    <Link>Samples\Picker\Extensions\DatePicker.cs</Link>
+	  </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Extensions\DateTimePicker.cs" >
+	    <Link>Samples\Picker\Extensions\DateTimePicker.cs</Link>
+	  </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Extensions\TimePicker.cs" >
+	    <Link>Samples\Picker\Extensions\TimePicker.cs</Link>
+	  </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PickerGettingStarted\GettingStarted.xaml.cs">
+	    <Link>Samples\Picker\PickerGettingStarted\GettingStarted.xaml.cs</Link>
+      <DependentUpon>GettingStarted.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PickerGettingStarted\PickerGettingStartedViewModel.cs" >
+	    <Link>Samples\Picker\PickerGettingStarted\PickerGettingStartedViewModel.cs</Link>
+	  </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PickerGettingStarted\PickerHelper.cs" >
+	    <Link>Samples\Picker\PickerGettingStarted\PickerHelper.cs</Link>
+	    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\PopupPicker\PopupPicker.xaml.cs">
+	    <Link>Samples\Picker\PopupPicker\PopupPicker.xaml.cs</Link>
+      <DependentUpon>PopupPicker.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml" >
+	    <Link>Samples\Picker\SamplesList\SamplesList.xml</Link>
+	  </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Cascading\Cascading.xaml">
+	    <Link>Samples\Picker\Cascading\Cascading.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Cascading\Itemview.xaml">
+	<Link>Samples\Picker\Cascading\Itemview.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DateTimePicker\DateTimePicker.xaml">
+	<Link>Samples\Picker\DateTimePicker\DateTimePicker.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\PickerGettingStarted\GettingStarted.xaml">
+	<Link>Samples\Picker\PickerGettingStarted\GettingStarted.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\PopupPicker\PopupPicker.xaml">
+	    <Link>Samples\Picker\PopupPicker\PopupPicker.xaml</Link>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml.cs">
+              <Link>Samples\Picker\Samples\Themes\Themes.xaml.cs</Link>
+              <DependentUpon>Themes.xaml</DependentUpon>
+          </Compile>
+              </ItemGroup>
+              <ItemGroup>
+          <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml">
+              <Link>Samples\Picker\Samples\Themes\Themes.xaml</Link>
+              <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+              <SubType>Designer</SubType>
+          </EmbeddedResource>
+      </ItemGroup>
+  </Project>
