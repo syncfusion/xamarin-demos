@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:orientation="horizontal"  
+    android:layout_width="fill_parent"  
+    android:layout_height="fill_parent"  
+    android:minWidth="25px"
+    android:background="#FFFFFF"
+    android:minHeight="25px"  
+    android:paddingBottom="4dp">  
+    <ImageView  
+        android:id="@+id/photoImageView"  
+        android:layout_width="30dp"  
+        android:layout_height="30dp"  
+        android:layout_centerVertical="true"  
+        android:layout_marginLeft="16dp" />  
+    <TextView  
+        android:id="@+id/fieldTextView"  
+        android:textColor="#8B8B8B"
+        android:layout_toRightOf="@id/photoImageView"  
+        android:textSize="12dp"        
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"  
+        android:paddingLeft="25dp"
+        android:paddingTop="14dp"/>  
+    <TextView  
+        android:id="@+id/contentTextView"  
+        android:textColor="#313131"
+        android:layout_toRightOf="@id/photoImageView"  
+        android:layout_below="@id/fieldTextView"  
+        android:textSize="14dp"
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"  
+        android:paddingLeft="25dp" 
+        android:paddingTop="6dp"
+        android:layout_marginBottom="13dp" />  
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_toRightOf="@id/photoImageView"  
+        android:layout_marginLeft="25dp"
+        android:layout_below="@id/contentTextView"  
+        android:background="#eaeaea"/>
+</RelativeLayout>   

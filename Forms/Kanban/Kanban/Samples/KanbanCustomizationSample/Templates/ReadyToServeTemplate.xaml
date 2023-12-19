@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ViewCell
+    x:Class="SampleBrowser.SfKanban.ReadyToServeTemplate"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Frame
+        Padding="10"
+        BackgroundColor="White"
+        CornerRadius="0"
+        HasShadow="true">
+        <Grid RowSpacing="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="5" />
+            </Grid.RowDefinitions>
+
+            <Image
+                Grid.Row="0"
+                Grid.Column="0"
+                HeightRequest="60"
+                HorizontalOptions="EndAndExpand"
+                Source="{Binding ImageURL}"
+                VerticalOptions="CenterAndExpand"
+                WidthRequest="60" />
+
+            <Grid
+                Grid.Row="0"
+                Grid.Column="1"
+                RowSpacing="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="50" />
+                </Grid.ColumnDefinitions>
+
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    HorizontalOptions="StartAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Text="{Binding Title}"
+                    VerticalOptions="FillAndExpand" />
+
+                <Image
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    HeightRequest="15"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="15">
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="{OnPlatform iOS=Sync FontIcons,
+                                                    Android=Sync FontIcons.ttf#,
+                                                    UWP=Sync FontIcons.ttf#Sync FontIcons}"
+                            Glyph="&#xe705;"
+                            Color="#97d16d" />
+                    </Image.Source>
+                </Image>
+
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    FontSize="12"
+                    HorizontalOptions="StartAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Text="{Binding OrderID}"
+                    TextColor="Gray"
+                    VerticalTextAlignment="Center" />
+
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    FontSize="12"
+                    HorizontalOptions="StartAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Text="Ready to Serve"
+                    TextColor="Gray"
+                    VerticalOptions="FillAndExpand"
+                    VerticalTextAlignment="Center" />
+
+                <StackLayout
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Orientation="Horizontal"
+                    Spacing="0">
+                    <Image
+                        Aspect="AspectFit"
+                        HeightRequest="10"
+                        HorizontalOptions="Start"
+                        Source="Kanban_Time.png"
+                        VerticalOptions="Center"
+                        WidthRequest="10" />
+
+                    <Label
+                        FontSize="10"
+                        HorizontalOptions="EndAndExpand"
+                        HorizontalTextAlignment="End"
+                        Text="5 mins"
+                        TextColor="Gray"
+                        VerticalTextAlignment="Center" />
+                </StackLayout>
+            </Grid>
+
+            <ProgressBar
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                BackgroundColor="Red"
+                HeightRequest="10"
+                HorizontalOptions="FillAndExpand"
+                Progress="70"
+                ProgressColor="#83C83E"
+                VerticalOptions="End" />
+        </Grid>
+    </Frame>
+</ViewCell>

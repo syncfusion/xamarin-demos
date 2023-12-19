@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<core:SampleView xmlns="http://xamarin.com/schemas/2014/forms" 
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:core="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                 x:Class="SampleBrowser.SfProgressBar.Linear"
+                 xmlns:local="clr-namespace:SampleBrowser.SfProgressBar">
+    <core:SampleView.Content>
+      <ScrollView Orientation="Vertical">
+        <Grid Margin="0,20,0,0">
+          <Grid.WidthRequest>
+              <OnPlatform x:TypeArguments="x:Double" Android="-1" iOS="-1">
+                <On Platform="UWP">
+                  <OnIdiom x:TypeArguments="x:Double" Desktop="400" Phone="-1"/>
+                </On>
+              </OnPlatform>
+          </Grid.WidthRequest>
+
+          <Grid.HorizontalOptions>
+            <OnPlatform x:TypeArguments="LayoutOptions"  Android="Fill" iOS="Fill">
+              <On Platform="UWP">
+                <OnIdiom x:TypeArguments="LayoutOptions" Desktop="Start" Phone="Fill"/>
+              </On>
+            </OnPlatform>
+          </Grid.HorizontalOptions>
+          
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition>
+                <ColumnDefinition.Width>
+                  <OnPlatform x:TypeArguments="GridLength">
+                    <On Platform="UWP">
+                      <OnIdiom x:TypeArguments="GridLength" Desktop="470" Tablet="420" Phone="*" />
+                    </On>
+                    <On Platform="Android">
+                      <OnIdiom x:TypeArguments="GridLength" Desktop="470" Tablet="420" Phone="*"/>
+                    </On>
+                    <On Platform="iOS">
+                      <OnIdiom x:TypeArguments="GridLength" Desktop="470" Tablet="420" Phone="*"/>
+                    </On>
+                  </OnPlatform>
+                </ColumnDefinition.Width>
+              </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+
+            <local:LinearDeterminate />
+            <local:LinearIndeterminate Grid.Row="1"/>
+            <local:LinearCornerRadius Grid.Row="2"/>
+            <local:LinearPadding Grid.Row="3"/>
+            <local:LinearRangeColors Grid.Row="4"/>
+            <local:LinearBuffer Grid.Row="5"/>
+            <local:LinearSegment Grid.Row="6"/>
+            <local:LinearSegmentedCornerRadius Grid.Row="7"/>
+          <Grid.RowDefinitions>
+            <RowDefinition>
+              <RowDefinition.Height>
+                <OnPlatform x:TypeArguments="GridLength">
+                  <On Platform="UWP">
+                    <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="*" />
+                  </On>
+                  <On Platform="Android">
+                    <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="56"/>
+                  </On>
+                  <On Platform="iOS">
+                    <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="*"/>
+                  </On>
+                </OnPlatform>
+              </RowDefinition.Height>
+            </RowDefinition>
+            <RowDefinition>
+              <RowDefinition.Height>
+                <OnPlatform x:TypeArguments="GridLength">
+                  <On Platform="UWP">
+                    <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="*" />
+                  </On>
+                  <On Platform="Android">
+                    <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="56"/>
+                  </On>
+                  <On Platform="iOS">
+                    <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="*"/>
+                  </On>
+                </OnPlatform>
+              </RowDefinition.Height>
+            </RowDefinition>
+            <RowDefinition>
+              <RowDefinition.Height>
+                <OnPlatform x:TypeArguments="GridLength">
+                  <On Platform="UWP">
+                    <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="*" />
+                  </On>
+                  <On Platform="Android">
+                    <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="56"/>
+                  </On>
+                  <On Platform="iOS">
+                    <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="*"/>
+                  </On>
+                </OnPlatform>
+              </RowDefinition.Height>
+            </RowDefinition>
+            <RowDefinition>
+              <RowDefinition.Height>
+                <OnPlatform x:TypeArguments="GridLength">
+                  <On Platform="UWP">
+                    <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="*" />
+                  </On>
+                  <On Platform="Android">
+                    <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="56"/>
+                  </On>
+                  <On Platform="iOS">
+                    <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="*"/>
+                  </On>
+                </OnPlatform>
+              </RowDefinition.Height>
+            </RowDefinition>
+            <RowDefinition>
+              <RowDefinition.Height>
+                <OnPlatform x:TypeArguments="GridLength">
+                  <On Platform="UWP">
+                    <OnIdiom x:TypeArguments="GridLength" Desktop="2*" Tablet="2*" Phone="2*" />
+                  </On>
+                  <On Platform="Android">
+                    <OnIdiom x:TypeArguments="GridLength" Desktop="2*" Tablet="2*" Phone="112"/>
+                  </On>
+                  <On Platform="iOS">
+                    <OnIdiom x:TypeArguments="GridLength" Desktop="2*" Tablet="2*" Phone="2*"/>
+                  </On>
+                </OnPlatform>
+              </RowDefinition.Height>
+            </RowDefinition>
+            <RowDefinition>
+              <RowDefinition.Height>
+                <OnPlatform x:TypeArguments="GridLength">
+                  <On Platform="UWP">
+                    <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="*" />
+                  </On>
+                  <On Platform="Android">
+                    <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="56"/>
+                  </On>
+                  <On Platform="iOS">
+                    <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="*"/>
+                  </On>
+                </OnPlatform>
+              </RowDefinition.Height>
+            </RowDefinition>
+            <RowDefinition>
+              <RowDefinition.Height>
+                <OnPlatform x:TypeArguments="GridLength">
+                  <On Platform="UWP">
+                    <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="*" />
+                  </On>
+                  <On Platform="Android">
+                    <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="56"/>
+                  </On>
+                  <On Platform="iOS">
+                    <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="*"/>
+                  </On>
+                </OnPlatform>
+              </RowDefinition.Height>
+            </RowDefinition>
+            <RowDefinition>
+              <RowDefinition.Height>
+                <OnPlatform x:TypeArguments="GridLength">
+                  <On Platform="UWP">
+                    <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="*" />
+                  </On>
+                  <On Platform="Android">
+                    <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="56"/>
+                  </On>
+                  <On Platform="iOS">
+                    <OnIdiom x:TypeArguments="GridLength" Desktop="*" Tablet="*" Phone="*"/>
+                  </On>
+                </OnPlatform>
+              </RowDefinition.Height>
+            </RowDefinition>
+          </Grid.RowDefinitions>
+        </Grid>
+      </ScrollView>
+    </core:SampleView.Content>
+</core:SampleView>

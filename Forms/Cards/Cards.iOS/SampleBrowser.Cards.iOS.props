@@ -1,0 +1,13 @@
+<Project>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Segoe MDL2 Assets.ttf">
+      <Link>Resources\Segoe MDL2 Assets.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="$(MSBuildThisFileDirectory)\Resources\Font Offer icon.ttf">
+      <Link>Resources\Font Offer icon.ttf</Link>
+    </BundleResource>
+	<BundleResource Include="$(MSBuildThisFileDirectory)\Resources\V2 Font Refresh.ttf">
+      <Link>Resources\V2 Font Refresh.ttf</Link>
+    </BundleResource>
+  </ItemGroup>
+</Project>

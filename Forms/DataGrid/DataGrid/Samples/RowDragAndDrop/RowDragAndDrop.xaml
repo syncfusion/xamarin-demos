@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfDataGrid.RowDragAndDrop"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.SfDataGrid"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:sfgrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms">
+
+    <sample:SampleView.BindingContext>
+        <local:RowDragAndDropViewModel x:Name="viewModel" />
+    </sample:SampleView.BindingContext>
+
+    <sample:SampleView.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="opacity"
+                      x:TypeArguments="x:Double">
+                <On Platform="iOS,Android" Value="87" />
+                <On Platform="UWP" Value="80" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="padding"
+                   x:TypeArguments="Thickness">
+                <On Platform="Android,iOS" Value="8, 12, 8, 12" />
+                <On Platform="UWP" Value="8, 12, 8, 16" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="textSize"
+                  x:TypeArguments="x:Double">
+                <On Platform="iOS,UWP" Value="14" />
+                <On Platform="Android" Value="13" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="font"
+                  x:TypeArguments="x:String">
+                <On Platform="Android" Value="Roboto-Regular" />
+                <On Platform="iOS" Value="SFProText-Regular" />
+                <On Platform="UWP" Value="SegoeUI" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </sample:SampleView.Resources>
+
+    <sample:SampleView.Content>
+        <sfgrid:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding OrdersInfo}"
+                           AllowDraggingRow="True"
+                           AllowDraggingColumn="True"
+                           AutoGenerateColumns="false"
+                           ColumnSizer="Star">
+
+            <sfgrid:SfDataGrid.RowDragDropTemplate>
+                <DataTemplate>
+                    <sfgrid:BorderView BackgroundColor="White" BorderColor="Black">
+                        <sfgrid:BorderView.Content>
+                            <local:RowTemplate />
+                        </sfgrid:BorderView.Content>
+                    </sfgrid:BorderView>
+                </DataTemplate>
+            </sfgrid:SfDataGrid.RowDragDropTemplate>
+
+            <sfgrid:SfDataGrid.HeaderRowHeight>
+                <OnPlatform x:TypeArguments="x:Double"
+                            Android="40"
+                            WinPhone="55"
+                            iOS="40" />
+            </sfgrid:SfDataGrid.HeaderRowHeight>
+
+            <sfgrid:SfDataGrid.Columns x:TypeArguments="sfgrid:Columns">
+
+                <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                       HeaderText="Order ID"
+                                       HeaderTextAlignment="Start"
+                                       MappingName="OrderID"
+                                       Padding="5,0,5,0"
+                                       LineBreakMode="TailTruncation"
+                                       HeaderCellTextSize="{StaticResource textSize}"
+                                       CellTextSize="{StaticResource textSize}"
+                                       TextAlignment="End">
+                </sfgrid:GridTextColumn>
+
+                <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                       HeaderText="Employee ID"
+                                       HeaderTextAlignment="Start"
+                                       MappingName="EmployeeID"
+                                       Padding="5,0,5,0"
+                                       LineBreakMode="TailTruncation"
+                                       HeaderCellTextSize="{StaticResource textSize}"
+                                       CellTextSize="{StaticResource textSize}"
+                                       TextAlignment="End">
+                </sfgrid:GridTextColumn>
+
+                <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                       HeaderText="Customer ID"
+                                       HeaderTextAlignment="Start"
+                                       MappingName="CustomerID"
+                                       Padding="5, 0, 0, 0"
+                                       LineBreakMode="TailTruncation"
+                                       HeaderCellTextSize="{StaticResource textSize}"
+                                       CellTextSize="{StaticResource textSize}"
+                                       TextAlignment="Start">
+                </sfgrid:GridTextColumn>
+
+                <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                       HeaderText="First Name"
+                                       HeaderTextAlignment="Start"
+                                       MappingName="FirstName"
+                                       Padding="5, 0, 0, 0"
+                                       LineBreakMode="TailTruncation"
+                                       HeaderCellTextSize="{StaticResource textSize}"
+                                       CellTextSize="{StaticResource textSize}"
+                                       TextAlignment="Start">
+                </sfgrid:GridTextColumn>
+
+                <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                       HeaderText="Last Name"
+                                       HeaderTextAlignment="Start"
+                                       MappingName="LastName"
+                                       Padding="5, 0, 0, 0"
+                                       LineBreakMode="TailTruncation"
+                                       HeaderCellTextSize="{StaticResource textSize}"
+                                       CellTextSize="{StaticResource textSize}"
+                                       TextAlignment="Start">
+                </sfgrid:GridTextColumn>
+            </sfgrid:SfDataGrid.Columns>
+        </sfgrid:SfDataGrid>
+    </sample:SampleView.Content>
+
+</sample:SampleView>
