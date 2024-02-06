@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <GridLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:columnCount="3"
+        android:descendantFocusability="blocksDescendants">
+        <SampleBrowser.CustomButton
+            android:id="@+id/backToParentBookmarkButton"
+            android:background="@android:color/transparent"
+            android:text="&#xE709;"
+            android:textSize="20dip"
+            android:textColor="#808080"
+            android:layout_width="47dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_column="0" />
+        <TextView
+            android:id="@+id/bookmarkTitle"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="16dip"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:fontFamily="sans-serif"
+            android:layout_column="1"
+            android:textColor="#000000"
+            android:textAlignment="textStart" />
+        <SampleBrowser.CustomButton
+            android:id="@+id/expandBookmarkButton"
+            android:background="@android:color/transparent"
+            android:text="&#xE704;"
+            android:textSize="20dip"
+            android:textColor="#808080"
+            android:layout_width="47dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_column="2" />
+    </GridLayout>
+    <FrameLayout
+        android:layout_height="0.5dip"
+        android:layout_width="match_parent"
+        android:background="@android:color/black"
+        android:alpha="0.12" />
+</LinearLayout>

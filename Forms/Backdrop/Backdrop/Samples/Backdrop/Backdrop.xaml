@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<backdrop:SfBackdropPage  xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfBackdrop.Backdrop" 
+        xmlns:backdrop="clr-namespace:Syncfusion.XForms.Backdrop;assembly=Syncfusion.SfBackdrop.XForms"
+        xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+        xmlns:segmentCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+        xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+		xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" 
+        xmlns:sfbackdrop="clr-namespace:SampleBrowser.SfBackdrop"
+        x:Name="BackdropPage" Title="{Binding IsBackLayerRevealed,Converter={StaticResource TitleConverter}}" IsBackLayerRevealed="{Binding IsBackLayerRevealed}" BackLayerRevealOption="Auto">
+
+    <backdrop:SfBackdropPage.BindingContext>
+        <sfbackdrop:BackdropViewModel x:Name="viewModel"/>
+    </backdrop:SfBackdropPage.BindingContext>
+
+    <backdrop:SfBackdropPage.Resources>
+        <Color x:Key="primaryColor">#007DE6</Color>
+        <Color x:Key="primaryTextColor">#FFFFFF</Color>
+
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource primaryTextColor}"/>
+        </Style>
+
+        <OnIdiom x:Key="Width" x:TypeArguments="x:Double" Phone="-1" Tablet="200" Desktop="200"/>
+        <OnIdiom x:Key="SliderWidth" x:TypeArguments="x:Double" Phone="-1" Tablet="300" Desktop="300"/>
+        <Style TargetType="buttons:SfSegmentedControl">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Color" Value="{StaticResource primaryColor}"/>
+            <Setter Property="SelectionTextColor" Value="{StaticResource primaryColor}"/>
+            <Setter Property="FontColor" Value="{StaticResource primaryTextColor}"/>
+            <Setter Property="BorderColor" Value="{StaticResource primaryTextColor}"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="HorizontalOptions" Value="Start"/>
+            <Setter Property="SegmentHeight" Value="30"/>
+            <Setter Property="HeightRequest" Value="30"/>
+            <Setter Property="WidthRequest" Value="{StaticResource Width}"/>
+            <Setter Property="Margin" Value="0,0,0,15"/>
+        </Style>
+    </backdrop:SfBackdropPage.Resources>
+
+    <backdrop:SfBackdropPage.BackLayer>
+        <backdrop:BackdropBackLayer BackgroundColor="{StaticResource primaryColor}">
+            <ScrollView>
+                <StackLayout BindingContext="{x:Reference viewModel}" Padding="10,10,10,10">
+                    <Label VerticalOptions="Center" Text="Edge shape "/>
+                    <buttons:SfSegmentedControl>
+                            <segmentCollection:List x:TypeArguments="buttons:SfSegmentItem">
+                            <buttons:SfSegmentItem Text="Curve" />
+                            <buttons:SfSegmentItem Text="Flat" />
+                        </segmentCollection:List>
+                        <buttons:SfSegmentedControl.SelectionIndicatorSettings>
+                            <buttons:SelectionIndicatorSettings Color="{StaticResource primaryTextColor}" />
+                        </buttons:SfSegmentedControl.SelectionIndicatorSettings>
+                        <buttons:SfSegmentedControl.Behaviors>
+                            <sfbackdrop:SelectionBehavior Command="{Binding EdgeShapeCommand}" CommandParameter="{x:Reference BackdropPage}"/>
+                        </buttons:SfSegmentedControl.Behaviors>
+                    </buttons:SfSegmentedControl>
+                    <Label VerticalOptions="Center" Text="Apply corner radius " />
+                    <buttons:SfSegmentedControl WidthRequest="{StaticResource SliderWidth}">
+                        <segmentCollection:List x:TypeArguments="buttons:SfSegmentItem">
+                            <buttons:SfSegmentItem Text="Both" />
+                            <buttons:SfSegmentItem Text="Left" />
+                            <buttons:SfSegmentItem Text="Right" />
+                        </segmentCollection:List>
+                        <buttons:SfSegmentedControl.SelectionIndicatorSettings>
+                            <buttons:SelectionIndicatorSettings Color="{StaticResource primaryTextColor}" />
+                        </buttons:SfSegmentedControl.SelectionIndicatorSettings>
+                        <buttons:SfSegmentedControl.Behaviors>
+                            <sfbackdrop:SelectionBehavior Command="{Binding CornerTyeCommand}"/>
+                        </buttons:SfSegmentedControl.Behaviors>
+                    </buttons:SfSegmentedControl>
+                    <Label x:Name="CornerRadiusLabel" Text="{Binding Source={x:Reference CornerRadiusSlider},Path=Value,StringFormat='Corner radius : {0:0}'}" VerticalOptions="Center"/>
+                    <Slider x:Name="CornerRadiusSlider" Value="{Binding LeftCornerRadius,Mode=OneTime}" Minimum="0" MaximumTrackColor="#8bc9dd" MinimumTrackColor="White" ThumbColor="{StaticResource primaryTextColor}" VerticalOptions="Center" WidthRequest="{StaticResource SliderWidth}">
+                        <Slider.Maximum>
+                            <OnPlatform x:TypeArguments="x:Double" Android="40" iOS="40" WinPhone="20"></OnPlatform>
+                        </Slider.Maximum>
+                        <Slider.Margin>
+                            <OnPlatform x:TypeArguments="Thickness" Android="-10,0,0,0" iOS="0" WinPhone="0"/>
+                        </Slider.Margin>
+                        <Slider.HorizontalOptions>
+                            <OnIdiom x:TypeArguments="LayoutOptions" Phone="Fill" Tablet="Start" Desktop="Start"/>
+                        </Slider.HorizontalOptions>
+                            <Slider.Behaviors>
+                            <sfbackdrop:SliderBehavior Command="{Binding CornerRadiusCommand}"/>
+                        </Slider.Behaviors>
+                    </Slider>
+                    <Label VerticalOptions="Center" Text="Change back layer reveal option " />
+                    <buttons:SfSegmentedControl SelectedIndex="0">
+                        <segmentCollection:List x:TypeArguments="buttons:SfSegmentItem">
+                            <buttons:SfSegmentItem Text="Auto" />
+                            <buttons:SfSegmentItem Text="Fill" />                            
+                        </segmentCollection:List>
+                        <buttons:SfSegmentedControl.SelectionIndicatorSettings>
+                            <buttons:SelectionIndicatorSettings Color="{StaticResource primaryTextColor}" />
+                        </buttons:SfSegmentedControl.SelectionIndicatorSettings>
+                        <buttons:SfSegmentedControl.Behaviors>
+                            <sfbackdrop:SelectionBehavior Command="{Binding ExpandModeCommand}" CommandParameter="{x:Reference BackdropPage}"/>
+                        </buttons:SfSegmentedControl.Behaviors>
+                    </buttons:SfSegmentedControl>
+                </StackLayout>
+            </ScrollView>
+        </backdrop:BackdropBackLayer>
+    </backdrop:SfBackdropPage.BackLayer>
+
+    <backdrop:SfBackdropPage.FrontLayer>
+        <backdrop:BackdropFrontLayer LeftCornerRadius="{Binding LeftCornerRadius,Mode=TwoWay}" RightCornerRadius="{Binding RightCornerRadius,Mode=TwoWay}" RevealedHeight="{Binding Source={x:Reference frontLayerheader},Path=Height}">
+            <StackLayout Padding="10,0,10,10" BindingContext="{x:Reference viewModel}" VerticalOptions="FillAndExpand">
+                <Label x:Name="frontLayerheader" Text="Subheader" TextColor="#828589" VerticalTextAlignment="Center" HeightRequest="48"/>
+                <Grid BindingContext="{x:Reference viewModel}" ColumnSpacing="10" RowSpacing="10" VerticalOptions="FillAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Image Source="{Binding FrontViewData[0].ImageSource}" Aspect="AspectFill" Grid.Row="0"/>
+                        <Image Source="{Binding FrontViewData[1].ImageSource}" Aspect="AspectFill" Grid.Row="1"/>
+                        <Image Source="{Binding FrontViewData[2].ImageSource}" Aspect="AspectFill" Grid.Row="2"/>
+                        <Image Source="{Binding FrontViewData[3].ImageSource}" Aspect="AspectFill" Grid.Row="0" Grid.Column="1"/>
+                        <Image Source="{Binding FrontViewData[4].ImageSource}" Aspect="AspectFill" Grid.Row="1" Grid.Column="1"/>
+                        <Image Source="{Binding FrontViewData[5].ImageSource}" Aspect="AspectFill" Grid.Row="2" Grid.Column="1"/>
+                    </Grid>
+            </StackLayout>
+        </backdrop:BackdropFrontLayer>
+    </backdrop:SfBackdropPage.FrontLayer>
+</backdrop:SfBackdropPage>

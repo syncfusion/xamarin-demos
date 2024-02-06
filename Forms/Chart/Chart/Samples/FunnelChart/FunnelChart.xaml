@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.FunnelChart" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+   <local:SampleView.Content>
+    <StackLayout x:Name="layout">
+      <StackLayout.Resources>
+        <ResourceDictionary>
+          <DataTemplate x:Key="toolTipTemplate1">
+            <StackLayout BackgroundColor="#404041" Orientation="Horizontal" VerticalOptions="FillAndExpand" Spacing="0" Padding="3" Margin="0">
+              <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="3,3,3,3" />
+              </StackLayout.Padding>
+                <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="#CCCCCC" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" Margin="{OnPlatform Default='0', WPF='4,4,0,0'}" />
+                <Label Text="{Binding Value,StringFormat=' :  {0}%'}" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="{OnPlatform Default='0', WPF='0,4,4,4'}" FontSize="12" />
+            </StackLayout>
+          </DataTemplate>
+        </ResourceDictionary>
+      </StackLayout.Resources>
+      <chart:SfChart HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" x:Name="chart">
+        <chart:SfChart.Title>
+          <chart:ChartTitle Text="Website Visitors"  />
+        </chart:SfChart.Title>
+        <chart:SfChart.BindingContext>
+          <sampleBrowser:FunnelSeriesViewModel />
+        </chart:SfChart.BindingContext>
+        <chart:SfChart.ChartBehaviors>
+          <chart:ChartTooltipBehavior BackgroundColor="#404041" />
+        </chart:SfChart.ChartBehaviors>
+        <chart:SfChart.Legend>
+          <chart:ChartLegend IconHeight="14" IconWidth="14"  ToggleSeriesVisibility="true" DockPosition="Top" OverflowMode="Scroll" />
+        </chart:SfChart.Legend>
+        <chart:SfChart.Series>
+          <chart:FunnelSeries x:Name="funnelSeries" ItemsSource="{Binding FunnelData}" XBindingPath="Name" YBindingPath="Value" LegendIcon="Circle" StrokeWidth="1" StrokeColor="White" EnableTooltip="true" TooltipTemplate="{StaticResource toolTipTemplate1}">
+            <chart:FunnelSeries.DataMarker>
+              <chart:ChartDataMarker ShowLabel="True">
+                <chart:ChartDataMarker.LabelStyle>
+                  <chart:DataMarkerLabelStyle TextColor="White" BackgroundColor="Transparent" LabelFormat="#.#'%'" />
+                </chart:ChartDataMarker.LabelStyle>
+              </chart:ChartDataMarker>
+            </chart:FunnelSeries.DataMarker>
+            <chart:FunnelSeries.ColorModel>
+              <chart:ChartColorModel Palette="Natural" />
+            </chart:FunnelSeries.ColorModel>
+          </chart:FunnelSeries>
+        </chart:SfChart.Series>
+      </chart:SfChart>
+    </StackLayout>
+  </local:SampleView.Content>
+</local:SampleView>

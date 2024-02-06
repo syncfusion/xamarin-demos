@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+    x:Class="SampleBrowser.SfSchedule.TimelineView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:samplelocal="clr-namespace:SampleBrowser.SfSchedule"
+    xmlns:schedule="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.SfSchedule.XForms">
+    <local:SampleView.Content>
+        <Grid x:Name="grid_layout">
+            <schedule:SfSchedule
+                x:Name="Schedule"
+                HorizontalOptions="FillAndExpand"
+                ScheduleView="TimelineView"
+                AllowAppointmentDrag="True"
+                VerticalOptions="FillAndExpand"
+                DataSource="{Binding ListOfMeeting}" 
+                SelectedResources="{Binding SelectedResources}"
+                ScheduleResources="{Binding Resources}">
+                <schedule:SfSchedule.AppointmentMapping>
+                    <schedule:ScheduleAppointmentMapping
+                        ColorMapping="Color"
+                        EndTimeMapping="To"
+                        IsAllDayMapping="IsAllDay"
+                        StartTimeMapping="From"
+                        SubjectMapping="EventName"
+                        MinHeightMapping="MinimumHeight"
+                        StartTimeZoneMapping="StartTimeZone"
+                        EndTimeZoneMapping="EndTimeZone"
+                        ResourceIdsMapping="Resources"/>
+                </schedule:SfSchedule.AppointmentMapping>
+                <schedule:SfSchedule.ResourceMapping>
+                    <schedule:ResourceMapping Name="Name"
+                                            Id="ID"
+                                            Color="Color"
+                                            Image="Image"
+                                              />
+                </schedule:SfSchedule.ResourceMapping>
+                <schedule:SfSchedule.ResourceViewSettings>
+                    <schedule:ResourceViewSettings SelectionMode ="Multiple"/>
+                </schedule:SfSchedule.ResourceViewSettings>
+            </schedule:SfSchedule>
+        </Grid>
+    </local:SampleView.Content>
+
+    <local:SampleView.PropertyView>
+        <Grid  BackgroundColor="White"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label  Grid.Row="1"
+                    x:Name="scheduleViewLabel"
+                    Text="Change the view type"
+                    FontSize="15"
+                    TextColor="Gray" />
+            <Picker  x:Name="viewPicker"
+                     Grid.Row="2"
+                     VerticalOptions="Start"
+                     HorizontalOptions="FillAndExpand">
+                <Picker.Items>
+                    <x:String> Timeline Day</x:String>
+                    <x:String>Timeline Week</x:String>
+                    <x:String>Timeline Work Week</x:String>
+                </Picker.Items>
+            </Picker>
+            <!-- Add row definition in grid
+            <Label  Grid.Row="2"
+                    x:Name="viewModeLabel"
+                    Text="Change resource view mode"
+                    FontSize="15"
+                    TextColor="Gray" />
+            <Picker  x:Name="viewModePicker"
+                     Grid.Row="3"
+                     VerticalOptions="Start"
+                     HorizontalOptions="FillAndExpand">
+                <Picker.Items>
+                    <x:String>Selection</x:String>
+                    <x:String>Absolute</x:String>
+                </Picker.Items>
+            </Picker>-->
+            <StackLayout Grid.Row="0" Orientation="Horizontal">
+                <Label x:Name="showResource"
+                   VerticalOptions="Center"
+                   Font="15"
+                   Text="Show resource view"
+                   TextColor="Gray"/>
+                <Switch Margin="10,0,0,0"
+                  x:Name="showResourceView"
+                  IsToggled="True"/>
+            </StackLayout>
+        </Grid>
+    </local:SampleView.PropertyView>
+    <local:SampleView.BindingContext>
+        <samplelocal:TimelineViewModel/>
+    </local:SampleView.BindingContext>
+    <local:SampleView.Behaviors>
+        <samplelocal:TimelineViewBehavior/>
+    </local:SampleView.Behaviors>
+</local:SampleView>

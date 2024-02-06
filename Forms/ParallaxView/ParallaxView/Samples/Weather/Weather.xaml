@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:sample="clr-namespace:SampleBrowser.SfParallaxView" xmlns:parallax="clr-namespace:Syncfusion.XForms.ParallaxView;assembly=Syncfusion.SfParallaxView.XForms" xmlns:parallaxview="clr-namespace:Syncfusion.XForms.ParallaxView;assembly=Syncfusion.SfParallaxView.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:rotate="clr-namespace:Syncfusion.SfRotator.XForms;assembly=Syncfusion.SfRotator.XForms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfParallaxView.Weather">
+    <local:SampleView.BindingContext>
+        <sample:WeatherViewModel />
+    </local:SampleView.BindingContext>
+    <local:SampleView.Content>
+        <Grid x:Name="grid">
+            <parallax:SfParallaxView   Orientation="Horizontal" Speed="0.5" Source="{x:Reference Name=sfRotator}" x:Name="parallaxview">
+                <parallax:SfParallaxView.Content>
+                    <Image x:Name="image" Source="{Binding ParallaxImage}" BackgroundColor="Transparent" HorizontalOptions="Fill" VerticalOptions="Fill" Aspect="AspectFill" />
+                </parallax:SfParallaxView.Content>
+            </parallax:SfParallaxView>
+            <rotate:SfRotator SelectedDotColor="#5E95AE" DotsBorderColor="#5E95AE" EnableLooping="false" ItemsSource="{Binding SelectedData}" x:Name="sfRotator" NavigationDirection="Horizontal" NavigationStripMode=" Dots" BackgroundColor="Transparent" NavigationStripPosition="Bottom">
+                <rotate:SfRotator.ItemTemplate>
+                    <DataTemplate>
+                        <Grid RowSpacing="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.05*" />
+                                <RowDefinition Height="0.35*" />
+                                <RowDefinition Height="0.5*" />
+                                <RowDefinition Height="0.1*" />
+                            </Grid.RowDefinitions>
+                            <Image BackgroundColor="Transparent" Aspect="AspectFit" Source="{Binding WeatherConditions}" Grid.Row="1" />
+                            <StackLayout Spacing="15" Grid.Row="2" BackgroundColor="Transparent">
+                                <Label TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding Temperature}">
+                                    <Label.FontSize>
+                                        <OnPlatform x:TypeArguments="x:Double">
+                                            <OnPlatform.WinPhone>
+                                                <OnIdiom x:TypeArguments="x:Double" Desktop="60" Tablet="60" />
+                                            </OnPlatform.WinPhone>
+                                            <OnPlatform.Android>
+                                                <OnIdiom x:TypeArguments="x:Double" Phone="40" Tablet="60" />
+                                            </OnPlatform.Android>
+                                            <OnPlatform.iOS>
+                                                <OnIdiom x:TypeArguments="x:Double" Phone="40" Tablet="60" />
+                                            </OnPlatform.iOS>
+                                        </OnPlatform>
+                                    </Label.FontSize>
+                                </Label>
+                                <Label TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding Day}">
+                                    <Label.FontSize>
+                                        <OnPlatform x:TypeArguments="x:Double">
+                                            <OnPlatform.WinPhone>
+                                                <OnIdiom x:TypeArguments="x:Double" Desktop="35" Tablet="35" />
+                                            </OnPlatform.WinPhone>
+                                            <OnPlatform.Android>
+                                                <OnIdiom x:TypeArguments="x:Double" Phone="25" Tablet="35" />
+                                            </OnPlatform.Android>
+                                            <OnPlatform.iOS>
+                                                <OnIdiom x:TypeArguments="x:Double" Phone="25" Tablet="35" />
+                                            </OnPlatform.iOS>
+                                        </OnPlatform>
+                                    </Label.FontSize>
+                                </Label>
+                                <Label TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding WeatherDetails}">
+                                    <Label.FontSize>
+                                        <OnPlatform x:TypeArguments="x:Double">
+                                            <OnPlatform.WinPhone>
+                                                <OnIdiom x:TypeArguments="x:Double" Desktop="20" Tablet="20" />
+                                            </OnPlatform.WinPhone>
+                                            <OnPlatform.Android>
+                                                <OnIdiom x:TypeArguments="x:Double" Phone="18" Tablet="20" />
+                                            </OnPlatform.Android>
+                                            <OnPlatform.iOS>
+                                                <OnIdiom x:TypeArguments="x:Double" Phone="18" Tablet="20" />
+                                            </OnPlatform.iOS>
+                                        </OnPlatform>
+                                    </Label.FontSize>
+                                </Label>
+                            </StackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </rotate:SfRotator.ItemTemplate>
+            </rotate:SfRotator>
+        </Grid>
+    </local:SampleView.Content>
+</local:SampleView>
