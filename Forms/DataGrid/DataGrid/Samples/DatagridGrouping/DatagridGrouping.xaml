@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sample:SampleView  xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		x:Class="SampleBrowser.SfDataGrid.DatagridGrouping"
+		xmlns:local="clr-namespace:SampleBrowser.SfDataGrid"
+    xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+		xmlns:sfgrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms">
+
+  <sample:SampleView.BindingContext>
+    <local:GroupingViewModel x:Name="viewModel" />
+  </sample:SampleView.BindingContext>
+    <sample:SampleView.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="headerRowHeight"
+                  x:TypeArguments="x:Double">
+                <On Platform="iOS,Android" Value="40" />
+            </OnPlatform>
+           
+            <OnPlatform x:Key="rowHeight"
+                  x:TypeArguments="x:Double">
+                <On Platform="iOS,Android" Value="50" />
+            </OnPlatform>
+            <OnPlatform x:Key="opacity"
+                      x:TypeArguments="x:Double">
+                <On Platform="iOS,Android" Value="87" />
+                <On Platform="UWP,WPF" Value="80" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="padding"
+                   x:TypeArguments="Thickness">
+                <On Platform="Android,iOS" Value="8, 12, 8, 12" />
+                <On Platform="UWP,WPF" Value="8, 12, 8, 16" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="textSize"
+                  x:TypeArguments="x:Double">
+                <On Platform="iOS,UWP,WPF" Value="14" />
+                <On Platform="Android" Value="13" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="font"
+                  x:TypeArguments="x:String">
+                <On Platform="Android" Value="Roboto-Regular" />
+                <On Platform="iOS" Value="SFProText-Regular" />
+                <On Platform="UWP,WPF" Value="SegoeUI" />
+            </OnPlatform>
+
+        </ResourceDictionary>
+    </sample:SampleView.Resources>
+
+
+    <sample:SampleView.Content>
+        <sfgrid:SfDataGrid x:Name="dataGrid"
+                   AllowSorting="true"
+                   ItemsSource="{Binding ProductDetails}"
+                   AutoGenerateColumns="false"
+                   AllowGroupExpandCollapse="true"
+                   ColumnSizer="Star"
+                   HeaderRowHeight="{StaticResource headerRowHeight}"
+                   RowHeight="{StaticResource rowHeight}"        
+                   SelectionMode="Single">
+
+            <sfgrid:SfDataGrid.Columns>
+
+                <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                               HeaderText="Product ID"
+                               HeaderTextAlignment="Start"
+                               MappingName="ProductID"
+                               Padding="5,0,5,0"
+                               LineBreakMode="TailTruncation"
+                               TextAlignment="End"
+                               HeaderCellTextSize="{StaticResource textSize}"
+                               CellTextSize="{StaticResource textSize}">
+                </sfgrid:GridTextColumn>
+
+                <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                               HeaderText="User Rating"
+                               HeaderTextAlignment="Start"
+                               MappingName="UserRating"
+                               Padding="5,0,5,0"
+                               LineBreakMode="TailTruncation"
+                               TextAlignment="End"
+                               HeaderCellTextSize="{StaticResource textSize}"
+                               CellTextSize="{StaticResource textSize}">
+                </sfgrid:GridTextColumn>
+
+                <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                               HeaderText="Product Model"
+                               HeaderTextAlignment="Start"
+                               MappingName="ProductModel"
+                               Padding="5, 0, 0, 0"
+                               LineBreakMode="TailTruncation"
+                               TextAlignment="Start"
+                               HeaderCellTextSize="{StaticResource textSize}"
+                               CellTextSize="{StaticResource textSize}">
+                </sfgrid:GridTextColumn>
+
+                <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                               HeaderText="Product Type"
+                               HeaderTextAlignment="Start"
+                               MappingName="ProductType"
+                               Padding="5, 0, 0, 0"
+                               LineBreakMode="TailTruncation"
+                               TextAlignment="Start"
+                               HeaderCellTextSize="{StaticResource textSize}"
+                               CellTextSize="{StaticResource textSize}">
+                </sfgrid:GridTextColumn>
+                <sfgrid:GridSwitchColumn HeaderFontAttribute="Bold"
+                                 HeaderText="Availability"
+                                 HeaderTextAlignment="Start"
+                                 MappingName="Availability"
+                                 Padding="5, 0, 0, 0"
+                                 LineBreakMode="TailTruncation"
+                                 TextAlignment="Start"
+                                 HeaderCellTextSize="{StaticResource textSize}"
+                                 CellTextSize="{StaticResource textSize}">
+
+                </sfgrid:GridSwitchColumn>
+      </sfgrid:SfDataGrid.Columns>
+
+      <sfgrid:SfDataGrid.GroupColumnDescriptions>
+        <sfgrid:GroupColumnDescription ColumnName="ProductType" />
+      </sfgrid:SfDataGrid.GroupColumnDescriptions>
+
+    </sfgrid:SfDataGrid>
+  </sample:SampleView.Content>
+</sample:SampleView>

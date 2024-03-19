@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <ItemGroup>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\world1.shp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\world1.shp</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\Custom.dbf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\Custom.dbf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\Custom.shp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\Custom.shp</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\Custom.shx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\Custom.shx</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\navigation.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\navigation.ttf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\RadialMenu.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\RadialMenu.ttf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\Segoe MDL2 Assets.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\Segoe MDL2 Assets.ttf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\socialicons.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\socialicons.ttf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\usa_state.dbf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\usa_state.dbf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\usa_state.shp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\usa_state.shp</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\world1.dbf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\world1.dbf</Link>
+    </AndroidAsset>   
+	<AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\asia.dbf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\asia.dbf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\asia.shp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\asia.shp</Link>
+    </AndroidAsset>
+	<AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\africa.dbf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\africa.dbf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\africa.shp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\africa.shp</Link>
+    </AndroidAsset>
+	<AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\australia.dbf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\australia.dbf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\australia.shp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\australia.shp</Link>
+    </AndroidAsset>
+	<AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\continent.dbf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\continent.dbf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\continent.shp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\continent.shp</Link>
+    </AndroidAsset>
+	<AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\europe.dbf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\europe.dbf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\europe.shp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\europe.shp</Link>
+    </AndroidAsset>
+	<AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\north-america.dbf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\north-america.dbf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\north-america.shp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\north-america.shp</Link>
+    </AndroidAsset>
+	<AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\south-america.dbf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\south-america.dbf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\south-america.shp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\south-america.shp</Link>
+    </AndroidAsset>
+	<AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\world-map.dbf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\world-map.dbf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\world-map.shp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <Link>Assets\world-map.shp</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\river.dbf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>Assets\river.dbf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)\Assets\river.shp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>Assets\river.shp</Link>
+    </AndroidAsset>
+  </ItemGroup>
+</Project>

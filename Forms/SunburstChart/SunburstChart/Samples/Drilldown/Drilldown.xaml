@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sunburst="clr-namespace:Syncfusion.SfSunburstChart.XForms;assembly=Syncfusion.SfSunburstChart.XForms"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:sample="clr-namespace:SampleBrowser.SfSunburstChart"
+             x:Class="SampleBrowser.SfSunburstChart.Drilldown">
+
+    <local:SampleView.BindingContext>
+        <sample:SunburstViewModel/>
+    </local:SampleView.BindingContext>
+
+    <local:SampleView.Content BackgroundColor="White">
+
+        <Grid x:Name="grid" BackgroundColor="White" Padding="0,15,0,15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" Grid.Row="0"
+                                  ValueMemberPath="EmployeesCount">
+                <sunburst:SfSunburstChart.Title>
+                    <sunburst:SunburstChartTitle x:Name="title" Text="Employees Count"></sunburst:SunburstChartTitle>
+                </sunburst:SfSunburstChart.Title>
+
+                <sunburst:SfSunburstChart.Legend>
+                    <sunburst:SunburstChartLegend x:Name="legend" IsVisible="True" LegendPosition="Top">
+                        <sunburst:SunburstChartLegend.LabelStyle>
+                            <sunburst:SunburstLegendLabelStyle x:Name="legendStyle"></sunburst:SunburstLegendLabelStyle>
+                        </sunburst:SunburstChartLegend.LabelStyle>
+                    </sunburst:SunburstChartLegend>
+                </sunburst:SfSunburstChart.Legend>
+
+                <sunburst:SfSunburstChart.DataLabel>
+                    <sunburst:SunburstChartDataLabel x:Name="dataLabel" ShowLabel="True"></sunburst:SunburstChartDataLabel>
+                </sunburst:SfSunburstChart.DataLabel>
+
+                <sunburst:SfSunburstChart.DrilldownSettings>
+                    <sunburst:DrilldownSettings Enable="True"></sunburst:DrilldownSettings>
+                </sunburst:SfSunburstChart.DrilldownSettings>               
+               
+                <sunburst:SfSunburstChart.Levels>
+                    <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country"/>
+                    <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobDescription"/>
+                    <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
+                    <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobRole"/>
+                </sunburst:SfSunburstChart.Levels>
+
+            </sunburst:SfSunburstChart>
+
+            <Label  Grid.Row="1" HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"  TextColor="Black"              
+                   Text="Double tap on the segment to perform drill down.">                
+            </Label>
+
+        </Grid>        
+
+    </local:SampleView.Content>
+</local:SampleView>

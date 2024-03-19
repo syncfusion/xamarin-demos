@@ -1,0 +1,44 @@
+<Project>
+  <ItemGroup>
+
+ <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+    <Link>Samples\ParallaxView\SamplesList\SamplesList.xml</Link>
+  </EmbeddedResource>
+
+  <EmbeddedResource Include ="$(MSBuildThisFileDirectory)\Samples\ParallaxView\ParallaxView.xaml">
+    <Link>Samples\ParallaxView\Samples\ParallaxView\ParallaxView.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    
+ <Compile Include="$(MSBuildThisFileDirectory)\Samples\ParallaxView\ParallaxView.xaml.cs">
+    <Link>Samples\ParallaxView\Samples\ParallaxView\ParallaxView.xaml.cs</Link>
+      <DependentUpon>ParallaxView.xaml</DependentUpon>
+    </Compile>
+
+
+  <EmbeddedResource Include ="$(MSBuildThisFileDirectory)\Samples\Weather\Weather.xaml">
+    <Link>Samples\ParallaxView\Samples\Weather\Weather.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+
+
+ <Compile Include="$(MSBuildThisFileDirectory)\Samples\Weather\Weather.xaml.cs">
+    <Link>Samples\ParallaxView\Samples\Weather\Weather.xaml.cs</Link>
+      <DependentUpon>Weather.xaml</DependentUpon>
+    </Compile>
+
+           <Compile Include="$(MSBuildThisFileDirectory)\Samples\ParallaxView\ParallaxViewModel.cs">
+            <Link>Samples\ParallaxView\ParallaxViewModel.cs</Link>
+        </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ParallaxView\ParallaxViewViewModel.cs">
+      <Link>Samples\ParallaxView\ParallaxViewViewModel.cs</Link>
+    </Compile>
+
+            <Compile Include="$(MSBuildThisFileDirectory)\Samples\Weather\WeatherViewModel.cs">
+            <Link>Samples\Weather\WeatherViewModel.cs</Link>
+        </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Weather\WeatherModel.cs">
+      <Link>Samples\Weather\WeatherModel.cs</Link>
+    </Compile>
+  </ItemGroup>
+</Project>

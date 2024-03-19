@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+ <ItemGroup>
+
+   <Compile Include="$(MSBuildThisFileDirectory)\FileStore.cs">
+   <Link>ImageEditor\FileStore.cs</Link>
+  </Compile>
+
+   <Compile Include="$(MSBuildThisFileDirectory)\Renderers\CustomRenderers.cs">
+   <Link>ImageEditor\Renderers\CustomRenderers.cs </Link>
+</Compile>
+
+   <Compile Include="$(MSBuildThisFileDirectory)\Share.cs">
+   <Link>ImageEditor\Share.cs</Link>
+</Compile>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\SplashScreen.png">
+    <Link>Resources\drawable\SplashScreen.png</Link>
+</AndroidResource>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\values\splash.xml">
+    <Link>Resources\values\splash.xml</Link>
+</AndroidResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Typogy1.xml">
+    <Link>Resources\drawable\Typogy1.xml</Link>
+</AndroidResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Typogy2.xml">
+    <Link>Resources\drawable\Typogy2.xml</Link>
+</AndroidResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Typogy3.xml">
+    <Link>Resources\drawable\Typogy3.xml</Link>
+</AndroidResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Typogy4.xml">
+    <Link>Resources\drawable\Typogy4.xml</Link>
+</AndroidResource>
+  </ItemGroup>
+
+  <ItemGroup>
+     <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Typogy5.xml">
+    <Link>Resources\drawable\Typogy5.xml</Link>
+</AndroidResource>
+  </ItemGroup>
+
+  <ItemGroup>
+  <AndroidResource Include="$(MSBuildThisFileDirectory)\Resources\drawable\Typogy6.xml">
+   <Link>Resources\drawable\Typogy6.xml</Link>
+</AndroidResource>
+  </ItemGroup>
+
+</Project>
