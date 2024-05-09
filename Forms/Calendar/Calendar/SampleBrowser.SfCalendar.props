@@ -1,0 +1,130 @@
+<Project>
+    <ItemGroup>
+          <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml" >
+               <Link>Samples\Calendar\SamplesList\SamplesList.xml</Link>
+          </EmbeddedResource>
+      </ItemGroup>
+      
+      <ItemGroup>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\BlackoutDates\Behaviors\BlackoutDatesBehavior.cs" >
+              <Link>Samples\Calendar\BlackoutDates\Behaviors\BlackoutDatesBehavior.cs</Link>
+          </Compile> 
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\BlackoutDates\Views\BlackoutDates.xaml.cs">
+              <Link>Samples\Calendar\BlackoutDates\Views\BlackoutDates.xaml.cs</Link>
+              <DependentUpon>EditorLayout.xaml</DependentUpon>
+          </Compile>
+          <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\BlackoutDates\Views\BlackoutDates.xaml">
+              <Link>Samples\Calendar\BlackoutDates\Views\BlackoutDates.xaml</Link>
+              <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+              <SubType>Designer</SubType>
+          </EmbeddedResource>
+      </ItemGroup>
+
+      <ItemGroup>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\CalendarLocalization\Behaviors\LocalizationBehavior.cs" >
+              <Link>Samples\Calendar\CalendarLocalization\Behaviors\LocalizationBehavior.cs</Link>
+          </Compile>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\CalendarLocalization\ViewModel\LocalizationViewModel.cs" >
+              <Link>Samples\Calendar\CalendarLocalization\ViewModel\LocalizationViewModel.cs</Link>
+          </Compile>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\CalendarLocalization\Views\CalendarLocalization.xaml.cs">
+              <Link>Samples\Calendar\CalendarLocalization\Views\CalendarLocalization.xaml.cs</Link>
+              <DependentUpon>EditorLayout.xaml</DependentUpon>
+          </Compile>
+          <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CalendarLocalization\Views\CalendarLocalization.xaml">
+              <Link>Samples\Calendar\CalendarLocalization\Views\CalendarLocalization.xaml</Link>
+              <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+              <SubType>Designer</SubType>
+          </EmbeddedResource>
+      </ItemGroup>
+
+      <ItemGroup>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\CalendarGettingStarted\Behaviors\GettingStartedBehavior.cs" >
+              <Link>Samples\Calendar\CalendarGettingStarted\Behaviors\GettingStartedBehavior.cs</Link>
+          </Compile>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\CalendarGettingStarted\ViewModel\GettingStartedViewModel.cs" >
+              <Link>Samples\Calendar\CalendarGettingStarted\ViewModel\GettingStartedViewModel.cs</Link>
+          </Compile>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\CalendarGettingStarted\Views\CalendarGettingStarted.xaml.cs">
+              <Link>Samples\Calendar\CalendarGettingStarted\Views\CalendarGettingStarted.xaml.cs</Link>
+              <DependentUpon>EditorLayout.xaml</DependentUpon>
+          </Compile>
+          <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CalendarGettingStarted\Views\CalendarGettingStarted.xaml">
+              <Link>Samples\Calendar\CalendarGettingStarted\Views\CalendarGettingStarted.xaml</Link>
+              <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+              <SubType>Designer</SubType>
+          </EmbeddedResource>
+      </ItemGroup>
+
+      <ItemGroup>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\CalendarCustomization\Behaviors\CalendarCustomizationBehavior.cs" >
+              <Link>Samples\Calendar\CalendarCustomization\Behaviors\CalendarCustomizationBehavior.cs</Link>
+          </Compile>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\CalendarCustomization\ViewModel\CalendarCustomizationViewModel.cs" >
+              <Link>Samples\Calendar\CalendarCustomization\ViewModel\CalendarCustomizationViewModel.cs</Link>
+          </Compile>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\CalendarCustomization\Views\CalendarCustomization.xaml.cs">
+              <Link>Samples\Calendar\CalendarCustomization\Views\CalendarCustomization.xaml.cs</Link>
+              <DependentUpon>EditorLayout.xaml</DependentUpon>
+          </Compile>
+          <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\CalendarCustomization\Views\CalendarCustomization.xaml">
+              <Link>Samples\Calendar\CalendarCustomization\Views\CalendarCustomization.xaml</Link>
+              <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+              <SubType>Designer</SubType>
+          </EmbeddedResource>
+      </ItemGroup>
+
+      <ItemGroup>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\InlineEvents\Behaviors\InlineBehavior.cs" >
+              <Link>Samples\Calendar\InlineEvents\Behaviors\InlineBehavior.cs</Link>
+          </Compile>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\InlineEvents\ViewModel\InlineViewModel.cs" >
+              <Link>Samples\Calendar\InlineEvents\ViewModel\InlineViewModel.cs</Link>
+          </Compile>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\InlineEvents\Views\InlineEvents.xaml.cs">
+              <Link>Samples\Calendar\InlineEvents\Views\InlineEvents.xaml.cs</Link>
+              <DependentUpon>EditorLayout.xaml</DependentUpon>
+          </Compile>
+          <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\InlineEvents\Views\InlineEvents.xaml">
+              <Link>Samples\Calendar\InlineEvents\Views\InlineEvents.xaml</Link>
+              <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+              <SubType>Designer</SubType>
+          </EmbeddedResource>
+      </ItemGroup>
+
+      <ItemGroup>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Behaviors\CalendarThemesBehavior.cs" >
+              <Link>Samples\Calendar\Themes\Behaviors\CalendarThemesBehavior.cs</Link>
+          </Compile>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\ThemesViewModel.cs" >
+              <Link>Samples\Calendar\Themes\ThemesViewModel.cs</Link>
+          </Compile>
+           <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml.cs">
+              <Link>Samples\Calendar\Themes\Themes.xaml.cs</Link>
+              <DependentUpon>Themes.xaml</DependentUpon>
+          </Compile>
+          <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml">
+              <Link>Samples\Calendar\Themes\Themes.xaml</Link>
+              <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+              <SubType>Designer</SubType>
+          </EmbeddedResource>
+      </ItemGroup>
+	  
+	  	  <ItemGroup>
+	      <Compile Include="$(MSBuildThisFileDirectory)\Samples\WeekView\Behaviors\WeekViewBehavior.cs" >
+              <Link>Samples\Calendar\WeekView\Behaviors\WeekViewBehavior.cs</Link>
+          </Compile>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\WeekView\ViewModel\WeekViewModel.cs" >
+              <Link>Samples\Calendar\WeekView\ViewModel\WeekViewModel.cs</Link>
+          </Compile>
+           <Compile Include="$(MSBuildThisFileDirectory)\Samples\WeekView\Views\WeekView.xaml.cs">
+              <Link>Samples\Calendar\WeekView\Views\WeekView.xaml.cs</Link>
+              <DependentUpon>WeekView.xaml</DependentUpon>
+          </Compile>
+          <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\WeekView\Views\WeekView.xaml">
+              <Link>Samples\Calendar\WeekView\Views\WeekView.xaml</Link>
+              <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+              <SubType>Designer</SubType>
+          </EmbeddedResource>
+      </ItemGroup>
+</Project>

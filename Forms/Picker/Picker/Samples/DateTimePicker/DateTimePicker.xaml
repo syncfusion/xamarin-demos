@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView  xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPicker.XForms"
+                   xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" 
+                   xmlns:custom="clr-namespace:SampleBrowser.SfPicker" 
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   x:Class="SampleBrowser.SfPicker.DateTimePicker">
+	<local:SampleView.Content>
+    <ScrollView Margin="10" >
+	  <Grid x:Name="tempGrid" BackgroundColor="White" >
+      <Grid.Resources>
+        <ResourceDictionary>
+          <local:ImagePathConverter x:Key="ImagePathConverter" />
+        </ResourceDictionary>
+      </Grid.Resources>
+        <Grid Margin="10" x:Name="innergrid" HorizontalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label Text="Appointment Date" x:Name="applabel"  HorizontalOptions="Start" FontSize="18"  />
+            <ScrollView Grid.Row="1" Margin="10,0,10,10"  x:Name="scroll" IsClippedToBounds="true">
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition x:Name="row1" Height="290" />
+                      <RowDefinition Height="auto" />
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                        <custom:CustomDatePicker 
+								ShowHeader="false"
+								Margin="2" 
+								BorderColor="Gray"
+								ShowColumnHeader="true"
+								ColumnHeaderHeight="50"
+								HeaderText="Appointment Date"
+								SelectedItem="{Binding AppointmentDate}"
+								x:Name="picker" 
+								ItemHeight="45" ShowFooter="False"  >
+                          <custom:CustomDatePicker.Behaviors>
+                            <custom:SfPickerBehavior />
+                          </custom:CustomDatePicker.Behaviors>
+                    </custom:CustomDatePicker>
+                  <Label Text="Appointment Time" Margin="0,15,0,10" Grid.Row="1" x:Name="apptimelabel"  HorizontalOptions="Start" FontSize="18"  />
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <StackLayout>
+                            <Label Text="Start Time" x:Name="startlabel"/>
+                            <StackLayout x:Name="startlayout" Orientation="Horizontal">
+                                    <Entry HeightRequest="0" WidthRequest="0"/>
+                                    <custom:CustomPickerEntry IsEnabled="true" x:Name="startdate" WidthRequest="90" HeightRequest="30"  />
+                                    <custom:CustomButton x:Name="starttimebutton" Clicked="Button_Click" BackgroundColor="Transparent" Margin="5,0,0,0" Image="{Binding Converter={StaticResource ImagePathConverter},ConverterParameter=SampleBrowser.SfPicker.timeold.png}">
+                                   
+                                </custom:CustomButton>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" HorizontalOptions="End">
+                            <Label Text="End Time" x:Name="endlabel"/>
+                            <StackLayout x:Name="endlayout" Orientation="Horizontal">
+                                    <custom:CustomPickerEntry IsEnabled="true"  x:Name="enddate" WidthRequest="90" HeightRequest="30" />
+                                    <custom:CustomButton Clicked="Button_Click_2" x:Name="endtimebutton" BackgroundColor="Transparent" Margin="5,0,0,0" Image="{Binding Converter={StaticResource ImagePathConverter},ConverterParameter=SampleBrowser.SfPicker.timeold.png}">
+                                    
+                                </custom:CustomButton>
+                            </StackLayout>
+                        </StackLayout>
+                    </Grid>
+                    <Grid x:Name="desGrid" Grid.Row="3" Margin="0,50,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Label Text="Description" x:Name="deslabel" />
+                        <Entry x:Name="description" FontSize="14" Placeholder="Type here"  HeightRequest="80" Grid.Row="1" />
+                    </Grid>
+                    <Button Text="Submit" x:Name="submit" HorizontalOptions="Center" Clicked="Button_Clicked" Grid.Row="4" WidthRequest="150" BorderWidth="2" BorderRadius="5" Margin="3" />
+                </Grid>
+            </ScrollView>
+        </Grid>
+
+            <custom:CustomTimePicker x:Name="popuppicker"
+					SelectedItem="{Binding SelectedStartTime,Mode=TwoWay}"
+					HeaderHeight="40"
+					ShowHeader="true"
+					HeaderText="Time Picker"
+					ShowColumnHeader="True"
+					ColumnHeaderHeight="46"
+					OkButtonClicked="popuppicker_OkButtonClicked"
+					CancelButtonClicked="popuppicker_CancelButtonClicked"
+					PickerMode="Dialog"
+					ItemHeight="40"
+					PickerHeight="300"
+					PickerWidth="252"
+					ShowFooter="True"
+					FooterHeight="46">
+              <custom:CustomTimePicker.Behaviors>
+                <custom:SfPickerBehavior />
+              </custom:CustomTimePicker.Behaviors>
+        </custom:CustomTimePicker>
+
+
+            <custom:CustomTimePicker x:Name="popupendpicker"
+					SelectedItem="{Binding SelectedEndTime,Mode=TwoWay}"
+					HeaderHeight="40"
+					ShowHeader="true"
+					HeaderText="Time Picker" 
+					ShowColumnHeader="True"
+					ColumnHeaderHeight="46"
+					OkButtonClicked="popuppicker_OkButtonClicked"
+					CancelButtonClicked="popuppicker_CancelButtonClicked"
+					PickerMode="Dialog"
+					ItemHeight="40"
+					PickerHeight="300"
+					PickerWidth="252"
+					ShowFooter="True" 
+					FooterHeight="46">
+              <custom:CustomTimePicker.Behaviors>
+                <custom:SfPickerBehavior />
+              </custom:CustomTimePicker.Behaviors>
+        </custom:CustomTimePicker>
+    </Grid>
+    </ScrollView>        
+	</local:SampleView.Content>
+</local:SampleView>

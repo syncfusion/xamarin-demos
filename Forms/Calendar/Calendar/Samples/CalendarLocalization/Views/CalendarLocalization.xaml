@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:samplelocal="clr-namespace:SampleBrowser.SfCalendar"
+                  xmlns:CalendarSample="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms"
+                  x:Class="SampleBrowser.SfCalendar.CalendarLocalization">
+
+    <local:SampleView.BindingContext>
+        <samplelocal:LocalizationViewModel x:Name="ViewModel" />
+    </local:SampleView.BindingContext>
+    
+    <local:SampleView.Content>
+        <Grid x:Name="grid">
+            <CalendarSample:SfCalendar x:Name="calendar"
+                                   VerticalOptions="FillAndExpand"
+                                   HorizontalOptions="FillAndExpand"/>
+        </Grid>
+    </local:SampleView.Content>
+    
+    <local:SampleView.PropertyView>
+        <StackLayout x:Name="mainStack">
+            <StackLayout Orientation="Vertical">
+                <Label x:Name="localeLabel" 
+                       Text=" Locale" 
+                       FontAttributes="None" 
+                       FontSize="20" 
+                       HeightRequest="40" 
+                       HorizontalOptions="Start" 
+                       TextColor="Gray" />
+                <Picker x:Name="localePicker" 
+                        SelectedIndex="0">
+                    <Picker.Items>
+                        <x:String>Chinese</x:String>
+                        <x:String>Spanish</x:String>
+                        <x:String>English</x:String>
+                        <x:String>French</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+        </StackLayout>
+    </local:SampleView.PropertyView>
+
+    <local:SampleView.Behaviors>
+        <samplelocal:LocalizationBehavior />
+    </local:SampleView.Behaviors>
+</local:SampleView>

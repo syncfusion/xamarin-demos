@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<local:SampleView
+    x:Class="SampleBrowser.SfNumericUpDown.NumericUpDown_Default"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:numeric="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms">
+    <local:SampleView.Content>
+        <Grid x:Name="sampleLayout">
+            <Grid.Resources>
+                <ResourceDictionary>
+                    <local:ImagePathConverter x:Key="ImagePathConverter" />
+                </ResourceDictionary>
+            </Grid.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid BackgroundColor="Black">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label
+                    x:Name="fruitHeadingLabel"
+                    Margin="10,0,0,0"
+                    Text="My Fruits"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+                <StackLayout
+                    x:Name="cartInfoStack"
+                    Grid.Column="1"
+                    Margin="0,0,10,0"
+                    HorizontalOptions="End"
+                    Orientation="Horizontal"
+                    VerticalOptions="Center">
+                    <Label
+                        x:Name="checkoutLabel"
+                        Margin="-2,5,0,0"
+                        Text="Check Out"
+                        TextColor="White" />
+                    <Label
+                        x:Name="TotalCart"
+                        Margin="5"
+                        Text="(0)"
+                        TextColor="#d16d10" />
+                    <Image
+                        Margin="0,5,5,5"
+                        HeightRequest="28"
+                        WidthRequest="28">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="{OnPlatform iOS=Sync FontIcons,
+                                                        Android=Sync FontIcons.ttf#,
+                                                        UWP=Sync FontIcons.ttf#Sync FontIcons}"
+                                Glyph="&#xe706;"
+                                Color="#ffffff" />
+                        </Image.Source>
+                    </Image>
+                </StackLayout>
+            </Grid>
+            <ScrollView Grid.Row="1" IsClippedToBounds="true">
+                <StackLayout BackgroundColor="#edf8fc">
+                    <Grid
+                        Margin="4,4,4,2"
+                        BackgroundColor="White"
+                        HeightRequest="165">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.8*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            Aspect="AspectFit"
+                            HorizontalOptions="Center"
+                            Source="Peach.jpg"
+                            VerticalOptions="Center" />
+                        <Image
+                            Grid.Column="1"
+                            Margin="7"
+                            Aspect="AspectFit"
+                            HeightRequest="40"
+                            HorizontalOptions="End"
+                            Source="{Binding Converter={StaticResource ImagePathConverter}, ConverterParameter=SampleBrowser.SfNumericUpDown.off.png}"
+                            VerticalOptions="Start"
+                            WidthRequest="40" />
+                        <Grid Grid.Column="1" Margin="7">
+                            <Grid.RowDefinitions>
+                                <RowDefinition x:Name="aheader" Height="25" />
+                                <RowDefinition Height="20" />
+                                <RowDefinition Height="45" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid>
+                                <Label
+                                    Font="16"
+                                    Text="Peach"
+                                    TextColor="Black" />
+                            </Grid>
+                            <Label
+                                Grid.Row="1"
+                                Font="12"
+                                Text="$0.49 per Unit"
+                                TextColor="Gray" />
+                            <numeric:SfNumericUpDown
+                                x:Name="AppleCount"
+                                Grid.Row="2"
+                                AllowNull="false"
+                                FormatString="n"
+                                HeightRequest="35"
+                                HorizontalOptions="FillAndExpand"
+                                MaximumDecimalDigits="0"
+                                MinimumHeightRequest="50"
+                                SpinButtonAlignment="Both"
+                                TextAlignment="Center"
+                                TextColor="Black"
+                                ValueChanged="Handle_ValueChanged"
+                                VerticalOptions="Center"
+                                Watermark="Units"
+                                WidthRequest="50"
+                                Value="0" />
+                            <Label
+                                x:Name="AppleCost"
+                                Grid.Row="3"
+                                Font="18"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Start"
+                                Text="$0"
+                                TextColor="Black"
+                                VerticalOptions="Center" />
+                            <Button
+                                x:Name="appleAddButton"
+                                Grid.Row="3"
+                                BackgroundColor="#d16d10"
+                                Clicked="Handle_Clicked"
+                                Font="16"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                IsEnabled="false"
+                                Text="Add To Cart"
+                                TextColor="White"
+                                VerticalOptions="End"
+                                WidthRequest="120" />
+                        </Grid>
+                    </Grid>
+                    <Grid
+                        Margin="4,4,4,2"
+                        BackgroundColor="White"
+                        HeightRequest="165">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.8*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            Aspect="AspectFit"
+                            HorizontalOptions="Center"
+                            Source="Raspberry.jpg"
+                            VerticalOptions="Center" />
+                        <Image
+                            Grid.Column="1"
+                            Margin="7"
+                            Aspect="AspectFit"
+                            HeightRequest="40"
+                            HorizontalOptions="End"
+                            Source="{Binding Converter={StaticResource ImagePathConverter}, ConverterParameter=SampleBrowser.SfNumericUpDown.off.png}"
+                            VerticalOptions="Start"
+                            WidthRequest="40" />
+                        <Grid Grid.Column="1" Margin="7">
+                            <Grid.RowDefinitions>
+                                <RowDefinition x:Name="pheader" Height="25" />
+                                <RowDefinition Height="20" />
+                                <RowDefinition Height="45" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid>
+                                <Label
+                                    Font="16"
+                                    Text="Raspberry"
+                                    TextColor="Black" />
+                            </Grid>
+                            <Label
+                                Grid.Row="1"
+                                Font="12"
+                                Text="$0.99 per Unit"
+                                TextColor="Gray" />
+                            <numeric:SfNumericUpDown
+                                x:Name="PomegranateCount"
+                                Grid.Row="2"
+                                AllowNull="false"
+                                FormatString="n"
+                                HeightRequest="35"
+                                HorizontalOptions="FillAndExpand"
+                                MaximumDecimalDigits="0"
+                                MinimumHeightRequest="50"
+                                SpinButtonAlignment="Both"
+                                TextAlignment="Center"
+                                TextColor="Black"
+                                ValueChanged="Handle_ValueChanged2"
+                                VerticalOptions="Center"
+                                Watermark="Units"
+                                WidthRequest="50"
+                                Value="0" />
+                            <Label
+                                x:Name="PomegranateCost"
+                                Grid.Row="3"
+                                Font="18"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Start"
+                                Text="$0"
+                                TextColor="Black"
+                                VerticalOptions="Center" />
+                            <Button
+                                x:Name="pomegranateAddButton"
+                                Grid.Row="3"
+                                BackgroundColor="#d16d10"
+                                Clicked="Handle_Clicked"
+                                Font="16"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                IsEnabled="false"
+                                Text="Add To Cart"
+                                TextColor="White"
+                                VerticalOptions="End"
+                                WidthRequest="120" />
+                        </Grid>
+                    </Grid>
+                    <Grid
+                        Margin="4,4,4,2"
+                        BackgroundColor="White"
+                        HeightRequest="165">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.8*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            Aspect="AspectFit"
+                            HorizontalOptions="Center"
+                            Source="Cherry.jpg"
+                            VerticalOptions="Center" />
+                        <Image
+                            Grid.Column="1"
+                            Margin="7"
+                            Aspect="AspectFit"
+                            HeightRequest="40"
+                            HorizontalOptions="End"
+                            Source="{Binding Converter={StaticResource ImagePathConverter}, ConverterParameter=SampleBrowser.SfNumericUpDown.off.png}"
+                            VerticalOptions="Start"
+                            WidthRequest="40" />
+                        <Grid Grid.Column="1" Margin="7">
+                            <Grid.RowDefinitions>
+                                <RowDefinition x:Name="oheader" Height="25" />
+                                <RowDefinition Height="20" />
+                                <RowDefinition Height="45" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid>
+                                <Label
+                                    Font="16"
+                                    Text="Cherry (Imported)"
+                                    TextColor="Black" />
+                            </Grid>
+                            <Label
+                                Grid.Row="1"
+                                Font="12"
+                                Text="$0.19 per Unit"
+                                TextColor="Gray" />
+                            <numeric:SfNumericUpDown
+                                x:Name="OrangeCount"
+                                Grid.Row="2"
+                                AllowNull="false"
+                                FormatString="n"
+                                HeightRequest="35"
+                                HorizontalOptions="FillAndExpand"
+                                MaximumDecimalDigits="0"
+                                MinimumHeightRequest="50"
+                                SpinButtonAlignment="Both"
+                                TextAlignment="Center"
+                                TextColor="Black"
+                                ValueChanged="Handle_ValueChanged3"
+                                VerticalOptions="Center"
+                                Watermark="Units"
+                                WidthRequest="50"
+                                Value="0" />
+                            <Label
+                                x:Name="OrangeCost"
+                                Grid.Row="3"
+                                Font="18"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Start"
+                                Text="$0"
+                                TextColor="Black"
+                                VerticalOptions="Center" />
+                            <Button
+                                x:Name="orangeAddButton"
+                                Grid.Row="3"
+                                BackgroundColor="#d16d10"
+                                Clicked="Handle_Clicked"
+                                Font="16"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                IsEnabled="false"
+                                Text="Add To Cart"
+                                TextColor="White"
+                                VerticalOptions="End"
+                                WidthRequest="120" />
+                        </Grid>
+                    </Grid>
+                    <Grid
+                        Margin="4,4,4,2"
+                        BackgroundColor="White"
+                        HeightRequest="165">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.8*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            Aspect="AspectFit"
+                            HorizontalOptions="Center"
+                            Source="Strawberry.jpg"
+                            VerticalOptions="Center" />
+                        <Image
+                            Grid.Column="1"
+                            Margin="7"
+                            Aspect="AspectFit"
+                            HeightRequest="40"
+                            HorizontalOptions="End"
+                            Source="{Binding Converter={StaticResource ImagePathConverter}, ConverterParameter=SampleBrowser.SfNumericUpDown.off.png}"
+                            VerticalOptions="Start"
+                            WidthRequest="40" />
+                        <Grid Grid.Column="1" Margin="7">
+                            <Grid.RowDefinitions>
+                                <RowDefinition x:Name="bheader" Height="25" />
+                                <RowDefinition Height="20" />
+                                <RowDefinition Height="45" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid>
+                                <Label
+                                    Font="16"
+                                    Text="Strawberry"
+                                    TextColor="Black" />
+                            </Grid>
+                            <Label
+                                Grid.Row="1"
+                                Font="12"
+                                Text="$0.09 per Unit"
+                                TextColor="Gray" />
+                            <numeric:SfNumericUpDown
+                                x:Name="BananaCount"
+                                Grid.Row="2"
+                                AllowNull="false"
+                                FormatString="n"
+                                HeightRequest="35"
+                                HorizontalOptions="FillAndExpand"
+                                MaximumDecimalDigits="0"
+                                MinimumHeightRequest="50"
+                                SpinButtonAlignment="Both"
+                                TextAlignment="Center"
+                                TextColor="Black"
+                                ValueChanged="Handle_ValueChanged4"
+                                VerticalOptions="Center"
+                                Watermark="Units"
+                                WidthRequest="50"
+                                Value="0" />
+                            <Label
+                                x:Name="BananaCost"
+                                Grid.Row="3"
+                                Font="18"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Start"
+                                Text="$0"
+                                TextColor="Black"
+                                VerticalOptions="Center" />
+                            <Button
+                                x:Name="bananaAddButton"
+                                Grid.Row="3"
+                                BackgroundColor="#d16d10"
+                                Clicked="Handle_Clicked"
+                                Font="16"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                IsEnabled="false"
+                                Text="Add To Cart"
+                                TextColor="White"
+                                VerticalOptions="End"
+                                WidthRequest="120" />
+                        </Grid>
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </local:SampleView.Content>
+    <local:SampleView.PropertyView>
+        <StackLayout x:Name="optionLayout" Spacing="20">
+            <Grid HeightRequest="80">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Name="minColumn1" Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Label
+                    x:Name="minimumValueLabel"
+                    FontFamily="Helvetica"
+                    FontSize="18"
+                    HorizontalOptions="Start"
+                    Text="Minimum Value"
+                    VerticalOptions="CenterAndExpand" />
+                <Entry
+                    x:Name="minimumValueText"
+                    Grid.Column="1"
+                    HorizontalOptions="End"
+                    Keyboard="Numeric"
+                    Text="0"
+                    VerticalOptions="Center"
+                    WidthRequest="130" />
+            </Grid>
+            <Grid HeightRequest="80">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Name="maxColumn1" Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Label
+                    x:Name="maximumValueLabel"
+                    FontFamily="Helvetica"
+                    FontSize="18"
+                    HorizontalOptions="Start"
+                    Text="Maximum Value"
+                    VerticalOptions="CenterAndExpand" />
+                <Entry
+                    x:Name="maximumValueText"
+                    Grid.Column="1"
+                    HorizontalOptions="End"
+                    Keyboard="Numeric"
+                    Text="25"
+                    VerticalOptions="Center"
+                    WidthRequest="130" />
+            </Grid>
+            <Grid HeightRequest="80">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Name="FontSizeColumn" Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Label
+                    x:Name="FontSizeLabel"
+                    FontFamily="Helvetica"
+                    FontSize="18"
+                    HorizontalOptions="Start"
+                    Text="FontSize"
+                    VerticalOptions="CenterAndExpand" />
+                <Entry
+                    x:Name="FontSizeText"
+                    Grid.Column="1"
+                    HorizontalOptions="End"
+                    Keyboard="Numeric"
+                    Text="18"
+                    VerticalOptions="Center"
+                    WidthRequest="130" />
+            </Grid>
+            <Grid HeightRequest="80">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Name="reverseColumn1" Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Label
+                    x:Name="autoReverseLabel"
+                    FontFamily="Helvetica"
+                    FontSize="18"
+                    HorizontalOptions="Start"
+                    Text="Auto Reverse"
+                    VerticalOptions="Center" />
+                <Switch
+                    x:Name="autoReverseToggle"
+                    Grid.Column="1"
+                    HorizontalOptions="End"
+                    IsToggled="false"
+                    VerticalOptions="Center"
+                    WidthRequest="130" />
+            </Grid>
+            <Grid HeightRequest="80">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Name="selectallonfocusColumn" Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Label
+                    x:Name="selectallonfocuslabel"
+                    FontFamily="Helvetica"
+                    FontSize="18"
+                    HorizontalOptions="Start"
+                    Text="SelectAllOnFocus"
+                    VerticalOptions="Center" />
+                <Switch
+                    x:Name="selectallonfocusToggle"
+                    Grid.Column="1"
+                    HorizontalOptions="End"
+                    IsToggled="false"
+                    VerticalOptions="Center"
+                    WidthRequest="130" />
+            </Grid>
+            <StackLayout Grid.Row="3" Orientation="Vertical">
+                <Label
+                    x:Name="spinButtonAlignmentLabel"
+                    FontSize="18"
+                    HeightRequest="40"
+                    HorizontalOptions="Start"
+                    Text="SpinButton Alignment"
+                    VerticalOptions="StartAndExpand" />
+                <Picker x:Name="localePicker" />
+            </StackLayout>
+        </StackLayout>
+    </local:SampleView.PropertyView>
+</local:SampleView>

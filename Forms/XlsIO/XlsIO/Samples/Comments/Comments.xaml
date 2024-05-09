@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+            xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="SampleBrowser.XlsIO.Comments">
+
+<local:SampleView.Content>
+    <StackLayout Padding="10">
+    <Label x:Name="Content_1"
+       Text="This sample illustrates how to add notes and comments in Excel worksheet."
+       FontSize="Medium"
+       VerticalOptions="Center"
+       Margin="0,0,0,0">
+        <!-- Add a bottom margin to create space between label and buttons -->
+    </Label>
+    <StackLayout Padding="10">
+                <Button x:Name="btnGetInputTemplate" Grid.Row="2" Grid.Column="0" WidthRequest="150" Clicked="btnGetInputTemplate_Clicked" Text="Input Template" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,0,0,0"></Button>
+                <Button x:Name="btnGenerate" Grid.Row="2" Grid.Column="1" WidthRequest="150" Clicked="btnGenerate_Clicked" Text="Generate Excel" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,0,0,0"></Button>
+                <Button x:Name="btnConvertToPDF" Grid.Row="2" Grid.Column="2" WidthRequest="150" Clicked="btnConvertToPDF_Clicked" Text="Convert To PDF" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,0,0,0"></Button>
+    </StackLayout>
+    </StackLayout>
+ </local:SampleView.Content>
+
+    <local:SampleView.PropertyView>
+
+</local:SampleView.PropertyView>
+</local:SampleView>

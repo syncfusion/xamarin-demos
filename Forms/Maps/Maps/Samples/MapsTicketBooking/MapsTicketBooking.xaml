@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfMaps.MapsTicketBooking"
+              xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:maps="clr-namespace:Syncfusion.SfMaps.XForms;assembly=Syncfusion.SfMaps.XForms"
+             >
+    <local:SampleView.Content>
+        <Grid x:Name="Maingrid" BackgroundColor="White">
+            <Grid.RowDefinitions >
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" Orientation="Horizontal" HorizontalOptions="Center" >
+                <Label  FontSize="25" Text="&#x1F68D;" TextColor="Black" VerticalOptions="Center" XAlign="Center" YAlign="Center"  />
+                <Label  FontSize="25" Text="Ticket Booking System" TextColor="Black" VerticalOptions="Center" XAlign="Center" YAlign="Center"  />
+            </StackLayout>
+            <Grid  x:Name="SubGrid" Grid.Row="1" >
+
+                <Grid.ColumnDefinitions  >
+                    <ColumnDefinition Width="*"   />
+                    <ColumnDefinition Width="*"  />
+                </Grid.ColumnDefinitions>
+
+                <Grid x:Name="SubGrid2" Grid.Column="0"   >
+                    <Grid.RowDefinitions  >
+                        <RowDefinition Height="0.5" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Button   BorderWidth="5" BorderColor="Gray" BackgroundColor="Transparent" BorderRadius="8" Grid.Row="1" />
+                    <Grid Padding = "20,20,20,20" Grid.Row="1">
+                        <maps:SfMaps EnableZooming="false"  x:Name="Maps" BackgroundColor="White" HeightRequest="50" WidthRequest="50" >0
+                            <maps:SfMaps.Layers >
+                                <maps:ShapeFileLayer Uri="Custom.shp" SelectionMode="Multiple" ShapeIDPath="SeatNumber" ShapeIDTableField ="seatno" EnableSelection="true" GeometryType="Points">
+                                    <maps:ShapeFileLayer.ShapeSettings>
+                                        <maps:ShapeSetting ShapeFill="Gray" SelectedShapeColor="#62AA5F" ShapeColorValuePath="SeatNumber" ShapeValuePath="SeatNumber" >
+                                            <maps:ShapeSetting.ColorMappings>
+                                                <maps:EqualColorMapping  Value="9" Color="#FFA500"/>
+                                                <maps:EqualColorMapping  Value="8"  Color="#FFA500"/>
+                                                <maps:EqualColorMapping  Value="1"  Color="#FFA500"/>
+                                                <maps:EqualColorMapping  Value="2"  Color="#FFA500"/>
+                                            </maps:ShapeSetting.ColorMappings>
+                                        </maps:ShapeSetting>
+                                    </maps:ShapeFileLayer.ShapeSettings>
+
+                                </maps:ShapeFileLayer>
+                            </maps:SfMaps.Layers>
+                        </maps:SfMaps>
+                    </Grid>
+                </Grid>
+                
+            <ScrollView BackgroundColor="White" Grid.Column="1" >
+
+                <StackLayout x:Name="stacklayout"  BackgroundColor="White" Grid.Column="1"  >
+                    <StackLayout x:Name="subStackA"   Orientation="Horizontal" HorizontalOptions="Center" Padding="0,0,20,0">
+                        <Button WidthRequest="25" VerticalOptions ="Center" BackgroundColor="Gray" HeightRequest="25" />
+                        <Label  Text="Available" FontSize="15" TextColor="Black" HeightRequest="40" WidthRequest="90"  HorizontalOptions="Center" YAlign="Center" VerticalOptions="FillAndExpand"/>
+                    </StackLayout>
+                    <StackLayout x:Name="subStackB"  Orientation="Horizontal" HorizontalOptions="Center" Padding="0,0,20,0">
+                        <Button VerticalOptions ="Center"  BackgroundColor="#62AA5F" WidthRequest="25" HeightRequest="25"/>
+                        <Label Text="Selected" FontSize="15" TextColor="Black"  HeightRequest="40" WidthRequest="90"  HorizontalOptions="Center" YAlign="Center" VerticalOptions="FillAndExpand"/>
+                    </StackLayout>
+                    <StackLayout x:Name="subStackc"  Orientation="Horizontal" HorizontalOptions="Center" Padding="0,0,20,0">
+                        <Button VerticalOptions ="Center"  BackgroundColor="#FFA500" WidthRequest="25" HeightRequest="25"/>
+                        <Label Text="Booked" FontSize="15" TextColor="Black"  HeightRequest="40" WidthRequest="90"  HorizontalOptions="Center" YAlign="Center" VerticalOptions="FillAndExpand"/>
+                    </StackLayout>
+                    <StackLayout BackgroundColor="Gray" HeightRequest="1" />
+                    <Label Text="Seats Selected" TextColor="#0041C2" HeightRequest="30" HorizontalOptions="Center"/>
+                    <Label x:Name="SelectedLabelCount"  HeightRequest="50" WidthRequest="40"  HorizontalOptions="CenterAndExpand"  FontSize="30"/>
+                    <ScrollView HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" >
+                        <Label x:Name= "SelectedLabel" WidthRequest="70" HorizontalOptions="Center"/>
+                    </ScrollView>
+                    <Button Text="Clear Selection" x:Name="ClearButton" FontSize="14" HeightRequest="50"  BackgroundColor="#d3d3d3" TextColor="Red" IsEnabled="false"/>
+
+                </StackLayout>
+                
+              </ScrollView>
+
+            </Grid>
+        </Grid>
+
+    </local:SampleView.Content>
+
+</local:SampleView>

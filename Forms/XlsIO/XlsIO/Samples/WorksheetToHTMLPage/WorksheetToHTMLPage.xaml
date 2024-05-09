@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:SfRadio="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.XlsIO.WorksheetToHTMLPage">
+
+
+  <local:SampleView.Content>            
+            <Grid x:Name="grid" Padding="10">
+                <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="Content_1" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" Text="This sample illustrates the conversion of a simple Excel document to HTML file."
+            FontSize="Medium" VerticalOptions="Center"/>
+            <Label FontSize="Small" Text="Convert Type:" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+            <SfRadio:SfRadioGroup x:Name="radioButtons" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="4" HeightRequest="30" Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center">
+                <SfRadio:SfRadioButton WidthRequest="95" FontSize="13" x:Name="bookButton" Text="Workbook"/>
+                <SfRadio:SfRadioButton WidthRequest="100" FontSize="13" x:Name="sheetButton" Text="Worksheet"/>
+                </SfRadio:SfRadioGroup>
+            <Grid x:Name="bGrid" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="6">
+                <Button x:Name="btnInput" Clicked ="OnInputButtonClicked" Text ="Input Template" Grid.Row="0" Grid.Column="0" WidthRequest="150" HorizontalOptions="Center" VerticalOptions="Center"></Button>
+                <Button x:Name="btnGenerate" Clicked ="OnButtonClicked" Text ="Convert" Grid.Row="0" Grid.Column="1" WidthRequest="150" HorizontalOptions="Center" VerticalOptions="Center"></Button>
+            </Grid>
+        </Grid>
+  </local:SampleView.Content>
+  <local:SampleView.PropertyView>
+
+  </local:SampleView.PropertyView>
+
+</local:SampleView>

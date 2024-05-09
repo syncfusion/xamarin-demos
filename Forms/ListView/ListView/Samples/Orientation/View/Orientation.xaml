@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfListView.Orientation"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.SfListView"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
+    <sample:SampleView.BindingContext>
+        <local:ListViewOrientationViewModel/>
+    </sample:SampleView.BindingContext>
+    <sample:SampleView.Content>
+        <ScrollView Orientation="Vertical">
+            <Grid RowSpacing="0" BackgroundColor="#FFFFFF">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid RowSpacing="0" Padding="0,10,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <StackLayout Orientation="Vertical" Padding="10,0,0,0">
+                        <Label Text="Veg Pizza" FontAttributes="Bold" TextColor="Black"
+                               FontSize="{OnPlatform Android={OnIdiom Phone=20, Tablet=22}, iOS={OnIdiom Phone=18, Tablet=20}, macOS=20, UWP={OnIdiom Phone=18, Tablet=22, Desktop=22}, WPF=22}" />
+                        <Label Text="Veg pizza prepared with the items that meet vegetarian standards by not including any meat or animal tissue products."
+                     TextColor="#4D4D4D"
+                               FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=16}, iOS={OnIdiom Phone=12, Tablet=14}, macOS=14, UWP={OnIdiom Phone=12, Tablet=17, Desktop=17}, WPF=17}" />
+                    </StackLayout>
+                    <sync:SfListView x:Name="listView" ItemsSource="{Binding PizzaInfo}"
+                             Grid.Row="1"
+                             Padding="10,13,10,-5"
+                             SelectionMode="None"
+                             Orientation="Horizontal"
+                             ItemSpacing="5,10,5,10"
+                             ItemSize="{OnPlatform Android={OnIdiom Phone=173, Tablet=180}, iOS={OnIdiom Phone=125, Tablet=250}, macOS=170, UWP={OnIdiom Phone=160, Tablet=170, Desktop=170}, WPF=170}"
+                             HeightRequest="{OnPlatform Default=220, iOS={OnIdiom Phone=170, Tablet=280}, UWP={OnIdiom Phone=200, Desktop=220}}">
+                        <sync:SfListView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame BackgroundColor="#EEEEEE" Padding="2" HasShadow="{OnPlatform Default=true, iOS=false, macOS=false}">
+                                    <Grid RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="48" />
+                                        </Grid.RowDefinitions>
+                                        <local:SfImage Source="{Binding PizzaImage}" Aspect="Fill"/>
+                                        <Label Grid.Row="1" Text="{Binding PizzaName}"
+                             LineBreakMode="WordWrap"
+                             HorizontalTextAlignment="Start"
+                             VerticalTextAlignment="Center"
+                             TextColor="Black" Opacity="0.87"
+                             Margin="16,0,0,0" FontSize="16">
+                                        </Label>
+                                    </Grid>
+                                </Frame>
+                            </DataTemplate>
+                        </sync:SfListView.ItemTemplate>
+                    </sync:SfListView>
+                </Grid>
+                <Grid RowSpacing="0" Grid.Row="2" Padding="0,0,0,20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <StackLayout Orientation="Vertical" Padding="10,0,0,0">
+                        <Label Text="Non-veg Pizza" FontAttributes="Bold" TextColor="Black" 
+                               FontSize="{OnPlatform Android={OnIdiom Phone=20, Tablet=22}, iOS={OnIdiom Phone=18, Tablet=20}, macOS=20, UWP={OnIdiom Phone=28, Tablet=22, Desktop=22}, WPF=22}" />
+                        <Label Text="Non-veg pizza is prepared by including the meat and animal tissue products."
+                     TextColor="#4D4D4D"
+                               FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=16}, iOS={OnIdiom Phone=12, Tablet=14}, macOS=14, UWP={OnIdiom Phone=12, Tablet=17, Desktop=17}, WPF=17}" />
+                    </StackLayout>
+                    <sync:SfListView x:Name="listView1" ItemsSource="{Binding PizzaInfo1}"
+                     Grid.Row="1"
+                     Padding="10,13,10,-5"
+                     SelectionMode="None"
+                     Orientation="Horizontal"
+                     ItemSize="{OnPlatform Android={OnIdiom Phone=173, Tablet=180}, iOS={OnIdiom Phone=125, Tablet=250}, macOS=170, UWP={OnIdiom Phone=160, Tablet=170, Desktop=170}, WPF=170}"
+                     HeightRequest="{OnPlatform Default=220, iOS={OnIdiom Phone=170, Tablet=280}, UWP={OnIdiom Phone=200, Desktop=220}}"
+                     ItemSpacing="5,10,5,10">
+                        <sync:SfListView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame BackgroundColor="#EEEEEE"  Padding="2" HasShadow="{OnPlatform Default=true, iOS=false, macOS=false}">
+                                    <Grid RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="48" />
+                                        </Grid.RowDefinitions>
+                                        <local:SfImage Source="{Binding PizzaImage}" Aspect="Fill" />
+                                        <Label Grid.Row="1" Text="{Binding PizzaName}"
+           LineBreakMode="WordWrap"
+           HorizontalTextAlignment="Start"
+           VerticalTextAlignment="Center"
+           TextColor="Black" Opacity="0.87"
+           FontSize="16" Margin="16,0,0,0">
+                                        </Label>
+                                    </Grid>
+                                </Frame>
+                            </DataTemplate>
+                        </sync:SfListView.ItemTemplate>
+                    </sync:SfListView>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </sample:SampleView.Content>
+</sample:SampleView>
