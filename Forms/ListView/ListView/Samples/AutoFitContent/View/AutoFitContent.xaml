@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfListView.AutoFitContent"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.SfListView"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
+    <sample:SampleView.BindingContext>
+        <local:ListViewAutoFitContentViewModel/>
+    </sample:SampleView.BindingContext>
+    
+    <sample:SampleView.Content>
+        <Grid RowSpacing="0" BackgroundColor="#FFFFFF" ColumnSpacing="0" Padding="0" Margin="0">
+            <sync:SfListView x:Name="listView"
+                       AutoFitMode="Height"
+                       ItemSize="200"
+					   FocusBorderThickness="0"
+                       ItemsSource="{Binding BookInfo}"
+                       SelectionBackgroundColor="#ECECEC">
+
+                <sync:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid RowSpacing="0" Padding="8,12,8,0" ColumnSpacing="0" Margin="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="1" />
+                            </Grid.RowDefinitions>
+                            <Grid RowSpacing="0" Padding="0,0,8,10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <local:SfImage Source="{Binding AuthorImage}"
+                     Grid.Column="0"
+                     Grid.Row="0"
+                     HeightRequest="100"
+                     WidthRequest="90"
+                     HorizontalOptions="Start"
+                     VerticalOptions="Start" />
+                                <StackLayout Orientation="Vertical" VerticalOptions="Start" Grid.Row="0" Grid.Column="1"
+                                             Padding='{OnPlatform  Default="5,-5,0,0", macOS="0,0,0,0"}'>
+                                    <Label Text="{Binding BookName}" FontAttributes="Bold" FontSize="16" TextColor="#474747"/>
+                                    <Label Text="{Binding BookAuthor}" Grid.Row="1" FontSize="14"  Opacity=" 0.67" TextColor="#474747" />
+                                    <Label Text="{Binding BookDescription}" Opacity=" 0.54" TextColor="#474747" FontSize="13"/>
+                                </StackLayout>
+                            </Grid>
+                            <BoxView Grid.Row="1" Margin="5,0,0,0" HeightRequest="1" Opacity="0.75" BackgroundColor="#CECECE" />
+                        </Grid>
+                    </DataTemplate>
+                </sync:SfListView.ItemTemplate>
+            </sync:SfListView>
+        </Grid>
+    </sample:SampleView.Content>
+</sample:SampleView>

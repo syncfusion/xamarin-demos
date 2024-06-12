@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<sample:SampleView x:Class="SampleBrowser.SfTreeView.NodeWithImage"
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:local="clr-namespace:SampleBrowser.SfTreeView"
+                   xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                   xmlns:sfTreeView="clr-namespace:Syncfusion.XForms.TreeView;assembly=Syncfusion.SfTreeView.XForms"
+                   xmlns:treeviewengine="clr-namespace:Syncfusion.TreeView.Engine;assembly=Syncfusion.SfTreeView.XForms">
+    <sample:SampleView.BindingContext>
+        <local:FileManagerViewModel x:Name="viewModel"></local:FileManagerViewModel>
+    </sample:SampleView.BindingContext>
+    <sample:SampleView.Content>
+        <Grid Margin="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <sfTreeView:SfTreeView x:Name="treeView"
+                             ItemHeight="40"
+                             Indentation="15"
+                             ExpanderWidth="40"
+                             IsAnimationEnabled="True"
+                             ItemsSource="{Binding Folders}"
+                             AutoExpandMode="AllNodesExpanded">
+                <sfTreeView:SfTreeView.HierarchyPropertyDescriptors>
+                    <treeviewengine:HierarchyPropertyDescriptor TargetType="{x:Type local:Folder}" ChildPropertyName="Files"/>
+                    <treeviewengine:HierarchyPropertyDescriptor TargetType="{x:Type local:File}" ChildPropertyName="SubFiles"/>
+                </sfTreeView:SfTreeView.HierarchyPropertyDescriptors>
+                <sfTreeView:SfTreeView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid x:Name="grid" RowSpacing="0" BackgroundColor="Transparent">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="1" />
+                                    </Grid.RowDefinitions>
+                                    <Grid RowSpacing="0" Grid.Row="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="40" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid Padding="5,5,5,5"> 
+                                            <Image
+                                               Source="{Binding ImageIcon}"
+                                               VerticalOptions="Center"
+                                               HorizontalOptions="Center"
+                                               HeightRequest="35" 
+                                               WidthRequest="35"/>
+                                        </Grid>
+                                        <Grid Grid.Column="1"
+                                              RowSpacing="1"
+                                              Padding="1,0,0,0"
+                                              VerticalOptions="Center">
+                                            <Label LineBreakMode="NoWrap"
+                                                   Text="{Binding FileName}"
+                                                   TextColor="Black"
+                                                   VerticalTextAlignment="Center"
+                                                   FontSize="{OnPlatform Android={OnIdiom Phone=16, Tablet=18},iOS={OnIdiom Phone=16,Tablet=18},UWP={OnIdiom Phone=18,Tablet=20,Desktop=20}}"/>
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </sfTreeView:SfTreeView.ItemTemplate>
+            </sfTreeView:SfTreeView>
+        </Grid>
+    </sample:SampleView.Content>
+</sample:SampleView>

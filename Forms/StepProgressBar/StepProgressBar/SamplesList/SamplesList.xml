@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Samples>
+  <Sample Platforms="All" Name="ShipmentTracking" Title="Shipment Tracking"  Description="This sample demonstates creating a shipment tracking process using syncfusion step progressbar control in xamarin.forms."></Sample>
+  <Sample Platforms="All" Name="GettingStarted" Title="Live Train Tracking"  Description="This sample demonstates creating a live train tracking sample using syncfusion step progressbar control in xamarin.forms."></Sample>
+  <Sample Platforms="All" Name="UserRegistration" Title="User Registration"  Description="This sample demonstates creating a page viewer using syncfusion step progressbar control in xamarin.forms."></Sample>
+</Samples>

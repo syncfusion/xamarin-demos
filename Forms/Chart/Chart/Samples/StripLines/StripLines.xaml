@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.StripLines" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+    <local:SampleView.Content>
+        <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <chart:SfChart.Margin>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="0,0,15,0" />
+            </chart:SfChart.Margin>
+            <chart:SfChart.Title>
+                <chart:ChartTitle Text="Weather Report" />
+            </chart:SfChart.Title>
+            <chart:SfChart.BindingContext>
+                <sampleBrowser:StripLinesViewModel />
+            </chart:SfChart.BindingContext>
+            <chart:SfChart.PrimaryAxis>
+                <chart:CategoryAxis LabelPlacement="BetweenTicks" />
+            </chart:SfChart.PrimaryAxis>
+            <chart:SfChart.SecondaryAxis>
+                <chart:NumericalAxis>
+                    <chart:NumericalAxis.LabelStyle>
+                        <chart:ChartAxisLabelStyle LabelFormat="##.##°C  " />
+                    </chart:NumericalAxis.LabelStyle>
+                    <chart:NumericalAxis.StripLines>
+                        <chart:NumericalStripLine Start="10" Width="10" Text="Low Temperature" FillColor="#f9d423">
+                            <chart:NumericalStripLine.LabelStyle>
+                                <chart:ChartStripLineLabelStyle Font="12" />
+                            </chart:NumericalStripLine.LabelStyle>
+                        </chart:NumericalStripLine>
+                        <chart:NumericalStripLine Start="20" Width="10" Text="Average Temperature" FillColor="#fc902a">
+                            <chart:NumericalStripLine.LabelStyle>
+                                <chart:ChartStripLineLabelStyle Font="12" />
+                            </chart:NumericalStripLine.LabelStyle>
+                        </chart:NumericalStripLine>
+                        <chart:NumericalStripLine Start="30" Width="10" Text="High Temperature" FillColor="#ff512f">
+                            <chart:NumericalStripLine.LabelStyle>
+                                <chart:ChartStripLineLabelStyle Font="12" />
+                            </chart:NumericalStripLine.LabelStyle>
+                        </chart:NumericalStripLine>
+                    </chart:NumericalAxis.StripLines>
+                </chart:NumericalAxis>
+            </chart:SfChart.SecondaryAxis>
+            <chart:SfChart.Series>
+                <chart:LineSeries ItemsSource="{Binding StripLineData}" StrokeWidth="2" Color="White" XBindingPath="Name" YBindingPath="Value">
+                    <chart:LineSeries.DataMarker>
+                        <chart:ChartDataMarker x:Name="chartDataMarker" ShowLabel="false" ShowMarker="True"
+                                               MarkerBorderColor="#ffffff" MarkerColor="#666666" 
+                                               MarkerHeight="10" MarkerWidth="10" />
+                    </chart:LineSeries.DataMarker>
+                </chart:LineSeries>
+            </chart:SfChart.Series>
+        </chart:SfChart>
+    </local:SampleView.Content>
+</local:SampleView>

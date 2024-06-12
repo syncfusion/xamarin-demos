@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Samples>
+ <Sample Name = "TreeMapGettingStarted" Title = "Getting Started" SearchTags="FlatLevel,Legend,TreeMapShowCase"/>
+ <Sample Name = "Hierarchical" Title = "Hierarchical" SearchTags="Multilevel"/>
+ <Sample Name = "TreeMapCustomization" Title = "Customization" SearchTags="CustomTreeMap" />
+ <Sample Name = "DataLabel" Title = "Data Label" SearchTags="DataLabel"  />
+ <Sample Name = "Drilldown" Title = "Drilldown" SearchTags="Drilldown, zooming" />
+</Samples>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfChat.GettingStarted"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.SfChat"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                   xmlns:sfchat="clr-namespace:Syncfusion.XForms.Chat;assembly=Syncfusion.SfChat.XForms"
+                   xmlns:badge="clr-namespace:Syncfusion.XForms.BadgeView;assembly=Syncfusion.SfBadgeView.XForms">
+
+    <sample:SampleView.Behaviors>
+        <local:GettingStartedBehavior></local:GettingStartedBehavior>
+    </sample:SampleView.Behaviors>
+    
+    <sample:SampleView.BindingContext>
+        <local:GettingStartedViewModel x:Name="viewModel" />
+    </sample:SampleView.BindingContext>
+
+    <sample:SampleView.Content>
+        <RelativeLayout>
+            <sfchat:SfChat x:Name="sfChat" 
+                           StickyTimeBreak="False"
+                           MessageShape="RoundedRectangle"
+                           ShowOutgoingMessageAvatar="True"
+                           ShowIncomingMessageAvatar="True"
+                           SendMessageCommand="{Binding SendMessageCommand}"
+                           TypingIndicator="{Binding TypingIndicator}"
+                           ShowTypingIndicator="{Binding ShowTypingIndicator}"
+                           Messages="{Binding Messages}"
+                           CurrentUser="{Binding CurrentUser}"
+                           IncomingMessageTimestampFormat="hh:mm tt"
+                           OutgoingMessageTimestampFormat="hh:mm tt"
+                           ShowTimeBreak="True"
+                           RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1,Constant=0}"
+                           RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1,Constant=0}">
+            </sfchat:SfChat>
+
+            <badge:SfBadgeView x:Name="ScrollDown" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="Transparent" IsVisible="{Binding IsBadgeViewVisible}"
+                               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,ElementName=sfChat,Property=Height,Factor=1,Constant=-105}"
+        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,ElementName=sfChat,Property=Width,Factor=1,Constant=-55}">
+                <badge:SfBadgeView.Content>
+                    <Image x:Name="ScrollButton" HeightRequest="29" WidthRequest="27" Source="ScrollDown.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                </badge:SfBadgeView.Content>
+
+            </badge:SfBadgeView>
+            
+        </RelativeLayout>
+    </sample:SampleView.Content>
+</sample:SampleView>

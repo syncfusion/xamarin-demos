@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Samples>
+<Sample Title="Sign Up" Name="SignUpView" SearchTags="Floating label, wpf" Description = " Displays a floating label for a input text view along with some other assitive labels and elements" />
+<Sample Title="Card Details" Name="PaymentView" IsThemesSample="true" Platforms="Android,iOS,UWP" SearchTags="Floating label" Description = " Displays a floating label for a input text view along with some other assitive labels and elements" />
+</Samples>

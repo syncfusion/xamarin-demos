@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView  xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                   x:Class="SampleBrowser.SfRadioButton.RadioButton"
+                   xmlns:sync="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms">
+    <local:SampleView.Content >
+        <ScrollView>
+            <StackLayout x:Name="MainStack" >
+                <Frame x:Name="frame" CornerRadius="10" Margin="0,50,0,30" Padding="0" OutlineColor="#29000000" HasShadow="True" WidthRequest="300" HorizontalOptions="Center" VerticalOptions="Center" >
+
+                    <StackLayout >
+                        <Label  x:Name="headerText" Margin="0,30,0,0" Text="Complete your Payment" FontAttributes="Bold" FontSize="20" HorizontalOptions="Center" TextColor="#555555" />
+                        <StackLayout x:Name="amtStack" Orientation="Horizontal" Margin="15,20,15,0">
+                            <Label x:Name="amountlabl" Margin="0,15,0,0" Text="Total payable amount" HorizontalOptions="Start" FontSize="16" TextColor="#000000"></Label>
+                            <Label x:Name="amt" Margin="0,15,0,0" Text="$120" HorizontalOptions="EndAndExpand" FontAttributes="Bold" FontSize="18"  TextColor="#007DE6" ></Label>
+                        </StackLayout>
+                        <Frame CornerRadius="0" Padding="0" Margin="15,0,15,10" x:Name="lineFrame" BackgroundColor="#29000000" HasShadow="False" HeightRequest="1" />
+                        <sync:SfRadioGroup x:Name="radioGroup" Margin="0,30,0,0">
+                            <Label x:Name="paymentmodelbl" Text="Select your payment mode" Margin="15,0,0,0" VerticalOptions="Start" HorizontalOptions="Start" FontSize="16" TextColor="#555555"></Label>
+                            <sync:SfRadioButton x:Name="netbanking" Margin="15,20,0,0" Text="Net banking" FontSize="{OnPlatform Default='16', WPF='14'}" TextColor="#000000"  StateChanged="paymentMode_StateChanged" ></sync:SfRadioButton>
+                            <sync:SfRadioButton x:Name="debit" Margin="15,20,0,0" Text="Debit card" FontSize="{OnPlatform Default='16', WPF='14'}" TextColor="#000000"  StateChanged="paymentMode_StateChanged" ></sync:SfRadioButton>
+                            <sync:SfRadioButton x:Name="credit"  Margin="15,20,0,35" Text="Credit card" FontSize="{OnPlatform Default='16', WPF='14'}" TextColor="#000000"  StateChanged="paymentMode_StateChanged" ></sync:SfRadioButton>
+
+                        </sync:SfRadioGroup>
+                    </StackLayout>
+                </Frame>
+
+                <Button x:Name="buttn"  VerticalOptions="EndAndExpand" BackgroundColor="#FF007DE6" IsEnabled="False" TextColor="{OnPlatform Default='#FFFFFF',WPF='Black'}" Text="Pay Now" FontSize="21" Clicked="Buttn_Clicked">
+                    <Button.Margin >
+                        <OnPlatform Default="0,30,0,0"  />
+                    </Button.Margin>
+                </Button>
+            </StackLayout>
+        </ScrollView>
+    </local:SampleView.Content>
+</local:SampleView>
