@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+			 xmlns:SfRadio="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.DocIO.CompareDocuments">
+
+  <local:SampleView.Content>
+    <StackLayout Padding="10">
+      <Label x:Name="Description" Text="This sample demonstrates how to compare two Word documents using .NET Word (DocIO) library. With this, you can easily identify the changes between two versions of a document."
+                 FontSize="Medium" VerticalOptions="Center"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <CheckBox Grid.Column="0" x:Name="checkBox" IsChecked = "True" VerticalOptions="Start"></CheckBox>
+                <Label Grid.Column="1" x:Name="lable" Padding="1" VerticalOptions="Center" HorizontalOptions="Start" Text="Detect format changes"></Label>
+            </Grid>
+            <Button  WidthRequest="180"  x:Name="btnGenerate" Clicked ="OnButtonClicked" Text ="Compare Documents" HorizontalOptions="Start" VerticalOptions="Start"/>
+        </StackLayout>
+  </local:SampleView.Content>
+</local:SampleView>

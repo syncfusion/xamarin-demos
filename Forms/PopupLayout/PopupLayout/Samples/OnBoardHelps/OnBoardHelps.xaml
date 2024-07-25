@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sample:SampleView xmlns="http://xamarin.com/schemas/2014/forms" 
+                   xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" 
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                   x:Class="SampleBrowser.SfPopupLayout.OnBoardHelps" 
+                   xmlns:sfgrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms" xmlns:popuplayout="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms"
+                   xmlns:sfrotator="clr-namespace:Syncfusion.SfRotator.XForms;assembly=Syncfusion.SfRotator.XForms"
+                   xmlns:local="clr-namespace:SampleBrowser.SfPopupLayout">
+
+    <sample:SampleView.BindingContext>
+        <local:OnBoardHelpsViewModel x:Name="viewModel"/>
+    </sample:SampleView.BindingContext>
+
+    <sample:SampleView.Content>
+        <popuplayout:SfPopupLayout x:Name="popupLayout" 
+                                   StaysOpen="True" 
+                                   IsOpen="{Binding PopupIsOpen}">
+            <popuplayout:SfPopupLayout.PopupView >
+                <popuplayout:PopupView AnimationMode="None" 
+                                       ShowHeader="False" 
+                                       ShowFooter="False"
+                                       BackgroundColor="Transparent"
+                                       >
+                    <popuplayout:PopupView.ContentTemplate>
+                        <DataTemplate>
+                            <sfrotator:SfRotator BackgroundColor="Transparent" 
+                                                 DotPlacement="None"
+                                                 EnableSwiping="False"
+                                                 SelectedIndex="{Binding CurrentRotatorItemIndex, Mode=TwoWay}">
+                                <sfrotator:SfRotator.DataSource>
+                                    <sfrotator:SfRotatorItem>
+                                        <sfrotator:SfRotatorItem.ItemContent>
+                                            <StackLayout BackgroundColor="Transparent"
+                                                         >
+                                                <Image HeightRequest="150" 
+                                                       WidthRequest="150" 
+                                                       Source="{Binding ResizingIllustrationImage}">
+                                                    <Image.Behaviors>
+                                                        <local:ResizingBehavior />
+                                                    </Image.Behaviors>
+                                                </Image>
+                                                <StackLayout.GestureRecognizers>
+                                                    <TapGestureRecognizer 
+                                                        Command="{Binding ChangeRotatorItem}" />
+                                                </StackLayout.GestureRecognizers>
+                                            </StackLayout>
+                                        </sfrotator:SfRotatorItem.ItemContent>
+                                    </sfrotator:SfRotatorItem>
+                                    <sfrotator:SfRotatorItem>
+                                        <sfrotator:SfRotatorItem.ItemContent>
+                                            <StackLayout Padding="100,200,0,0" BackgroundColor="Transparent"
+                                                         >
+                                                <Image  Source="{Binding EditingIllustrationImage}"
+                                                        WidthRequest="140"
+                                                        HeightRequest="140"
+                                                        HorizontalOptions="Center">
+                                                    <Image.Behaviors>
+                                                        <local:EditingBehavior />
+                                                    </Image.Behaviors>
+                                                </Image>
+                                                <StackLayout.GestureRecognizers>
+                                                    <TapGestureRecognizer 
+                                                        Command="{Binding ChangeRotatorItem}"/>
+                                                </StackLayout.GestureRecognizers>
+                                            </StackLayout>
+                                        </sfrotator:SfRotatorItem.ItemContent>
+                                    </sfrotator:SfRotatorItem>
+                                    <sfrotator:SfRotatorItem>
+                                        <sfrotator:SfRotatorItem.ItemContent>
+                                            <StackLayout Padding="0,200,0,0" BackgroundColor="Transparent"
+                                                         >
+                                                <Image HeightRequest="130" 
+                                                       WidthRequest="130" 
+                                                       Source="{Binding SwipingIllustrationImage}">
+                                                    <Image.Behaviors>
+                                                        <local:SwipingBehavior />
+                                                    </Image.Behaviors>
+                                                </Image>
+                                                <StackLayout.GestureRecognizers>
+                                                    <TapGestureRecognizer 
+                                                        Command="{Binding ChangeRotatorItem}"/>
+                                                </StackLayout.GestureRecognizers>
+                                            </StackLayout>
+                                        </sfrotator:SfRotatorItem.ItemContent>
+                                    </sfrotator:SfRotatorItem>
+                                    <sfrotator:SfRotatorItem>
+                                        <sfrotator:SfRotatorItem.ItemContent>
+                                            <StackLayout Padding="0,200,0,0" BackgroundColor="Transparent"
+                                                         >
+                                                <RelativeLayout>
+                                                    <Image HeightRequest="30" 
+                                                           WidthRequest="30" 
+                                                           Source="{Binding HandSymbolImage}"
+                                                          RelativeLayout.WidthConstraint="30"
+                                                          RelativeLayout.HeightConstraint="30"
+                                                          RelativeLayout.XConstraint="0" 
+                                                          RelativeLayout.YConstraint="60">
+                                                        <Image.Behaviors>
+                                                            <local:DragAndDropBehavior />
+                                                        </Image.Behaviors>
+                                                    </Image>
+                                                    <Image HeightRequest="200"
+                                                           WidthRequest="200"
+                                                           Source="{Binding DragAndDropLayoutImage}"
+                                                          RelativeLayout.WidthConstraint="200"
+                                                         RelativeLayout.HeightConstraint="200" 
+                                                           RelativeLayout.XConstraint="0"
+                                                           RelativeLayout.YConstraint="0"/>
+                                                </RelativeLayout>
+                                                <StackLayout.GestureRecognizers>
+                                                    <TapGestureRecognizer Command="{Binding ChangeRotatorItem}"/>
+                                                </StackLayout.GestureRecognizers>
+                                            </StackLayout>
+                                        </sfrotator:SfRotatorItem.ItemContent>
+                                    </sfrotator:SfRotatorItem>
+                                </sfrotator:SfRotator.DataSource>
+                            </sfrotator:SfRotator>
+                        </DataTemplate>
+                    </popuplayout:PopupView.ContentTemplate>
+                    <popuplayout:PopupView.PopupStyle>
+                        <popuplayout:PopupStyle BorderColor="Transparent" />
+                    </popuplayout:PopupView.PopupStyle>
+                </popuplayout:PopupView>
+            </popuplayout:SfPopupLayout.PopupView>
+            <popuplayout:SfPopupLayout.Content>
+                <Grid x:Name="overViewPage" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <sfgrid:SfDataGrid x:Name="dataGrid" 
+                                           AutoGenerateColumns="true" 
+                                           ColumnSizer="Star" 
+                                           HeaderRowHeight="52" 
+                                           MaxSwipeOffset="150" 
+                                           RowHeight="58" 
+                                           VerticalOverScrollMode="None"
+                                           AllowSwiping="true" 
+                                           AllowEditing="true"
+                                           SelectionMode="Single"
+                                           NavigationMode="Cell"
+                                           AllowResizingColumn="true" 
+                                           AllowDraggingRow="true"
+                                           ItemsSource="{Binding OrdersInfo}">
+                        <sfgrid:SfDataGrid.LeftSwipeTemplate>
+                            <DataTemplate>
+                                <Grid BackgroundColor="#EF5350">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="40" />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                    <ContentView Grid.Column="0" Padding="16,0,0,0" />
+                                    <Label x:Name="leftDeleteLabel" 
+                                           Grid.Column="1" 
+                                           BackgroundColor="Transparent" 
+                                           HorizontalTextAlignment="Start" 
+                                           LineBreakMode="NoWrap" 
+                                           Text="DELETE" 
+                                           TextColor="White" 
+                                           VerticalTextAlignment="Center">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding DeleteCommand, Source={x:Reference viewModel}}" CommandParameter="{Binding Source={x:Reference leftDeleteLabel}, Path=BindingContext}" />
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </Grid>
+                            </DataTemplate>
+                        </sfgrid:SfDataGrid.LeftSwipeTemplate>
+                        <sfgrid:SfDataGrid.RightSwipeTemplate>
+                            <DataTemplate>
+                                <Grid BackgroundColor="#EF5350">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="40" />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                    <ContentView Grid.Column="0" Padding="16,0,0,0"  HorizontalOptions="CenterAndExpand"/>
+                                    <Label x:Name="rightDeleteLabel" 
+                                       BackgroundColor="Transparent"
+                                       Grid.Column="1" 
+                                       HorizontalTextAlignment="Start" 
+                                       LineBreakMode="NoWrap" 
+                                       Text="DELETE" 
+                                       TextColor="White" 
+                                       VerticalTextAlignment="Center">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding DeleteCommand, Source={x:Reference viewModel}}" CommandParameter="{Binding Source={x:Reference rightDeleteLabel}, Path=BindingContext}" />
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </Grid>
+                            </DataTemplate>
+                        </sfgrid:SfDataGrid.RightSwipeTemplate>
+                    </sfgrid:SfDataGrid>
+                    <RelativeLayout x:Name="overlay" 
+                                    HorizontalOptions="FillAndExpand" 
+                                    VerticalOptions="FillAndExpand"
+                                    BackgroundColor="{Binding OverlayColor}"
+                                    IsVisible="{Binding OverlayVisibility, Mode=TwoWay}"
+                                    >
+                        <Label x:Name="label" 
+                               FontAttributes="Bold" 
+                               FontSize="25" Text="Next" 
+                               TextColor="White" 
+                               VerticalTextAlignment="Center" 
+                               HorizontalTextAlignment="Center" 
+                               HeightRequest="50" 
+                               WidthRequest="100" 
+                               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.8}"
+                               HorizontalOptions="EndAndExpand" 
+                               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0.7}" 
+                               IsVisible="{Binding NextLabelVisibility, Mode=TwoWay}" />
+                        <Label x:Name="oklabel" 
+                               FontAttributes="Bold" 
+                               FontSize="20" 
+                               Text="Ok, got it !" 
+                               TextColor="White" 
+                               VerticalTextAlignment="Center" 
+                               HorizontalTextAlignment="Center" 
+                               HeightRequest="50" 
+                               WidthRequest="100" 
+                               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.8}"
+                               HorizontalOptions="CenterAndExpand" 
+                               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0.7}" 
+                               IsVisible="{Binding OkLabelVisibility, Mode=TwoWay}" />
+                    </RelativeLayout>
+                </Grid>
+            </popuplayout:SfPopupLayout.Content>
+        </popuplayout:SfPopupLayout>
+    </sample:SampleView.Content>
+
+    <sample:SampleView.Behaviors>
+        <local:OnBoardHelpsBehavior />
+    </sample:SampleView.Behaviors>
+
+</sample:SampleView>

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sample:SampleView x:Class="SampleBrowser.DataSource.DataSourceGrouping"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.DataSource"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:sfdatasource="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable">
+    <sample:SampleView.Content>
+    <Grid RowSpacing="0">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+
+      <SearchBar x:Name="filterText"
+                 Grid.Row="0"
+                 Grid.Column="0"
+                 IsVisible="true"
+                 Placeholder="Search contacts"
+                 TextChanged="OnFilterTextChanged"
+                 HeightRequest="{OnPlatform Default=50, UWP=40}" />
+      <local:CustomListView x:Name="listView"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            HasUnevenRows="True">
+        <local:CustomListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell BindingContextChanged="ListViewTemplate_BindingContextChanged">
+              <ViewCell.View>
+                <Grid x:Name="grid"
+                      HeightRequest="50"
+                      Padding="10"
+                      RowSpacing="20">
+                  <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                  </Grid.RowDefinitions>
+
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                  </Grid.ColumnDefinitions>
+
+                  <local:DisplayLabel Grid.Row="0"
+                                      Grid.Column="0"
+                                      BackgroundColor="{Binding ContactColor}"
+                                      HorizontalTextAlignment="Center"
+                                      LineBreakMode="WordWrap"
+                                      MinimumHeightRequest="50"
+                                      MinimumWidthRequest="50"
+                                      Text="{Binding DisplayString}"
+                                      TextColor="White"
+                                      VerticalTextAlignment="Center" />
+
+                  <Grid Grid.Row="0"
+                        Grid.Column="1"
+                        HeightRequest="50"
+                        Padding="20,0,0,0"
+                        RowSpacing="1"
+                        VerticalOptions="Start">
+                    <Grid.RowDefinitions>
+                      <RowDefinition Height="Auto" />
+                      <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <local:ContentLabel Grid.Row="0"
+                                        Grid.Column="0"
+                                        FontAttributes="Bold"
+                                        LineBreakMode="WordWrap"
+                                        Text="{Binding ContactName}"
+                                        TextColor="Black" />
+                    <Label Grid.Row="1"
+                           Grid.Column="0"
+                           LineBreakMode="WordWrap"
+                           Text="{Binding ContactNumber}"
+                           TextColor="#4D4D4D"
+                           FontSize="{OnPlatform Android={OnIdiom Phone=16, Tablet=18}, iOS={OnIdiom Phone=16, Tablet=18}, UWP={OnIdiom Phone=16, Desktop=18}}" />
+                  </Grid>
+                </Grid>
+              </ViewCell.View>
+            </ViewCell>
+          </DataTemplate>
+        </local:CustomListView.ItemTemplate>
+      </local:CustomListView>
+    </Grid>
+  </sample:SampleView.Content>
+</sample:SampleView>

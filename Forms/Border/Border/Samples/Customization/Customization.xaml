@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+    x:Class="SampleBrowser.SfBorder.Customization"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core">
+    <local:SampleView.Content>
+        <Grid BackgroundColor="#FFF7FBFC" RowSpacing="0">
+            <border:SfBorder
+                BackgroundColor="White"
+                BorderColor="White"
+                BorderWidth="5"
+                CornerRadius="10,10,10,10"
+                HeightRequest="525"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                WidthRequest="300">
+                <border:SfBorder.Content>
+                    <Grid>
+                        <Grid RowSpacing="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition x:Name="topRow" Height="120" />
+                                <RowDefinition x:Name="innerRow" Height="170" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <border:SfBorder Grid.Row="0" BorderColor="Transparent">
+                                <border:SfBorder.Content>
+                                    <Grid>
+                                        <Image Aspect="Fill" Source="border_cover.jpeg" />
+                                        <StackLayout
+                                            Margin="0,10,0,0"
+                                            HorizontalOptions="Center"
+                                            Orientation="Vertical"
+                                            VerticalOptions="Start">
+                                            <Label
+                                                x:Name="topLabel"
+                                                Font="20"
+                                                HorizontalOptions="Center"
+                                                Text="James Williamson"
+                                                TextColor="White" />
+                                            <Label
+                                                x:Name="labelPart"
+                                                Margin="0,-10,0,0"
+                                                Font="16"
+                                                HorizontalOptions="Center"
+                                                Text="Software Architect"
+                                                TextColor="White" />
+                                        </StackLayout>
+                                    </Grid>
+                                </border:SfBorder.Content>
+                            </border:SfBorder>
+                            <border:SfBorder
+                                Grid.Row="1"
+                                Margin="5"
+                                BackgroundColor="AliceBlue"
+                                BorderColor="Transparent"
+                                CornerRadius="5">
+                                <border:SfBorder.Content>
+                                    <Grid>
+                                        <Grid Margin="0,0,0,10" VerticalOptions="Start">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <StackLayout
+                                                Grid.Column="0"
+                                                Margin="0,5,0,0"
+                                                HorizontalOptions="Center"
+                                                Orientation="Vertical"
+                                                VerticalOptions="Start">
+                                                <Label
+                                                    x:Name="numberPart"
+                                                    Font="18"
+                                                    HorizontalOptions="Center"
+                                                    Text="1104"
+                                                    TextColor="Gray" />
+                                                <Label
+                                                    x:Name="followLabel"
+                                                    Margin="0,-5,0,0"
+                                                    Font="11"
+                                                    HorizontalOptions="Center"
+                                                    Text="FOLLOWING"
+                                                    TextColor="Gray" />
+                                            </StackLayout>
+                                            <StackLayout
+                                                Grid.Column="2"
+                                                Margin="0,5,0,0"
+                                                HorizontalOptions="Center"
+                                                Orientation="Vertical"
+                                                VerticalOptions="Start">
+                                                <Label
+                                                    x:Name="number_part"
+                                                    Font="18"
+                                                    HorizontalOptions="Center"
+                                                    Text="1992"
+                                                    TextColor="Gray" />
+                                                <Label
+                                                    x:Name="followersLabel"
+                                                    Margin="0,-5,0,0"
+                                                    Font="11"
+                                                    HorizontalOptions="Center"
+                                                    Text="FOLLOWERS"
+                                                    TextColor="Gray" />
+                                            </StackLayout>
+                                        </Grid>
+                                        <Grid
+                                            x:Name="innserPart"
+                                            Margin="0,0,0,10"
+                                            VerticalOptions="End">
+                                            <StackLayout Orientation="Vertical">
+                                                <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                                                    <border:SfBorder
+                                                        Margin="0"
+                                                        BorderColor="White"
+                                                        BorderWidth="3"
+                                                        CornerRadius="25"
+                                                        HeightRequest="50"
+                                                        HorizontalOptions="Center"
+                                                        VerticalOptions="Start"
+                                                        WidthRequest="50">
+                                                        <border:SfBorder.Content>
+                                                            <Image Source="People_Circle16.png" />
+                                                        </border:SfBorder.Content>
+                                                    </border:SfBorder>
+
+                                                    <border:SfBorder
+                                                        Margin="-20,0,0,0"
+                                                        BorderColor="White"
+                                                        BorderWidth="3"
+                                                        CornerRadius="25"
+                                                        HeightRequest="50"
+                                                        HorizontalOptions="Center"
+                                                        VerticalOptions="Start"
+                                                        WidthRequest="50">
+                                                        <border:SfBorder.Content>
+                                                            <Image Source="People_Circle14.png" />
+                                                        </border:SfBorder.Content>
+                                                    </border:SfBorder>
+
+                                                    <border:SfBorder
+                                                        Margin="-20,0,0,0"
+                                                        BorderColor="White"
+                                                        BorderWidth="3"
+                                                        CornerRadius="25"
+                                                        HeightRequest="50"
+                                                        HorizontalOptions="Center"
+                                                        VerticalOptions="Start"
+                                                        WidthRequest="50">
+                                                        <border:SfBorder.Content>
+                                                            <Image Source="People_Circle17.png" />
+                                                        </border:SfBorder.Content>
+                                                    </border:SfBorder>
+
+                                                    <border:SfBorder
+                                                        Margin="-20,0,0,0"
+                                                        BorderColor="White"
+                                                        BorderWidth="3"
+                                                        CornerRadius="25"
+                                                        HeightRequest="50"
+                                                        HorizontalOptions="Center"
+                                                        VerticalOptions="Start"
+                                                        WidthRequest="50">
+                                                        <border:SfBorder.Content>
+                                                            <Image Source="People_Circle5.png" />
+                                                        </border:SfBorder.Content>
+                                                    </border:SfBorder>
+
+                                                    <border:SfBorder
+                                                        Margin="-20,0,0,0"
+                                                        BorderColor="White"
+                                                        BorderWidth="3"
+                                                        CornerRadius="25"
+                                                        HeightRequest="50"
+                                                        HorizontalOptions="Center"
+                                                        VerticalOptions="Start"
+                                                        WidthRequest="50">
+                                                        <border:SfBorder.Content>
+                                                            <Image Source="People_Square6.png" />
+                                                        </border:SfBorder.Content>
+                                                    </border:SfBorder>
+                                                </StackLayout>
+                                                <Label
+                                                    Margin="0,-5,0,0"
+                                                    Font="16"
+                                                    HorizontalOptions="Center"
+                                                    Text="5 Mutual Friends"
+                                                    TextColor="Gray" />
+                                            </StackLayout>
+                                        </Grid>
+                                    </Grid>
+                                </border:SfBorder.Content>
+                            </border:SfBorder>
+                            <border:SfBorder
+                                Grid.Row="2"
+                                Margin="5,5,5,0"
+                                BackgroundColor="AliceBlue"
+                                BorderColor="Transparent"
+                                CornerRadius="5">
+                                <border:SfBorder.Content>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="20" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <Grid
+                                            HeightRequest="20"
+                                            HorizontalOptions="Start"
+                                            VerticalOptions="Center">
+                                            <Label
+                                                Margin="10,0,0,0"
+                                                Font="14"
+                                                HorizontalOptions="Start"
+                                                Text="Photos"
+                                                TextColor="Gray"
+                                                VerticalOptions="Center" />
+                                        </Grid>
+                                        <ScrollView x:Name="innerScroll" Grid.Row="1">
+                                            <StackLayout Orientation="Vertical" Spacing="0">
+                                                <StackLayout.Margin>
+                                                    <OnPlatform WPF="10,0,0,10" />
+                                                </StackLayout.Margin>
+                                                <border:SfBorder
+                                                    Margin="5"
+                                                    BorderColor="White"
+                                                    BorderWidth="5"
+                                                    CornerRadius="10"
+                                                    HeightRequest="100">
+                                                    <border:SfBorder.Content>
+                                                        <Image Aspect="Fill" Source="Ox.png" />
+                                                    </border:SfBorder.Content>
+                                                </border:SfBorder>
+
+                                                <StackLayout Orientation="Horizontal" Spacing="0">
+
+                                                    <border:SfBorder
+                                                        Margin="5,0"
+                                                        BorderColor="White"
+                                                        BorderWidth="5"
+                                                        CornerRadius="10"
+                                                        HeightRequest="140"
+                                                        WidthRequest="140">
+                                                        <border:SfBorder.Content>
+                                                            <Image Aspect="Fill" Source="Chicks.jpg" />
+                                                        </border:SfBorder.Content>
+                                                    </border:SfBorder>
+
+                                                    <border:SfBorder
+                                                        Margin="0,0,5,0"
+                                                        BorderColor="White"
+                                                        BorderWidth="5"
+                                                        CornerRadius="10"
+                                                        HeightRequest="140"
+                                                        WidthRequest="140">
+                                                        <border:SfBorder.Content>
+                                                            <Image Aspect="Fill" Source="Eagle.jpg" />
+                                                        </border:SfBorder.Content>
+                                                    </border:SfBorder>
+
+                                                </StackLayout>
+
+                                                <border:SfBorder
+                                                    Margin="5"
+                                                    BorderColor="White"
+                                                    BorderWidth="5"
+                                                    CornerRadius="10"
+                                                    HeightRequest="100">
+                                                    <border:SfBorder.Content>
+                                                        <Image Aspect="Fill" Source="Birds.png" />
+                                                    </border:SfBorder.Content>
+                                                </border:SfBorder>
+
+                                                <StackLayout Orientation="Horizontal" Spacing="0">
+
+                                                    <border:SfBorder
+                                                        Margin="5,0"
+                                                        BorderColor="White"
+                                                        BorderWidth="5"
+                                                        CornerRadius="10"
+                                                        HeightRequest="140"
+                                                        WidthRequest="140">
+                                                        <border:SfBorder.Content>
+                                                            <Image Aspect="Fill" Source="Tiger.jpg" />
+                                                        </border:SfBorder.Content>
+                                                    </border:SfBorder>
+
+                                                    <border:SfBorder
+                                                        Margin="0,0,5,0"
+                                                        BorderColor="White"
+                                                        BorderWidth="5"
+                                                        CornerRadius="10"
+                                                        HeightRequest="140"
+                                                        WidthRequest="140">
+                                                        <border:SfBorder.Content>
+                                                            <Image Aspect="Fill" Source="Wolf.jpg" />
+                                                        </border:SfBorder.Content>
+                                                    </border:SfBorder>
+
+                                                </StackLayout>
+
+                                                <border:SfBorder
+                                                    Margin="5"
+                                                    BorderColor="White"
+                                                    BorderWidth="5"
+                                                    CornerRadius="10"
+                                                    HeightRequest="100">
+                                                    <border:SfBorder.Content>
+                                                        <Image Aspect="Fill" Source="Deer.png" />
+                                                    </border:SfBorder.Content>
+                                                </border:SfBorder>
+
+                                            </StackLayout>
+                                        </ScrollView>
+                                    </Grid>
+                                </border:SfBorder.Content>
+                            </border:SfBorder>
+                        </Grid>
+                        <border:SfBorder
+                            x:Name="topBorder"
+                            Margin="0,70,0,0"
+                            BorderColor="White"
+                            BorderWidth="5"
+                            CornerRadius="50"
+                            HeightRequest="100"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Start"
+                            WidthRequest="100">
+                            <border:SfBorder.Content>
+                                <Image Source="People_Circle23.png" />
+                            </border:SfBorder.Content>
+                        </border:SfBorder>
+                    </Grid>
+                </border:SfBorder.Content>
+            </border:SfBorder>
+        </Grid>
+    </local:SampleView.Content>
+
+</local:SampleView>

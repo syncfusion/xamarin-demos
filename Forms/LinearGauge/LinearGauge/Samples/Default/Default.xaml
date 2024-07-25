@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:linear="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"
+             x:Class="SampleBrowser.SfLinearGauge.Default">
+
+    <local:SampleView.Resources>
+        <ResourceDictionary>
+            <Color x:Key="SfLinearGaugeLabelColor">#424242</Color>
+            <Color x:Key="SfLinearGaugeScaleBarColor">#9e9e9e</Color>
+            <Color x:Key="SfLinearGaugeTickColor">#9E9E9E</Color>
+            <Color x:Key="SfLinearGaugeSymbolColor">Gray</Color>
+        </ResourceDictionary>
+
+    </local:SampleView.Resources>
+
+    <local:SampleView.Content >
+ 
+            <linear:SfLinearGauge>
+
+                <linear:SfLinearGauge.Scales>
+                    <linear:LinearScale  LabelFontSize="14" LabelColor="{DynamicResource SfLinearGaugeLabelColor}"
+                                    ScaleBarSize="2" OpposedPosition="True" ScaleBarColor="{DynamicResource SfLinearGaugeScaleBarColor}"
+                                    MinorTicksPerInterval="4" MinimumValue="0" 
+                                    MaximumValue="100" Interval="10">
+                        <linear:LinearScale.MajorTickSettings>
+                            <linear:LinearTickSettings  Thickness="1.5" Length="30" Color="{DynamicResource SfLinearGaugeTickColor}" />
+                        </linear:LinearScale.MajorTickSettings>
+                        <linear:LinearScale.MinorTickSettings>
+                            <linear:LinearTickSettings  Thickness="0.9" Length="15"  Color="{DynamicResource SfLinearGaugeTickColor}"/>
+                        </linear:LinearScale.MinorTickSettings>
+                        <linear:LinearScale.Pointers>
+                            <linear:SymbolPointer SymbolPointerPosition="Away" 
+                                              Thickness="12" Value="10" Color="{DynamicResource SfLinearGaugeSymbolColor}"
+                                              MarkerShape="Triangle" />
+                        <linear:BarPointer  Value="60" Thickness="4"  
+                    EnableAnimation="False">
+                        </linear:BarPointer>
+                    </linear:LinearScale.Pointers>
+                    </linear:LinearScale>
+                </linear:SfLinearGauge.Scales>
+
+            </linear:SfLinearGauge>
+        
+    </local:SampleView.Content>
+</local:SampleView>
