@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+    x:Class="SampleBrowser.SfSchedule.Resource"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:samplelocal="clr-namespace:SampleBrowser.SfSchedule"
+    xmlns:schedule="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.SfSchedule.XForms">
+    <local:SampleView.Content>
+        <Grid x:Name="grid_layout">
+            <schedule:SfSchedule
+                x:Name="Schedule"
+                HorizontalOptions="FillAndExpand"
+                ScheduleView="WeekView" ShowResourceView="True" ShowAppointmentsInline="True"
+                VerticalOptions="FillAndExpand"
+                DataSource="{Binding ListOfMeeting}" 
+                SelectedResources="{Binding SelectedResources}"
+                ScheduleResources="{Binding Resources}">
+                <schedule:SfSchedule.AppointmentMapping>
+                    <schedule:ScheduleAppointmentMapping
+                        ColorMapping="Color"
+                        EndTimeMapping="To"
+                        IsAllDayMapping="IsAllDay"
+                        StartTimeMapping="From"
+                        SubjectMapping="EventName"
+                        MinHeightMapping="MinimumHeight"
+                        StartTimeZoneMapping="StartTimeZone"
+                        EndTimeZoneMapping="EndTimeZone"
+                        ResourceIdsMapping="Resources"/>
+                </schedule:SfSchedule.AppointmentMapping>
+                <schedule:SfSchedule.ResourceMapping>
+                    <schedule:ResourceMapping Name="Name"
+                                            Id="ID"
+                                            Color="Color"
+                                            Image="Image"
+                                              />
+                </schedule:SfSchedule.ResourceMapping>
+                <schedule:SfSchedule.ResourceViewSettings>
+                    <schedule:ResourceViewSettings SelectionMode ="Multiple"/>
+                </schedule:SfSchedule.ResourceViewSettings>
+                <schedule:SfSchedule.TimelineViewSettings>
+                    <schedule:TimelineViewSettings StartHour="9" EndHour="18"/>
+                </schedule:SfSchedule.TimelineViewSettings>
+            </schedule:SfSchedule>
+        </Grid>
+    </local:SampleView.Content>
+
+    <local:SampleView.PropertyView>
+        <Grid  BackgroundColor="White"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label  Grid.Row="0"
+                    x:Name="scheduleViewLabel"
+                    Text="Change the view type"
+                    FontSize="15"
+                    TextColor="Gray" />
+            <Picker  x:Name="viewPicker"
+                     Grid.Row="1"
+                     VerticalOptions="Start"
+                     HorizontalOptions="FillAndExpand">
+                <Picker.Items>
+                    <x:String>Day View</x:String>
+                    <x:String>Week View</x:String>
+                    <x:String>Work Week View</x:String>
+                    <x:String>Month View</x:String>
+                    <x:String>Timeline View</x:String>
+                </Picker.Items>
+            </Picker>
+        </Grid>
+    </local:SampleView.PropertyView>
+    <local:SampleView.BindingContext>
+        <samplelocal:ResourceViewModel/>
+    </local:SampleView.BindingContext>
+    <local:SampleView.Behaviors>
+        <samplelocal:ResourceBehavior/>
+    </local:SampleView.Behaviors>
+</local:SampleView>

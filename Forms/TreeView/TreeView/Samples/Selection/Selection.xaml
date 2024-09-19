@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<sample:SampleView x:Class="SampleBrowser.SfTreeView.Selection"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.SfTreeView"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                   xmlns:sfTreeView="clr-namespace:Syncfusion.XForms.TreeView;assembly=Syncfusion.SfTreeView.XForms"
+                   xmlns:treeviewengine="clr-namespace:Syncfusion.TreeView.Engine;assembly=Syncfusion.SfTreeView.XForms">
+    <sample:SampleView.BindingContext>
+        <local:CountriesViewModel x:Name="viewModel"/>
+    </sample:SampleView.BindingContext>
+    <sample:SampleView.Behaviors>
+        <local:TreeViewSelectionBehavior />
+    </sample:SampleView.Behaviors>
+    <sample:SampleView.Content>
+        <Grid Margin="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <sfTreeView:SfTreeView x:Name="treeView"
+                             ItemHeight="45"
+                             Indentation="20"
+                             ExpanderWidth="40"
+                             SelectionMode="Multiple"
+                             IsAnimationEnabled="True"
+                             SelectionBackgroundColor="#E4E4E4"
+                             ItemsSource="{Binding Countries}"
+                             SelectedItems="{Binding SelectedPlaces}"
+                             AutoExpandMode="RootNodesExpanded">
+                <sfTreeView:SfTreeView.HierarchyPropertyDescriptors>
+                    <treeviewengine:HierarchyPropertyDescriptor TargetType="{x:Type local:Country}" ChildPropertyName="States"/>
+                    <treeviewengine:HierarchyPropertyDescriptor TargetType="{x:Type local:State}" ChildPropertyName="Cities"/>
+                </sfTreeView:SfTreeView.HierarchyPropertyDescriptors>
+                <sfTreeView:SfTreeView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid RowSpacing="0" BackgroundColor="Transparent">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="1" />
+                            </Grid.RowDefinitions>
+                            <Grid Padding="5,0,0,0">
+                                <Label Text="{Binding Name}" 
+                                   TextColor="Black"
+                                   FontSize="Medium"
+                                   VerticalTextAlignment="Center"/>
+                            </Grid>
+                            <StackLayout Grid.Row="1" BackgroundColor="#E4E4E4" HeightRequest="1"/>
+                        </Grid>
+                    </DataTemplate>
+                </sfTreeView:SfTreeView.ItemTemplate>
+            </sfTreeView:SfTreeView>
+        </Grid>
+    </sample:SampleView.Content>
+    <sample:SampleView.PropertyView>
+        <StackLayout Spacing="10">
+            <StackLayout Grid.Row="0" Orientation="Horizontal">
+                <Label FontFamily="Helvetica"
+                       HorizontalOptions="Start"
+                       Text="Selection Mode"
+                       VerticalOptions="Center"
+                       WidthRequest="150" />
+                <Picker x:Name="selectionModePicker" IsEnabled="true" />
+            </StackLayout>
+        </StackLayout>
+    </sample:SampleView.PropertyView>
+</sample:SampleView>

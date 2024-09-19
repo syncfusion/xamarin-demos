@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfTreeView.GettingStarted"
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:local="clr-namespace:SampleBrowser.SfTreeView"
+                   xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                   xmlns:sfTreeView="clr-namespace:Syncfusion.XForms.TreeView;assembly=Syncfusion.SfTreeView.XForms"
+                   xmlns:treeviewengine="clr-namespace:Syncfusion.TreeView.Engine;assembly=Syncfusion.SfTreeView.XForms">
+    <sample:SampleView.BindingContext>
+        <local:FoodSpeciesViewModel x:Name="viewModel"/>
+    </sample:SampleView.BindingContext>
+    <sample:SampleView.Behaviors>
+        <local:TreeViewGettingStartedBehavior />
+    </sample:SampleView.Behaviors>
+    <sample:SampleView.Content>
+        <Grid Margin="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <sfTreeView:SfTreeView x:Name="treeView"
+                                   ItemHeight="40"
+                                   Indentation="20"
+                                   IsAnimationEnabled="true"
+                                   ExpanderWidth="40"
+                                   FullRowSelect="True"
+                                   ExpandActionTarget="Node"
+                                   ItemsSource="{Binding SpeciesFamilies}"
+                                   AutoExpandMode="AllNodesExpanded">
+                <sfTreeView:SfTreeView.HierarchyPropertyDescriptors>
+                    <treeviewengine:HierarchyPropertyDescriptor TargetType="{x:Type local:SpeciesFamily}" ChildPropertyName="SpeciesType"/>
+                    <treeviewengine:HierarchyPropertyDescriptor TargetType="{x:Type local:SpeciesType}" ChildPropertyName="Species"/>
+                </sfTreeView:SfTreeView.HierarchyPropertyDescriptors>
+                <sfTreeView:SfTreeView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="5,0,0,0" BackgroundColor="Transparent">
+                            <Label Text="{Binding SpeciesName}"
+                                   TextColor="Black"
+                                   FontSize="Medium"
+                                   VerticalTextAlignment="Center"/>
+                        </Grid>
+                    </DataTemplate>
+                </sfTreeView:SfTreeView.ItemTemplate>
+            </sfTreeView:SfTreeView>
+        </Grid>
+    </sample:SampleView.Content>
+    <sample:SampleView.PropertyView>
+        <StackLayout Spacing="10">
+            <StackLayout Grid.Row="0" Orientation="Horizontal">
+                <Label FontFamily="Helvetica"
+                       HorizontalOptions="Start"
+                       Text="Enable Animation"
+                       VerticalOptions="Center"
+                       WidthRequest="150" />
+                <Picker x:Name="enableAnimation" IsEnabled="true" />
+            </StackLayout>
+            <StackLayout Grid.Row="0" Orientation="Horizontal">
+                <Label FontFamily="Helvetica"
+                       HorizontalOptions="Start"
+                       Text="Expander Position"
+                       VerticalOptions="Center"
+                       WidthRequest="150" />
+                <Picker x:Name="expanderPosition" IsEnabled="true" />
+            </StackLayout>
+        </StackLayout>
+    </sample:SampleView.PropertyView>
+</sample:SampleView>
