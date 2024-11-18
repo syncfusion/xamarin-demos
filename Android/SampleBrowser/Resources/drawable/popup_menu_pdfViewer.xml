@@ -1,0 +1,21 @@
+﻿<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+  <item
+     android:id="@+id/FSharp"
+     android:title="F# Succinctly"/>
+  <item
+      android:id="@+id/GIS"
+      android:title="GIS Succinctly"/>
+
+  <item
+      android:id="@+id/HTTP"
+      android:title="HTTP Succinctly"/>
+
+  <item
+      android:id="@+id/JavaScript"
+      android:title="JavaScript Succinctly"/>
+  <item
+      android:id="@+id/EncryptedDocument"
+      android:title="Encrypted Document"/>
+
+</menu>

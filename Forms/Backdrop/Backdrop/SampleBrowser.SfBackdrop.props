@@ -1,0 +1,61 @@
+<Project>
+
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>Samples\Backdrop\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Backdrop\Backdrop.xaml">
+
+      <Link>Samples\Backdrop\Samples\Backdrop\Backdrop.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+
+      <SubType>Designer</SubType>
+
+    </EmbeddedResource>
+
+
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Backdrop\BackdropViewModel.cs" >
+      <Link>Samples\Backdrop\Samples\Backdrop\BackdropViewModel.cs</Link>
+    </Compile>
+
+
+
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Backdrop\Backdrop.xaml.cs">
+
+      <Link>Samples\Backdrop\Samples\Backdrop\Backdrop.xaml.cs</Link>
+      <DependentUpon>Backdrop.xaml</DependentUpon>
+
+    </Compile>
+
+
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Backdrop\BackdropModel.cs" >
+      <Link>Samples\Backdrop\Samples\Backdrop\BackdropModel.cs</Link>
+    </Compile>
+
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <Compile Include="$(MSBuildThisFileDirectory)\Behaviors\SelectionBehavior.cs" >
+      <Link>Behaviors\SelectionBehavior.cs</Link>
+    </Compile>
+
+    <Compile Include="$(MSBuildThisFileDirectory)\Behaviors\SliderBehavior.cs" >
+      <Link>Behaviors\SliderBehavior.cs</Link>
+    </Compile>
+
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <Compile Include="$(MSBuildThisFileDirectory)\Converter\TitleConverter.cs" >
+      <Link>Converter\TitleConverter.cs</Link>
+    </Compile>
+
+  </ItemGroup>
+</Project>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.Presentation.Slides">
+
+  <local:SampleView.Content>
+    <StackLayout Padding="10">
+      <Label x:Name="Description" Text="This sample demonstrates how to create a slide with predefined layouts, like Microsoft PowerPoint."
+                 FontSize="Medium" VerticalOptions="Center"/>
+      <Label></Label>
+      <Button x:Name="btnGenerate" Clicked ="OnButtonClicked" Text ="Generate Presentation" HorizontalOptions="Center" VerticalOptions="Center"/>
+    </StackLayout>
+  </local:SampleView.Content>
+</local:SampleView>

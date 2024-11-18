@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Samples>  
+<Group Title="PullToRefresh" SearchTags="pull, refresh, slide on top, push"
+     Description=" Component that allows you to interact and refresh the view loaded in it.">
+    <Sample Title = "Weather Data" Name = "PullToRefreshView" Icon = "AllControlls/PullToRefresh.png" SearchTags="data, weather, list, pull, refresh, slide on top, push, transition, update" 
+          Description = "This sample showcases the pull-to-refresh capability of a simple layout allows you to refresh the data source upon pull-to-refresh action."/>
+    <Sample Title = "Pull To Refresh With SfListView" Icon = "AllControlls/ListView/ListPullToRefresh.png"  Name = "ListViewPullToRefresh" SearchTags="list, listview, refresh, slide on top, push, transition, refresh list, data, pull," 
+          Description = "This sample showcases the pull-to-refresh capability of ListView which allows you to refresh the data source upon pull-to-refresh action." />
+    <Sample Title = "Pull To Refresh with DataGrid" Name = "DataGridPullToRefresh" Icon = "AllControlls/PullToRefresh.png" IsThemesSample = "true" SearchTags="data grid, grid, pull, refresh, slide on top, push, transition" 
+          Description = "This sample showcases the pull-to-refresh capability to host SfDataGrid which allows you to refresh the data source upon pull-to-refresh action."  />
+    <Sample Title = "Template" Name = "PullToRefreshTemplate" Icon = "AllControlls/PullToRefresh.png" SearchTags="data grid, grid, pull, refresh, slide on top, push, transition, template"
+          Description = "This sample showcases the pull-to-refresh capability to load template while pulling and refreshing the content"/>
+</Group>
+</Samples>
