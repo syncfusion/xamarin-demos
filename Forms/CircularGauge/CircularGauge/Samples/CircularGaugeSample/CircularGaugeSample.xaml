@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:sample="clr-namespace:SampleBrowser.SfCircularGauge"     
+             x:Class="SampleBrowser.SfCircularGauge.CircularGaugeSample">
+
+  <local:SampleView.BindingContext>
+    <sample:CircularGaugeViewModel x:Name="viewModel" PointerValue="70"/>
+  </local:SampleView.BindingContext>
+
+  <local:SampleView.Content >
+  
+      <gauge:SfCircularGauge x:Name="circularGauge" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+       
+        <gauge:SfCircularGauge.Scales>
+          <gauge:Scale StartValue="0" x:Name="scale" RimThickness="10" 
+                       ScaleStartOffset="0.95" ScaleEndOffset="0.92"
+                       LabelOffset="0.77" ShowTicks="False" MinorTicksPerInterval="0">
+            
+            <gauge:Scale.Pointers>
+              <gauge:NeedlePointer  x:Name="needlePointer" Value="{Binding PointerValue, Mode=TwoWay}" KnobRadius="10" 
+                                    LengthFactor="0.6" Type="Triangle"/>
+                        <gauge:RangePointer Value="60" StartOffset="0.95" EnableAnimation="False"  EndOffset="0.92"  RangeCap="Both"/>
+                    </gauge:Scale.Pointers>
+            
+          </gauge:Scale>
+        </gauge:SfCircularGauge.Scales>
+        
+      </gauge:SfCircularGauge>
+    
+  </local:SampleView.Content>
+  
+    <local:SampleView.PropertyView>
+
+        <StackLayout Padding="10" BackgroundColor="White">
+            
+          <StackLayout BackgroundColor="White" Orientation="Horizontal">
+                <Label x:Name="pointer_text" Text="Change pointer value" FontAttributes="Bold" TextColor="Black"/>
+                <Label x:Name="pointer_value" FontAttributes="Bold" TextColor="Black" 
+                       BindingContext="{x:Reference pointer_slider}" Text="{Binding Value, StringFormat='{0:N}'}"/>
+            </StackLayout>
+          
+          <Slider x:Name="pointer_slider" MinimumTrackColor="#177CE7" ThumbColor="#1a1aff" MaximumTrackColor="DarkGray" Value="{Binding PointerValue, Mode=TwoWay}" Maximum="100"/>
+          
+        </StackLayout>
+    </local:SampleView.PropertyView>
+</local:SampleView>

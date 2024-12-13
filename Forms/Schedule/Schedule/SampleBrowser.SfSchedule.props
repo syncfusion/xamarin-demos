@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project >
+   
+      <ItemGroup>
+          <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml" >
+               <Link>Samples\Schedule\SamplesList\SamplesList.xml</Link>
+          </EmbeddedResource>
+      </ItemGroup>
+      
+      <ItemGroup>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\AppointmentEditor\Behaviors\AppointmentEditorBehavior.cs" >
+              <Link>Samples\Schedule\Samples\AppointmentEditor\Behaviors\AppointmentEditorBehavior.cs</Link>
+          </Compile>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\AppointmentEditor\Behaviors\EditorLayoutBehavior.cs" >
+              <Link>Samples\Schedule\Samples\AppointmentEditor\Behaviors\EditorLayoutBehavior.cs</Link>
+          </Compile>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\AppointmentEditor\Model\Meeting.cs" >
+              <Link>Samples\Schedule\Samples\AppointmentEditor\Model\Meeting.cs</Link>
+          </Compile>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\AppointmentEditor\ViewModels\AppointmentEditorViewModel.cs" >
+              <Link>Samples\Schedule\Samples\AppointmentEditor\ViewModels\AppointmentEditorViewModel.cs</Link>
+          </Compile>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\AppointmentEditor\ViewModels\EditorLayoutViewModel.cs" >
+              <Link>Samples\Schedule\Samples\AppointmentEditor\ViewModels\EditorLayoutViewModel.cs</Link>
+          </Compile>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\AppointmentEditor\ViewModels\TimeZoneCollection.cs" >
+              <Link>Samples\Schedule\Samples\AppointmentEditor\ViewModels\TimeZoneCollection.cs</Link>
+          </Compile>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\AppointmentEditor\Views\AppointmentEditor.xaml.cs">
+              <Link>Samples\Schedule\Samples\AppointmentEditor\Views\AppointmentEditor.xaml.cs</Link>
+              <DependentUpon>AppointmentEditor.xaml</DependentUpon>
+          </Compile>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\AppointmentEditor\Views\EditorLayout.xaml.cs">
+              <Link>Samples\Schedule\Samples\AppointmentEditor\Views\EditorLayout.xaml.cs</Link>
+              <DependentUpon>EditorLayout.xaml</DependentUpon>
+          </Compile>
+          <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\AppointmentEditor\Views\AppointmentEditor.xaml">
+              <Link>Samples\Schedule\Samples\AppointmentEditor\Views\AppointmentEditor.xaml</Link>
+              <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+              <SubType>Designer</SubType>
+          </EmbeddedResource>
+          <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\AppointmentEditor\Views\EditorLayout.xaml">
+              <Link>Samples\Schedule\Samples\AppointmentEditor\Views\EditorLayout.xaml</Link>
+              <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+              <SubType>Designer</SubType>
+          </EmbeddedResource>
+      </ItemGroup>
+      
+      <ItemGroup>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\AgendaView\Behaviors\AgendaViewBehavior.cs" >
+              <Link>Samples\Schedule\Samples\AgendaView\Behaviors\AgendaViewBehavior.cs</Link>
+          </Compile>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\AgendaView\ViewModel\AgendaViewModel.cs">
+              <Link>Samples\Schedule\Samples\AgendaView\ViewModel\AgendaViewModel.cs</Link>
+          </Compile>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\AgendaView\View\AgendaView.xaml.cs">
+              <Link>Samples\Schedule\Samples\AgendaView\View\AgendaView.xaml.cs</Link>
+              <DependentUpon>AgendaView.xaml</DependentUpon>
+          </Compile>
+          <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\AgendaView\View\AgendaView.xaml">
+              <Link>Samples\Schedule\Samples\AgendaView\View\AgendaView.xaml</Link>
+              <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+              <SubType>Designer</SubType>
+          </EmbeddedResource>
+      </ItemGroup>
+
+      <ItemGroup>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\DayViewConfigurations\Behaviors\DayViewConfigurationBehavior.cs" >
+              <Link>Samples\Schedule\Samples\DayViewConfigurations\Behaviors\DayViewConfigurationBehavior.cs</Link>
+          </Compile>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\DayViewConfigurations\ViewModel\ConfigurationViewModel.cs" >
+              <Link>Samples\Schedule\Samples\DayViewConfigurations\ViewModel\ConfigurationViewModel.cs</Link>
+          </Compile>
+          <Compile Include="$(MSBuildThisFileDirectory)\Samples\DayViewConfigurations\View\DayViewConfigurations.xaml.cs">
+              <Link>Samples\Schedule\Samples\DayViewConfigurations\View\DayViewConfigurations.xaml.cs</Link>
+              <DependentUpon>DayViewConfigurations.xaml</DependentUpon>
+          </Compile>
+      
+      <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DayViewConfigurations\View\DayViewConfigurations.xaml">
+          <Link>Samples\Schedule\Samples\DayViewConfigurations\View\DayViewConfigurations.xaml</Link>
+          <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+          <SubType>Designer</SubType>
+      </EmbeddedResource>
+  </ItemGroup>
+  
+  <ItemGroup>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\Behaviors\SetScheduleViewBehavior.cs" >
+          <Link>Samples\Schedule\Samples\Samples\GettingStarted\Behaviors\SetScheduleViewBehavior.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\ViewModel\ScheduleViewModel.cs" >
+          <Link>Samples\Schedule\Samples\Samples\GettingStarted\ViewModel\ScheduleViewModel.cs</Link>
+      </Compile>
+      <Compile Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\View\GettingStarted.xaml.cs">
+          <Link>Samples\Schedule\Samples\GettingStarted\View\GettingStarted.xaml.cs</Link>
+          <DependentUpon>GettingStarted.xaml</DependentUpon>
+      </Compile>
+      <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\GettingStarted\View\GettingStarted.xaml">
+          <Link>Samples\Schedule\Samples\GettingStarted\View\GettingStarted.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+  </EmbeddedResource>
+</ItemGroup>
+
+<ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\RecursiveAppointments\ViewModel\RecurrenceViewModel.cs" >
+        <Link>Samples\Schedule\Samples\RecursiveAppointments\ViewModel\RecurrenceViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\RecursiveAppointments\View\RecursiveAppointments.xaml.cs">
+        <Link>Samples\Schedule\Samples\Schedule\Samples\RecursiveAppointments\View\RecursiveAppointments.xaml.cs</Link>
+        <DependentUpon>RecursiveAppointments.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\RecursiveAppointments\View\RecursiveAppointments.xaml">
+        <Link>Samples\Schedule\Samples\Schedule\Samples\Samples\RecursiveAppointments\View\RecursiveAppointments.xaml</Link>
+        <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+        <SubType>Designer</SubType>
+    </EmbeddedResource>
+</ItemGroup>
+
+<ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Timetable\Behaviors\TimetableBehavior.cs" >
+        <Link>Samples\Schedule\Samples\Timetable\Behaviors\TimetableBehavior.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Timetable\ViewModel\TimetableViewModel.cs" >
+        <Link>Samples\Schedule\Samples\Timetable\ViewModel\TimetableViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Timetable\View\Timetable.xaml.cs">
+        <Link>Samples\Schedule\Samples\Timetable\View\Timetable.xaml.cs</Link>
+        <DependentUpon>Timetable.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Timetable\View\Timetable.xaml">
+        <Link>Samples\Schedule\Samples\Timetable\View\Timetable.xaml</Link>
+        <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+        <SubType>Designer</SubType>
+    </EmbeddedResource>
+</ItemGroup>
+
+<ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewCustomization\HelperClass\AppointmentDataTemplateSelector.cs" >
+        <Link>Samples\Schedule\Samples\ViewCustomization\HelperClass\AppointmentDataTemplateSelector.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewCustomization\HelperClass\MonthCellDataTemplateSelector.cs" >
+        <Link>Samples\Schedule\Samples\ViewCustomization\HelperClass\MonthCellDataTemplateSelector.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewCustomization\HelperClass\AgendaViewItemTemplateSelector.cs" >
+       <Link>Samples\Schedule\Samples\ViewCustomization\HelperClass\AgendaViewItemTemplateSelector.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewCustomization\Behaviors\MonthCellCustomViewBehavior.cs" >
+        <Link>Samples\Schedule\Samples\ViewCustomization\Behaviors\MonthCellCustomViewBehavior.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewCustomization\Behaviors\MonthCellDateBehavior.cs" >
+        <Link>Samples\Schedule\Samples\ViewCustomization\Behaviors\MonthCellDateBehavior.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewCustomization\Behaviors\CustomViewBehavior.cs" >
+        <Link>Samples\Schedule\Samples\ViewCustomization\Behaviors\CustomViewBehavior.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewCustomization\ViewModel\CustomizationViewModel.cs" >
+        <Link>Samples\Schedule\Samples\ViewCustomization\ViewModel\CustomizationViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewCustomization\View\ViewCustomization.xaml.cs">
+        <Link>Samples\Schedule\Samples\ViewCustomization\View\ViewCustomization.xaml.cs</Link>
+        <DependentUpon>ViewCustomization.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ViewCustomization\View\ViewCustomization.xaml">
+        <Link>Samples\Schedule\Samples\ViewCustomization\View\ViewCustomization.xaml</Link>
+        <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+        <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewCustomization\View\AllDayAppointmentTemplate.xaml.cs" >
+        <Link>Samples\Schedule\Samples\ViewCustomization\View\AllDayAppointmentTemplate.xaml.cs</Link>
+        <DependentUpon>AllDayAppointmentTemplate.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ViewCustomization\View\AllDayAppointmentTemplate.xaml">
+        <Link>Samples\Schedule\Samples\ViewCustomization\View\AllDayAppointmentTemplate.xaml</Link>
+        <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+        <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewCustomization\View\DayAppointmentTemplate.xaml.cs" >
+        <Link>Samples\Schedule\Samples\ViewCustomization\View\DayAppointmentTemplate.xaml.cs</Link>
+        <DependentUpon>DayAppointmentTemplate.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ViewCustomization\View\DayAppointmentTemplate.xaml">
+        <Link>Samples\Schedule\Samples\ViewCustomization\View\DayAppointmentTemplate.xaml</Link>
+        <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+        <SubType>Designer</SubType>
+    </EmbeddedResource>
+  <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewCustomization\View\AgendaViewItemTemplate.xaml.cs" >
+    <Link>Samples\Schedule\Samples\ViewCustomization\View\AgendaViewItemTemplate.xaml.cs</Link>
+    <DependentUpon>AgendaViewItemTemplate.xaml</DependentUpon>
+  </Compile>
+  <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ViewCustomization\View\AgendaViewItemTemplate.xaml">
+    <Link>Samples\Schedule\Samples\ViewCustomization\View\AgendaViewItemTemplate.xaml</Link>
+    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    <SubType>Designer</SubType>
+  </EmbeddedResource>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewCustomization\View\MonthAppointmentTemplate.xaml.cs" >
+        <Link>Samples\Schedule\Samples\ViewCustomization\View\MonthAppointmentTemplate.xaml.cs</Link>
+        <DependentUpon>MonthAppointmentTemplate.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ViewCustomization\View\MonthAppointmentTemplate.xaml">
+        <Link>Samples\Schedule\Samples\ViewCustomization\View\MonthAppointmentTemplate.xaml</Link>
+        <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+        <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\ViewCustomization\View\MonthCellDatesTemplate.xaml.cs" >
+        <Link>Samples\Schedule\Samples\ViewCustomization\View\MonthCellDatesTemplate.xaml.cs</Link>
+        <DependentUpon>MonthCellDatesTemplate.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\ViewCustomization\View\MonthCellDatesTemplate.xaml">
+        <Link>Samples\Schedule\Samples\ViewCustomization\View\MonthCellDatesTemplate.xaml</Link>
+        <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+        <SubType>Designer</SubType>
+    </EmbeddedResource>
+</ItemGroup>
+
+<ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Localization\ViewModel\LocalizationViewModel.cs" >
+        <Link>Samples\Schedule\Samples\Localization\ViewModel\LocalizationViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Localization\View\Localization.xaml.cs">
+        <Link>Samples\Schedule\Samples\Localization\View\Localization.xaml.cs</Link>
+        <DependentUpon>Localization.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Localization\View\Localization.xaml">
+        <Link>Samples\Schedule\Samples\Localization\View\Localization.xaml</Link>
+        <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+        <SubType>Designer</SubType>
+    </EmbeddedResource>
+</ItemGroup>
+
+<ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DragDrop\Behaviors\DragDropBehavior.cs" >
+        <Link>Samples\Schedule\Samples\DragDrop\Behaviors\DragDropBehavior.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DragDrop\Behaviors\IDensityBasedValue.cs" >
+        <Link>Samples\Schedule\Samples\DragDrop\Behaviors\IDensityBasedValue.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DragDrop\ViewModel\DragDropViewModel.cs" >
+        <Link>Samples\Schedule\Samples\DragDrop\ViewModel\DragDropViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DragDrop\View\DragDrop.xaml.cs">
+        <Link>Samples\Schedule\Samples\DragDrop\View\DragDrop.xaml.cs</Link>
+        <DependentUpon>DragDrop.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DragDrop\View\DragDrop.xaml">
+        <Link>Samples\Schedule\Samples\DragDrop\View\DragDrop.xaml</Link>
+        <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+        <SubType>Designer</SubType>
+    </EmbeddedResource>
+</ItemGroup>
+
+<ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\LoadOnDemand\Behaviors\LoadOnDemandBehavior.cs" >
+        <Link>Samples\Schedule\Samples\LoadOnDemand\Behaviors\LoadOnDemandBehavior.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\LoadOnDemand\View\LoadOnDemand.xaml.cs">
+        <Link>Samples\Schedule\Samples\LoadOnDemand\View\LoadOnDemand.xaml.cs</Link>
+        <DependentUpon>LoadOnDemand.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\LoadOnDemand\View\LoadOnDemand.xaml">
+        <Link>Samples\Schedule\Samples\LoadOnDemand\View\LoadOnDemand.xaml</Link>
+        <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+        <SubType>Designer</SubType>
+    </EmbeddedResource>
+</ItemGroup>
+ 
+<ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\ThemesViewModel.cs" >
+        <Link>Samples\Schedule\Samples\Themes\ThemesViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml.cs">
+        <Link>Samples\Schedule\Samples\Themes\Themes.xaml.cs</Link>
+        <DependentUpon>Themes.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Themes\Themes.xaml">
+        <Link>Samples\Schedule\Samples\Themes\Themes.xaml</Link>
+        <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+        <SubType>Designer</SubType>
+    </EmbeddedResource>
+</ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Resource\Behaviors\ResourceBehavior.cs" >
+      <Link>Samples\Schedule\Samples\Resource\Behaviors\ResourceBehavior.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Resource\ViewModel\ResourceViewModel.cs" >
+      <Link>Samples\Schedule\Samples\Resource\ViewModel\ResourceViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\Resource\View\Resource.xaml.cs">
+      <Link>Samples\Schedule\Samples\Resource\View\Resource.xaml.cs</Link>
+      <DependentUpon>Resource.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\Resource\View\Resource.xaml">
+      <Link>Samples\Schedule\Samples\Resource\View\Resource.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\TimelineView\Behaviors\TimelineViewBehavior.cs" >
+      <Link>Samples\Schedule\Samples\TimelineView\Behaviors\TimelineViewBehavior.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\TimelineView\ViewModel\TimelineViewModel.cs" >
+      <Link>Samples\Schedule\Samples\TimelineView\ViewModel\TimelineViewModel.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\TimelineView\View\TimelineView.xaml.cs">
+      <Link>Samples\Schedule\Samples\TimelineView\View\TimelineView.xaml.cs</Link>
+      <DependentUpon>TimelineView.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\TimelineView\View\TimelineView.xaml">
+      <Link>Samples\Schedule\Samples\TimelineView\View\TimelineView.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  
+</Project>

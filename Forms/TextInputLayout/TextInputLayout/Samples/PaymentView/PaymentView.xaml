@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<local:SampleView
+    x:Class="SampleBrowser.SfTextInputLayout.PaymentView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+    xmlns:comboBox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+    xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion.SfMaskedEdit.XForms"
+    xmlns:numericUpDown="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms"
+    xmlns:sftextinputlayout="clr-namespace:SampleBrowser.SfTextInputLayout"
+    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <local:SampleView.BindingContext>
+        <sftextinputlayout:PaymentViewModel x:Name="paymentViewModel" />
+    </local:SampleView.BindingContext>
+
+    <local:SampleView.Resources>
+        <ResourceDictionary>
+            <Color x:Key="SyncPrimaryColor">#0074C4</Color>
+            <Color x:Key="SfTextInputLayoutHelperTextColor">#707070</Color>
+        </ResourceDictionary>
+    </local:SampleView.Resources>
+
+    <local:SampleView.Content>
+		<ScrollView Margin="0,20,0,0"  VerticalScrollBarVisibility="Never">
+            <ScrollView.Resources>
+                <sftextinputlayout:ContainerTypeConverter x:Key="ContainerTypeConverter" />
+            </ScrollView.Resources>
+
+            <ScrollView.HorizontalOptions>
+                <OnIdiom
+                    x:TypeArguments="LayoutOptions"
+                    Desktop="Center"
+                    Phone="FillAndExpand"
+                    Tablet="FillAndExpand" />
+            </ScrollView.HorizontalOptions>
+
+            <ScrollView.WidthRequest>
+                <OnIdiom x:TypeArguments="x:Double" Desktop="400" />
+            </ScrollView.WidthRequest>
+
+            <StackLayout
+                Margin="20,0,20,20"
+                Padding="0,0,0,20"
+                Spacing="10">
+
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="Large"
+                    Text="Payment" />
+
+                <inputLayout:SfTextInputLayout
+                    x:Name="amountLayout"
+                    ContainerBackgroundColor="{Binding BackgroundColor}"
+                    ContainerType="Outlined"
+                    FocusedColor="{Binding FocusedColor}"
+                    HelperText="Maximum limit is $10,000."
+                    Hint="Amount"
+                    IsHintAlwaysFloated="{Binding EnableHintAlwaysFloated}"
+                    OutlineCornerRadius="{Binding CornerRadius}">
+                    <numericUpDown:SfNumericUpDown
+                        x:Name="amount"
+                        AutoReverse="False"
+                        FormatString="C"
+                        Maximum="10000"
+                        Minimum="0"
+                        StepValue="100"
+                        Value="{Binding Amount}">
+                    </numericUpDown:SfNumericUpDown>
+                </inputLayout:SfTextInputLayout>
+
+
+                <inputLayout:SfTextInputLayout
+                    x:Name="nameLayout"
+                    ContainerBackgroundColor="{Binding BackgroundColor}"
+                    ContainerType="Outlined"
+                    FocusedColor="{Binding FocusedColor}"
+                    HelperText="Name on your card"
+                    Hint="Name"
+                    IsHintAlwaysFloated="{Binding EnableHintAlwaysFloated}"
+                    OutlineCornerRadius="{Binding CornerRadius}">
+                    <Entry x:Name="name" Text="{Binding Name}" />
+                </inputLayout:SfTextInputLayout>
+
+                <inputLayout:SfTextInputLayout
+                    x:Name="numberLayout"
+                    ContainerBackgroundColor="{Binding BackgroundColor}"
+                    ContainerType="Outlined"
+                    FocusedColor="{Binding FocusedColor}"
+                    HelperText="Enter 16-digit card number"
+                    Hint="Card number"
+                    IsHintAlwaysFloated="{Binding EnableHintAlwaysFloated}"
+                    OutlineCornerRadius="{Binding CornerRadius}">
+
+                    <maskededit:SfMaskedEdit
+                        x:Name="number"
+                        Keyboard="Numeric"
+                        Mask="0000 0000 0000 0000"
+                        Value="{Binding CardNumber}" />
+
+                </inputLayout:SfTextInputLayout>
+
+                <inputLayout:SfTextInputLayout
+                    x:Name="cvvLayout"
+                    CharMaxLength="3"
+                    ContainerBackgroundColor="{Binding BackgroundColor}"
+                    ContainerType="Outlined"
+                    ErrorText="Invalid CVV number"
+                    FocusedColor="{Binding FocusedColor}"
+                    HasError="{Binding HasError}"
+                    HelperText="Enter the last 3 digits on back"
+                    Hint="CVV"
+                    IsHintAlwaysFloated="{Binding EnableHintAlwaysFloated}"
+                    OutlineCornerRadius="{Binding CornerRadius}"
+                    ShowCharCount="True">
+
+                    <Entry
+                        x:Name="cvvNumber"
+                        Keyboard="Numeric"
+                        Text="{Binding CVVNumber}" />
+
+                </inputLayout:SfTextInputLayout>
+
+                <Grid>
+                    <inputLayout:SfTextInputLayout
+                        x:Name="monthLayout"
+                        ContainerBackgroundColor="{Binding BackgroundColor}"
+                        ContainerType="Outlined"
+                        ErrorText="Invalid month"
+                        FocusedColor="{Binding FocusedColor}"
+                        HasError="{Binding IsMonthEmpty}"
+                        HelperText="Month on your card"
+                        Hint="Month"
+                        IsHintAlwaysFloated="{Binding EnableHintAlwaysFloated}"
+                        OutlineCornerRadius="{Binding CornerRadius}">
+
+                        <comboBox:SfComboBox
+                            x:Name="expiredMonth"
+                            ComboBoxSource="{Binding Month}"
+                            Text="{Binding ExpiredMonth}">
+                            <comboBox:SfComboBox.HeightRequest>
+                                <OnPlatform
+                                    x:TypeArguments="x:Double"
+                                    Android="52"
+                                    WinPhone="20"
+                                    iOS="21" />
+                            </comboBox:SfComboBox.HeightRequest>
+                        </comboBox:SfComboBox>
+
+                    </inputLayout:SfTextInputLayout>
+                    <inputLayout:SfTextInputLayout
+                        x:Name="yearLayout"
+                        Grid.Column="1"
+                        ContainerBackgroundColor="{Binding BackgroundColor}"
+                        ContainerType="Outlined"
+                        ErrorText="Invalid year"
+                        FocusedColor="{Binding FocusedColor}"
+                        HasError="{Binding IsYearEmpty}"
+                        HelperText="Year on your card"
+                        Hint="Year"
+                        IsHintAlwaysFloated="{Binding EnableHintAlwaysFloated}"
+                        OutlineCornerRadius="{Binding CornerRadius}">
+
+                        <comboBox:SfComboBox
+                            x:Name="expiredYear"
+                            ComboBoxSource="{Binding Year}"
+                            Text="{Binding ExpiredYear}">
+                            <comboBox:SfComboBox.HeightRequest>
+                                <OnPlatform
+                                    x:TypeArguments="x:Double"
+                                    Android="52"
+                                    WinPhone="20"
+                                    iOS="21" />
+                            </comboBox:SfComboBox.HeightRequest>
+                        </comboBox:SfComboBox>
+
+                    </inputLayout:SfTextInputLayout>
+                </Grid>
+
+                <Button
+                    x:Name="paymentButton"
+                    Margin="0,20,0,0"
+                    BackgroundColor="{DynamicResource SyncPrimaryColor}"
+                    Command="{Binding PaymentCommand}"
+                    HorizontalOptions="FillAndExpand"
+                    Text="Submit"
+                    TextColor="White" />
+
+            </StackLayout>
+        </ScrollView>
+    </local:SampleView.Content>
+
+    <local:SampleView.PropertyView>
+
+        <StackLayout BindingContext="{x:Reference paymentViewModel}">
+
+            <StackLayout.Padding>
+                <OnPlatform
+                    x:TypeArguments="Thickness"
+                    Android="0,10,0,0"
+                    WinPhone="10,10,0,0"
+                    iOS="0,10,0,0" />
+            </StackLayout.Padding>
+
+            <StackLayout.Spacing>
+                <OnPlatform
+                    x:TypeArguments="x:Double"
+                    Android="10"
+                    WinPhone="10"
+                    iOS="20" />
+            </StackLayout.Spacing>
+
+            <Grid>
+
+                <Label Text="Is hint always floated" VerticalTextAlignment="Center" />
+
+                <Switch
+                    Grid.Column="1"
+                    HorizontalOptions="EndAndExpand"
+                    IsToggled="{Binding EnableHintAlwaysFloated}" />
+
+            </Grid>
+
+            <!--<Grid>
+
+                <Label Text="Container type" VerticalTextAlignment="Center" />
+
+                <Picker
+                    x:Name="picker"
+                    Grid.Column="1"
+                    HorizontalOptions="FillAndExpand"
+                    SelectedIndexChanged="Picker_SelectedIndexChanged">
+
+                    <Picker.Items>
+                        <x:String>Filled</x:String>
+                        <x:String>Outlined</x:String>
+                        <x:String>None</x:String>
+                    </Picker.Items>
+                </Picker>
+
+            </Grid>-->
+
+            <Grid>
+                <Label
+                    x:Name="cornerRadiusValue"
+                    Text="Corner radius : 4"
+                    VerticalTextAlignment="Center" />
+
+                <Slider
+                    Grid.Column="1"
+                    HorizontalOptions="FillAndExpand"
+                    Maximum="50"
+                    MaximumTrackColor="LightBlue"
+                    Minimum="0"
+                    MinimumTrackColor="#0d5fa3"
+                    ValueChanged="CornerRadiusChanged"
+                    VerticalOptions="Center"
+                    Value="{Binding CornerRadius}">
+                    <Slider.Margin>
+                        <OnPlatform x:TypeArguments="Thickness" Android="-11,0,0,0" />
+                    </Slider.Margin>
+                </Slider>
+            </Grid>
+
+            <Grid x:Name="grid">
+
+                <Label Text="Container background color" VerticalTextAlignment="Center" />
+
+                <button:SfSegmentedControl
+                    x:Name="colorsView"
+                    Grid.Column="1"
+                    Margin="10,10,10,0"
+                    BackgroundColor="Transparent"
+                    BorderColor="Transparent"
+                    BorderThickness="0"
+                    CornerRadius="0"
+                    HorizontalOptions="FillAndExpand"
+                    SegmentBorderThickness="0"
+                    SegmentHeight="30"
+                    SegmentPadding="7"
+                    SegmentWidth="30"
+                    SelectionAnimationDuration="0"
+                    SelectionChanged="Color_SelectionChanged"
+                    Color="Transparent">
+                    <button:SfSegmentedControl.SelectionIndicatorSettings>
+                        <button:SelectionIndicatorSettings
+                            CornerRadius="15"
+                            Position="Border"
+                            Color="#ceb6ef" />
+                    </button:SfSegmentedControl.SelectionIndicatorSettings>
+                </button:SfSegmentedControl>
+
+            </Grid>
+
+        </StackLayout>
+    </local:SampleView.PropertyView>
+</local:SampleView>

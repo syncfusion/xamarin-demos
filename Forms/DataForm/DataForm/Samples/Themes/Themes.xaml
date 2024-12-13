@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SampleBrowser.SfDataForm"
+             xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:syncfusion="clr-namespace:Syncfusion.XForms.DataForm;assembly=Syncfusion.SfDataForm.XForms"
+             x:Class="SampleBrowser.SfDataForm.Themes">
+    <sample:SampleView.BindingContext>
+        <local:ThemesViewModel/>
+    </sample:SampleView.BindingContext>
+    <sample:SampleView.Content>
+        <Grid>
+            <syncfusion:SfDataForm  LayoutOptions="TextInputLayout" DataObject="{Binding EmployeeInfo}">
+                <syncfusion:SfDataForm.Behaviors>
+                    <local:SfDataFormThemesBehavior/>
+                </syncfusion:SfDataForm.Behaviors>
+            </syncfusion:SfDataForm>
+        </Grid>
+    </sample:SampleView.Content>
+</sample:SampleView>

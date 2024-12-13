@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfChart.LiveUpdate" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart">
+    <local:SampleView.Content>
+        <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <chart:SfChart.Margin>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="0,10,15,0" />
+            </chart:SfChart.Margin>
+            <chart:SfChart.ColorModel>
+                <chart:ChartColorModel Palette="Natural" />
+            </chart:SfChart.ColorModel>
+            <chart:SfChart.BindingContext>
+                <sampleBrowser:LiveUpdateViewModel />
+            </chart:SfChart.BindingContext>
+            <chart:SfChart.PrimaryAxis>
+                <chart:NumericalAxis ShowMajorGridLines="false"/>
+            </chart:SfChart.PrimaryAxis>
+            <chart:SfChart.SecondaryAxis>
+                <chart:NumericalAxis ShowMajorGridLines="false"/>
+            </chart:SfChart.SecondaryAxis>
+            <chart:SfChart.Series>
+                <chart:FastLineSeries ItemsSource="{Binding liveData1}" XBindingPath="Value" YBindingPath="Size">
+                </chart:FastLineSeries>
+                <chart:FastLineSeries ItemsSource="{Binding liveData2}" XBindingPath="Value" YBindingPath="Size">
+                </chart:FastLineSeries>
+            </chart:SfChart.Series>
+        </chart:SfChart>
+    </local:SampleView.Content>
+</local:SampleView>
