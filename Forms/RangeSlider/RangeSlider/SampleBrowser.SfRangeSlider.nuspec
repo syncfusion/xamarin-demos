@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Syncfusion.RangeSlider.Forms</id>
+    <version>15.1.0.41</version>
+    <authors>Syncfusion Inc.</authors>
+    <owners>Syncfusion Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>http://www.syncfusion.com/nuget/license</licenseUrl>
+    <projectUrl>http://www.syncfusion.com/</projectUrl>
+    <iconUrl>http://www.syncfusion.com/content/images/nuget/sync_logo_icon.png</iconUrl>
+    <description>SfRangeSlider allows you to select the specified range of values within maximum and minimum limits</description>
+    <copyright>Copyright 2001 - 2024 Syncfusion® Inc.</copyright>
+    <dependencies>
+      <dependency id="Xamarin.Forms" version="5.0.0.2012" />
+    </dependencies>
+  </metadata>
+</package>

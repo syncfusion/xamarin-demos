@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion.SfMaskedEdit.XForms" x:Class="SampleBrowser.SfMaskedEdit.Themes">
+    <StackLayout Padding="30" x:Name="sampleLayout">
+        <StackLayout>
+            <Label Text="Email ID" x:Name="lblEmail" VerticalOptions="Start" HorizontalOptions="Start" FontSize="16"/>
+            <StackLayout x:Name="maskEdit4">
+                <maskededit:SfMaskedEdit x:Name="sfEmail" AutomationId="sfEmail" Mask="\w+@\w+\.\w+" MaskType="RegEx" Watermark="david@syncfusion.com" HorizontalTextAlignment="Start" FontSize="23" WatermarkFontSize="23" ValueMaskFormat="ExcludePromptAndLiterals" HeightRequest="45" />
+            </StackLayout>
+        </StackLayout>
+        <StackLayout x:Name="ErrorEmail">
+            <Label Text="" x:Name="lblEmailError" VerticalOptions="Start" HorizontalOptions="Start" FontSize="10"  />
+        </StackLayout>
+    </StackLayout>
+</local:SampleView>

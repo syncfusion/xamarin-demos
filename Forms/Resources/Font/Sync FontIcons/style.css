@@ -1,0 +1,134 @@
+@font-face {
+font-family: 'Sync FontIcons';
+src:
+url('Fonts/Sync FontIcons.ttf') format('truetype'),
+url('Fonts/Sync FontIcons.woff') format('woff'),
+url('Fonts/Sync FontIcons.eot') format('eot'),
+url('Fonts/Sync FontIcons.svg?#Sync FontIcons') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+[class^="sf-icon-"], [class*=" sf-icon-"] {
+ font-family: 'Sync FontIcons' !important;
+speak: none;
+font-size: 55px;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+.sf-icon-ArrowfillUp:before { content: "\e700"; }
+.sf-icon-Rect_customize:before { content: "\e701"; }
+.sf-icon-GetApp:before { content: "\e702"; }
+.sf-icon-ThumbsUp:before { content: "\e703"; }
+.sf-icon-FlightTakeoff:before { content: "\e704"; }
+.sf-icon-Ready:before { content: "\e705"; }
+.sf-icon-Cart:before { content: "\e706"; }
+.sf-icon-KeyboardLeftArrow:before { content: "\e707"; }
+.sf-icon-Camera:before { content: "\e708"; }
+.sf-icon-Connector:before { content: "\e709"; }
+.sf-icon-Add:before { content: "\e70a"; }
+.sf-icon-Edit1:before { content: "\e70b"; }
+.sf-icon-Setting:before { content: "\e70c"; }
+.sf-icon-ClearGrouping:before { content: "\e70d"; }
+.sf-icon-SendBackward:before { content: "\e70e"; }
+.sf-icon-ArrowUpward:before { content: "\e70f"; }
+.sf-icon-Reply:before { content: "\e710"; }
+.sf-icon-Time:before { content: "\e711"; }
+.sf-icon-KeyboardRightArrow:before { content: "\e712"; }
+.sf-icon-ArrowFroward:before { content: "\e713"; }
+.sf-icon-Home:before { content: "\e714"; }
+.sf-icon-Moderate:before { content: "\e715"; }
+.sf-icon-Undo:before { content: "\e716"; }
+.sf-icon-SwitchOff:before { content: "\e717"; }
+.sf-icon-SwitchOn:before { content: "\e718"; }
+.sf-icon-Low:before { content: "\e719"; }
+.sf-icon-ArrowDownward:before { content: "\e71a"; }
+.sf-icon-DragIndicator:before { content: "\e71b"; }
+.sf-icon-MoreVert:before { content: "\e71c"; }
+.sf-icon-ArrowBack1:before { content: "\e71d"; }
+.sf-icon-ArrowUp1:before { content: "\e71e"; }
+.sf-icon-RTL:before { content: "\e71f"; }
+.sf-icon-KeyboardUpArrow:before { content: "\e720"; }
+.sf-icon-Warning:before { content: "\e721"; }
+.sf-icon-Block:before { content: "\e722"; }
+.sf-icon-Image:before { content: "\e723"; }
+.sf-icon-Unarchive:before { content: "\e724"; }
+.sf-icon-Allmail:before { content: "\e725"; }
+.sf-icon-AddCircle:before { content: "\e726"; }
+.sf-icon-High:before { content: "\e727"; }
+.sf-icon-ArrowfillLeft:before { content: "\e728"; }
+.sf-icon-ArrowDown1:before { content: "\e729"; }
+.sf-icon-User:before { content: "\e72a"; }
+.sf-icon-Heart:before { content: "\e72b"; }
+.sf-icon-Group:before { content: "\e72c"; }
+.sf-icon-Addsmall:before { content: "\e72d"; }
+.sf-icon-Tick:before { content: "\e72e"; }
+.sf-icon-Notes:before { content: "\e72f"; }
+.sf-icon-Cake:before { content: "\e730"; }
+.sf-icon-ExcelExport:before { content: "\e731"; }
+.sf-icon-ArrowfillRight:before { content: "\e732"; }
+.sf-icon-Trobleshoot:before { content: "\e733"; }
+.sf-icon-Gallery:before { content: "\e734"; }
+.sf-icon-Delete:before { content: "\e735"; }
+.sf-icon-Delete1:before { content: "\e736"; }
+.sf-icon-Play:before { content: "\e737"; }
+.sf-icon-Tag:before { content: "\e738"; }
+.sf-icon-Redo:before { content: "\e739"; }
+.sf-icon-AlignRight:before { content: "\e73a"; }
+.sf-icon-Edge:before { content: "\e73b"; }
+.sf-icon-UpFill:before { content: "\e73c"; }
+.sf-icon-U:before { content: "\e73d"; }
+.sf-icon-PopUpticket:before { content: "\e73e"; }
+.sf-icon-Folder:before { content: "\e73f"; }
+.sf-icon-Sort:before { content: "\e740"; }
+.sf-icon-KeyboardDownArrow:before { content: "\e741"; }
+.sf-icon-ArrowRight:before { content: "\e742"; }
+.sf-icon-Information:before { content: "\e743"; }
+.sf-icon-Inbox:before { content: "\e744"; }
+.sf-icon-Send:before { content: "\e745"; }
+.sf-icon-SendMessage:before { content: "\e746"; }
+.sf-icon-Edit:before { content: "\e747"; }
+.sf-icon-Delivered:before { content: "\e748"; }
+.sf-icon-TextNote:before { content: "\e749"; }
+.sf-icon-ArrowBack:before { content: "\e74a"; }
+.sf-icon-PopupFoodchart:before { content: "\e74b"; }
+.sf-icon-Refresh:before { content: "\e74c"; }
+.sf-icon-Conference:before { content: "\e74d"; }
+.sf-icon-Handsymbol:before { content: "\e74e"; }
+.sf-icon-AlignLeft:before { content: "\e74f"; }
+.sf-icon-Justify:before { content: "\e750"; }
+.sf-icon-Share:before { content: "\e751"; }
+.sf-icon-PopupParking:before { content: "\e752"; }
+.sf-icon-Balance:before { content: "\e753"; }
+.sf-icon-Curve:before { content: "\e754"; }
+.sf-icon-Calendar:before { content: "\e755"; }
+.sf-icon-Waste:before { content: "\e756"; }
+.sf-icon-Location:before { content: "\e757"; }
+.sf-icon-Fav1:before { content: "\e758"; }
+.sf-icon-Time1:before { content: "\e759"; }
+.sf-icon-Stethoscope:before { content: "\e75a"; }
+.sf-icon-CheckboxSquare:before { content: "\e75b"; }
+.sf-icon-Grouping:before { content: "\e75c"; }
+.sf-icon-Clearsorting:before { content: "\e75d"; }
+.sf-icon-Fav:before { content: "\e75e"; }
+.sf-icon-Invoice:before { content: "\e75f"; }
+.sf-icon-ArrowfillDown:before { content: "\e760"; }
+.sf-icon-Adduser:before { content: "\e761"; }
+.sf-icon-Exercise:before { content: "\e762"; }
+.sf-icon-Checkup:before { content: "\e763"; }
+.sf-icon-Bringfront:before { content: "\e764"; }
+.sf-icon-AlignCenter:before { content: "\e765"; }
+.sf-icon-Phone:before { content: "\e766"; }
+.sf-icon-PopupInfo:before { content: "\e767"; }
+.sf-icon-Sub:before { content: "\e768"; }
+.sf-icon-Pause:before { content: "\e769"; }
+.sf-icon-FlightLand:before { content: "\e76a"; }
+.sf-icon-Cancel:before { content: "\e76b"; }
+.sf-icon-ThumbsDown:before { content: "\e76c"; }
+.sf-icon-AccountCircle:before { content: "\e76d"; }

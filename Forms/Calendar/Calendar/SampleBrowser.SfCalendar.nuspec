@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>SampleBrowser.SfCalendar</id>
+    <version>15.1.0.41</version>
+    <authors>Syncfusion Inc.</authors>
+    <owners>Syncfusion Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>http://www.syncfusion.com/nuget/license</licenseUrl>
+    <projectUrl>http://www.syncfusion.com/</projectUrl>
+    <iconUrl>http://www.syncfusion.com/content/images/nuget/sync_logo_icon.png</iconUrl>
+    <description>Essential Calendar widget provides the multi-view representation to display and select one or more dates within specified ranges.</description>
+    <copyright>Copyright 2001 - 2017 Syncfusion Inc.</copyright>
+    <dependencies>
+      <dependency id="Xamarin.Forms" version="2.3.0.49" />
+    </dependencies>
+  </metadata>
+</package>

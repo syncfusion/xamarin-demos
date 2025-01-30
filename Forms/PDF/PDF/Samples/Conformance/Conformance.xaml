@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView              
+              xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+              xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="SampleBrowser.PDF.Conformance">
+
+  <local:SampleView.Content>
+    <StackLayout Padding="10">
+       
+      <Label x:Name="Description" Text="This sample demonstrates various PDF conformance support in Essential PDF."
+             FontSize="Medium"
+             HorizontalOptions="Start"
+             VerticalOptions="Center">
+      </Label>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <ScrollView Grid.Row="0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.5*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="0.5*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="0.5*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width = "*"/>
+                            <ColumnDefinition Width = "*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.ColumnSpan="2" VerticalOptions="End">Please select the conformance</Label>
+                        <Picker x:Name="comformance" Grid.ColumnSpan="2" Grid.Row="1" VerticalOptions="Center"/>
+                        <Button Grid.Row="2" x:Name="btnGenerate" Grid.ColumnSpan="2" Text="Generate PDF" Clicked="OnButtonClicked" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    </Grid>
+                </ScrollView>
+            </Grid>
+            <Label></Label>
+
+    </StackLayout>
+  </local:SampleView.Content>
+
+  <local:SamplePage.PropertyView>
+
+  </local:SamplePage.PropertyView>
+</local:SampleView>
