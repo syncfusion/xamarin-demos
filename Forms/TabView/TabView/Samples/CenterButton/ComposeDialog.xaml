@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="White"
+              xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:data="clr-namespace:SampleBrowser.SfTabView"
+             x:Class="SampleBrowser.SfTabView.ComposeDialog">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <local:ImagePathConverter x:Key="ImagePathConverter" />
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content >
+        <StackLayout>
+        <Grid>
+               <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="7*"/>
+                    <ColumnDefinition Width="*"/>
+                 </Grid.ColumnDefinitions>
+                    <BoxView HeightRequest="40" WidthRequest="20" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="#1E90FF"/>
+                <Label Text="Compose" Margin="10,0,0,0" Grid.Column="0" HorizontalTextAlignment="Start" TextColor="White" VerticalTextAlignment="Start" HorizontalOptions="Start" VerticalOptions="Center"/>
+                <Image Source="{Binding Converter={StaticResource ImagePathConverter},ConverterParameter=SampleBrowser.SfTabView.Send.png}" HeightRequest="30" WidthRequest="30" VerticalOptions="Center" Grid.Column="1" HorizontalOptions="End" Margin="0,0,10,0">
+                     <Image.GestureRecognizers>
+                <TapGestureRecognizer
+                        Tapped="SendButton_Clicked" />
+              </Image.GestureRecognizers>
+            </Image>
+         </Grid>
+        <StackLayout  Margin="10,10,10,0">
+            <StackLayout>
+           <StackLayout Orientation="Horizontal">
+                   <Label VerticalTextAlignment="Center"
+                          HorizontalTextAlignment="Center"
+                          Text="To" 
+                          TextColor="Gray"/>
+                    <data:CustomizedEntry FontSize="14"
+                                       WidthRequest="200"
+                                       FontAttributes="Bold"
+                    Text="james@xyz.com" />
+             </StackLayout>
+          <BoxView WidthRequest="5"
+                   HeightRequest="1" 
+                   Grid.Column="0" 
+                   Grid.ColumnSpan="2" 
+                   BackgroundColor="Gray"/>
+            </StackLayout>
+             <StackLayout>
+                 <StackLayout Orientation="Horizontal">
+                   <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="Sub:" TextColor="Gray"/>
+                    <data:CustomizedEntry 
+                    Text=""
+                    WidthRequest="200"
+                    FontAttributes="Bold"
+                    FontSize="14"/>
+                 </StackLayout>
+              <BoxView WidthRequest="5"  HeightRequest="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Gray"/>
+            </StackLayout>
+
+            <Editor FontSize="14" HeightRequest="200" Text=" "/> 
+
+         </StackLayout>
+            </StackLayout>
+  </ContentView.Content>
+</ContentView>

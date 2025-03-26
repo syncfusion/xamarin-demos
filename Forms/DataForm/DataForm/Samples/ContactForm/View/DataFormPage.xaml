@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
+             xmlns:sync="clr-namespace:Syncfusion.XForms.DataForm;assembly=Syncfusion.SfDataForm.XForms"
+             xmlns:local="clr-namespace:SampleBrowser.SfDataForm"
+             x:Class="SampleBrowser.SfDataForm.DataFormPage">
+    <ContentPage.Content>
+        <Grid x:Name="dataFormGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" BackgroundColor="#FFEEEEF2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="80"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="backButton" 
+                        WidthRequest="60" 
+                        Text="Back"                         
+                        Command="{Binding Path=BindingContext.BackCommand, Source={x:Reference Name=dataFormGrid}}"                   
+                                                CommandParameter="{Binding Source={x:Reference Name=dataFormGrid}}"
+                        BackgroundColor="Transparent" />
+                <Button x:Name="contactLabel" 
+                        Grid.Column="1"  
+                        WidthRequest="80" 
+                        Text="Edit Contact" FontAttributes="Bold"
+                        BackgroundColor="Transparent"/>
+                <Button x:Name="editButton" 
+                        Grid.Column="2"  
+                        WidthRequest="60" 
+                        Text="Edit" 
+                        Command="{Binding Path=BindingContext.EditAndDoneCommand, Source={x:Reference Name=dataFormGrid}}"                   
+                                                CommandParameter="{Binding Source={x:Reference Name=dataFormGrid}}"
+                        BackgroundColor="Transparent"/>
+            </Grid>
+            <sync:SfDataForm x:Name="dataForm" LayoutOptions="TextInputLayout" ColumnCount="5" IsReadOnly="True" Grid.Row="1" DataObject="{Binding SelectedItem, Mode=TwoWay}" />
+            <Button x:Name="moreFields" Grid.Row="2"  Text="More Fields" 
+                  WidthRequest="80" HeightRequest="40" BackgroundColor="Transparent" TextColor="#2196F3"
+                  Command="{Binding Path=BindingContext.RefreshCommand, Source={x:Reference Name=dataForm}}"                   
+                                                CommandParameter="{Binding Source={x:Reference Name=dataForm}}"
+                     IsVisible="{Binding IsVisible, Mode=TwoWay}"/>
+        </Grid>
+    </ContentPage.Content>
+    <ContentPage.Behaviors>
+        <local:SfDataFormBehavior/>
+    </ContentPage.Behaviors>
+</ContentPage>
