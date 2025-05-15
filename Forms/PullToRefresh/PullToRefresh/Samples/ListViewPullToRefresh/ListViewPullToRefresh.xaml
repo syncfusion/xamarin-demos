@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfPullToRefresh.ListViewPullToRefresh"
+             xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:local="clr-namespace:SampleBrowser.SfPullToRefresh"
+             xmlns:pulltoRefresh="clr-namespace:Syncfusion.SfPullToRefresh.XForms;assembly=Syncfusion.SfPullToRefresh.XForms"
+             xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
+
+    <sample:SampleView.Behaviors>
+        <local:SfListViewPullToRefreshBehavior />
+    </sample:SampleView.Behaviors>
+    <sample:SampleView.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="progressStrokeWidth"
+                        x:TypeArguments="x:Double">
+                <On Platform="UWP,iOS" Value="2" />
+                <On Platform="Android">
+                    <OnIdiom x:TypeArguments="x:Double">
+                        <OnIdiom.Phone>8</OnIdiom.Phone>
+                        <OnIdiom.Tablet>3</OnIdiom.Tablet>
+                    </OnIdiom>
+                </On>
+            </OnPlatform>
+        </ResourceDictionary>
+    </sample:SampleView.Resources>
+    <sample:SampleView.Content>
+        <Grid RowSpacing="0" ColumnSpacing="0" Padding="0" Margin="0">
+            <pulltoRefresh:SfPullToRefresh x:Name="pullToRefresh"
+                                     RefreshContentHeight="50"
+				                             PullingThreshold="150"
+                                     RefreshContentWidth="50"
+                                     TransitionMode="Push"
+                                     ProgressStrokeWidth="{StaticResource progressStrokeWidth }"
+                                     IsRefreshing="False">
+                <pulltoRefresh:SfPullToRefresh.PullableContent>
+                    <syncfusion:SfListView x:Name="listView" ItemSize="120" 
+                                   AutoFitMode="Height" SelectionMode="None">
+
+                        <syncfusion:SfListView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid RowSpacing="0" ColumnSpacing="0" Margin="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="1" />
+                                    </Grid.RowDefinitions>
+                                    <Grid RowSpacing="0" Padding="10">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="50" />
+                                        </Grid.RowDefinitions>
+                                        <Label Text="{Binding BlogTitle}" FontAttributes="Bold" FontSize="16" TextColor="#474747" />
+                                        <Grid Grid.Row="1" Padding="0,15,0,0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Grid VerticalOptions="Center" HorizontalOptions="Center">
+                                                    <Image HeightRequest="10" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="10" Source="{Binding BlogAuthorIcon}" />
+                                                </Grid>
+                                                <Grid VerticalOptions="Center" HorizontalOptions="Center">
+                                                    <Label Text="{Binding BlogAuthor}" VerticalOptions="Center" HorizontalOptions="Center" Opacity=" 0.54" TextColor="#000000" FontSize="12"/>
+                                                </Grid>
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal" Grid.Column="1" Padding="15,0,0,0">
+                                                <Grid VerticalOptions="Center" HorizontalOptions="Center">
+                                                    <Image HeightRequest="10" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="10" Source="{Binding BlogCategoryIcon}" Rotation="90"/>
+                                                </Grid>
+                                                <Grid VerticalOptions="Center" HorizontalOptions="Center">
+                                                    <Label Text="{Binding BlogCategory}" VerticalOptions="Center" HorizontalOptions="Center" Opacity=" 0.54" TextColor="#000000" FontSize="12"/>
+                                                </Grid>
+                                            </StackLayout>
+                                        </Grid>
+                                        <Grid Grid.Row="2" Padding="0,15,0,0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <Button x:Name="button" Margin="-3,0,0,0" Grid.Column="0" Text="READ MORE" WidthRequest="86" HeightRequest="40" Padding="0,0,0,0"
+
+                                TextColor="White" BackgroundColor="#2196F3" FontSize="10" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"
+                                
+                                Command="{Binding Path=BindingContext.ReadMoreCommand, Source={x:Reference Name=listView}}"
+                                CommandParameter="{Binding .}" />
+                                            <StackLayout Orientation="Horizontal" Margin="0,0,5,0" HeightRequest="31" Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center">
+                                                <Grid Padding="2,0,2,0" HorizontalOptions="Fill" VerticalOptions="Fill">
+                                                    <Grid.GestureRecognizers>
+                                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.TwitterCommand, Source={x:Reference listView}}" CommandParameter="{Binding .}"/>
+                                                    </Grid.GestureRecognizers>
+                                                    <Grid VerticalOptions="Center" HorizontalOptions="Center">
+                                                        <Image HeightRequest="24" WidthRequest="24"  Source="{Binding BlogTwitterIcon}" />
+                                                    </Grid>
+                                                </Grid>
+                                                <Grid Padding="2,0,2,0" HorizontalOptions="Fill" VerticalOptions="Fill">
+                                                    <Grid.GestureRecognizers>
+                                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.LinkedInCommand, Source={x:Reference listView}}" CommandParameter="{Binding .}"/>
+                                                    </Grid.GestureRecognizers>
+                                                    <Grid VerticalOptions="Center" HorizontalOptions="Center">
+                                                        <Image HeightRequest="24" WidthRequest="24" Source="{Binding BlogLinkedInIcon}"/>
+                                                    </Grid>
+                                                </Grid>
+                                                <Grid Padding="2,0,2,0" HorizontalOptions="Fill" VerticalOptions="Fill">
+                                                    <Grid.GestureRecognizers>
+                                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.FacebookCommand, Source={x:Reference listView}}" CommandParameter="{Binding .}"/>
+                                                    </Grid.GestureRecognizers>
+                                                    <Grid VerticalOptions="Center" HorizontalOptions="Center">
+                                                        <Image HeightRequest="24" WidthRequest="24" Source="{Binding BlogFacebookIcon}"/>
+                                                    </Grid>
+                                                </Grid>
+                                                <Grid Padding="2,0,2,0" HorizontalOptions="Fill" VerticalOptions="Fill">
+                                                    <Grid.GestureRecognizers>
+                                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.GooglePlusCommand, Source={x:Reference listView}}" CommandParameter="{Binding .}"/>
+                                                    </Grid.GestureRecognizers>
+                                                    <Grid VerticalOptions="Center" HorizontalOptions="Center">
+                                                        <Image HeightRequest="24" WidthRequest="24" Source="{Binding BlogGooglePlusIcon}"/>
+                                                    </Grid>
+                                                </Grid>
+                                            </StackLayout>
+                                        </Grid>
+                                    </Grid>
+                                    <BoxView Grid.Row="1" HeightRequest="1" Opacity="0.75" BackgroundColor="#DFDEE3" />
+                                </Grid>
+                            </DataTemplate>
+                        </syncfusion:SfListView.ItemTemplate>
+                    </syncfusion:SfListView>
+                </pulltoRefresh:SfPullToRefresh.PullableContent>
+            </pulltoRefresh:SfPullToRefresh>
+        </Grid>
+    </sample:SampleView.Content>
+
+    <sample:SampleView.PropertyView>
+        <StackLayout Spacing="10">
+            <StackLayout Orientation="Vertical" Grid.Row="0" >
+                <Label    Text="Transition Type"  WidthRequest="150" VerticalOptions ="Center" HorizontalOptions ="Start"  FontFamily="Helvetica" FontSize="16" />
+                <local:PickerExt x:Name="transitionTypePicker"  IsEnabled="true" />
+            </StackLayout>
+        </StackLayout>
+    </sample:SampleView.PropertyView>
+</sample:SampleView>

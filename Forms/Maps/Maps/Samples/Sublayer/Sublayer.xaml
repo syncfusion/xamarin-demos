@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfMaps.Sublayer"
+              xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+              xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfMaps"
+              xmlns:maps="clr-namespace:Syncfusion.SfMaps.XForms;assembly=Syncfusion.SfMaps.XForms">
+
+    <local:SampleView.Content>
+        <Grid BackgroundColor="White">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Label Text="Rivers in Australia" Margin="5" FontSize="Medium" TextColor="Black" HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/>
+            
+            <maps:SfMaps Grid.Row="1">
+                <maps:SfMaps.Layers>
+
+                    <maps:ShapeFileLayer Uri="australia.shp" x:Name="layer">
+                        <maps:ShapeFileLayer.ShapeSettings>
+                            <maps:ShapeSetting ShapeFill="#ACF9F7" ShapeStrokeThickness="1"/>
+                        </maps:ShapeFileLayer.ShapeSettings>
+                        <maps:ShapeFileLayer.Sublayers>
+                            <maps:ShapeFileLayer Uri="river.shp">
+                                <maps:ShapeFileLayer.ShapeSettings>
+                                    <maps:ShapeSetting ShapeFill="#00A8CC" ShapeStrokeThickness="2"/>
+                                </maps:ShapeFileLayer.ShapeSettings>
+                            </maps:ShapeFileLayer>
+
+                        </maps:ShapeFileLayer.Sublayers>
+                    </maps:ShapeFileLayer>
+
+                </maps:SfMaps.Layers>
+            </maps:SfMaps>
+        </Grid>
+
+    </local:SampleView.Content>
+</local:SampleView>

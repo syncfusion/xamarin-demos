@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.SfRating.Themes">
+    <Grid WidthRequest="500" Padding="0,20,0,0">
+        <Label Text="Rate me" Margin="0,20,0,0" HorizontalOptions="Center" FontSize="18" FontAttributes="Bold"/>
+        <rating:SfRating Margin="0,80,0,0" x:Name="sfRating" HorizontalOptions="Center" ItemSize="40" Precision="Standard" Value="3" ReadOnly="false"  ItemCount="5" ItemSpacing="10"  TooltipPrecision="1" TooltipPlacement="None"/>
+    </Grid>
+</local:SampleView>

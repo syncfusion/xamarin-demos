@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfDataGrid.GridGettingStarted"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.SfDataGrid"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:sfgrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms">
+
+    <sample:SampleView.Resources>
+        <ResourceDictionary>
+            <local:GettingStartedStyle x:Key="style" />
+
+            <OnPlatform x:Key="rowHeight" x:TypeArguments="x:Double">
+                <On Platform="Android,iOS,UWP,macOS">
+                    <OnIdiom x:TypeArguments="x:Double"
+                             Tablet="58"
+                             Default="48"></OnIdiom>
+                </On>
+                <On Platform="WPF" Value="30" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="headerHeight" x:TypeArguments="x:Double">
+                <On Platform="WPF" Value="36" />
+            </OnPlatform>
+            
+            <OnPlatform x:Key="padding"
+                   x:TypeArguments="Thickness">
+                <On Platform="Android,iOS,UWP,macOS" Value="8, 8, 8, 8" />
+                <On Platform="WPF" Value="8, 2, 0, 2" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </sample:SampleView.Resources>
+
+    <sample:SampleView.Behaviors>
+        <local:GettingStartedBehavior/>
+    </sample:SampleView.Behaviors>
+
+    <sample:SampleView.BindingContext>
+        <local:GettingStartedViewModel x:Name="viewModel" />
+    </sample:SampleView.BindingContext>
+
+    <sample:SampleView.Content>
+        <sfgrid:SfDataGrid x:Name="dataGrid"
+                           AutoGenerateColumns="False"
+                           RowHeight="{StaticResource rowHeight}"
+                           HeaderRowHeight="{StaticResource headerHeight}"
+                           ItemsSource="{Binding Data}"
+                           GridStyle="{StaticResource style}"
+                           GroupCaptionTextFormat="{}   {Key}"
+                           ColumnSizer="Star"
+                           VerticalOverScrollMode="None">
+
+            <sfgrid:SfDataGrid.GroupColumnDescriptions>
+                <sfgrid:GroupColumnDescription ColumnName="Location"/>
+            </sfgrid:SfDataGrid.GroupColumnDescriptions>
+
+            <sfgrid:SfDataGrid.Columns>
+                <sfgrid:GridTemplateColumn MappingName="Team" 
+                                           HeaderCellTextSize="14"
+                                           HeaderFontAttribute="Bold">
+                    <sfgrid:GridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackLayout Orientation="Horizontal" Spacing="8" Padding="{StaticResource padding}">
+                                <Image Source="{Binding Image}" WidthRequest="32" HeightRequest="32"/>
+                                <Label Text="{Binding Team}" VerticalOptions="Center"
+                                       TextColor="#212121"
+                                       BackgroundColor="White"
+                                       FontFamily="Helvetica Neue"
+                                       FontSize="12"
+                                       VerticalTextAlignment="Center" 
+                                       HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </sfgrid:GridTemplateColumn.CellTemplate>
+                </sfgrid:GridTemplateColumn>
+
+                <sfgrid:GridTextColumn MappingName="Wins"
+                                       HeaderText="W" 
+                                       HeaderCellTextSize="14"
+                                       CellTextSize="12"
+                                       HeaderFontAttribute="Bold">
+                </sfgrid:GridTextColumn>
+                <sfgrid:GridTextColumn MappingName="Losses"
+                                       HeaderText="L"
+                                       CellTextSize="12"
+                                       HeaderCellTextSize="14"
+                                       HeaderFontAttribute="Bold">
+
+                </sfgrid:GridTextColumn>
+
+                <sfgrid:GridTextColumn MappingName="PCT" 
+                                       CellTextSize="12"
+                                       HeaderCellTextSize="14"
+                                       HeaderFontAttribute="Bold">
+
+                </sfgrid:GridTextColumn>
+
+                <sfgrid:GridTextColumn MappingName="GB" 
+                                       CellTextSize="12"
+                                       HeaderCellTextSize="14"
+                                       HeaderFontAttribute="Bold">
+                </sfgrid:GridTextColumn>
+
+            </sfgrid:SfDataGrid.Columns>
+
+            <sfgrid:SfDataGrid.StackedHeaderRows>
+                <sfgrid:StackedHeaderRow>
+                    <sfgrid:StackedHeaderRow.StackedColumns>
+
+                        <sfgrid:StackedColumn
+                            ChildColumns="Team,Wins,Losses,PCT,GB"
+                            Text="National League Standings"
+                            MappingName="Stackedrow"
+                            TextSize="14"
+                            FontAttribute="Bold"
+                            TextAlignment="Center"/>
+
+                    </sfgrid:StackedHeaderRow.StackedColumns>
+                </sfgrid:StackedHeaderRow>
+            </sfgrid:SfDataGrid.StackedHeaderRows>
+            
+        </sfgrid:SfDataGrid>
+        
+    </sample:SampleView.Content>
+</sample:SampleView>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:samplelocal="clr-namespace:SampleBrowser.SfCalendar"
+                  xmlns:CalendarSample="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms"
+                  x:Class="SampleBrowser.SfCalendar.BlackoutDates">
+    <local:SampleView.Content>
+        <Grid x:Name="grid">
+            <CalendarSample:SfCalendar x:Name="calendar"
+                                   VerticalOptions="FillAndExpand"
+                                   HorizontalOptions="FillAndExpand"
+                                   ViewMode="MonthView" />
+        </Grid>
+    </local:SampleView.Content>
+    <local:SampleView.Behaviors>
+        <samplelocal:BlackoutDatesBehavior />
+    </local:SampleView.Behaviors>
+</local:SampleView>

@@ -1,0 +1,29 @@
+<Project ToolsVersion="15.0">
+  <PropertyGroup>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>Samples\GradientView\SamplesList\SamplesList.xml</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\GradientGettingStarted\GettingStarted.xaml">
+      <Link>Samples\GradientView\Samples\GradientGettingStarted\GettingStarted.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\GradientGettingStarted\GettingStarted.xaml.cs">
+      <DependentUpon>GettingStarted.xaml</DependentUpon>
+      <Link>Samples\GradientView\Samples\GradientGettingStarted\GettingStarted.xaml.cs</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\GradientGettingStarted\GettingStartedViewModel.cs">
+      <Link>Samples\GradientView\Samples\GradientGettingStarted\GettingStartedViewModel.cs</Link>
+    </Compile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,39 @@
+<Project>
+  <ItemGroup>
+   <Compile Include="$(MSBuildThisFileDirectory)\FileStore.cs">
+   <Link>ImageEditor\FileStore.cs</Link>
+</Compile>
+   <Compile Include="$(MSBuildThisFileDirectory)\Renderers\CustomRenderer.cs">
+   <Link>ImageEditor\Renderers\CustomRenderer.cs</Link>
+</Compile>
+   <Compile Include="$(MSBuildThisFileDirectory)\Share.cs">
+   <Link>ImageEditor\Share.cs</Link>
+</Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)\Assets\Typogy1.svg">
+    <Link>Assets\Typogy1.svg</Link>
+</Content>
+
+   <Content Include="$(MSBuildThisFileDirectory)\Assets\Typogy2.svg">
+    <Link>Assets\Typogy2.svg</Link>
+</Content>
+
+   <Content Include="$(MSBuildThisFileDirectory)\Assets\Typogy3.svg">
+    <Link>Assets\Typogy3.svg</Link>
+</Content>
+
+   <Content Include="$(MSBuildThisFileDirectory)\Assets\Typogy4.svg">
+    <Link>Assets\Typogy4.svg</Link>
+</Content>
+
+   <Content Include="$(MSBuildThisFileDirectory)\Assets\Typogy5.svg">
+    <Link>Assets\Typogy5.svg</Link>
+</Content>
+
+   <Content Include="$(MSBuildThisFileDirectory)\Assets\Typogy6.svg">
+    <Link>Assets\Typogy6.svg</Link>
+</Content>
+
+   </ItemGroup>
+</Project>

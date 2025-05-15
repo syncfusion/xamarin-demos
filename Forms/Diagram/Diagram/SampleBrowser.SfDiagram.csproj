@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>SampleBrowser.SfDiagram</AssemblyName>
+    <RootNamespace>SampleBrowser.SfDiagram</RootNamespace>
+  </PropertyGroup>
+ <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute> 
+ </PropertyGroup>
+ <ItemGroup>
+   <EmbeddedResource Include="SamplesList\SamplesList.xml" />
+ </ItemGroup>
+  <ItemGroup>
+    <None Remove="SampleBrowser.SfDiagram.props" />
+	<PackageReference Include="Newtonsoft.Json" Version="13.0.2" /> 
+    <PackageReference Include="SampleBrowser.Core">
+      <Version>29.2.4</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.Core">
+      <Version>29.2.4</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.DataSource">
+      <Version>29.2.4</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon">
+      <Version>29.2.4</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfDiagram">
+      <Version>29.2.4</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfListView">
+      <Version>29.2.4</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+	<PackageReference Include="Syncfusion.Xamarin.Core" Version="29.2.4" /> 
+  </ItemGroup>
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+</Project>

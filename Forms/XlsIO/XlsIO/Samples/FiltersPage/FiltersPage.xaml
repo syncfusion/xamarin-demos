@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+  <local:SampleView
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.XlsIO.FiltersPage">
+    <local:SampleView.Content>
+    <StackLayout Padding="10">
+      <Label x:Name="Content_1" Text="This sample illustrates how to filter data within a range of Excel worksheet."
+                 FontSize="Medium" VerticalOptions="Center">
+      </Label>
+      <StackLayout Padding="10">
+      <ScrollView>
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width = "*"/>
+            <ColumnDefinition Width = "*"/>
+          </Grid.ColumnDefinitions>
+          <Label x:Name="Content_3" Grid.Row="0" Grid.Column="0" FontSize="Medium" WidthRequest="170" VerticalOptions="Center">Filter Type</Label>
+          <Picker x:Name="picker"  Grid.Row="0" Grid.Column="1"  SelectedIndexChanged="OnItemSelected" VerticalOptions="Center"/>
+        <Grid x:Name="DynamicGrid" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" IsVisible="False">
+          <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width = "*"/>
+            <ColumnDefinition Width = "*"/>
+          </Grid.ColumnDefinitions>
+            <Label x:Name="Label1" Grid.Row="0" Grid.Column="0" FontSize="Medium" WidthRequest="170" VerticalOptions="Center">Filter Action</Label>
+            <Picker x:Name="Advanced" Grid.Row="0" Grid.Column="1" WidthRequest="150" VerticalOptions="Center"></Picker>
+            <Label x:Name="Label2" Grid.Row="1" Grid.Column="0" FontSize="Medium" WidthRequest="170" VerticalOptions="Center">Unique Records</Label>
+            <Switch x:Name="Switch1" Grid.Row="1" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center"></Switch>
+        </Grid>
+          
+      <Grid x:Name="ColorFilterGrid" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" IsVisible="true">
+          <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width = "*"/>
+            <ColumnDefinition Width = "*"/>
+          </Grid.ColumnDefinitions>
+            <Label x:Name="Label3" Grid.Row="0" Grid.Column="0" FontSize="Medium" WidthRequest="170" VerticalOptions="Center">Color Filter Type</Label>
+            <Picker x:Name="ColorFilterType" Grid.Row="0" Grid.Column="1" WidthRequest="150" VerticalOptions="Center"></Picker>
+            <Label x:Name="Label4" Grid.Row="1" Grid.Column="0" FontSize="Medium" WidthRequest="170" VerticalOptions="Center">Color</Label>
+            <Picker x:Name="ColorsList" Grid.Row="1" Grid.Column="1" WidthRequest="150" VerticalOptions="Center"></Picker>
+        </Grid>
+        <Grid x:Name="IconFilterGrid" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" IsVisible="true">
+          <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width = "*"/>
+            <ColumnDefinition Width = "*"/>
+          </Grid.ColumnDefinitions>
+            <Label x:Name="Label5" Grid.Row="0" Grid.Column="0" FontSize="Medium" WidthRequest="170" VerticalOptions="Center">IconSet Type</Label>
+            <Picker x:Name="IconSetList" Grid.Row="0" Grid.Column="1" WidthRequest="150" VerticalOptions="Center" SelectedIndexChanged="IconSetChanged"></Picker>
+            <Label x:Name="Label6" Grid.Row="1" Grid.Column="0" FontSize="Medium" WidthRequest="170" VerticalOptions="Center">Icon ID</Label>
+            <Picker x:Name="IconIdList" Grid.Row="1" Grid.Column="1" WidthRequest="150" VerticalOptions="Center"></Picker>
+        </Grid>
+     
+        <Label></Label>
+        <Button x:Name="btnGetInputTemplate" Grid.Row="3" Grid.Column="0" WidthRequest="150" Clicked ="OnButtonClicked1" Text ="Input Template" HorizontalOptions="Center" VerticalOptions="Center"></Button>
+        <Button x:Name="btnGenerate" Grid.Row="3" Grid.Column="1" WidthRequest="150" Clicked ="OnButtonClicked" Text ="Generate Excel" HorizontalOptions="Center" VerticalOptions="Center"></Button>
+      </Grid>
+      </ScrollView>
+      </StackLayout>
+      </StackLayout>
+  
+  </local:SampleView.Content>
+  <local:SampleView.PropertyView>
+
+  </local:SampleView.PropertyView>
+</local:SampleView>

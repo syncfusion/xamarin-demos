@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sample:SampleView x:Class="SampleBrowser.SfDataGrid.Paging"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser.SfDataGrid"
+                  xmlns:sample="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+                  xmlns:sfgrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
+                  xmlns:sfpager="clr-namespace:Syncfusion.SfDataGrid.XForms.DataPager;assembly=Syncfusion.SfDataGrid.XForms">
+  
+  <sample:SampleView.Behaviors>
+    <local:PagingBehavior/>
+  </sample:SampleView.Behaviors>
+
+    <sample:SampleView.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="minimumWidth"
+                        x:TypeArguments="x:Double">
+                <On Platform="Android,UWP,iOS,WPF">
+                    <OnIdiom x:TypeArguments="x:Double"
+                             Phone="90"
+                             Tablet="20"/>
+                </On>
+            </OnPlatform>
+            <OnPlatform x:Key="width"
+                        x:TypeArguments="x:Double">
+                <On Platform="Android,UWP,iOS,WPF">
+                    <OnIdiom x:TypeArguments="x:Double"
+                             Phone="0"
+                             Tablet="NaN"/>
+                </On>
+            </OnPlatform>
+            <OnPlatform x:Key="opacity"
+                      x:TypeArguments="x:Double">
+                <On Platform="iOS,Android" Value="87" />
+                <On Platform="UWP,WPF" Value="80" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="padding"
+                   x:TypeArguments="Thickness">
+                <On Platform="Android,iOS" Value="8, 12, 8, 12" />
+                <On Platform="UWP,WPF" Value="8, 12, 8, 16" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="textSize"
+                  x:TypeArguments="x:Double">
+                <On Platform="iOS,UWP,WPF" Value="14" />
+                <On Platform="Android" Value="13" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="font"
+                  x:TypeArguments="x:String">
+                <On Platform="Android" Value="Roboto-Regular" />
+                <On Platform="iOS" Value="SFProText-Regular" />
+                <On Platform="UWP,WPF" Value="SegoeUI" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="rowHeight" x:TypeArguments="x:Double">
+                <On Platform="Android,iOS,UWP,macOS" Value="48"/>
+                <On Platform="WPF" Value="30" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="headerHeight" x:TypeArguments="x:Double">
+                <On Platform="Android,iOS,UWP,macOS" Value="48"/>
+                <On Platform="WPF" Value="36" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </sample:SampleView.Resources>
+
+    <sample:SampleView.Content>
+
+        <Grid RowSpacing="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <sfgrid:SfDataGrid x:Name="dataGrid"
+                               Grid.Row="0"
+                               AutoGenerateColumns="false"
+                               ColumnSizer="Star"
+                               GridStyle="{local:DefaultStyle}"
+                               HeaderRowHeight="{StaticResource headerHeight}"
+                               HorizontalOptions="FillAndExpand"
+                               RowHeight="{StaticResource rowHeight}"
+                               SelectionMode="Single"
+                               VerticalOptions="FillAndExpand"
+                               VerticalOverScrollMode="None">
+
+                <sfgrid:SfDataGrid.Columns x:TypeArguments="sfgrid:Columns">
+
+                    <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                           HeaderText="Order ID"
+                                           HeaderTextAlignment="Start"
+                                           LineBreakMode="TailTruncation"
+                                           MappingName="OrderID"
+                                           Padding="5,0,5,0"
+                                           HeaderCellTextSize="{StaticResource textSize}"
+                                           CellTextSize="{StaticResource textSize}"
+                                           TextAlignment="End">
+                    </sfgrid:GridTextColumn>
+
+                    <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                           HeaderText="Customer ID"
+                                           HeaderTextAlignment="Start"
+                                           LineBreakMode="TailTruncation"
+                                           MappingName="EmployeeID"
+                                           Padding="5,0,5,0"
+                                           HeaderCellTextSize="{StaticResource textSize}"
+                                           MinimumWidth="{StaticResource minimumWidth}"
+                                           CellTextSize="{StaticResource textSize}" 
+                                           TextAlignment="End">
+                    </sfgrid:GridTextColumn>
+
+                    <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                           HeaderText="Name"
+                                           HeaderTextAlignment="Start"
+                                           LineBreakMode="TailTruncation"
+                                           MappingName="CustomerID"
+                                           Padding="5, 0, 0, 0"
+                                           HeaderCellTextSize="{StaticResource textSize}"
+                                           CellTextSize="{StaticResource textSize}" 
+                                           TextAlignment="Start">
+                    </sfgrid:GridTextColumn>
+
+                    <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                           HeaderText="City"
+                                           HeaderTextAlignment="Start"
+                                           LineBreakMode="TailTruncation"
+                                           MappingName="ShipCity"
+                                           Padding="5, 0, 0, 0"
+                                           HeaderCellTextSize="{StaticResource textSize}"
+                                           CellTextSize="{StaticResource textSize}" 
+                                           TextAlignment="Start">
+                    </sfgrid:GridTextColumn>
+
+                    <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                           HeaderText="Country"
+                                           HeaderTextAlignment="Start"
+                                           LineBreakMode="TailTruncation"
+                                           MappingName="ShipCountry"
+                                           Padding="5, 0, 0, 0"
+                                           HeaderCellTextSize="{StaticResource textSize}"
+                                           Width="{StaticResource width}"
+                                           CellTextSize="{StaticResource textSize}" 
+                                           TextAlignment="Start">
+
+                    </sfgrid:GridTextColumn>
+
+                </sfgrid:SfDataGrid.Columns>
+
+            </sfgrid:SfDataGrid>
+
+            <BoxView Grid.Row="1"
+                     HeightRequest="0.5"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"
+                     Color="#C0C0C0" />
+
+            <Grid Grid.Row="2"
+                  BackgroundColor="White"
+                  RowSpacing="0">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <sfpager:SfDataPager x:Name="dataPager"
+                                     HorizontalOptions="FillAndExpand"
+                                     Padding="0,10,0,7"
+                                     >
+
+                    <sfpager:SfDataPager.HeightRequest>
+                      <OnPlatform x:TypeArguments="x:Double"
+                                  Android="50"
+                                  iOS="50"
+                                  WinPhone="40">
+                      </OnPlatform>
+                    </sfpager:SfDataPager.HeightRequest>
+                    <sfpager:SfDataPager.DisplayMode>
+                        <OnIdiom x:TypeArguments="sfpager:PagerDisplayMode"
+                                 Phone="FirstLastNumeric"
+                                 Tablet="FirstLastPreviousNextNumeric"
+                                 Desktop="FirstLastPreviousNextNumeric"/>
+                    </sfpager:SfDataPager.DisplayMode>
+                </sfpager:SfDataPager>
+            </Grid>
+        </Grid>
+    </sample:SampleView.Content>
+
+    <sample:SampleView.PropertyView>
+        <Grid ColumnSpacing="10" Padding="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label x:Name="buttonShape"
+                   Grid.Row="0"
+                   HorizontalOptions="Start"
+                   Text="Button Shape"
+                   VerticalOptions="Center">
+                <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double"
+                                Android="15"
+                                WinPhone="20"
+                                iOS="15" />
+                </Label.FontSize>
+            </Label>
+            <local:PickerExt x:Name="SelectionPicker"
+                             Title="Choose"
+                             Grid.Row="1"
+                             HorizontalOptions="Start"
+                             WidthRequest="150"
+                             SelectedIndex = "3">
+            </local:PickerExt>
+        </Grid>
+    </sample:SampleView.PropertyView>
+
+</sample:SampleView>

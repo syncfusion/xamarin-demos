@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="2dp">
+  <SampleBrowser.CircleViewOfTemplate
+      android:id="@+id/imageView"
+      android:layout_width="70dp"
+      android:layout_height="70dp"
+      android:layout_alignParentLeft="true"
+      android:layout_centerVertical="true"
+      android:padding="5dp" />
+  <TextView
+      android:id="@+id/sender"
+      android:layout_toRightOf="@id/imageView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textStyle="bold"
+      android:paddingLeft="5dp" />
+  <TextView
+      android:id="@+id/date"
+      android:layout_alignParentRight="true"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="18 Oct"
+      android:textStyle="bold"
+      android:textColor="#0483ff"
+      android:paddingRight="5dp"
+      android:paddingTop="5dp"/>
+  <TextView
+      android:id="@+id/subject"
+      android:layout_toRightOf="@id/imageView"
+      android:layout_below="@id/sender"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:lines="1"
+      android:textStyle="bold"
+      android:ellipsize="end"
+      android:paddingLeft="5dp" />
+  <TextView
+      android:id="@+id/details"
+      android:layout_toRightOf="@id/imageView"
+      android:layout_below="@id/subject"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:lines="1"
+      android:ellipsize="end"
+      android:paddingLeft="5dp" />
+</RelativeLayout>

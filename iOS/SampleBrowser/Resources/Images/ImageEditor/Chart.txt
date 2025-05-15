@@ -1,0 +1,17 @@
+{"BackgroundColor":"rgb(255,255,255)","IsVisible":true,"shapes":[
+{"Color":"rgb(0,0,0)","FontSize":20,"Mode":"fill","PathPoints":[],"Points":[{"x":7.46847725,"y":90.18088},{"x":6.983511,"y":5.16795874}],"RatioFrame":{"height":100,"width":100,"x":0,"y":0},"Text":"Text","Thickness":5,"Type":"arrow"},
+{"Color":"rgb(0,0,0)","FontSize":20,"Mode":"fill","PathPoints":[],"Points":[{"x":7.56547,"y":90.95607},{"x":88.5548,"y":90.05168}],"RatioFrame":{"height":100,"width":100,"x":0,"y":0},"Text":"Text","Thickness":5,"Type":"arrow"},
+{"Color":"rgb(251,176,59)","FontSize":18,"Mode":"stroke","PathPoints":[],"Points":[{"x":0,"y":0},{"x":0,"y":0}],"RatioFrame":{"height":6.589147,"width":8.729389,"x":13.4820566,"y":40.1808777},"Text":"160","Type":"text"},
+{"Color":"rgb(251,176,59)","FontSize":18,"Mode":"stroke","PathPoints":[],"Points":[{"x":0,"y":0},{"x":0,"y":0}],"RatioFrame":{"height":6.847545,"width":9.020369,"x":30.26188,"y":18.9922485},"Text":"175","Type":"text"},
+{"Color":"rgb(251,176,59)","FontSize":18,"Mode":"stroke","PathPoints":[],"Points":[{"x":0,"y":0},{"x":0,"y":0}],"RatioFrame":{"height":6.589147,"width":8.729389,"x":45.97478,"y":35.14212},"Text":"165","Type":"text"},
+{"Color":"rgb(251,176,59)","FontSize":18,"Mode":"stroke","PathPoints":[],"Points":[{"x":0,"y":0},{"x":0,"y":0}],"RatioFrame":{"height":6.589147,"width":8.729389,"x":61.8816681,"y":18.9922485},"Text":"173","Type":"text"},
+{"Color":"rgb(251,176,59)","FontSize":18,"Mode":"stroke","PathPoints":[],"Points":[{"x":0,"y":0},{"x":0,"y":0}],"RatioFrame":{"height":6.589147,"width":13.0940838,"x":13.773036,"y":93.2816544},"Text":"Adam","Type":"text"},
+{"Color":"rgb(251,176,59)","FontSize":18,"Mode":"stroke","PathPoints":[],"Points":[{"x":0,"y":0},{"x":0,"y":0}],"RatioFrame":{"height":6.589147,"width":10.6692533,"x":29.3889427,"y":93.2816544},"Text":"Jack","Type":"text"},
+{"Color":"rgb(251,176,59)","FontSize":18,"Mode":"stroke","PathPoints":[],"Points":[{"x":0,"y":0},{"x":0,"y":0}],"RatioFrame":{"height":6.589147,"width":12.99709,"x":44.907856,"y":93.2816544},"Text":"Smith","Type":"text"},
+{"Color":"rgb(251,176,59)","FontSize":18,"Mode":"stroke","PathPoints":[],"Points":[{"x":0,"y":0},{"x":0,"y":0}],"RatioFrame":{"height":6.589147,"width":9.990301,"x":61.8816681,"y":93.2816544},"Text":"Paul","Type":"text"},
+{"Color":"rgb(251,176,59)","FontSize":20,"Mode":"fill","PathPoints":[],"Points":[{"x":0,"y":0},{"x":0,"y":0}],"RatioFrame":{"height":44.1860466,"width":9.699321,"x":13.6760426,"y":45.99483},"Text":"Text","Thickness":5,"Type":"rectangle"},
+{"Color":"rgb(251,176,59)","FontSize":20,"Mode":"fill","PathPoints":[],"Points":[{"x":0,"y":0},{"x":0,"y":0}],"RatioFrame":{"height":63.43669,"width":9.699321,"x":29.7769165,"y":26.22739},"Text":"Text","Thickness":5,"Type":"rectangle"},
+{"Color":"rgb(251,176,59)","FontSize":20,"Mode":"fill","PathPoints":[],"Points":[{"x":0,"y":0},{"x":0,"y":0}],"RatioFrame":{"height":47.9328156,"width":9.699321,"x":45.29583,"y":41.860466},"Text":"Text","Thickness":5,"Type":"rectangle"},
+{"Color":"rgb(251,176,59)","FontSize":20,"Mode":"fill","PathPoints":[],"Points":[{"x":0,"y":0},{"x":0,"y":0}],"RatioFrame":{"height":61.36951,"width":9.699321,"x":61.6876831,"y":28.2945728},"Text":"Text","Thickness":5,"Type":"rectangle"}
+]
+}
