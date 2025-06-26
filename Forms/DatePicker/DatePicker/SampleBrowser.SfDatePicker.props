@@ -1,0 +1,43 @@
+﻿<Project>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DatePickerGettingStarted\DatePickerGettingStarted.xaml.cs">
+	    <Link>Samples\DatePicker\DatePickerGettingStarted\DatePickerGettingStarted.xaml.cs</Link>
+      <DependentUpon>DatePickerGettingStarted.xaml</DependentUpon>
+    </Compile>
+
+    <Compile Include="$(MSBuildThisFileDirectory)\Samples\DatePickerCustomization\DatePickerCustomization.xaml.cs">
+	    <Link>Samples\DatePicker\DatePickerCustomization\DatePickerCustomization.xaml.cs</Link>
+      <DependentUpon>DatePickerCustomization.xaml</DependentUpon>
+    </Compile>
+
+    <Compile Include="$(MSBuildThisFileDirectory)\ViewModel\DatePickerTaskObject.cs">  
+        <Link>Samples\DatePicker\ViewModel\DatePickerTakObject.cs</Link>
+    </Compile>
+
+    <Compile Include="$(MSBuildThisFileDirectory)\ViewModel\DatePickerTaskObjectViewModel.cs">  
+        <Link>Samples\DatePicker\ViewModel\DatePickerTaskObjectViewModel.cs</Link>
+    </Compile>
+
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\SamplesList\SamplesList.xml" >
+	    <Link>Samples\DatePicker\SamplesList\SamplesList.xml</Link>
+	  </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DatePickerGettingStarted\DatePickerGettingStarted.xaml">
+     <Link>Samples\DatePicker\DatePickerGettingStarted\DatePickerGettingStarted.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+ </ItemGroup>
+
+
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Samples\DatePickerCustomization\DatePickerCustomization.xaml">
+     <Link>Samples\DatePicker\DatePickerCustomization\DatePickerCustomization.xaml</Link>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+ </ItemGroup>
+  </Project>

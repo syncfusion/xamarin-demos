@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:comboBox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms" 
+    xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="SampleBrowser.SfComboBox.TimeComboBox">
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Margin="10" Grid.Row="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="Auto"/>              
+            </Grid.RowDefinitions>
+            <Grid>
+                <Label VerticalOptions="Start" 
+                       TextColor="Black"
+                       Text="Time Zone"
+                       FontSize="15"/>
+            </Grid>
+            <comboBox:SfComboBox x:Name="comboBox" 
+                                     Grid.Row="1"  WidthRequest="400"
+                Text="UTC-12:00"
+                                     IsEditableMode="false"
+                                     MaximumDropDownHeight="300"
+                                     DisplayMemberPath="CountryUTC"
+                                     DropDownItemHeight="55"
+                                     SelectedItem="{Binding SelectedItem,Mode=TwoWay}" 
+                                     DataSource="{Binding Source}"
+                                     SuggestionMode="Contains"
+                                     HeightRequest="45">
+                <comboBox:SfComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout >
+                        <StackLayout Orientation="Vertical" Spacing="0">
+                        <StackLayout WidthRequest="400" Orientation="Horizontal">                           
+                                <Grid Padding="5" WidthRequest ="400">
+                                    <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="100"/>
+                                    </Grid.ColumnDefinitions>
+                                <StackLayout Orientation="Vertical" WidthRequest="260">
+                                    <Label Text="{Binding CountryUTC}" 
+                                                TextColor="Black" 
+                                                HorizontalTextAlignment="Start"
+                                                FontSize="14" 
+                                                VerticalOptions="Center"/>
+                                    <Label Text="{Binding Country}" 
+                                                TextColor="Black"
+                                                FontAttributes="Bold"
+                                                HorizontalTextAlignment="Start"
+                                                FontSize="14" 
+                                                VerticalOptions="Center"/>
+                                    </StackLayout>
+                                <!--<Label Text="{Binding CountryTime}" Grid.Column="1"
+                                                FontSize="14" 
+                                                WidthRequest = "100"
+                                                HorizontalOptions="EndAndExpand"
+                                                HorizontalTextAlignment="End"
+                                                VerticalOptions="Center"/>-->
+                               </Grid>                        
+                        </StackLayout>
+                        <BoxView HeightRequest="1" BackgroundColor="#e1e4e8"/>
+                      </StackLayout>
+                      </StackLayout>
+                    </DataTemplate>
+                </comboBox:SfComboBox.ItemTemplate>
+            </comboBox:SfComboBox>            
+        </Grid>
+        <Grid Margin="10" Grid.Row="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="Auto"/>               
+            </Grid.RowDefinitions>
+            <Grid>
+                <Label VerticalOptions="Start" 
+                       TextColor="Black"
+                       Text="Clock Color"
+                       FontSize="15"/>
+            </Grid>
+            <comboBox:SfComboBox x:Name="comboBox1" 
+                                     Grid.Row="1"  
+                                     IsEditableMode="false"
+                                     DisplayMemberPath="Country"
+                                     MaximumDropDownHeight="300"
+                                     BackgroundColor="{Binding SelectedItem1.Color,Mode=TwoWay}"
+                                     DropDownItemHeight="40"
+                                     SelectedItem="{Binding SelectedItem1,Mode=TwoWay}" 
+                                     DataSource="{Binding Source1}"
+                                     SuggestionMode="Contains"
+                                     HeightRequest="45">
+                <comboBox:SfComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout WidthRequest="400" Orientation="Horizontal">
+                            <Label BackgroundColor="{Binding Color}"
+                                   HorizontalTextAlignment="Start"
+                                   FontSize="20" 
+                                   HeightRequest="40"
+                                   WidthRequest="400"
+                                   VerticalOptions="Center"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </comboBox:SfComboBox.ItemTemplate>
+            </comboBox:SfComboBox>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Text="Current Time(hh:mm:ss)" Grid.Row="0"
+                                              TextColor="Black" 
+                                                HorizontalTextAlignment="Center"
+                                               FontSize="20" 
+                                               VerticalOptions="Center"/>
+            <Label Grid.Row="1"                              
+                   HorizontalTextAlignment="Center"
+                   Text="{Binding SelectedItem.CountryTime}"
+                   TextColor="{Binding SelectedItem1.Color}"
+                   FontSize="50" 
+                   VerticalOptions="Center"/>
+        </Grid>
+    </Grid>
+</local:SampleView>

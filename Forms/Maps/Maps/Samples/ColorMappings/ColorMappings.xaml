@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfMaps.ColorMappings"
+              xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfMaps"
+             xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core"
+             xmlns:maps="clr-namespace:Syncfusion.SfMaps.XForms;assembly=Syncfusion.SfMaps.XForms"
+                  >
+
+    <local:SampleView.Content>
+        <Grid x:Name="grid" BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.BindingContext>
+                <sampleBrowser:ColorMappingsViewModel />
+            </Grid.BindingContext>
+			
+			<Grid.Resources>
+                <ResourceDictionary>
+                    <DataTemplate x:Key="toolTipTemplate">
+                        <StackLayout>                            
+                            <Label Text="{Binding Name}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#FFFFFF" FontAttributes="Bold" FontFamily="Helvetica" Margin="0" FontSize="12" Grid.Row="0" />
+                            <BoxView Color="#888C91" HeightRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+                            <Label Text="{Binding Type}" VerticalTextAlignment="Center" HorizontalOptions="Center" TextColor="#FFFFFF" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" />
+                        </StackLayout>
+                    </DataTemplate>
+                </ResourceDictionary>
+            </Grid.Resources>
+			
+            <Label Grid.Row="0" Text="Primary Agricultural Activity of USA" Margin="20,0,0,0" FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+            <maps:SfMaps Grid.Row="1" x:Name="Map" EnableZooming="False" EnablePanning="False">
+                <maps:SfMaps.Layers >
+                    <maps:ShapeFileLayer Uri="usa_state.shp" ShapeIDPath="Name" ShapeIDTableField="STATE_NAME" 
+                                         ItemsSource="{Binding DataSource}">
+                        <maps:ShapeFileLayer.ShapeSettings>
+                            <maps:ShapeSetting  ShapeFill="#A9D9F7" ShapeColorValuePath="Type" >
+                                <maps:ShapeSetting.ColorMappings>
+                                    <maps:EqualColorMapping  Value="Rice" LegendLabel="Rice" Color="#FD8C48"/>
+                                    <maps:EqualColorMapping  Value="Wheat" LegendLabel="Wheat" Color="#E54D42"/>
+                                    <maps:EqualColorMapping  Value="Grains" LegendLabel="Grains" Color="#3A99D9"/>
+                                    <maps:EqualColorMapping  Value="Vegetables" LegendLabel="Vegetables" Color="#29BB9C"/>
+                                </maps:ShapeSetting.ColorMappings>
+                            </maps:ShapeSetting>
+                        </maps:ShapeFileLayer.ShapeSettings>
+                        <maps:ShapeFileLayer.LegendSettings>
+                            <maps:MapLegendSetting ShowLegend="true"  />
+                        </maps:ShapeFileLayer.LegendSettings>
+                        <maps:ShapeFileLayer.TooltipSettings>
+                            <maps:TooltipSetting ShowTooltip="True" ValuePath="Name"/>
+                        </maps:ShapeFileLayer.TooltipSettings>
+                    </maps:ShapeFileLayer>
+                </maps:SfMaps.Layers>
+            </maps:SfMaps>
+        </Grid>
+    </local:SampleView.Content>
+</local:SampleView>

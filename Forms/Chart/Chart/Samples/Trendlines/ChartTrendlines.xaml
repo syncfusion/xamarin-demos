@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" 
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                  xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" 
+                  xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" 
+                  xmlns:sampleBrowser="clr-namespace:SampleBrowser.SfChart"
+                  xmlns:sys="clr-namespace:System;assembly=netstandard" 
+                  x:Class="SampleBrowser.SfChart.ChartTrendlines">
+    <local:SampleView.BindingContext>
+        <sampleBrowser:TrendlineViewModel x:Name="ViewModel"/>
+    </local:SampleView.BindingContext>
+    <local:SampleView.Resources>
+        <ResourceDictionary>
+            <sampleBrowser:VisibilityConverter x:Key="visibilityConverter"/>
+        </ResourceDictionary>
+    </local:SampleView.Resources>
+    <local:SampleView.Content>
+        <Grid>
+            <chart:SfChart x:Name="Chart1" Grid.Row="0" IsVisible="{Binding IsVisible}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <chart:SfChart.Legend>
+                    <chart:ChartLegend  DockPosition="Top" IconWidth="14" IconHeight="14"/>
+                </chart:SfChart.Legend>
+                <chart:SfChart.Margin>
+                    <OnPlatform x:TypeArguments="Thickness" WinPhone="0,0,15,0" />
+                </chart:SfChart.Margin>
+                <chart:SfChart.Title>
+                    <chart:ChartTitle Text="Average Sales Comparison">
+                    </chart:ChartTitle>
+                </chart:SfChart.Title>
+                <chart:SfChart.PrimaryAxis>
+                    <chart:DateTimeAxis Interval="1" IntervalType="Months" ShowMajorGridLines="False" ShowMinorGridLines="False" >
+                        <chart:DateTimeAxis.Title>
+                            <chart:ChartAxisTitle Text="Months">
+                                <chart:ChartAxisTitle.Font>
+                                    <OnPlatform x:TypeArguments="Font" iOS="12" />
+                                </chart:ChartAxisTitle.Font>
+                            </chart:ChartAxisTitle>
+                        </chart:DateTimeAxis.Title>
+                        <chart:DateTimeAxis.LabelStyle>
+                            <chart:ChartAxisLabelStyle LabelFormat="MMM"/>
+                        </chart:DateTimeAxis.LabelStyle>
+                         <chart:DateTimeAxis.MajorTickStyle>
+                            <chart:ChartAxisTickStyle StrokeWidth="0"/>
+                        </chart:DateTimeAxis.MajorTickStyle>
+                    </chart:DateTimeAxis>
+                </chart:SfChart.PrimaryAxis>
+                <chart:SfChart.SecondaryAxis>
+                    <chart:NumericalAxis Interval="{Binding Interval}">
+                        <chart:NumericalAxis.Title>
+                            <chart:ChartAxisTitle Text="Number of Customer">
+                                <chart:ChartAxisTitle.Font>
+                                    <OnPlatform x:TypeArguments="Font" iOS="12" />
+                                </chart:ChartAxisTitle.Font>
+                            </chart:ChartAxisTitle>
+                        </chart:NumericalAxis.Title>
+                        
+                        <chart:NumericalAxis.MajorTickStyle>
+                            <chart:ChartAxisTickStyle StrokeWidth="0"/>
+                        </chart:NumericalAxis.MajorTickStyle>
+                        <chart:NumericalAxis.AxisLineStyle>
+                            <chart:ChartLineStyle StrokeColor="Transparent"/>
+                        </chart:NumericalAxis.AxisLineStyle>
+                        <chart:NumericalAxis.LabelStyle>
+                            <chart:ChartAxisLabelStyle x:Name="secondaryAxisLabelStyle"/>
+                        </chart:NumericalAxis.LabelStyle>
+                    </chart:NumericalAxis>
+                </chart:SfChart.SecondaryAxis>
+                <chart:SfChart.Series>
+                    <chart:ColumnSeries Label="Sales" LegendIcon="SeriesType" ItemsSource="{Binding DataCollection}" XBindingPath="Date" YBindingPath="Value">
+                        <chart:ColumnSeries.Trendlines>
+                            <chart:ChartTrendlineCollection>
+                                <chart:ChartTrendline x:Name="trendLine" Label="{Binding Label}" LegendIcon="SeriesType"
+                                    Type="{Binding TrendlineType}" 
+                                    StrokeColor="#404041" 
+                                    PolynomialOrder="{Binding Value, Source={x:Reference polynomialSlider}}"
+                                    ForwardForecast="{Binding Value, Source={x:Reference fdSlider}}" 
+                                    BackwardForecast="{Binding Value, Source={x:Reference bdSlider}}">
+                                    <chart:ChartTrendline.StrokeDashArray>
+                                            <x:Array Type="{x:Type x:Double}">
+                                            <sys:Double>8</sys:Double>
+                                            <sys:Double>6</sys:Double>
+                                            </x:Array>
+                                    </chart:ChartTrendline.StrokeDashArray>
+                                </chart:ChartTrendline>
+                            </chart:ChartTrendlineCollection>
+                        </chart:ColumnSeries.Trendlines>
+                    </chart:ColumnSeries>
+                </chart:SfChart.Series>
+                <chart:SfChart.ColorModel>
+                    <chart:ChartColorModel Palette="Natural"/>
+                </chart:SfChart.ColorModel>
+            </chart:SfChart>
+
+            <chart:SfChart x:Name="Chart2" Grid.Row="0" IsVisible="{Binding IsVisible, Converter={StaticResource visibilityConverter}}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <chart:SfChart.Legend>
+                    <chart:ChartLegend  DockPosition="Top" IconWidth="14" IconHeight="14"/>
+                </chart:SfChart.Legend>
+                <chart:SfChart.Margin>
+                    <OnPlatform x:TypeArguments="Thickness" WinPhone="0,0,15,0" />
+                </chart:SfChart.Margin>
+                <chart:SfChart.Title>
+                    <chart:ChartTitle Text="Distance Measurement" />
+                </chart:SfChart.Title>
+                <chart:SfChart.PrimaryAxis>
+                    <chart:NumericalAxis EdgeLabelsDrawingMode="Shift" ShowMajorGridLines="False" ShowMinorGridLines="False">
+                        <chart:NumericalAxis.Title>
+                            <chart:ChartAxisTitle Text="Seconds"/>
+                        </chart:NumericalAxis.Title>
+                    </chart:NumericalAxis>
+                </chart:SfChart.PrimaryAxis>
+                <chart:SfChart.SecondaryAxis>
+                    <chart:NumericalAxis>
+                        <chart:NumericalAxis.Title>
+                            <chart:ChartAxisTitle Text="Meters">
+                            </chart:ChartAxisTitle>
+                        </chart:NumericalAxis.Title>
+                        <chart:NumericalAxis.MajorTickStyle>
+                            <chart:ChartAxisTickStyle StrokeWidth="0"/>
+                        </chart:NumericalAxis.MajorTickStyle>
+                        <chart:NumericalAxis.AxisLineStyle>
+                            <chart:ChartLineStyle StrokeColor="Transparent"/>
+                        </chart:NumericalAxis.AxisLineStyle>
+                    </chart:NumericalAxis>
+                </chart:SfChart.SecondaryAxis>
+                <chart:SfChart.Series>
+                    <chart:ColumnSeries Label="Meters" LegendIcon="SeriesType" ItemsSource="{Binding PowerDataCollection}" XBindingPath="Value" YBindingPath="Size">
+                        <chart:ColumnSeries.Trendlines>
+                            <chart:ChartTrendlineCollection>
+                                <chart:ChartTrendline Label="Power" LegendIcon="SeriesType" Type="Power" StrokeColor="#404041" ForwardForecast="{Binding Value, Source={x:Reference fdSlider}}" >
+                                    <chart:ChartTrendline.StrokeDashArray>
+                                        <x:Array Type="{x:Type x:Double}">
+                                            <sys:Double>8</sys:Double>
+                                            <sys:Double>6</sys:Double>
+                                        </x:Array>
+                                    </chart:ChartTrendline.StrokeDashArray>
+                                </chart:ChartTrendline>
+                            </chart:ChartTrendlineCollection>
+                        </chart:ColumnSeries.Trendlines>
+                    </chart:ColumnSeries>
+                </chart:SfChart.Series>
+                <chart:SfChart.ColorModel>
+                    <chart:ChartColorModel Palette="Natural"/>
+                </chart:SfChart.ColorModel>
+            </chart:SfChart>
+        </Grid>
+    </local:SampleView.Content>
+    <local:SampleView.PropertyView>
+        <StackLayout VerticalOptions="StartAndExpand" BindingContext="{x:Reference ViewModel}" x:Name="stack">
+            <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="20,20,0,0" />
+            </StackLayout.Padding>
+            <StackLayout.WidthRequest>
+                <OnPlatform x:TypeArguments="x:Double" WinPhone="250" />
+            </StackLayout.WidthRequest>
+            <StackLayout.HorizontalOptions>
+                <OnPlatform x:TypeArguments="LayoutOptions" iOS="FillAndExpand" Android="FillAndExpand" WinPhone="Center" />
+            </StackLayout.HorizontalOptions>
+            <StackLayout.VerticalOptions>
+                <OnPlatform x:TypeArguments="LayoutOptions" iOS="FillAndExpand" Android="FillAndExpand" WinPhone="Center" />
+            </StackLayout.VerticalOptions>
+            <Label Text="Trendline Type:" HorizontalOptions="FillAndExpand" />
+            <Picker HorizontalOptions="FillAndExpand" VerticalOptions="Center" SelectedIndex="{Binding  SelectedIndex}" x:Name="labelDisplayMode" WidthRequest="400">
+                <Picker.Items>
+                    <x:String>Linear</x:String>
+                    <x:String>Exponential</x:String>
+                    <x:String>Logarithmic</x:String>
+                    <x:String>Power</x:String>
+                    <x:String>Polynomial</x:String>
+                </Picker.Items>
+            </Picker>
+            <StackLayout Margin="0,10,0,0" Orientation="Horizontal">
+                <Label Text="Forward Forecast: 0" x:Name="forwardForecast" TextColor="Black" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" />
+                <Stepper x:Name="fdSlider" Minimum="0" Maximum="2" Value="0" ValueChanged="OnStepper1_ValueChanged" HorizontalOptions="End"/>
+            </StackLayout>
+            <StackLayout Margin="0,10,0,0" Orientation="Horizontal">
+                <Label Text="Backward Forecast: 0" x:Name="backwardForecast" TextColor="Black" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
+                <Stepper x:Name="bdSlider" Minimum="0" Maximum="2" Value="0" HorizontalOptions="End" ValueChanged="OnStepper2_ValueChanged"/>
+            </StackLayout>
+            <StackLayout Margin="0,10,0,0" IsEnabled="{Binding IsEnable}" Orientation="Horizontal" >
+                <Label Text="Polynomial Order: 2" x:Name="polynomialLabel" TextColor="Black" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" >
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="TextColor" Value="Black" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter Property="TextColor" Value="Gray" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </Label>
+                    <Stepper x:Name="polynomialSlider" Minimum="2" Maximum="5" Value="2" HorizontalOptions="End" ValueChanged="OnStepper3_ValueChanged"/>
+            </StackLayout>
+        </StackLayout>
+    </local:SampleView.PropertyView>
+</local:SampleView> 

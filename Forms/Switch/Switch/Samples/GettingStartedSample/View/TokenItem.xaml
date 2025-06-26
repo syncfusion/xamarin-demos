@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.SfSwitch.TokenItem">
+    <ContentView.Content>
+        <Grid
+            BackgroundColor="{Binding Color}"
+            HeightRequest="30">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30">
+                </ColumnDefinition>
+                <ColumnDefinition Width="*">
+                </ColumnDefinition>
+                <ColumnDefinition Width="30">
+                </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid>
+                <Label Text="{Binding Icon}"
+                       FontSize="14"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       TextColor="White"
+                       FontFamily="switch.ttf#switch">
+                </Label>
+            </Grid>
+            <Grid
+                Grid.Column="1">
+                <Label Text="{Binding Name}"
+                       FontSize="14"
+                       TextColor="White">
+                </Label>
+            </Grid>
+            <Grid
+                Grid.Column="2">
+                <Label x:Name="close"
+                       Text="o"
+                       FontSize="14"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       TextColor="White"
+                       FontFamily="switch.ttf#switch">
+                </Label>
+            </Grid>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

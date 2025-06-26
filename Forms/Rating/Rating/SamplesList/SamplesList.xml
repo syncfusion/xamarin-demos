@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Samples>
+  <Sample Title="Getting Started" Name="Rating" Icon="AllControlls/Rating.png"/>
+  <Sample Title="Customization" Name="Rating_Customization" Icon="AllControlls/Rating.png" SearchTags="custom,view"/>
+</Samples>  
