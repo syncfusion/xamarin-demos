@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Samples>
+    <Group ImageId = "AllControlls/Carousel.png" Title = "Carousel" SearchTags="Carousel,LoadMore,Virtualization,Searchbox,Editors"
+    Description = "Allows navigating through image data in an interactive way so that they can be viewed or selected" >
+        <Sample Title="Carousel" Name="Carousel_View" Icon="AllControlls/Carousel.png"/>
+        <Sample Title="LoadMore" Name="Carousel_LoadMore" Icon="AllControlls/Carousel.png" />
+		<Sample Title="UIVirtualization" Name="Carousel_Virtualization" Platforms="Android,iOS,UWP" Icon="AllControlls/Carousel.png"  />
+   </Group>     
+</Samples>  

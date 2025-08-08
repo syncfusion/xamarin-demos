@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:radialMenu="clr-namespace:Syncfusion.SfRadialMenu.XForms;assembly=Syncfusion.SfRadialMenu.XForms" x:Class="SampleBrowser.SfRadialMenu.Themes">
+    <local:SampleView.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:String" x:Key="customfontfamily" iOS="Xamarin Font Icon" Android="Xamarin Font Icon.ttf#Xamarin Font Icon" WinPhone="Xamarin Font Icon.ttf#Xamarin Font Icon"/>
+        </ResourceDictionary>
+    </local:SampleView.Resources>
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <radialMenu:SfRadialMenu x:Name="radial_Menu" CenterButtonBackFontFamily="{StaticResource customfontfamily}" CenterButtonFontFamily="{StaticResource customfontfamily}"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  CenterButtonRadius="32" EnableCenterButtonAnimation="false" SeparatorThickness="1">
+            <radialMenu:SfRadialMenu.CenterButtonText>
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="iOS" Value="&#xe70c;"/>
+                    <On Platform="UWP" Value="&#xe70c;"/>
+                </OnPlatform>
+            </radialMenu:SfRadialMenu.CenterButtonText>
+            <radialMenu:SfRadialMenu.CenterButtonBackText>
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="iOS" Value="&#xe710;"/>
+                    <On Platform="UWP" Value="&#xe710;"/>
+                </OnPlatform>
+            </radialMenu:SfRadialMenu.CenterButtonBackText>
+
+            <radialMenu:SfRadialMenu.CenterButtonView>
+                <OnPlatform x:TypeArguments="View">
+                    <On Platform="Android">
+                <Grid>
+                    <Label Text="&#xe70c;"  TextColor="White"
+                    FontFamily="{StaticResource customfontfamily}" 
+                    FontSize="60"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+                            
+                </Grid>
+                </On>
+                </OnPlatform>
+
+            </radialMenu:SfRadialMenu.CenterButtonView>
+            <radialMenu:SfRadialMenu.CenterButtonBackView>
+                <OnPlatform x:TypeArguments="View">
+                <On Platform="Android">
+                    <Grid>
+                     <Label Text="&#xe710;" TextColor="White"
+                     FontFamily="{StaticResource customfontfamily}" 
+                     FontSize="60"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"/>
+                </Grid>
+                    </On>
+                </OnPlatform>
+            </radialMenu:SfRadialMenu.CenterButtonBackView>
+
+            <radialMenu:SfRadialMenu.Items>
+                <radialMenu:SfRadialMenuItem FontIconText="&#xe701;" IconFontFamily="{StaticResource customfontfamily}">
+                </radialMenu:SfRadialMenuItem>
+                <radialMenu:SfRadialMenuItem  FontIconText="&#xe702;" IconFontFamily="{StaticResource customfontfamily}">
+                </radialMenu:SfRadialMenuItem>
+                <radialMenu:SfRadialMenuItem  FontIconText="&#xe705;" IconFontFamily="{StaticResource customfontfamily}">
+                </radialMenu:SfRadialMenuItem>
+                <radialMenu:SfRadialMenuItem  FontIconText="&#xe70a;" IconFontFamily="{StaticResource customfontfamily}">
+                </radialMenu:SfRadialMenuItem>
+                <radialMenu:SfRadialMenuItem  FontIconText="&#xe713;" IconFontFamily="{StaticResource customfontfamily}">
+                </radialMenu:SfRadialMenuItem>
+                <radialMenu:SfRadialMenuItem FontIconText="&#xe704;" IconFontFamily="{StaticResource customfontfamily}">
+                </radialMenu:SfRadialMenuItem>
+            </radialMenu:SfRadialMenu.Items>
+        </radialMenu:SfRadialMenu>
+    </StackLayout>
+</local:SampleView>

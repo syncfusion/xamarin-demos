@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+ 	<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <Configurations>Debug;Release;Release-xml</Configurations>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SamplesList\SamplesList.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="SampleBrowser.SfComboBox.nuspec" />
+	<None Remove="SampleBrowser.SfComboBox.props" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SampleBrowser.Core" Version="30.2.4" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="30.2.4" />
+    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="30.2.4" />
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="30.2.4" />
+    <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="30.2.4" />
+    <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="30.2.4" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="30.2.4" />
+    <PackageReference Include="System.ComponentModel" Version="4.3.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

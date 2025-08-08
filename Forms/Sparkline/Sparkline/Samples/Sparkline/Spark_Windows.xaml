@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SampleView  xmlns="http://xamarin.com/schemas/2014/forms"  
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="SampleBrowser.SfSparkline.Spark_Windows"  
+		xmlns:sparkline="clr-namespace:Syncfusion.SfSparkline.XForms;assembly=Syncfusion.SfSparkline.XForms" 
+		xmlns:local="clr-namespace:SampleBrowser.Core;assembly=SampleBrowser.Core" 
+    xmlns:sb="clr-namespace:SampleBrowser.SfSparkline">
+	<local:SampleView.Content>
+        <ScrollView>
+     <Grid >
+		<Grid.Margin>
+				<OnPlatform x:TypeArguments="Thickness"
+                iOS=" 30,20,30,20"
+                Android=" 30,20,30,20"
+                WinPhone="10,20,10,20" />
+		</Grid.Margin>
+      <Grid.RowDefinitions>
+        <RowDefinition/>
+        <RowDefinition/>
+      </Grid.RowDefinitions>
+
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+      </Grid.ColumnDefinitions>
+
+      <Grid.BindingContext>
+        <sb:SparkViewModel />
+      </Grid.BindingContext>
+
+      <StackLayout Grid.Row="0" Grid.Column="0" >
+		<StackLayout.Margin>
+			<OnPlatform x:TypeArguments="Thickness"
+              		    iOS="10,0,10,0"
+              		    Android=" 10,40,10,40"
+            		    WinPhone="10,20,20,0" />
+		</StackLayout.Margin>
+
+        <sparkline:SfAreaSparkline ItemsSource="{Binding Datas}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                     YBindingPath="Performance" >
+        </sparkline:SfAreaSparkline>
+
+        <Label Text="Area" HorizontalOptions="Center" FontAttributes="Bold"
+               VerticalOptions="Center" FontSize="14" Margin="0,15,0,15"/>
+      </StackLayout>
+
+      <StackLayout Grid.Row="0" Grid.Column="1" >
+        <StackLayout.Margin>
+			<OnPlatform x:TypeArguments="Thickness"
+              		    iOS="20,0,10,0"
+              		    Android=" 10,40,10,40"
+            		    WinPhone="10,20,0,0" />
+		</StackLayout.Margin>
+        <sparkline:SfLineSparkline  ItemsSource="{Binding Datas}"
+                                     YBindingPath="Performance"
+                                    HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        </sparkline:SfLineSparkline>
+
+        <Label Text="Line" HorizontalOptions="Center"  FontAttributes="Bold"
+            VerticalOptions="Center"  FontSize="14" Margin="0,15,0,15"/>
+
+      </StackLayout>
+
+      <StackLayout Grid.Row="1" Grid.Column="0" >
+        <StackLayout.Margin>
+			<OnPlatform x:TypeArguments="Thickness"
+              		    iOS="10,0,10,0"
+              		    Android=" 10,40,10,40"
+            		    WinPhone="10,0,20,0" />
+		</StackLayout.Margin>
+        <sparkline:SfColumnSparkline  ItemsSource="{Binding ColumnDatas}"
+                                      YBindingPath="YearPerformance"
+                                       HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                      >
+        </sparkline:SfColumnSparkline>
+
+        <Label  Text="Column" HorizontalOptions="Center"  FontAttributes="Bold"
+              VerticalOptions="Center"  FontSize="14" Margin="0,15,0,10"/>
+
+      </StackLayout>
+
+      <StackLayout Grid.Row="1" Grid.Column="1">
+	    <StackLayout.Margin>
+			<OnPlatform x:TypeArguments="Thickness"
+              		    iOS="10,0,10,0"
+              		    Android=" 10,40,10,40"
+            		    WinPhone="10,0,0,0" />
+		</StackLayout.Margin>
+        <sparkline:SfWinLossSparkline ItemsSource="{Binding ColumnDatas}"
+                                      YBindingPath="YearPerformance"
+                                      HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+        </sparkline:SfWinLossSparkline>
+
+        <Label  Text="Win/Loss" HorizontalOptions="Center"  FontAttributes="Bold"
+              VerticalOptions="Center" FontSize="14" Margin="0,15,0,10"/>
+      </StackLayout>
+
+    </Grid>
+            </ScrollView>
+	</local:SampleView.Content>
+</local:SampleView>
