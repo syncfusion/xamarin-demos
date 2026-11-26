@@ -1,6 +1,6 @@
 ﻿# Syncfusion® Xamarin examples 
  
-This repository contains awesome demos of [Syncfusion Xamarin UI controls](https://www.syncfusion.com/products/xamarin?utm_source=github&utm_medium=listing). This is the best place to check our controls to get more insight about the usage of APIs. You can also check our controls by installing the complete Xamarin.Forms sample browser from [ Google Play Store](https://play.google.com/store/apps/details?id=com.syncfusion.samplebrowser) or [Microsoft Store](https://www.microsoft.com/en-in/p/syncfusion-essential-studio-for-xamarin/9nn069tldzf4), in which you can browse the demo for all the controls and view the source code of each sample within the app itself.
+This repository state Xamarin support ended (2024) and point to .NET MAUI. This is the best place to check our controls to get more insight about the usage of APIs. You can also check our controls by installing the complete sample browser from [.NET MAUI](https://www.syncfusion.com/demos/maui) or [Microsoft Store](https://www.microsoft.com/en-in/p/syncfusion-essential-studio-for-xamarin/9nn069tldzf4), in which you can browse the demo for all the controls and view the source code of each sample within the app itself.
 
 This section guides you to use the Syncfusion Xamarin examples in your applications.
 
@@ -13,8 +13,7 @@ This section guides you to use the Syncfusion Xamarin examples in your applicati
 
 ## <a name="requirements-to-run-the-demo"></a>Requirements to run the demo ##
 
-* [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) or [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/).
-* Xamarin add-ons for Visual Studio (available via the Visual Studio installer).
+* Supported toolchain [.NET MAUI with VS 2022/2026](https://learn.microsoft.com/en-us/visualstudio/releases/2026/servicing-vs).
 
 ## <a name="repository-structure"></a>Repository Structure ##
 
@@ -95,7 +94,7 @@ If you download the examples using the "Download ZIP" option then please follow 
 | [Range Slider](Forms/RangeSlider) | [Range Slider](Android/SampleBrowser/Samples/RangeSlider) | [Range Slider](iOS/SampleBrowser/Samples/RangeSlider) |
 | [Rating](Forms/Rating) | [Rating](Android/SampleBrowser/Samples/Rating) | [Rating](iOS/SampleBrowser/Samples/Rating) |
 | [Segmented Control](Forms/SegmentedControl) | [Segmented Control](Android/SampleBrowser/Samples/SegmentedView) |[Segmented Control](iOS/SampleBrowser/Samples/SegmentedControl) |
-| <b><center>FILE FORMATS</center><b> | <b><center>FILE FORMATS</center><b> | <b><center>FILE FORMATS</center><b> |
+| <b><center>Document SDK</center><b> | <b><center>Document SDK</center><b> | <b><center>Document SDK</center><b> |
 | [Excel](Forms/XlsIO) | [Excel](Android/SampleBrowser/Samples/XlsIO) | [Excel](iOS/SampleBrowser/Samples/XlsIO) |
 | [PDF](Forms/PDF) | [PDF](Android/SampleBrowser/Samples/PDF) | [PDF](iOS/SampleBrowser/Samples/PDF) |
 | [Word](Forms/DocIO) |[Word](Android/SampleBrowser/Samples/DocIO) |[Word](iOS/SampleBrowser/Samples/DocIO)  |
@@ -120,4 +119,4 @@ The Syncfusion item templates extension provides predefined UI designs for Xamar
 
 * To renew the subscription, click [here](https://www.syncfusion.com/sales/products?utm_source=github&utm_medium=listing) or contact our sales team at <salessupport@syncfusion.com>.
   
-<p>Copyright © 2001-2025 Syncfusion®, Inc. Updated on 2025-08-08 at precisely 12:36:28 EST.</p> 
+<p>Copyright © 2001-2026 Syncfusion®, Inc. Updated on 2025-08-08 at precisely 12:36:28 EST.</p> 
